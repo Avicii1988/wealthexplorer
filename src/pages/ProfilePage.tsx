@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { ArrowLeft, Heart, MapPin, Globe, ChevronDown, ChevronUp } from 'lucide-react'
 import {
@@ -12,6 +12,34 @@ import {
 } from '../data/celebrities'
 
 const ALL = 'All' as const
+
+const LANGUAGES = [
+  { code: 'en', label: 'English', flag: '🇬🇧' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'es', label: 'Español', flag: '🇪🇸' },
+  { code: 'it', label: 'Italiano', flag: '🇮🇹' },
+  { code: 'pt', label: 'Português', flag: '🇵🇹' },
+  { code: 'ar', label: 'العربية', flag: '🇦🇪' },
+  { code: 'zh', label: '中文', flag: '🇨🇳' },
+]
+
+function WealthLogoSmall() {
+  return (
+    <div className="flex items-center gap-2">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 1L22.5 3.5L28.5 9L31 16L28.5 23L22.5 28.5L16 31L9.5 28.5L3.5 23L1 16L3.5 9L9.5 3.5Z" stroke="#c9a84c" strokeWidth="0.8" fill="none" opacity="0.5" />
+        <path d="M16 5L22 12L16 27L10 12Z" fill="none" stroke="#c9a84c" strokeWidth="0.9" />
+        <line x1="9" y1="13.5" x2="23" y2="13.5" stroke="#c9a84c" strokeWidth="0.8" />
+        <path d="M10 8L13 13.5M22 8L19 13.5M16 6V13.5" stroke="#c9a84c" strokeWidth="0.9" strokeLinecap="round" />
+        <circle cx="16" cy="13.5" r="1.2" fill="#c9a84c" />
+      </svg>
+      <span className="font-serif text-base" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}>
+        Wealth Explorer
+      </span>
+    </div>
+  )
+}
 
 // ── AT A GLANCE TABLE ─────────────────────────────────────────────────────────
 function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
@@ -28,7 +56,7 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
     <div className="rounded-2xl overflow-hidden bg-[#111]">
       <div className="px-5 py-4 bg-[#161616]">
         <h2
-          className="text-base font-normal text-white"
+          className="text-base font-semibold text-white"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
           {celeb.name} at a Glance
@@ -67,7 +95,7 @@ function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities
     <div className="rounded-2xl overflow-hidden bg-[#111]">
       <div className="px-5 py-4 bg-[#161616]">
         <h2
-          className="text-base font-normal text-white"
+          className="text-base font-semibold text-white"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
           Relationships
@@ -96,7 +124,7 @@ function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
     <div className="rounded-2xl overflow-hidden bg-[#111]">
       <div className="px-5 py-4 bg-[#161616]">
         <h2
-          className="text-base font-normal text-white"
+          className="text-base font-semibold text-white"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
           Gossip &amp; Controversy
@@ -219,6 +247,17 @@ export default function ProfilePage() {
   const navigate = useNavigate()
   const [activeType, setActiveType] = useState<AssetType | typeof ALL>(ALL)
   const [avatarError, setAvatarError] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
+  const [activeLang, setActiveLang] = useState(LANGUAGES[0])
+  const langRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handler(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false)
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
 
   const celeb = celebrities.find(c => c.id === id)
 
@@ -244,23 +283,55 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-[#0a0a0a] text-white">
 
       {/* ── HEADER ──────────────────────────────────────────────── */}
-      <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md">
-        <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
+      <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8">
+        <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-colors group"
+            className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-colors group flex-shrink-0"
           >
             <ArrowLeft size={15} className="group-hover:-translate-x-0.5 transition-transform" />
-            <span
-              className="font-serif text-base"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
-            >
-              Wealth Explorer
-            </span>
+            <WealthLogoSmall />
           </button>
-          <div className="flex items-center gap-1.5 text-xs text-gray-600">
-            <Globe size={12} />
-            <span className="uppercase tracking-wider">{celeb.nationality}</span>
+
+          <div className="flex items-center gap-3">
+            {/* Nationality badge */}
+            <div className="hidden sm:flex items-center gap-1.5 text-xs text-gray-600">
+              <Globe size={12} />
+              <span className="uppercase tracking-wider">{celeb.nationality}</span>
+            </div>
+
+            {/* Language selector */}
+            <div ref={langRef} className="relative">
+              <button
+                onClick={() => setLangOpen(v => !v)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 text-xs text-gray-400 hover:border-white/20 hover:text-gray-200 transition-all"
+              >
+                <span className="text-sm leading-none">{activeLang.flag}</span>
+                <span className="hidden sm:inline tracking-wide">{activeLang.label}</span>
+                <ChevronDown size={10} className={`transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-2 w-44 bg-[#141414] border border-white/10 rounded-xl overflow-hidden shadow-2xl z-50">
+                  {LANGUAGES.map(lang => (
+                    <button
+                      key={lang.code}
+                      onClick={() => { setActiveLang(lang); setLangOpen(false) }}
+                      className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors ${
+                        activeLang.code === lang.code
+                          ? 'bg-[#c9a84c]/10 text-[#c9a84c]'
+                          : 'text-gray-400 hover:bg-white/5 hover:text-white'
+                      }`}
+                    >
+                      <span className="text-base">{lang.flag}</span>
+                      <span>{lang.label}</span>
+                      {activeLang.code === lang.code && (
+                        <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#c9a84c]" />
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </header>
@@ -412,7 +483,7 @@ export default function ProfilePage() {
       {/* ── MORE PROFILES ───────────────────────────────────────── */}
       <section className="py-12">
         <div className="max-w-5xl mx-auto px-5">
-          <p className="text-xs tracking-[0.2em] uppercase text-gray-600 mb-7">More Profiles</p>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-7">More Profiles</p>
           <div className="flex gap-5 overflow-x-auto scrollbar-hide pb-2">
             {[
               // Same category first, then others, exclude current
@@ -491,7 +562,7 @@ export default function ProfilePage() {
             </div>
             {/* Explore */}
             <div>
-              <p className="text-[10px] tracking-[0.2em] uppercase text-gray-600 mb-4">Explore</p>
+              <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-500 mb-4">Explore</p>
               <ul className="space-y-2.5">
                 {['Trending Profiles', 'All Celebrities', 'Asset Feed', 'Athletes', 'Musicians', 'Entrepreneurs'].map(item => (
                   <li key={item}>
@@ -502,7 +573,7 @@ export default function ProfilePage() {
             </div>
             {/* Categories */}
             <div>
-              <p className="text-[10px] tracking-[0.2em] uppercase text-gray-600 mb-4">Asset Types</p>
+              <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-500 mb-4">Asset Types</p>
               <ul className="space-y-2.5">
                 {['Private Jets', 'Yachts', 'Real Estate', 'Cars', 'Watches', 'Art Collections'].map(item => (
                   <li key={item}>
