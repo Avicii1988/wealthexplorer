@@ -87,6 +87,34 @@ function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities
   )
 }
 
+// ── GOSSIP & CONTROVERSY ──────────────────────────────────────────────────────
+function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+  const items = celeb.gossip
+  if (!items?.length) return null
+
+  return (
+    <div className="rounded-2xl overflow-hidden bg-[#111]">
+      <div className="px-5 py-4 bg-[#161616]">
+        <h2
+          className="text-base font-normal text-white"
+          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+        >
+          Gossip &amp; Controversy
+        </h2>
+        <p className="text-[11px] text-gray-600 mt-1">Based on public news — not verified by Wealth Explorer</p>
+      </div>
+      <div className="divide-y divide-white/5">
+        {items.map((item, i) => (
+          <div key={i} className={`px-5 py-4 ${i % 2 === 0 ? 'bg-[#111]' : 'bg-[#131313]'}`}>
+            <p className="text-sm font-medium text-gray-200 mb-1.5">{item.title}</p>
+            <p className="text-sm text-gray-500 leading-relaxed">{item.summary}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 // ── ASSET CARD ────────────────────────────────────────────────────────────────
 function AssetCard({ asset }: { asset: Asset }) {
   const [liked, setLiked] = useState(false)
@@ -326,10 +354,11 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* ── AT A GLANCE + RELATIONSHIPS ─────────────────────────── */}
+      {/* ── AT A GLANCE + RELATIONSHIPS + GOSSIP ────────────────── */}
       <section className="max-w-5xl mx-auto px-5 pb-12 flex flex-col gap-4">
         <GlanceTable celeb={celeb} />
         <RelationshipsSection celeb={celeb} />
+        <GossipSection celeb={celeb} />
       </section>
 
       {/* ── ASSET TYPE TABS ─────────────────────────────────────── */}
@@ -385,9 +414,12 @@ export default function ProfilePage() {
         <div className="max-w-5xl mx-auto px-5">
           <p className="text-xs tracking-[0.2em] uppercase text-gray-600 mb-7">More Profiles</p>
           <div className="flex gap-5 overflow-x-auto scrollbar-hide pb-2">
-            {celebrities
-              .filter(c => c.id !== celeb.id)
-              .slice(0, 8)
+            {[
+              // Same category first, then others, exclude current
+              ...celebrities.filter(c => c.id !== celeb.id && c.category === celeb.category),
+              ...celebrities.filter(c => c.id !== celeb.id && c.category !== celeb.category),
+            ]
+              .slice(0, 10)
               .map(c => (
                 <Link
                   key={c.id}
@@ -413,10 +445,35 @@ export default function ProfilePage() {
         </div>
       </section>
 
+      {/* ── DID WE MAKE A MISTAKE? ──────────────────────────────── */}
+      <section className="pb-10">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="rounded-2xl bg-[#111] border border-white/8 px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+            <div>
+              <p
+                className="text-base font-normal text-white mb-1"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                Did we make a mistake?
+              </p>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Submit a correction suggestion for <span className="text-gray-300">{celeb.name}</span> and help us fix it!
+              </p>
+            </div>
+            <a
+              href={`mailto:corrections@wealthexplorer.com?subject=Correction for ${encodeURIComponent(celeb.name)}`}
+              className="flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium border border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/10 transition-colors"
+            >
+              Submit Suggestion
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="pt-16 pb-10 px-5">
+      <footer className="pt-16 pb-10 px-5 border-t border-white/8">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
             {/* Brand */}
             <div>
               <p
@@ -425,8 +482,11 @@ export default function ProfilePage() {
               >
                 Wealth Explorer
               </p>
-              <p className="text-xs text-gray-600 leading-relaxed">
+              <p className="text-xs text-gray-600 leading-relaxed mb-4">
                 Explore the verified assets of the world's most notable individuals. Jets, yachts, estates, watches and more.
+              </p>
+              <p className="text-[11px] text-gray-700 leading-relaxed">
+                Data updated daily from public sources – Wealth Explorer
               </p>
             </div>
             {/* Explore */}
@@ -452,9 +512,25 @@ export default function ProfilePage() {
               </ul>
             </div>
           </div>
-          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-[11px] text-gray-700">© 2025 Wealth Explorer. All rights reserved.</p>
-            <p className="text-[11px] text-gray-700">All valuations are estimates for informational purposes only.</p>
+
+          {/* Disclaimer */}
+          <div className="border-t border-white/8 pt-6 mb-4">
+            <p className="text-[11px] text-gray-700 leading-relaxed max-w-3xl">
+              All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth estimates are approximate and may vary. Gossip and controversies based on public news; not verified. Images from public domain or fair-use sources. For informational purposes only — not financial advice.
+            </p>
+          </div>
+
+          {/* Bottom row */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-[11px] text-gray-700">© 2026 Wealth Explorer</p>
+            <div className="flex items-center gap-4">
+              {['About Us', 'Privacy Policy', 'Contact', 'Terms of Use'].map((item, i) => (
+                <span key={item} className="flex items-center gap-4">
+                  <Link to="/" className="text-[11px] text-gray-600 hover:text-gray-400 transition-colors">{item}</Link>
+                  {i < 3 && <span className="text-gray-800">|</span>}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </footer>

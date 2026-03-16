@@ -39,6 +39,10 @@ export interface Celebrity {
     siblings?: string[]
     children?: string[]
   }
+  gossip?: {
+    title: string
+    summary: string
+  }[]
 }
 
 // Wikipedia Commons or high-quality press photo URLs
@@ -71,6 +75,20 @@ export const celebrities: Celebrity[] = [
       siblings: ['Kourtney Kardashian', 'Kim Kardashian', 'Khloé Kardashian', 'Rob Kardashian', 'Kendall Jenner'],
       children: ['Stormi Webster', 'Aire Webster'],
     },
+    gossip: [
+      {
+        title: 'Billionaire Status Disputed',
+        summary: 'Forbes publicly retracted its "youngest self-made billionaire" title in 2020 after finding discrepancies in financial documents submitted by Kylie Cosmetics. Forbes alleged that documents were inflated to exaggerate the brand\'s size and revenue. Kylie\'s team denied the allegations.',
+      },
+      {
+        title: 'Private Jet Shaming',
+        summary: 'Kylie faced intense backlash in 2022 after posting a photo of herself and Travis Scott in front of their respective private jets with the caption "you wanna take mine or yours?". Climate activists highlighted the jets\' short-haul flights as unnecessarily polluting, sparking a wider celebrity jet-shaming movement.',
+      },
+      {
+        title: 'Travis Scott Astroworld',
+        summary: 'Kylie was present at the 2021 Astroworld Festival when a crowd crush resulted in 10 deaths and hundreds of injuries. She faced criticism for not stopping the show despite visible signs of distress in the crowd. Both she and Travis Scott were named in multiple lawsuits.',
+      },
+    ],
     assets: [
       {
         id: 'kj-jet-1',
@@ -166,6 +184,20 @@ export const celebrities: Celebrity[] = [
       parents: ['Maye Musk', 'Errol Musk'],
       siblings: ['Kimbal Musk', 'Tosca Musk'],
     },
+    gossip: [
+      {
+        title: 'Twitter/X Acquisition Chaos',
+        summary: 'After acquiring Twitter for $44 billion in 2022, Musk immediately laid off 80% of staff, reinstated controversial banned accounts including those of former white nationalists, and renamed the platform X. Advertisers fled en masse and the platform\'s value was later written down by investors to below $10 billion.',
+      },
+      {
+        title: 'DOGE & Government Influence',
+        summary: 'Musk\'s role as head of the Department of Government Efficiency (DOGE) under President Trump drew massive controversy. Critics argued a private billionaire had unprecedented access to federal systems, while supporters claimed he was cutting wasteful spending. Multiple lawsuits were filed challenging the legality of DOGE.',
+      },
+      {
+        title: 'Children & Relationships Drama',
+        summary: 'Musk has fathered at least 12 children with multiple women including ex-wife Justine Wilson, singer Grimes, and Neuralink executive Shivon Zilis. The revelation of secret twins with Zilis while simultaneously dating Grimes caused widespread media scrutiny about his personal life.',
+      },
+    ],
     assets: [
       {
         id: 'em-jet-gulfstream',
@@ -237,6 +269,20 @@ export const celebrities: Celebrity[] = [
       partner: 'Lauren Sánchez',
       siblings: ['Mark Bezos', 'Christina Bezos'],
     },
+    gossip: [
+      {
+        title: 'Divorce & Tabloid Affair',
+        summary: 'In 2019 Bezos announced his divorce from MacKenzie Scott after 25 years of marriage, amid reports that the National Enquirer had obtained explicit texts and photos exchanged with TV anchor Lauren Sánchez. Bezos published a blog post accusing the Enquirer\'s parent company of attempted extortion over the images.',
+      },
+      {
+        title: 'Amazon Warehouse Working Conditions',
+        summary: 'Amazon has repeatedly faced allegations of gruelling working conditions in its fulfilment centres, including unrealistic productivity quotas, limited bathroom breaks, and high injury rates. Multiple congressional investigations and union drives (including the 2022 Staten Island union victory) have kept the controversy in the headlines.',
+      },
+      {
+        title: 'Washington Post Editorial Independence',
+        summary: 'In 2024 Bezos blocked the Washington Post from endorsing a presidential candidate, reversing a decades-long tradition. More than 250,000 subscribers cancelled, and senior editorial staff resigned in protest, raising questions about billionaire ownership of major news outlets.',
+      },
+    ],
     assets: [
       {
         id: 'jb-yacht-koru',
@@ -393,6 +439,20 @@ export const celebrities: Celebrity[] = [
       partner: 'Travis Kelce',
       siblings: ['Austin Swift'],
     },
+    gossip: [
+      {
+        title: 'Private Jet Carbon Footprint',
+        summary: 'A 2022 study by marketing firm Yard identified Taylor Swift as the celebrity with the highest private jet CO₂ emissions that year, with her jets logging over 170 flights and emitting an estimated 8,293.54 tonnes of carbon — 1,184 times the average person\'s annual footprint. Swift\'s team disputed the methodology, noting many flights were taken by others with permission to use the aircraft.',
+      },
+      {
+        title: 'Feud with Scooter Braun & Masters Controversy',
+        summary: 'When Scooter Braun\'s company acquired Big Machine Records in 2019, he gained ownership of Swift\'s first six albums. She called it her "worst case scenario" and publicly urged fans to push for her to own her work. In response she began re-recording all her albums as "Taylor\'s Version", urging fans to stream those instead, costing Braun\'s catalogue an estimated $300M in value.',
+      },
+      {
+        title: 'Kim Kardashian Snake Feud',
+        summary: 'A multi-year public feud with Kanye West and Kim Kardashian culminated in 2016 when Kim posted a phone call recording she claimed proved Taylor approved a controversial lyric. Swift denied the recording was complete, and in 2020 a fuller version emerged that appeared to support her version of events. The feud helped popularise the "Taylor Swift is cancelled" narrative — and then its reversal.',
+      },
+    ],
     assets: [
       {
         id: 'ts-jet-falcon',
@@ -467,6 +527,16 @@ export const celebrities: Celebrity[] = [
       siblings: ['Eric Carter', 'Michelle Carter', 'Andrea Carter'],
       children: ['Blue Ivy Carter', 'Rumi Carter', 'Sir Carter'],
     },
+    gossip: [
+      {
+        title: 'Solange Elevator Incident',
+        summary: 'CCTV footage leaked in 2014 showed Beyoncé\'s sister Solange physically attacking Jay-Z in an elevator following the Met Gala. The footage went viral and sparked intense speculation about the cause. All three remained tight-lipped, with a joint statement calling it a "private matter." Beyoncé later referenced infidelity in her 2016 visual album Lemonade, which many interpreted as directed at Jay-Z.',
+      },
+      {
+        title: 'Lemonade Cheating Allegations',
+        summary: 'Beyoncé\'s acclaimed 2016 album Lemonade was widely interpreted as addressing Jay-Z\'s alleged infidelity, with references to a mysterious "Becky with the good hair." Jay-Z later confirmed he had been unfaithful in his 2017 album 4:44, framing it as a period of addiction and personal failure. The couple publicly reconciled.',
+      },
+    ],
     assets: [
       {
         id: 'jz-art-basquiat',
@@ -1027,6 +1097,178 @@ export const celebrities: Celebrity[] = [
         specs: 'Sapphire crystal case · tourbillon · 8-day power reserve · one of 10 made',
         year: 2019,
         likes: 7102,
+      },
+    ],
+  },
+  {
+    id: 'mark-zuckerberg',
+    name: 'Mark Zuckerberg',
+    category: 'Entrepreneurs',
+    netWorth: 204,
+    avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/440px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&fit=crop',
+    nationality: 'American',
+    bio: 'Co-founder and CEO of Meta Platforms (Facebook, Instagram, WhatsApp). One of the youngest self-made billionaires in history. Obsessive MMA enthusiast and Hawaii landowner.',
+    trending: true,
+    birthdate: 'May 14, 1984',
+    birthplace: 'White Plains, New York',
+    gender: 'Male',
+    height: '5 ft 7 in',
+    profession: 'Entrepreneur, Software Engineer',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/440px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&q=85',
+    ],
+    relationships: {
+      parents: ['Karen Kempner', 'Edward Zuckerberg'],
+      spouse: 'Priscilla Chan',
+      siblings: ['Randi Zuckerberg', 'Donna Zuckerberg', 'Arielle Zuckerberg'],
+      children: ['Maxima Chan Zuckerberg', 'August Chan Zuckerberg', 'Aurelia Chan Zuckerberg'],
+    },
+    gossip: [
+      {
+        title: 'Cambridge Analytica Scandal',
+        summary: 'In 2018 it emerged that British political consulting firm Cambridge Analytica had harvested the personal data of up to 87 million Facebook users without consent, using it to build psychological profiles for targeted political advertising — including for the 2016 Trump campaign. Zuckerberg testified before the US Senate and the House, and Facebook was fined $5 billion by the FTC.',
+      },
+      {
+        title: 'Metaverse Billions Written Off',
+        summary: 'Meta\'s Reality Labs division — the Metaverse arm — lost over $46 billion between 2021 and 2023 as its virtual world failed to gain mainstream adoption. Shareholders and analysts openly questioned the strategy, and Meta\'s stock fell nearly 70% at its lowest point in 2022 before recovering as the company pivoted back to AI.',
+      },
+      {
+        title: 'MMA Cage Fight With Elon Musk',
+        summary: 'In 2023 Zuckerberg challenged Elon Musk to a cage fight after Musk taunted Meta\'s new app Threads. Both sides traded barbs online for months, with Zuckerberg training publicly with UFC champions. Musk ultimately backed out, claiming a need for neck surgery. The spectacle drew global media attention and made Zuckerberg an unlikely internet hero for his legitimate MMA training.',
+      },
+    ],
+    assets: [
+      {
+        id: 'mz-house-hawaii',
+        type: 'real_estate',
+        name: 'Koolau Ranch — Kauai, Hawaii',
+        description: 'A sprawling 1,400-acre estate on the north shore of Kauai, assembled across multiple acquisitions totalling over $170 million. Includes a main compound, multiple guest houses, an underground bunker complex, and a working cattle farm. Zuckerberg faced controversy over an attempt to use a Hawaiian legal process to force native landowners to sell parcels within the estate.',
+        estimatedValue: 270,
+        image: 'https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85',
+        location: 'Kauai, Hawaii',
+        specs: '1,400 acres · underground bunker · cattle ranch · 12 bedrooms main house',
+        year: 2021,
+        likes: 11203,
+      },
+      {
+        id: 'mz-jet-1',
+        type: 'jet',
+        name: 'Gulfstream G650ER',
+        description: 'Zuckerberg\'s primary long-range private jet, used extensively for transatlantic travel and trips between his California and Hawaii properties. Previously a subject of the celebrity jet-tracking controversy when his aircraft movements were made public by automated Twitter bots.',
+        estimatedValue: 65,
+        image: 'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?w=900&h=600&fit=crop&q=85',
+        year: 2018,
+        specs: 'G650ER · 7,500 nm range · 18 passengers · custom interior',
+        likes: 4201,
+      },
+      {
+        id: 'mz-yacht-laperla',
+        type: 'yacht',
+        name: 'Ulysses (Support Vessel)',
+        description: 'A 348-foot Lürssen expedition superyacht reportedly chartered by Zuckerberg for extended ocean voyages. Equipped with a helipad, submarine, and tenders. Zuckerberg has been photographed kitesurfing alongside the vessel.',
+        estimatedValue: 300,
+        image: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85',
+        specs: '348 ft · Lürssen · helipad · submarine · 22 guests',
+        likes: 7810,
+      },
+      {
+        id: 'mz-house-palo-alto',
+        type: 'real_estate',
+        name: 'Palo Alto Compound',
+        description: 'A cluster of five houses on a single block in Palo Alto, acquired over several years for approximately $50 million. The compound gives Zuckerberg an entire neighbourhood block and was designed to provide maximum privacy near the Meta headquarters.',
+        estimatedValue: 50,
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85',
+        location: 'Palo Alto, California',
+        specs: '5 homes · 1 full block · approx. 17,000 sq ft combined · private gardens',
+        year: 2013,
+        likes: 5632,
+      },
+    ],
+  },
+  {
+    id: 'larry-ellison',
+    name: 'Larry Ellison',
+    category: 'Entrepreneurs',
+    netWorth: 158,
+    avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Larry_Ellison_2013_%28cropped%29.jpg/440px-Larry_Ellison_2013_%28cropped%29.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1200&q=80&fit=crop',
+    nationality: 'American',
+    bio: 'Co-founder and CTO of Oracle Corporation. Owns 98% of Lanai, Hawaii\'s sixth-largest island. America\'s Cup yachtsman and one of Silicon Valley\'s most flamboyant billionaires.',
+    trending: false,
+    birthdate: 'Aug 17, 1944',
+    birthplace: 'New York City, New York',
+    gender: 'Male',
+    height: '6 ft 0 in',
+    profession: 'Entrepreneur, Software Engineer, Investor',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Larry_Ellison_2013_%28cropped%29.jpg/440px-Larry_Ellison_2013_%28cropped%29.jpg',
+      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&q=85',
+    ],
+    relationships: {
+      parents: ['Florence Spellman', 'Louis Ellison'],
+      children: ['David Ellison', 'Megan Ellison'],
+    },
+    gossip: [
+      {
+        title: 'Oracle vs Google — Decade-Long Legal Battle',
+        summary: 'Oracle sued Google in 2010 over the use of Java APIs in Android, seeking up to $9 billion in damages. After nearly a decade of litigation across multiple courts and appeals, the US Supreme Court ruled in Google\'s favour in 2021 in a landmark decision for software copyright law. Ellison\'s aggressive legal strategy was widely criticised by the tech community as an attempt to tax the open-source ecosystem.',
+      },
+      {
+        title: 'Four Marriages & A Playboy Reputation',
+        summary: 'Ellison has been married four times and is widely known for his flamboyant personal life, dating actresses and models decades his junior. He once threw a samurai-themed party at his Japanese-style Woodside estate and is known for competitive sailing, fighter jet ownership, and extravagant spending that has made him as famous for his lifestyle as his software empire.',
+      },
+      {
+        title: 'Lanai Island Transformation',
+        summary: 'After buying 98% of Lanai for $300 million in 2012, Ellison set about transforming it with green energy, luxury hotels, organic farms, and even a water filtration system. While locals initially welcomed investment, some have grown frustrated with the pace of change and the degree to which one billionaire controls the fate of a 3,000-person community.',
+      },
+    ],
+    assets: [
+      {
+        id: 'le-island-lanai',
+        type: 'island',
+        name: 'Lanai Island, Hawaii',
+        description: 'Larry Ellison owns approximately 98% of Lanai, Hawaii\'s sixth-largest island. The $300 million acquisition in 2012 includes two luxury Four Seasons resorts, an organic farm, a water facility, solar farm, and roughly 3,000 acres of land. It is the largest private land holding in Hawaii.',
+        estimatedValue: 500,
+        image: 'https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85',
+        location: 'Lanai, Hawaii',
+        specs: '140 sq miles · 98% ownership · 2 Four Seasons resorts · 3,000+ acres',
+        year: 2012,
+        likes: 18920,
+      },
+      {
+        id: 'le-yacht-musashi',
+        type: 'yacht',
+        name: 'Musashi',
+        description: 'A 288-foot Feadship superyacht built to Ellison\'s specifications. Named after the legendary Japanese swordsman Miyamoto Musashi. Features a basketball court, spa, helipad, and accommodation for 18 guests. One of the most technically advanced yachts ever built.',
+        estimatedValue: 200,
+        image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85',
+        specs: '288 ft · Feadship · basketball court · helipad · 18 guests · 43 crew',
+        year: 2015,
+        likes: 9301,
+      },
+      {
+        id: 'le-jet-fighter',
+        type: 'jet',
+        name: 'L-39 Albatros Fighter Jet',
+        description: 'A Cold War-era Czech military jet trainer that Ellison is licensed to fly personally. He keeps several aircraft in his fleet but the L-39 is the most famous — a symbol of his daredevil personality. His insurer reportedly required him to stop flying it after a near-miss incident.',
+        estimatedValue: 1.2,
+        image: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85',
+        specs: 'L-39 Albatros · 2-seat trainer · 450 kts max · jet turbine · personally piloted',
+        likes: 6710,
+      },
+      {
+        id: 'le-house-woodside',
+        type: 'real_estate',
+        name: 'Woodside Japanese Estate',
+        description: 'A stunning 23-acre property in Woodside, California, designed to replicate a 16th-century Japanese imperial palace. Construction took 12 years and over $200 million. Features a koi-filled lake, authentic imported Japanese architecture, ceremonial tea house, and samurai armoury.',
+        estimatedValue: 200,
+        image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop&q=85',
+        location: 'Woodside, California',
+        specs: '23 acres · 16th-century Japanese style · koi lake · tea house · 12 years construction',
+        year: 2004,
+        likes: 14201,
       },
     ],
   },
