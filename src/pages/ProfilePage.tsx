@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, Heart, MapPin, Globe, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowLeft, Heart, MapPin, Globe, ChevronDown, ChevronUp } from 'lucide-react'
 import {
   celebrities,
   assetTypeIcons,
@@ -12,83 +12,6 @@ import {
 } from '../data/celebrities'
 
 const ALL = 'All' as const
-
-// ── PHOTO CAROUSEL ────────────────────────────────────────────────────────────
-function PhotoCarousel({ photos, name }: { photos: string[]; name: string }) {
-  const [index, setIndex] = useState(0)
-  const [loaded, setLoaded] = useState<boolean[]>(photos.map(() => false))
-
-  const prev = useCallback(() => setIndex(i => (i - 1 + photos.length) % photos.length), [photos.length])
-  const next = useCallback(() => setIndex(i => (i + 1) % photos.length), [photos.length])
-
-  useEffect(() => {
-    if (photos.length <= 1) return
-    const id = setInterval(next, 4000)
-    return () => clearInterval(id)
-  }, [next, photos.length])
-
-  const markLoaded = (i: number) =>
-    setLoaded(prev => { const n = [...prev]; n[i] = true; return n })
-
-  return (
-    <div className="relative w-full overflow-hidden rounded-2xl bg-[#111] aspect-[4/5] select-none">
-      {photos.map((src, i) => (
-        <div
-          key={i}
-          className="absolute inset-0 transition-opacity duration-700"
-          style={{ opacity: i === index ? 1 : 0, pointerEvents: i === index ? 'auto' : 'none' }}
-        >
-          {!loaded[i] && <div className="absolute inset-0 bg-[#1a1a1a] animate-pulse" />}
-          <img
-            src={src}
-            alt={`${name} photo ${i + 1}`}
-            className="w-full h-full object-cover object-top"
-            onLoad={() => markLoaded(i)}
-            onError={() => markLoaded(i)}
-          />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
-        </div>
-      ))}
-
-      {photos.length > 1 && (
-        <>
-          <button
-            onClick={prev}
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:bg-black/70 transition-colors z-10"
-            aria-label="Previous photo"
-          >
-            <ChevronLeft size={18} />
-          </button>
-          <button
-            onClick={next}
-            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:bg-black/70 transition-colors z-10"
-            aria-label="Next photo"
-          >
-            <ChevronRight size={18} />
-          </button>
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-            {photos.map((_, i) => (
-              <button key={i} onClick={() => setIndex(i)} aria-label={`Photo ${i + 1}`}>
-                <span
-                  className="block rounded-full transition-all duration-300"
-                  style={{
-                    width: i === index ? 20 : 6,
-                    height: 6,
-                    background: i === index ? '#c9a84c' : 'rgba(255,255,255,0.35)',
-                  }}
-                />
-              </button>
-            ))}
-          </div>
-        </>
-      )}
-
-      <div className="absolute top-3 right-3 text-[11px] font-medium px-2 py-1 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 text-gray-300 z-10">
-        {index + 1} / {photos.length}
-      </div>
-    </div>
-  )
-}
 
 // ── AT A GLANCE TABLE ─────────────────────────────────────────────────────────
 function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
@@ -365,12 +288,9 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* ── CAROUSEL + AT A GLANCE ──────────────────────────────── */}
+      {/* ── AT A GLANCE ─────────────────────────────────────────── */}
       <section className="max-w-5xl mx-auto px-5 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-          <PhotoCarousel photos={celeb.photos} name={celeb.name} />
-          <GlanceTable celeb={celeb} />
-        </div>
+        <GlanceTable celeb={celeb} />
       </section>
 
       {/* ── ASSET TYPE TABS ─────────────────────────────────────── */}
