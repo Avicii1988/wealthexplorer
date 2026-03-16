@@ -3,85 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: #080d1a;
-    color: #e2e8f0;
+    background-color: #0a0a0a;
+    color: #e8e8e6;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
-  #root {
-    width: 100%;
-    min-height: 100vh;
-  }
-}
-
-@layer components {
-  .gold-text {
-    @apply bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-500 bg-clip-text text-transparent;
-  }
-
-  .card-glass {
-    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl;
-  }
-
-  .card-glass-hover {
-    @apply card-glass hover:bg-white/10 hover:border-amber-400/30 transition-all duration-300 cursor-pointer;
-  }
-
-  .btn-gold {
-    @apply bg-gradient-to-r from-amber-400 to-yellow-500 text-navy-900 font-semibold px-6 py-2.5 rounded-xl hover:from-amber-300 hover:to-yellow-400 transition-all duration-200 shadow-lg shadow-amber-500/20;
-  }
-
-  .wealth-badge {
-    @apply inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full;
-  }
+  #root { width: 100%; min-height: 100vh; }
 }
 
 @layer utilities {
-  .text-navy-900 {
-    color: #080d1a;
-  }
-
-  .scrollbar-thin {
-    scrollbar-width: thin;
-    scrollbar-color: #f59e0b #1e2a3a;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: #1e2a3a;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    background-color: #f59e0b;
-    border-radius: 2px;
-  }
-}
-
-/* Radar glow effect */
-.radar-glow {
-  filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4));
-}
-
-/* Shimmer animation for loading */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.shimmer {
-  background: linear-gradient(90deg, #1e2a3a 25%, #2a3a4a 50%, #1e2a3a 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
+  .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 }
