@@ -25,6 +25,13 @@ export interface Celebrity {
   bio: string;
   assets: Asset[];
   trending: boolean;
+  // Bio overview fields
+  birthdate: string;
+  birthplace: string;
+  gender: 'Male' | 'Female';
+  height: string;
+  profession: string;
+  photos: string[];
 }
 
 // Wikipedia Commons or high-quality press photo URLs
@@ -38,9 +45,19 @@ export const celebrities: Celebrity[] = [
     // Wikipedia Commons CC-BY: Glenn Francis
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kylie_Jenner_2019_by_Glenn_Francis.jpg/400px-Kylie_Jenner_2019_by_Glenn_Francis.jpg',
     coverImage: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&q=80&fit=crop',
-    nationality: 'USA',
+    nationality: 'American',
     bio: 'Entrepreneur and media personality. Founder of Kylie Cosmetics and Kylie Skin. Star of the most-watched reality TV family in history.',
     trending: true,
+    birthdate: 'Aug 10, 1997',
+    birthplace: 'Los Angeles, California',
+    gender: 'Female',
+    height: '5 ft 6 in',
+    profession: 'Media Personality, Entrepreneur',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kylie_Jenner_2019_by_Glenn_Francis.jpg/400px-Kylie_Jenner_2019_by_Glenn_Francis.jpg',
+      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&h=800&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop&q=85',
+    ],
     assets: [
       {
         id: 'kj-jet-1',
@@ -119,9 +136,19 @@ export const celebrities: Celebrity[] = [
     netWorth: 242,
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/400px-Elon_Musk_Royal_Society_%28crop2%29.jpg',
     coverImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&fit=crop',
-    nationality: 'USA',
+    nationality: 'American',
     bio: 'CEO of Tesla & SpaceX. Owner of X. Founder of Neuralink and The Boring Company. The world\'s wealthiest person.',
     trending: true,
+    birthdate: 'Jun 28, 1971',
+    birthplace: 'Pretoria, South Africa',
+    gender: 'Male',
+    height: '6 ft 2 in',
+    profession: 'Entrepreneur, Engineer, Investor',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/400px-Elon_Musk_Royal_Society_%28crop2%29.jpg',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=800&fit=crop&q=85',
+    ],
     assets: [
       {
         id: 'em-jet-gulfstream',
@@ -175,9 +202,19 @@ export const celebrities: Celebrity[] = [
     netWorth: 198,
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg/440px-Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg',
     coverImage: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1200&q=80&fit=crop',
-    nationality: 'USA',
+    nationality: 'American',
     bio: 'Founder of Amazon and Blue Origin. Owner of the Washington Post. Currently building an expedition yacht fleet.',
     trending: true,
+    birthdate: 'Jan 12, 1964',
+    birthplace: 'Albuquerque, New Mexico',
+    gender: 'Male',
+    height: '5 ft 7 in',
+    profession: 'Entrepreneur, Investor',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg/440px-Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg',
+      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&q=85',
+    ],
     assets: [
       {
         id: 'jb-yacht-koru',
@@ -232,9 +269,19 @@ export const celebrities: Celebrity[] = [
     netWorth: 0.56,
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/440px-Cristiano_Ronaldo_2018.jpg',
     coverImage: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1200&q=80&fit=crop',
-    nationality: 'Portugal',
+    nationality: 'Portuguese',
     bio: 'Professional footballer and global icon. The most followed person on Instagram with over 600M followers. Owner of the CR7 brand empire.',
     trending: true,
+    birthdate: 'Feb 5, 1985',
+    birthplace: 'Funchal, Madeira, Portugal',
+    gender: 'Male',
+    height: '6 ft 2 in',
+    profession: 'Professional Footballer',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/440px-Cristiano_Ronaldo_2018.jpg',
+      'https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?w=600&h=800&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=800&fit=crop&q=85',
+    ],
     assets: [
       {
         id: 'cr-car-bugatti',
@@ -300,9 +347,19 @@ export const celebrities: Celebrity[] = [
     netWorth: 1.1,
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/440px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png',
     coverImage: 'https://images.unsplash.com/photo-1501386761578-eaa54b6e33d1?w=1200&q=80&fit=crop',
-    nationality: 'USA',
+    nationality: 'American',
     bio: 'Singer-songwriter and record-breaking touring artist. First artist to occupy the entire top 10 of the Billboard Hot 100 simultaneously.',
     trending: true,
+    birthdate: 'Dec 13, 1989',
+    birthplace: 'West Reading, Pennsylvania',
+    gender: 'Female',
+    height: '5 ft 11 in',
+    profession: 'Singer-Songwriter, Musician',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/440px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png',
+      'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=600&h=800&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=800&fit=crop&q=85',
+    ],
     assets: [
       {
         id: 'ts-jet-falcon',
@@ -358,9 +415,19 @@ export const celebrities: Celebrity[] = [
     netWorth: 2.5,
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Jay_Z_Blacc_Hollywood_Premiere_2014.jpg/440px-Jay_Z_Blacc_Hollywood_Premiere_2014.jpg',
     coverImage: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80&fit=crop',
-    nationality: 'USA',
+    nationality: 'American',
     bio: 'Rapper, producer, and entrepreneur. First hip-hop billionaire. CEO of Roc Nation and co-owner of Armand de Brignac champagne.',
     trending: false,
+    birthdate: 'Dec 4, 1969',
+    birthplace: 'Brooklyn, New York City',
+    gender: 'Male',
+    height: '6 ft 2 in',
+    profession: 'Rapper, Music Executive, Entrepreneur',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Jay_Z_Blacc_Hollywood_Premiere_2014.jpg/440px-Jay_Z_Blacc_Hollywood_Premiere_2014.jpg',
+      'https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?w=600&h=800&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1541577141970-eebc83ebe30e?w=600&h=800&fit=crop&q=85',
+    ],
     assets: [
       {
         id: 'jz-art-basquiat',
@@ -402,9 +469,19 @@ export const celebrities: Celebrity[] = [
     netWorth: 1.0,
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/LeBron_James_crop.jpg/440px-LeBron_James_crop.jpg',
     coverImage: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1200&q=80&fit=crop',
-    nationality: 'USA',
+    nationality: 'American',
     bio: 'NBA legend and entrepreneur. First active NBA player to become a billionaire. Owner of a media empire through SpringHill Company.',
     trending: true,
+    birthdate: 'Dec 30, 1984',
+    birthplace: 'Akron, Ohio',
+    gender: 'Male',
+    height: '6 ft 9 in',
+    profession: 'Professional Basketball Player, Entrepreneur',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/LeBron_James_crop.jpg/440px-LeBron_James_crop.jpg',
+      'https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=600&h=800&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=800&fit=crop&q=85',
+    ],
     assets: [
       {
         id: 'lj-car-ferrari',
@@ -449,9 +526,19 @@ export const celebrities: Celebrity[] = [
     netWorth: 1.4,
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rihanna_Fenty_Beauty_%28cropped%29.jpg/440px-Rihanna_Fenty_Beauty_%28cropped%29.jpg',
     coverImage: 'https://images.unsplash.com/photo-1522327646852-4e28586a40dd?w=1200&q=80&fit=crop',
-    nationality: 'Barbados',
+    nationality: 'Barbadian',
     bio: 'Singer and founder of Fenty Beauty — the world\'s fastest beauty brand to reach $1B in revenue. LVMH business partner.',
     trending: true,
+    birthdate: 'Feb 20, 1988',
+    birthplace: 'Bridgetown, Barbados',
+    gender: 'Female',
+    height: '5 ft 8 in',
+    profession: 'Singer, Actress, Entrepreneur',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rihanna_Fenty_Beauty_%28cropped%29.jpg/440px-Rihanna_Fenty_Beauty_%28cropped%29.jpg',
+      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&h=800&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=600&h=800&fit=crop&q=85',
+    ],
     assets: [
       {
         id: 'ri-house-hollywood',
@@ -484,9 +571,19 @@ export const celebrities: Celebrity[] = [
     netWorth: 118,
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Warren_Buffett_KU_Visit.jpg/440px-Warren_Buffett_KU_Visit.jpg',
     coverImage: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop',
-    nationality: 'USA',
+    nationality: 'American',
     bio: 'Chairman and CEO of Berkshire Hathaway. The "Oracle of Omaha." Pledged to give away 99% of his wealth to philanthropy.',
     trending: false,
+    birthdate: 'Aug 30, 1930',
+    birthplace: 'Omaha, Nebraska',
+    gender: 'Male',
+    height: '5 ft 10 in',
+    profession: 'Investor, Businessman, Philanthropist',
+    photos: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Warren_Buffett_KU_Visit.jpg/440px-Warren_Buffett_KU_Visit.jpg',
+      'https://images.unsplash.com/photo-1553484771-371a605b060b?w=600&h=800&fit=crop&q=85',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&q=85',
+    ],
     assets: [
       {
         id: 'wb-house-omaha',

@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, Heart, MapPin, Globe, ChevronDown, ChevronUp } from 'lucide-react'
+import { ArrowLeft, Heart, MapPin, Globe, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react'
 import {
   celebrities,
   assetTypeIcons,
@@ -12,6 +12,133 @@ import {
 } from '../data/celebrities'
 
 const ALL = 'All' as const
+
+function PhotoCarousel({ photos, name }: { photos: string[]; name: string }) {
+  const [index, setIndex] = useState(0)
+  const [loaded, setLoaded] = useState<boolean[]>(photos.map(() => false))
+
+  const prev = useCallback(() => setIndex(i => (i - 1 + photos.length) % photos.length), [photos.length])
+  const next = useCallback(() => setIndex(i => (i + 1) % photos.length), [photos.length])
+
+  // Auto-advance every 4s
+  useEffect(() => {
+    if (photos.length <= 1) return
+    const id = setInterval(next, 4000)
+    return () => clearInterval(id)
+  }, [next, photos.length])
+
+  const markLoaded = (i: number) =>
+    setLoaded(prev => { const n = [...prev]; n[i] = true; return n })
+
+  return (
+    <div className="relative w-full overflow-hidden rounded-2xl bg-[#111] aspect-[4/5] select-none">
+      {/* Slides */}
+      {photos.map((src, i) => (
+        <div
+          key={i}
+          className="absolute inset-0 transition-opacity duration-700"
+          style={{ opacity: i === index ? 1 : 0, pointerEvents: i === index ? 'auto' : 'none' }}
+        >
+          {!loaded[i] && (
+            <div className="absolute inset-0 bg-[#1a1a1a] animate-pulse" />
+          )}
+          <img
+            src={src}
+            alt={`${name} photo ${i + 1}`}
+            className="w-full h-full object-cover object-top"
+            onLoad={() => markLoaded(i)}
+            onError={() => markLoaded(i)}
+          />
+          {/* subtle gradient at bottom */}
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
+        </div>
+      ))}
+
+      {/* Arrows */}
+      {photos.length > 1 && (
+        <>
+          <button
+            onClick={prev}
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:bg-black/70 transition-colors z-10"
+            aria-label="Previous photo"
+          >
+            <ChevronLeft size={18} />
+          </button>
+          <button
+            onClick={next}
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white hover:bg-black/70 transition-colors z-10"
+            aria-label="Next photo"
+          >
+            <ChevronRight size={18} />
+          </button>
+
+          {/* Dots */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+            {photos.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                className="transition-all duration-300"
+                aria-label={`Photo ${i + 1}`}
+              >
+                <span
+                  className="block rounded-full transition-all duration-300"
+                  style={{
+                    width: i === index ? 20 : 6,
+                    height: 6,
+                    background: i === index ? '#c9a84c' : 'rgba(255,255,255,0.35)',
+                  }}
+                />
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* Photo counter badge */}
+      <div className="absolute top-3 right-3 text-[11px] font-medium px-2 py-1 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 text-gray-300 z-10">
+        {index + 1} / {photos.length}
+      </div>
+    </div>
+  )
+}
+
+function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+  const rows: [string, string][] = [
+    ['Category', celeb.category],
+    ['Net Worth', celeb.netWorth >= 1
+      ? `$${celeb.netWorth % 1 === 0 ? celeb.netWorth.toFixed(0) : celeb.netWorth.toFixed(1)}B`
+      : `$${(celeb.netWorth * 1000).toFixed(0)}M`],
+    ['Birthdate', celeb.birthdate],
+    ['Birthplace', celeb.birthplace],
+    ['Gender', celeb.gender],
+    ['Height', celeb.height],
+    ['Profession', celeb.profession],
+    ['Nationality', celeb.nationality],
+  ]
+  return (
+    <div className="bg-[#111111] border border-white/8 rounded-2xl overflow-hidden">
+      <div className="px-5 py-4 border-b border-white/8">
+        <h2
+          className="text-base font-normal text-white"
+          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+        >
+          {celeb.name} at a Glance
+        </h2>
+      </div>
+      <table className="w-full text-sm">
+        <tbody>
+          {rows.map(([label, value], i) => (
+            <tr key={label} className={i % 2 === 0 ? 'bg-[#111]' : 'bg-[#141414]'}>
+              <td className="px-5 py-3 text-gray-500 font-medium whitespace-nowrap w-32">{label}</td>
+              <td className="px-5 py-3 text-gray-200">{value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
 
 function AssetCard({ asset }: { asset: Asset }) {
   const [liked, setLiked] = useState(false)
@@ -250,6 +377,14 @@ export default function ProfilePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── CAROUSEL + AT A GLANCE ───────────────────────────────── */}
+      <section className="max-w-5xl mx-auto px-5 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <PhotoCarousel photos={celeb.photos} name={celeb.name} />
+          <GlanceTable celeb={celeb} />
         </div>
       </section>
 
