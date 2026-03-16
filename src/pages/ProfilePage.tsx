@@ -13,6 +13,7 @@ import {
 
 const ALL = 'All' as const
 
+// ── PHOTO CAROUSEL ────────────────────────────────────────────────────────────
 function PhotoCarousel({ photos, name }: { photos: string[]; name: string }) {
   const [index, setIndex] = useState(0)
   const [loaded, setLoaded] = useState<boolean[]>(photos.map(() => false))
@@ -20,7 +21,6 @@ function PhotoCarousel({ photos, name }: { photos: string[]; name: string }) {
   const prev = useCallback(() => setIndex(i => (i - 1 + photos.length) % photos.length), [photos.length])
   const next = useCallback(() => setIndex(i => (i + 1) % photos.length), [photos.length])
 
-  // Auto-advance every 4s
   useEffect(() => {
     if (photos.length <= 1) return
     const id = setInterval(next, 4000)
@@ -32,16 +32,13 @@ function PhotoCarousel({ photos, name }: { photos: string[]; name: string }) {
 
   return (
     <div className="relative w-full overflow-hidden rounded-2xl bg-[#111] aspect-[4/5] select-none">
-      {/* Slides */}
       {photos.map((src, i) => (
         <div
           key={i}
           className="absolute inset-0 transition-opacity duration-700"
           style={{ opacity: i === index ? 1 : 0, pointerEvents: i === index ? 'auto' : 'none' }}
         >
-          {!loaded[i] && (
-            <div className="absolute inset-0 bg-[#1a1a1a] animate-pulse" />
-          )}
+          {!loaded[i] && <div className="absolute inset-0 bg-[#1a1a1a] animate-pulse" />}
           <img
             src={src}
             alt={`${name} photo ${i + 1}`}
@@ -49,12 +46,10 @@ function PhotoCarousel({ photos, name }: { photos: string[]; name: string }) {
             onLoad={() => markLoaded(i)}
             onError={() => markLoaded(i)}
           />
-          {/* subtle gradient at bottom */}
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
       ))}
 
-      {/* Arrows */}
       {photos.length > 1 && (
         <>
           <button
@@ -71,16 +66,9 @@ function PhotoCarousel({ photos, name }: { photos: string[]; name: string }) {
           >
             <ChevronRight size={18} />
           </button>
-
-          {/* Dots */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
             {photos.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setIndex(i)}
-                className="transition-all duration-300"
-                aria-label={`Photo ${i + 1}`}
-              >
+              <button key={i} onClick={() => setIndex(i)} aria-label={`Photo ${i + 1}`}>
                 <span
                   className="block rounded-full transition-all duration-300"
                   style={{
@@ -95,7 +83,6 @@ function PhotoCarousel({ photos, name }: { photos: string[]; name: string }) {
         </>
       )}
 
-      {/* Photo counter badge */}
       <div className="absolute top-3 right-3 text-[11px] font-medium px-2 py-1 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 text-gray-300 z-10">
         {index + 1} / {photos.length}
       </div>
@@ -103,12 +90,11 @@ function PhotoCarousel({ photos, name }: { photos: string[]; name: string }) {
   )
 }
 
+// ── AT A GLANCE TABLE ─────────────────────────────────────────────────────────
 function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
   const rows: [string, string][] = [
     ['Category', celeb.category],
-    ['Net Worth', celeb.netWorth >= 1
-      ? `$${celeb.netWorth % 1 === 0 ? celeb.netWorth.toFixed(0) : celeb.netWorth.toFixed(1)}B`
-      : `$${(celeb.netWorth * 1000).toFixed(0)}M`],
+    ['Net Worth', formatNetWorth(celeb.netWorth)],
     ['Birthdate', celeb.birthdate],
     ['Birthplace', celeb.birthplace],
     ['Gender', celeb.gender],
@@ -117,8 +103,8 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
     ['Nationality', celeb.nationality],
   ]
   return (
-    <div className="bg-[#111111] border border-white/8 rounded-2xl overflow-hidden">
-      <div className="px-5 py-4 border-b border-white/8">
+    <div className="rounded-2xl overflow-hidden bg-[#111]">
+      <div className="px-5 py-4 bg-[#161616]">
         <h2
           className="text-base font-normal text-white"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -129,7 +115,7 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
       <table className="w-full text-sm">
         <tbody>
           {rows.map(([label, value], i) => (
-            <tr key={label} className={i % 2 === 0 ? 'bg-[#111]' : 'bg-[#141414]'}>
+            <tr key={label} className={i % 2 === 0 ? 'bg-[#111]' : 'bg-[#131313]'}>
               <td className="px-5 py-3 text-gray-500 font-medium whitespace-nowrap w-32">{label}</td>
               <td className="px-5 py-3 text-gray-200">{value}</td>
             </tr>
@@ -140,13 +126,14 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
   )
 }
 
+// ── ASSET CARD ────────────────────────────────────────────────────────────────
 function AssetCard({ asset }: { asset: Asset }) {
   const [liked, setLiked] = useState(false)
   const [expanded, setExpanded] = useState(false)
   const [imgError, setImgError] = useState(false)
 
   return (
-    <article className="bg-[#111111] border border-white/8 overflow-hidden group hover:border-white/20 transition-colors duration-300">
+    <article className="bg-[#111] rounded-2xl overflow-hidden group hover:bg-[#161616] transition-colors duration-300">
       {/* Image */}
       <div className="relative aspect-video overflow-hidden bg-[#1a1a1a]">
         {!imgError ? (
@@ -162,14 +149,14 @@ function AssetCard({ asset }: { asset: Asset }) {
           </div>
         )}
 
-        {/* Top badges */}
+        {/* Badges */}
         <div className="absolute top-4 left-4 right-4 flex items-start justify-between pointer-events-none">
-          <span className="text-[11px] font-medium tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-gray-300 border border-white/10">
-            {assetTypeIcons[asset.type]}&nbsp; {assetTypeLabels[asset.type]}
+          <span className="text-[11px] font-medium tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-gray-300">
+            {assetTypeIcons[asset.type]}&nbsp;{assetTypeLabels[asset.type]}
           </span>
           <span
-            className="text-sm font-semibold px-3 py-1 rounded-full backdrop-blur-sm border"
-            style={{ background: 'rgba(0,0,0,0.6)', color: '#c9a84c', borderColor: 'rgba(201,168,76,0.35)' }}
+            className="text-sm font-semibold px-3 py-1 rounded-full backdrop-blur-sm"
+            style={{ background: 'rgba(0,0,0,0.6)', color: '#c9a84c' }}
           >
             {formatValue(asset.estimatedValue)}
           </span>
@@ -178,12 +165,10 @@ function AssetCard({ asset }: { asset: Asset }) {
 
       {/* Content */}
       <div className="p-5">
-        {/* Year */}
         {asset.year && (
           <p className="text-[11px] tracking-widest uppercase text-gray-600 mb-2">{asset.year}</p>
         )}
 
-        {/* Name + like */}
         <div className="flex items-start justify-between gap-3 mb-3">
           <h3
             className="font-serif text-xl font-normal leading-snug text-white flex-1"
@@ -203,7 +188,6 @@ function AssetCard({ asset }: { asset: Asset }) {
           </button>
         </div>
 
-        {/* Location */}
         {asset.location && (
           <p className="flex items-center gap-1.5 text-xs text-gray-500 mb-3">
             <MapPin size={11} className="flex-shrink-0" />
@@ -211,12 +195,10 @@ function AssetCard({ asset }: { asset: Asset }) {
           </p>
         )}
 
-        {/* Specs pill row */}
         {asset.specs && (
           <p className="text-xs text-gray-500 leading-relaxed mb-3 font-mono">{asset.specs}</p>
         )}
 
-        {/* Description toggle */}
         <button
           onClick={() => setExpanded(e => !e)}
           className="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition-colors mb-1"
@@ -226,13 +208,12 @@ function AssetCard({ asset }: { asset: Asset }) {
         </button>
 
         {expanded && (
-          <p className="text-sm text-gray-400 leading-relaxed mt-2 border-t border-white/8 pt-3">
+          <p className="text-sm text-gray-400 leading-relaxed mt-2 pt-3">
             {asset.description}
           </p>
         )}
 
-        {/* Likes */}
-        <div className="flex items-center gap-1.5 mt-4 pt-4 border-t border-white/8">
+        <div className="flex items-center gap-1.5 mt-4 pt-4">
           <Heart size={11} className="text-gray-600" />
           <span className="text-xs text-gray-600">
             {(asset.likes + (liked ? 1 : 0)).toLocaleString()} likes
@@ -243,6 +224,7 @@ function AssetCard({ asset }: { asset: Asset }) {
   )
 }
 
+// ── PROFILE PAGE ──────────────────────────────────────────────────────────────
 export default function ProfilePage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
@@ -272,8 +254,8 @@ export default function ProfilePage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
 
-      {/* Sticky top nav */}
-      <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8">
+      {/* ── HEADER ──────────────────────────────────────────────── */}
+      <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
           <button
             onClick={() => navigate('/')}
@@ -294,9 +276,8 @@ export default function ProfilePage() {
         </div>
       </header>
 
-      {/* ── PROFILE HERO ─────────────────────────────────────────── */}
-      <section className="relative border-b border-white/8 overflow-hidden">
-        {/* Cover image blur background */}
+      {/* ── HERO ────────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={celeb.coverImage}
@@ -307,11 +288,11 @@ export default function ProfilePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-[#0a0a0a]/80 to-[#0a0a0a]" />
         </div>
 
-        <div className="relative max-w-5xl mx-auto px-5 py-12 flex flex-col sm:flex-row gap-8 items-start sm:items-center">
+        <div className="relative max-w-5xl mx-auto px-5 py-14 flex flex-col sm:flex-row gap-8 items-start sm:items-center">
           {/* Avatar */}
           <div className="flex-shrink-0">
             <div
-              className="w-32 h-32 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border border-white/12 shadow-2xl"
+              className="w-32 h-32 sm:w-44 sm:h-44 rounded-2xl overflow-hidden shadow-2xl"
               style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.7)' }}
             >
               <img
@@ -333,7 +314,7 @@ export default function ProfilePage() {
                 {celeb.category}
               </span>
               {celeb.trending && (
-                <span className="text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full bg-white/8 text-gray-400 border border-white/10">
+                <span className="text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full bg-white/8 text-gray-400">
                   Trending
                 </span>
               )}
@@ -362,15 +343,19 @@ export default function ProfilePage() {
                 <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Net Worth</p>
               </div>
               <div>
-                <p className="text-2xl font-semibold text-white tabular-nums"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                <p
+                  className="text-2xl font-semibold text-white tabular-nums"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
                   {celeb.assets.length}
                 </p>
                 <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Assets</p>
               </div>
               <div>
-                <p className="text-2xl font-semibold text-white tabular-nums"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                <p
+                  className="text-2xl font-semibold text-white tabular-nums"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
                   {formatValue(totalValue)}
                 </p>
                 <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Total Asset Value</p>
@@ -380,16 +365,16 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* ── CAROUSEL + AT A GLANCE ───────────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-5 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      {/* ── CAROUSEL + AT A GLANCE ──────────────────────────────── */}
+      <section className="max-w-5xl mx-auto px-5 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           <PhotoCarousel photos={celeb.photos} name={celeb.name} />
           <GlanceTable celeb={celeb} />
         </div>
       </section>
 
-      {/* ── ASSET TYPE TABS ──────────────────────────────────────── */}
-      <div className="sticky top-14 z-40 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8">
+      {/* ── ASSET TYPE TABS ─────────────────────────────────────── */}
+      <div className="sticky top-14 z-40 bg-[#0a0a0a]/95 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-5">
           <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
             {tabs.map(type => {
@@ -423,12 +408,12 @@ export default function ProfilePage() {
         </div>
       </div>
 
-      {/* ── ASSET GRID ───────────────────────────────────────────── */}
+      {/* ── ASSET GRID ──────────────────────────────────────────── */}
       <main className="max-w-5xl mx-auto px-5 py-10">
         {filteredAssets.length === 0 ? (
           <div className="text-center py-24 text-gray-600">No assets in this category</div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {filteredAssets.map(asset => (
               <AssetCard key={asset.id} asset={asset} />
             ))}
@@ -436,8 +421,8 @@ export default function ProfilePage() {
         )}
       </main>
 
-      {/* ── OTHER PROFILES ───────────────────────────────────────── */}
-      <section className="border-t border-white/8 py-12">
+      {/* ── MORE PROFILES ───────────────────────────────────────── */}
+      <section className="py-12">
         <div className="max-w-5xl mx-auto px-5">
           <p className="text-xs tracking-[0.2em] uppercase text-gray-600 mb-7">More Profiles</p>
           <div className="flex gap-5 overflow-x-auto scrollbar-hide pb-2">
@@ -450,7 +435,7 @@ export default function ProfilePage() {
                   to={`/celebrities/${c.id}`}
                   className="flex flex-col items-center gap-2.5 flex-shrink-0 group"
                 >
-                  <div className="w-16 h-16 rounded-full overflow-hidden border border-white/10 group-hover:border-[#c9a84c]/40 transition-colors">
+                  <div className="w-16 h-16 rounded-full overflow-hidden group-hover:ring-1 group-hover:ring-[#c9a84c]/40 transition-all">
                     <img
                       src={c.avatar}
                       alt={c.name}
@@ -470,7 +455,7 @@ export default function ProfilePage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/8 py-6 text-center">
+      <footer className="py-6 text-center">
         <p className="text-xs text-gray-700">
           Asset values are estimated and for informational purposes only.
         </p>
