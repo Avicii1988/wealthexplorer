@@ -4,8 +4,10 @@ import { Search, Globe } from 'lucide-react'
 import {
   celebrities,
   categories,
+  assetTypeLabels,
   type Category,
   type Asset,
+  type AssetType,
   assetTypeIcons,
   formatValue,
   formatNetWorth,
@@ -17,6 +19,7 @@ export default function HomePage() {
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
   const [activeCategory, setActiveCategory] = useState<Category>('All')
+  const [activeAssetType, setActiveAssetType] = useState<AssetType | 'All'>('All')
 
   const filteredCelebs = useMemo(() => {
     let list = [...celebrities]
@@ -34,12 +37,31 @@ export default function HomePage() {
 
   const trendingCelebs = celebrities.filter(c => c.trending)
 
-  const assetFeed: FeedItem[] = useMemo(
+  const allFeedItems: FeedItem[] = useMemo(
     () =>
       filteredCelebs
         .flatMap(c => c.assets.map(a => ({ ...a, ownerName: c.name, ownerId: c.id })))
         .sort((a, b) => b.likes - a.likes),
     [filteredCelebs]
+  )
+
+  const assetFeed = useMemo(
+    () => activeAssetType === 'All' ? allFeedItems : allFeedItems.filter(a => a.type === activeAssetType),
+    [allFeedItems, activeAssetType]
+  )
+
+  // Count per asset type for the filter tabs
+  const assetTypeCounts = useMemo(() => {
+    const counts: Partial<Record<AssetType, number>> = {}
+    for (const item of allFeedItems) {
+      counts[item.type] = (counts[item.type] ?? 0) + 1
+    }
+    return counts
+  }, [allFeedItems])
+
+  const presentAssetTypes = useMemo(
+    () => (Object.keys(assetTypeCounts) as AssetType[]).filter(t => (assetTypeCounts[t] ?? 0) > 0),
+    [assetTypeCounts]
   )
 
   const showTrending = !search && activeCategory === 'All'
@@ -138,9 +160,43 @@ export default function HomePage() {
 
       {/* ── ASSET FEED ──────────────────────────────────────────── */}
       <section className="max-w-5xl mx-auto px-5 pb-16">
-        <p className="text-[10px] tracking-[0.25em] text-gray-600 uppercase mb-7 text-center">
+        <p className="text-[10px] tracking-[0.25em] text-gray-600 uppercase mb-6 text-center">
           {showTrending ? 'Featured Assets' : `${assetFeed.length} assets · ${filteredCelebs.length} profiles`}
         </p>
+
+        {/* Asset type filter tabs */}
+        <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide pb-4 mb-6 justify-center flex-wrap">
+          <button
+            onClick={() => setActiveAssetType('All')}
+            className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 flex-shrink-0 ${
+              activeAssetType === 'All'
+                ? 'bg-[#c9a84c]/15 text-[#c9a84c]'
+                : 'text-gray-500 hover:text-gray-300'
+            }`}
+          >
+            All Assets
+            <span className={`text-[11px] font-semibold px-1.5 py-0.5 rounded-full ${activeAssetType === 'All' ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
+              {allFeedItems.length}
+            </span>
+          </button>
+          {presentAssetTypes.map(type => (
+            <button
+              key={type}
+              onClick={() => setActiveAssetType(type)}
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 flex-shrink-0 ${
+                activeAssetType === type
+                  ? 'bg-[#c9a84c]/15 text-[#c9a84c]'
+                  : 'text-gray-500 hover:text-gray-300'
+              }`}
+            >
+              <span className="text-base leading-none">{assetTypeIcons[type]}</span>
+              {assetTypeLabels[type]}
+              <span className={`text-[11px] font-semibold px-1.5 py-0.5 rounded-full ${activeAssetType === type ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
+                {assetTypeCounts[type]}
+              </span>
+            </button>
+          ))}
+        </div>
 
         {assetFeed.length === 0 ? (
           <div className="text-center py-24 text-gray-700">No results found</div>
@@ -225,17 +281,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-white/8 py-8 text-center">
-        <p
-          className="font-serif text-sm mb-2"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
-        >
-          Wealth Explorer
-        </p>
-        <p className="text-xs text-gray-700">
-          Data and values are estimated and for informational purposes only.
-        </p>
+      {/* ── FOOTER ──────────────────────────────────────────────── */}
+      <footer className="pt-16 pb-10 px-5">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-12">
+            <div>
+              <p
+                className="text-lg font-normal mb-3"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
+              >
+                Wealth Explorer
+              </p>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Explore the verified assets of the world's most notable individuals. Jets, yachts, estates, watches and more.
+              </p>
+            </div>
+            <div>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-gray-600 mb-4">Explore</p>
+              <ul className="space-y-2.5">
+                {['Trending Profiles', 'All Celebrities', 'Asset Feed', 'Athletes', 'Musicians', 'Entrepreneurs'].map(item => (
+                  <li key={item}><span className="text-xs text-gray-500 hover:text-white transition-colors cursor-pointer">{item}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-gray-600 mb-4">Asset Types</p>
+              <ul className="space-y-2.5">
+                {['Private Jets', 'Yachts', 'Real Estate', 'Cars', 'Watches', 'Art Collections'].map(item => (
+                  <li key={item}><span className="text-xs text-gray-500">{item}</span></li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-[11px] text-gray-700">© 2025 Wealth Explorer. All rights reserved.</p>
+            <p className="text-[11px] text-gray-700">All valuations are estimates for informational purposes only.</p>
+          </div>
+        </div>
       </footer>
     </div>
   )
