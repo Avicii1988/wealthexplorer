@@ -20,7 +20,6 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
     ['Net Worth', formatNetWorth(celeb.netWorth)],
     ['Birthdate', celeb.birthdate],
     ['Birthplace', celeb.birthplace],
-    ['Gender', celeb.gender],
     ['Height', celeb.height],
     ['Profession', celeb.profession],
     ['Nationality', celeb.nationality],
@@ -41,6 +40,45 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
             <tr key={label} className={i % 2 === 0 ? 'bg-[#111]' : 'bg-[#131313]'}>
               <td className="px-5 py-3 text-gray-500 font-medium whitespace-nowrap w-32">{label}</td>
               <td className="px-5 py-3 text-gray-200">{value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+// ── RELATIONSHIPS ─────────────────────────────────────────────────────────────
+function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+  const r = celeb.relationships
+  if (!r) return null
+
+  const rows: [string, string][] = [
+    ...(r.parents?.length ? [['Parents', r.parents.join(' · ')] as [string, string]] : []),
+    ...(r.spouse ? [['Spouse', r.spouse] as [string, string]] : []),
+    ...(r.partner ? [['Partner', r.partner] as [string, string]] : []),
+    ...(r.siblings?.length ? [['Siblings', r.siblings.join(' · ')] as [string, string]] : []),
+    ...(r.children?.length ? [['Children', r.children.join(' · ')] as [string, string]] : []),
+  ]
+
+  if (rows.length === 0) return null
+
+  return (
+    <div className="rounded-2xl overflow-hidden bg-[#111]">
+      <div className="px-5 py-4 bg-[#161616]">
+        <h2
+          className="text-base font-normal text-white"
+          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+        >
+          Relationships
+        </h2>
+      </div>
+      <table className="w-full text-sm">
+        <tbody>
+          {rows.map(([label, value], i) => (
+            <tr key={label} className={i % 2 === 0 ? 'bg-[#111]' : 'bg-[#131313]'}>
+              <td className="px-5 py-3 text-gray-500 font-medium whitespace-nowrap w-32">{label}</td>
+              <td className="px-5 py-3 text-gray-200 leading-relaxed">{value}</td>
             </tr>
           ))}
         </tbody>
@@ -288,9 +326,10 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* ── AT A GLANCE ─────────────────────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-5 pb-12">
+      {/* ── AT A GLANCE + RELATIONSHIPS ─────────────────────────── */}
+      <section className="max-w-5xl mx-auto px-5 pb-12 flex flex-col gap-4">
         <GlanceTable celeb={celeb} />
+        <RelationshipsSection celeb={celeb} />
       </section>
 
       {/* ── ASSET TYPE TABS ─────────────────────────────────────── */}
@@ -374,11 +413,50 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-6 text-center">
-        <p className="text-xs text-gray-700">
-          Asset values are estimated and for informational purposes only.
-        </p>
+      {/* ── FOOTER ──────────────────────────────────────────────── */}
+      <footer className="pt-16 pb-10 px-5">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-12">
+            {/* Brand */}
+            <div>
+              <p
+                className="text-lg font-normal mb-3"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
+              >
+                Wealth Explorer
+              </p>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Explore the verified assets of the world's most notable individuals. Jets, yachts, estates, watches and more.
+              </p>
+            </div>
+            {/* Explore */}
+            <div>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-gray-600 mb-4">Explore</p>
+              <ul className="space-y-2.5">
+                {['Trending Profiles', 'All Celebrities', 'Asset Feed', 'Athletes', 'Musicians', 'Entrepreneurs'].map(item => (
+                  <li key={item}>
+                    <Link to="/" className="text-xs text-gray-500 hover:text-white transition-colors">{item}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Categories */}
+            <div>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-gray-600 mb-4">Asset Types</p>
+              <ul className="space-y-2.5">
+                {['Private Jets', 'Yachts', 'Real Estate', 'Cars', 'Watches', 'Art Collections'].map(item => (
+                  <li key={item}>
+                    <span className="text-xs text-gray-500">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-[11px] text-gray-700">© 2025 Wealth Explorer. All rights reserved.</p>
+            <p className="text-[11px] text-gray-700">All valuations are estimates for informational purposes only.</p>
+          </div>
+        </div>
       </footer>
     </div>
   )
