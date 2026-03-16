@@ -282,9 +282,9 @@ export default function HomePage() {
       </section>
 
       {/* ── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="pt-16 pb-10 px-5">
+      <footer className="pt-16 pb-10 px-5 border-t border-white/8">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
             <div>
               <p
                 className="text-lg font-normal mb-3"
@@ -292,8 +292,11 @@ export default function HomePage() {
               >
                 Wealth Explorer
               </p>
-              <p className="text-xs text-gray-600 leading-relaxed">
+              <p className="text-xs text-gray-600 leading-relaxed mb-4">
                 Explore the verified assets of the world's most notable individuals. Jets, yachts, estates, watches and more.
+              </p>
+              <p className="text-[11px] text-gray-700 leading-relaxed">
+                Data updated daily from public sources – Wealth Explorer
               </p>
             </div>
             <div>
@@ -313,9 +316,25 @@ export default function HomePage() {
               </ul>
             </div>
           </div>
-          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-[11px] text-gray-700">© 2025 Wealth Explorer. All rights reserved.</p>
-            <p className="text-[11px] text-gray-700">All valuations are estimates for informational purposes only.</p>
+
+          {/* Disclaimer */}
+          <div className="border-t border-white/8 pt-6 mb-4">
+            <p className="text-[11px] text-gray-700 leading-relaxed max-w-3xl">
+              All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth estimates are approximate and may vary. Gossip and controversies based on public news; not verified. Images from public domain or fair-use sources. For informational purposes only — not financial advice.
+            </p>
+          </div>
+
+          {/* Bottom row */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-[11px] text-gray-700">© 2026 Wealth Explorer</p>
+            <div className="flex items-center gap-4">
+              {['About Us', 'Privacy Policy', 'Contact', 'Terms of Use'].map((item, i) => (
+                <span key={item} className="flex items-center gap-4">
+                  <Link to="/" className="text-[11px] text-gray-600 hover:text-gray-400 transition-colors">{item}</Link>
+                  {i < 3 && <span className="text-gray-800">|</span>}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </footer>
