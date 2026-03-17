@@ -8,6 +8,7 @@ import {
   formatValue,
   formatNetWorth,
   getNationalityFlag,
+  getAvatar,
   type AssetType,
   type Asset,
 } from '../data/celebrities'
@@ -371,7 +372,7 @@ export default function ProfilePage() {
               style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.7)' }}
             >
               <img
-                src={avatarError ? fallbackAvatar : celeb.avatar}
+                src={avatarError ? fallbackAvatar : getAvatar(celeb)}
                 alt={celeb.name}
                 className="w-full h-full object-cover object-top"
                 onError={() => setAvatarError(true)}
@@ -569,7 +570,7 @@ export default function ProfilePage() {
                 >
                   <div className="w-16 h-16 rounded-full overflow-hidden group-hover:ring-1 group-hover:ring-[#c9a84c]/40 transition-all">
                     <img
-                      src={c.avatar}
+                      src={getAvatar(c)}
                       alt={c.name}
                       className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-300"
                       onError={e => {

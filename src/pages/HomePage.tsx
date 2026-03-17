@@ -12,6 +12,7 @@ import {
   assetTypeIcons,
   formatValue,
   formatNetWorth,
+  getAvatar,
 } from '../data/celebrities'
 import NotificationBell from '../components/NotificationBell'
 
@@ -105,7 +106,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                 <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group text-left">
                   <div className="relative aspect-square rounded-2xl overflow-hidden bg-[#111] mb-3 border border-white/8 group-hover:border-[#c9a84c]/30 transition-colors duration-300">
                     <img
-                      src={celeb.avatar}
+                      src={getAvatar(celeb)}
                       alt={celeb.name}
                       className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
                       onError={e => {
@@ -387,7 +388,7 @@ export default function HomePage() {
                     >
                       <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-white/10">
                         <img
-                          src={celeb.avatar}
+                          src={getAvatar(celeb)}
                           alt={celeb.name}
                           className="w-full h-full object-cover object-top"
                           onError={e => {
@@ -451,7 +452,7 @@ export default function HomePage() {
               >
                 <div className="w-14 h-14 sm:w-[68px] sm:h-[68px] rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#c9a84c]/60 transition-all duration-300 shadow-lg">
                   <img
-                    src={celeb.avatar}
+                    src={getAvatar(celeb)}
                     alt={celeb.name}
                     className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
                     onError={e => {
