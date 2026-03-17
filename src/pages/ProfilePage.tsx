@@ -7,9 +7,11 @@ import {
   assetTypeLabels,
   formatValue,
   formatNetWorth,
+  getNationalityFlag,
   type AssetType,
   type Asset,
 } from '../data/celebrities'
+import NotificationBell from '../components/NotificationBell'
 
 const ALL = 'All' as const
 
@@ -50,7 +52,7 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
     ['Birthplace', celeb.birthplace],
     ['Height', celeb.height],
     ['Profession', celeb.profession],
-    ['Nationality', celeb.nationality],
+    ['Nationality', `${getNationalityFlag(celeb.nationality)} ${celeb.nationality}`],
   ]
   return (
     <div className="rounded-2xl overflow-hidden bg-[#111]">
@@ -168,9 +170,16 @@ function AssetCard({ asset }: { asset: Asset }) {
 
         {/* Badges */}
         <div className="absolute top-4 left-4 right-4 flex items-start justify-between pointer-events-none">
-          <span className="text-[11px] font-medium tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-gray-300">
-            {assetTypeIcons[asset.type]}&nbsp;{assetTypeLabels[asset.type]}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-medium tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-gray-300">
+              {assetTypeIcons[asset.type]}&nbsp;{assetTypeLabels[asset.type]}
+            </span>
+            {asset.isNew && (
+              <span className="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full bg-[#c9a84c] text-[#0a0a0a]">
+                NEW
+              </span>
+            )}
+          </div>
           <span
             className="text-sm font-semibold px-3 py-1 rounded-full backdrop-blur-sm"
             style={{ background: 'rgba(0,0,0,0.6)', color: '#c9a84c' }}
@@ -296,9 +305,12 @@ export default function ProfilePage() {
           <div className="flex items-center gap-3">
             {/* Nationality badge */}
             <div className="hidden sm:flex items-center gap-1.5 text-xs text-gray-600">
-              <Globe size={12} />
+              <span>{getNationalityFlag(celeb.nationality)}</span>
               <span className="uppercase tracking-wider">{celeb.nationality}</span>
             </div>
+
+            {/* Notifications */}
+            <NotificationBell />
 
             {/* Language selector */}
             <div ref={langRef} className="relative">
