@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp } from 'lucide-react'
+import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff } from 'lucide-react'
 import {
   celebrities,
   assetTypeIcons,
@@ -26,6 +26,20 @@ const LANGUAGES = [
   { code: 'ar', label: 'العربية', flag: '🇦🇪' },
   { code: 'zh', label: '中文', flag: '🇨🇳' },
 ]
+
+const FOLLOWS_KEY = 'we_followed_celebs'
+
+function getFollowed(): Set<string> {
+  try {
+    const raw = localStorage.getItem(FOLLOWS_KEY)
+    return new Set(raw ? JSON.parse(raw) : [])
+  } catch {
+    return new Set()
+  }
+}
+function saveFollowed(ids: Set<string>) {
+  localStorage.setItem(FOLLOWS_KEY, JSON.stringify([...ids]))
+}
 
 function WealthLogoSmall() {
   return (
@@ -58,10 +72,7 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
   return (
     <div className="rounded-2xl overflow-hidden bg-[#111]">
       <div className="px-5 py-4 bg-[#161616]">
-        <h2
-          className="text-base font-semibold text-white"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-        >
+        <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
           {celeb.name} at a Glance
         </h2>
       </div>
@@ -97,10 +108,7 @@ function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities
   return (
     <div className="rounded-2xl overflow-hidden bg-[#111]">
       <div className="px-5 py-4 bg-[#161616]">
-        <h2
-          className="text-base font-semibold text-white"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-        >
+        <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
           Relationships
         </h2>
       </div>
@@ -126,10 +134,7 @@ function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
   return (
     <div className="rounded-2xl overflow-hidden bg-[#111]">
       <div className="px-5 py-4 bg-[#161616]">
-        <h2
-          className="text-base font-semibold text-white"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-        >
+        <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
           Gossip &amp; Controversy
         </h2>
         <p className="text-[11px] text-gray-600 mt-1">Based on public news — not verified by Wealth Explorer</p>
@@ -197,10 +202,7 @@ function AssetCard({ asset }: { asset: Asset }) {
         )}
 
         <div className="flex items-start justify-between gap-3 mb-3">
-          <h3
-            className="font-serif text-xl font-normal leading-snug text-white flex-1"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-          >
+          <h3 className="font-serif text-xl font-normal leading-snug text-white flex-1" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             {asset.name}
           </h3>
           <button
@@ -251,17 +253,73 @@ function AssetCard({ asset }: { asset: Asset }) {
   )
 }
 
-type ProfileTab = 'overview' | 'assets' | 'photos'
+// ── ASSETS SECTION (inline, replaces assets tab) ──────────────────────────────
+function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+  const [activeType, setActiveType] = useState<AssetType | typeof ALL>(ALL)
+
+  const assetTypes = Array.from(new Set(celeb.assets.map(a => a.type))) as AssetType[]
+  const tabs: (AssetType | typeof ALL)[] = [ALL, ...assetTypes]
+  const filtered = activeType === ALL ? celeb.assets : celeb.assets.filter(a => a.type === activeType)
+
+  return (
+    <div className="rounded-2xl overflow-hidden bg-[#111]">
+      {/* Header */}
+      <div className="px-5 py-4 bg-[#161616] flex items-center justify-between gap-3">
+        <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+          Assets
+        </h2>
+        <span className="text-[11px] text-gray-600">{celeb.assets.length} total</span>
+      </div>
+
+      {/* Type filter tabs */}
+      {assetTypes.length > 1 && (
+        <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide border-b border-white/5 bg-[#111]">
+          {tabs.map(type => {
+            const count = type === ALL ? celeb.assets.length : celeb.assets.filter(a => a.type === type).length
+            const isActive = activeType === type
+            return (
+              <button
+                key={type}
+                onClick={() => setActiveType(type)}
+                className={`flex items-center gap-1.5 px-4 py-3 text-xs font-medium border-b-2 transition-all duration-200 flex-shrink-0 whitespace-nowrap ${
+                  isActive ? 'border-[#c9a84c] text-[#c9a84c]' : 'border-transparent text-gray-600 hover:text-gray-400'
+                }`}
+              >
+                {type !== ALL && <span className="text-sm leading-none">{assetTypeIcons[type]}</span>}
+                <span>{type === ALL ? 'All' : assetTypeLabels[type]}</span>
+                <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${isActive ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
+                  {count}
+                </span>
+              </button>
+            )
+          })}
+        </div>
+      )}
+
+      {/* Asset grid */}
+      <div className="p-4">
+        {filtered.length === 0 ? (
+          <p className="text-center py-8 text-gray-600 text-sm">No assets in this category</p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {filtered.map(asset => (
+              <AssetCard key={asset.id} asset={asset} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
 
 // ── PROFILE PAGE ──────────────────────────────────────────────────────────────
 export default function ProfilePage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
-  const [activeTab, setActiveTab] = useState<ProfileTab>('overview')
-  const [activeType, setActiveType] = useState<AssetType | typeof ALL>(ALL)
   const [avatarError, setAvatarError] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
   const [activeLang, setActiveLang] = useState(LANGUAGES[0])
+  const [followed, setFollowed] = useState<Set<string>>(getFollowed)
   const langRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -285,12 +343,17 @@ export default function ProfilePage() {
     )
   }
 
-  const assetTypes = Array.from(new Set(celeb.assets.map(a => a.type))) as AssetType[]
-  const tabs: (AssetType | typeof ALL)[] = [ALL, ...assetTypes]
-  const filteredAssets = activeType === ALL ? celeb.assets : celeb.assets.filter(a => a.type === activeType)
   const totalValue = celeb.assets.reduce((s, a) => s + a.estimatedValue, 0)
-
   const fallbackAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
+  const isFollowed = followed.has(celeb.id)
+
+  function toggleFollow() {
+    const next = new Set(followed)
+    if (next.has(celeb!.id)) next.delete(celeb!.id)
+    else next.add(celeb!.id)
+    setFollowed(next)
+    saveFollowed(next)
+  }
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
@@ -365,11 +428,11 @@ export default function ProfilePage() {
         </div>
 
         <div className="relative max-w-5xl mx-auto px-5 py-14 flex flex-col sm:flex-row gap-8 items-start sm:items-center">
-          {/* Avatar */}
+          {/* Circle Avatar */}
           <div className="flex-shrink-0">
             <div
-              className="w-32 h-32 sm:w-44 sm:h-44 rounded-2xl overflow-hidden shadow-2xl"
-              style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.7)' }}
+              className="w-36 h-36 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-2xl border-2"
+              style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.7)', borderColor: 'rgba(201,168,76,0.25)' }}
             >
               <img
                 src={avatarError ? fallbackAvatar : getAvatar(celeb)}
@@ -403,7 +466,6 @@ export default function ProfilePage() {
               {celeb.name}
             </h1>
 
-            {/* Nationality flag at a glance */}
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl leading-none" title={celeb.nationality}>{getNationalityFlag(celeb.nationality)}</span>
               <span className="text-sm text-gray-400 uppercase tracking-widest">{celeb.nationality}</span>
@@ -413,143 +475,51 @@ export default function ProfilePage() {
               {celeb.bio}
             </p>
 
-            {/* Stats */}
-            <div className="flex flex-wrap gap-x-8 gap-y-4">
+            {/* Stats + Follow button */}
+            <div className="flex flex-wrap items-end gap-x-8 gap-y-4">
               <div>
-                <p
-                  className="text-2xl font-semibold tabular-nums"
-                  style={{ color: '#c9a84c', fontFamily: "'Playfair Display', Georgia, serif" }}
-                >
+                <p className="text-2xl font-semibold tabular-nums" style={{ color: '#c9a84c', fontFamily: "'Playfair Display', Georgia, serif" }}>
                   {formatNetWorth(celeb.netWorth)}
                 </p>
                 <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Net Worth</p>
               </div>
               <div>
-                <p
-                  className="text-2xl font-semibold text-white tabular-nums"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                >
+                <p className="text-2xl font-semibold text-white tabular-nums" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                   {celeb.assets.length}
                 </p>
                 <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Assets</p>
               </div>
               <div>
-                <p
-                  className="text-2xl font-semibold text-white tabular-nums"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                >
+                <p className="text-2xl font-semibold text-white tabular-nums" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                   {formatValue(totalValue)}
                 </p>
-                <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Total Asset Value</p>
+                <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Total Value</p>
               </div>
+
+              {/* Follow / Notify button */}
+              <button
+                onClick={toggleFollow}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 ${
+                  isFollowed
+                    ? 'bg-[#c9a84c]/10 border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/20'
+                    : 'border-white/20 text-gray-300 hover:border-[#c9a84c]/40 hover:text-[#c9a84c]'
+                }`}
+              >
+                {isFollowed ? <Bell size={14} className="fill-[#c9a84c]" /> : <BellOff size={14} />}
+                {isFollowed ? 'Following' : 'Follow'}
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── MAIN PROFILE TABS ────────────────────────────────────── */}
-      <div className="sticky top-14 z-40 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8">
-        <div className="max-w-5xl mx-auto px-5">
-          <div className="flex items-center gap-0">
-            {(['overview', 'assets', 'photos'] as ProfileTab[]).map(tab => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-5 py-4 text-sm font-medium border-b-2 transition-all duration-200 capitalize ${
-                  activeTab === tab
-                    ? 'border-[#c9a84c] text-[#c9a84c]'
-                    : 'border-transparent text-gray-500 hover:text-gray-300'
-                }`}
-              >
-                {tab === 'overview' && 'Overview'}
-                {tab === 'assets' && `Assets · ${celeb.assets.length}`}
-                {tab === 'photos' && `Photos · ${celeb.photos.length}`}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ── OVERVIEW TAB ─────────────────────────────────────────── */}
-      {activeTab === 'overview' && (
-        <section className="max-w-5xl mx-auto px-5 py-10 flex flex-col gap-4">
-          <GlanceTable celeb={celeb} />
-          <RelationshipsSection celeb={celeb} />
-          <GossipSection celeb={celeb} />
-        </section>
-      )}
-
-      {/* ── ASSETS TAB ───────────────────────────────────────────── */}
-      {activeTab === 'assets' && (
-        <>
-          {/* Asset type sub-tabs */}
-          <div className="bg-[#0a0a0a] border-b border-white/5">
-            <div className="max-w-5xl mx-auto px-5">
-              <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
-                {tabs.map(type => {
-                  const count = type === ALL
-                    ? celeb.assets.length
-                    : celeb.assets.filter(a => a.type === type).length
-                  const isActive = activeType === type
-                  return (
-                    <button
-                      key={type}
-                      onClick={() => setActiveType(type)}
-                      className={`flex items-center gap-2 px-4 py-3.5 text-xs font-medium border-b-2 transition-all duration-200 flex-shrink-0 whitespace-nowrap ${
-                        isActive
-                          ? 'border-[#c9a84c] text-[#c9a84c]'
-                          : 'border-transparent text-gray-600 hover:text-gray-400'
-                      }`}
-                    >
-                      {type !== ALL && <span className="text-sm leading-none">{assetTypeIcons[type]}</span>}
-                      <span>{type === ALL ? 'All' : assetTypeLabels[type]}</span>
-                      <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${isActive ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
-                        {count}
-                      </span>
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-          <main className="max-w-5xl mx-auto px-5 py-10">
-            {filteredAssets.length === 0 ? (
-              <div className="text-center py-24 text-gray-600">No assets in this category</div>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {filteredAssets.map(asset => (
-                  <AssetCard key={asset.id} asset={asset} />
-                ))}
-              </div>
-            )}
-          </main>
-        </>
-      )}
-
-      {/* ── PHOTOS TAB ───────────────────────────────────────────── */}
-      {activeTab === 'photos' && (
-        <section className="max-w-5xl mx-auto px-5 py-10">
-          {celeb.photos.length === 0 ? (
-            <div className="text-center py-24 text-gray-600">No photos available</div>
-          ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {celeb.photos.map((src, i) => (
-                <div key={i} className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[#111] group">
-                  <img
-                    src={src}
-                    alt={`${celeb.name} photo ${i + 1}`}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
-                    onError={e => {
-                      (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=400`
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              ))}
-            </div>
-          )}
-        </section>
-      )}
+      {/* ── MAIN CONTENT (no tabs — single scroll) ──────────────── */}
+      <main className="max-w-5xl mx-auto px-5 py-10 flex flex-col gap-6">
+        <GlanceTable celeb={celeb} />
+        <RelationshipsSection celeb={celeb} />
+        <GossipSection celeb={celeb} />
+        {celeb.assets.length > 0 && <AssetsSection celeb={celeb} />}
+      </main>
 
       {/* ── MORE PROFILES ───────────────────────────────────────── */}
       <section className="py-12">
@@ -557,18 +527,17 @@ export default function ProfilePage() {
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-7">More Profiles</p>
           <div className="flex gap-5 overflow-x-auto scrollbar-hide pb-2">
             {[
-              // Same category first, then others, exclude current
               ...celebrities.filter(c => c.id !== celeb.id && c.category === celeb.category),
               ...celebrities.filter(c => c.id !== celeb.id && c.category !== celeb.category),
             ]
-              .slice(0, 10)
+              .slice(0, 12)
               .map(c => (
                 <Link
                   key={c.id}
                   to={`/celebrities/${c.id}`}
                   className="flex flex-col items-center gap-2.5 flex-shrink-0 group"
                 >
-                  <div className="w-16 h-16 rounded-full overflow-hidden group-hover:ring-1 group-hover:ring-[#c9a84c]/40 transition-all">
+                  <div className="w-16 h-16 rounded-full overflow-hidden group-hover:ring-2 group-hover:ring-[#c9a84c]/40 transition-all">
                     <img
                       src={getAvatar(c)}
                       alt={c.name}
@@ -592,10 +561,7 @@ export default function ProfilePage() {
         <div className="max-w-5xl mx-auto px-5">
           <div className="rounded-2xl bg-[#111] border border-white/8 px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
             <div>
-              <p
-                className="text-base font-normal text-white mb-1"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-              >
+              <p className="text-base font-normal text-white mb-1" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                 Did we make a mistake?
               </p>
               <p className="text-sm text-gray-500 leading-relaxed">
@@ -616,12 +582,8 @@ export default function ProfilePage() {
       <footer className="pt-16 pb-10 px-5 border-t border-white/8">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
-            {/* Brand */}
             <div>
-              <p
-                className="text-lg font-normal mb-3"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
-              >
+              <p className="text-lg font-normal mb-3" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}>
                 Wealth Explorer
               </p>
               <p className="text-xs text-gray-600 leading-relaxed mb-4">
@@ -631,7 +593,6 @@ export default function ProfilePage() {
                 Data updated daily from public sources – Wealth Explorer
               </p>
             </div>
-            {/* Explore */}
             <div>
               <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-500 mb-4">Explore</p>
               <ul className="space-y-2.5">
@@ -642,7 +603,6 @@ export default function ProfilePage() {
                 ))}
               </ul>
             </div>
-            {/* Categories */}
             <div>
               <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-500 mb-4">Asset Types</p>
               <ul className="space-y-2.5">
@@ -655,14 +615,12 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          {/* Disclaimer */}
           <div className="border-t border-white/8 pt-6 mb-4">
             <p className="text-[11px] text-gray-700 leading-relaxed max-w-3xl">
               All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth estimates are approximate and may vary. Gossip and controversies based on public news; not verified. Images from public domain or fair-use sources. For informational purposes only — not financial advice.
             </p>
           </div>
 
-          {/* Bottom row */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-[11px] text-gray-700">© 2026 Wealth Explorer</p>
             <div className="flex items-center gap-4">

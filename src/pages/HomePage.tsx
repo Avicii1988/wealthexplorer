@@ -98,37 +98,40 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
               <span className="text-[10px] text-gray-700">{grouped[letter].length}</span>
             </div>
 
-            {/* Profiles row */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+            {/* Profiles row — circle avatar + card */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {grouped[letter].map(celeb => {
                 const hasNewAsset = celeb.assets.some(a => a.isNew)
                 return (
-                <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group text-left">
-                  <div className="relative aspect-square rounded-2xl overflow-hidden bg-[#111] mb-3 border border-white/8 group-hover:border-[#c9a84c]/30 transition-colors duration-300">
-                    <img
-                      src={getAvatar(celeb)}
-                      alt={celeb.name}
-                      className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
-                      onError={e => {
-                        (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
-                      }}
-                    />
+                <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
+                  <div className="relative bg-[#111] rounded-2xl border border-white/8 group-hover:border-[#c9a84c]/30 transition-all duration-300 group-hover:bg-[#141414] flex flex-col items-center text-center pt-5 pb-4 px-3 gap-3">
+                    {/* NEW badge */}
                     {hasNewAsset && (
-                      <div className="absolute top-2 right-2 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#c9a84c] shadow-lg">
+                      <div className="absolute top-2.5 right-2.5 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#c9a84c] shadow-lg z-10">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0a] animate-pulse" />
                         <span className="text-[9px] font-bold text-[#0a0a0a] tracking-wider uppercase leading-none">New</span>
                       </div>
                     )}
+                    {/* Circle avatar */}
+                    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#c9a84c]/50 transition-all duration-300 flex-shrink-0">
+                      <img
+                        src={getAvatar(celeb)}
+                        alt={celeb.name}
+                        className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                        onError={e => {
+                          (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
+                        }}
+                      />
+                    </div>
+                    {/* Info */}
+                    <div className="w-full">
+                      <p className="text-sm font-semibold text-white group-hover:text-[#c9a84c] transition-colors truncate leading-tight">
+                        {celeb.name}
+                      </p>
+                      <p className="text-xs mt-1" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
+                      <p className="text-[11px] text-gray-600 mt-0.5">{celeb.assets.length} asset{celeb.assets.length !== 1 ? 's' : ''}</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <p className="text-sm font-semibold text-white group-hover:text-[#c9a84c] transition-colors truncate flex-1">
-                      {celeb.name}
-                    </p>
-                    {hasNewAsset && <span className="w-2 h-2 rounded-full bg-[#c9a84c] flex-shrink-0 animate-pulse" />}
-                  </div>
-                  <p className="text-xs text-gray-600 mt-0.5">
-                    {formatNetWorth(celeb.netWorth)} · {celeb.assets.length} assets
-                  </p>
                 </Link>
                 )
               })}
