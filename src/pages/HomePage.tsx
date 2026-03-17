@@ -99,9 +99,11 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
             {/* Profiles row */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
-              {grouped[letter].map(celeb => (
+              {grouped[letter].map(celeb => {
+                const hasNewAsset = celeb.assets.some(a => a.isNew)
+                return (
                 <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group text-left">
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-[#111] mb-3 border border-white/8 group-hover:border-[#c9a84c]/30 transition-colors duration-300">
+                  <div className="relative aspect-square rounded-2xl overflow-hidden bg-[#111] mb-3 border border-white/8 group-hover:border-[#c9a84c]/30 transition-colors duration-300">
                     <img
                       src={celeb.avatar}
                       alt={celeb.name}
@@ -110,15 +112,25 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                         (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
                       }}
                     />
+                    {hasNewAsset && (
+                      <div className="absolute top-2 right-2 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#c9a84c] shadow-lg">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0a] animate-pulse" />
+                        <span className="text-[9px] font-bold text-[#0a0a0a] tracking-wider uppercase leading-none">New</span>
+                      </div>
+                    )}
                   </div>
-                  <p className="text-sm font-semibold text-white group-hover:text-[#c9a84c] transition-colors truncate">
-                    {celeb.name}
-                  </p>
+                  <div className="flex items-center gap-1.5">
+                    <p className="text-sm font-semibold text-white group-hover:text-[#c9a84c] transition-colors truncate flex-1">
+                      {celeb.name}
+                    </p>
+                    {hasNewAsset && <span className="w-2 h-2 rounded-full bg-[#c9a84c] flex-shrink-0 animate-pulse" />}
+                  </div>
                   <p className="text-xs text-gray-600 mt-0.5">
                     {formatNetWorth(celeb.netWorth)} · {celeb.assets.length} assets
                   </p>
                 </Link>
-              ))}
+                )
+              })}
             </div>
           </div>
         ))}

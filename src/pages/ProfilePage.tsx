@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, Heart, MapPin, Globe, ChevronDown, ChevronUp } from 'lucide-react'
+import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp } from 'lucide-react'
 import {
   celebrities,
   assetTypeIcons,
@@ -250,10 +250,13 @@ function AssetCard({ asset }: { asset: Asset }) {
   )
 }
 
+type ProfileTab = 'overview' | 'assets' | 'photos'
+
 // ── PROFILE PAGE ──────────────────────────────────────────────────────────────
 export default function ProfilePage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
+  const [activeTab, setActiveTab] = useState<ProfileTab>('overview')
   const [activeType, setActiveType] = useState<AssetType | typeof ALL>(ALL)
   const [avatarError, setAvatarError] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
@@ -399,6 +402,12 @@ export default function ProfilePage() {
               {celeb.name}
             </h1>
 
+            {/* Nationality flag at a glance */}
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-2xl leading-none" title={celeb.nationality}>{getNationalityFlag(celeb.nationality)}</span>
+              <span className="text-sm text-gray-400 uppercase tracking-widest">{celeb.nationality}</span>
+            </div>
+
             <p className="text-gray-400 text-sm leading-relaxed mb-7 max-w-lg">
               {celeb.bio}
             </p>
@@ -437,60 +446,109 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* ── AT A GLANCE + RELATIONSHIPS + GOSSIP ────────────────── */}
-      <section className="max-w-5xl mx-auto px-5 pb-12 flex flex-col gap-4">
-        <GlanceTable celeb={celeb} />
-        <RelationshipsSection celeb={celeb} />
-        <GossipSection celeb={celeb} />
-      </section>
-
-      {/* ── ASSET TYPE TABS ─────────────────────────────────────── */}
-      <div className="sticky top-14 z-40 bg-[#0a0a0a]/95 backdrop-blur-md">
+      {/* ── MAIN PROFILE TABS ────────────────────────────────────── */}
+      <div className="sticky top-14 z-40 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8">
         <div className="max-w-5xl mx-auto px-5">
-          <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
-            {tabs.map(type => {
-              const count = type === ALL
-                ? celeb.assets.length
-                : celeb.assets.filter(a => a.type === type).length
-              const isActive = activeType === type
-              return (
-                <button
-                  key={type}
-                  onClick={() => setActiveType(type)}
-                  className={`flex items-center gap-2 px-4 py-4 text-sm font-medium border-b-2 transition-all duration-200 flex-shrink-0 whitespace-nowrap ${
-                    isActive
-                      ? 'border-[#c9a84c] text-[#c9a84c]'
-                      : 'border-transparent text-gray-500 hover:text-gray-300'
-                  }`}
-                >
-                  {type !== ALL && <span className="text-base leading-none">{assetTypeIcons[type]}</span>}
-                  <span>{type === ALL ? 'All Assets' : assetTypeLabels[type]}</span>
-                  <span
-                    className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${
-                      isActive ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'
-                    }`}
-                  >
-                    {count}
-                  </span>
-                </button>
-              )
-            })}
+          <div className="flex items-center gap-0">
+            {(['overview', 'assets', 'photos'] as ProfileTab[]).map(tab => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-5 py-4 text-sm font-medium border-b-2 transition-all duration-200 capitalize ${
+                  activeTab === tab
+                    ? 'border-[#c9a84c] text-[#c9a84c]'
+                    : 'border-transparent text-gray-500 hover:text-gray-300'
+                }`}
+              >
+                {tab === 'overview' && 'Overview'}
+                {tab === 'assets' && `Assets · ${celeb.assets.length}`}
+                {tab === 'photos' && `Photos · ${celeb.photos.length}`}
+              </button>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* ── ASSET GRID ──────────────────────────────────────────── */}
-      <main className="max-w-5xl mx-auto px-5 py-10">
-        {filteredAssets.length === 0 ? (
-          <div className="text-center py-24 text-gray-600">No assets in this category</div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {filteredAssets.map(asset => (
-              <AssetCard key={asset.id} asset={asset} />
-            ))}
+      {/* ── OVERVIEW TAB ─────────────────────────────────────────── */}
+      {activeTab === 'overview' && (
+        <section className="max-w-5xl mx-auto px-5 py-10 flex flex-col gap-4">
+          <GlanceTable celeb={celeb} />
+          <RelationshipsSection celeb={celeb} />
+          <GossipSection celeb={celeb} />
+        </section>
+      )}
+
+      {/* ── ASSETS TAB ───────────────────────────────────────────── */}
+      {activeTab === 'assets' && (
+        <>
+          {/* Asset type sub-tabs */}
+          <div className="bg-[#0a0a0a] border-b border-white/5">
+            <div className="max-w-5xl mx-auto px-5">
+              <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
+                {tabs.map(type => {
+                  const count = type === ALL
+                    ? celeb.assets.length
+                    : celeb.assets.filter(a => a.type === type).length
+                  const isActive = activeType === type
+                  return (
+                    <button
+                      key={type}
+                      onClick={() => setActiveType(type)}
+                      className={`flex items-center gap-2 px-4 py-3.5 text-xs font-medium border-b-2 transition-all duration-200 flex-shrink-0 whitespace-nowrap ${
+                        isActive
+                          ? 'border-[#c9a84c] text-[#c9a84c]'
+                          : 'border-transparent text-gray-600 hover:text-gray-400'
+                      }`}
+                    >
+                      {type !== ALL && <span className="text-sm leading-none">{assetTypeIcons[type]}</span>}
+                      <span>{type === ALL ? 'All' : assetTypeLabels[type]}</span>
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${isActive ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
+                        {count}
+                      </span>
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
           </div>
-        )}
-      </main>
+          <main className="max-w-5xl mx-auto px-5 py-10">
+            {filteredAssets.length === 0 ? (
+              <div className="text-center py-24 text-gray-600">No assets in this category</div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {filteredAssets.map(asset => (
+                  <AssetCard key={asset.id} asset={asset} />
+                ))}
+              </div>
+            )}
+          </main>
+        </>
+      )}
+
+      {/* ── PHOTOS TAB ───────────────────────────────────────────── */}
+      {activeTab === 'photos' && (
+        <section className="max-w-5xl mx-auto px-5 py-10">
+          {celeb.photos.length === 0 ? (
+            <div className="text-center py-24 text-gray-600">No photos available</div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {celeb.photos.map((src, i) => (
+                <div key={i} className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[#111] group">
+                  <img
+                    src={src}
+                    alt={`${celeb.name} photo ${i + 1}`}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    onError={e => {
+                      (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=400`
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
 
       {/* ── MORE PROFILES ───────────────────────────────────────── */}
       <section className="py-12">
