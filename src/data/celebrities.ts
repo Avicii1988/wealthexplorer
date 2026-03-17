@@ -1,5 +1,6 @@
 // Photo cache populated by scripts/enrich-photos.mjs (Wikipedia → TMDb chain)
 import photosCache from './photosCache.json'
+import { extraCelebrities } from './extraCelebrities'
 
 export type AssetType = 'jet' | 'yacht' | 'real_estate' | 'car' | 'watch' | 'art' | 'helicopter' | 'island' | 'sports_team' | 'rocket';
 export type Category = 'All' | 'Athletes' | 'Actors' | 'Musicians' | 'Entrepreneurs' | 'Politicians' | 'Models';
@@ -1278,6 +1279,8 @@ export const celebrities: Celebrity[] = [
       },
     ],
   },
+  // spread 284 extra slim profiles (A–Z expansion)
+  ...(extraCelebrities as unknown as Celebrity[]),
 ];
 
 export const categories: Category[] = ['All', 'Athletes', 'Actors', 'Musicians', 'Entrepreneurs', 'Politicians', 'Models'];
@@ -1368,4 +1371,3 @@ export function getAvatar(celeb: Celebrity): string {
   return cache[celeb.id] || celeb.avatar
 }
 
-// ── ADDITIONAL CELEBRITIES (A-Z expansion) ────────────────────────────────────
