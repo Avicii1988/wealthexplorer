@@ -12,6 +12,7 @@ export interface Asset {
   location?: string;
   specs?: string;
   likes: number;
+  isNew?: boolean;
 }
 
 export interface Celebrity {
@@ -240,6 +241,7 @@ export const celebrities: Celebrity[] = [
         image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=900&h=600&fit=crop&q=85',
         year: 2023,
         specs: 'Ultra-hard 30X cold-rolled stainless steel · 845 hp · 500 mi range',
+        isNew: true,
         likes: 8932,
       },
     ],
@@ -293,6 +295,7 @@ export const celebrities: Celebrity[] = [
         image: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85',
         year: 2023,
         specs: '127m · 3 masts · 8 cabins · 18 guests · 58 crew · $75M build cost per year to operate',
+        isNew: true,
         likes: 9410,
       },
       {
@@ -1312,3 +1315,47 @@ export function formatNetWorth(billions: number): string {
   if (billions >= 1) return `$${billions % 1 === 0 ? billions.toFixed(0) : billions.toFixed(1)}B`;
   return `$${(billions * 1000).toFixed(0)}M`;
 }
+
+export function getNationalityFlag(nationality: string): string {
+  const flags: Record<string, string> = {
+    'American': '🇺🇸',
+    'British': '🇬🇧',
+    'Brazilian': '🇧🇷',
+    'Argentine': '🇦🇷',
+    'Portuguese': '🇵🇹',
+    'Spanish': '🇪🇸',
+    'French': '🇫🇷',
+    'Australian': '🇦🇺',
+    'Canadian': '🇨🇦',
+    'Chinese': '🇨🇳',
+    'Mexican': '🇲🇽',
+    'South African': '🇿🇦',
+    'Jamaican': '🇯🇲',
+    'Swiss': '🇨🇭',
+    'Irish': '🇮🇪',
+    'Barbadian': '🇧🇧',
+    'German': '🇩🇪',
+    'Italian': '🇮🇹',
+    'Trinidadian': '🇹🇹',
+    'Puerto Rican': '🇵🇷',
+    'Senegalese': '🇸🇳',
+    'Nigerian': '🇳🇬',
+    'Saudi': '🇸🇦',
+    'Russian': '🇷🇺',
+    'Japanese': '🇯🇵',
+    'Korean': '🇰🇷',
+    'Indian': '🇮🇳',
+    'Swedish': '🇸🇪',
+    'Dutch': '🇳🇱',
+    'Norwegian': '🇳🇴',
+  }
+  return flags[nationality] || '🌍'
+}
+
+export function getNewAssets(): { celeb: Celebrity; asset: Asset }[] {
+  return celebrities.flatMap(c =>
+    c.assets.filter(a => a.isNew).map(a => ({ celeb: c, asset: a }))
+  )
+}
+
+// ── ADDITIONAL CELEBRITIES (A-Z expansion) ────────────────────────────────────

@@ -8,12 +8,124 @@ import {
   type Category,
   type Asset,
   type AssetType,
+  type Celebrity,
   assetTypeIcons,
   formatValue,
   formatNetWorth,
 } from '../data/celebrities'
+import NotificationBell from '../components/NotificationBell'
 
 type FeedItem = Asset & { ownerName: string; ownerId: string }
+
+// ── A-Z PROFILE DIRECTORY ─────────────────────────────────────────────────────
+function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
+  const letterRefs = useRef<Record<string, HTMLDivElement | null>>({})
+
+  // Sort alphabetically
+  const sorted = useMemo(
+    () => [...filteredCelebs].sort((a, b) => a.name.localeCompare(b.name)),
+    [filteredCelebs]
+  )
+
+  // Group by first letter
+  const grouped = useMemo(() => {
+    const map: Record<string, Celebrity[]> = {}
+    for (const c of sorted) {
+      const letter = c.name[0].toUpperCase()
+      if (!map[letter]) map[letter] = []
+      map[letter].push(c)
+    }
+    return map
+  }, [sorted])
+
+  const presentLetters = Object.keys(grouped).sort()
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+
+  function scrollToLetter(letter: string) {
+    letterRefs.current[letter]?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  return (
+    <section className="border-t border-white/8 py-14 max-w-5xl mx-auto px-5">
+      {/* Header + count */}
+      <div className="flex items-center justify-between mb-8">
+        <p className="text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase">
+          Profiles
+        </p>
+        <p className="text-xs text-gray-700">{sorted.length} profiles · A–Z</p>
+      </div>
+
+      {/* A-Z letter bar */}
+      <div className="sticky top-[57px] z-30 bg-[#0a0a0a]/95 backdrop-blur-sm -mx-5 px-5 py-2.5 mb-8 border-b border-white/5">
+        <div className="flex items-center gap-0.5 overflow-x-auto scrollbar-hide">
+          {alphabet.map(letter => {
+            const hasProfiles = !!grouped[letter]
+            return (
+              <button
+                key={letter}
+                onClick={() => hasProfiles && scrollToLetter(letter)}
+                disabled={!hasProfiles}
+                className={`w-7 h-7 rounded-lg text-xs font-semibold flex items-center justify-center flex-shrink-0 transition-all ${
+                  hasProfiles
+                    ? 'text-[#c9a84c] hover:bg-[#c9a84c]/15 cursor-pointer'
+                    : 'text-gray-800 cursor-default'
+                }`}
+              >
+                {letter}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* Grouped profiles */}
+      <div className="space-y-10">
+        {presentLetters.map(letter => (
+          <div
+            key={letter}
+            ref={el => { letterRefs.current[letter] = el }}
+          >
+            {/* Letter heading */}
+            <div className="flex items-center gap-4 mb-5">
+              <span
+                className="text-3xl font-semibold leading-none"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
+              >
+                {letter}
+              </span>
+              <div className="flex-1 h-px bg-white/6" />
+              <span className="text-[10px] text-gray-700">{grouped[letter].length}</span>
+            </div>
+
+            {/* Profiles row */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+              {grouped[letter].map(celeb => (
+                <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group text-left">
+                  <div className="aspect-square rounded-2xl overflow-hidden bg-[#111] mb-3 border border-white/8 group-hover:border-[#c9a84c]/30 transition-colors duration-300">
+                    <img
+                      src={celeb.avatar}
+                      alt={celeb.name}
+                      className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                      onError={e => {
+                        (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
+                      }}
+                    />
+                  </div>
+                  <p className="text-sm font-semibold text-white group-hover:text-[#c9a84c] transition-colors truncate">
+                    {celeb.name}
+                  </p>
+                  <p className="text-xs text-gray-600 mt-0.5">
+                    {formatNetWorth(celeb.netWorth)} · {celeb.assets.length} assets
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
 
 const LANGUAGES = [
   { code: 'en', label: 'English', flag: '🇬🇧' },
@@ -160,6 +272,10 @@ export default function HomePage() {
       <header className="flex items-center justify-between px-6 py-3.5 border-b border-white/8 bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40">
         <WealthLogo />
 
+        {/* Right actions */}
+        <div className="flex items-center gap-2">
+          <NotificationBell />
+
         {/* Language selector */}
         <div ref={langRef} className="relative">
           <button
@@ -193,6 +309,7 @@ export default function HomePage() {
             </div>
           )}
         </div>
+        </div>{/* end right actions */}
       </header>
 
       {/* ── HERO ────────────────────────────────────────────────── */}
@@ -438,34 +555,8 @@ export default function HomePage() {
         )}
       </section>
 
-      {/* ── PROFILE GRID ────────────────────────────────────────── */}
-      <section className="border-t border-white/8 py-14 max-w-5xl mx-auto px-5">
-        <p className="text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase mb-8 text-center">
-          Profiles
-        </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
-          {filteredCelebs.map(celeb => (
-            <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group text-left">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-[#111] mb-3 border border-white/8 group-hover:border-[#c9a84c]/30 transition-colors duration-300">
-                <img
-                  src={celeb.avatar}
-                  alt={celeb.name}
-                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
-                  onError={e => {
-                    (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
-                  }}
-                />
-              </div>
-              <p className="text-sm font-semibold text-white group-hover:text-[#c9a84c] transition-colors truncate">
-                {celeb.name}
-              </p>
-              <p className="text-xs text-gray-600 mt-0.5">
-                {formatNetWorth(celeb.netWorth)} · {celeb.assets.length} assets
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {/* ── PROFILE GRID — A-Z ──────────────────────────────────── */}
+      <ProfileDirectory filteredCelebs={filteredCelebs} />
 
       {/* ── FOOTER ──────────────────────────────────────────────── */}
       <footer className="pt-16 pb-10 px-5 border-t border-white/8">
