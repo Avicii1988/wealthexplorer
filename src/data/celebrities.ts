@@ -1,3 +1,7 @@
+// Photo cache populated by scripts/enrich-photos.mjs (Wikipedia → TMDb chain)
+import photosCache from './photosCache.json'
+import { extraCelebrities } from './extraCelebrities'
+
 export type AssetType = 'jet' | 'yacht' | 'real_estate' | 'car' | 'watch' | 'art' | 'helicopter' | 'island' | 'sports_team' | 'rocket';
 export type Category = 'All' | 'Athletes' | 'Actors' | 'Musicians' | 'Entrepreneurs' | 'Politicians' | 'Models';
 
@@ -1275,6 +1279,8 @@ export const celebrities: Celebrity[] = [
       },
     ],
   },
+  // spread 284 extra slim profiles (A–Z expansion)
+  ...(extraCelebrities as unknown as Celebrity[]),
 ];
 
 export const categories: Category[] = ['All', 'Athletes', 'Actors', 'Musicians', 'Entrepreneurs', 'Politicians', 'Models'];
@@ -1358,4 +1364,10 @@ export function getNewAssets(): { celeb: Celebrity; asset: Asset }[] {
   )
 }
 
-// ── ADDITIONAL CELEBRITIES (A-Z expansion) ────────────────────────────────────
+/** Returns the best available avatar URL for a celebrity.
+ *  Priority: photosCache (enriched via Wikipedia/TMDb) > hardcoded avatar */
+export function getAvatar(celeb: Celebrity): string {
+  const cache = photosCache as Record<string, string>
+  return cache[celeb.id] || celeb.avatar
+}
+
