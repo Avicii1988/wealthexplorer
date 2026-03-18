@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff } from 'lucide-react'
+import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff, ExternalLink } from 'lucide-react'
 import {
   celebrities,
   assetTypeIcons,
@@ -152,89 +152,80 @@ function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities
   )
 }
 
-// ── GOSSIP & CONTROVERSY — Two separate boxes ────────────────────────────────
+// Extract first sentence (up to first . ! ?)
+function firstSentence(text: string): string {
+  const m = text.match(/^.*?[.!?](?:\s|$)/)
+  return m ? m[0].trim() : text.slice(0, 130) + (text.length > 130 ? '…' : '')
+}
+
+// ── GOSSIP & CONTROVERSY — Flat list, two separate sections ──────────────────
 function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
   const { t } = useLang()
   const allItems = celeb.gossip
   if (!allItems?.length) return null
 
-  // Separate into gossip vs controversy (default untyped items → gossip)
   const gossipItems = allItems.filter(g => !g.type || g.type === 'gossip')
   const controversyItems = allItems.filter(g => g.type === 'controversy')
 
-  const disclaimer = (
-    <p className="text-[11px] text-gray-600 mt-1">{t('gossipDisclaimer')}</p>
-  )
+  function searchUrl(title: string) {
+    return `https://www.google.com/search?q=${encodeURIComponent(title + ' ' + celeb.name)}`
+  }
+
+  function ItemList({ items }: { items: NonNullable<typeof allItems> }) {
+    return (
+      <div className="divide-y divide-white/5">
+        {items.map((item, i) => (
+          <div key={i} className="flex items-start gap-4 py-4 group/row">
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                <p className="text-sm font-semibold text-white">{item.title}</p>
+                {item.date && (
+                  <span className="text-[10px] text-gray-600 px-2 py-0.5 rounded-full bg-white/5">
+                    {item.date}
+                  </span>
+                )}
+              </div>
+              <p className="text-[13px] leading-relaxed" style={{ color: '#888' }}>
+                {firstSentence(item.summary)}
+              </p>
+            </div>
+            <a
+              href={searchUrl(item.title)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 mt-0.5 text-gray-700 hover:text-[#c9a84c] transition-colors"
+              title="Search source"
+            >
+              <ExternalLink size={14} />
+            </a>
+          </div>
+        ))}
+      </div>
+    )
+  }
 
   return (
-    <div className="flex flex-col gap-4">
-      {/* Gossip box */}
+    <div className="flex flex-col gap-5">
       {gossipItems.length > 0 && (
-        <div className="rounded-2xl overflow-hidden bg-[#111]">
-          <div className="px-5 py-4 bg-[#161616] flex items-start justify-between gap-4">
-            <div>
-              <h2 className="text-base font-semibold text-white flex items-center gap-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-                <span>💬</span> Gossip
-              </h2>
-              {disclaimer}
-            </div>
-            <span className="flex-shrink-0 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 mt-0.5">
-              {gossipItems.length}
-            </span>
+        <div className="rounded-2xl bg-[#111] px-5 py-1">
+          <div className="flex items-center justify-between py-4 border-b border-white/8 mb-1">
+            <h2 className="text-base font-semibold text-white flex items-center gap-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+              <span className="text-base">💬</span> Gossip
+            </h2>
+            <span className="text-[11px] text-gray-600">{t('gossipDisclaimer')}</span>
           </div>
-          <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {gossipItems.map((item, i) => (
-              <div
-                key={i}
-                className="rounded-xl bg-[#161616] border border-white/8 p-5 hover:border-purple-500/20 hover:bg-[#18161c] transition-all duration-200"
-              >
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <p className="text-sm font-semibold text-white leading-snug">{item.title}</p>
-                  {item.date && (
-                    <span className="flex-shrink-0 text-[10px] text-gray-600 bg-white/5 px-2 py-0.5 rounded-full whitespace-nowrap">
-                      {item.date}
-                    </span>
-                  )}
-                </div>
-                <p className="text-[13px] text-gray-500 leading-relaxed">{item.summary}</p>
-              </div>
-            ))}
-          </div>
+          <ItemList items={gossipItems} />
         </div>
       )}
-
-      {/* Controversy box */}
       {controversyItems.length > 0 && (
-        <div className="rounded-2xl overflow-hidden bg-[#111]">
-          <div className="px-5 py-4 bg-[#161616] flex items-start justify-between gap-4">
-            <div>
-              <h2 className="text-base font-semibold text-white flex items-center gap-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-                <span>⚡</span> Controversy
-              </h2>
-              {disclaimer}
-            </div>
-            <span className="flex-shrink-0 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 mt-0.5">
-              {controversyItems.length}
-            </span>
+        <div className="rounded-2xl bg-[#111] px-5 py-1">
+          <div className="flex items-center justify-between py-4 border-b border-white/8 mb-1">
+            <h2 className="text-base font-semibold text-white flex items-center gap-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+              <span className="text-base">⚡</span> Controversy
+            </h2>
+            <span className="text-[11px] text-gray-600">{t('gossipDisclaimer')}</span>
           </div>
-          <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {controversyItems.map((item, i) => (
-              <div
-                key={i}
-                className="rounded-xl bg-[#161616] border border-white/8 p-5 hover:border-red-500/20 hover:bg-[#1a1414] transition-all duration-200"
-              >
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <p className="text-sm font-semibold text-white leading-snug">{item.title}</p>
-                  {item.date && (
-                    <span className="flex-shrink-0 text-[10px] text-gray-600 bg-white/5 px-2 py-0.5 rounded-full whitespace-nowrap">
-                      {item.date}
-                    </span>
-                  )}
-                </div>
-                <p className="text-[13px] text-gray-500 leading-relaxed">{item.summary}</p>
-              </div>
-            ))}
-          </div>
+          <ItemList items={controversyItems} />
         </div>
       )}
     </div>
@@ -610,11 +601,11 @@ export default function ProfilePage() {
         {celeb.assets.length > 0 && <AssetsSection celeb={celeb} />}
       </main>
 
-      {/* ── MORE PROFILES ───────────────────────────────────────── */}
+      {/* ── MORE PROFILES — square cards ────────────────────────── */}
       <section className="py-12">
         <div className="max-w-5xl mx-auto px-5">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-7">{t('moreProfiles')}</p>
-          <div className="flex gap-5 overflow-x-auto scrollbar-hide pb-2">
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-6">{t('moreProfiles')}</p>
+          <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-2">
             {[
               ...celebrities.filter(c => c.id !== celeb.id && c.category === celeb.category),
               ...celebrities.filter(c => c.id !== celeb.id && c.category !== celeb.category),
@@ -624,21 +615,24 @@ export default function ProfilePage() {
                 <Link
                   key={c.id}
                   to={`/celebrities/${c.id}`}
-                  className="flex flex-col items-center gap-2.5 flex-shrink-0 group"
+                  className="flex-shrink-0 group"
+                  style={{ width: 100 }}
                 >
-                  <div className="w-16 h-16 rounded-full overflow-hidden group-hover:ring-2 group-hover:ring-[#c9a84c]/40 transition-all">
+                  {/* Square image */}
+                  <div className="relative overflow-hidden rounded-xl border border-white/8 group-hover:border-[#c9a84c]/40 transition-all duration-300" style={{ aspectRatio: '1/1' }}>
                     <img
                       src={getAvatar(c)}
                       alt={c.name}
-                      className="w-full h-full object-cover object-top transition-all duration-300"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       onError={e => {
-                        (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=64`
+                        (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=100`
                       }}
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <p className="absolute bottom-0 left-0 right-0 p-2 text-[10px] font-medium text-white leading-tight text-center">
+                      {c.name}
+                    </p>
                   </div>
-                  <span className="text-[11px] text-gray-500 group-hover:text-white transition-colors text-center w-20 leading-tight">
-                    {c.name}
-                  </span>
                 </Link>
               ))}
           </div>
@@ -668,56 +662,40 @@ export default function ProfilePage() {
       </section>
 
       {/* ── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="pt-16 pb-10 px-5 border-t border-white/8">
+      <footer className="border-t border-white/8 py-10 px-5">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
-            <div>
-              <p className="text-lg font-normal mb-3" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}>
-                Wealth Explorer
-              </p>
-              <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                Explore the verified assets of the world's most notable individuals. Jets, yachts, estates, watches and more.
-              </p>
-              <p className="text-[11px] text-gray-700 leading-relaxed">
-                Data updated daily from public sources – Wealth Explorer
-              </p>
-            </div>
-            <div>
-              <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-500 mb-4">Explore</p>
-              <ul className="space-y-2.5">
-                {['Trending Profiles', 'All Celebrities', 'Asset Feed', 'Athletes', 'Musicians', 'Entrepreneurs'].map(item => (
-                  <li key={item}>
-                    <Link to="/" className="text-xs text-gray-500 hover:text-white transition-colors">{item}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-500 mb-4">Asset Types</p>
-              <ul className="space-y-2.5">
-                {['Private Jets', 'Yachts', 'Real Estate', 'Cars', 'Watches', 'Art Collections'].map(item => (
-                  <li key={item}>
-                    <span className="text-xs text-gray-500">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Top row */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-8">
+            <WealthLogoSmall />
+            <nav className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              {[
+                { label: 'Home', to: '/' },
+                { label: 'Athletes', to: '/' },
+                { label: 'Actors', to: '/' },
+                { label: 'Musicians', to: '/' },
+                { label: 'About', to: '/' },
+                { label: 'Contact', to: '/' },
+              ].map(link => (
+                <Link key={link.label} to={link.to} className="text-xs text-gray-500 hover:text-white transition-colors">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
           </div>
 
-          <div className="border-t border-white/8 pt-6 mb-4">
-            <p className="text-[11px] text-gray-700 leading-relaxed max-w-3xl">
-              All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth estimates are approximate and may vary. Gossip and controversies based on public news; not verified. Images from public domain or fair-use sources. For informational purposes only — not financial advice.
-            </p>
-          </div>
+          {/* Disclaimer */}
+          <p className="text-[11px] text-gray-700 leading-relaxed mb-6 max-w-3xl">
+            All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth estimates are approximate. Gossip and controversies are based on public news and not verified. For informational purposes only — not financial advice.
+          </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-[11px] text-gray-700">© 2026 Wealth Explorer</p>
-            <div className="flex items-center gap-4">
-              {['About Us', 'Privacy Policy', 'Contact', 'Terms of Use'].map((item, i) => (
-                <span key={item} className="flex items-center gap-4">
-                  <Link to="/" className="text-[11px] text-gray-600 hover:text-gray-400 transition-colors">{item}</Link>
-                  {i < 3 && <span className="text-gray-800">|</span>}
-                </span>
+          {/* Bottom row */}
+          <div className="border-t border-white/5 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-[11px] text-gray-700">© 2026 Wealth Explorer · All rights reserved</p>
+            <div className="flex items-center gap-5">
+              {['Privacy Policy', 'Terms of Use', 'Corrections'].map(item => (
+                <Link key={item} to="/" className="text-[11px] text-gray-600 hover:text-gray-400 transition-colors">
+                  {item}
+                </Link>
               ))}
             </div>
           </div>
