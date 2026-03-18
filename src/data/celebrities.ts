@@ -47,6 +47,8 @@ export interface Celebrity {
   gossip?: {
     title: string
     summary: string
+    type?: 'gossip' | 'controversy'
+    date?: string
   }[]
 }
 
@@ -84,14 +86,20 @@ export const celebrities: Celebrity[] = [
       {
         title: 'Billionaire Status Disputed',
         summary: 'Forbes publicly retracted its "youngest self-made billionaire" title in 2020 after finding discrepancies in financial documents submitted by Kylie Cosmetics. Forbes alleged that documents were inflated to exaggerate the brand\'s size and revenue. Kylie\'s team denied the allegations.',
+        type: 'controversy',
+        date: 'May 2020',
       },
       {
         title: 'Private Jet Shaming',
         summary: 'Kylie faced intense backlash in 2022 after posting a photo of herself and Travis Scott in front of their respective private jets with the caption "you wanna take mine or yours?". Climate activists highlighted the jets\' short-haul flights as unnecessarily polluting, sparking a wider celebrity jet-shaming movement.',
+        type: 'gossip',
+        date: 'Jul 2022',
       },
       {
         title: 'Travis Scott Astroworld',
         summary: 'Kylie was present at the 2021 Astroworld Festival when a crowd crush resulted in 10 deaths and hundreds of injuries. She faced criticism for not stopping the show despite visible signs of distress in the crowd. Both she and Travis Scott were named in multiple lawsuits.',
+        type: 'controversy',
+        date: 'Nov 2021',
       },
     ],
     assets: [
@@ -193,14 +201,20 @@ export const celebrities: Celebrity[] = [
       {
         title: 'Twitter/X Acquisition Chaos',
         summary: 'After acquiring Twitter for $44 billion in 2022, Musk immediately laid off 80% of staff, reinstated controversial banned accounts including those of former white nationalists, and renamed the platform X. Advertisers fled en masse and the platform\'s value was later written down by investors to below $10 billion.',
+        type: 'controversy',
+        date: 'Oct 2022',
       },
       {
         title: 'DOGE & Government Influence',
         summary: 'Musk\'s role as head of the Department of Government Efficiency (DOGE) under President Trump drew massive controversy. Critics argued a private billionaire had unprecedented access to federal systems, while supporters claimed he was cutting wasteful spending. Multiple lawsuits were filed challenging the legality of DOGE.',
+        type: 'controversy',
+        date: 'Jan 2025',
       },
       {
         title: 'Children & Relationships Drama',
         summary: 'Musk has fathered at least 12 children with multiple women including ex-wife Justine Wilson, singer Grimes, and Neuralink executive Shivon Zilis. The revelation of secret twins with Zilis while simultaneously dating Grimes caused widespread media scrutiny about his personal life.',
+        type: 'gossip',
+        date: 'Jul 2022',
       },
     ],
     assets: [
@@ -279,14 +293,20 @@ export const celebrities: Celebrity[] = [
       {
         title: 'Divorce & Tabloid Affair',
         summary: 'In 2019 Bezos announced his divorce from MacKenzie Scott after 25 years of marriage, amid reports that the National Enquirer had obtained explicit texts and photos exchanged with TV anchor Lauren Sánchez. Bezos published a blog post accusing the Enquirer\'s parent company of attempted extortion over the images.',
+        type: 'gossip',
+        date: 'Jan 2019',
       },
       {
         title: 'Amazon Warehouse Working Conditions',
         summary: 'Amazon has repeatedly faced allegations of gruelling working conditions in its fulfilment centres, including unrealistic productivity quotas, limited bathroom breaks, and high injury rates. Multiple congressional investigations and union drives (including the 2022 Staten Island union victory) have kept the controversy in the headlines.',
+        type: 'controversy',
+        date: 'Apr 2021',
       },
       {
         title: 'Washington Post Editorial Independence',
         summary: 'In 2024 Bezos blocked the Washington Post from endorsing a presidential candidate, reversing a decades-long tradition. More than 250,000 subscribers cancelled, and senior editorial staff resigned in protest, raising questions about billionaire ownership of major news outlets.',
+        type: 'controversy',
+        date: 'Oct 2024',
       },
     ],
     assets: [
@@ -450,14 +470,20 @@ export const celebrities: Celebrity[] = [
       {
         title: 'Private Jet Carbon Footprint',
         summary: 'A 2022 study by marketing firm Yard identified Taylor Swift as the celebrity with the highest private jet CO₂ emissions that year, with her jets logging over 170 flights and emitting an estimated 8,293.54 tonnes of carbon — 1,184 times the average person\'s annual footprint. Swift\'s team disputed the methodology, noting many flights were taken by others with permission to use the aircraft.',
+        type: 'controversy',
+        date: 'Aug 2022',
       },
       {
         title: 'Feud with Scooter Braun & Masters Controversy',
         summary: 'When Scooter Braun\'s company acquired Big Machine Records in 2019, he gained ownership of Swift\'s first six albums. She called it her "worst case scenario" and publicly urged fans to push for her to own her work. In response she began re-recording all her albums as "Taylor\'s Version", urging fans to stream those instead, costing Braun\'s catalogue an estimated $300M in value.',
+        type: 'controversy',
+        date: 'Jun 2019',
       },
       {
         title: 'Kim Kardashian Snake Feud',
         summary: 'A multi-year public feud with Kanye West and Kim Kardashian culminated in 2016 when Kim posted a phone call recording she claimed proved Taylor approved a controversial lyric. Swift denied the recording was complete, and in 2020 a fuller version emerged that appeared to support her version of events. The feud helped popularise the "Taylor Swift is cancelled" narrative — and then its reversal.',
+        type: 'gossip',
+        date: 'Jul 2016',
       },
     ],
     assets: [
@@ -538,10 +564,14 @@ export const celebrities: Celebrity[] = [
       {
         title: 'Solange Elevator Incident',
         summary: 'CCTV footage leaked in 2014 showed Beyoncé\'s sister Solange physically attacking Jay-Z in an elevator following the Met Gala. The footage went viral and sparked intense speculation about the cause. All three remained tight-lipped, with a joint statement calling it a "private matter." Beyoncé later referenced infidelity in her 2016 visual album Lemonade, which many interpreted as directed at Jay-Z.',
+        type: 'gossip',
+        date: 'May 2014',
       },
       {
         title: 'Lemonade Cheating Allegations',
         summary: 'Beyoncé\'s acclaimed 2016 album Lemonade was widely interpreted as addressing Jay-Z\'s alleged infidelity, with references to a mysterious "Becky with the good hair." Jay-Z later confirmed he had been unfaithful in his 2017 album 4:44, framing it as a period of addiction and personal failure. The couple publicly reconciled.',
+        type: 'gossip',
+        date: 'Apr 2016',
       },
     ],
     assets: [
@@ -1136,14 +1166,20 @@ export const celebrities: Celebrity[] = [
       {
         title: 'Cambridge Analytica Scandal',
         summary: 'In 2018 it emerged that British political consulting firm Cambridge Analytica had harvested the personal data of up to 87 million Facebook users without consent, using it to build psychological profiles for targeted political advertising — including for the 2016 Trump campaign. Zuckerberg testified before the US Senate and the House, and Facebook was fined $5 billion by the FTC.',
+        type: 'controversy',
+        date: 'Mar 2018',
       },
       {
         title: 'Metaverse Billions Written Off',
         summary: 'Meta\'s Reality Labs division — the Metaverse arm — lost over $46 billion between 2021 and 2023 as its virtual world failed to gain mainstream adoption. Shareholders and analysts openly questioned the strategy, and Meta\'s stock fell nearly 70% at its lowest point in 2022 before recovering as the company pivoted back to AI.',
+        type: 'controversy',
+        date: 'Oct 2022',
       },
       {
         title: 'MMA Cage Fight With Elon Musk',
         summary: 'In 2023 Zuckerberg challenged Elon Musk to a cage fight after Musk taunted Meta\'s new app Threads. Both sides traded barbs online for months, with Zuckerberg training publicly with UFC champions. Musk ultimately backed out, claiming a need for neck surgery. The spectacle drew global media attention and made Zuckerberg an unlikely internet hero for his legitimate MMA training.',
+        type: 'gossip',
+        date: 'Jun 2023',
       },
     ],
     assets: [
@@ -1221,14 +1257,20 @@ export const celebrities: Celebrity[] = [
       {
         title: 'Oracle vs Google — Decade-Long Legal Battle',
         summary: 'Oracle sued Google in 2010 over the use of Java APIs in Android, seeking up to $9 billion in damages. After nearly a decade of litigation across multiple courts and appeals, the US Supreme Court ruled in Google\'s favour in 2021 in a landmark decision for software copyright law. Ellison\'s aggressive legal strategy was widely criticised by the tech community as an attempt to tax the open-source ecosystem.',
+        type: 'controversy',
+        date: 'Aug 2010',
       },
       {
         title: 'Four Marriages & A Playboy Reputation',
         summary: 'Ellison has been married four times and is widely known for his flamboyant personal life, dating actresses and models decades his junior. He once threw a samurai-themed party at his Japanese-style Woodside estate and is known for competitive sailing, fighter jet ownership, and extravagant spending that has made him as famous for his lifestyle as his software empire.',
+        type: 'gossip',
+        date: 'Sep 2014',
       },
       {
         title: 'Lanai Island Transformation',
         summary: 'After buying 98% of Lanai for $300 million in 2012, Ellison set about transforming it with green energy, luxury hotels, organic farms, and even a water filtration system. While locals initially welcomed investment, some have grown frustrated with the pace of change and the degree to which one billionaire controls the fate of a 3,000-person community.',
+        type: 'controversy',
+        date: 'Jun 2012',
       },
     ],
     assets: [

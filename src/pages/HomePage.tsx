@@ -226,49 +226,36 @@ function LanguageSelector() {
   )
 }
 
-// ── CATEGORY PROFILE ROW ──────────────────────────────────────────────────────
-function CategoryProfileRow({
-  title,
-  celebs,
-}: {
-  title: string
-  celebs: Celebrity[]
-}) {
-  if (celebs.length === 0) return null
+// ── PORTRAIT CARD (used in trending/category profile grids) ──────────────────
+function PortraitCard({ celeb }: { celeb: Celebrity }) {
   return (
-    <div className="mb-10">
-      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-5">{title}</p>
-      <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-1">
-        {celebs.slice(0, 10).map(celeb => (
-          <Link
-            key={celeb.id}
-            to={`/celebrities/${celeb.id}`}
-            className="flex flex-col items-center gap-2.5 flex-shrink-0 group"
-          >
-            <div
-              className="w-[72px] h-[72px] rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#c9a84c]/60 transition-all duration-300 shadow-lg"
-            >
-              <img
-                src={getAvatar(celeb)}
-                alt={celeb.name}
-                className="w-full h-full object-cover object-top transition-all duration-300"
-                onError={e => {
-                  (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=72`
-                }}
-              />
-            </div>
-            <div className="text-center">
-              <span className="text-[10px] text-gray-400 group-hover:text-white transition-colors text-center w-20 leading-tight block">
-                {celeb.name}
-              </span>
-              <span className="text-[10px] block mt-0.5" style={{ color: '#c9a84c' }}>
-                {formatNetWorth(celeb.netWorth)}
-              </span>
-            </div>
-          </Link>
-        ))}
+    <Link
+      to={`/celebrities/${celeb.id}`}
+      className="group flex-shrink-0 relative block"
+      style={{ width: 120 }}
+    >
+      {/* Portrait image */}
+      <div
+        className="relative overflow-hidden rounded-xl border border-white/8 group-hover:border-[#c9a84c]/40 transition-all duration-300"
+        style={{ aspectRatio: '3/4' }}
+      >
+        <img
+          src={getAvatar(celeb)}
+          alt={celeb.name}
+          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          onError={e => {
+            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
+          }}
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+        {/* Name + worth at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 p-2.5">
+          <p className="text-[11px] font-semibold text-white leading-tight truncate">{celeb.name}</p>
+          <p className="text-[10px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
@@ -308,7 +295,17 @@ export default function HomePage() {
       .slice(0, 6)
   }, [search])
 
-  const trendingCelebs = celebrities.filter(c => c.trending).slice(0, 16)
+  // Trending: when category is "All" show 16, otherwise show 8 for that category
+  const trendingCelebs = useMemo(() => {
+    if (activeCategory === 'All') {
+      return celebrities.filter(c => c.trending).slice(0, 16)
+    }
+    // category selected: 8 trending for that category, fallback to non-trending
+    const fromCategory = celebrities.filter(c => c.category === activeCategory)
+    const trending = fromCategory.filter(c => c.trending)
+    const rest = fromCategory.filter(c => !c.trending)
+    return [...trending, ...rest].slice(0, 8)
+  }, [activeCategory])
 
   // Asset feed: top 20 most expensive assets
   const allFeedItems: FeedItem[] = useMemo(
@@ -337,15 +334,8 @@ export default function HomePage() {
     [assetTypeCounts]
   )
 
-  // Category profile sections
-  const athleteCelebs = useMemo(() => celebrities.filter(c => c.category === 'Athletes').slice(0, 10), [])
-  const actorCelebs = useMemo(() => celebrities.filter(c => c.category === 'Actors').slice(0, 10), [])
-  const musicianCelebs = useMemo(() => celebrities.filter(c => c.category === 'Musicians').slice(0, 10), [])
-  const politicianCelebs = useMemo(() => celebrities.filter(c => c.category === 'Politicians').slice(0, 10), [])
-  const entrepreneurCelebs = useMemo(() => celebrities.filter(c => c.category === 'Entrepreneurs').slice(0, 10), [])
-  const modelCelebs = useMemo(() => celebrities.filter(c => c.category === 'Models').slice(0, 10), [])
-
   const showTrending = !search && activeCategory === 'All'
+  const showCategoryProfiles = !search && activeCategory !== 'All'
   const showSearchDropdown = searchFocused && search.trim().length > 0
 
   return (
@@ -472,48 +462,18 @@ export default function HomePage() {
         ))}
       </div>
 
-      {/* ── TRENDING PROFILES — 2 rows of 8 ────────────────────── */}
-      {showTrending && (
+      {/* ── PROFILES — trending (all) or top 8 (category) ───── */}
+      {(showTrending || showCategoryProfiles) && (
         <section className="px-5 pb-16 max-w-5xl mx-auto">
           <p className="text-center text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase mb-8">
-            {t('trendingProfiles')}
+            {showTrending ? t('trendingProfiles') : `${activeCategory}`}
           </p>
-          <div className="grid grid-cols-4 sm:grid-cols-8 gap-x-4 gap-y-7">
+          {/* Portrait card scroll row */}
+          <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-2 justify-start sm:justify-center flex-wrap">
             {trendingCelebs.map(celeb => (
-              <Link
-                key={celeb.id}
-                to={`/celebrities/${celeb.id}`}
-                className="flex flex-col items-center gap-2 group"
-              >
-                {/* Always in color */}
-                <div className="w-14 h-14 sm:w-[68px] sm:h-[68px] rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#c9a84c]/60 transition-all duration-300 shadow-lg">
-                  <img
-                    src={getAvatar(celeb)}
-                    alt={celeb.name}
-                    className="w-full h-full object-cover object-top transition-all duration-300"
-                    onError={e => {
-                      (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=72`
-                    }}
-                  />
-                </div>
-                <span className="text-[10px] text-gray-500 group-hover:text-white transition-colors text-center w-16 leading-tight">
-                  {celeb.name}
-                </span>
-              </Link>
+              <PortraitCard key={celeb.id} celeb={celeb} />
             ))}
           </div>
-        </section>
-      )}
-
-      {/* ── CATEGORY PROFILE SECTIONS (shown when "All" selected, no search) ── */}
-      {showTrending && (
-        <section className="max-w-5xl mx-auto px-5 pb-8">
-          <CategoryProfileRow title={t('featuredAthletes')} celebs={athleteCelebs} />
-          <CategoryProfileRow title={t('featuredActors')} celebs={actorCelebs} />
-          <CategoryProfileRow title={t('featuredMusicians')} celebs={musicianCelebs} />
-          <CategoryProfileRow title={t('featuredPoliticians')} celebs={politicianCelebs} />
-          <CategoryProfileRow title={t('featuredEntrepreneurs')} celebs={entrepreneurCelebs} />
-          <CategoryProfileRow title={t('featuredModels')} celebs={modelCelebs} />
         </section>
       )}
 

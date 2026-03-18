@@ -59,6 +59,16 @@ function WealthLogoSmall() {
   )
 }
 
+// Convert "X ft Y in" → "X ft Y in (Z.ZZ m)"
+function addMetres(height: string): string {
+  const match = height.match(/(\d+)\s*ft\s*(\d+)?\s*in?/)
+  if (!match) return height
+  const feet = parseInt(match[1])
+  const inches = parseInt(match[2] ?? '0')
+  const metres = ((feet * 12 + inches) * 0.0254).toFixed(2)
+  return `${height} (${metres} m)`
+}
+
 // ── AT A GLANCE TABLE — 2-column grid ─────────────────────────────────────────
 function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
   const { t } = useLang()
@@ -70,7 +80,7 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
   ]
   const rightCol: [string, string][] = [
     [t('birthplace'), celeb.birthplace],
-    [t('height'), celeb.height],
+    [t('height'), addMetres(celeb.height)],
     [t('profession'), celeb.profession],
   ]
 
@@ -142,39 +152,91 @@ function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities
   )
 }
 
-// ── GOSSIP & CONTROVERSY — Card style ────────────────────────────────────────
+// ── GOSSIP & CONTROVERSY — Two separate boxes ────────────────────────────────
 function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
   const { t } = useLang()
-  const items = celeb.gossip
-  if (!items?.length) return null
+  const allItems = celeb.gossip
+  if (!allItems?.length) return null
+
+  // Separate into gossip vs controversy (default untyped items → gossip)
+  const gossipItems = allItems.filter(g => !g.type || g.type === 'gossip')
+  const controversyItems = allItems.filter(g => g.type === 'controversy')
+
+  const disclaimer = (
+    <p className="text-[11px] text-gray-600 mt-1">{t('gossipDisclaimer')}</p>
+  )
 
   return (
-    <div className="rounded-2xl overflow-hidden bg-[#111]">
-      <div className="px-5 py-4 bg-[#161616] flex items-start justify-between gap-4">
-        <div>
-          <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-            {t('gossipControversy')}
-          </h2>
-          <p className="text-[11px] text-gray-600 mt-1">{t('gossipDisclaimer')}</p>
-        </div>
-        <span className="flex-shrink-0 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 mt-0.5">
-          {items.length} {items.length === 1 ? 'item' : 'items'}
-        </span>
-      </div>
-      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {items.map((item, i) => (
-          <div
-            key={i}
-            className="rounded-xl bg-[#161616] border border-white/8 p-5 hover:border-red-500/20 hover:bg-[#1a1414] transition-all duration-200"
-          >
-            <div className="flex items-start gap-2.5 mb-3">
-              <span className="text-base leading-none mt-0.5 flex-shrink-0">🔥</span>
-              <p className="text-sm font-semibold text-white leading-snug">{item.title}</p>
+    <div className="flex flex-col gap-4">
+      {/* Gossip box */}
+      {gossipItems.length > 0 && (
+        <div className="rounded-2xl overflow-hidden bg-[#111]">
+          <div className="px-5 py-4 bg-[#161616] flex items-start justify-between gap-4">
+            <div>
+              <h2 className="text-base font-semibold text-white flex items-center gap-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                <span>💬</span> Gossip
+              </h2>
+              {disclaimer}
             </div>
-            <p className="text-[13px] text-gray-500 leading-relaxed">{item.summary}</p>
+            <span className="flex-shrink-0 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 mt-0.5">
+              {gossipItems.length}
+            </span>
           </div>
-        ))}
-      </div>
+          <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {gossipItems.map((item, i) => (
+              <div
+                key={i}
+                className="rounded-xl bg-[#161616] border border-white/8 p-5 hover:border-purple-500/20 hover:bg-[#18161c] transition-all duration-200"
+              >
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <p className="text-sm font-semibold text-white leading-snug">{item.title}</p>
+                  {item.date && (
+                    <span className="flex-shrink-0 text-[10px] text-gray-600 bg-white/5 px-2 py-0.5 rounded-full whitespace-nowrap">
+                      {item.date}
+                    </span>
+                  )}
+                </div>
+                <p className="text-[13px] text-gray-500 leading-relaxed">{item.summary}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Controversy box */}
+      {controversyItems.length > 0 && (
+        <div className="rounded-2xl overflow-hidden bg-[#111]">
+          <div className="px-5 py-4 bg-[#161616] flex items-start justify-between gap-4">
+            <div>
+              <h2 className="text-base font-semibold text-white flex items-center gap-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                <span>⚡</span> Controversy
+              </h2>
+              {disclaimer}
+            </div>
+            <span className="flex-shrink-0 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 mt-0.5">
+              {controversyItems.length}
+            </span>
+          </div>
+          <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {controversyItems.map((item, i) => (
+              <div
+                key={i}
+                className="rounded-xl bg-[#161616] border border-white/8 p-5 hover:border-red-500/20 hover:bg-[#1a1414] transition-all duration-200"
+              >
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <p className="text-sm font-semibold text-white leading-snug">{item.title}</p>
+                  {item.date && (
+                    <span className="flex-shrink-0 text-[10px] text-gray-600 bg-white/5 px-2 py-0.5 rounded-full whitespace-nowrap">
+                      {item.date}
+                    </span>
+                  )}
+                </div>
+                <p className="text-[13px] text-gray-500 leading-relaxed">{item.summary}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
