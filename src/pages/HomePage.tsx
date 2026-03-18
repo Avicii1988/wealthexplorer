@@ -459,10 +459,12 @@ export default function HomePage() {
           <p className="text-center text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase mb-8">
             {showTrending ? t('trendingProfiles') : `${activeCategory}`}
           </p>
-          {/* Circle card grid */}
+          {/* Circle card grid — max 8 on mobile, all on desktop */}
           <div className="flex gap-5 overflow-x-auto scrollbar-hide pb-2 justify-start sm:justify-center flex-wrap">
-            {trendingCelebs.map(celeb => (
-              <CircleCard key={celeb.id} celeb={celeb} />
+            {trendingCelebs.map((celeb, i) => (
+              <div key={celeb.id} className={i >= 8 ? 'hidden sm:block' : ''}>
+                <CircleCard celeb={celeb} />
+              </div>
             ))}
           </div>
         </section>
@@ -586,9 +588,7 @@ export default function HomePage() {
             <nav className="flex flex-wrap items-center gap-x-6 gap-y-2">
               {[
                 { label: 'Home', to: '/' },
-                { label: 'Athletes', to: '/' },
-                { label: 'Actors', to: '/' },
-                { label: 'Musicians', to: '/' },
+                { label: 'Trending', to: '/' },
                 { label: 'About', to: '/' },
                 { label: 'Contact', to: '/' },
               ].map(link => (
