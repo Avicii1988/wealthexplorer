@@ -1325,6 +1325,20 @@ export const celebrities: Celebrity[] = [
   ...(extraCelebrities as unknown as Celebrity[]),
 ];
 
+// Deduplicate: main profiles come first and take priority over slim extras
+{
+  const _seen = new Set<string>();
+  let _i = 0;
+  while (_i < celebrities.length) {
+    if (_seen.has(celebrities[_i].id)) {
+      celebrities.splice(_i, 1);
+    } else {
+      _seen.add(celebrities[_i].id);
+      _i++;
+    }
+  }
+}
+
 export const categories: Category[] = ['All', 'Athletes', 'Actors', 'Musicians', 'Entrepreneurs', 'Politicians', 'Models'];
 
 export const assetTypeLabels: Record<AssetType, string> = {

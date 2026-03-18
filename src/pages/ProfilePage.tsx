@@ -449,6 +449,11 @@ export default function ProfilePage() {
   const [avatarError, setAvatarError] = useState(false)
   const [followed, setFollowed] = useState<Set<string>>(getFollowed)
 
+  // Scroll to top whenever the profile changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [id])
+
   const celeb = celebrities.find(c => c.id === id)
 
   if (!celeb) {
@@ -496,8 +501,34 @@ export default function ProfilePage() {
       </header>
 
       {/* ── HERO ────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative">
+        {/* Mobile: full-width portrait image */}
+        <div className="sm:hidden w-full relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
+          <img
+            src={avatarError ? fallbackAvatar : getAvatar(celeb)}
+            alt={celeb.name}
+            className="w-full h-full object-cover object-top"
+            onError={() => setAvatarError(true)}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent" />
+          {/* Category + trending badges over image */}
+          <div className="absolute top-4 left-4 flex items-center gap-2">
+            <span
+              className="text-[10px] tracking-[0.2em] uppercase px-3 py-1 rounded-full border backdrop-blur-sm"
+              style={{ borderColor: 'rgba(201,168,76,0.5)', color: '#c9a84c', background: 'rgba(0,0,0,0.5)' }}
+            >
+              {celeb.category}
+            </span>
+            {celeb.trending && (
+              <span className="text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-sm text-gray-300">
+                Trending
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* Desktop: blurred cover background */}
+        <div className="hidden sm:block absolute inset-0">
           <img
             src={celeb.coverImage}
             alt=""
@@ -507,11 +538,12 @@ export default function ProfilePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-[#0a0a0a]/80 to-[#0a0a0a]" />
         </div>
 
-        <div className="relative max-w-5xl mx-auto px-5 py-14 flex flex-col sm:flex-row gap-8 items-start sm:items-center">
-          {/* Circle Avatar — always full color */}
-          <div className="flex-shrink-0">
+        {/* Content row (desktop: avatar + info side by side; mobile: just info) */}
+        <div className="relative max-w-5xl mx-auto px-5 py-8 sm:py-14 flex flex-col sm:flex-row gap-6 sm:gap-8 items-start sm:items-center">
+          {/* Circle Avatar — desktop only */}
+          <div className="hidden sm:flex flex-shrink-0">
             <div
-              className="w-36 h-36 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-2xl border-2"
+              className="w-48 h-48 rounded-full overflow-hidden shadow-2xl border-2"
               style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.7)', borderColor: 'rgba(201,168,76,0.25)' }}
             >
               <img
@@ -525,7 +557,8 @@ export default function ProfilePage() {
 
           {/* Info */}
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-3 mb-3">
+            {/* Category badges — desktop only (mobile shows them over image) */}
+            <div className="hidden sm:flex items-center gap-3 mb-3">
               <span
                 className="text-[10px] tracking-[0.2em] uppercase px-3 py-1 rounded-full border"
                 style={{ borderColor: 'rgba(201,168,76,0.4)', color: '#c9a84c' }}
@@ -539,16 +572,30 @@ export default function ProfilePage() {
               )}
             </div>
 
-            <h1
-              className="text-4xl sm:text-5xl font-normal text-white mb-2 leading-tight"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-            >
-              {celeb.name}
-            </h1>
+            {/* Name + Follow button inline */}
+            <div className="flex items-start gap-3 mb-2">
+              <h1
+                className="text-3xl sm:text-5xl font-normal text-white leading-tight flex-1 min-w-0"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                {celeb.name}
+              </h1>
+              <button
+                onClick={toggleFollow}
+                className={`flex-shrink-0 flex items-center gap-1.5 mt-1.5 px-4 py-2 rounded-full text-xs font-medium border transition-all duration-200 ${
+                  isFollowed
+                    ? 'bg-[#c9a84c]/10 border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/20'
+                    : 'border-white/20 text-gray-300 hover:border-[#c9a84c]/40 hover:text-[#c9a84c]'
+                }`}
+              >
+                {isFollowed ? <Bell size={12} className="fill-[#c9a84c]" /> : <BellOff size={12} />}
+                <span className="hidden sm:inline">{isFollowed ? t('following') : t('follow')}</span>
+              </button>
+            </div>
 
-            {/* Nationality — only shown here below the name */}
+            {/* Nationality */}
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-xl leading-none" title={celeb.nationality}>{getNationalityFlag(celeb.nationality)}</span>
+              <span className="text-lg leading-none" title={celeb.nationality}>{getNationalityFlag(celeb.nationality)}</span>
               <span className="text-sm text-gray-400 uppercase tracking-widest">{celeb.nationality}</span>
             </div>
 
@@ -556,8 +603,8 @@ export default function ProfilePage() {
               {celeb.bio}
             </p>
 
-            {/* Stats + Follow button */}
-            <div className="flex flex-wrap items-end gap-x-8 gap-y-4">
+            {/* Stats row */}
+            <div className="flex flex-wrap items-end gap-x-8 gap-y-3">
               <div>
                 <p className="text-2xl font-semibold tabular-nums" style={{ color: '#c9a84c', fontFamily: "'Playfair Display', Georgia, serif" }}>
                   {formatNetWorth(celeb.netWorth)}
@@ -576,18 +623,6 @@ export default function ProfilePage() {
                 </p>
                 <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">{t('totalValue')}</p>
               </div>
-
-              <button
-                onClick={toggleFollow}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 ${
-                  isFollowed
-                    ? 'bg-[#c9a84c]/10 border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/20'
-                    : 'border-white/20 text-gray-300 hover:border-[#c9a84c]/40 hover:text-[#c9a84c]'
-                }`}
-              >
-                {isFollowed ? <Bell size={14} className="fill-[#c9a84c]" /> : <BellOff size={14} />}
-                {isFollowed ? t('following') : t('follow')}
-              </button>
             </div>
           </div>
         </div>
@@ -670,9 +705,7 @@ export default function ProfilePage() {
             <nav className="flex flex-wrap items-center gap-x-6 gap-y-2">
               {[
                 { label: 'Home', to: '/' },
-                { label: 'Athletes', to: '/' },
-                { label: 'Actors', to: '/' },
-                { label: 'Musicians', to: '/' },
+                { label: 'Trending', to: '/' },
                 { label: 'About', to: '/' },
                 { label: 'Contact', to: '/' },
               ].map(link => (
