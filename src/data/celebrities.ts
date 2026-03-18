@@ -40,9 +40,13 @@ export interface Celebrity {
   relationships?: {
     parents?: string[]
     spouse?: string
+    exSpouse?: string[]
     partner?: string
+    exPartner?: string[]
+    fiancé?: string
     siblings?: string[]
     children?: string[]
+    grandchildren?: string[]
   }
   gossip?: {
     title: string
@@ -79,6 +83,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Kris Jenner', 'Caitlyn Jenner'],
       partner: 'Travis Scott',
+      exPartner: ['Tyga'],
       siblings: ['Kourtney Kardashian', 'Kim Kardashian', 'Khloé Kardashian', 'Rob Kardashian', 'Kendall Jenner'],
       children: ['Stormi Webster', 'Aire Webster'],
     },
@@ -195,7 +200,10 @@ export const celebrities: Celebrity[] = [
     ],
     relationships: {
       parents: ['Maye Musk', 'Errol Musk'],
+      exSpouse: ['Justine Wilson', 'Talulah Riley'],
+      exPartner: ['Grimes', 'Shivon Zilis'],
       siblings: ['Kimbal Musk', 'Tosca Musk'],
+      children: ['Nevada Alexander Musk (†)', 'Griffin Musk', 'Xavier Musk', 'Damian Musk', 'Saxon Musk', 'Kai Musk', 'X AE A-XII Musk', 'Exa Dark Musk', 'Techno Musk', 'Strider Musk', 'Azure Musk', 'Kaya Musk'],
     },
     gossip: [
       {
@@ -286,8 +294,10 @@ export const celebrities: Celebrity[] = [
     ],
     relationships: {
       parents: ['Jacklyn Gise Bezos', 'Ted Jorgensen'],
+      exSpouse: ['MacKenzie Scott'],
       partner: 'Lauren Sánchez',
       siblings: ['Mark Bezos', 'Christina Bezos'],
+      children: ['Preston Bezos', 'Zahara Bezos', 'Phinneas Bezos', 'Ella Bezos'],
     },
     gossip: [
       {
@@ -378,10 +388,11 @@ export const celebrities: Celebrity[] = [
       'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=800&fit=crop&q=85',
     ],
     relationships: {
-      parents: ['Maria Dolores dos Santos Viveiros da Silva'],
-      partner: 'Georgina Rodríguez',
+      parents: ['Maria Dolores dos Santos Viveiros da Silva', 'José Dinis Aveiro (†)'],
+      fiancé: 'Georgina Rodríguez',
+      exPartner: ['Irina Shayk', 'Nereida Gallardo', 'Merche Romero'],
       siblings: ['Hugo Aveiro', 'Elma Aveiro', 'Katia Aveiro'],
-      children: ['Cristiano Ronaldo Jr.', 'Eva Maria', 'Mateo', 'Alana Martina'],
+      children: ['Cristiano Ronaldo Jr.', 'Eva Maria', 'Mateo', 'Alana Martina', 'Bella Esmeralda'],
     },
     assets: [
       {
@@ -464,6 +475,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Andrea Swift', 'Scott Swift'],
       partner: 'Travis Kelce',
+      exPartner: ['Joe Alwyn', 'Jake Gyllenhaal', 'Harry Styles', 'Calvin Harris', 'John Mayer', 'Eddie Redmayne (dated briefly)'],
       siblings: ['Austin Swift'],
     },
     gossip: [
@@ -805,6 +817,8 @@ export const celebrities: Celebrity[] = [
     ],
     relationships: {
       parents: ['Kris Jenner', 'Robert Kardashian Sr.'],
+      exSpouse: ['Damon Thomas', 'Kris Humphries', 'Kanye West'],
+      exPartner: ['Pete Davidson', 'Ray J'],
       siblings: ['Kourtney Kardashian', 'Khloé Kardashian', 'Rob Kardashian', 'Kendall Jenner', 'Kylie Jenner'],
       children: ['North West', 'Saint West', 'Chicago West', 'Psalm West'],
     },

@@ -116,17 +116,55 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
 }
 
 // ── RELATIONSHIPS ─────────────────────────────────────────────────────────────
+// Link to a celeb profile if this name matches one in the database
+function CelebName({ name }: { name: string }) {
+  const match = celebrities.find(c => c.name.toLowerCase() === name.toLowerCase())
+  if (match) {
+    return (
+      <Link
+        to={`/celebrities/${match.id}`}
+        className="inline-flex items-center gap-1 hover:underline"
+        style={{ color: '#c9a84c' }}
+      >
+        {name}
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="opacity-60">
+          <path d="M2 2h6v6M8 2 2 8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+        </svg>
+      </Link>
+    )
+  }
+  return <span className="text-gray-200">{name}</span>
+}
+
+function NameList({ names }: { names: string[] }) {
+  return (
+    <span className="flex flex-wrap gap-x-3 gap-y-1">
+      {names.map((name, i) => (
+        <span key={name} className="flex items-center gap-1">
+          <CelebName name={name} />
+          {i < names.length - 1 && <span className="text-gray-700">·</span>}
+        </span>
+      ))}
+    </span>
+  )
+}
+
 function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
   const { t } = useLang()
   const r = celeb.relationships
   if (!r) return null
 
-  const rows: [string, string][] = [
-    ...(r.parents?.length ? [['Parents', r.parents.join(' · ')] as [string, string]] : []),
-    ...(r.spouse ? [['Spouse', r.spouse] as [string, string]] : []),
-    ...(r.partner ? [['Partner', r.partner] as [string, string]] : []),
-    ...(r.siblings?.length ? [['Siblings', r.siblings.join(' · ')] as [string, string]] : []),
-    ...(r.children?.length ? [['Children', r.children.join(' · ')] as [string, string]] : []),
+  type Row = { label: string; names: string[] }
+  const rows: Row[] = [
+    ...(r.parents?.length ? [{ label: 'Parents', names: r.parents }] : []),
+    ...(r.spouse ? [{ label: 'Spouse', names: [r.spouse] }] : []),
+    ...(r.fiancé ? [{ label: 'Fiancé/Fiancée', names: [r.fiancé] }] : []),
+    ...(r.exSpouse?.length ? [{ label: 'Ex-Spouse', names: r.exSpouse }] : []),
+    ...(r.partner ? [{ label: 'Partner', names: [r.partner] }] : []),
+    ...(r.exPartner?.length ? [{ label: 'Ex-Partner', names: r.exPartner }] : []),
+    ...(r.siblings?.length ? [{ label: 'Siblings', names: r.siblings }] : []),
+    ...(r.children?.length ? [{ label: 'Children', names: r.children }] : []),
+    ...(r.grandchildren?.length ? [{ label: 'Grandchildren', names: r.grandchildren }] : []),
   ]
 
   if (rows.length === 0) return null
@@ -140,10 +178,12 @@ function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities
       </div>
       <table className="w-full text-sm">
         <tbody>
-          {rows.map(([label, value], i) => (
+          {rows.map(({ label, names }, i) => (
             <tr key={label} className={i % 2 === 0 ? 'bg-[#111]' : 'bg-[#131313]'}>
-              <td className="px-5 py-3 text-gray-500 font-medium whitespace-nowrap w-32">{label}</td>
-              <td className="px-5 py-3 text-gray-200 leading-relaxed">{value}</td>
+              <td className="px-5 py-3.5 text-gray-500 font-medium whitespace-nowrap w-28 sm:w-36 align-top">{label}</td>
+              <td className="px-5 py-3.5 text-gray-200 leading-relaxed">
+                <NameList names={names} />
+              </td>
             </tr>
           ))}
         </tbody>
@@ -503,11 +543,12 @@ export default function ProfilePage() {
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section className="relative">
         {/* Mobile: full-width portrait image */}
-        <div className="sm:hidden w-full relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
+        <div className="sm:hidden w-full relative overflow-hidden" style={{ aspectRatio: '3/4', maxHeight: '70vh' }}>
           <img
             src={avatarError ? fallbackAvatar : getAvatar(celeb)}
             alt={celeb.name}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 15%' }}
             onError={() => setAvatarError(true)}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent" />
@@ -549,7 +590,8 @@ export default function ProfilePage() {
               <img
                 src={avatarError ? fallbackAvatar : getAvatar(celeb)}
                 alt={celeb.name}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: 'center 15%' }}
                 onError={() => setAvatarError(true)}
               />
             </div>
@@ -654,11 +696,12 @@ export default function ProfilePage() {
                   style={{ width: 100 }}
                 >
                   {/* Square image */}
-                  <div className="relative overflow-hidden rounded-xl border border-white/8 group-hover:border-[#c9a84c]/40 transition-all duration-300" style={{ aspectRatio: '1/1' }}>
+                  <div className="relative overflow-hidden rounded-xl border border-[#c9a84c]/15 group-hover:border-[#c9a84c]/50 transition-all duration-300" style={{ aspectRatio: '1/1' }}>
                     <img
                       src={getAvatar(c)}
                       alt={c.name}
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      style={{ objectPosition: 'center 15%' }}
                       onError={e => {
                         (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=100`
                       }}
