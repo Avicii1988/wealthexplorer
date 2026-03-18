@@ -13,19 +13,9 @@ import {
   type Asset,
 } from '../data/celebrities'
 import NotificationBell from '../components/NotificationBell'
+import { LANGUAGES, useLang } from '../i18n'
 
 const ALL = 'All' as const
-
-const LANGUAGES = [
-  { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-  { code: 'fr', label: 'Français', flag: '🇫🇷' },
-  { code: 'es', label: 'Español', flag: '🇪🇸' },
-  { code: 'it', label: 'Italiano', flag: '🇮🇹' },
-  { code: 'pt', label: 'Português', flag: '🇵🇹' },
-  { code: 'ar', label: 'العربية', flag: '🇦🇪' },
-  { code: 'zh', label: '中文', flag: '🇨🇳' },
-]
 
 const FOLLOWS_KEY = 'we_followed_celebs'
 
@@ -41,15 +31,26 @@ function saveFollowed(ids: Set<string>) {
   localStorage.setItem(FOLLOWS_KEY, JSON.stringify([...ids]))
 }
 
+// ── CROWN LOGO (small) ────────────────────────────────────────────────────────
 function WealthLogoSmall() {
   return (
     <div className="flex items-center gap-2">
-      <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 1L22.5 3.5L28.5 9L31 16L28.5 23L22.5 28.5L16 31L9.5 28.5L3.5 23L1 16L3.5 9L9.5 3.5Z" stroke="#c9a84c" strokeWidth="0.8" fill="none" opacity="0.5" />
-        <path d="M16 5L22 12L16 27L10 12Z" fill="none" stroke="#c9a84c" strokeWidth="0.9" />
-        <line x1="9" y1="13.5" x2="23" y2="13.5" stroke="#c9a84c" strokeWidth="0.8" />
-        <path d="M10 8L13 13.5M22 8L19 13.5M16 6V13.5" stroke="#c9a84c" strokeWidth="0.9" strokeLinecap="round" />
-        <circle cx="16" cy="13.5" r="1.2" fill="#c9a84c" />
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Crown base */}
+        <rect x="4" y="22" width="24" height="4" rx="1.2" fill="#c9a84c" opacity="0.95"/>
+        {/* Crown body filled */}
+        <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22Z" fill="#c9a84c" opacity="0.15"/>
+        {/* Crown body outline */}
+        <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22" stroke="#c9a84c" strokeWidth="1.6" strokeLinejoin="round" fill="none"/>
+        {/* Top jewel */}
+        <circle cx="16" cy="6.5" r="2.1" fill="#c9a84c"/>
+        {/* Side jewels */}
+        <circle cx="6" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
+        <circle cx="26" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
+        {/* Base gems */}
+        <circle cx="10" cy="24" r="1" fill="#0a0a0a"/>
+        <circle cx="16" cy="24" r="1" fill="#0a0a0a"/>
+        <circle cx="22" cy="24" r="1" fill="#0a0a0a"/>
       </svg>
       <span className="font-serif text-base" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}>
         Wealth Explorer
@@ -58,40 +59,55 @@ function WealthLogoSmall() {
   )
 }
 
-// ── AT A GLANCE TABLE ─────────────────────────────────────────────────────────
+// ── AT A GLANCE TABLE — 2-column grid ─────────────────────────────────────────
 function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
-  const rows: [string, string][] = [
-    ['Category', celeb.category],
-    ['Net Worth', formatNetWorth(celeb.netWorth)],
-    ['Birthdate', celeb.birthdate],
-    ['Birthplace', celeb.birthplace],
-    ['Height', celeb.height],
-    ['Profession', celeb.profession],
-    ['Nationality', `${getNationalityFlag(celeb.nationality)} ${celeb.nationality}`],
+  const { t } = useLang()
+
+  const leftCol: [string, string][] = [
+    [t('category'), celeb.category],
+    [t('netWorth'), formatNetWorth(celeb.netWorth)],
+    [t('birthday'), celeb.birthdate],
   ]
+  const rightCol: [string, string][] = [
+    [t('birthplace'), celeb.birthplace],
+    [t('height'), celeb.height],
+    [t('profession'), celeb.profession],
+  ]
+
   return (
     <div className="rounded-2xl overflow-hidden bg-[#111]">
       <div className="px-5 py-4 bg-[#161616]">
         <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-          {celeb.name} at a Glance
+          {celeb.name} {t('atAGlance')}
         </h2>
       </div>
-      <table className="w-full text-sm">
-        <tbody>
-          {rows.map(([label, value], i) => (
-            <tr key={label} className={i % 2 === 0 ? 'bg-[#111]' : 'bg-[#131313]'}>
-              <td className="px-5 py-3 text-gray-500 font-medium whitespace-nowrap w-32">{label}</td>
-              <td className="px-5 py-3 text-gray-200">{value}</td>
-            </tr>
+      <div className="grid grid-cols-2 divide-x divide-white/5">
+        {/* Left column */}
+        <div className="divide-y divide-white/5">
+          {leftCol.map(([label, value], i) => (
+            <div key={label} className={`px-5 py-3.5 ${i % 2 === 0 ? 'bg-[#111]' : 'bg-[#131313]'}`}>
+              <p className="text-[11px] uppercase tracking-wider text-gray-600 mb-1">{label}</p>
+              <p className="text-sm text-gray-200 font-medium">{value}</p>
+            </div>
           ))}
-        </tbody>
-      </table>
+        </div>
+        {/* Right column */}
+        <div className="divide-y divide-white/5">
+          {rightCol.map(([label, value], i) => (
+            <div key={label} className={`px-5 py-3.5 ${i % 2 === 0 ? 'bg-[#111]' : 'bg-[#131313]'}`}>
+              <p className="text-[11px] uppercase tracking-wider text-gray-600 mb-1">{label}</p>
+              <p className="text-sm text-gray-200 font-medium">{value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
 
 // ── RELATIONSHIPS ─────────────────────────────────────────────────────────────
 function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+  const { t } = useLang()
   const r = celeb.relationships
   if (!r) return null
 
@@ -109,7 +125,7 @@ function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities
     <div className="rounded-2xl overflow-hidden bg-[#111]">
       <div className="px-5 py-4 bg-[#161616]">
         <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-          Relationships
+          {t('relationships')}
         </h2>
       </div>
       <table className="w-full text-sm">
@@ -126,24 +142,36 @@ function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities
   )
 }
 
-// ── GOSSIP & CONTROVERSY ──────────────────────────────────────────────────────
+// ── GOSSIP & CONTROVERSY — Card style ────────────────────────────────────────
 function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+  const { t } = useLang()
   const items = celeb.gossip
   if (!items?.length) return null
 
   return (
     <div className="rounded-2xl overflow-hidden bg-[#111]">
-      <div className="px-5 py-4 bg-[#161616]">
-        <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-          Gossip &amp; Controversy
-        </h2>
-        <p className="text-[11px] text-gray-600 mt-1">Based on public news — not verified by Wealth Explorer</p>
+      <div className="px-5 py-4 bg-[#161616] flex items-start justify-between gap-4">
+        <div>
+          <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+            {t('gossipControversy')}
+          </h2>
+          <p className="text-[11px] text-gray-600 mt-1">{t('gossipDisclaimer')}</p>
+        </div>
+        <span className="flex-shrink-0 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 mt-0.5">
+          {items.length} {items.length === 1 ? 'item' : 'items'}
+        </span>
       </div>
-      <div className="divide-y divide-white/5">
+      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
         {items.map((item, i) => (
-          <div key={i} className={`px-5 py-4 ${i % 2 === 0 ? 'bg-[#111]' : 'bg-[#131313]'}`}>
-            <p className="text-sm font-medium text-gray-200 mb-1.5">{item.title}</p>
-            <p className="text-sm text-gray-500 leading-relaxed">{item.summary}</p>
+          <div
+            key={i}
+            className="rounded-xl bg-[#161616] border border-white/8 p-5 hover:border-red-500/20 hover:bg-[#1a1414] transition-all duration-200"
+          >
+            <div className="flex items-start gap-2.5 mb-3">
+              <span className="text-base leading-none mt-0.5 flex-shrink-0">🔥</span>
+              <p className="text-sm font-semibold text-white leading-snug">{item.title}</p>
+            </div>
+            <p className="text-[13px] text-gray-500 leading-relaxed">{item.summary}</p>
           </div>
         ))}
       </div>
@@ -153,6 +181,7 @@ function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
 
 // ── ASSET CARD ────────────────────────────────────────────────────────────────
 function AssetCard({ asset }: { asset: Asset }) {
+  const { t } = useLang()
   const [liked, setLiked] = useState(false)
   const [expanded, setExpanded] = useState(false)
   const [imgError, setImgError] = useState(false)
@@ -233,7 +262,7 @@ function AssetCard({ asset }: { asset: Asset }) {
           className="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition-colors mb-1"
         >
           {expanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
-          {expanded ? 'Less' : 'More details'}
+          {expanded ? t('less') : t('moreDetails')}
         </button>
 
         {expanded && (
@@ -245,7 +274,7 @@ function AssetCard({ asset }: { asset: Asset }) {
         <div className="flex items-center gap-1.5 mt-4 pt-4">
           <Heart size={11} className="text-gray-600" />
           <span className="text-xs text-gray-600">
-            {(asset.likes + (liked ? 1 : 0)).toLocaleString()} likes
+            {(asset.likes + (liked ? 1 : 0)).toLocaleString()} {t('likes')}
           </span>
         </div>
       </div>
@@ -253,8 +282,9 @@ function AssetCard({ asset }: { asset: Asset }) {
   )
 }
 
-// ── ASSETS SECTION (inline, replaces assets tab) ──────────────────────────────
+// ── ASSETS SECTION ────────────────────────────────────────────────────────────
 function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+  const { t } = useLang()
   const [activeType, setActiveType] = useState<AssetType | typeof ALL>(ALL)
 
   const assetTypes = Array.from(new Set(celeb.assets.map(a => a.type))) as AssetType[]
@@ -263,15 +293,13 @@ function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
 
   return (
     <div className="rounded-2xl overflow-hidden bg-[#111]">
-      {/* Header */}
       <div className="px-5 py-4 bg-[#161616] flex items-center justify-between gap-3">
         <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-          Assets
+          {t('assets')}
         </h2>
         <span className="text-[11px] text-gray-600">{celeb.assets.length} total</span>
       </div>
 
-      {/* Type filter tabs */}
       {assetTypes.length > 1 && (
         <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide border-b border-white/5 bg-[#111]">
           {tabs.map(type => {
@@ -286,7 +314,7 @@ function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
                 }`}
               >
                 {type !== ALL && <span className="text-sm leading-none">{assetTypeIcons[type]}</span>}
-                <span>{type === ALL ? 'All' : assetTypeLabels[type]}</span>
+                <span>{type === ALL ? t('allAssets') : assetTypeLabels[type]}</span>
                 <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${isActive ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
                   {count}
                 </span>
@@ -296,7 +324,6 @@ function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
         </div>
       )}
 
-      {/* Asset grid */}
       <div className="p-4">
         {filtered.length === 0 ? (
           <p className="text-center py-8 text-gray-600 text-sm">No assets in this category</p>
@@ -312,23 +339,62 @@ function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
   )
 }
 
-// ── PROFILE PAGE ──────────────────────────────────────────────────────────────
-export default function ProfilePage() {
-  const { id } = useParams<{ id: string }>()
-  const navigate = useNavigate()
-  const [avatarError, setAvatarError] = useState(false)
-  const [langOpen, setLangOpen] = useState(false)
-  const [activeLang, setActiveLang] = useState(LANGUAGES[0])
-  const [followed, setFollowed] = useState<Set<string>>(getFollowed)
-  const langRef = useRef<HTMLDivElement>(null)
+// ── LANGUAGE SELECTOR ─────────────────────────────────────────────────────────
+function LanguageSelector() {
+  const { activeLang, setLang } = useLang()
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     function handler(e: MouseEvent) {
-      if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false)
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
     }
     document.addEventListener('mousedown', handler)
     return () => document.removeEventListener('mousedown', handler)
   }, [])
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 text-xs text-gray-400 hover:border-white/20 hover:text-gray-200 transition-all"
+      >
+        <span className="text-sm leading-none">{activeLang.flag}</span>
+        <span className="hidden sm:inline tracking-wide">{activeLang.label}</span>
+        <ChevronDown size={10} className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {open && (
+        <div className="absolute right-0 top-full mt-2 w-44 bg-[#141414] border border-white/10 rounded-xl overflow-hidden shadow-2xl z-50">
+          {LANGUAGES.map(lang => (
+            <button
+              key={lang.code}
+              onClick={() => { setLang(lang.code); setOpen(false) }}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors ${
+                activeLang.code === lang.code
+                  ? 'bg-[#c9a84c]/10 text-[#c9a84c]'
+                  : 'text-gray-400 hover:bg-white/5 hover:text-white'
+              }`}
+            >
+              <span className="text-base">{lang.flag}</span>
+              <span>{lang.label}</span>
+              {activeLang.code === lang.code && (
+                <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#c9a84c]" />
+              )}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ── PROFILE PAGE ──────────────────────────────────────────────────────────────
+export default function ProfilePage() {
+  const { id } = useParams<{ id: string }>()
+  const navigate = useNavigate()
+  const { t } = useLang()
+  const [avatarError, setAvatarError] = useState(false)
+  const [followed, setFollowed] = useState<Set<string>>(getFollowed)
 
   const celeb = celebrities.find(c => c.id === id)
 
@@ -370,47 +436,8 @@ export default function ProfilePage() {
           </button>
 
           <div className="flex items-center gap-3">
-            {/* Nationality badge */}
-            <div className="hidden sm:flex items-center gap-1.5 text-xs text-gray-600">
-              <span>{getNationalityFlag(celeb.nationality)}</span>
-              <span className="uppercase tracking-wider">{celeb.nationality}</span>
-            </div>
-
-            {/* Notifications */}
             <NotificationBell />
-
-            {/* Language selector */}
-            <div ref={langRef} className="relative">
-              <button
-                onClick={() => setLangOpen(v => !v)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 text-xs text-gray-400 hover:border-white/20 hover:text-gray-200 transition-all"
-              >
-                <span className="text-sm leading-none">{activeLang.flag}</span>
-                <span className="hidden sm:inline tracking-wide">{activeLang.label}</span>
-                <ChevronDown size={10} className={`transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {langOpen && (
-                <div className="absolute right-0 top-full mt-2 w-44 bg-[#141414] border border-white/10 rounded-xl overflow-hidden shadow-2xl z-50">
-                  {LANGUAGES.map(lang => (
-                    <button
-                      key={lang.code}
-                      onClick={() => { setActiveLang(lang); setLangOpen(false) }}
-                      className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors ${
-                        activeLang.code === lang.code
-                          ? 'bg-[#c9a84c]/10 text-[#c9a84c]'
-                          : 'text-gray-400 hover:bg-white/5 hover:text-white'
-                      }`}
-                    >
-                      <span className="text-base">{lang.flag}</span>
-                      <span>{lang.label}</span>
-                      {activeLang.code === lang.code && (
-                        <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#c9a84c]" />
-                      )}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            <LanguageSelector />
           </div>
         </div>
       </header>
@@ -428,7 +455,7 @@ export default function ProfilePage() {
         </div>
 
         <div className="relative max-w-5xl mx-auto px-5 py-14 flex flex-col sm:flex-row gap-8 items-start sm:items-center">
-          {/* Circle Avatar */}
+          {/* Circle Avatar — always full color */}
           <div className="flex-shrink-0">
             <div
               className="w-36 h-36 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-2xl border-2"
@@ -460,14 +487,15 @@ export default function ProfilePage() {
             </div>
 
             <h1
-              className="text-4xl sm:text-5xl font-normal text-white mb-3 leading-tight"
+              className="text-4xl sm:text-5xl font-normal text-white mb-2 leading-tight"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               {celeb.name}
             </h1>
 
+            {/* Nationality — only shown here below the name */}
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl leading-none" title={celeb.nationality}>{getNationalityFlag(celeb.nationality)}</span>
+              <span className="text-xl leading-none" title={celeb.nationality}>{getNationalityFlag(celeb.nationality)}</span>
               <span className="text-sm text-gray-400 uppercase tracking-widest">{celeb.nationality}</span>
             </div>
 
@@ -481,22 +509,21 @@ export default function ProfilePage() {
                 <p className="text-2xl font-semibold tabular-nums" style={{ color: '#c9a84c', fontFamily: "'Playfair Display', Georgia, serif" }}>
                   {formatNetWorth(celeb.netWorth)}
                 </p>
-                <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Net Worth</p>
+                <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">{t('netWorth')}</p>
               </div>
               <div>
                 <p className="text-2xl font-semibold text-white tabular-nums" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                   {celeb.assets.length}
                 </p>
-                <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Assets</p>
+                <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">{t('assets')}</p>
               </div>
               <div>
                 <p className="text-2xl font-semibold text-white tabular-nums" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                   {formatValue(totalValue)}
                 </p>
-                <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">Total Value</p>
+                <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">{t('totalValue')}</p>
               </div>
 
-              {/* Follow / Notify button */}
               <button
                 onClick={toggleFollow}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 ${
@@ -506,14 +533,14 @@ export default function ProfilePage() {
                 }`}
               >
                 {isFollowed ? <Bell size={14} className="fill-[#c9a84c]" /> : <BellOff size={14} />}
-                {isFollowed ? 'Following' : 'Follow'}
+                {isFollowed ? t('following') : t('follow')}
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── MAIN CONTENT (no tabs — single scroll) ──────────────── */}
+      {/* ── MAIN CONTENT ─────────────────────────────────────────── */}
       <main className="max-w-5xl mx-auto px-5 py-10 flex flex-col gap-6">
         <GlanceTable celeb={celeb} />
         <RelationshipsSection celeb={celeb} />
@@ -524,13 +551,13 @@ export default function ProfilePage() {
       {/* ── MORE PROFILES ───────────────────────────────────────── */}
       <section className="py-12">
         <div className="max-w-5xl mx-auto px-5">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-7">More Profiles</p>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-7">{t('moreProfiles')}</p>
           <div className="flex gap-5 overflow-x-auto scrollbar-hide pb-2">
             {[
               ...celebrities.filter(c => c.id !== celeb.id && c.category === celeb.category),
               ...celebrities.filter(c => c.id !== celeb.id && c.category !== celeb.category),
             ]
-              .slice(0, 12)
+              .slice(0, 16)
               .map(c => (
                 <Link
                   key={c.id}
@@ -541,7 +568,7 @@ export default function ProfilePage() {
                     <img
                       src={getAvatar(c)}
                       alt={c.name}
-                      className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-300"
+                      className="w-full h-full object-cover object-top transition-all duration-300"
                       onError={e => {
                         (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=64`
                       }}
@@ -562,7 +589,7 @@ export default function ProfilePage() {
           <div className="rounded-2xl bg-[#111] border border-white/8 px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
             <div>
               <p className="text-base font-normal text-white mb-1" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-                Did we make a mistake?
+                {t('didWeMistake')}
               </p>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Submit a correction suggestion for <span className="text-gray-300">{celeb.name}</span> and help us fix it!
@@ -572,7 +599,7 @@ export default function ProfilePage() {
               href={`mailto:corrections@wealthexplorer.com?subject=Correction for ${encodeURIComponent(celeb.name)}`}
               className="flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium border border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/10 transition-colors"
             >
-              Submit Suggestion
+              {t('submitSuggestion')}
             </a>
           </div>
         </div>
