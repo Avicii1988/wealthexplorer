@@ -137,14 +137,8 @@ async function fromTmdb(name) {
 
 // ── Main enrichment chain ──────────────────────────────────────────────────────
 async function enrichOne(name) {
-  // Chain: Wikipedia REST → Wikipedia Search → TMDb
-  let url = await fromWikipediaRest(name)
-  if (url) return { url, source: 'wikipedia-rest' }
-
-  url = await fromWikipediaSearch(name)
-  if (url) return { url, source: 'wikipedia-search' }
-
-  url = await fromTmdb(name)
+  // TMDb-first (Wikipedia is blocked in this environment)
+  const url = await fromTmdb(name)
   if (url) return { url, source: 'tmdb' }
 
   return null
