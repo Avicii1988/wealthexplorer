@@ -101,7 +101,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                 const hasNewAsset = celeb.assets.some(a => a.isNew)
                 return (
                 <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
-                  <div className="relative bg-[#111] rounded-2xl border border-white/8 group-hover:border-[#c9a84c]/30 transition-all duration-300 group-hover:bg-[#141414] flex flex-col items-center text-center pt-5 pb-4 px-3 gap-3">
+                  <div className="relative bg-[#111] rounded-2xl border border-[#c9a84c]/12 group-hover:border-[#c9a84c]/40 transition-all duration-300 group-hover:bg-[#141414] flex flex-col items-center text-center pt-5 pb-4 px-3 gap-3">
                     {hasNewAsset && (
                       <div className="absolute top-2.5 right-2.5 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#c9a84c] shadow-lg z-10">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0a] animate-pulse" />
@@ -109,11 +109,12 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                       </div>
                     )}
                     {/* Circle avatar — always in color */}
-                    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#c9a84c]/50 transition-all duration-300 flex-shrink-0">
+                    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/60 transition-all duration-300 flex-shrink-0">
                       <img
                         src={getAvatar(celeb)}
                         alt={celeb.name}
-                        className="w-full h-full object-cover object-top transition-all duration-500"
+                        className="w-full h-full object-cover transition-all duration-500"
+                        style={{ objectPosition: 'center 15%' }}
                         onError={e => {
                           (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
                         }}
@@ -233,11 +234,12 @@ function CircleCard({ celeb }: { celeb: Celebrity }) {
       to={`/celebrities/${celeb.id}`}
       className="flex flex-col items-center gap-2 group flex-shrink-0"
     >
-      <div className="w-[68px] h-[68px] rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#c9a84c]/60 transition-all duration-300 shadow-lg">
+      <div className="w-[68px] h-[68px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/70 transition-all duration-300 shadow-lg">
         <img
           src={getAvatar(celeb)}
           alt={celeb.name}
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          style={{ objectPosition: 'center 15%' }}
           onError={e => {
             (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=72`
           }}
@@ -373,7 +375,8 @@ export default function HomePage() {
             onFocus={() => setSearchFocused(true)}
             onBlur={() => setTimeout(() => setSearchFocused(false), 150)}
             placeholder={t('searchPlaceholder')}
-            className="w-full bg-[#161616] border border-white/12 rounded-2xl pl-12 pr-10 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-[#c9a84c]/40 text-sm transition-all"
+            className="w-full bg-[#161616] border border-white/12 rounded-2xl pl-12 pr-10 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-[#c9a84c]/40 text-[16px] sm:text-sm transition-colors"
+            style={{ WebkitTextSizeAdjust: 'none' }}
           />
           {search && (
             <button
@@ -406,7 +409,8 @@ export default function HomePage() {
                         <img
                           src={getAvatar(celeb)}
                           alt={celeb.name}
-                          className="w-full h-full object-cover object-top"
+                          className="w-full h-full object-cover"
+                          style={{ objectPosition: 'center 15%' }}
                           onError={e => {
                             (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=40`
                           }}
