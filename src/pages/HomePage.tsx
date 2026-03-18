@@ -15,20 +15,20 @@ import {
   getAvatar,
 } from '../data/celebrities'
 import NotificationBell from '../components/NotificationBell'
+import { LANGUAGES, useLang } from '../i18n'
 
 type FeedItem = Asset & { ownerName: string; ownerId: string }
 
 // ── A-Z PROFILE DIRECTORY ─────────────────────────────────────────────────────
 function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
+  const { t } = useLang()
   const letterRefs = useRef<Record<string, HTMLDivElement | null>>({})
 
-  // Sort alphabetically
   const sorted = useMemo(
     () => [...filteredCelebs].sort((a, b) => a.name.localeCompare(b.name)),
     [filteredCelebs]
   )
 
-  // Group by first letter
   const grouped = useMemo(() => {
     const map: Record<string, Celebrity[]> = {}
     for (const c of sorted) {
@@ -48,10 +48,9 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
   return (
     <section className="border-t border-white/8 py-14 max-w-5xl mx-auto px-5">
-      {/* Header + count */}
       <div className="flex items-center justify-between mb-8">
         <p className="text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase">
-          Profiles
+          {t('profiles')}
         </p>
         <p className="text-xs text-gray-700">{sorted.length} profiles · A–Z</p>
       </div>
@@ -86,7 +85,6 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
             key={letter}
             ref={el => { letterRefs.current[letter] = el }}
           >
-            {/* Letter heading */}
             <div className="flex items-center gap-4 mb-5">
               <span
                 className="text-3xl font-semibold leading-none"
@@ -98,32 +96,29 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
               <span className="text-[10px] text-gray-700">{grouped[letter].length}</span>
             </div>
 
-            {/* Profiles row — circle avatar + card */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {grouped[letter].map(celeb => {
                 const hasNewAsset = celeb.assets.some(a => a.isNew)
                 return (
                 <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
                   <div className="relative bg-[#111] rounded-2xl border border-white/8 group-hover:border-[#c9a84c]/30 transition-all duration-300 group-hover:bg-[#141414] flex flex-col items-center text-center pt-5 pb-4 px-3 gap-3">
-                    {/* NEW badge */}
                     {hasNewAsset && (
                       <div className="absolute top-2.5 right-2.5 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#c9a84c] shadow-lg z-10">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0a] animate-pulse" />
                         <span className="text-[9px] font-bold text-[#0a0a0a] tracking-wider uppercase leading-none">New</span>
                       </div>
                     )}
-                    {/* Circle avatar */}
+                    {/* Circle avatar — always in color */}
                     <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#c9a84c]/50 transition-all duration-300 flex-shrink-0">
                       <img
                         src={getAvatar(celeb)}
                         alt={celeb.name}
-                        className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                        className="w-full h-full object-cover object-top transition-all duration-500"
                         onError={e => {
                           (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
                         }}
                       />
                     </div>
-                    {/* Info */}
                     <div className="w-full">
                       <p className="text-sm font-semibold text-white group-hover:text-[#c9a84c] transition-colors truncate leading-tight">
                         {celeb.name}
@@ -143,47 +138,27 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   )
 }
 
-const LANGUAGES = [
-  { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-  { code: 'fr', label: 'Français', flag: '🇫🇷' },
-  { code: 'es', label: 'Español', flag: '🇪🇸' },
-  { code: 'it', label: 'Italiano', flag: '🇮🇹' },
-  { code: 'pt', label: 'Português', flag: '🇵🇹' },
-  { code: 'ar', label: 'العربية', flag: '🇦🇪' },
-  { code: 'zh', label: '中文', flag: '🇨🇳' },
-]
-
+// ── CROWN LOGO ────────────────────────────────────────────────────────────────
 function WealthLogo() {
   return (
     <div className="flex items-center gap-3">
-      {/* Emblem */}
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Outer octagon ring */}
-        <path
-          d="M16 1L22.5 3.5L28.5 9L31 16L28.5 23L22.5 28.5L16 31L9.5 28.5L3.5 23L1 16L3.5 9L9.5 3.5Z"
-          stroke="#c9a84c"
-          strokeWidth="0.8"
-          fill="none"
-          opacity="0.5"
-        />
-        {/* Diamond inner */}
-        <path
-          d="M16 5L22 12L16 27L10 12Z"
-          fill="none"
-          stroke="#c9a84c"
-          strokeWidth="0.9"
-        />
-        {/* Horizontal crossbar */}
-        <line x1="9" y1="13.5" x2="23" y2="13.5" stroke="#c9a84c" strokeWidth="0.8" />
-        {/* Top crown points */}
-        <path d="M10 8L13 13.5M22 8L19 13.5M16 6V13.5" stroke="#c9a84c" strokeWidth="0.9" strokeLinecap="round" />
-        {/* Center dot */}
-        <circle cx="16" cy="13.5" r="1.2" fill="#c9a84c" />
-        {/* Bottom small dot */}
-        <circle cx="16" cy="23.5" r="0.8" fill="#c9a84c" opacity="0.6" />
+      <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Crown base */}
+        <rect x="4" y="22" width="24" height="4" rx="1.2" fill="#c9a84c" opacity="0.95"/>
+        {/* Crown body filled */}
+        <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22Z" fill="#c9a84c" opacity="0.15"/>
+        {/* Crown body outline */}
+        <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22" stroke="#c9a84c" strokeWidth="1.6" strokeLinejoin="round" fill="none"/>
+        {/* Top jewel */}
+        <circle cx="16" cy="6.5" r="2.1" fill="#c9a84c"/>
+        {/* Side jewels */}
+        <circle cx="6" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
+        <circle cx="26" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
+        {/* Base gems */}
+        <circle cx="10" cy="24" r="1" fill="#0a0a0a"/>
+        <circle cx="16" cy="24" r="1" fill="#0a0a0a"/>
+        <circle cx="22" cy="24" r="1" fill="#0a0a0a"/>
       </svg>
-      {/* Wordmark */}
       <div className="flex flex-col leading-none">
         <span
           className="text-[10px] tracking-[0.35em] uppercase text-[#c9a84c]/60 font-light"
@@ -202,25 +177,109 @@ function WealthLogo() {
   )
 }
 
-export default function HomePage() {
-  const navigate = useNavigate()
-  const [search, setSearch] = useState('')
-  const [activeCategory, setActiveCategory] = useState<Category>('All')
-  const [activeAssetType, setActiveAssetType] = useState<AssetType | 'All'>('All')
-  const [langOpen, setLangOpen] = useState(false)
-  const [activeLang, setActiveLang] = useState(LANGUAGES[0])
-  const [searchFocused, setSearchFocused] = useState(false)
-  const langRef = useRef<HTMLDivElement>(null)
-  const searchRef = useRef<HTMLDivElement>(null)
+// ── LANGUAGE SELECTOR ─────────────────────────────────────────────────────────
+function LanguageSelector() {
+  const { activeLang, setLang } = useLang()
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
 
-  // Close lang dropdown on outside click
   useEffect(() => {
     function handler(e: MouseEvent) {
-      if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false)
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
     }
     document.addEventListener('mousedown', handler)
     return () => document.removeEventListener('mousedown', handler)
   }, [])
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 text-xs text-gray-400 hover:border-white/20 hover:text-gray-200 transition-all"
+      >
+        <span className="text-base leading-none">{activeLang.flag}</span>
+        <span className="tracking-wide hidden sm:inline">{activeLang.label}</span>
+        <ChevronDown size={11} className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {open && (
+        <div className="absolute right-0 top-full mt-2 w-44 bg-[#141414] border border-white/10 rounded-xl overflow-hidden shadow-2xl z-50">
+          {LANGUAGES.map(lang => (
+            <button
+              key={lang.code}
+              onClick={() => { setLang(lang.code); setOpen(false) }}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors ${
+                activeLang.code === lang.code
+                  ? 'bg-[#c9a84c]/10 text-[#c9a84c]'
+                  : 'text-gray-400 hover:bg-white/5 hover:text-white'
+              }`}
+            >
+              <span className="text-base">{lang.flag}</span>
+              <span>{lang.label}</span>
+              {activeLang.code === lang.code && (
+                <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#c9a84c]" />
+              )}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ── CATEGORY PROFILE ROW ──────────────────────────────────────────────────────
+function CategoryProfileRow({
+  title,
+  celebs,
+}: {
+  title: string
+  celebs: Celebrity[]
+}) {
+  if (celebs.length === 0) return null
+  return (
+    <div className="mb-10">
+      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-5">{title}</p>
+      <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-1">
+        {celebs.slice(0, 10).map(celeb => (
+          <Link
+            key={celeb.id}
+            to={`/celebrities/${celeb.id}`}
+            className="flex flex-col items-center gap-2.5 flex-shrink-0 group"
+          >
+            <div
+              className="w-[72px] h-[72px] rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#c9a84c]/60 transition-all duration-300 shadow-lg"
+            >
+              <img
+                src={getAvatar(celeb)}
+                alt={celeb.name}
+                className="w-full h-full object-cover object-top transition-all duration-300"
+                onError={e => {
+                  (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=72`
+                }}
+              />
+            </div>
+            <div className="text-center">
+              <span className="text-[10px] text-gray-400 group-hover:text-white transition-colors text-center w-20 leading-tight block">
+                {celeb.name}
+              </span>
+              <span className="text-[10px] block mt-0.5" style={{ color: '#c9a84c' }}>
+                {formatNetWorth(celeb.netWorth)}
+              </span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default function HomePage() {
+  const navigate = useNavigate()
+  const { t } = useLang()
+  const [search, setSearch] = useState('')
+  const [activeCategory, setActiveCategory] = useState<Category>('All')
+  const [activeAssetType, setActiveAssetType] = useState<AssetType | 'All'>('All')
+  const [searchFocused, setSearchFocused] = useState(false)
+  const searchRef = useRef<HTMLDivElement>(null)
 
   const filteredCelebs = useMemo(() => {
     let list = [...celebrities]
@@ -237,7 +296,6 @@ export default function HomePage() {
     return list
   }, [search, activeCategory])
 
-  // Live search results (top 6 matches by name)
   const searchResults = useMemo(() => {
     if (!search.trim()) return []
     const q = search.toLowerCase()
@@ -252,18 +310,19 @@ export default function HomePage() {
 
   const trendingCelebs = celebrities.filter(c => c.trending).slice(0, 16)
 
+  // Asset feed: top 20 most expensive assets
   const allFeedItems: FeedItem[] = useMemo(
     () =>
       filteredCelebs
         .flatMap(c => c.assets.map(a => ({ ...a, ownerName: c.name, ownerId: c.id })))
-        .sort((a, b) => b.likes - a.likes),
+        .sort((a, b) => b.estimatedValue - a.estimatedValue),
     [filteredCelebs]
   )
 
-  const assetFeed = useMemo(
-    () => activeAssetType === 'All' ? allFeedItems : allFeedItems.filter(a => a.type === activeAssetType),
-    [allFeedItems, activeAssetType]
-  )
+  const assetFeed = useMemo(() => {
+    const filtered = activeAssetType === 'All' ? allFeedItems : allFeedItems.filter(a => a.type === activeAssetType)
+    return filtered.slice(0, 20)
+  }, [allFeedItems, activeAssetType])
 
   const assetTypeCounts = useMemo(() => {
     const counts: Partial<Record<AssetType, number>> = {}
@@ -278,6 +337,14 @@ export default function HomePage() {
     [assetTypeCounts]
   )
 
+  // Category profile sections
+  const athleteCelebs = useMemo(() => celebrities.filter(c => c.category === 'Athletes').slice(0, 10), [])
+  const actorCelebs = useMemo(() => celebrities.filter(c => c.category === 'Actors').slice(0, 10), [])
+  const musicianCelebs = useMemo(() => celebrities.filter(c => c.category === 'Musicians').slice(0, 10), [])
+  const politicianCelebs = useMemo(() => celebrities.filter(c => c.category === 'Politicians').slice(0, 10), [])
+  const entrepreneurCelebs = useMemo(() => celebrities.filter(c => c.category === 'Entrepreneurs').slice(0, 10), [])
+  const modelCelebs = useMemo(() => celebrities.filter(c => c.category === 'Models').slice(0, 10), [])
+
   const showTrending = !search && activeCategory === 'All'
   const showSearchDropdown = searchFocused && search.trim().length > 0
 
@@ -287,56 +354,22 @@ export default function HomePage() {
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="flex items-center justify-between px-6 py-3.5 border-b border-white/8 bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40">
         <WealthLogo />
-
-        {/* Right actions */}
         <div className="flex items-center gap-2">
           <NotificationBell />
-
-        {/* Language selector */}
-        <div ref={langRef} className="relative">
-          <button
-            onClick={() => setLangOpen(v => !v)}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 text-xs text-gray-400 hover:border-white/20 hover:text-gray-200 transition-all"
-          >
-            <span className="text-base leading-none">{activeLang.flag}</span>
-            <span className="tracking-wide hidden sm:inline">{activeLang.label}</span>
-            <ChevronDown size={11} className={`transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
-          </button>
-
-          {langOpen && (
-            <div className="absolute right-0 top-full mt-2 w-44 bg-[#141414] border border-white/10 rounded-xl overflow-hidden shadow-2xl z-50">
-              {LANGUAGES.map(lang => (
-                <button
-                  key={lang.code}
-                  onClick={() => { setActiveLang(lang); setLangOpen(false) }}
-                  className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors ${
-                    activeLang.code === lang.code
-                      ? 'bg-[#c9a84c]/10 text-[#c9a84c]'
-                      : 'text-gray-400 hover:bg-white/5 hover:text-white'
-                  }`}
-                >
-                  <span className="text-base">{lang.flag}</span>
-                  <span>{lang.label}</span>
-                  {activeLang.code === lang.code && (
-                    <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#c9a84c]" />
-                  )}
-                </button>
-              ))}
-            </div>
-          )}
+          <LanguageSelector />
         </div>
-        </div>{/* end right actions */}
       </header>
 
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section className="text-center px-5 pt-20 pb-14 max-w-3xl mx-auto">
         <div className="flex justify-center mb-6">
-          <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-40">
-            <path d="M16 1L22.5 3.5L28.5 9L31 16L28.5 23L22.5 28.5L16 31L9.5 28.5L3.5 23L1 16L3.5 9L9.5 3.5Z" stroke="#c9a84c" strokeWidth="0.8" fill="none" />
-            <path d="M16 5L22 12L16 27L10 12Z" fill="none" stroke="#c9a84c" strokeWidth="0.9" />
-            <line x1="9" y1="13.5" x2="23" y2="13.5" stroke="#c9a84c" strokeWidth="0.8" />
-            <path d="M10 8L13 13.5M22 8L19 13.5M16 6V13.5" stroke="#c9a84c" strokeWidth="0.9" strokeLinecap="round" />
-            <circle cx="16" cy="13.5" r="1.2" fill="#c9a84c" />
+          <svg width="52" height="52" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-50">
+            <rect x="4" y="22" width="24" height="4" rx="1.2" fill="#c9a84c" opacity="0.95"/>
+            <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22Z" fill="#c9a84c" opacity="0.15"/>
+            <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22" stroke="#c9a84c" strokeWidth="1.6" strokeLinejoin="round" fill="none"/>
+            <circle cx="16" cy="6.5" r="2.1" fill="#c9a84c"/>
+            <circle cx="6" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
+            <circle cx="26" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
           </svg>
         </div>
         <h1
@@ -346,8 +379,7 @@ export default function HomePage() {
           Wealth Explorer
         </h1>
         <p className="text-gray-500 text-lg leading-relaxed mb-10">
-          Explore verified yachts, jets, watches, and estates<br className="hidden sm:block" />
-          owned by the world's most notable individuals.
+          {t('heroSubtitle')}
         </p>
 
         {/* Search */}
@@ -359,7 +391,7 @@ export default function HomePage() {
             onChange={e => setSearch(e.target.value)}
             onFocus={() => setSearchFocused(true)}
             onBlur={() => setTimeout(() => setSearchFocused(false), 150)}
-            placeholder="Search a public figure, category or asset..."
+            placeholder={t('searchPlaceholder')}
             className="w-full bg-[#161616] border border-white/12 rounded-2xl pl-12 pr-10 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-[#c9a84c]/40 text-sm transition-all"
           />
           {search && (
@@ -444,7 +476,7 @@ export default function HomePage() {
       {showTrending && (
         <section className="px-5 pb-16 max-w-5xl mx-auto">
           <p className="text-center text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase mb-8">
-            Trending Profiles
+            {t('trendingProfiles')}
           </p>
           <div className="grid grid-cols-4 sm:grid-cols-8 gap-x-4 gap-y-7">
             {trendingCelebs.map(celeb => (
@@ -453,11 +485,12 @@ export default function HomePage() {
                 to={`/celebrities/${celeb.id}`}
                 className="flex flex-col items-center gap-2 group"
               >
+                {/* Always in color */}
                 <div className="w-14 h-14 sm:w-[68px] sm:h-[68px] rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#c9a84c]/60 transition-all duration-300 shadow-lg">
                   <img
                     src={getAvatar(celeb)}
                     alt={celeb.name}
-                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover object-top transition-all duration-300"
                     onError={e => {
                       (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=72`
                     }}
@@ -469,6 +502,18 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </section>
+      )}
+
+      {/* ── CATEGORY PROFILE SECTIONS (shown when "All" selected, no search) ── */}
+      {showTrending && (
+        <section className="max-w-5xl mx-auto px-5 pb-8">
+          <CategoryProfileRow title={t('featuredAthletes')} celebs={athleteCelebs} />
+          <CategoryProfileRow title={t('featuredActors')} celebs={actorCelebs} />
+          <CategoryProfileRow title={t('featuredMusicians')} celebs={musicianCelebs} />
+          <CategoryProfileRow title={t('featuredPoliticians')} celebs={politicianCelebs} />
+          <CategoryProfileRow title={t('featuredEntrepreneurs')} celebs={entrepreneurCelebs} />
+          <CategoryProfileRow title={t('featuredModels')} celebs={modelCelebs} />
         </section>
       )}
 
@@ -487,11 +532,18 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* ── ASSET FEED ──────────────────────────────────────────── */}
+      {/* ── ASSET FEED — top 20 most expensive ──────────────────── */}
       <section className="max-w-5xl mx-auto px-5 pb-16">
-        <p className="text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase mb-6 text-center">
-          {showTrending ? 'Featured Assets' : `Assets · ${filteredCelebs.length} profiles`}
-        </p>
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <p className="text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase text-center">
+            {showTrending ? t('featuredAssets') : `${t('assets')} · ${filteredCelebs.length} profiles`}
+          </p>
+          {showTrending && (
+            <span className="text-[10px] px-2.5 py-1 rounded-full bg-[#c9a84c]/10 text-[#c9a84c] border border-[#c9a84c]/20 font-medium">
+              Top 20
+            </span>
+          )}
+        </div>
 
         {/* Asset type filter tabs */}
         <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide pb-4 mb-6 justify-center flex-wrap">
@@ -503,9 +555,9 @@ export default function HomePage() {
                 : 'text-gray-500 hover:text-gray-300'
             }`}
           >
-            All Assets
+            {t('allAssets')}
             <span className={`text-[11px] font-semibold px-1.5 py-0.5 rounded-full ${activeAssetType === 'All' ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
-              {allFeedItems.length}
+              {Math.min(allFeedItems.length, 20)}
             </span>
           </button>
           {presentAssetTypes.map(type => (
@@ -528,7 +580,7 @@ export default function HomePage() {
         </div>
 
         {assetFeed.length === 0 ? (
-          <div className="text-center py-24 text-gray-700">No results found</div>
+          <div className="text-center py-24 text-gray-700">{t('noResults')}</div>
         ) : (
           <div
             className="grid gap-px"
