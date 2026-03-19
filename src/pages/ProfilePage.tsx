@@ -538,14 +538,15 @@ export default function ProfilePage() {
 
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8">
-        <div className="max-w-3xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
-          <button
-            onClick={() => navigate('/')}
+        <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
+          <Link
+            to="/"
+            onClick={() => window.scrollTo(0, 0)}
             className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-colors group flex-shrink-0"
           >
             <ArrowLeft size={15} className="group-hover:-translate-x-0.5 transition-transform" />
-            <Link to="/"><WealthLogoSmall /></Link>
-          </button>
+            <WealthLogoSmall />
+          </Link>
 
           <div className="flex items-center gap-3">
             <NotificationBell />
@@ -734,7 +735,7 @@ export default function ProfilePage() {
       {/* ── DID WE MAKE A MISTAKE? ──────────────────────────────── */}
       <section className="pt-6 pb-10">
         <div className="max-w-5xl mx-auto px-5 flex flex-col gap-4">
-          <div className="rounded-2xl bg-[#111] border border-white/8 px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+          <div className="rounded-2xl bg-[#111] border border-[#2a2a2a] px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
             <div>
               <p className="text-base font-normal text-white mb-1" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                 {t('didWeMistake')}
@@ -745,24 +746,12 @@ export default function ProfilePage() {
             </div>
             <a
               href={`mailto:corrections@wealthexplorer.com?subject=Correction for ${encodeURIComponent(celeb.name)}`}
-              className="flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium border border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/10 transition-colors"
+              className="self-center sm:flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium border border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/10 transition-colors"
             >
               {t('submitSuggestion')}
             </a>
           </div>
 
-          {/* Back to home */}
-          <div className="flex justify-center pt-2">
-            <Link
-              to="/"
-              className="flex items-center gap-3 px-6 py-3 rounded-full border border-white/10 hover:border-[#c9a84c]/40 transition-all duration-200 group"
-            >
-              <DiamondSVG size={20} />
-              <span className="text-sm text-gray-400 group-hover:text-[#c9a84c] transition-colors" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-                Wealth Explorer
-              </span>
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -772,7 +761,7 @@ export default function ProfilePage() {
 
           {/* Logo */}
           <div className="flex justify-center mb-5">
-            <Link to="/"><WealthLogoSmall /></Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}><WealthLogoSmall /></Link>
           </div>
 
           {/* Tagline */}

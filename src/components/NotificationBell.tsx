@@ -98,7 +98,7 @@ export default function NotificationBell() {
           <BellOff size={15} />
         </button>
         {open && (
-          <div className="absolute right-0 top-full mt-2 w-72 bg-[#141414] border border-white/10 rounded-2xl shadow-2xl z-50 p-6 text-center">
+          <div className="absolute right-0 top-full mt-2 w-72 max-w-[calc(100vw-1rem)] bg-[#141414] border border-white/10 rounded-2xl shadow-2xl z-50 p-6 text-center">
             <BellOff size={26} className="text-gray-700 mx-auto mb-3" />
             <p className="text-xs font-medium text-gray-400 mb-1">No followed profiles</p>
             <p className="text-[11px] text-gray-600 leading-relaxed">
@@ -127,7 +127,7 @@ export default function NotificationBell() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-80 bg-[#141414] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-50">
+        <div className="absolute right-0 top-full mt-2 w-80 max-w-[calc(100vw-1rem)] bg-[#141414] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-50">
 
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-white/8">
