@@ -31,19 +31,30 @@ function saveFollowed(ids: Set<string>) {
   localStorage.setItem(FOLLOWS_KEY, JSON.stringify([...ids]))
 }
 
-// ── DIAMOND-W LOGO (small) ────────────────────────────────────────────────────
+// ── GEM-CUT DIAMOND LOGO ─────────────────────────────────────────────────────
+function DiamondSVG({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2 L36 16 L4 16 Z" fill="rgba(201,168,76,0.18)" stroke="#c9a84c" strokeWidth="1.5" strokeLinejoin="round"/>
+      <line x1="20" y1="2" x2="20" y2="16" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
+      <line x1="20" y1="2" x2="11" y2="16" stroke="#c9a84c" strokeWidth="0.5" opacity="0.35"/>
+      <line x1="20" y1="2" x2="29" y2="16" stroke="#c9a84c" strokeWidth="0.5" opacity="0.35"/>
+      <rect x="4" y="15.5" width="32" height="2.5" fill="rgba(201,168,76,0.35)" rx="0.5"/>
+      <path d="M4 18 L36 18 L20 42 Z" fill="rgba(201,168,76,0.09)" stroke="#c9a84c" strokeWidth="1.5" strokeLinejoin="round"/>
+      <line x1="20" y1="18" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
+      <line x1="12" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="28" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="4" y1="18" x2="12" y2="26" stroke="#c9a84c" strokeWidth="0.4" opacity="0.3"/>
+      <line x1="36" y1="18" x2="28" y2="26" stroke="#c9a84c" strokeWidth="0.4" opacity="0.3"/>
+      <path d="M10.5 8 L13.5 15 L20 9.5 L26.5 15 L29.5 8" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+    </svg>
+  )
+}
+
 function WealthLogoSmall() {
   return (
     <div className="flex items-center gap-2">
-      <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 2 L34 18 L18 34 L2 18 Z" stroke="#c9a84c" strokeWidth="1.4" fill="rgba(201,168,76,0.05)"/>
-        <path d="M18 7 L29 18 L18 29 L7 18 Z" stroke="#c9a84c" strokeWidth="0.6" strokeDasharray="2 2" fill="none" opacity="0.4"/>
-        <circle cx="18" cy="2.5" r="1.5" fill="#c9a84c"/>
-        <circle cx="33.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
-        <circle cx="18" cy="33.5" r="1.2" fill="#c9a84c" opacity="0.6"/>
-        <circle cx="2.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
-        <path d="M10 13 L13 23 L18 16 L23 23 L26 13" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-      </svg>
+      <DiamondSVG size={26} />
       <span className="font-serif text-base" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}>
         Wealth Explorer
       </span>
@@ -65,7 +76,7 @@ function ScrollToTopButton() {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Scroll to top"
-      className={`sm:hidden fixed bottom-6 right-5 z-50 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${
+      className={`fixed bottom-6 right-5 z-50 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${
         visible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
       style={{ background: 'rgba(10,10,10,0.85)', border: '1px solid rgba(201,168,76,0.45)', backdropFilter: 'blur(10px)', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
@@ -532,6 +543,8 @@ export default function ProfilePage() {
     else next.add(celeb!.id)
     setFollowed(next)
     saveFollowed(next)
+    // Notify NotificationBell in same tab
+    window.dispatchEvent(new Event('we_follow_change'))
   }
 
   return (
@@ -758,10 +771,7 @@ export default function ProfilePage() {
               to="/"
               className="flex items-center gap-3 px-6 py-3 rounded-full border border-white/10 hover:border-[#c9a84c]/40 transition-all duration-200 group"
             >
-              <svg width="18" height="18" viewBox="0 0 36 36" fill="none">
-                <path d="M18 2 L34 18 L18 34 L2 18 Z" stroke="#c9a84c" strokeWidth="1.4" fill="rgba(201,168,76,0.05)"/>
-                <path d="M10 13 L13 23 L18 16 L23 23 L26 13" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              </svg>
+              <DiamondSVG size={20} />
               <span className="text-sm text-gray-400 group-hover:text-[#c9a84c] transition-colors" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                 Wealth Explorer
               </span>

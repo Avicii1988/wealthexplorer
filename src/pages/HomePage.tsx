@@ -108,7 +108,11 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                   const hasNewAsset = celeb.assets.some(a => a.isNew)
                   return (
                     <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
-                      <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-gray-600 transition-all duration-300 group-hover:bg-[#141414] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2.5">
+                      <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2.5">
+                        {/* Gold shimmer overlay on hover */}
+                        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                          style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
+                        />
                         {hasNewAsset && (
                           <div className="absolute top-2 right-2 flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-[#c9a84c] shadow-lg z-10">
                             <span className="w-1 h-1 rounded-full bg-[#0a0a0a] animate-pulse" />
@@ -161,23 +165,39 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   )
 }
 
-// ── DIAMOND-W LOGO ────────────────────────────────────────────────────────────
+// ── GEM-CUT DIAMOND LOGO ─────────────────────────────────────────────────────
+function DiamondSVG({ size = 36 }: { size?: number }) {
+  // Gem-cut diamond: crown (top) + girdle band + pavilion (bottom point)
+  const s = size
+  return (
+    <svg width={s} height={s} viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* === CROWN (top trapezoid section) === */}
+      {/* Main crown face — large centre facet */}
+      <path d="M20 2 L36 16 L4 16 Z" fill="rgba(201,168,76,0.18)" stroke="#c9a84c" strokeWidth="1.5" strokeLinejoin="round"/>
+      {/* Crown facet lines */}
+      <line x1="20" y1="2" x2="20" y2="16" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
+      <line x1="20" y1="2" x2="11" y2="16" stroke="#c9a84c" strokeWidth="0.5" opacity="0.35"/>
+      <line x1="20" y1="2" x2="29" y2="16" stroke="#c9a84c" strokeWidth="0.5" opacity="0.35"/>
+      {/* === GIRDLE (horizontal dividing band) === */}
+      <rect x="4" y="15.5" width="32" height="2.5" fill="rgba(201,168,76,0.35)" rx="0.5"/>
+      {/* === PAVILION (bottom triangle, pointed) === */}
+      <path d="M4 18 L36 18 L20 42 Z" fill="rgba(201,168,76,0.09)" stroke="#c9a84c" strokeWidth="1.5" strokeLinejoin="round"/>
+      {/* Pavilion facet lines */}
+      <line x1="20" y1="18" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
+      <line x1="12" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="28" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="4" y1="18" x2="12" y2="26" stroke="#c9a84c" strokeWidth="0.4" opacity="0.3"/>
+      <line x1="36" y1="18" x2="28" y2="26" stroke="#c9a84c" strokeWidth="0.4" opacity="0.3"/>
+      {/* === W centred in crown === */}
+      <path d="M10.5 8 L13.5 15 L20 9.5 L26.5 15 L29.5 8" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+    </svg>
+  )
+}
+
 function WealthLogo() {
   return (
     <div className="flex items-center gap-3">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Outer diamond frame */}
-        <path d="M18 2 L34 18 L18 34 L2 18 Z" stroke="#c9a84c" strokeWidth="1.4" fill="rgba(201,168,76,0.05)"/>
-        {/* Inner diamond accent */}
-        <path d="M18 7 L29 18 L18 29 L7 18 Z" stroke="#c9a84c" strokeWidth="0.6" strokeDasharray="2 2" fill="none" opacity="0.4"/>
-        {/* Corner jewels */}
-        <circle cx="18" cy="2.5" r="1.5" fill="#c9a84c"/>
-        <circle cx="33.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
-        <circle cx="18" cy="33.5" r="1.2" fill="#c9a84c" opacity="0.6"/>
-        <circle cx="2.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
-        {/* Elegant W letterform */}
-        <path d="M10 13 L13 23 L18 16 L23 23 L26 13" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-      </svg>
+      <DiamondSVG size={38} />
       <span
         className="text-[17px] font-normal tracking-wide"
         style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
@@ -276,7 +296,7 @@ function ScrollToTopButton() {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Scroll to top"
-      className={`sm:hidden fixed bottom-6 right-5 z-50 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${
+      className={`fixed bottom-6 right-5 z-50 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${
         visible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
       style={{ background: 'rgba(10,10,10,0.85)', border: '1px solid rgba(201,168,76,0.45)', backdropFilter: 'blur(10px)', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
@@ -379,16 +399,8 @@ export default function HomePage() {
 
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section className="text-center px-5 pt-20 pb-14 max-w-3xl mx-auto">
-        <div className="flex justify-center mb-6">
-          <svg width="60" height="60" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-40">
-            <path d="M18 2 L34 18 L18 34 L2 18 Z" stroke="#c9a84c" strokeWidth="1.4" fill="rgba(201,168,76,0.05)"/>
-            <path d="M18 7 L29 18 L18 29 L7 18 Z" stroke="#c9a84c" strokeWidth="0.6" strokeDasharray="2 2" fill="none" opacity="0.4"/>
-            <circle cx="18" cy="2.5" r="1.5" fill="#c9a84c"/>
-            <circle cx="33.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
-            <circle cx="18" cy="33.5" r="1.2" fill="#c9a84c" opacity="0.6"/>
-            <circle cx="2.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
-            <path d="M10 13 L13 23 L18 16 L23 23 L26 13" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-          </svg>
+        <div className="flex justify-center mb-6 opacity-45">
+          <DiamondSVG size={64} />
         </div>
         <h1
           className="text-6xl sm:text-7xl font-semibold text-white mb-5 leading-tight"

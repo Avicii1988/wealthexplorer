@@ -13,8 +13,8 @@ export interface ExtraCelebrity {
   avatar: string; coverImage: string; nationality: string; bio: string
   assets: ExtraAsset[]; trending: boolean; birthdate: string; birthplace: string
   gender: 'Male'|'Female'; height: string; profession: string; photos: string[]
-  relationships?: { parents?: string[]; spouse?: string; partner?: string; siblings?: string[]; children?: string[] }
-  gossip?: { title: string; summary: string }[]
+  relationships?: { parents?: string[]; spouse?: string; partner?: string; siblings?: string[]; children?: string[]; exSpouse?: string[]; exPartner?: string[]; fiancé?: string }
+  gossip?: { title: string; summary: string; type?: 'gossip'|'controversy'; date?: string }[]
 }
 
 const CI: Record<ExtraCat, string> = {
