@@ -171,25 +171,20 @@ function DiamondSVG({ size = 36 }: { size?: number }) {
   const s = size
   return (
     <svg width={s} height={s} viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* === CROWN (top trapezoid section) === */}
-      {/* Main crown face — large centre facet */}
-      <path d="M20 2 L36 16 L4 16 Z" fill="rgba(201,168,76,0.18)" stroke="#c9a84c" strokeWidth="1.5" strokeLinejoin="round"/>
-      {/* Crown facet lines */}
-      <line x1="20" y1="2" x2="20" y2="16" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
-      <line x1="20" y1="2" x2="11" y2="16" stroke="#c9a84c" strokeWidth="0.5" opacity="0.35"/>
-      <line x1="20" y1="2" x2="29" y2="16" stroke="#c9a84c" strokeWidth="0.5" opacity="0.35"/>
-      {/* === GIRDLE (horizontal dividing band) === */}
-      <rect x="4" y="15.5" width="32" height="2.5" fill="rgba(201,168,76,0.35)" rx="0.5"/>
-      {/* === PAVILION (bottom triangle, pointed) === */}
-      <path d="M4 18 L36 18 L20 42 Z" fill="rgba(201,168,76,0.09)" stroke="#c9a84c" strokeWidth="1.5" strokeLinejoin="round"/>
-      {/* Pavilion facet lines */}
-      <line x1="20" y1="18" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
-      <line x1="12" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="28" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="4" y1="18" x2="12" y2="26" stroke="#c9a84c" strokeWidth="0.4" opacity="0.3"/>
-      <line x1="36" y1="18" x2="28" y2="26" stroke="#c9a84c" strokeWidth="0.4" opacity="0.3"/>
-      {/* === W centred in crown === */}
-      <path d="M10.5 8 L13.5 15 L20 9.5 L26.5 15 L29.5 8" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      {/* === CROWN === */}
+      <path d="M20 2 L36 16 L4 16 Z" fill="rgba(201,168,76,0.38)" stroke="#c9a84c" strokeWidth="2" strokeLinejoin="round"/>
+      <line x1="20" y1="2" x2="20" y2="16" stroke="#c9a84c" strokeWidth="1" opacity="0.7"/>
+      <line x1="20" y1="2" x2="11" y2="16" stroke="#c9a84c" strokeWidth="0.8" opacity="0.55"/>
+      <line x1="20" y1="2" x2="29" y2="16" stroke="#c9a84c" strokeWidth="0.8" opacity="0.55"/>
+      {/* === GIRDLE === */}
+      <rect x="4" y="15.5" width="32" height="2.5" fill="rgba(201,168,76,0.65)" rx="0.5"/>
+      {/* === PAVILION === */}
+      <path d="M4 18 L36 18 L20 42 Z" fill="rgba(201,168,76,0.22)" stroke="#c9a84c" strokeWidth="2" strokeLinejoin="round"/>
+      <line x1="20" y1="18" x2="20" y2="42" stroke="#c9a84c" strokeWidth="1" opacity="0.65"/>
+      <line x1="12" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
+      <line x1="28" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
+      <line x1="4" y1="18" x2="12" y2="26" stroke="#c9a84c" strokeWidth="0.6" opacity="0.45"/>
+      <line x1="36" y1="18" x2="28" y2="26" stroke="#c9a84c" strokeWidth="0.6" opacity="0.45"/>
     </svg>
   )
 }
@@ -389,11 +384,13 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#0a0a0a] text-white">
 
       {/* ── HEADER ──────────────────────────────────────────────── */}
-      <header className="flex items-center justify-between px-6 py-3.5 border-b border-white/8 bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40">
-        <Link to="/"><WealthLogo /></Link>
-        <div className="flex items-center gap-2">
-          <NotificationBell />
-          <LanguageSelector />
+      <header className="border-b border-white/8 bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40">
+        <div className="max-w-3xl mx-auto px-6 py-3.5 flex items-center justify-between">
+          <Link to="/"><WealthLogo /></Link>
+          <div className="flex items-center gap-2">
+            <NotificationBell />
+            <LanguageSelector />
+          </div>
         </div>
       </header>
 

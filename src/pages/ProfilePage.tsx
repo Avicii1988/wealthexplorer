@@ -35,18 +35,17 @@ function saveFollowed(ids: Set<string>) {
 function DiamondSVG({ size = 28 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 2 L36 16 L4 16 Z" fill="rgba(201,168,76,0.18)" stroke="#c9a84c" strokeWidth="1.5" strokeLinejoin="round"/>
-      <line x1="20" y1="2" x2="20" y2="16" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
-      <line x1="20" y1="2" x2="11" y2="16" stroke="#c9a84c" strokeWidth="0.5" opacity="0.35"/>
-      <line x1="20" y1="2" x2="29" y2="16" stroke="#c9a84c" strokeWidth="0.5" opacity="0.35"/>
-      <rect x="4" y="15.5" width="32" height="2.5" fill="rgba(201,168,76,0.35)" rx="0.5"/>
-      <path d="M4 18 L36 18 L20 42 Z" fill="rgba(201,168,76,0.09)" stroke="#c9a84c" strokeWidth="1.5" strokeLinejoin="round"/>
-      <line x1="20" y1="18" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
-      <line x1="12" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="28" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="4" y1="18" x2="12" y2="26" stroke="#c9a84c" strokeWidth="0.4" opacity="0.3"/>
-      <line x1="36" y1="18" x2="28" y2="26" stroke="#c9a84c" strokeWidth="0.4" opacity="0.3"/>
-      <path d="M10.5 8 L13.5 15 L20 9.5 L26.5 15 L29.5 8" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      <path d="M20 2 L36 16 L4 16 Z" fill="rgba(201,168,76,0.38)" stroke="#c9a84c" strokeWidth="2" strokeLinejoin="round"/>
+      <line x1="20" y1="2" x2="20" y2="16" stroke="#c9a84c" strokeWidth="1" opacity="0.7"/>
+      <line x1="20" y1="2" x2="11" y2="16" stroke="#c9a84c" strokeWidth="0.8" opacity="0.55"/>
+      <line x1="20" y1="2" x2="29" y2="16" stroke="#c9a84c" strokeWidth="0.8" opacity="0.55"/>
+      <rect x="4" y="15.5" width="32" height="2.5" fill="rgba(201,168,76,0.65)" rx="0.5"/>
+      <path d="M4 18 L36 18 L20 42 Z" fill="rgba(201,168,76,0.22)" stroke="#c9a84c" strokeWidth="2" strokeLinejoin="round"/>
+      <line x1="20" y1="18" x2="20" y2="42" stroke="#c9a84c" strokeWidth="1" opacity="0.65"/>
+      <line x1="12" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
+      <line x1="28" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
+      <line x1="4" y1="18" x2="12" y2="26" stroke="#c9a84c" strokeWidth="0.6" opacity="0.45"/>
+      <line x1="36" y1="18" x2="28" y2="26" stroke="#c9a84c" strokeWidth="0.6" opacity="0.45"/>
     </svg>
   )
 }
@@ -539,7 +538,7 @@ export default function ProfilePage() {
 
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8">
-        <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
+        <div className="max-w-3xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
           <button
             onClick={() => navigate('/')}
             className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-colors group flex-shrink-0"
@@ -588,7 +587,7 @@ export default function ProfilePage() {
           <img
             src={celeb.coverImage}
             alt=""
-            className="w-full h-full object-cover opacity-10 blur-sm scale-105"
+            className="w-full h-full object-cover opacity-25 blur-sm scale-105"
             aria-hidden
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-[#0a0a0a]/80 to-[#0a0a0a]" />
@@ -768,48 +767,50 @@ export default function ProfilePage() {
       </section>
 
       {/* ── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="border-t border-white/8 py-10 px-5">
-        <div className="max-w-5xl mx-auto">
-          {/* Top row */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-8">
+      <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+        <div className="max-w-2xl mx-auto text-center">
+
+          {/* Logo */}
+          <div className="flex justify-center mb-5">
             <Link to="/"><WealthLogoSmall /></Link>
-            <nav className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              {[
-                { label: 'Home', to: '/' },
-                { label: 'Trending', to: '/' },
-                { label: 'About', to: '/' },
-                { label: 'Contact', to: '/' },
-              ].map(link => (
-                <Link key={link.label} to={link.to} className="text-xs text-gray-500 hover:text-white transition-colors">
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
           </div>
+
+          {/* Tagline */}
+          <p className="text-[11px] text-gray-700 mb-6 tracking-wide">
+            Data updated daily from public sources
+          </p>
+
+          {/* Thin gold divider */}
+          <div className="w-12 h-px mx-auto mb-6" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.35), transparent)' }} />
 
           {/* Disclaimer */}
-          <div className="flex items-start gap-3 mb-6 max-w-3xl">
-            <div className="flex-shrink-0 mt-0.5 w-4 h-4 rounded-full border border-[#c9a84c]/25 flex items-center justify-center">
-              <span className="text-[8px] font-bold" style={{ color: 'rgba(201,168,76,0.5)' }}>i</span>
-            </div>
-            <p className="text-[11px] text-gray-700 leading-relaxed">
-              All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth figures are estimates only.{' '}
-              <span className="text-gray-600">Gossip &amp; controversy sections are compiled from publicly circulating news — not independently verified.</span>{' '}
-              For informational purposes only · Not financial advice.
-            </p>
-          </div>
+          <p className="text-[11px] text-gray-700 leading-relaxed mb-6 max-w-xl mx-auto">
+            All data sourced from public reports (Forbes, Celebrity News, Bloomberg, etc.). Net worth estimates are approximate and may vary.
+            Gossip and controversies based on public news; not verified. Images from public domain or fair-use sources.
+            For informational purposes only — not financial advice.
+          </p>
 
-          {/* Bottom row */}
-          <div className="border-t border-white/5 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-[11px] text-gray-700">© 2026 Wealth Explorer · All rights reserved</p>
-            <div className="flex items-center gap-5">
-              {['Privacy Policy', 'Terms of Use', 'Corrections'].map(item => (
-                <Link key={item} to="/" className="text-[11px] text-gray-600 hover:text-gray-400 transition-colors">
-                  {item}
+          {/* Nav links */}
+          <nav className="flex items-center justify-center flex-wrap gap-x-5 gap-y-2 mb-7">
+            {[
+              { label: 'About Us', to: '/' },
+              { label: 'Privacy Policy', to: '/' },
+              { label: 'Contact', to: '/' },
+              { label: 'Terms of Use', to: '/' },
+            ].map((link, i, arr) => (
+              <span key={link.label} className="flex items-center gap-5">
+                <Link to={link.to} className="text-[11px] text-gray-600 hover:text-[#c9a84c] transition-colors">
+                  {link.label}
                 </Link>
-              ))}
-            </div>
-          </div>
+                {i < arr.length - 1 && <span className="text-gray-800 text-[11px]">|</span>}
+              </span>
+            ))}
+          </nav>
+
+          {/* Copyright */}
+          <p className="text-[10px] text-gray-800 tracking-wide">
+            © 2026 Wealth Explorer
+          </p>
         </div>
       </footer>
 
