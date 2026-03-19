@@ -385,8 +385,8 @@ export default function HomePage() {
 
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="border-b border-white/8 bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40">
-        <div className="max-w-3xl mx-auto px-6 py-3.5 flex items-center justify-between">
-          <Link to="/"><WealthLogo /></Link>
+        <div className="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between">
+          <Link to="/" onClick={() => window.scrollTo(0, 0)}><WealthLogo /></Link>
           <div className="flex items-center gap-2">
             <NotificationBell />
             <LanguageSelector />
@@ -635,7 +635,7 @@ export default function HomePage() {
 
           {/* Logo */}
           <div className="flex justify-center mb-5">
-            <Link to="/"><WealthLogo /></Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}><WealthLogo /></Link>
           </div>
 
           {/* Tagline */}
