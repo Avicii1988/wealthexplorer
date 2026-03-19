@@ -34,27 +34,40 @@ function saveFollowed(ids: Set<string>) {
 // ── GEM-CUT DIAMOND LOGO ─────────────────────────────────────────────────────
 function DiamondSVG({ size = 28 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 2 L36 16 L4 16 Z" fill="rgba(201,168,76,0.38)" stroke="#c9a84c" strokeWidth="2" strokeLinejoin="round"/>
-      <line x1="20" y1="2" x2="20" y2="16" stroke="#c9a84c" strokeWidth="1" opacity="0.7"/>
-      <line x1="20" y1="2" x2="11" y2="16" stroke="#c9a84c" strokeWidth="0.8" opacity="0.55"/>
-      <line x1="20" y1="2" x2="29" y2="16" stroke="#c9a84c" strokeWidth="0.8" opacity="0.55"/>
-      <rect x="4" y="15.5" width="32" height="2.5" fill="rgba(201,168,76,0.65)" rx="0.5"/>
-      <path d="M4 18 L36 18 L20 42 Z" fill="rgba(201,168,76,0.22)" stroke="#c9a84c" strokeWidth="2" strokeLinejoin="round"/>
-      <line x1="20" y1="18" x2="20" y2="42" stroke="#c9a84c" strokeWidth="1" opacity="0.65"/>
-      <line x1="12" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
-      <line x1="28" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
-      <line x1="4" y1="18" x2="12" y2="26" stroke="#c9a84c" strokeWidth="0.6" opacity="0.45"/>
-      <line x1="36" y1="18" x2="28" y2="26" stroke="#c9a84c" strokeWidth="0.6" opacity="0.45"/>
+    <svg width={size} height={Math.round(size * 46 / 40)} viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* CROWN — four distinct facets with light/shadow depth */}
+      <path d="M20 2 L4 16 L12 16 Z"  fill="rgba(110,78,12,0.6)"   stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M20 2 L12 16 L20 16 Z" fill="rgba(201,168,76,0.55)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M20 2 L20 16 L28 16 Z" fill="rgba(245,217,128,0.6)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M20 2 L28 16 L36 16 Z" fill="rgba(110,78,12,0.55)"  stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      {/* Table highlight — shimmer on crown */}
+      <path d="M20 3 L15 9 L20 13 L25 9 Z" fill="rgba(255,248,200,0.22)"/>
+      {/* GIRDLE — bright gold band */}
+      <rect x="4" y="15.4" width="32" height="2.2" fill="rgba(201,168,76,0.75)"/>
+      <line x1="4" y1="15.4" x2="36" y2="15.4" stroke="rgba(245,220,120,0.9)" strokeWidth="0.5"/>
+      <line x1="4" y1="17.6" x2="36" y2="17.6" stroke="rgba(100,70,10,0.7)"  strokeWidth="0.5"/>
+      {/* PAVILION — four facets, darkens toward culet */}
+      <path d="M4 18 L12 18 L20 43 Z"  fill="rgba(80,55,8,0.7)"    stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M12 18 L20 18 L20 43 Z" fill="rgba(180,140,40,0.38)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M20 18 L28 18 L20 43 Z" fill="rgba(245,217,128,0.3)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M28 18 L36 18 L20 43 Z" fill="rgba(80,55,8,0.65)"   stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
     </svg>
   )
 }
 
 function WealthLogoSmall() {
   return (
-    <div className="flex items-center gap-2">
-      <DiamondSVG size={26} />
-      <span className="font-serif text-base" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}>
+    <div className="flex items-center gap-2.5">
+      <DiamondSVG size={24} />
+      <span style={{
+        fontFamily: "'Playfair Display', Georgia, serif",
+        color: '#c9a84c',
+        fontSize: '11px',
+        letterSpacing: '0.24em',
+        textTransform: 'uppercase' as const,
+        fontWeight: 400,
+        lineHeight: 1,
+      }}>
         Wealth Explorer
       </span>
     </div>
@@ -394,7 +407,8 @@ function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
 
   const assetTypes = Array.from(new Set(celeb.assets.map(a => a.type))) as AssetType[]
   const tabs: (AssetType | typeof ALL)[] = [ALL, ...assetTypes]
-  const filtered = activeType === ALL ? celeb.assets : celeb.assets.filter(a => a.type === activeType)
+  const filtered = (activeType === ALL ? celeb.assets : celeb.assets.filter(a => a.type === activeType))
+    .slice().sort((a, b) => b.estimatedValue - a.estimatedValue)
 
   return (
     <div className="rounded-2xl overflow-hidden bg-[#111]">
@@ -583,15 +597,9 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        {/* Desktop: blurred cover background */}
+        {/* Desktop: subtle dark gradient background */}
         <div className="hidden sm:block absolute inset-0">
-          <img
-            src={celeb.coverImage}
-            alt=""
-            className="w-full h-full object-cover opacity-25 blur-sm scale-105"
-            aria-hidden
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-[#0a0a0a]/80 to-[#0a0a0a]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#111]/60 via-[#0a0a0a]/90 to-[#0a0a0a]" />
         </div>
 
         {/* Content row (desktop: avatar + info side by side; mobile: just info) */}
@@ -693,38 +701,39 @@ export default function ProfilePage() {
         {celeb.assets.length > 0 && <AssetsSection celeb={celeb} />}
       </main>
 
-      {/* ── MORE PROFILES — square cards ────────────────────────── */}
-      <section className="py-12">
+      {/* ── MORE PROFILES — grid cards ───────────────────────────── */}
+      <section className="py-12 border-t border-white/8">
         <div className="max-w-5xl mx-auto px-5">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-6">{t('moreProfiles')}</p>
-          <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-2">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
             {[
               ...celebrities.filter(c => c.id !== celeb.id && c.category === celeb.category),
               ...celebrities.filter(c => c.id !== celeb.id && c.category !== celeb.category),
             ]
-              .slice(0, 16)
+              .slice(0, 24)
               .map(c => (
-                <Link
-                  key={c.id}
-                  to={`/celebrities/${c.id}`}
-                  className="flex-shrink-0 group"
-                  style={{ width: 100 }}
-                >
-                  {/* Square image */}
-                  <div className="relative overflow-hidden rounded-xl border border-[#c9a84c]/15 group-hover:border-[#c9a84c]/50 transition-all duration-300" style={{ aspectRatio: '1/1' }}>
-                    <img
-                      src={getAvatar(c)}
-                      alt={c.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      style={{ objectPosition: 'center 15%' }}
-                      onError={e => {
-                        (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=100`
-                      }}
+                <Link key={c.id} to={`/celebrities/${c.id}`} className="group">
+                  <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2.5">
+                    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                      style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <p className="absolute bottom-0 left-0 right-0 p-2 text-[10px] font-medium text-white leading-tight text-center">
-                      {c.name}
-                    </p>
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0">
+                      <img
+                        src={getAvatar(c)}
+                        alt={c.name}
+                        className="w-full h-full object-cover transition-all duration-500"
+                        style={{ objectPosition: 'center 15%' }}
+                        onError={e => {
+                          (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
+                        }}
+                      />
+                    </div>
+                    <div className="w-full">
+                      <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
+                        {c.name}
+                      </p>
+                      <p className="text-[10px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(c.netWorth)}</p>
+                    </div>
                   </div>
                 </Link>
               ))}

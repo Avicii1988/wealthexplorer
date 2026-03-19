@@ -167,24 +167,24 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
 // ── GEM-CUT DIAMOND LOGO ─────────────────────────────────────────────────────
 function DiamondSVG({ size = 36 }: { size?: number }) {
-  // Gem-cut diamond: crown (top) + girdle band + pavilion (bottom point)
-  const s = size
   return (
-    <svg width={s} height={s} viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* === CROWN === */}
-      <path d="M20 2 L36 16 L4 16 Z" fill="rgba(201,168,76,0.38)" stroke="#c9a84c" strokeWidth="2" strokeLinejoin="round"/>
-      <line x1="20" y1="2" x2="20" y2="16" stroke="#c9a84c" strokeWidth="1" opacity="0.7"/>
-      <line x1="20" y1="2" x2="11" y2="16" stroke="#c9a84c" strokeWidth="0.8" opacity="0.55"/>
-      <line x1="20" y1="2" x2="29" y2="16" stroke="#c9a84c" strokeWidth="0.8" opacity="0.55"/>
-      {/* === GIRDLE === */}
-      <rect x="4" y="15.5" width="32" height="2.5" fill="rgba(201,168,76,0.65)" rx="0.5"/>
-      {/* === PAVILION === */}
-      <path d="M4 18 L36 18 L20 42 Z" fill="rgba(201,168,76,0.22)" stroke="#c9a84c" strokeWidth="2" strokeLinejoin="round"/>
-      <line x1="20" y1="18" x2="20" y2="42" stroke="#c9a84c" strokeWidth="1" opacity="0.65"/>
-      <line x1="12" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
-      <line x1="28" y1="26" x2="20" y2="42" stroke="#c9a84c" strokeWidth="0.7" opacity="0.5"/>
-      <line x1="4" y1="18" x2="12" y2="26" stroke="#c9a84c" strokeWidth="0.6" opacity="0.45"/>
-      <line x1="36" y1="18" x2="28" y2="26" stroke="#c9a84c" strokeWidth="0.6" opacity="0.45"/>
+    <svg width={size} height={Math.round(size * 46 / 40)} viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* CROWN — four distinct facets with light/shadow depth */}
+      <path d="M20 2 L4 16 L12 16 Z"  fill="rgba(110,78,12,0.6)"   stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M20 2 L12 16 L20 16 Z" fill="rgba(201,168,76,0.55)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M20 2 L20 16 L28 16 Z" fill="rgba(245,217,128,0.6)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M20 2 L28 16 L36 16 Z" fill="rgba(110,78,12,0.55)"  stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      {/* Table highlight — shimmer on crown */}
+      <path d="M20 3 L15 9 L20 13 L25 9 Z" fill="rgba(255,248,200,0.22)"/>
+      {/* GIRDLE — bright gold band */}
+      <rect x="4" y="15.4" width="32" height="2.2" fill="rgba(201,168,76,0.75)"/>
+      <line x1="4" y1="15.4" x2="36" y2="15.4" stroke="rgba(245,220,120,0.9)" strokeWidth="0.5"/>
+      <line x1="4" y1="17.6" x2="36" y2="17.6" stroke="rgba(100,70,10,0.7)"  strokeWidth="0.5"/>
+      {/* PAVILION — four facets, darkens toward culet */}
+      <path d="M4 18 L12 18 L20 43 Z"  fill="rgba(80,55,8,0.7)"    stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M12 18 L20 18 L20 43 Z" fill="rgba(180,140,40,0.38)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M20 18 L28 18 L20 43 Z" fill="rgba(245,217,128,0.3)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+      <path d="M28 18 L36 18 L20 43 Z" fill="rgba(80,55,8,0.65)"   stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
     </svg>
   )
 }
@@ -192,11 +192,16 @@ function DiamondSVG({ size = 36 }: { size?: number }) {
 function WealthLogo() {
   return (
     <div className="flex items-center gap-3">
-      <DiamondSVG size={38} />
-      <span
-        className="text-[17px] font-normal tracking-wide"
-        style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
-      >
+      <DiamondSVG size={36} />
+      <span style={{
+        fontFamily: "'Playfair Display', Georgia, serif",
+        color: '#c9a84c',
+        fontSize: '13px',
+        letterSpacing: '0.24em',
+        textTransform: 'uppercase' as const,
+        fontWeight: 400,
+        lineHeight: 1,
+      }}>
         Wealth Explorer
       </span>
     </div>
