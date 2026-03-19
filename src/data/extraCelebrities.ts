@@ -13,6 +13,7 @@ export interface ExtraCelebrity {
   avatar: string; coverImage: string; nationality: string; bio: string
   assets: ExtraAsset[]; trending: boolean; birthdate: string; birthplace: string
   gender: 'Male'|'Female'; height: string; profession: string; photos: string[]
+  isNew?: boolean
   relationships?: { parents?: string[]; spouse?: string; partner?: string; siblings?: string[]; children?: string[]; exSpouse?: string[]; exPartner?: string[]; fiancé?: string }
   gossip?: { title: string; summary: string; type?: 'gossip'|'controversy'; date?: string }[]
 }
@@ -50,6 +51,7 @@ function mk(
     birthdate: bd, birthplace: bp, gender: g, height: ht, bio,
     avatar: avatar || av(name), coverImage: CI[cat], trending: !!(trend || (typeof _repeatOrTrend === 'boolean' && _repeatOrTrend)), photos: [avatar || av(name)],
     assets: [{ id: `${id}-1`, type: a1t, name: a1n, description: a1d, estimatedValue: a1v, image: AI[a1t], likes: Math.round(a1v * 60 + 800) }],
+    isNew: true,
   }
 }
 
