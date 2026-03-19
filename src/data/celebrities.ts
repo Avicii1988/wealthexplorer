@@ -59,6 +59,26 @@ export interface Celebrity {
   }[]
 }
 
+// Deceased celebrity IDs — used to show (†) next to names in the UI
+export const DECEASED_IDS = new Set<string>([
+  'ayrton-senna',        // died 1994
+  'freddie-mercury',     // died 1991
+  'grace-kelly',         // died 1982
+  'hank-aaron',          // died 2021
+  'charlie-chaplin',     // died 1977
+  'jacqueline-onassis',  // died 1994
+  'chadwick-boseman',    // died 2020
+  'dean-martin',         // died 1995
+  'chuck-berry',         // died 2017
+  'michael-jackson',     // died 2009
+  'prince',              // died 2016
+  'kobe-bryant',         // died 2020
+  'marilyn-monroe',      // died 1962
+  'audrey-hepburn',      // died 1993
+  'bruce-lee',           // died 1973
+  'pablo-escobar',       // died 1993
+])
+
 // Wikipedia Commons or high-quality press photo URLs
 // All Wikipedia images are CC-licensed
 export const celebrities: Celebrity[] = [
