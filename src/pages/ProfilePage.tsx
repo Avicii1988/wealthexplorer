@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff, ExternalLink, ArrowUp } from 'lucide-react'
+import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff, ArrowUp } from 'lucide-react'
 import {
   celebrities,
   assetTypeIcons,
@@ -233,10 +233,6 @@ function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
   const gossipItems = allItems.filter(g => !g.type || g.type === 'gossip')
   const controversyItems = allItems.filter(g => g.type === 'controversy')
 
-  function searchUrl(title: string) {
-    return `https://www.google.com/search?q=${encodeURIComponent(title + ' ' + celeb.name)}`
-  }
-
   function ItemList({ items }: { items: NonNullable<typeof allItems> }) {
     return (
       <div className="divide-y divide-white/5">
@@ -255,15 +251,6 @@ function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
                 {firstSentence(item.summary)}
               </p>
             </div>
-            <a
-              href={searchUrl(item.title)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 mt-0.5 text-gray-700 hover:text-[#c9a84c] transition-colors"
-              title="Search source"
-            >
-              <ExternalLink size={14} />
-            </a>
           </div>
         ))}
       </div>
@@ -785,7 +772,7 @@ export default function ProfilePage() {
         <div className="max-w-5xl mx-auto">
           {/* Top row */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-8">
-            <WealthLogoSmall />
+            <Link to="/"><WealthLogoSmall /></Link>
             <nav className="flex flex-wrap items-center gap-x-6 gap-y-2">
               {[
                 { label: 'Home', to: '/' },

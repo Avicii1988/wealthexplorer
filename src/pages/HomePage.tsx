@@ -638,7 +638,7 @@ export default function HomePage() {
 
           {/* Logo */}
           <div className="flex justify-center mb-5">
-            <WealthLogo />
+            <Link to="/"><WealthLogo /></Link>
           </div>
 
           {/* Tagline */}
