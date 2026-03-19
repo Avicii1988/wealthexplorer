@@ -30,6 +30,7 @@ export interface Celebrity {
   bio: string;
   assets: Asset[];
   trending: boolean;
+  isNew?: boolean; // profile recently added
   // Bio overview fields
   birthdate: string;
   birthplace: string;

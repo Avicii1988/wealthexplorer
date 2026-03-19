@@ -105,7 +105,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                 {celebsToShow.map(celeb => {
-                  const hasNewAsset = celeb.assets.some(a => a.isNew)
+                  const showNewBadge = celeb.isNew || celeb.assets.some(a => a.isNew)
                   return (
                     <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
                       <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2.5">
@@ -113,13 +113,13 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                         <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                           style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
                         />
-                        {hasNewAsset && (
+                        {showNewBadge && (
                           <div className="absolute top-2 right-2 flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-[#c9a84c] shadow-lg z-10">
                             <span className="w-1 h-1 rounded-full bg-[#0a0a0a] animate-pulse" />
                             <span className="text-[8px] font-bold text-[#0a0a0a] tracking-wider uppercase leading-none">New</span>
                           </div>
                         )}
-                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-gray-500 transition-all duration-300 flex-shrink-0">
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0">
                           <img
                             src={getAvatar(celeb)}
                             alt={celeb.name}
@@ -264,7 +264,7 @@ function CircleCard({ celeb }: { celeb: Celebrity }) {
       to={`/celebrities/${celeb.id}`}
       className="flex flex-col items-center gap-2 group flex-shrink-0"
     >
-      <div className="w-[84px] h-[84px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/70 transition-all duration-300 shadow-lg">
+      <div className="w-[84px] h-[84px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/80 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.45)] transition-all duration-300 shadow-lg">
         <img
           src={getAvatar(celeb)}
           alt={celeb.name}
@@ -342,10 +342,10 @@ export default function HomePage() {
       .slice(0, 6)
   }, [search])
 
-  // Trending: when category is "All" show 16, otherwise show 9 for that category
+  // Trending: when category is "All" show 18, otherwise show 9 for that category
   const trendingCelebs = useMemo(() => {
     if (activeCategory === 'All') {
-      return celebrities.filter(c => c.trending).slice(0, 16)
+      return celebrities.filter(c => c.trending).slice(0, 18)
     }
     // category selected: 9 trending for that category, fallback to non-trending
     const fromCategory = celebrities.filter(c => c.category === activeCategory)
@@ -633,48 +633,50 @@ export default function HomePage() {
       <ScrollToTopButton />
 
       {/* ── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="border-t border-white/8 py-10 px-5">
-        <div className="max-w-5xl mx-auto">
-          {/* Top row */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-8">
+      <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+        <div className="max-w-2xl mx-auto text-center">
+
+          {/* Logo */}
+          <div className="flex justify-center mb-5">
             <WealthLogo />
-            <nav className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              {[
-                { label: 'Home', to: '/' },
-                { label: 'Trending', to: '/' },
-                { label: 'About', to: '/' },
-                { label: 'Contact', to: '/' },
-              ].map(link => (
-                <Link key={link.label} to={link.to} className="text-xs text-gray-500 hover:text-white transition-colors">
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
           </div>
+
+          {/* Tagline */}
+          <p className="text-[11px] text-gray-700 mb-6 tracking-wide">
+            Data updated daily from public sources
+          </p>
+
+          {/* Thin gold divider */}
+          <div className="w-12 h-px mx-auto mb-6" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.35), transparent)' }} />
 
           {/* Disclaimer */}
-          <div className="flex items-start gap-3 mb-6 max-w-3xl">
-            <div className="flex-shrink-0 mt-0.5 w-4 h-4 rounded-full border border-[#c9a84c]/25 flex items-center justify-center">
-              <span className="text-[8px] font-bold" style={{ color: 'rgba(201,168,76,0.5)' }}>i</span>
-            </div>
-            <p className="text-[11px] text-gray-700 leading-relaxed">
-              All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth figures are estimates only.{' '}
-              <span className="text-gray-600">Gossip &amp; controversy sections are compiled from publicly circulating news — not independently verified.</span>{' '}
-              For informational purposes only · Not financial advice.
-            </p>
-          </div>
+          <p className="text-[11px] text-gray-700 leading-relaxed mb-6 max-w-xl mx-auto">
+            All data sourced from public reports (Forbes, Celebrity News, Bloomberg, etc.). Net worth estimates are approximate and may vary.
+            Gossip and controversies based on public news; not verified. Images from public domain or fair-use sources.
+            For informational purposes only — not financial advice.
+          </p>
 
-          {/* Bottom row */}
-          <div className="border-t border-white/5 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-[11px] text-gray-700">© 2026 Wealth Explorer · All rights reserved</p>
-            <div className="flex items-center gap-5">
-              {['Privacy Policy', 'Terms of Use', 'Corrections'].map(item => (
-                <Link key={item} to="/" className="text-[11px] text-gray-600 hover:text-gray-400 transition-colors">
-                  {item}
+          {/* Nav links */}
+          <nav className="flex items-center justify-center flex-wrap gap-x-5 gap-y-2 mb-7">
+            {[
+              { label: 'About Us', to: '/' },
+              { label: 'Privacy Policy', to: '/' },
+              { label: 'Contact', to: '/' },
+              { label: 'Terms of Use', to: '/' },
+            ].map((link, i, arr) => (
+              <span key={link.label} className="flex items-center gap-5">
+                <Link to={link.to} className="text-[11px] text-gray-600 hover:text-[#c9a84c] transition-colors">
+                  {link.label}
                 </Link>
-              ))}
-            </div>
-          </div>
+                {i < arr.length - 1 && <span className="text-gray-800 text-[11px]">|</span>}
+              </span>
+            ))}
+          </nav>
+
+          {/* Copyright */}
+          <p className="text-[10px] text-gray-800 tracking-wide">
+            © 2026 Wealth Explorer
+          </p>
         </div>
       </footer>
     </div>
