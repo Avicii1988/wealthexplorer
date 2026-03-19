@@ -1,6 +1,6 @@
 import { useState, useMemo, useRef, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Search, ChevronDown, X } from 'lucide-react'
+import { Search, ChevronDown, ChevronUp, X } from 'lucide-react'
 import {
   celebrities,
   categories,
@@ -109,7 +109,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                       </div>
                     )}
                     {/* Circle avatar — always in color */}
-                    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/60 transition-all duration-300 flex-shrink-0">
+                    <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/60 transition-all duration-300 flex-shrink-0">
                       <img
                         src={getAvatar(celeb)}
                         alt={celeb.name}
@@ -139,31 +139,27 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   )
 }
 
-// ── CROWN LOGO ────────────────────────────────────────────────────────────────
+// ── DIAMOND-W LOGO ────────────────────────────────────────────────────────────
 function WealthLogo() {
   return (
     <div className="flex items-center gap-3">
-      <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Crown base */}
-        <rect x="4" y="22" width="24" height="4" rx="1.2" fill="#c9a84c" opacity="0.95"/>
-        {/* Crown body filled */}
-        <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22Z" fill="#c9a84c" opacity="0.15"/>
-        {/* Crown body outline */}
-        <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22" stroke="#c9a84c" strokeWidth="1.6" strokeLinejoin="round" fill="none"/>
-        {/* Top jewel */}
-        <circle cx="16" cy="6.5" r="2.1" fill="#c9a84c"/>
-        {/* Side jewels */}
-        <circle cx="6" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
-        <circle cx="26" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
-        {/* Base gems */}
-        <circle cx="10" cy="24" r="1" fill="#0a0a0a"/>
-        <circle cx="16" cy="24" r="1" fill="#0a0a0a"/>
-        <circle cx="22" cy="24" r="1" fill="#0a0a0a"/>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Outer diamond frame */}
+        <path d="M18 2 L34 18 L18 34 L2 18 Z" stroke="#c9a84c" strokeWidth="1.4" fill="rgba(201,168,76,0.05)"/>
+        {/* Inner diamond accent */}
+        <path d="M18 7 L29 18 L18 29 L7 18 Z" stroke="#c9a84c" strokeWidth="0.6" strokeDasharray="2 2" fill="none" opacity="0.4"/>
+        {/* Corner jewels */}
+        <circle cx="18" cy="2.5" r="1.5" fill="#c9a84c"/>
+        <circle cx="33.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
+        <circle cx="18" cy="33.5" r="1.2" fill="#c9a84c" opacity="0.6"/>
+        <circle cx="2.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
+        {/* Elegant W letterform */}
+        <path d="M10 13 L13 23 L18 16 L23 23 L26 13" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
       </svg>
       <div className="flex flex-col leading-none">
         <span
-          className="text-[10px] tracking-[0.35em] uppercase text-[#c9a84c]/60 font-light"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif", letterSpacing: '0.3em' }}
+          className="text-[9px] tracking-[0.4em] uppercase text-[#c9a84c]/50 font-light"
+          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
           The
         </span>
@@ -234,21 +230,45 @@ function CircleCard({ celeb }: { celeb: Celebrity }) {
       to={`/celebrities/${celeb.id}`}
       className="flex flex-col items-center gap-2 group flex-shrink-0"
     >
-      <div className="w-[68px] h-[68px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/70 transition-all duration-300 shadow-lg">
+      <div className="w-[84px] h-[84px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/70 transition-all duration-300 shadow-lg">
         <img
           src={getAvatar(celeb)}
           alt={celeb.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           style={{ objectPosition: 'center 15%' }}
           onError={e => {
-            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=72`
+            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=88`
           }}
         />
       </div>
-      <span className="text-[10px] text-gray-500 group-hover:text-white transition-colors text-center w-16 leading-tight">
+      <span className="text-[10px] text-gray-500 group-hover:text-white transition-colors text-center w-20 leading-tight">
         {celeb.name}
       </span>
     </Link>
+  )
+}
+
+// ── SCROLL TO TOP BUTTON (mobile only) ────────────────────────────────────────
+function ScrollToTopButton() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    function onScroll() { setVisible(window.scrollY > 400) }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      aria-label="Scroll to top"
+      className={`sm:hidden fixed bottom-6 right-5 z-50 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${
+        visible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'
+      }`}
+      style={{ background: 'rgba(10,10,10,0.85)', border: '1px solid rgba(201,168,76,0.45)', backdropFilter: 'blur(10px)', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
+    >
+      <ChevronUp size={18} style={{ color: '#c9a84c' }} />
+    </button>
   )
 }
 
@@ -346,13 +366,14 @@ export default function HomePage() {
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section className="text-center px-5 pt-20 pb-14 max-w-3xl mx-auto">
         <div className="flex justify-center mb-6">
-          <svg width="52" height="52" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-50">
-            <rect x="4" y="22" width="24" height="4" rx="1.2" fill="#c9a84c" opacity="0.95"/>
-            <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22Z" fill="#c9a84c" opacity="0.15"/>
-            <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22" stroke="#c9a84c" strokeWidth="1.6" strokeLinejoin="round" fill="none"/>
-            <circle cx="16" cy="6.5" r="2.1" fill="#c9a84c"/>
-            <circle cx="6" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
-            <circle cx="26" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
+          <svg width="60" height="60" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-40">
+            <path d="M18 2 L34 18 L18 34 L2 18 Z" stroke="#c9a84c" strokeWidth="1.4" fill="rgba(201,168,76,0.05)"/>
+            <path d="M18 7 L29 18 L18 29 L7 18 Z" stroke="#c9a84c" strokeWidth="0.6" strokeDasharray="2 2" fill="none" opacity="0.4"/>
+            <circle cx="18" cy="2.5" r="1.5" fill="#c9a84c"/>
+            <circle cx="33.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
+            <circle cx="18" cy="33.5" r="1.2" fill="#c9a84c" opacity="0.6"/>
+            <circle cx="2.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
+            <path d="M10 13 L13 23 L18 16 L23 23 L26 13" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
           </svg>
         </div>
         <h1
@@ -583,6 +604,8 @@ export default function HomePage() {
       {/* ── PROFILE GRID — A-Z ──────────────────────────────────── */}
       <ProfileDirectory filteredCelebs={filteredCelebs} />
 
+      <ScrollToTopButton />
+
       {/* ── FOOTER ──────────────────────────────────────────────── */}
       <footer className="border-t border-white/8 py-10 px-5">
         <div className="max-w-5xl mx-auto">
@@ -604,9 +627,16 @@ export default function HomePage() {
           </div>
 
           {/* Disclaimer */}
-          <p className="text-[11px] text-gray-700 leading-relaxed mb-6 max-w-3xl">
-            All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth estimates are approximate. Gossip and controversies are based on public news and not verified. For informational purposes only — not financial advice.
-          </p>
+          <div className="flex items-start gap-3 mb-6 max-w-3xl">
+            <div className="flex-shrink-0 mt-0.5 w-4 h-4 rounded-full border border-[#c9a84c]/25 flex items-center justify-center">
+              <span className="text-[8px] font-bold" style={{ color: 'rgba(201,168,76,0.5)' }}>i</span>
+            </div>
+            <p className="text-[11px] text-gray-700 leading-relaxed">
+              All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth figures are estimates only.{' '}
+              <span className="text-gray-600">Gossip &amp; controversy sections are compiled from publicly circulating news — not independently verified.</span>{' '}
+              For informational purposes only · Not financial advice.
+            </p>
+          </div>
 
           {/* Bottom row */}
           <div className="border-t border-white/5 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">

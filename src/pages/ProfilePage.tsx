@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff, ExternalLink } from 'lucide-react'
+import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff, ExternalLink, ArrowUp } from 'lucide-react'
 import {
   celebrities,
   assetTypeIcons,
@@ -31,31 +31,47 @@ function saveFollowed(ids: Set<string>) {
   localStorage.setItem(FOLLOWS_KEY, JSON.stringify([...ids]))
 }
 
-// ── CROWN LOGO (small) ────────────────────────────────────────────────────────
+// ── DIAMOND-W LOGO (small) ────────────────────────────────────────────────────
 function WealthLogoSmall() {
   return (
     <div className="flex items-center gap-2">
-      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Crown base */}
-        <rect x="4" y="22" width="24" height="4" rx="1.2" fill="#c9a84c" opacity="0.95"/>
-        {/* Crown body filled */}
-        <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22Z" fill="#c9a84c" opacity="0.15"/>
-        {/* Crown body outline */}
-        <path d="M4 22L4 13L9.5 18.5L16 6L22.5 18.5L28 13L28 22" stroke="#c9a84c" strokeWidth="1.6" strokeLinejoin="round" fill="none"/>
-        {/* Top jewel */}
-        <circle cx="16" cy="6.5" r="2.1" fill="#c9a84c"/>
-        {/* Side jewels */}
-        <circle cx="6" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
-        <circle cx="26" cy="14" r="1.5" fill="#c9a84c" opacity="0.75"/>
-        {/* Base gems */}
-        <circle cx="10" cy="24" r="1" fill="#0a0a0a"/>
-        <circle cx="16" cy="24" r="1" fill="#0a0a0a"/>
-        <circle cx="22" cy="24" r="1" fill="#0a0a0a"/>
+      <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 2 L34 18 L18 34 L2 18 Z" stroke="#c9a84c" strokeWidth="1.4" fill="rgba(201,168,76,0.05)"/>
+        <path d="M18 7 L29 18 L18 29 L7 18 Z" stroke="#c9a84c" strokeWidth="0.6" strokeDasharray="2 2" fill="none" opacity="0.4"/>
+        <circle cx="18" cy="2.5" r="1.5" fill="#c9a84c"/>
+        <circle cx="33.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
+        <circle cx="18" cy="33.5" r="1.2" fill="#c9a84c" opacity="0.6"/>
+        <circle cx="2.5" cy="18" r="1.2" fill="#c9a84c" opacity="0.6"/>
+        <path d="M10 13 L13 23 L18 16 L23 23 L26 13" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
       </svg>
       <span className="font-serif text-base" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}>
         Wealth Explorer
       </span>
     </div>
+  )
+}
+
+// ── SCROLL TO TOP BUTTON (mobile only) ────────────────────────────────────────
+function ScrollToTopButton() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    function onScroll() { setVisible(window.scrollY > 400) }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      aria-label="Scroll to top"
+      className={`sm:hidden fixed bottom-6 right-5 z-50 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${
+        visible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'
+      }`}
+      style={{ background: 'rgba(10,10,10,0.85)', border: '1px solid rgba(201,168,76,0.45)', backdropFilter: 'blur(10px)', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
+    >
+      <ArrowUp size={16} style={{ color: '#c9a84c' }} />
+    </button>
   )
 }
 
@@ -200,7 +216,6 @@ function firstSentence(text: string): string {
 
 // ── GOSSIP & CONTROVERSY — Flat list, two separate sections ──────────────────
 function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
-  const { t } = useLang()
   const allItems = celeb.gossip
   if (!allItems?.length) return null
 
@@ -252,7 +267,7 @@ function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
             <h2 className="text-base font-semibold text-white flex items-center gap-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               <span className="text-base">💬</span> Gossip
             </h2>
-            <span className="text-[11px] text-gray-600">{t('gossipDisclaimer')}</span>
+            <span className="text-[10px] text-gray-700 italic">Based on public news · not verified</span>
           </div>
           <ItemList items={gossipItems} />
         </div>
@@ -263,7 +278,7 @@ function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
             <h2 className="text-base font-semibold text-white flex items-center gap-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               <span className="text-base">⚡</span> Controversy
             </h2>
-            <span className="text-[11px] text-gray-600">{t('gossipDisclaimer')}</span>
+            <span className="text-[10px] text-gray-700 italic">Based on public news · not verified</span>
           </div>
           <ItemList items={controversyItems} />
         </div>
@@ -760,9 +775,16 @@ export default function ProfilePage() {
           </div>
 
           {/* Disclaimer */}
-          <p className="text-[11px] text-gray-700 leading-relaxed mb-6 max-w-3xl">
-            All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth estimates are approximate. Gossip and controversies are based on public news and not verified. For informational purposes only — not financial advice.
-          </p>
+          <div className="flex items-start gap-3 mb-6 max-w-3xl">
+            <div className="flex-shrink-0 mt-0.5 w-4 h-4 rounded-full border border-[#c9a84c]/25 flex items-center justify-center">
+              <span className="text-[8px] font-bold" style={{ color: 'rgba(201,168,76,0.5)' }}>i</span>
+            </div>
+            <p className="text-[11px] text-gray-700 leading-relaxed">
+              All data sourced from public reports (Forbes, CelebrityNetWorth, Bloomberg, etc.). Net worth figures are estimates only.{' '}
+              <span className="text-gray-600">Gossip &amp; controversy sections are compiled from publicly circulating news — not independently verified.</span>{' '}
+              For informational purposes only · Not financial advice.
+            </p>
+          </div>
 
           {/* Bottom row */}
           <div className="border-t border-white/5 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
@@ -777,6 +799,8 @@ export default function ProfilePage() {
           </div>
         </div>
       </footer>
+
+      <ScrollToTopButton />
     </div>
   )
 }
