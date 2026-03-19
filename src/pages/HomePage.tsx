@@ -19,10 +19,13 @@ import { LANGUAGES, useLang } from '../i18n'
 
 type FeedItem = Asset & { ownerName: string; ownerId: string }
 
+const LETTER_VISIBLE = 11
+
 // ── A-Z PROFILE DIRECTORY ─────────────────────────────────────────────────────
 function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   const { t } = useLang()
   const letterRefs = useRef<Record<string, HTMLDivElement | null>>({})
+  const [expandedLetters, setExpandedLetters] = useState<Set<string>>(new Set())
 
   const sorted = useMemo(
     () => [...filteredCelebs].sort((a, b) => a.name.localeCompare(b.name)),
@@ -80,60 +83,79 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
       {/* Grouped profiles */}
       <div className="space-y-10">
-        {presentLetters.map(letter => (
-          <div
-            key={letter}
-            ref={el => { letterRefs.current[letter] = el }}
-          >
-            <div className="flex items-center gap-4 mb-5">
-              <span
-                className="text-3xl font-semibold leading-none"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
-              >
-                {letter}
-              </span>
-              <div className="flex-1 h-px bg-white/6" />
-              <span className="text-[10px] text-gray-700">{grouped[letter].length}</span>
-            </div>
+        {presentLetters.map(letter => {
+          const all = grouped[letter]
+          const isExpanded = expandedLetters.has(letter)
+          const showAll = isExpanded || all.length <= LETTER_VISIBLE
+          const celebsToShow = showAll ? all : all.slice(0, LETTER_VISIBLE)
+          const remaining = all.length - LETTER_VISIBLE
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-              {grouped[letter].map(celeb => {
-                const hasNewAsset = celeb.assets.some(a => a.isNew)
-                return (
-                <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
-                  <div className="relative bg-[#111] rounded-2xl border border-[#c9a84c]/12 group-hover:border-[#c9a84c]/40 transition-all duration-300 group-hover:bg-[#141414] flex flex-col items-center text-center pt-5 pb-4 px-3 gap-3">
-                    {hasNewAsset && (
-                      <div className="absolute top-2.5 right-2.5 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#c9a84c] shadow-lg z-10">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#0a0a0a] animate-pulse" />
-                        <span className="text-[9px] font-bold text-[#0a0a0a] tracking-wider uppercase leading-none">New</span>
+          return (
+            <div key={letter} ref={el => { letterRefs.current[letter] = el }}>
+              <div className="flex items-center gap-4 mb-5">
+                <span
+                  className="text-3xl font-semibold leading-none"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
+                >
+                  {letter}
+                </span>
+                <div className="flex-1 h-px bg-white/6" />
+                <span className="text-[10px] text-gray-700">{all.length}</span>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                {celebsToShow.map(celeb => {
+                  const hasNewAsset = celeb.assets.some(a => a.isNew)
+                  return (
+                    <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
+                      <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-gray-600 transition-all duration-300 group-hover:bg-[#141414] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2.5">
+                        {hasNewAsset && (
+                          <div className="absolute top-2 right-2 flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-[#c9a84c] shadow-lg z-10">
+                            <span className="w-1 h-1 rounded-full bg-[#0a0a0a] animate-pulse" />
+                            <span className="text-[8px] font-bold text-[#0a0a0a] tracking-wider uppercase leading-none">New</span>
+                          </div>
+                        )}
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-gray-500 transition-all duration-300 flex-shrink-0">
+                          <img
+                            src={getAvatar(celeb)}
+                            alt={celeb.name}
+                            className="w-full h-full object-cover transition-all duration-500"
+                            style={{ objectPosition: 'center 15%' }}
+                            onError={e => {
+                              (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
+                            }}
+                          />
+                        </div>
+                        <div className="w-full">
+                          <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
+                            {celeb.name}
+                          </p>
+                          <p className="text-[10px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
+                        </div>
                       </div>
-                    )}
-                    {/* Circle avatar — always in color */}
-                    <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/60 transition-all duration-300 flex-shrink-0">
-                      <img
-                        src={getAvatar(celeb)}
-                        alt={celeb.name}
-                        className="w-full h-full object-cover transition-all duration-500"
-                        style={{ objectPosition: 'center 15%' }}
-                        onError={e => {
-                          (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
-                        }}
-                      />
+                    </Link>
+                  )
+                })}
+
+                {/* "Show more" 12th box */}
+                {!showAll && remaining > 0 && (
+                  <button
+                    onClick={() => setExpandedLetters(prev => new Set([...prev, letter]))}
+                    className="bg-[#111] rounded-2xl border border-gray-800 hover:border-gray-600 transition-all duration-300 hover:bg-[#141414] flex flex-col items-center justify-center text-center pt-4 pb-3 px-2 gap-2 min-h-[140px]"
+                  >
+                    <div className="w-16 h-16 rounded-full border-2 border-dashed border-gray-700 flex items-center justify-center">
+                      <span className="text-xl text-gray-600">+</span>
                     </div>
-                    <div className="w-full">
-                      <p className="text-sm font-semibold text-white group-hover:text-[#c9a84c] transition-colors truncate leading-tight">
-                        {celeb.name}
-                      </p>
-                      <p className="text-xs mt-1" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
-                      <p className="text-[11px] text-gray-600 mt-0.5">{celeb.assets.length} asset{celeb.assets.length !== 1 ? 's' : ''}</p>
-                    </div>
-                  </div>
-                </Link>
-                )
-              })}
+                    <p className="text-[10px] text-gray-500 leading-tight">
+                      {remaining} more
+                    </p>
+                    <p className="text-[9px] text-gray-700">Show all</p>
+                  </button>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </section>
   )
@@ -156,20 +178,12 @@ function WealthLogo() {
         {/* Elegant W letterform */}
         <path d="M10 13 L13 23 L18 16 L23 23 L26 13" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
       </svg>
-      <div className="flex flex-col leading-none">
-        <span
-          className="text-[9px] tracking-[0.4em] uppercase text-[#c9a84c]/50 font-light"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-        >
-          The
-        </span>
-        <span
-          className="text-[17px] font-normal tracking-wide"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
-        >
-          Wealth Explorer
-        </span>
-      </div>
+      <span
+        className="text-[17px] font-normal tracking-wide"
+        style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#c9a84c' }}
+      >
+        Wealth Explorer
+      </span>
     </div>
   )
 }
@@ -308,16 +322,16 @@ export default function HomePage() {
       .slice(0, 6)
   }, [search])
 
-  // Trending: when category is "All" show 16, otherwise show 8 for that category
+  // Trending: when category is "All" show 16, otherwise show 9 for that category
   const trendingCelebs = useMemo(() => {
     if (activeCategory === 'All') {
       return celebrities.filter(c => c.trending).slice(0, 16)
     }
-    // category selected: 8 trending for that category, fallback to non-trending
+    // category selected: 9 trending for that category, fallback to non-trending
     const fromCategory = celebrities.filter(c => c.category === activeCategory)
     const trending = fromCategory.filter(c => c.trending)
     const rest = fromCategory.filter(c => !c.trending)
-    return [...trending, ...rest].slice(0, 8)
+    return [...trending, ...rest].slice(0, 9)
   }, [activeCategory])
 
   // Asset feed: top 20 most expensive assets
@@ -331,7 +345,7 @@ export default function HomePage() {
 
   const assetFeed = useMemo(() => {
     const filtered = activeAssetType === 'All' ? allFeedItems : allFeedItems.filter(a => a.type === activeAssetType)
-    return filtered.slice(0, 20)
+    return filtered.slice(0, 15)
   }, [allFeedItems, activeAssetType])
 
   const assetTypeCounts = useMemo(() => {
@@ -356,7 +370,7 @@ export default function HomePage() {
 
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="flex items-center justify-between px-6 py-3.5 border-b border-white/8 bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40">
-        <WealthLogo />
+        <Link to="/"><WealthLogo /></Link>
         <div className="flex items-center gap-2">
           <NotificationBell />
           <LanguageSelector />
@@ -484,10 +498,10 @@ export default function HomePage() {
           <p className="text-center text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase mb-8">
             {showTrending ? t('trendingProfiles') : `${activeCategory}`}
           </p>
-          {/* Circle card grid — max 8 on mobile, all on desktop */}
-          <div className="flex gap-5 overflow-x-auto scrollbar-hide pb-2 justify-start sm:justify-center flex-wrap">
+          {/* Circle card grid — centered on all screens */}
+          <div className="flex gap-5 pb-2 justify-center flex-wrap">
             {trendingCelebs.map((celeb, i) => (
-              <div key={celeb.id} className={i >= 8 ? 'hidden sm:block' : ''}>
+              <div key={celeb.id} className={i >= 9 ? 'hidden sm:block' : ''}>
                 <CircleCard celeb={celeb} />
               </div>
             ))}
@@ -518,7 +532,7 @@ export default function HomePage() {
           </p>
           {showTrending && (
             <span className="text-[10px] px-2.5 py-1 rounded-full bg-[#c9a84c]/10 text-[#c9a84c] border border-[#c9a84c]/20 font-medium">
-              Top 20
+              Top 15
             </span>
           )}
         </div>
@@ -535,7 +549,7 @@ export default function HomePage() {
           >
             {t('allAssets')}
             <span className={`text-[11px] font-semibold px-1.5 py-0.5 rounded-full ${activeAssetType === 'All' ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
-              {Math.min(allFeedItems.length, 20)}
+              {Math.min(allFeedItems.length, 15)}
             </span>
           </button>
           {presentAssetTypes.map(type => (

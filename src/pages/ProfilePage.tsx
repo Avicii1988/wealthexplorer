@@ -545,7 +545,7 @@ export default function ProfilePage() {
             className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-colors group flex-shrink-0"
           >
             <ArrowLeft size={15} className="group-hover:-translate-x-0.5 transition-transform" />
-            <WealthLogoSmall />
+            <Link to="/"><WealthLogoSmall /></Link>
           </button>
 
           <div className="flex items-center gap-3">
@@ -630,7 +630,7 @@ export default function ProfilePage() {
             </div>
 
             {/* Name + Follow button inline */}
-            <div className="flex items-start gap-3 mb-2">
+            <div className="flex items-center gap-3 mb-2 flex-wrap">
               <h1
                 className="text-3xl sm:text-5xl font-normal text-white leading-tight flex-1 min-w-0"
                 style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -639,14 +639,14 @@ export default function ProfilePage() {
               </h1>
               <button
                 onClick={toggleFollow}
-                className={`flex-shrink-0 flex items-center gap-1.5 mt-1.5 px-4 py-2 rounded-full text-xs font-medium border transition-all duration-200 ${
+                className={`flex-shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium border transition-all duration-200 ${
                   isFollowed
                     ? 'bg-[#c9a84c]/10 border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/20'
                     : 'border-white/20 text-gray-300 hover:border-[#c9a84c]/40 hover:text-[#c9a84c]'
                 }`}
               >
                 {isFollowed ? <Bell size={12} className="fill-[#c9a84c]" /> : <BellOff size={12} />}
-                <span className="hidden sm:inline">{isFollowed ? t('following') : t('follow')}</span>
+                <span>{isFollowed ? t('following') : t('follow')}</span>
               </button>
             </div>
 
@@ -733,8 +733,8 @@ export default function ProfilePage() {
       </section>
 
       {/* ── DID WE MAKE A MISTAKE? ──────────────────────────────── */}
-      <section className="pb-10">
-        <div className="max-w-5xl mx-auto px-5">
+      <section className="pt-6 pb-10">
+        <div className="max-w-5xl mx-auto px-5 flex flex-col gap-4">
           <div className="rounded-2xl bg-[#111] border border-white/8 px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
             <div>
               <p className="text-base font-normal text-white mb-1" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
@@ -750,6 +750,22 @@ export default function ProfilePage() {
             >
               {t('submitSuggestion')}
             </a>
+          </div>
+
+          {/* Back to home */}
+          <div className="flex justify-center pt-2">
+            <Link
+              to="/"
+              className="flex items-center gap-3 px-6 py-3 rounded-full border border-white/10 hover:border-[#c9a84c]/40 transition-all duration-200 group"
+            >
+              <svg width="18" height="18" viewBox="0 0 36 36" fill="none">
+                <path d="M18 2 L34 18 L18 34 L2 18 Z" stroke="#c9a84c" strokeWidth="1.4" fill="rgba(201,168,76,0.05)"/>
+                <path d="M10 13 L13 23 L18 16 L23 23 L26 13" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+              </svg>
+              <span className="text-sm text-gray-400 group-hover:text-[#c9a84c] transition-colors" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                Wealth Explorer
+              </span>
+            </Link>
           </div>
         </div>
       </section>
