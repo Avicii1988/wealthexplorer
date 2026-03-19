@@ -53,6 +53,7 @@ export interface Celebrity {
     summary: string
     type?: 'gossip' | 'controversy'
     date?: string
+    isNew?: boolean
   }[]
 }
 
@@ -217,6 +218,7 @@ export const celebrities: Celebrity[] = [
         summary: 'Musk\'s role as head of the Department of Government Efficiency (DOGE) under President Trump drew massive controversy. Critics argued a private billionaire had unprecedented access to federal systems, while supporters claimed he was cutting wasteful spending. Multiple lawsuits were filed challenging the legality of DOGE.',
         type: 'controversy',
         date: 'Jan 2025',
+        isNew: true,
       },
       {
         title: 'Children & Relationships Drama',
@@ -317,6 +319,7 @@ export const celebrities: Celebrity[] = [
         summary: 'In 2024 Bezos blocked the Washington Post from endorsing a presidential candidate, reversing a decades-long tradition. More than 250,000 subscribers cancelled, and senior editorial staff resigned in protest, raising questions about billionaire ownership of major news outlets.',
         type: 'controversy',
         date: 'Oct 2024',
+        isNew: true,
       },
     ],
     assets: [
@@ -822,6 +825,27 @@ export const celebrities: Celebrity[] = [
       siblings: ['Kourtney Kardashian', 'Khloé Kardashian', 'Rob Kardashian', 'Kendall Jenner', 'Kylie Jenner'],
       children: ['North West', 'Saint West', 'Chicago West', 'Psalm West'],
     },
+    gossip: [
+      {
+        title: 'Sex Tape Scandal & Career Launch',
+        summary: 'A 2003 sex tape featuring Kim and then-boyfriend Ray J was leaked in 2007 by Vivid Entertainment. Rather than destroying her reputation, it catapulted the Kardashian family to global fame and led directly to the Keeping Up with the Kardashians deal. Kim later sued and settled for $5M.',
+        type: 'controversy',
+        date: 'Feb 2007',
+      },
+      {
+        title: 'Paris Robbery — $10M Jewellery Stolen',
+        summary: 'In October 2016, Kim was held at gunpoint in her Paris hotel room by five men who stole approximately $10M in jewellery including her engagement ring. She was unharmed physically but suffered significant trauma. The incident led her to dramatically reduce her public social media presence for months.',
+        type: 'controversy',
+        date: 'Oct 2016',
+      },
+      {
+        title: 'SKIMS Valued at $4 Billion',
+        summary: 'Kim\'s shapewear brand SKIMS reached a $4 billion valuation in 2023 after just four years, becoming one of the fastest-growing fashion brands in history. The brand expanded into menswear and became the official underwear partner of Team USA at the 2024 Paris Olympics.',
+        type: 'gossip',
+        date: 'Jul 2023',
+        isNew: true,
+      },
+    ],
     assets: [
       {
         id: 'kk-house-hh',
@@ -892,10 +916,26 @@ export const celebrities: Celebrity[] = [
     ],
     relationships: {
       parents: ['James R. Jordan Sr.', 'Deloris Jordan'],
+      exSpouse: ['Juanita Vanoy'],
       spouse: 'Yvette Prieto',
       siblings: ['Larry Jordan', 'Deloris Jordan Jr.', 'James R. Jordan Jr.', 'Roslyn Jordan'],
       children: ['Jeffrey Jordan', 'Marcus Jordan', 'Jasmine Jordan', 'Victoria Jordan', 'Ysabel Jordan'],
     },
+    gossip: [
+      {
+        title: 'The Last Dance Controversies',
+        summary: 'The 2020 ESPN documentary The Last Dance revealed Jordan\'s famously harsh treatment of teammates, including screaming, punching, and bullying players he felt weren\'t working hard enough. Former Bulls teammates had mixed reactions — some defended his methods as winning-focused, others described an abusive team culture.',
+        type: 'gossip',
+        date: 'Apr 2020',
+      },
+      {
+        title: 'Hornets Sale — $3B Profit',
+        summary: 'Jordan sold his majority stake in the Charlotte Hornets in 2023 for a reported $3 billion valuation — having purchased it for around $275M a decade earlier. The deal made him one of the most successful sports franchise investors in history and ended his historic run as the NBA\'s only player-turned-controlling-owner.',
+        type: 'gossip',
+        date: 'Jun 2023',
+        isNew: true,
+      },
+    ],
     assets: [
       {
         id: 'mj-team-hornets',
@@ -1194,6 +1234,7 @@ export const celebrities: Celebrity[] = [
         summary: 'In 2023 Zuckerberg challenged Elon Musk to a cage fight after Musk taunted Meta\'s new app Threads. Both sides traded barbs online for months, with Zuckerberg training publicly with UFC champions. Musk ultimately backed out, claiming a need for neck surgery. The spectacle drew global media attention and made Zuckerberg an unlikely internet hero for his legitimate MMA training.',
         type: 'gossip',
         date: 'Jun 2023',
+        isNew: true,
       },
     ],
     assets: [
