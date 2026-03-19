@@ -9,6 +9,7 @@ import {
   formatNetWorth,
   getNationalityFlag,
   getAvatar,
+  DECEASED_IDS,
   type AssetType,
   type Asset,
 } from '../data/celebrities'
@@ -643,7 +644,7 @@ export default function ProfilePage() {
                 className="text-3xl sm:text-5xl font-normal text-white leading-tight flex-1 min-w-0"
                 style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
               >
-                {celeb.name}
+                {celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-500 text-2xl sm:text-3xl ml-2 align-middle"> (†)</span>}
               </h1>
               <button
                 onClick={toggleFollow}
@@ -701,27 +702,39 @@ export default function ProfilePage() {
         {celeb.assets.length > 0 && <AssetsSection celeb={celeb} />}
       </main>
 
-      {/* ── MORE PROFILES — grid cards ───────────────────────────── */}
-      <section className="py-12 border-t border-white/8">
-        <div className="max-w-5xl mx-auto px-5">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-6">{t('moreProfiles')}</p>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
-            {[
-              ...celebrities.filter(c => c.id !== celeb.id && c.category === celeb.category),
-              ...celebrities.filter(c => c.id !== celeb.id && c.category !== celeb.category),
-            ]
-              .slice(0, 24)
-              .map(c => (
-                <Link key={c.id} to={`/celebrities/${c.id}`} className="group">
-                  <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2.5">
+      {/* ── MORE PROFILES — infinite carousel ──────────────────────── */}
+      {(() => {
+        const pool = [
+          ...celebrities.filter(c => c.id !== celeb.id && c.category === celeb.category),
+          ...celebrities.filter(c => c.id !== celeb.id && c.category !== celeb.category),
+        ].slice(0, 48)
+        // Duplicate for seamless loop
+        const items = [...pool, ...pool]
+        return (
+          <section className="py-12 border-t border-white/8 overflow-hidden">
+            <div className="max-w-5xl mx-auto px-5 mb-5">
+              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500">{t('moreProfiles')}</p>
+            </div>
+            <div
+              className="flex gap-3 w-max"
+              style={{
+                animation: 'carousel-scroll 60s linear infinite',
+                paddingLeft: '20px',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.animationPlayState = 'paused')}
+              onMouseLeave={e => (e.currentTarget.style.animationPlayState = 'running')}
+            >
+              {items.map((c, i) => (
+                <Link key={`${c.id}-${i}`} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: 96 }}>
+                  <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2">
                     <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                       style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
                     />
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0">
+                    <div className="w-13 h-13 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_10px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0" style={{ width: 52, height: 52 }}>
                       <img
                         src={getAvatar(c)}
                         alt={c.name}
-                        className="w-full h-full object-cover transition-all duration-500"
+                        className="w-full h-full object-cover"
                         style={{ objectPosition: 'center 15%' }}
                         onError={e => {
                           (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
@@ -729,17 +742,18 @@ export default function ProfilePage() {
                       />
                     </div>
                     <div className="w-full">
-                      <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
-                        {c.name}
+                      <p className="text-[10px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
+                        {c.name}{DECEASED_IDS.has(c.id) && <span className="text-gray-600"> (†)</span>}
                       </p>
-                      <p className="text-[10px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(c.netWorth)}</p>
+                      <p className="text-[9px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(c.netWorth)}</p>
                     </div>
                   </div>
                 </Link>
               ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        )
+      })()}
 
       {/* ── DID WE MAKE A MISTAKE? ──────────────────────────────── */}
       <section className="pt-6 pb-10">
