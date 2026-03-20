@@ -106,7 +106,8 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                 {celebsToShow.map(celeb => {
-                  const showNewBadge = celeb.isNew || celeb.assets.some(a => a.isNew)
+                  const isWithin24h = (d?: string) => !!d && (Date.now() - new Date(d).getTime() < 86_400_000)
+                  const showNewBadge = isWithin24h(celeb.isNew) || celeb.assets.some(a => a.isNew)
                   return (
                     <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
                       <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2.5">
@@ -542,11 +543,6 @@ export default function HomePage() {
           <p className="text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase text-center">
             {showTrending ? t('featuredAssets') : `${t('assets')} · ${filteredCelebs.length} profiles`}
           </p>
-          {showTrending && (
-            <span className="text-[10px] px-2.5 py-1 rounded-full bg-[#c9a84c]/10 text-[#c9a84c] border border-[#c9a84c]/20 font-medium">
-              Top 15
-            </span>
-          )}
         </div>
 
         {/* Asset type filter tabs */}
