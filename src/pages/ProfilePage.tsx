@@ -718,28 +718,29 @@ export default function ProfilePage() {
         // Duplicate for seamless loop
         const items = [...pool, ...pool]
         return (
-          <section className="py-12 overflow-hidden">
+          <section className="py-12 relative overflow-hidden">
             <div className="max-w-5xl mx-auto px-5 mb-5">
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500">{t('moreProfiles')}</p>
             </div>
-            <div
-              className="overflow-hidden"
-              style={{
-                maskImage: 'linear-gradient(to right, transparent 0px, black 80px, black calc(100% - 80px), transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent 0px, black 80px, black calc(100% - 80px), transparent 100%)',
-              }}
-            >
+
+            {/* Fade overlays — left/right edges aligned to max-w-5xl content column */}
+            <div className="absolute inset-y-0 left-0 pointer-events-none z-10"
+              style={{ width: 'calc((100% - min(100%, 1024px)) / 2 + 80px)', background: 'linear-gradient(to right, #0a0a0a 40%, transparent)' }}
+            />
+            <div className="absolute inset-y-0 right-0 pointer-events-none z-10"
+              style={{ width: 'calc((100% - min(100%, 1024px)) / 2 + 80px)', background: 'linear-gradient(to left, #0a0a0a 40%, transparent)' }}
+            />
+
             <div
               className="flex gap-3 w-max"
-              style={{
-                animation: 'carousel-scroll 60s linear infinite',
-                paddingLeft: '20px',
-              }}
+              style={{ animation: 'carousel-scroll 60s linear infinite', paddingLeft: '20px' }}
               onMouseEnter={e => (e.currentTarget.style.animationPlayState = 'paused')}
               onMouseLeave={e => (e.currentTarget.style.animationPlayState = 'running')}
+              onTouchStart={e => (e.currentTarget.style.animationPlayState = 'paused')}
+              onTouchEnd={e => (e.currentTarget.style.animationPlayState = 'running')}
             >
               {items.map((c, i) => (
-                <Link key={`${c.id}-${i}`} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: 96 }}>
+                <Link key={`${c.id}-${i}`} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: 96, touchAction: 'manipulation' }}>
                   <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2">
                     <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                       style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
@@ -764,7 +765,6 @@ export default function ProfilePage() {
                   </div>
                 </Link>
               ))}
-            </div>
             </div>
           </section>
         )
