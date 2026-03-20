@@ -9,6 +9,7 @@ import {
   formatNetWorth,
   getNationalityFlag,
   getAvatar,
+  getAssetImage,
   DECEASED_IDS,
   type AssetType,
   type Asset,
@@ -311,7 +312,7 @@ function AssetCard({ asset }: { asset: Asset }) {
       <div className="relative aspect-video overflow-hidden bg-[#1a1a1a]">
         {!imgError ? (
           <img
-            src={asset.image}
+            src={getAssetImage(asset)}
             alt={asset.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
             onError={() => setImgError(true)}

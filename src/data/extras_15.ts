@@ -3,7 +3,7 @@ export const extras_15: Record<string, Ext> = {
   'awa-traore': {
     avatar: 'https://ui-avatars.com/api/?name=Awa+Traore&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'awa-traore-1', type: 'watch', name: 'Rolex Datejust', description: 'Elegant timepiece favored by top runway models.', estimatedValue: 0.0005, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 210 }
+      { id: 'awa-traore-1', type: 'watch', name: 'Rolex Datejust', description: 'Elegant timepiece favored by top runway models.', estimatedValue: 0.5, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 210 }
     ],
     gossip: [
       { title: 'Rising Star on the Runway', summary: 'Awa Traore has been making waves in the fashion industry with appearances at major European fashion weeks. Her distinctive look has attracted attention from leading luxury brands.', type: 'gossip', date: 'Mar 2024' }
@@ -13,7 +13,7 @@ export const extras_15: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Ayesha+Curry&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'ayesha-curry-1', type: 'real_estate', name: 'Atherton Estate', description: 'Sprawling family home in Silicon Valley\'s most exclusive neighborhood.', estimatedValue: 0.03, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 870 },
-      { id: 'ayesha-curry-2', type: 'art', name: 'Contemporary Art Collection', description: 'Curated collection of modern artworks displayed in her restaurant chain.', estimatedValue: 0.005, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 430 }
+      { id: 'ayesha-curry-2', type: 'art', name: 'Contemporary Art Collection', description: 'Curated collection of modern artworks displayed in her restaurant chain.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 430 }
     ],
     gossip: [
       { title: 'Expanding Culinary Empire', summary: 'Ayesha Curry announced the expansion of her International Smoke restaurant brand to three new cities. The celebrity chef and entrepreneur continues to grow her food and media empire alongside husband Stephen Curry.', type: 'gossip', date: 'Feb 2025' }
@@ -22,7 +22,7 @@ export const extras_15: Record<string, Ext> = {
   'aziz-karimov': {
     avatar: 'https://ui-avatars.com/api/?name=Aziz+Karimov&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'aziz-karimov-1', type: 'car', name: 'BMW M5 Competition', description: 'High-performance luxury sedan used for personal travel.', estimatedValue: 0.0012, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 190 }
+      { id: 'aziz-karimov-1', type: 'car', name: 'BMW M5 Competition', description: 'High-performance luxury sedan used for personal travel.', estimatedValue: 1.2, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 190 }
     ],
     gossip: [
       { title: 'International Competition Debut', summary: 'Aziz Karimov represented his country at an international athletics competition, earning recognition for his performance. The young athlete is considered a rising prospect in Central Asian sports.', type: 'gossip', date: 'Aug 2023' }
@@ -31,7 +31,7 @@ export const extras_15: Record<string, Ext> = {
   'babatunde-fashola': {
     avatar: 'https://ui-avatars.com/api/?name=Babatunde+Fashola&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'babatunde-fashola-1', type: 'real_estate', name: 'Lagos Residence', description: 'Upscale home in one of Lagos\'s most prestigious neighborhoods.', estimatedValue: 0.005, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 }
+      { id: 'babatunde-fashola-1', type: 'real_estate', name: 'Lagos Residence', description: 'Upscale home in one of Lagos\'s most prestigious neighborhoods.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 }
     ],
     gossip: [
       { title: 'Infrastructure Legacy Evaluated', summary: 'Former Lagos governor Babatunde Fashola\'s infrastructure projects are being assessed years after his tenure, with analysts noting the long-term impact on the city\'s development. His work as Minister of Works and Housing also continues to be scrutinized.', type: 'gossip', date: 'Nov 2023' }
@@ -41,7 +41,7 @@ export const extras_15: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Suzy+Bae&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'bae-suzy-1', type: 'real_estate', name: 'Seoul Luxury Apartment', description: 'Premium apartment in the upscale Gangnam district of Seoul.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1100 },
-      { id: 'bae-suzy-2', type: 'watch', name: 'Chanel J12 Watch', description: 'Iconic luxury timepiece befitting the K-pop star and actress.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 760 }
+      { id: 'bae-suzy-2', type: 'watch', name: 'Chanel J12 Watch', description: 'Iconic luxury timepiece befitting the K-pop star and actress.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 760 }
     ],
     gossip: [
       { title: 'Drama Comeback Breaks Records', summary: 'Bae Suzy\'s return to television drama attracted record viewership ratings for the streaming platform. The multi-hyphenate star continues to balance acting, modeling, and music with remarkable success.', type: 'gossip', date: 'Jan 2025' }
@@ -115,7 +115,7 @@ export const extras_15: Record<string, Ext> = {
   'bo-diddley': {
     avatar: 'https://ui-avatars.com/api/?name=Bo+Diddley&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'bo-diddley-1', type: 'art', name: 'Vintage Guitar Collection', description: 'Collection of custom square guitars that became Bo Diddley\'s iconic signature instruments.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 890 }
+      { id: 'bo-diddley-1', type: 'art', name: 'Vintage Guitar Collection', description: 'Collection of custom square guitars that became Bo Diddley\'s iconic signature instruments.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 890 }
     ],
     gossip: [
       { title: 'Estate Honors Rock and Roll Pioneer', summary: 'The Bo Diddley estate announced new licensing deals to introduce his foundational rhythm and catalog to new generations of music fans. The pioneering rock and roll musician\'s influence on modern music continues to be celebrated posthumously.', type: 'gossip', date: 'Jun 2023' }
@@ -143,7 +143,7 @@ export const extras_15: Record<string, Ext> = {
   'bobby-brown': {
     avatar: 'https://ui-avatars.com/api/?name=Bobby+Brown&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'bobby-brown-1', type: 'car', name: 'Cadillac Escalade', description: 'Customized luxury SUV kept as a personal vehicle.', estimatedValue: 0.001, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 310 }
+      { id: 'bobby-brown-1', type: 'car', name: 'Cadillac Escalade', description: 'Customized luxury SUV kept as a personal vehicle.', estimatedValue: 1, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 310 }
     ],
     gossip: [
       { title: 'Memoir Revisits Career and Personal Struggles', summary: 'Bobby Brown\'s memoir provided candid accounts of his rise to fame as an R&B pioneer and his turbulent personal life. The singer spoke openly about grief, recovery, and his musical legacy in a series of promotional interviews.', type: 'gossip', date: 'Nov 2022' }
@@ -162,7 +162,7 @@ export const extras_15: Record<string, Ext> = {
   'boris-becker': {
     avatar: 'https://ui-avatars.com/api/?name=Boris+Becker&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'boris-becker-1', type: 'watch', name: 'Rolex Collection', description: 'Several luxury Rolex timepieces from the tennis champion\'s personal collection.', estimatedValue: 0.001, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 430 }
+      { id: 'boris-becker-1', type: 'watch', name: 'Rolex Collection', description: 'Several luxury Rolex timepieces from the tennis champion\'s personal collection.', estimatedValue: 1, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 430 }
     ],
     gossip: [
       { title: 'Life After Prison Documentary Released', summary: 'Boris Becker participated in a documentary about his imprisonment and life after release following his 2022 conviction for hiding assets during bankruptcy proceedings. The six-time Grand Slam champion spoke candidly about the experience and his future plans.', type: 'gossip', date: 'May 2024' }
@@ -180,7 +180,7 @@ export const extras_15: Record<string, Ext> = {
   'brigitte-macron': {
     avatar: 'https://ui-avatars.com/api/?name=Brigitte+Macron&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'brigitte-macron-1', type: 'real_estate', name: 'Le Touquet Residence', description: 'Elegant beachside property in Le Touquet that the Macrons have maintained as a private retreat.', estimatedValue: 0.002, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 470 }
+      { id: 'brigitte-macron-1', type: 'real_estate', name: 'Le Touquet Residence', description: 'Elegant beachside property in Le Touquet that the Macrons have maintained as a private retreat.', estimatedValue: 2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 470 }
     ],
     gossip: [
       { title: 'First Lady\'s Education Initiatives Expand', summary: 'Brigitte Macron\'s advocacy work focused on education and inclusion has grown significantly during her husband\'s presidency, with new programs launched across France. Her background as a former literature teacher informs her passionate commitment to educational causes.', type: 'gossip', date: 'Oct 2024' }
@@ -207,7 +207,7 @@ export const extras_15: Record<string, Ext> = {
   'calum-scott': {
     avatar: 'https://ui-avatars.com/api/?name=Calum+Scott&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'calum-scott-1', type: 'real_estate', name: 'London Apartment', description: 'Modern apartment in London where the British singer-songwriter is based.', estimatedValue: 0.0015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
+      { id: 'calum-scott-1', type: 'real_estate', name: 'London Apartment', description: 'Modern apartment in London where the British singer-songwriter is based.', estimatedValue: 1.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
     ],
     gossip: [
       { title: 'Viral Ballad Tops Global Charts', summary: 'Calum Scott\'s latest emotional ballad climbed to the top of streaming charts in multiple countries, building on the success he found after his Britain\'s Got Talent audition. The Hull-born singer continues to grow his devoted international fanbase.', type: 'gossip', date: 'Feb 2025' }
@@ -216,7 +216,7 @@ export const extras_15: Record<string, Ext> = {
   'carl-froch': {
     avatar: 'https://ui-avatars.com/api/?name=Carl+Froch&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'carl-froch-1', type: 'real_estate', name: 'Nottingham Manor House', description: 'Grand manor home in Nottinghamshire befitting the former world champion boxer.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 510 }
+      { id: 'carl-froch-1', type: 'real_estate', name: 'Nottingham Manor House', description: 'Grand manor home in Nottinghamshire befitting the former world champion boxer.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 510 }
     ],
     gossip: [
       { title: 'Commentary Career Sparks Controversy', summary: 'Carl Froch\'s outspoken boxing commentary and social media opinions have stirred debate within the sport, with some appreciating his directness and others criticizing his assessments. The Cobra remains one of boxing\'s most recognizable media personalities.', type: 'gossip', date: 'Jul 2024' }

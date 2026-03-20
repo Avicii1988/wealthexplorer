@@ -4,7 +4,7 @@ export const extras_13: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Shraddha+Kapoor&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'shraddha-kapoor-1', type: 'real_estate', name: 'Mumbai Apartment', description: 'Luxury apartment in Juhu, Mumbai.', estimatedValue: 0.012, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 },
-      { id: 'shraddha-kapoor-2', type: 'car', name: 'Range Rover', description: 'Premium SUV driven across Mumbai.', estimatedValue: 0.004, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 220 }
+      { id: 'shraddha-kapoor-2', type: 'car', name: 'Range Rover', description: 'Premium SUV driven across Mumbai.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 220 }
     ],
     gossip: [
       { title: 'Bollywood Box Office Queen', summary: 'Shraddha Kapoor has delivered multiple blockbusters earning her top billing in Bollywood. Her film Stree 2 broke box office records in 2024.', type: 'gossip', date: 'Aug 2024' }
@@ -14,7 +14,7 @@ export const extras_13: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Shawn+Mendes&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'shawn-mendes-1', type: 'real_estate', name: 'Toronto Family Home', description: 'Sprawling property in Pickering, Ontario where he grew up.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 540 },
-      { id: 'shawn-mendes-2', type: 'car', name: 'Jeep Wrangler', description: 'His go-to rugged vehicle for casual drives.', estimatedValue: 0.005, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 390 }
+      { id: 'shawn-mendes-2', type: 'car', name: 'Jeep Wrangler', description: 'His go-to rugged vehicle for casual drives.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 390 }
     ],
     gossip: [
       { title: 'Musical Comeback Tour', summary: 'Shawn Mendes announced a global tour in 2024 following a mental health hiatus, signaling a full return to the music industry. Fans worldwide celebrated the announcement.', type: 'gossip', date: 'Mar 2024' }
@@ -43,7 +43,7 @@ export const extras_13: Record<string, Ext> = {
   'steph-balthazar': {
     avatar: 'https://ui-avatars.com/api/?name=Sonya+Curry&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'steph-balthazar-1', type: 'real_estate', name: 'Charlotte Home', description: 'Family home in Charlotte, North Carolina.', estimatedValue: 0.0006, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 120 }
+      { id: 'steph-balthazar-1', type: 'real_estate', name: 'Charlotte Home', description: 'Family home in Charlotte, North Carolina.', estimatedValue: 0.6, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 120 }
     ],
     gossip: [
       { title: 'Post-Divorce Spotlight', summary: 'Sonya Curry gained increased public attention following her high-profile divorce from Dell Curry in 2021. She has since focused on her catering business and personal ventures.', type: 'gossip', date: 'May 2022' }
@@ -53,7 +53,7 @@ export const extras_13: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Taraji+P+Henson&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'taraji-p-henson-1', type: 'real_estate', name: 'Los Angeles Home', description: 'Stylish home in the Los Angeles area purchased during her Empire peak.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 640 },
-      { id: 'taraji-p-henson-2', type: 'car', name: 'Mercedes-Benz GLS', description: 'Luxury SUV favored for LA commutes.', estimatedValue: 0.005, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 430 }
+      { id: 'taraji-p-henson-2', type: 'car', name: 'Mercedes-Benz GLS', description: 'Luxury SUV favored for LA commutes.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 430 }
     ],
     gossip: [
       { title: 'Pay Disparity Advocacy', summary: 'Taraji P. Henson spoke openly about pay disparities faced by Black actresses in Hollywood during a 2024 interview, sparking industry-wide discussion. She has become a prominent voice for equitable compensation.', type: 'gossip', date: 'Jan 2024' }
@@ -62,7 +62,7 @@ export const extras_13: Record<string, Ext> = {
   'toni-braxton': {
     avatar: 'https://ui-avatars.com/api/?name=Toni+Braxton&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'toni-braxton-1', type: 'real_estate', name: 'Atlanta Home', description: 'Georgia residence featured on her reality television series.', estimatedValue: 0.006, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
+      { id: 'toni-braxton-1', type: 'real_estate', name: 'Atlanta Home', description: 'Georgia residence featured on her reality television series.', estimatedValue: 6, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
     ],
     gossip: [
       { title: 'Bankruptcy and Comeback', summary: 'Toni Braxton filed for bankruptcy twice but rebuilt her career through Las Vegas residencies and television projects. Her resilience has made her a symbol of financial recovery in the entertainment industry.', type: 'gossip', date: 'Mar 2022' }
@@ -91,7 +91,7 @@ export const extras_13: Record<string, Ext> = {
   'usman-khawaja': {
     avatar: 'https://ui-avatars.com/api/?name=Usman+Khawaja&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'usman-khawaja-1', type: 'real_estate', name: 'Brisbane Home', description: 'Family residence in Brisbane, Queensland.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 190 }
+      { id: 'usman-khawaja-1', type: 'real_estate', name: 'Brisbane Home', description: 'Family residence in Brisbane, Queensland.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 190 }
     ],
     gossip: [
       { title: 'Advocacy on the Cricket Field', summary: 'Usman Khawaja drew global attention when he attempted to wear a dove symbol on his cricket shoes in protest of civilian deaths in Gaza during the 2024 Test series. The ICC controversially ruled against his gesture.', type: 'gossip', date: 'Jan 2024' }
@@ -110,7 +110,7 @@ export const extras_13: Record<string, Ext> = {
   'wyclef-jean': {
     avatar: 'https://ui-avatars.com/api/?name=Wyclef+Jean&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'wyclef-jean-1', type: 'real_estate', name: 'New Jersey Home', description: 'Residence in New Jersey where the Fugees star based his music career.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 }
+      { id: 'wyclef-jean-1', type: 'real_estate', name: 'New Jersey Home', description: 'Residence in New Jersey where the Fugees star based his music career.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 }
     ],
     gossip: [
       { title: 'Fugees Reunion Tour Collapse', summary: 'The highly anticipated Fugees reunion tour in 2021 was abruptly cancelled amid legal issues surrounding Pras Michel. Wyclef Jean has continued as a solo artist with international performances.', type: 'gossip', date: 'Dec 2021' }
@@ -119,7 +119,7 @@ export const extras_13: Record<string, Ext> = {
   'xavier-dolan': {
     avatar: 'https://ui-avatars.com/api/?name=Xavier+Dolan&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'xavier-dolan-1', type: 'real_estate', name: 'Montreal Loft', description: 'Artistic loft in Montreal reflecting his Quebec cinematic roots.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 210 }
+      { id: 'xavier-dolan-1', type: 'real_estate', name: 'Montreal Loft', description: 'Artistic loft in Montreal reflecting his Quebec cinematic roots.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 210 }
     ],
     gossip: [
       { title: 'Cannes Favorite Returns', summary: 'Xavier Dolan, who won the Grand Prix at Cannes with Mommy, has been developing new film projects after a period of stepping back from directing. He remains one of Canada\'s most acclaimed filmmakers internationally.', type: 'gossip', date: 'May 2023' }
@@ -128,8 +128,8 @@ export const extras_13: Record<string, Ext> = {
   'yo-gotti': {
     avatar: 'https://ui-avatars.com/api/?name=Yo+Gotti&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'yo-gotti-1', type: 'real_estate', name: 'Memphis Mansion', description: 'Grand residence in Memphis, Tennessee representing his hometown roots.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 450 },
-      { id: 'yo-gotti-2', type: 'car', name: 'Lamborghini Urus', description: 'High-performance luxury SUV featured in his music videos.', estimatedValue: 0.004, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 610 }
+      { id: 'yo-gotti-1', type: 'real_estate', name: 'Memphis Mansion', description: 'Grand residence in Memphis, Tennessee representing his hometown roots.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 450 },
+      { id: 'yo-gotti-2', type: 'car', name: 'Lamborghini Urus', description: 'High-performance luxury SUV featured in his music videos.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 610 }
     ],
     gossip: [
       { title: 'CMG Records Dominance', summary: 'Yo Gotti\'s Collective Music Group label has become one of rap\'s most successful independent labels, home to artists like Moneybagg Yo. The label\'s success has significantly boosted his net worth beyond music.', type: 'gossip', date: 'Jul 2023' }
@@ -139,7 +139,7 @@ export const extras_13: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Zendaya&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'zendaya-1', type: 'real_estate', name: 'Encino Estate', description: 'Spacious California estate purchased after her Emmy Award wins.', estimatedValue: 0.014, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1450 },
-      { id: 'zendaya-2', type: 'car', name: 'Mercedes-Benz AMG', description: 'Sleek performance vehicle matching her Hollywood star status.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 1100 }
+      { id: 'zendaya-2', type: 'car', name: 'Mercedes-Benz AMG', description: 'Sleek performance vehicle matching her Hollywood star status.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 1100 }
     ],
     gossip: [
       { title: 'Youngest Two-Time Emmy Winner', summary: 'Zendaya made history as the youngest actress to win two Emmy Awards for Outstanding Lead Actress in a Drama Series for her role in Euphoria. Her film career has simultaneously soared with Dune and Challengers.', type: 'gossip', date: 'Sep 2022' }
@@ -148,8 +148,8 @@ export const extras_13: Record<string, Ext> = {
   'a-boogie-wit-da-hoodie': {
     avatar: 'https://ui-avatars.com/api/?name=A+Boogie+Wit+da+Hoodie&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'a-boogie-wit-da-hoodie-1', type: 'real_estate', name: 'Bronx Area Home', description: 'Property near his Highbridge, Bronx roots.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 },
-      { id: 'a-boogie-wit-da-hoodie-2', type: 'car', name: 'Dodge Challenger', description: 'American muscle car matching his Bronx street aesthetic.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 460 }
+      { id: 'a-boogie-wit-da-hoodie-1', type: 'real_estate', name: 'Bronx Area Home', description: 'Property near his Highbridge, Bronx roots.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 },
+      { id: 'a-boogie-wit-da-hoodie-2', type: 'car', name: 'Dodge Challenger', description: 'American muscle car matching his Bronx street aesthetic.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 460 }
     ],
     gossip: [
       { title: 'Streaming Record Breaker', summary: 'A Boogie Wit da Hoodie became one of the most streamed artists of his generation with multiple platinum albums by his mid-twenties. His Artist 2.0 album debuted at number one on the Billboard 200.', type: 'gossip', date: 'Dec 2021' }
@@ -158,7 +158,7 @@ export const extras_13: Record<string, Ext> = {
   'abdeslam-ouadou': {
     avatar: 'https://ui-avatars.com/api/?name=Hamza+Choudhury&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'abdeslam-ouadou-1', type: 'real_estate', name: 'Leicester Property', description: 'Home in the East Midlands during his time with Leicester City.', estimatedValue: 0.004, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 140 }
+      { id: 'abdeslam-ouadou-1', type: 'real_estate', name: 'Leicester Property', description: 'Home in the East Midlands during his time with Leicester City.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 140 }
     ],
     gossip: [
       { title: 'Premier League Journey', summary: 'Hamza Choudhury established himself as a tough-tackling midfielder in the Premier League with Leicester City before moving on to other clubs. He has represented the England national team at youth level.', type: 'gossip', date: 'Aug 2023' }
@@ -187,7 +187,7 @@ export const extras_13: Record<string, Ext> = {
   'adnan-sami': {
     avatar: 'https://ui-avatars.com/api/?name=Adnan+Sami&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'adnan-sami-1', type: 'real_estate', name: 'Mumbai Residence', description: 'Upscale home in Mumbai where he settled after gaining Indian citizenship.', estimatedValue: 0.007, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 270 }
+      { id: 'adnan-sami-1', type: 'real_estate', name: 'Mumbai Residence', description: 'Upscale home in Mumbai where he settled after gaining Indian citizenship.', estimatedValue: 7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 270 }
     ],
     gossip: [
       { title: 'Indian Citizenship Journey', summary: 'Pakistani-born singer Adnan Sami was granted Indian citizenship in 2016 after years of living in the country, sparking political debate on both sides of the border. He has since been awarded India\'s fourth-highest civilian honor, the Padma Shri.', type: 'gossip', date: 'Jan 2020' }
@@ -196,7 +196,7 @@ export const extras_13: Record<string, Ext> = {
   'afua-asante': {
     avatar: 'https://ui-avatars.com/api/?name=Didier+Ndong&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'afua-asante-1', type: 'real_estate', name: 'Sunderland Property', description: 'Property acquired during his time as a Sunderland AFC midfielder.', estimatedValue: 0.002, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 110 }
+      { id: 'afua-asante-1', type: 'real_estate', name: 'Sunderland Property', description: 'Property acquired during his time as a Sunderland AFC midfielder.', estimatedValue: 2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 110 }
     ],
     gossip: [
       { title: 'Contract Dispute at Sunderland', summary: 'Didier Ndong departed Sunderland AFC amid controversy when the club was unable to fulfill his contract obligations following their relegation and financial difficulties. The saga highlighted the financial risks for players at struggling clubs.', type: 'gossip', date: 'Oct 2018' }
@@ -205,7 +205,7 @@ export const extras_13: Record<string, Ext> = {
   'agbani-darego': {
     avatar: 'https://ui-avatars.com/api/?name=Agbani+Darego&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'agbani-darego-1', type: 'real_estate', name: 'Lagos Residence', description: 'Contemporary home in Lagos befitting Nigeria\'s first Miss World winner.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 230 }
+      { id: 'agbani-darego-1', type: 'real_estate', name: 'Lagos Residence', description: 'Contemporary home in Lagos befitting Nigeria\'s first Miss World winner.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 230 }
     ],
     gossip: [
       { title: 'Historic Miss World Victory', summary: 'Agbani Darego became the first Black African woman to win the Miss World pageant in 2001, a landmark moment for the continent. She subsequently built a modeling and business career across Africa and internationally.', type: 'gossip', date: 'Jan 2022' }
@@ -214,7 +214,7 @@ export const extras_13: Record<string, Ext> = {
   'agnes-monica': {
     avatar: 'https://ui-avatars.com/api/?name=Agnez+Mo&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'agnes-monica-1', type: 'real_estate', name: 'Los Angeles Home', description: 'California base for her international music career expansion.', estimatedValue: 0.005, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 }
+      { id: 'agnes-monica-1', type: 'real_estate', name: 'Los Angeles Home', description: 'California base for her international music career expansion.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 }
     ],
     gossip: [
       { title: 'Southeast Asia to Hollywood', summary: 'Agnez Mo successfully transitioned from Indonesia\'s biggest pop star to pursuing an international music career in the United States, collaborating with American artists. She rebranded under the name Agnez Mo for her global push.', type: 'gossip', date: 'Nov 2022' }
@@ -243,7 +243,7 @@ export const extras_13: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Aishwarya+Rai&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'aishwarya-rai-1', type: 'real_estate', name: 'Mumbai Bungalow', description: 'Iconic Jalsa bungalow shared with the Bachchan family in Juhu, Mumbai.', estimatedValue: 0.014, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1050 },
-      { id: 'aishwarya-rai-2', type: 'watch', name: 'Diamond Watch Collection', description: 'Exquisite timepiece collection befitting a former Miss World.', estimatedValue: 0.005, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 880 }
+      { id: 'aishwarya-rai-2', type: 'watch', name: 'Diamond Watch Collection', description: 'Exquisite timepiece collection befitting a former Miss World.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 880 }
     ],
     gossip: [
       { title: 'Cannes Red Carpet Icon', summary: 'Aishwarya Rai Bachchan has been a fixture at the Cannes Film Festival for over two decades as a L\'Oreal Paris ambassador, consistently making international best-dressed lists. Her appearances generate global media coverage each year.', type: 'gossip', date: 'May 2023' }
@@ -271,7 +271,7 @@ export const extras_13: Record<string, Ext> = {
   'aleksander-ceferin': {
     avatar: 'https://ui-avatars.com/api/?name=Aleksander+Ceferin&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'aleksander-ceferin-1', type: 'real_estate', name: 'Ljubljana Residence', description: 'Home in the Slovenian capital maintained alongside his UEFA presidency.', estimatedValue: 0.002, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 160 }
+      { id: 'aleksander-ceferin-1', type: 'real_estate', name: 'Ljubljana Residence', description: 'Home in the Slovenian capital maintained alongside his UEFA presidency.', estimatedValue: 2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 160 }
     ],
     gossip: [
       { title: 'Super League Opposition', summary: 'UEFA President Aleksander Ceferin led the fierce institutional opposition to the proposed European Super League in 2021, successfully pressuring most clubs to withdraw within days of the announcement. He positioned UEFA as the defender of football\'s traditional structure.', type: 'gossip', date: 'Apr 2021' }
@@ -291,7 +291,7 @@ export const extras_13: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Alex+Morgan&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'alex-morgan-1', type: 'real_estate', name: 'Orlando Home', description: 'Florida residence maintained during her time with the Orlando Pride.', estimatedValue: 0.022, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 720 },
-      { id: 'alex-morgan-2', type: 'car', name: 'Tesla Model X', description: 'Electric SUV reflecting her environmental consciousness.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 590 }
+      { id: 'alex-morgan-2', type: 'car', name: 'Tesla Model X', description: 'Electric SUV reflecting her environmental consciousness.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 590 }
     ],
     gossip: [
       { title: 'USWNT Equal Pay Victory', summary: 'Alex Morgan was a central figure in the landmark US Women\'s National Team equal pay lawsuit that resulted in a $24 million settlement with US Soccer in 2022. The victory set a precedent for gender equity in professional sports.', type: 'gossip', date: 'Feb 2022' }

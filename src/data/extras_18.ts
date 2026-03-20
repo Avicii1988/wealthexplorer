@@ -3,7 +3,7 @@ export const extras_18: Record<string, Ext> = {
   'dafne-keen': {
     avatar: 'https://ui-avatars.com/api/?name=Dafne+Keen&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'dafne-keen-1', type: 'real_estate', name: 'London Family Home', description: 'A charming property in London shared with her family, reflecting her British-Spanish roots.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 120 }
+      { id: 'dafne-keen-1', type: 'real_estate', name: 'London Family Home', description: 'A charming property in London shared with her family, reflecting her British-Spanish roots.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 120 }
     ],
     gossip: [
       { title: 'Logan Breakout Star', summary: 'Dafne Keen gained worldwide recognition for her role as X-23 in Logan opposite Hugh Jackman. Her powerful performance earned her a BAFTA nomination at just 12 years old.', type: 'gossip', date: 'Mar 2017' }
@@ -13,7 +13,7 @@ export const extras_18: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Dani+Alves&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'dani-alves-1', type: 'real_estate', name: 'Barcelona Luxury Villa', description: 'A stunning villa in Barcelona acquired during his successful years with FC Barcelona.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 },
-      { id: 'dani-alves-2', type: 'car', name: 'Exotic Car Collection', description: 'A curated collection of luxury and exotic vehicles reflecting his flamboyant lifestyle.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 280 }
+      { id: 'dani-alves-2', type: 'car', name: 'Exotic Car Collection', description: 'A curated collection of luxury and exotic vehicles reflecting his flamboyant lifestyle.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 280 }
     ],
     gossip: [
       { title: 'Most Decorated Footballer Ever', summary: 'Dani Alves holds the record for the most trophies won by any footballer in history, with over 40 titles across his career. His trophy haul includes multiple Champions League and league titles across Europe.', type: 'gossip', date: 'Jul 2022' }
@@ -22,7 +22,7 @@ export const extras_18: Record<string, Ext> = {
   'danielle-brooks': {
     avatar: 'https://ui-avatars.com/api/?name=Danielle+Brooks&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'danielle-brooks-1', type: 'real_estate', name: 'New York City Apartment', description: 'A stylish apartment in New York City where she built her career on stage and screen.', estimatedValue: 0.004, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 150 }
+      { id: 'danielle-brooks-1', type: 'real_estate', name: 'New York City Apartment', description: 'A stylish apartment in New York City where she built her career on stage and screen.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 150 }
     ],
     gossip: [
       { title: 'Oscar Nomination for The Color Purple', summary: 'Danielle Brooks received an Academy Award nomination for Best Supporting Actress for her role in The Color Purple musical film adaptation. The nomination marked a major milestone in her career beyond her beloved OITNB role.', type: 'gossip', date: 'Jan 2024' }
@@ -42,7 +42,7 @@ export const extras_18: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=David+Chang&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'david-chang-1', type: 'real_estate', name: 'New York City Home', description: 'A property in New York City near his flagship Momofuku restaurant empire that transformed American dining.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 270 },
-      { id: 'david-chang-2', type: 'art', name: 'Contemporary Art Collection', description: 'A curated collection of contemporary art pieces reflecting his avant-garde approach to culture and cuisine.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 190 }
+      { id: 'david-chang-2', type: 'art', name: 'Contemporary Art Collection', description: 'A curated collection of contemporary art pieces reflecting his avant-garde approach to culture and cuisine.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 190 }
     ],
     gossip: [
       { title: 'Momofuku Empire Expansion', summary: 'David Chang\'s Momofuku restaurant group expanded into a major culinary brand with locations across North America and a successful line of consumer food products. His pivot to packaged goods during the pandemic proved remarkably successful.', type: 'gossip', date: 'Sep 2021' }
@@ -78,7 +78,7 @@ export const extras_18: Record<string, Ext> = {
   'deb-haaland': {
     avatar: 'https://ui-avatars.com/api/?name=Deb+Haaland&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'deb-haaland-1', type: 'real_estate', name: 'Albuquerque Home', description: 'A modest home in Albuquerque, New Mexico reflecting her community-focused values and deep roots in the state.', estimatedValue: 0.0008, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 90 }
+      { id: 'deb-haaland-1', type: 'real_estate', name: 'Albuquerque Home', description: 'A modest home in Albuquerque, New Mexico reflecting her community-focused values and deep roots in the state.', estimatedValue: 0.8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 90 }
     ],
     gossip: [
       { title: 'Historic Cabinet Appointment', summary: 'Deb Haaland became the first Native American to serve as a U.S. Cabinet secretary when she was confirmed as Secretary of the Interior in 2021. Her appointment was celebrated as a historic milestone for Indigenous representation in American government.', type: 'gossip', date: 'Mar 2021' }
@@ -87,7 +87,7 @@ export const extras_18: Record<string, Ext> = {
   'deborah-ann-woll': {
     avatar: 'https://ui-avatars.com/api/?name=Deborah+Ann+Woll&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'deborah-ann-woll-1', type: 'real_estate', name: 'Los Angeles Home', description: 'A comfortable Los Angeles residence where she balances her acting career and her passion for tabletop gaming.', estimatedValue: 0.007, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 175 }
+      { id: 'deborah-ann-woll-1', type: 'real_estate', name: 'Los Angeles Home', description: 'A comfortable Los Angeles residence where she balances her acting career and her passion for tabletop gaming.', estimatedValue: 7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 175 }
     ],
     gossip: [
       { title: 'Dungeons & Dragons Influencer', summary: 'Deborah Ann Woll became a prominent figure in the tabletop gaming community through her game mastering and advocacy for D&D as a therapeutic tool. Her campaign for accessibility and inclusion in gaming has inspired thousands of fans.', type: 'gossip', date: 'Jun 2023' }
@@ -107,7 +107,7 @@ export const extras_18: Record<string, Ext> = {
     avatar: 'https://ui-avatars.com/api/?name=Deontay+Wilder&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
       { id: 'deontay-wilder-1', type: 'real_estate', name: 'Alabama Estate', description: 'A grand estate in Alabama near his hometown of Tuscaloosa, where he remains a local hero and community figure.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 },
-      { id: 'deontay-wilder-2', type: 'car', name: 'Luxury Car Collection', description: 'An impressive fleet of luxury and custom vehicles reflecting the Bronze Bomber\'s flamboyant ring persona.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 220 }
+      { id: 'deontay-wilder-2', type: 'car', name: 'Luxury Car Collection', description: 'An impressive fleet of luxury and custom vehicles reflecting the Bronze Bomber\'s flamboyant ring persona.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 220 }
     ],
     gossip: [
       { title: 'Fury Trilogy Epic Rivalry', summary: 'Deontay Wilder and Tyson Fury engaged in one of boxing\'s greatest modern trilogies, with Wilder suffering back-to-back stoppages after their dramatic first draw. The rivalry captivated the heavyweight division and brought boxing back to mainstream attention.', type: 'gossip', date: 'Oct 2021' }
@@ -116,7 +116,7 @@ export const extras_18: Record<string, Ext> = {
   'desiigner': {
     avatar: 'https://ui-avatars.com/api/?name=Desiigner+Sidney&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'desiigner-1', type: 'car', name: 'Custom Panda-Themed Vehicle', description: 'A customized vehicle inspired by his breakthrough hit Panda, reflecting his unique artistic brand.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 110 }
+      { id: 'desiigner-1', type: 'car', name: 'Custom Panda-Themed Vehicle', description: 'A customized vehicle inspired by his breakthrough hit Panda, reflecting his unique artistic brand.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 110 }
     ],
     gossip: [
       { title: 'Panda Reaches Number One', summary: 'Desiigner\'s debut single Panda reached number one on the Billboard Hot 100 in 2016, making him a global sensation overnight. Despite the massive hit, he struggled to replicate the success and was released from G.O.O.D. Music in 2019.', type: 'gossip', date: 'Feb 2016' }
@@ -125,7 +125,7 @@ export const extras_18: Record<string, Ext> = {
   'dmitry-peskov': {
     avatar: 'https://ui-avatars.com/api/?name=Dmitry+Peskov&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'dmitry-peskov-1', type: 'watch', name: 'Luxury Watch Collection', description: 'Peskov sparked controversy when photographed wearing an expensive Richard Mille watch worth hundreds of thousands of dollars while serving as Kremlin spokesman.', estimatedValue: 0.0035, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 140 }
+      { id: 'dmitry-peskov-1', type: 'watch', name: 'Luxury Watch Collection', description: 'Peskov sparked controversy when photographed wearing an expensive Richard Mille watch worth hundreds of thousands of dollars while serving as Kremlin spokesman.', estimatedValue: 3.5, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 140 }
     ],
     gossip: [
       { title: 'Luxury Watch Scandal', summary: 'Dmitry Peskov drew significant criticism when he was spotted wearing a Richard Mille watch estimated at over $600,000 at his wedding, contradicting Russia\'s official narrative about Western sanctions having little impact. The incident became a symbol of elite hypocrisy in Russia.', type: 'gossip', date: 'Aug 2015' }
@@ -134,7 +134,7 @@ export const extras_18: Record<string, Ext> = {
   'dolores-huerta': {
     avatar: 'https://ui-avatars.com/api/?name=Dolores+Huerta&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'dolores-huerta-1', type: 'real_estate', name: 'Stockton Community Home', description: 'A modest home in California\'s Central Valley where she has dedicated her life to labor rights and community organizing.', estimatedValue: 0.0007, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 85 }
+      { id: 'dolores-huerta-1', type: 'real_estate', name: 'Stockton Community Home', description: 'A modest home in California\'s Central Valley where she has dedicated her life to labor rights and community organizing.', estimatedValue: 0.7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 85 }
     ],
     gossip: [
       { title: 'Presidential Medal of Freedom', summary: 'Dolores Huerta received the Presidential Medal of Freedom from President Obama in 2012, recognizing her decades of work co-founding the United Farm Workers union with Cesar Chavez. At over 90 years old, she continues to actively campaign for workers\' rights.', type: 'gossip', date: 'May 2012' }
@@ -152,7 +152,7 @@ export const extras_18: Record<string, Ext> = {
   'domino-kirke': {
     avatar: 'https://ui-avatars.com/api/?name=Domino+Kirke&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'domino-kirke-1', type: 'real_estate', name: 'Brooklyn Creative Loft', description: 'A creative loft space in Brooklyn that serves as both her home and artistic studio for her music and doula work.', estimatedValue: 0.003, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 100 }
+      { id: 'domino-kirke-1', type: 'real_estate', name: 'Brooklyn Creative Loft', description: 'A creative loft space in Brooklyn that serves as both her home and artistic studio for her music and doula work.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 100 }
     ],
     gossip: [
       { title: 'Marriage to Penn Badgley', summary: 'Domino Kirke married actor Penn Badgley of You fame in 2017, combining two creative New York families into one artistic household. The couple welcomed a son together while both continued to pursue their respective careers.', type: 'gossip', date: 'Feb 2017' }
@@ -199,7 +199,7 @@ export const extras_18: Record<string, Ext> = {
   'dua-saleh': {
     avatar: 'https://ui-avatars.com/api/?name=Moses+Sumney&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'dua-saleh-1', type: 'real_estate', name: 'Minneapolis Creative Space', description: 'A creative living and working space in Minneapolis that reflects their artistic and activist community ties.', estimatedValue: 0.0012, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 70 }
+      { id: 'dua-saleh-1', type: 'real_estate', name: 'Minneapolis Creative Space', description: 'A creative living and working space in Minneapolis that reflects their artistic and activist community ties.', estimatedValue: 1.2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 70 }
     ],
     gossip: [
       { title: 'Sex Education Breakout Role', summary: 'Dua Saleh gained significant international attention for their role as Cal in the Netflix series Sex Education, bringing authentic non-binary representation to mainstream television. Their performance was praised for its nuance and helped spark broader conversations about gender identity in media.', type: 'gossip', date: 'Jan 2021' }
