@@ -665,8 +665,15 @@ export default function ProfilePage() {
               <span className="text-sm text-gray-400 uppercase tracking-widest">{celeb.nationality}</span>
             </div>
 
-            <p className="text-gray-400 text-sm leading-relaxed mb-7 max-w-lg">
+            <p className="text-gray-400 text-sm leading-relaxed mb-3 max-w-lg">
               {celeb.bio}
+            </p>
+            <p className="text-[11px] text-gray-600 mb-7">
+              {(() => {
+                const raw = celeb.lastUpdated ?? '2026-03-20'
+                const d = new Date(raw)
+                return `Updated ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`
+              })()}
             </p>
 
             {/* Stats row */}
@@ -711,10 +718,17 @@ export default function ProfilePage() {
         // Duplicate for seamless loop
         const items = [...pool, ...pool]
         return (
-          <section className="py-12 border-t border-white/8 overflow-hidden">
+          <section className="py-12 overflow-hidden">
             <div className="max-w-5xl mx-auto px-5 mb-5">
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500">{t('moreProfiles')}</p>
             </div>
+            <div
+              className="overflow-hidden"
+              style={{
+                maskImage: 'linear-gradient(to right, transparent 0px, black 80px, black calc(100% - 80px), transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to right, transparent 0px, black 80px, black calc(100% - 80px), transparent 100%)',
+              }}
+            >
             <div
               className="flex gap-3 w-max"
               style={{
@@ -750,6 +764,7 @@ export default function ProfilePage() {
                   </div>
                 </Link>
               ))}
+            </div>
             </div>
           </section>
         )

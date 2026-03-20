@@ -17,7 +17,7 @@ export interface Asset {
   location?: string;
   specs?: string;
   likes: number;
-  isNew?: boolean;
+  isNew?: boolean | string;
 }
 
 export interface Celebrity {
@@ -31,7 +31,8 @@ export interface Celebrity {
   bio: string;
   assets: Asset[];
   trending: boolean;
-  isNew?: boolean; // profile recently added
+  isNew?: string; // ISO date the profile was added — shown as NEW badge for 24 h
+  lastUpdated?: string; // ISO date e.g. '2026-03-20'
   // Bio overview fields
   birthdate: string;
   birthplace: string;
@@ -55,7 +56,7 @@ export interface Celebrity {
     summary: string
     type?: 'gossip' | 'controversy'
     date?: string
-    isNew?: boolean
+    isNew?: boolean | string
   }[]
 }
 
@@ -240,7 +241,7 @@ export const celebrities: Celebrity[] = [
         summary: 'Musk\'s role as head of the Department of Government Efficiency (DOGE) under President Trump drew massive controversy. Critics argued a private billionaire had unprecedented access to federal systems, while supporters claimed he was cutting wasteful spending. Multiple lawsuits were filed challenging the legality of DOGE.',
         type: 'controversy',
         date: 'Jan 2025',
-        isNew: true,
+        isNew: '2026-03-20',
       },
       {
         title: 'Children & Relationships Drama',
@@ -291,7 +292,7 @@ export const celebrities: Celebrity[] = [
         image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=900&h=600&fit=crop&q=85',
         year: 2023,
         specs: 'Ultra-hard 30X cold-rolled stainless steel · 845 hp · 500 mi range',
-        isNew: true,
+        isNew: '2026-03-20',
         likes: 8932,
       },
     ],
@@ -341,7 +342,7 @@ export const celebrities: Celebrity[] = [
         summary: 'In 2024 Bezos blocked the Washington Post from endorsing a presidential candidate, reversing a decades-long tradition. More than 250,000 subscribers cancelled, and senior editorial staff resigned in protest, raising questions about billionaire ownership of major news outlets.',
         type: 'controversy',
         date: 'Oct 2024',
-        isNew: true,
+        isNew: '2026-03-20',
       },
     ],
     assets: [
@@ -354,7 +355,7 @@ export const celebrities: Celebrity[] = [
         image: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85',
         year: 2023,
         specs: '127m · 3 masts · 8 cabins · 18 guests · 58 crew · $75M build cost per year to operate',
-        isNew: true,
+        isNew: '2026-03-20',
         likes: 9410,
       },
       {
@@ -641,7 +642,7 @@ export const celebrities: Celebrity[] = [
         summary: 'Jay-Z was named in a 2024 lawsuit related to allegations against Sean "Diddy" Combs, filed by a woman who claimed she was assaulted at a party in 2000. Jay-Z publicly denied the allegations, calling the lawsuit a "shakedown" and "disgusting." His lawyers filed to have his name removed from the case. The lawsuit was ultimately dismissed in 2025, though the broader Combs legal saga roiled hip-hop\'s inner circle.',
         type: 'controversy',
         date: 'Oct 2024',
-        isNew: true,
+        isNew: '2026-03-20',
       },
     ],
     assets: [
@@ -715,7 +716,7 @@ export const celebrities: Celebrity[] = [
         summary: 'Forbes confirmed in 2022 that LeBron had become the first active NBA player to reach billionaire status, driven by his SpringHill Company media empire, Fenway Sports Group stake (Liverpool FC and Red Sox), Blaze Pizza investment, and Nike lifetime deal worth over $1 billion. He became the first athlete to build a billion-dollar brand while still playing at an elite level.',
         type: 'gossip',
         date: 'Jun 2022',
-        isNew: true,
+        isNew: '2026-03-20',
       },
       {
         title: 'China Tweet Controversy',
@@ -805,7 +806,7 @@ export const celebrities: Celebrity[] = [
         summary: 'Rihanna headlined the 2023 Super Bowl LVII Halftime Show in Glendale, Arizona — her first live performance in seven years. During the show she revealed a baby bump, confirming her second pregnancy with A$AP Rocky. The moment became one of the most-discussed Super Bowl moments in history and the performance drew 121 million viewers.',
         type: 'gossip',
         date: 'Feb 2023',
-        isNew: true,
+        isNew: '2026-03-20',
       },
     ],
     assets: [
@@ -961,7 +962,7 @@ export const celebrities: Celebrity[] = [
         summary: 'Kim\'s shapewear brand SKIMS reached a $4 billion valuation in 2023 after just four years, becoming one of the fastest-growing fashion brands in history. The brand expanded into menswear and became the official underwear partner of Team USA at the 2024 Paris Olympics.',
         type: 'gossip',
         date: 'Jul 2023',
-        isNew: true,
+        isNew: '2026-03-20',
       },
     ],
     assets: [
@@ -1051,7 +1052,7 @@ export const celebrities: Celebrity[] = [
         summary: 'Jordan sold his majority stake in the Charlotte Hornets in 2023 for a reported $3 billion valuation — having purchased it for around $275M a decade earlier. The deal made him one of the most successful sports franchise investors in history and ended his historic run as the NBA\'s only player-turned-controlling-owner.',
         type: 'gossip',
         date: 'Jun 2023',
-        isNew: true,
+        isNew: '2026-03-20',
       },
       {
         title: 'The Gambling Allegations',
@@ -1149,7 +1150,7 @@ export const celebrities: Celebrity[] = [
         summary: 'After the devastating 2023 Maui wildfires, Oprah and Dwayne Johnson launched a People\'s Fund of Maui. However, they faced criticism when a video emerged of Oprah seemingly defending herself over accusations that wealthy Maui landowners were slow to donate. The fund ultimately raised over $60M but the optics of billionaires soliciting public donations drew sharp social media criticism.',
         type: 'controversy',
         date: 'Aug 2023',
-        isNew: true,
+        isNew: '2026-03-20',
       },
     ],
     assets: [
@@ -1234,7 +1235,7 @@ export const celebrities: Celebrity[] = [
         summary: 'Messi\'s 2023 move to Inter Miami CF — co-owned by David Beckham — was the most anticipated sporting transfer in American history. He reportedly turned down larger offers from Al Hilal (Saudi Arabia) and Barcelona. The deal is worth an estimated $50–$60M annually including revenue-sharing agreements with Apple MLS streaming and Adidas. His debut drew record MLS viewing figures.',
         type: 'gossip',
         date: 'Jul 2023',
-        isNew: true,
+        isNew: '2026-03-20',
       },
     ],
     assets: [
@@ -1328,7 +1329,7 @@ export const celebrities: Celebrity[] = [
         summary: 'The 2023 Renaissance World Tour became the highest-grossing concert tour by a Black artist in history, earning over $580 million across 56 shows. Cities that hosted her tour reported measurable economic boosts — the "Beyoncé Effect" was credited with stimulating local inflation in Stockholm and Edinburgh. Blue Ivy Carter, age 11, performed on stage.',
         type: 'gossip',
         date: 'May 2023',
-        isNew: true,
+        isNew: '2026-03-20',
       },
     ],
     assets: [
@@ -1421,7 +1422,7 @@ export const celebrities: Celebrity[] = [
         summary: 'In 2023 Zuckerberg challenged Elon Musk to a cage fight after Musk taunted Meta\'s new app Threads. Both sides traded barbs online for months, with Zuckerberg training publicly with UFC champions. Musk ultimately backed out, claiming a need for neck surgery. The spectacle drew global media attention and made Zuckerberg an unlikely internet hero for his legitimate MMA training.',
         type: 'gossip',
         date: 'Jun 2023',
-        isNew: true,
+        isNew: '2026-03-20',
       },
     ],
     assets: [
@@ -1648,7 +1649,7 @@ export const celebrities: Celebrity[] = [
         summary: 'The 2024 rap beef between Drake and Kendrick Lamar became the most-viewed hip-hop feud in internet history. Lamar\'s diss track Not Like Us reached #1 on the Billboard Hot 100, while Kendrick performed it live at the 2025 Super Bowl Halftime Show in front of 133 million viewers. Drake filed lawsuits against Universal Music Group alleging they promoted the track as a "hit job."',
         type: 'controversy',
         date: 'May 2024',
-        isNew: true,
+        isNew: '2026-03-20',
       },
       {
         title: 'Secret Son Revealed',
@@ -1673,7 +1674,7 @@ export const celebrities: Celebrity[] = [
         image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop&q=85',
         year: 2019,
         specs: '50,000 sq ft · NBA court · recording studio · indoor pool',
-        isNew: true,
+        isNew: '2026-03-20',
         likes: 14020,
       },
     ],
@@ -1799,7 +1800,7 @@ export const celebrities: Celebrity[] = [
         image: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85',
         year: 2015,
         specs: 'Gulfstream G650 · 7,000 nm range · 18 passengers · custom TMT interior',
-        isNew: true,
+        isNew: '2026-03-20',
         likes: 12302,
       },
       {
@@ -1849,7 +1850,7 @@ export const celebrities: Celebrity[] = [
         summary: 'In 2023, Jada Pinkett Smith revealed in her memoir Worthy that she and Will Smith had been living separately since 2016 and had effectively been in an open marriage arrangement. She also publicly confirmed she had been in a relationship with singer August Alsina, which Will had previously disputed. The book\'s release became a cultural conversation about celebrity marriages.',
         type: 'gossip',
         date: 'Oct 2023',
-        isNew: true,
+        isNew: '2026-03-20',
       },
       {
         title: 'Scientology Allegations & Blackout',
@@ -1926,7 +1927,7 @@ export const celebrities: Celebrity[] = [
         location: 'Indian Creek Island, Miami Beach',
         specs: 'Waterfront · private beach · dock · Indian Creek Island community',
         year: 2023,
-        isNew: true,
+        isNew: '2026-03-20',
         likes: 9820,
       },
     ],
