@@ -708,6 +708,7 @@ export default function ProfilePage() {
           ...celebrities.filter(c => c.id !== celeb.id && c.category === celeb.category),
           ...celebrities.filter(c => c.id !== celeb.id && c.category !== celeb.category),
         ].slice(0, 48)
+        // Duplicate for seamless loop
         const items = [...pool, ...pool]
         return (
           <section className="py-12 border-t border-white/8 overflow-hidden">
@@ -716,7 +717,10 @@ export default function ProfilePage() {
             </div>
             <div
               className="flex gap-3 w-max"
-              style={{ animation: 'carousel-scroll 60s linear infinite', paddingLeft: '20px' }}
+              style={{
+                animation: 'carousel-scroll 60s linear infinite',
+                paddingLeft: '20px',
+              }}
               onMouseEnter={e => (e.currentTarget.style.animationPlayState = 'paused')}
               onMouseLeave={e => (e.currentTarget.style.animationPlayState = 'running')}
             >

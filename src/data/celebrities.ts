@@ -1,6 +1,7 @@
 // Photo cache populated by scripts/enrich-photos.mjs (Wikipedia → TMDb chain)
 import photosCache from './photosCache.json'
 import { extraCelebrities } from './extraCelebrities'
+import { allExtensions } from './extraCelebritiesExtended'
 
 export type AssetType = 'jet' | 'yacht' | 'real_estate' | 'car' | 'watch' | 'art' | 'helicopter' | 'island' | 'sports_team' | 'rocket';
 export type Category = 'All' | 'Athletes' | 'Actors' | 'Musicians' | 'Entrepreneurs' | 'Politicians' | 'Models';
@@ -1930,8 +1931,18 @@ export const celebrities: Celebrity[] = [
       },
     ],
   },
-  // spread 284 extra slim profiles (A–Z expansion)
-  ...(extraCelebrities as unknown as Celebrity[]),
+  // spread extra profiles with extensions applied (avatar, assets, gossip)
+  ...(extraCelebrities.map(c => {
+    const ext = allExtensions[c.id]
+    if (!ext) return c
+    return {
+      ...c,
+      avatar: ext.avatar || c.avatar,
+      photos: ext.avatar ? [ext.avatar, ...c.photos.slice(1)] : c.photos,
+      assets: [...c.assets, ...(ext.assets || [])],
+      gossip: [...(c.gossip || []), ...(ext.gossip || [])],
+    }
+  }) as unknown as Celebrity[]),
 ];
 
 // Deduplicate: main profiles come first and take priority over slim extras
