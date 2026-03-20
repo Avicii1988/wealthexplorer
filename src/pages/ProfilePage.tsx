@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff, ArrowUp } from 'lucide-react'
+import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff, ArrowUp, ChevronLeft, ChevronRight } from 'lucide-react'
 import {
   celebrities,
   assetTypeIcons,
@@ -509,6 +509,129 @@ function LanguageSelector() {
   )
 }
 
+// ── MORE PROFILES — static scrollable carousel ────────────────────────────────
+function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[number]>[] }) {
+  const { t } = useLang()
+  const trackRef = useRef<HTMLDivElement>(null)
+  const CARD_W = 96   // card width px
+  const CARD_GAP = 12 // gap-3
+  const STEP = (CARD_W + CARD_GAP) * 4 // scroll 4 cards at a time
+
+  function canScrollLeft() {
+    return (trackRef.current?.scrollLeft ?? 0) > 4
+  }
+  function canScrollRight() {
+    const el = trackRef.current
+    if (!el) return false
+    return el.scrollLeft + el.clientWidth < el.scrollWidth - 4
+  }
+
+  const [atStart, setAtStart] = useState(true)
+  const [atEnd, setAtEnd] = useState(false)
+
+  function updateBounds() {
+    setAtStart(!canScrollLeft())
+    setAtEnd(!canScrollRight())
+  }
+
+  function scrollBy(dir: -1 | 1) {
+    trackRef.current?.scrollBy({ left: dir * STEP, behavior: 'smooth' })
+  }
+
+  return (
+    <section className="py-12 relative overflow-hidden">
+      {/* Header row with label + nav buttons */}
+      <div className="max-w-5xl mx-auto px-5 mb-5 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-2">
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500">{t('moreProfiles')}</p>
+          {/* Subtle scroll hint */}
+          <div className="flex items-center gap-0.5 opacity-40">
+            <ChevronLeft size={10} className="text-gray-500" />
+            <ChevronRight size={10} className="text-gray-500" />
+          </div>
+        </div>
+        {/* Prev / Next buttons */}
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <button
+            onClick={() => scrollBy(-1)}
+            disabled={atStart}
+            aria-label="Scroll left"
+            className="w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-200 disabled:opacity-25 disabled:cursor-not-allowed"
+            style={{ borderColor: 'rgba(201,168,76,0.35)', color: '#c9a84c', background: 'rgba(201,168,76,0.06)' }}
+          >
+            <ChevronLeft size={14} />
+          </button>
+          <button
+            onClick={() => scrollBy(1)}
+            disabled={atEnd}
+            aria-label="Scroll right"
+            className="w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-200 disabled:opacity-25 disabled:cursor-not-allowed"
+            style={{ borderColor: 'rgba(201,168,76,0.35)', color: '#c9a84c', background: 'rgba(201,168,76,0.06)' }}
+          >
+            <ChevronRight size={14} />
+          </button>
+        </div>
+      </div>
+
+      {/* Fade overlays on edges */}
+      <div className="absolute inset-y-0 left-0 pointer-events-none z-10"
+        style={{ width: 'calc((100% - min(100%, 1024px)) / 2 + 40px)', background: 'linear-gradient(to right, #0a0a0a 40%, transparent)' }}
+      />
+      <div className="absolute inset-y-0 right-0 pointer-events-none z-10"
+        style={{ width: 'calc((100% - min(100%, 1024px)) / 2 + 40px)', background: 'linear-gradient(to left, #0a0a0a 40%, transparent)' }}
+      />
+
+      {/* Scrollable track — no animation, user-controlled */}
+      <div
+        ref={trackRef}
+        onScroll={updateBounds}
+        className="flex gap-3 overflow-x-auto scrollbar-hide"
+        style={{ paddingLeft: '20px', paddingRight: '20px', cursor: 'grab' }}
+        onMouseDown={e => {
+          const el = e.currentTarget
+          el.style.cursor = 'grabbing'
+          const startX = e.pageX - el.scrollLeft
+          const onMove = (ev: MouseEvent) => { el.scrollLeft = ev.pageX - startX }
+          const onUp = () => {
+            el.style.cursor = 'grab'
+            window.removeEventListener('mousemove', onMove)
+            window.removeEventListener('mouseup', onUp)
+          }
+          window.addEventListener('mousemove', onMove)
+          window.addEventListener('mouseup', onUp)
+        }}
+      >
+        {pool.map(c => (
+          <Link key={c.id} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: CARD_W, touchAction: 'pan-y' }}>
+            <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2">
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
+              />
+              <div className="rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_10px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0" style={{ width: 52, height: 52 }}>
+                <img
+                  src={getAvatar(c)}
+                  alt={c.name}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 15%' }}
+                  onError={e => {
+                    (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
+                  }}
+                />
+              </div>
+              <div className="w-full">
+                <p className="text-[10px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
+                  {c.name}{DECEASED_IDS.has(c.id) && <span className="text-gray-600"> (†)</span>}
+                </p>
+                <p className="text-[9px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(c.netWorth)}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 // ── PROFILE PAGE ──────────────────────────────────────────────────────────────
 export default function ProfilePage() {
   const { id } = useParams<{ id: string }>()
@@ -517,9 +640,10 @@ export default function ProfilePage() {
   const [avatarError, setAvatarError] = useState(false)
   const [followed, setFollowed] = useState<Set<string>>(getFollowed)
 
-  // Scroll to top whenever the profile changes
+  // Scroll to top and reset per-profile UI state whenever the profile changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
+    setAvatarError(false)
   }, [id])
 
   const celeb = celebrities.find(c => c.id === id)
@@ -707,68 +831,17 @@ export default function ProfilePage() {
         <GlanceTable celeb={celeb} />
         <RelationshipsSection celeb={celeb} />
         <GossipSection celeb={celeb} />
-        {celeb.assets.length > 0 && <AssetsSection celeb={celeb} />}
+        {celeb.assets.length > 0 && <AssetsSection key={celeb.id} celeb={celeb} />}
       </main>
 
-      {/* ── MORE PROFILES — infinite carousel ──────────────────────── */}
+      {/* ── MORE PROFILES — static scrollable carousel ──────────────── */}
       {(() => {
         const pool = [
           ...celebrities.filter(c => c.id !== celeb.id && c.category === celeb.category),
           ...celebrities.filter(c => c.id !== celeb.id && c.category !== celeb.category),
         ].slice(0, 48)
-        // Duplicate for seamless loop
-        const items = [...pool, ...pool]
-        return (
-          <section className="py-12 relative overflow-hidden">
-            <div className="max-w-5xl mx-auto px-5 mb-5">
-              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500">{t('moreProfiles')}</p>
-            </div>
 
-            {/* Fade overlays — left/right edges aligned to max-w-5xl content column */}
-            <div className="absolute inset-y-0 left-0 pointer-events-none z-10"
-              style={{ width: 'calc((100% - min(100%, 1024px)) / 2 + 80px)', background: 'linear-gradient(to right, #0a0a0a 40%, transparent)' }}
-            />
-            <div className="absolute inset-y-0 right-0 pointer-events-none z-10"
-              style={{ width: 'calc((100% - min(100%, 1024px)) / 2 + 80px)', background: 'linear-gradient(to left, #0a0a0a 40%, transparent)' }}
-            />
-
-            <div
-              className="flex gap-3 w-max"
-              style={{ animation: 'carousel-scroll 60s linear infinite', paddingLeft: '20px' }}
-              onMouseEnter={e => (e.currentTarget.style.animationPlayState = 'paused')}
-              onMouseLeave={e => (e.currentTarget.style.animationPlayState = 'running')}
-              onTouchStart={e => (e.currentTarget.style.animationPlayState = 'paused')}
-              onTouchEnd={e => (e.currentTarget.style.animationPlayState = 'running')}
-            >
-              {items.map((c, i) => (
-                <Link key={`${c.id}-${i}`} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: 96, touchAction: 'manipulation' }}>
-                  <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2">
-                    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                      style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
-                    />
-                    <div className="rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_10px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0" style={{ width: 52, height: 52 }}>
-                      <img
-                        src={getAvatar(c)}
-                        alt={c.name}
-                        className="w-full h-full object-cover"
-                        style={{ objectPosition: 'center 15%' }}
-                        onError={e => {
-                          (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
-                        }}
-                      />
-                    </div>
-                    <div className="w-full">
-                      <p className="text-[10px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
-                        {c.name}{DECEASED_IDS.has(c.id) && <span className="text-gray-600"> (†)</span>}
-                      </p>
-                      <p className="text-[9px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(c.netWorth)}</p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )
+        return <MoreProfilesCarousel pool={pool} />
       })()}
 
       {/* ── DID WE MAKE A MISTAKE? ──────────────────────────────── */}
