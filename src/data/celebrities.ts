@@ -1,5 +1,7 @@
 // Photo cache populated by scripts/enrich-photos.mjs (Wikipedia → TMDb chain)
 import photosCache from './photosCache.json'
+// Asset photo cache populated by scripts/fetch-asset-images.mjs (SearchApi.io)
+import assetPhotosCache from './assetPhotosCache.json'
 import { extraCelebrities } from './extraCelebrities'
 import { allExtensions } from './extraCelebritiesExtended'
 
@@ -2046,5 +2048,111 @@ export function getNewAssets(): { celeb: Celebrity; asset: Asset }[] {
 export function getAvatar(celeb: Celebrity): string {
   const cache = photosCache as Record<string, string>
   return cache[celeb.id] || celeb.avatar
+}
+
+// ── Diverse Unsplash fallback pools per asset type ────────────────────────────
+// Used when an asset's hardcoded image URL is one of the known repeated/generic
+// placeholders. A deterministic hash of the asset ID picks a unique slot so the
+// same asset always gets the same picture, but different assets get different ones.
+const REPEATED_URLS = new Set([
+  'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop',
+])
+
+const ASSET_IMAGE_POOLS: Record<AssetType, string[]> = {
+  real_estate: [
+    'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85',
+  ],
+  car: [
+    'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1542362567-b07e54358753?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=900&h=600&fit=crop&q=85',
+  ],
+  jet: [
+    'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1569930784542-c6e1e6ef7ad4?w=900&h=600&fit=crop&q=85',
+  ],
+  yacht: [
+    'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1505916349660-8d91a99f8901?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85',
+  ],
+  watch: [
+    'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1620625515032-6ed0c1790c75?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=900&h=600&fit=crop&q=85',
+  ],
+  art: [
+    'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1533158628620-7e4d40ef1be5?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1549490349-8643362247b5?w=900&h=600&fit=crop&q=85',
+  ],
+  helicopter: [
+    'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=900&h=600&fit=crop&q=85',
+  ],
+  island: [
+    'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=900&h=600&fit=crop&q=85',
+  ],
+  sports_team: [
+    'https://images.unsplash.com/photo-1565620731385-539de3f57112?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1598891562936-6e1a75a24d93?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=900&h=600&fit=crop&q=85',
+  ],
+  rocket: [
+    'https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=900&h=600&fit=crop&q=85',
+    'https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=900&h=600&fit=crop&q=85',
+  ],
+}
+
+/** Simple djb2-style hash → stable index into the pool for a given asset ID */
+function hashId(id: string): number {
+  let h = 5381
+  for (let i = 0; i < id.length; i++) h = ((h << 5) + h) ^ id.charCodeAt(i)
+  return Math.abs(h)
+}
+
+/**
+ * Returns the best image URL for an asset.
+ * Priority: SearchApi cache > hardcoded image (if not a repeated generic) > diverse pool fallback
+ */
+export function getAssetImage(asset: Asset): string {
+  // 1. Use the SearchApi-fetched real photo if available
+  const apiCache = assetPhotosCache as Record<string, { url: string; thumbnail: string } | string>
+  const cached = apiCache[asset.id]
+  if (cached) return typeof cached === 'string' ? cached : cached.url
+
+  // 2. Use the hardcoded image if it's not one of the known repeated placeholders
+  if (asset.image && !REPEATED_URLS.has(asset.image)) return asset.image
+
+  // 3. Deterministically pick from the diverse per-type pool
+  const pool = ASSET_IMAGE_POOLS[asset.type] ?? ASSET_IMAGE_POOLS.real_estate
+  return pool[hashId(asset.id) % pool.length]
 }
 

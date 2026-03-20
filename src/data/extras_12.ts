@@ -51,7 +51,7 @@ export const extras_12: Record<string, Ext> = {
   'lil-nas-x': {
     avatar: 'https://ui-avatars.com/api/?name=Lil+Nas+X&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'lil-nas-x-1', type: 'watch', name: 'Luxury Watch Collection', description: 'A growing collection of high-end timepieces including Audemars Piguet and Rolex models.', estimatedValue: 0.005, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 640 }
+      { id: 'lil-nas-x-1', type: 'watch', name: 'Luxury Watch Collection', description: 'A growing collection of high-end timepieces including Audemars Piguet and Rolex models.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 640 }
     ],
     gossip: [
       { title: 'Record-Breaking Debut', summary: '"Old Town Road" by Lil Nas X broke the record for the longest-running number-one single on the Billboard Hot 100 chart, spending 19 weeks at the top. His debut album MONTERO debuted at number one on the Billboard 200.', type: 'gossip', date: 'Sep 2021' }
@@ -69,7 +69,7 @@ export const extras_12: Record<string, Ext> = {
   'lori-harvey': {
     avatar: 'https://ui-avatars.com/api/?name=Lori+Harvey&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'lori-harvey-1', type: 'car', name: 'Luxury Vehicle Collection', description: 'A stylish collection of high-end vehicles including a Porsche 911 and Range Rover befitting her influencer lifestyle.', estimatedValue: 0.001, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 480 }
+      { id: 'lori-harvey-1', type: 'car', name: 'Luxury Vehicle Collection', description: 'A stylish collection of high-end vehicles including a Porsche 911 and Range Rover befitting her influencer lifestyle.', estimatedValue: 1, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 480 }
     ],
     gossip: [
       { title: 'SKN by LH Launch', summary: 'Lori Harvey launched her skincare line SKN by LH in 2022 to considerable fanfare, selling out within hours of its debut. As stepdaughter of Steve Harvey and a prominent model, she commands millions of social media followers.', type: 'gossip', date: 'Oct 2022' }
@@ -78,7 +78,7 @@ export const extras_12: Record<string, Ext> = {
   'martin-luther-king': {
     avatar: 'https://ui-avatars.com/api/?name=Martin+Luther+King+Jr&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'martin-luther-king-1', type: 'real_estate', name: 'Atlanta Family Home', description: 'The historic Vine City home in Atlanta where Dr. King lived with his family, now preserved as a landmark.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1200 }
+      { id: 'martin-luther-king-1', type: 'real_estate', name: 'Atlanta Family Home', description: 'The historic Vine City home in Atlanta where Dr. King lived with his family, now preserved as a landmark.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1200 }
     ],
     gossip: [
       { title: 'Nobel Peace Prize Laureate', summary: 'Martin Luther King Jr. was awarded the Nobel Peace Prize in 1964, becoming the youngest recipient at the time at age 35. His "I Have a Dream" speech remains one of the most celebrated orations in American history.', type: 'gossip', date: 'Jan 1964' }
@@ -133,7 +133,7 @@ export const extras_12: Record<string, Ext> = {
   'nelson-mandela': {
     avatar: 'https://ui-avatars.com/api/?name=Nelson+Mandela&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'nelson-mandela-1', type: 'real_estate', name: 'Johannesburg Family Home', description: 'The Houghton estate in Johannesburg that served as Mandela\'s primary residence after his release from prison.', estimatedValue: 0.008, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1400 }
+      { id: 'nelson-mandela-1', type: 'real_estate', name: 'Johannesburg Family Home', description: 'The Houghton estate in Johannesburg that served as Mandela\'s primary residence after his release from prison.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1400 }
     ],
     gossip: [
       { title: 'Nobel Peace Prize Icon', summary: 'Nelson Mandela was awarded the Nobel Peace Prize in 1993 alongside F.W. de Klerk for their work to dismantle apartheid. He served as South Africa\'s first Black president from 1994 to 1999, transforming the nation.', type: 'gossip', date: 'Oct 1993' }
@@ -170,7 +170,7 @@ export const extras_12: Record<string, Ext> = {
   'oscar-piastri': {
     avatar: 'https://ui-avatars.com/api/?name=Oscar+Piastri&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'oscar-piastri-1', type: 'car', name: 'Performance Vehicle Collection', description: 'A collection of high-performance road cars befitting the young Formula One star who lives and breathes motorsport.', estimatedValue: 0.005, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 560 }
+      { id: 'oscar-piastri-1', type: 'car', name: 'Performance Vehicle Collection', description: 'A collection of high-performance road cars befitting the young Formula One star who lives and breathes motorsport.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 560 }
     ],
     gossip: [
       { title: 'F1 Rising Star', summary: 'Oscar Piastri won his first Formula One Grand Prix at the 2024 Hungarian Grand Prix with McLaren, fulfilling his enormous potential. The Australian was a Formula 2 and Formula 3 champion before making his F1 debut.', type: 'gossip', date: 'Jul 2024' }
@@ -256,7 +256,7 @@ export const extras_12: Record<string, Ext> = {
   'rob-kardashian': {
     avatar: 'https://ui-avatars.com/api/?name=Rob+Kardashian&background=1a1a1a&color=c9a84c&size=200&bold=true',
     assets: [
-      { id: 'rob-kardashian-1', type: 'real_estate', name: 'Calabasas Home', description: 'A property in the upscale Calabasas community where Rob resides close to his famous family.', estimatedValue: 0.007, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 280 }
+      { id: 'rob-kardashian-1', type: 'real_estate', name: 'Calabasas Home', description: 'A property in the upscale Calabasas community where Rob resides close to his famous family.', estimatedValue: 7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 280 }
     ],
     gossip: [
       { title: 'Arthur George Socks Success', summary: 'Rob Kardashian quietly built Arthur George into a successful sock brand generating millions in annual revenue, proving his business acumen independent of his family\'s fame. He has largely stayed out of the public eye while focusing on his daughter Dream and his business.', type: 'gossip', date: 'Apr 2020' }
