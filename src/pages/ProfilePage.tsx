@@ -730,7 +730,7 @@ export default function ProfilePage() {
                     <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                       style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
                     />
-                    <div className="w-13 h-13 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_10px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0" style={{ width: 52, height: 52 }}>
+                    <div className="rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_10px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0" style={{ width: 52, height: 52 }}>
                       <img
                         src={getAvatar(c)}
                         alt={c.name}

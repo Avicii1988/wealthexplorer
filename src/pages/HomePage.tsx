@@ -464,7 +464,7 @@ export default function HomePage() {
                         />
                       </div>
                       <div className="flex-1 text-left min-w-0">
-                        <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors truncate">{celeb.name}</p>
+                        <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors truncate">{celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 text-xs ml-0.5"> (†)</span>}</p>
                         <p className="text-xs text-gray-600 truncate">{celeb.profession} · {celeb.nationality}</p>
                       </div>
                       <div className="text-right flex-shrink-0">
