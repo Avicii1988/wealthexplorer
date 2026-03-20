@@ -13,6 +13,7 @@ import {
   formatValue,
   formatNetWorth,
   getAvatar,
+  DECEASED_IDS,
 } from '../data/celebrities'
 import NotificationBell from '../components/NotificationBell'
 import { LANGUAGES, useLang } from '../i18n'
@@ -132,7 +133,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                         </div>
                         <div className="w-full">
                           <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
-                            {celeb.name}
+                            {celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 ml-0.5 text-[10px]"> (†)</span>}
                           </p>
                           <p className="text-[10px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
                         </div>
@@ -401,9 +402,6 @@ export default function HomePage() {
 
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section className="text-center px-5 pt-20 pb-14 max-w-3xl mx-auto">
-        <div className="flex justify-center mb-6 opacity-45">
-          <DiamondSVG size={64} />
-        </div>
         <h1
           className="text-6xl sm:text-7xl font-semibold text-white mb-5 leading-tight"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -466,7 +464,7 @@ export default function HomePage() {
                         />
                       </div>
                       <div className="flex-1 text-left min-w-0">
-                        <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors truncate">{celeb.name}</p>
+                        <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors truncate">{celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 text-xs ml-0.5"> (†)</span>}</p>
                         <p className="text-xs text-gray-600 truncate">{celeb.profession} · {celeb.nationality}</p>
                       </div>
                       <div className="text-right flex-shrink-0">
