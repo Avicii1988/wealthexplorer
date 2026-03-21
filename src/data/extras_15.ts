@@ -10,7 +10,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'ayesha-curry': {
-    avatar: 'https://ui-avatars.com/api/?name=Ayesha+Curry&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/fhQNbSlEXqXEmyDpQVqzrbIWe0T.jpg',
     assets: [
       { id: 'ayesha-curry-1', type: 'real_estate', name: 'Atherton Estate', description: 'Sprawling family home in Silicon Valley\'s most exclusive neighborhood.', estimatedValue: 0.03, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 870 },
       { id: 'ayesha-curry-2', type: 'art', name: 'Contemporary Art Collection', description: 'Curated collection of modern artworks displayed in her restaurant chain.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 430 }
@@ -38,7 +38,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'bae-suzy': {
-    avatar: 'https://ui-avatars.com/api/?name=Suzy+Bae&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/xdmQeM0UuwVGyZucc3eLhynlb7b.jpg',
     assets: [
       { id: 'bae-suzy-1', type: 'real_estate', name: 'Seoul Luxury Apartment', description: 'Premium apartment in the upscale Gangnam district of Seoul.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1100 },
       { id: 'bae-suzy-2', type: 'watch', name: 'Chanel J12 Watch', description: 'Iconic luxury timepiece befitting the K-pop star and actress.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 760 }
@@ -57,7 +57,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'benicio-del-toro': {
-    avatar: 'https://ui-avatars.com/api/?name=Benicio+del+Toro&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/aYomJWx0B2B8ra6Rmgt8lr0XCrw.jpg',
     assets: [
       { id: 'benicio-del-toro-1', type: 'real_estate', name: 'Hollywood Hills Home', description: 'Secluded residence in the hills above Los Angeles with canyon views.', estimatedValue: 0.035, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 620 }
     ],
@@ -66,7 +66,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'benjamin-netanyahu': {
-    avatar: 'https://ui-avatars.com/api/?name=Benjamin+Netanyahu&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/bmpbaBWPwvPE0Wp1KyNaj8nfVzL.jpg',
     assets: [
       { id: 'benjamin-netanyahu-1', type: 'real_estate', name: 'Caesarea Villa', description: 'Seaside property in the upscale coastal town of Caesarea, Israel.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 390 }
     ],
@@ -75,7 +75,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'bert-kreischer': {
-    avatar: 'https://ui-avatars.com/api/?name=Bert+Kreischer&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/oXgdaIBFOIjQkbrq3JfJflZFTa6.jpg',
     assets: [
       { id: 'bert-kreischer-1', type: 'real_estate', name: 'Los Angeles Family Home', description: 'Spacious suburban home where Bert hosts his legendary backyard parties.', estimatedValue: 0.025, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 730 }
     ],
@@ -84,7 +84,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'bethenny-frankel': {
-    avatar: 'https://ui-avatars.com/api/?name=Bethenny+Frankel&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/j7cBeGPjCAdkMmsYNn8MrWn984y.jpg',
     assets: [
       { id: 'bethenny-frankel-1', type: 'real_estate', name: 'Hamptons Beach House', description: 'Luxurious summer retreat in the exclusive Hamptons area of Long Island.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 980 },
       { id: 'bethenny-frankel-2', type: 'art', name: 'Modern Art Collection', description: 'Carefully curated contemporary art collection displayed across her properties.', estimatedValue: 0.01, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 540 }
@@ -104,7 +104,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'bjorn-borg': {
-    avatar: 'https://ui-avatars.com/api/?name=Bjorn+Borg&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/5zShJbVeErGR0ttYGjI4KDGYKz6.jpg',
     assets: [
       { id: 'bjorn-borg-1', type: 'real_estate', name: 'Swedish Country Estate', description: 'Picturesque estate in the Swedish countryside where the tennis legend retreated from public life.', estimatedValue: 0.25, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 760 }
     ],
@@ -113,7 +113,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'bo-diddley': {
-    avatar: 'https://ui-avatars.com/api/?name=Bo+Diddley&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/wEvWkvFJU7DAl74d6mvZJDv6ceq.jpg',
     assets: [
       { id: 'bo-diddley-1', type: 'art', name: 'Vintage Guitar Collection', description: 'Collection of custom square guitars that became Bo Diddley\'s iconic signature instruments.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 890 }
     ],
@@ -122,7 +122,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'bob-dylan': {
-    avatar: 'https://ui-avatars.com/api/?name=Bob+Dylan&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/pMGkRge9jE0TRgENbUYt3N5qDPl.jpg',
     assets: [
       { id: 'bob-dylan-1', type: 'real_estate', name: 'Malibu Compound', description: 'Expansive seaside property in Malibu that Dylan has owned for decades.', estimatedValue: 0.25, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1200 },
       { id: 'bob-dylan-2', type: 'art', name: 'Personal Iron Works Collection', description: 'Dylan\'s own welded metal sculptures exhibited in major galleries worldwide.', estimatedValue: 0.15, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 870 }
@@ -132,7 +132,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'bob-marley': {
-    avatar: 'https://ui-avatars.com/api/?name=Bob+Marley&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/pLgUCU5hvTH6BeiPLq5QNebPUok.jpg',
     assets: [
       { id: 'bob-marley-1', type: 'real_estate', name: 'Tuff Gong Estate, Kingston', description: 'The historic property in Kingston, Jamaica that served as home and recording studio for the reggae legend.', estimatedValue: 0.08, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 2100 }
     ],
@@ -141,7 +141,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'bobby-brown': {
-    avatar: 'https://ui-avatars.com/api/?name=Bobby+Brown&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/k9KGzGDVhXKfOGpoN62MNuXL28q.jpg',
     assets: [
       { id: 'bobby-brown-1', type: 'car', name: 'Cadillac Escalade', description: 'Customized luxury SUV kept as a personal vehicle.', estimatedValue: 1, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 310 }
     ],
@@ -160,7 +160,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'boris-becker': {
-    avatar: 'https://ui-avatars.com/api/?name=Boris+Becker&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/jaArwerpyY01sivLipYHJ5Et0rS.jpg',
     assets: [
       { id: 'boris-becker-1', type: 'watch', name: 'Rolex Collection', description: 'Several luxury Rolex timepieces from the tennis champion\'s personal collection.', estimatedValue: 1, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 430 }
     ],
@@ -187,7 +187,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'bruce-lee': {
-    avatar: 'https://ui-avatars.com/api/?name=Bruce+Lee&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/vFtLJ37tjqPdq6oJr0OSpyo9Wcp.jpg',
     assets: [
       { id: 'bruce-lee-1', type: 'art', name: 'Memorabilia and Artifacts Collection', description: 'Rare collection of costumes, training equipment, and personal effects from the martial arts icon.', estimatedValue: 0.08, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 2400 }
     ],
@@ -196,7 +196,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'busta-rhymes': {
-    avatar: 'https://ui-avatars.com/api/?name=Busta+Rhymes&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/f0MX6SdEsGYJYDy8vF6ghTZ25N6.jpg',
     assets: [
       { id: 'busta-rhymes-1', type: 'car', name: 'Custom SUV Fleet', description: 'Collection of heavily customized luxury SUVs known from his music videos.', estimatedValue: 0.012, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 640 }
     ],
@@ -205,7 +205,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'calum-scott': {
-    avatar: 'https://ui-avatars.com/api/?name=Calum+Scott&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/edo73jg6JAovDClAmuFL7zkIBt.jpg',
     assets: [
       { id: 'calum-scott-1', type: 'real_estate', name: 'London Apartment', description: 'Modern apartment in London where the British singer-songwriter is based.', estimatedValue: 1.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
     ],
@@ -214,7 +214,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'carl-froch': {
-    avatar: 'https://ui-avatars.com/api/?name=Carl+Froch&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/n2bW3gquD0qukvA51reHf9dWdFM.jpg',
     assets: [
       { id: 'carl-froch-1', type: 'real_estate', name: 'Nottingham Manor House', description: 'Grand manor home in Nottinghamshire befitting the former world champion boxer.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 510 }
     ],
@@ -223,7 +223,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'carlisle-floyd': {
-    avatar: 'https://ui-avatars.com/api/?name=Florentino+Perez&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/b41uG0t3irWQpTfghy0wvc0M5Io.jpg',
     assets: [
       { id: 'carlisle-floyd-1', type: 'real_estate', name: 'Madrid Penthouse', description: 'Prestigious penthouse in central Madrid owned by the Real Madrid president.', estimatedValue: 0.8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 920 },
       { id: 'carlisle-floyd-2', type: 'art', name: 'Spanish Masters Collection', description: 'Impressive collection of classical and modern Spanish artworks.', estimatedValue: 0.5, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 680 }
@@ -233,7 +233,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'carrie-fisher': {
-    avatar: 'https://ui-avatars.com/api/?name=Carrie+Fisher&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/of4yHmryKPy92eeskUQ7MRmjC3l.jpg',
     assets: [
       { id: 'carrie-fisher-1', type: 'real_estate', name: 'Beverly Hills Home', description: 'The beloved actress\'s longtime Beverly Hills residence, which became famous for housing her French bulldog Gary.', estimatedValue: 0.018, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1340 }
     ],
@@ -242,7 +242,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'celine-dion': {
-    avatar: 'https://ui-avatars.com/api/?name=Celine+Dion&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/jllrwudKITObOznhY8nXsA571mF.jpg',
     assets: [
       { id: 'celine-dion-1', type: 'real_estate', name: 'Jupiter Island Estate', description: 'Spectacular waterfront compound in Jupiter Island, Florida, spanning multiple acres with private beach access.', estimatedValue: 0.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1680 },
       { id: 'celine-dion-2', type: 'yacht', name: 'Luxury Charter Yacht', description: 'Private yacht used for family vacations in the Mediterranean and Caribbean.', estimatedValue: 0.15, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 1120 }
@@ -252,7 +252,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'chad-ochocinco': {
-    avatar: 'https://ui-avatars.com/api/?name=Chad+Johnson&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/y4KuATSkx40qLuTaFe79X2QIFjU.jpg',
     assets: [
       { id: 'chad-ochocinco-1', type: 'car', name: 'Lamborghini Huracan', description: 'Flashy supercar matching the former NFL star\'s flamboyant personality.', estimatedValue: 0.01, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 870 }
     ],
@@ -261,7 +261,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'chance-the-rapper': {
-    avatar: 'https://ui-avatars.com/api/?name=Chance+The+Rapper&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/cXlzPkVu1T1g9mMnXRCOrEgERB5.jpg',
     assets: [
       { id: 'chance-the-rapper-1', type: 'real_estate', name: 'Chicago Estate', description: 'Grand home in Chicago where the rapper remains deeply connected to his hometown community.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 980 }
     ],
@@ -270,7 +270,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'charles-de-gaulle': {
-    avatar: 'https://ui-avatars.com/api/?name=Charles+de+Gaulle&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/dvJ2c6x0KoWEGLDZFGxls5pqrwS.jpg',
     assets: [
       { id: 'charles-de-gaulle-1', type: 'real_estate', name: 'La Boisserie, Colombey-les-Deux-Eglises', description: 'The modest country home where Charles de Gaulle lived and worked for much of his post-war life and where he died in 1970.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1050 }
     ],
@@ -279,7 +279,7 @@ export const extras_15: Record<string, Ext> = {
     ]
   },
   'charles-leclerc': {
-    avatar: 'https://ui-avatars.com/api/?name=Charles+Leclerc&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/p3m3qc9ZZAIFrTXO3kwOpcp7XGf.jpg',
     assets: [
       { id: 'charles-leclerc-1', type: 'car', name: 'Ferrari SF90 Stradale', description: 'Factory-spec Ferrari supercar gifted to the Monegasque driver by the Scuderia.', estimatedValue: 0.035, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 1890 },
       { id: 'charles-leclerc-2', type: 'real_estate', name: 'Monaco Penthouse', description: 'Stunning penthouse apartment in the Principality of Monaco with panoramic sea views.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1450 }

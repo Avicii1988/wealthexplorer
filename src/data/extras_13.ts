@@ -1,7 +1,7 @@
 import type { Ext } from './extraCelebritiesExtended'
 export const extras_13: Record<string, Ext> = {
   'shraddha-kapoor': {
-    avatar: 'https://ui-avatars.com/api/?name=Shraddha+Kapoor&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/70y8OBg29SUUY659UfQ4FquCyOe.jpg',
     assets: [
       { id: 'shraddha-kapoor-1', type: 'real_estate', name: 'Mumbai Apartment', description: 'Luxury apartment in Juhu, Mumbai.', estimatedValue: 0.012, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 },
       { id: 'shraddha-kapoor-2', type: 'car', name: 'Range Rover', description: 'Premium SUV driven across Mumbai.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 220 }
@@ -11,7 +11,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'shawn-mendes': {
-    avatar: 'https://ui-avatars.com/api/?name=Shawn+Mendes&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/grQeD2Emwe0gSvHAgXnlVvZn1EK.jpg',
     assets: [
       { id: 'shawn-mendes-1', type: 'real_estate', name: 'Toronto Family Home', description: 'Sprawling property in Pickering, Ontario where he grew up.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 540 },
       { id: 'shawn-mendes-2', type: 'car', name: 'Jeep Wrangler', description: 'His go-to rugged vehicle for casual drives.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 390 }
@@ -21,7 +21,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'steve-harvey': {
-    avatar: 'https://ui-avatars.com/api/?name=Steve+Harvey&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/m9eYD66VtHPxgrXGhHw7gtugftE.jpg',
     assets: [
       { id: 'steve-harvey-1', type: 'real_estate', name: 'Atlanta Mansion', description: 'Expansive estate in suburban Atlanta with luxury amenities.', estimatedValue: 0.1, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 870 },
       { id: 'steve-harvey-2', type: 'car', name: 'Rolls-Royce Phantom', description: 'Custom Rolls-Royce reflecting his signature style.', estimatedValue: 0.045, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 720 }
@@ -31,7 +31,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'stevie-wonder': {
-    avatar: 'https://ui-avatars.com/api/?name=Stevie+Wonder&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/yCI6ryRF70yLitOew0NHgS59GL1.jpg',
     assets: [
       { id: 'stevie-wonder-1', type: 'real_estate', name: 'Los Angeles Estate', description: 'Long-held Los Angeles property representing decades of musical success.', estimatedValue: 0.065, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 950 },
       { id: 'stevie-wonder-2', type: 'art', name: 'Music Memorabilia Collection', description: 'Rare collection of Grammy awards and iconic music artifacts.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 810 }
@@ -50,7 +50,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'taraji-p-henson': {
-    avatar: 'https://ui-avatars.com/api/?name=Taraji+P+Henson&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/jUU2X9mDwJaAniEmJOfvImBS9qb.jpg',
     assets: [
       { id: 'taraji-p-henson-1', type: 'real_estate', name: 'Los Angeles Home', description: 'Stylish home in the Los Angeles area purchased during her Empire peak.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 640 },
       { id: 'taraji-p-henson-2', type: 'car', name: 'Mercedes-Benz GLS', description: 'Luxury SUV favored for LA commutes.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 430 }
@@ -60,7 +60,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'toni-braxton': {
-    avatar: 'https://ui-avatars.com/api/?name=Toni+Braxton&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/jo6NbmBF3t6rTInsp7azb8tIoAx.jpg',
     assets: [
       { id: 'toni-braxton-1', type: 'real_estate', name: 'Atlanta Home', description: 'Georgia residence featured on her reality television series.', estimatedValue: 6, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
     ],
@@ -69,7 +69,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'trevor-noah': {
-    avatar: 'https://ui-avatars.com/api/?name=Trevor+Noah&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/aieKi9QnuEjBV2j46UR4NIIqa0K.jpg',
     assets: [
       { id: 'trevor-noah-1', type: 'real_estate', name: 'New York Penthouse', description: 'Upscale Manhattan penthouse acquired during his Daily Show tenure.', estimatedValue: 0.06, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 710 },
       { id: 'trevor-noah-2', type: 'car', name: 'Porsche 911', description: 'Classic Porsche sports car reflecting his taste for European engineering.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 590 }
@@ -89,7 +89,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'usman-khawaja': {
-    avatar: 'https://ui-avatars.com/api/?name=Usman+Khawaja&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/4pqA5CCoSxfusEt2UOZ0WbSWAuj.jpg',
     assets: [
       { id: 'usman-khawaja-1', type: 'real_estate', name: 'Brisbane Home', description: 'Family residence in Brisbane, Queensland.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 190 }
     ],
@@ -98,7 +98,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'victoria-beckham': {
-    avatar: 'https://ui-avatars.com/api/?name=Victoria+Beckham&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/eYJNcB1aAwhEVMGB5qcZtZOcvxM.jpg',
     assets: [
       { id: 'victoria-beckham-1', type: 'real_estate', name: 'London Townhouse', description: 'Luxurious Holland Park townhouse in one of London\'s most exclusive neighborhoods.', estimatedValue: 0.25, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1200 },
       { id: 'victoria-beckham-2', type: 'watch', name: 'Rolex Collection', description: 'Curated collection of rare Rolex timepieces accumulated over decades.', estimatedValue: 0.08, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 980 }
@@ -108,7 +108,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'wyclef-jean': {
-    avatar: 'https://ui-avatars.com/api/?name=Wyclef+Jean&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/1J0Q23bdPlKrMY8dDksVJaJXxYL.jpg',
     assets: [
       { id: 'wyclef-jean-1', type: 'real_estate', name: 'New Jersey Home', description: 'Residence in New Jersey where the Fugees star based his music career.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 }
     ],
@@ -117,7 +117,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'xavier-dolan': {
-    avatar: 'https://ui-avatars.com/api/?name=Xavier+Dolan&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/dfZnAEiwGjUkymUHf4zl6vR4uSp.jpg',
     assets: [
       { id: 'xavier-dolan-1', type: 'real_estate', name: 'Montreal Loft', description: 'Artistic loft in Montreal reflecting his Quebec cinematic roots.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 210 }
     ],
@@ -126,7 +126,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'yo-gotti': {
-    avatar: 'https://ui-avatars.com/api/?name=Yo+Gotti&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/uXe40nrgnfCW7tEARy7mHocTba5.jpg',
     assets: [
       { id: 'yo-gotti-1', type: 'real_estate', name: 'Memphis Mansion', description: 'Grand residence in Memphis, Tennessee representing his hometown roots.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 450 },
       { id: 'yo-gotti-2', type: 'car', name: 'Lamborghini Urus', description: 'High-performance luxury SUV featured in his music videos.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 610 }
@@ -136,7 +136,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'zendaya': {
-    avatar: 'https://ui-avatars.com/api/?name=Zendaya&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/3WdOloHpjtjL96uVOhFRRCcYSwq.jpg',
     assets: [
       { id: 'zendaya-1', type: 'real_estate', name: 'Encino Estate', description: 'Spacious California estate purchased after her Emmy Award wins.', estimatedValue: 0.014, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1450 },
       { id: 'zendaya-2', type: 'car', name: 'Mercedes-Benz AMG', description: 'Sleek performance vehicle matching her Hollywood star status.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 1100 }
@@ -146,7 +146,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'a-boogie-wit-da-hoodie': {
-    avatar: 'https://ui-avatars.com/api/?name=A+Boogie+Wit+da+Hoodie&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/4KgTVzi6sgAElRRyK35VSVcUFd4.jpg',
     assets: [
       { id: 'a-boogie-wit-da-hoodie-1', type: 'real_estate', name: 'Bronx Area Home', description: 'Property near his Highbridge, Bronx roots.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 },
       { id: 'a-boogie-wit-da-hoodie-2', type: 'car', name: 'Dodge Challenger', description: 'American muscle car matching his Bronx street aesthetic.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 460 }
@@ -175,7 +175,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'acun-ilicali': {
-    avatar: 'https://ui-avatars.com/api/?name=Acun+Ilicali&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/pdsO9unfAerz8E5fneAmmipzzCa.jpg',
     assets: [
       { id: 'acun-ilicali-1', type: 'yacht', name: 'Luxury Yacht', description: 'Mediterranean superyacht enjoyed during Turkish summers.', estimatedValue: 0.3, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 790 },
       { id: 'acun-ilicali-2', type: 'real_estate', name: 'Istanbul Media Complex', description: 'Headquarters of his TV8 and Acun Medya production empire.', estimatedValue: 0.35, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 610 }
@@ -212,7 +212,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'agnes-monica': {
-    avatar: 'https://ui-avatars.com/api/?name=Agnez+Mo&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/iBDWJbhwQv9wxxOX2V4gDiJ5HU9.jpg',
     assets: [
       { id: 'agnes-monica-1', type: 'real_estate', name: 'Los Angeles Home', description: 'California base for her international music career expansion.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 }
     ],
@@ -221,7 +221,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'ahmed-ezz': {
-    avatar: 'https://ui-avatars.com/api/?name=Ahmed+Ezz&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/mgQhox7AbzVsQ8xeTZvkK5Gvkd4.jpg',
     assets: [
       { id: 'ahmed-ezz-1', type: 'real_estate', name: 'Cairo Business Complex', description: 'Commercial property tied to his steel industry empire in Egypt.', estimatedValue: 1.0, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 490 },
       { id: 'ahmed-ezz-2', type: 'yacht', name: 'Mediterranean Yacht', description: 'Luxury vessel used for leisure in the Mediterranean Sea.', estimatedValue: 0.5, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 620 }
@@ -231,7 +231,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'ai-weiwei': {
-    avatar: 'https://ui-avatars.com/api/?name=Ai+Weiwei&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/hD3ot74TFao8xDaeUaxuRK0RKsS.jpg',
     assets: [
       { id: 'ai-weiwei-1', type: 'art', name: 'Conceptual Art Collection', description: 'Internationally exhibited works spanning installation art, sculpture, and photography.', estimatedValue: 0.035, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 870 }
     ],
@@ -240,7 +240,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'aishwarya-rai': {
-    avatar: 'https://ui-avatars.com/api/?name=Aishwarya+Rai&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/tXlRA4gZgUiKx2P1odBpyXjnkbX.jpg',
     assets: [
       { id: 'aishwarya-rai-1', type: 'real_estate', name: 'Mumbai Bungalow', description: 'Iconic Jalsa bungalow shared with the Bachchan family in Juhu, Mumbai.', estimatedValue: 0.014, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1050 },
       { id: 'aishwarya-rai-2', type: 'watch', name: 'Diamond Watch Collection', description: 'Exquisite timepiece collection befitting a former Miss World.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 880 }
@@ -250,7 +250,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'alain-prost': {
-    avatar: 'https://ui-avatars.com/api/?name=Alain+Prost&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/uWzHseRHbGnzagKzeEXGTuyeoXV.jpg',
     assets: [
       { id: 'alain-prost-1', type: 'car', name: 'Historic F1 Car Collection', description: 'Museum-quality Formula One cars from his championship-winning career.', estimatedValue: 0.03, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 760 },
       { id: 'alain-prost-2', type: 'real_estate', name: 'Geneva Villa', description: 'Swiss lakeside villa near Formula One\'s administrative heartland.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 530 }
@@ -260,7 +260,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'alec-baldwin': {
-    avatar: 'https://ui-avatars.com/api/?name=Alec+Baldwin&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/hzKy7x574eeUS3wt1R3yvWBRpeR.jpg',
     assets: [
       { id: 'alec-baldwin-1', type: 'real_estate', name: 'Hamptons Estate', description: 'Long Island retreat used by the Baldwin family during summers.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 580 }
     ],
@@ -278,7 +278,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'alex-ferguson': {
-    avatar: 'https://ui-avatars.com/api/?name=Alex+Ferguson&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/zzRldIXzQohouEzbXxcyJQDoFnM.jpg',
     assets: [
       { id: 'alex-ferguson-1', type: 'real_estate', name: 'Cheshire Manor', description: 'Magnificent Cheshire estate reflecting his long tenure at Manchester United.', estimatedValue: 0.03, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 840 },
       { id: 'alex-ferguson-2', type: 'art', name: 'Wine and Art Collection', description: 'Renowned wine collection alongside fine art accumulated over decades.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 660 }
@@ -288,7 +288,7 @@ export const extras_13: Record<string, Ext> = {
     ]
   },
   'alex-morgan': {
-    avatar: 'https://ui-avatars.com/api/?name=Alex+Morgan&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/eQTBpSdPiEkiWqLBxZILOAkULne.jpg',
     assets: [
       { id: 'alex-morgan-1', type: 'real_estate', name: 'Orlando Home', description: 'Florida residence maintained during her time with the Orlando Pride.', estimatedValue: 0.022, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 720 },
       { id: 'alex-morgan-2', type: 'car', name: 'Tesla Model X', description: 'Electric SUV reflecting her environmental consciousness.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 590 }

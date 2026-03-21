@@ -1,7 +1,7 @@
 import type { Ext } from './extraCelebritiesExtended'
 export const extras_10: Record<string, Ext> = {
   'xavi-hernandez': {
-    avatar: 'https://ui-avatars.com/api/?name=Xavi+Hernandez&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/bgqWUn7A76ffAgRf8fZrlWiSoup.jpg',
     assets: [
       { id: 'xavi-hernandez-1', type: 'real_estate', name: 'Barcelona Villa', description: 'Elegant villa near Barcelona with stunning Mediterranean views.', estimatedValue: 3.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 410 },
       { id: 'xavi-hernandez-2', type: 'car', name: 'Audi R8', description: 'High-performance sports car favored by elite footballers.', estimatedValue: 0.18, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 290 }
@@ -11,7 +11,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'zayn-malik': {
-    avatar: 'https://ui-avatars.com/api/?name=Zayn+Malik&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/cbZQLps10ogcc4HhhPQlC5iZZFf.jpg',
     assets: [
       { id: 'zayn-malik-1', type: 'real_estate', name: 'Pennsylvania Farm Estate', description: 'Sprawling rural estate in Pennsylvania where Zayn spent time with Gigi Hadid.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 520 }
     ],
@@ -20,7 +20,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'zlatan-ibrahimovic': {
-    avatar: 'https://ui-avatars.com/api/?name=Zlatan+Ibrahimovic&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/kX5ellKSqI7EN87DwvCOcaDJivJ.jpg',
     assets: [
       { id: 'zlatan-ibrahimovic-1', type: 'real_estate', name: 'Milan Penthouse', description: 'Luxurious penthouse in the heart of Milan befitting a football legend.', estimatedValue: 7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 870 },
       { id: 'zlatan-ibrahimovic-2', type: 'car', name: 'Ferrari Collection', description: 'A prized collection of Ferraris reflecting Zlatan\'s flamboyant personality.', estimatedValue: 1.2, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 1100 }
@@ -30,7 +30,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'zinedine-zidane': {
-    avatar: 'https://ui-avatars.com/api/?name=Zinedine+Zidane&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/vIctMCMyv50QUael45I4mFJGYuR.jpg',
     assets: [
       { id: 'zinedine-zidane-1', type: 'real_estate', name: 'Madrid Luxury Home', description: 'Prestigious family residence in one of Madrid\'s most exclusive neighborhoods.', estimatedValue: 6, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 730 }
     ],
@@ -39,7 +39,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'zoe-saldana': {
-    avatar: 'https://ui-avatars.com/api/?name=Zoe+Saldana&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/vQBwmsSOAd0JDaEcZ5p43J9xzsY.jpg',
     assets: [
       { id: 'zoe-saldana-1', type: 'real_estate', name: 'Los Angeles Family Home', description: 'Comfortable family estate in Los Angeles shared with husband Marco Perego and their children.', estimatedValue: 4.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
     ],
@@ -58,7 +58,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'alicia-keys': {
-    avatar: 'https://ui-avatars.com/api/?name=Alicia+Keys&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/uMTAlXlQfgXHmyJrWqDv7LLnn0z.jpg',
     assets: [
       { id: 'alicia-keys-1', type: 'real_estate', name: 'New Jersey Waterfront Mansion', description: 'Stunning waterfront mansion in Englewood Cliffs, New Jersey with sweeping Manhattan views.', estimatedValue: 14.9, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 870 }
     ],
@@ -67,7 +67,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'amber-heard': {
-    avatar: 'https://ui-avatars.com/api/?name=Amber+Heard&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/vnDolRlZWiOLBg1N0hsUTz4OH4C.jpg',
     assets: [
       { id: 'amber-heard-1', type: 'real_estate', name: 'Madrid Apartment', description: 'Amber Heard relocated to Madrid following the conclusion of her high-profile legal battles.', estimatedValue: 1, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 120 }
     ],
@@ -76,7 +76,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'andrew-garfield': {
-    avatar: 'https://ui-avatars.com/api/?name=Andrew+Garfield&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/5ydZ6TluPtxlz5G8nlWMB7SGmow.jpg',
     assets: [
       { id: 'andrew-garfield-1', type: 'real_estate', name: 'Los Feliz Home', description: 'Charming home in the artistic Los Feliz neighborhood of Los Angeles.', estimatedValue: 3.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 }
     ],
@@ -85,7 +85,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'antonio-conte': {
-    avatar: 'https://ui-avatars.com/api/?name=Antonio+Conte&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/8mNZFxdbQTcmHQn3T4djQXVRbCC.jpg',
     assets: [
       { id: 'antonio-conte-1', type: 'real_estate', name: 'Turin Villa', description: 'Elegant villa in Turin reflecting Conte\'s deep roots in Italian football.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 },
       { id: 'antonio-conte-2', type: 'car', name: 'Maserati Quattroporte', description: 'A sleek Italian luxury sedan fitting for the acclaimed Italian manager.', estimatedValue: 0.13, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 210 }
@@ -95,7 +95,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'bella-hadid': {
-    avatar: 'https://ui-avatars.com/api/?name=Bella+Hadid&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/2e8qNiLiLCH11JAgqNodZxMCKov.jpg',
     assets: [
       { id: 'bella-hadid-1', type: 'real_estate', name: 'New York City Loft', description: 'Chic Manhattan loft in the heart of New York City\'s fashion district.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 760 }
     ],
@@ -104,7 +104,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'ben-stiller': {
-    avatar: 'https://ui-avatars.com/api/?name=Ben+Stiller&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg',
     assets: [
       { id: 'ben-stiller-1', type: 'real_estate', name: 'Malibu Beach House', description: 'Stunning beachfront property in Malibu offering sweeping Pacific Ocean views.', estimatedValue: 15, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 630 },
       { id: 'ben-stiller-2', type: 'watch', name: 'Patek Philippe Nautilus', description: 'Iconic luxury timepiece from one of the world\'s most prestigious watchmakers.', estimatedValue: 0.12, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 410 }
@@ -114,7 +114,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'beyonce': {
-    avatar: 'https://ui-avatars.com/api/?name=Beyonce&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/fzpzgonemwX4tSMAks9WtIb9pFD.jpg',
     assets: [
       { id: 'beyonce-1', type: 'real_estate', name: 'Bel Air Mega Mansion', description: 'A sprawling $200 million Bel Air estate purchased with Jay-Z, one of the most expensive homes in California.', estimatedValue: 200, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 4800 },
       { id: 'beyonce-2', type: 'yacht', name: 'Gulfstream G550 Jet', description: 'Beyonce and Jay-Z travel in style aboard a private Gulfstream jet for world tours and getaways.', estimatedValue: 40, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 3600 }
@@ -125,7 +125,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'boban-marjanovic': {
-    avatar: 'https://ui-avatars.com/api/?name=Boban+Marjanovic&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/1VSX0Fvq2hwpONVMA5kNolRpBLD.jpg',
     assets: [
       { id: 'boban-marjanovic-1', type: 'real_estate', name: 'Dallas Residence', description: 'Spacious family home in Dallas, Texas where Boban settled during his NBA career.', estimatedValue: 2.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 }
     ],
@@ -134,7 +134,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'brendan-fraser': {
-    avatar: 'https://ui-avatars.com/api/?name=Brendan+Fraser&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/tFj5PaWWQbb8rHBBhu1EHklznph.jpg',
     assets: [
       { id: 'brendan-fraser-1', type: 'real_estate', name: 'Bedford, New York Home', description: 'Peaceful country home in Bedford, New York where Brendan raised his three sons.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 420 }
     ],
@@ -143,7 +143,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'cam-newton': {
-    avatar: 'https://ui-avatars.com/api/?name=Cam+Newton&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/8PwEPyPRwzsjfxHU0DH7voCSjks.jpg',
     assets: [
       { id: 'cam-newton-1', type: 'real_estate', name: 'Atlanta Mansion', description: 'Grand Atlanta mansion reflecting Cam Newton\'s flashy personal brand and style.', estimatedValue: 6, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 540 },
       { id: 'cam-newton-2', type: 'car', name: 'Rolls-Royce Wraith', description: 'One of the crown jewels in Cam Newton\'s extensive luxury car collection.', estimatedValue: 0.32, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 680 }
@@ -153,7 +153,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'cedric-the-entertainer': {
-    avatar: 'https://ui-avatars.com/api/?name=Cedric+The+Entertainer&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/s6UrY5uofyxXsU5PydWBoLFReK0.jpg',
     assets: [
       { id: 'cedric-the-entertainer-1', type: 'real_estate', name: 'Encino Estate', description: 'Comfortable family estate in the upscale Encino neighborhood of Los Angeles.', estimatedValue: 4.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 300 }
     ],
@@ -172,7 +172,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'charlie-chaplin': {
-    avatar: 'https://ui-avatars.com/api/?name=Charlie+Chaplin&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/lRI9Ky1SMOehn04OqhYJ5hQfgIK.jpg',
     assets: [
       { id: 'charlie-chaplin-1', type: 'real_estate', name: 'Manoir de Ban, Switzerland', description: 'Charlie Chaplin\'s historic Swiss mansion where he spent the final 25 years of his life in exile from the US.', estimatedValue: 25, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1200 }
     ],
@@ -181,7 +181,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'chrissy-teigen': {
-    avatar: 'https://ui-avatars.com/api/?name=Chrissy+Teigen&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/mSr84rB656sz6rjhxIS9gjiWGEZ.jpg',
     assets: [
       { id: 'chrissy-teigen-1', type: 'real_estate', name: 'Beverly Hills Mansion', description: 'Luxurious Beverly Hills home shared with husband John Legend and their family.', estimatedValue: 17.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 720 }
     ],
@@ -190,7 +190,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'claire-danes': {
-    avatar: 'https://ui-avatars.com/api/?name=Claire+Danes&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/vTKKniIwbXWMmnuMmGKHYS41Vif.jpg',
     assets: [
       { id: 'claire-danes-1', type: 'real_estate', name: 'New York City Townhouse', description: 'Elegant townhouse in Manhattan where Claire lives with husband Hugh Dancy and their children.', estimatedValue: 6.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 }
     ],
@@ -199,7 +199,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'coco-gauff': {
-    avatar: 'https://ui-avatars.com/api/?name=Coco+Gauff&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/iubLSxTfntq5fV44Sm044zqIKzz.jpg',
     assets: [
       { id: 'coco-gauff-1', type: 'real_estate', name: 'Delray Beach Home', description: 'Family home in Delray Beach, Florida where Coco trained and grew up on the tennis circuit.', estimatedValue: 2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 480 }
     ],
@@ -208,7 +208,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'dan-bilzerian': {
-    avatar: 'https://ui-avatars.com/api/?name=Dan+Bilzerian&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/9UKqkVEVMaNa6RpfFKeoeuQILxw.jpg',
     assets: [
       { id: 'dan-bilzerian-1', type: 'real_estate', name: 'Hollywood Hills Mansion', description: 'Lavish party mansion in the Hollywood Hills, famously known for hosting extravagant events.', estimatedValue: 7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1340 },
       { id: 'dan-bilzerian-2', type: 'yacht', name: 'Luxury Superyacht', description: 'Dan Bilzerian\'s superyacht serves as a floating venue for his high-profile lifestyle events.', estimatedValue: 30, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 1600 }
@@ -218,7 +218,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'david-guetta': {
-    avatar: 'https://ui-avatars.com/api/?name=David+Guetta&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/o0hjTcatffqrWpYsjANhRLUYcNA.jpg',
     assets: [
       { id: 'david-guetta-1', type: 'real_estate', name: 'Ibiza Villa', description: 'Sun-soaked villa on the island of Ibiza, close to the epicenter of the global dance music scene.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 870 }
     ],
@@ -227,7 +227,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'david-letterman': {
-    avatar: 'https://ui-avatars.com/api/?name=David+Letterman&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/nk1rMabb84e52G2oax6yO9FBiAd.jpg',
     assets: [
       { id: 'david-letterman-1', type: 'real_estate', name: 'Montana Ranch', description: 'David Letterman\'s sprawling cattle ranch in Montana where he retreated after leaving late night television.', estimatedValue: 12, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 510 }
     ],
@@ -236,7 +236,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'deion-sanders': {
-    avatar: 'https://ui-avatars.com/api/?name=Deion+Sanders&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/qaB8YwSHMMuL9rhrPmFLDJZuigC.jpg',
     assets: [
       { id: 'deion-sanders-1', type: 'real_estate', name: 'Prosper, Texas Mansion', description: 'Lavish estate in Prosper, Texas reflecting Prime Time\'s larger-than-life persona.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 640 },
       { id: 'deion-sanders-2', type: 'car', name: 'Custom Cadillac Escalade', description: 'Deion Sanders is known for his fleet of premium vehicles, with a custom Escalade among his favorites.', estimatedValue: 0.15, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 420 }
@@ -246,7 +246,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'diana-ross': {
-    avatar: 'https://ui-avatars.com/api/?name=Diana+Ross&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/bY5fDEQvq1rRELGgbO38D2F2qC.jpg',
     assets: [
       { id: 'diana-ross-1', type: 'real_estate', name: 'Greenwich, Connecticut Estate', description: 'A magnificent estate in Greenwich, Connecticut that has been Diana Ross\'s longtime home.', estimatedValue: 15, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 740 }
     ],
@@ -255,7 +255,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'elizabeth-warren': {
-    avatar: 'https://ui-avatars.com/api/?name=Elizabeth+Warren&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/zsujqK0DLQ48y3T1L96Ett76gQ2.jpg',
     assets: [
       { id: 'elizabeth-warren-1', type: 'real_estate', name: 'Cambridge, Massachusetts Home', description: 'Elizabeth Warren\'s longtime family home in Cambridge, Massachusetts near Harvard University.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 260 }
     ],
@@ -264,7 +264,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'elliot-page': {
-    avatar: 'https://ui-avatars.com/api/?name=Elliot+Page&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/nXO8DE4biVXY4UDYP0NdIY1zvXS.jpg',
     assets: [
       { id: 'elliot-page-1', type: 'real_estate', name: 'New York City Apartment', description: 'Modern Manhattan apartment that serves as Elliot Page\'s primary residence.', estimatedValue: 2.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 370 }
     ],
@@ -273,7 +273,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'emily-ratajkowski': {
-    avatar: 'https://ui-avatars.com/api/?name=Emily+Ratajkowski&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/1YngeK5Bbgw9bu6YG5ZgvCIo4ZX.jpg',
     assets: [
       { id: 'emily-ratajkowski-1', type: 'real_estate', name: 'New York City Loft', description: 'Stylish downtown Manhattan loft that Emily renovated and shared on social media with her millions of followers.', estimatedValue: 2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 580 }
     ],
@@ -282,7 +282,7 @@ export const extras_10: Record<string, Ext> = {
     ]
   },
   'eric-clapton': {
-    avatar: 'https://ui-avatars.com/api/?name=Eric+Clapton&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/3bz7GpKG8ZPqUt4nuJg8rZuQ7Kk.jpg',
     assets: [
       { id: 'eric-clapton-1', type: 'real_estate', name: 'Surrey Estate, England', description: 'Eric Clapton\'s grand English countryside estate in Surrey, befitting rock royalty.', estimatedValue: 15, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 820 },
       { id: 'eric-clapton-2', type: 'art', name: 'Guitar Art Collection', description: 'Clapton is a renowned collector of fine art and rare guitars, with pieces worth millions at auction.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 690 }

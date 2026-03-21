@@ -1,7 +1,7 @@
 import type { Ext } from './extraCelebritiesExtended'
 export const extras_06: Record<string, Ext> = {
   'leon-black': {
-    avatar: 'https://ui-avatars.com/api/?name=Leon+Black&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/Fbss6xoiRyflulQlNETDnCGzie.jpg',
     assets: [
       { id: 'leon-black-1', type: 'real_estate', name: 'Manhattan Penthouse', description: 'Luxurious penthouse apartment in Manhattan with panoramic views of Central Park.', estimatedValue: 50, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 420 },
       { id: 'leon-black-2', type: 'art', name: 'Private Art Collection', description: 'An extensive collection of modern and contemporary art including works by Picasso and Basquiat.', estimatedValue: 800, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 610 }
@@ -21,7 +21,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'lil-wayne': {
-    avatar: 'https://ui-avatars.com/api/?name=Lil+Wayne&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/90bC08uoGQ9d9AKNplaumlgnUAm.jpg',
     assets: [
       { id: 'lil-wayne-1', type: 'jet', name: 'Private Jet', description: 'A customized private jet that Lil Wayne uses for touring and personal travel across the US and abroad.', estimatedValue: 18, image: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop', likes: 540 }
     ],
@@ -30,7 +30,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'lionel-messi': {
-    avatar: 'https://ui-avatars.com/api/?name=Lionel+Messi&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/a1EuvL7XzKDXRPe0a6CEMJWF6Vd.jpg',
     assets: [
       { id: 'lionel-messi-1', type: 'real_estate', name: 'Rosario Family Home', description: 'A sprawling family estate in Messi\'s hometown of Rosario, Argentina, maintained for his extended family.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 890 },
       { id: 'lionel-messi-2', type: 'car', name: 'Ferrari F430 Spider', description: 'One of several luxury sports cars in Messi\'s collection, gifted to him by teammates over the years.', estimatedValue: 0.5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 720 }
@@ -40,7 +40,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'lisa-marie-presley': {
-    avatar: 'https://ui-avatars.com/api/?name=Lisa+Marie+Presley&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/vW2W1WwSUwB0uFRSgCA0DfYyRJ7.jpg',
     assets: [
       { id: 'lisa-marie-presley-1', type: 'real_estate', name: 'Graceland Estate', description: 'The iconic Graceland mansion in Memphis, Tennessee, inherited from her father Elvis Presley and a major tourist attraction.', estimatedValue: 50, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 980 }
     ],
@@ -49,7 +49,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'll-cool-j': {
-    avatar: 'https://ui-avatars.com/api/?name=LL+Cool+J&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/dpOHjasRJz7rk9CVutd6L9WnWTc.jpg',
     assets: [
       { id: 'll-cool-j-1', type: 'real_estate', name: 'Long Island Estate', description: 'A sprawling estate on Long Island, New York, where LL Cool J grew up and has maintained a home throughout his career.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 }
     ],
@@ -58,7 +58,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'ludacris': {
-    avatar: 'https://ui-avatars.com/api/?name=Ludacris&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/erkJijujhe48vhJ8iCEtVpNEeVn.jpg',
     assets: [
       { id: 'ludacris-1', type: 'real_estate', name: 'Atlanta Mansion', description: 'A grand mansion in the Atlanta area where Ludacris was raised and built his music career.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 280 },
       { id: 'ludacris-2', type: 'car', name: 'Custom Car Collection', description: 'An impressive collection of luxury and custom cars reflecting his love for automobiles celebrated in his music.', estimatedValue: 1.5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 420 }
@@ -68,7 +68,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'madonna': {
-    avatar: 'https://ui-avatars.com/api/?name=Madonna&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/d11f76gpql9RNSnyYgZ6yQr5DW7.jpg',
     assets: [
       { id: 'madonna-1', type: 'real_estate', name: 'Lisbon Villa', description: 'A sprawling historic villa in Lisbon, Portugal, where Madonna relocated with her family for several years.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 540 },
       { id: 'madonna-2', type: 'art', name: 'Private Art Collection', description: 'An extensive collection of contemporary and modern art including works by Frida Kahlo and other major artists.', estimatedValue: 40, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 460 }
@@ -78,7 +78,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'magic-johnson': {
-    avatar: 'https://ui-avatars.com/api/?name=Magic+Johnson&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/9BxhonPUrMFI6szJr4wEOxp81Z2.jpg',
     assets: [
       { id: 'magic-johnson-1', type: 'sports_team', name: 'Washington Commanders Stake', description: 'Magic Johnson joined a group that purchased the NFL\'s Washington Commanders for a record $6.05 billion in 2023.', estimatedValue: 200, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 870 },
       { id: 'magic-johnson-2', type: 'real_estate', name: 'Beverly Hills Mansion', description: 'A luxurious estate in Beverly Hills where Magic Johnson resides with his family.', estimatedValue: 15, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 530 }
@@ -88,7 +88,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'mariah-carey': {
-    avatar: 'https://ui-avatars.com/api/?name=Mariah+Carey&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/k5vdcaZHKuP4UgHReFWVdo0MXGI.jpg',
     assets: [
       { id: 'mariah-carey-1', type: 'real_estate', name: 'New York Triplex', description: 'A stunning triplex apartment in New York City outfitted with lavish decor and a full recording studio.', estimatedValue: 9, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 610 }
     ],
@@ -97,7 +97,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'mark-cuban': {
-    avatar: 'https://ui-avatars.com/api/?name=Mark+Cuban&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/iK8LVp8R9Pf2MnYWBP6c0HKPf2D.jpg',
     assets: [
       { id: 'mark-cuban-1', type: 'sports_team', name: 'Dallas Mavericks', description: 'Mark Cuban owned the NBA\'s Dallas Mavericks for over two decades before selling a majority stake in 2023 for approximately $3.5 billion.', estimatedValue: 3500, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 920 },
       { id: 'mark-cuban-2', type: 'jet', name: 'Gulfstream V', description: 'Mark Cuban\'s private Gulfstream V jet, which he famously purchased the day after selling Broadcast.com to Yahoo for $5.7 billion.', estimatedValue: 40, image: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop', likes: 750 }
@@ -107,7 +107,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'mark-zuckerberg': {
-    avatar: 'https://ui-avatars.com/api/?name=Mark+Zuckerberg&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/eTkGvG0FHdE2Q3w6LsSZZ4N2WPP.jpg',
     assets: [
       { id: 'mark-zuckerberg-1', type: 'real_estate', name: 'Kauai Compound', description: 'A massive 1,400-acre estate on the Hawaiian island of Kauai, which Zuckerberg has been developing into a self-sufficient compound.', estimatedValue: 270, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1100 },
       { id: 'mark-zuckerberg-2', type: 'yacht', name: 'Launchpad', description: 'A 118-meter superyacht named Launchpad that Zuckerberg commissioned, featuring multiple decks and a support vessel.', estimatedValue: 300, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 980 }
@@ -117,7 +117,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'martha-stewart': {
-    avatar: 'https://ui-avatars.com/api/?name=Martha+Stewart&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/6Moy0fo5pdsT15UTbMJHy7xCEPj.jpg',
     assets: [
       { id: 'martha-stewart-1', type: 'real_estate', name: 'Bedford Farm', description: 'Martha Stewart\'s iconic Bedford, New York farm estate spanning over 150 acres, which has been central to her brand for decades.', estimatedValue: 16, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 670 }
     ],
@@ -126,7 +126,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'matt-damon': {
-    avatar: 'https://ui-avatars.com/api/?name=Matt+Damon&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/At3JgvaNeEN4Z4ESKlhhes85Xo3.jpg',
     assets: [
       { id: 'matt-damon-1', type: 'real_estate', name: 'Pacific Palisades Home', description: 'A stunning Pacific Palisades estate in Los Angeles purchased for $21 million, featuring ocean views and lush landscaping.', estimatedValue: 21, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 410 }
     ],
@@ -135,7 +135,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'matthew-mcconaughey': {
-    avatar: 'https://ui-avatars.com/api/?name=Matthew+McConaughey&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/lCySuYjhXix3FzQdS4oceDDrXKI.jpg',
     assets: [
       { id: 'matthew-mcconaughey-1', type: 'real_estate', name: 'Austin Ranch', description: 'A sprawling ranch property in the Austin, Texas area where McConaughey lives with his family and raises animals.', estimatedValue: 10, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
     ],
@@ -144,7 +144,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'meghan-markle': {
-    avatar: 'https://ui-avatars.com/api/?name=Meghan+Markle&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/c4l6MFR3Qrz3421hREII3S7cRHk.jpg',
     assets: [
       { id: 'meghan-markle-1', type: 'real_estate', name: 'Montecito Mansion', description: 'A $14.7 million mansion in Montecito, California purchased by Meghan Markle and Prince Harry in 2020 after stepping back from royal duties.', estimatedValue: 14.7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 760 }
     ],
@@ -153,7 +153,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'melissa-mccarthy': {
-    avatar: 'https://ui-avatars.com/api/?name=Melissa+McCarthy&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/yl0qva0O4u92fvtItakdvKmKrW9.jpg',
     assets: [
       { id: 'melissa-mccarthy-1', type: 'real_estate', name: 'Los Feliz Estate', description: 'A charming estate in the Los Feliz neighborhood of Los Angeles purchased by Melissa McCarthy and husband Ben Falcone.', estimatedValue: 6, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 }
     ],
@@ -162,7 +162,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'meryl-streep': {
-    avatar: 'https://ui-avatars.com/api/?name=Meryl+Streep&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg',
     assets: [
       { id: 'meryl-streep-1', type: 'real_estate', name: 'Connecticut Estate', description: 'A beautiful country estate in Connecticut where Meryl Streep has lived for decades with her family, away from Hollywood\'s spotlight.', estimatedValue: 10, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 350 }
     ],
@@ -171,7 +171,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'michael-jordan': {
-    avatar: 'https://ui-avatars.com/api/?name=Michael+Jordan&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg',
     assets: [
       { id: 'michael-jordan-1', type: 'sports_team', name: 'Charlotte Hornets', description: 'Michael Jordan sold his majority stake in the NBA\'s Charlotte Hornets in 2023 for approximately $3 billion after owning the team for over a decade.', estimatedValue: 3000, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1300 },
       { id: 'michael-jordan-2', type: 'jet', name: 'Gulfstream G550', description: 'Michael Jordan\'s private Gulfstream G550 jet, customized with the number 23 and used for his extensive travel and golf trips.', estimatedValue: 60, image: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop', likes: 950 }
@@ -181,7 +181,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'michael-phelps': {
-    avatar: 'https://ui-avatars.com/api/?name=Michael+Phelps&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/eWRl8VNCovRlx1eAnlAJm8MMkKA.jpg',
     assets: [
       { id: 'michael-phelps-1', type: 'real_estate', name: 'Scottsdale Home', description: 'A luxurious home in Scottsdale, Arizona where Michael Phelps settled after retirement from competitive swimming.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 }
     ],
@@ -190,7 +190,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'michael-schumacher': {
-    avatar: 'https://ui-avatars.com/api/?name=Michael+Schumacher&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/soIayrvI5LVk7XTn644rAYGeiCd.jpg',
     assets: [
       { id: 'michael-schumacher-1', type: 'yacht', name: 'Galeocerdo', description: 'Michael Schumacher\'s superyacht named Galeocerdo, a luxurious vessel used for family vacations before his skiing accident.', estimatedValue: 20, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 580 },
       { id: 'michael-schumacher-2', type: 'car', name: 'Ferrari F2001', description: 'One of the Formula 1 championship-winning Ferraris from Schumacher\'s legendary career, part of his personal car collection.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 870 }
@@ -200,7 +200,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'mick-jagger': {
-    avatar: 'https://ui-avatars.com/api/?name=Mick+Jagger&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/wDanhh7Z94tI0kdWJ1YFZK1UV5O.jpg',
     assets: [
       { id: 'mick-jagger-1', type: 'real_estate', name: 'Richmond Estate', description: 'Mick Jagger\'s historic estate in Richmond, England, one of several properties the Rolling Stones frontman owns across Europe and the US.', estimatedValue: 7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 460 }
     ],
@@ -209,7 +209,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'mike-tyson': {
-    avatar: 'https://ui-avatars.com/api/?name=Mike+Tyson&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/7eI1WK9985q8XiUgg3rDjOwa3MR.jpg',
     assets: [
       { id: 'mike-tyson-1', type: 'real_estate', name: 'Henderson Cannabis Ranch', description: 'Mike Tyson\'s Tyson Ranch cannabis resort near Palm Springs, California, spanning 40 acres and featuring luxury accommodations.', estimatedValue: 10, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 540 }
     ],
@@ -218,7 +218,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'miley-cyrus': {
-    avatar: 'https://ui-avatars.com/api/?name=Miley+Cyrus&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/7JAe7Rm1s4o17ZvrfQU4BXAe2yb.jpg',
     assets: [
       { id: 'miley-cyrus-1', type: 'real_estate', name: 'Malibu Beach House', description: 'Miley Cyrus rebuilt her Malibu home after it was destroyed in the 2018 California wildfires, creating a new oceanfront sanctuary.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 650 }
     ],
@@ -227,7 +227,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'muhammad-ali': {
-    avatar: 'https://ui-avatars.com/api/?name=Muhammad+Ali&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/u1ck2Lfx34GvW3YOoEE1ddNVdw6.jpg',
     assets: [
       { id: 'muhammad-ali-1', type: 'real_estate', name: 'Louisville Childhood Home', description: 'Muhammad Ali\'s childhood home in Louisville, Kentucky, preserved as a historic landmark and testament to his humble origins.', estimatedValue: 1, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 720 }
     ],
@@ -236,7 +236,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'nadia-comaneci': {
-    avatar: 'https://ui-avatars.com/api/?name=Nadia+Comaneci&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/9vYZ4SANaovEHOmFZOSu95oE06C.jpg',
     assets: [
       { id: 'nadia-comaneci-1', type: 'real_estate', name: 'Norman Oklahoma Home', description: 'Nadia Comaneci\'s home in Norman, Oklahoma, where she has lived since defecting from Romania and settling in the United States.', estimatedValue: 1.2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 320 }
     ],
@@ -245,7 +245,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'naomi-campbell': {
-    avatar: 'https://ui-avatars.com/api/?name=Naomi+Campbell&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/szSm9TgGVS8clzNQFGyWDfaq6OG.jpg',
     assets: [
       { id: 'naomi-campbell-1', type: 'real_estate', name: 'Turkish Villa', description: 'Naomi Campbell\'s striking futuristic villa on the Turkish coast, designed in the shape of an Eye of Horus and featured in numerous design publications.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 810 }
     ],
@@ -254,7 +254,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'natalie-portman': {
-    avatar: 'https://ui-avatars.com/api/?name=Natalie+Portman&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/edPU5HxncLWa1YkgRPNkSd68ONG.jpg',
     assets: [
       { id: 'natalie-portman-1', type: 'real_estate', name: 'Los Angeles Home', description: 'Natalie Portman\'s elegant Los Angeles residence purchased after her return from years living in Paris and Jerusalem.', estimatedValue: 6.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 }
     ],
@@ -272,7 +272,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'neil-young': {
-    avatar: 'https://ui-avatars.com/api/?name=Neil+Young&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/pAEPuSZTK29JAzRkz5W1Vb1dTAe.jpg',
     assets: [
       { id: 'neil-young-1', type: 'real_estate', name: 'California Ranch', description: 'Neil Young\'s expansive Broken Arrow Ranch in the Santa Cruz Mountains of California, a working ranch he has owned since the 1970s.', estimatedValue: 20, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 430 }
     ],
@@ -281,7 +281,7 @@ export const extras_06: Record<string, Ext> = {
     ]
   },
   'neymar': {
-    avatar: 'https://ui-avatars.com/api/?name=Neymar&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/5Zen7hSxxNKWGXd514RPLQUAbTP.jpg',
     assets: [
       { id: 'neymar-1', type: 'yacht', name: 'Neymar Jr. Yacht', description: 'Neymar\'s luxury yacht used for vacations along the Brazilian and Mediterranean coasts, a symbol of his extravagant lifestyle.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 720 },
       { id: 'neymar-2', type: 'car', name: 'Porsche Panamera Collection', description: 'One of many luxury vehicles in Neymar\'s car collection, including several Porsches, Ferraris and a customized Lamborghini.', estimatedValue: 0.5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 580 }

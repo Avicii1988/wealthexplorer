@@ -1,7 +1,7 @@
 import type { Ext } from './extraCelebritiesExtended'
 export const extras_18: Record<string, Ext> = {
   'dafne-keen': {
-    avatar: 'https://ui-avatars.com/api/?name=Dafne+Keen&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/34BhddK5z2YHjfppOleezVrQ7Jt.jpg',
     assets: [
       { id: 'dafne-keen-1', type: 'real_estate', name: 'London Family Home', description: 'A charming property in London shared with her family, reflecting her British-Spanish roots.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 120 }
     ],
@@ -10,7 +10,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'dani-alves': {
-    avatar: 'https://ui-avatars.com/api/?name=Dani+Alves&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/7DyQkyHqROjlaZXeOpokklO1xGH.jpg',
     assets: [
       { id: 'dani-alves-1', type: 'real_estate', name: 'Barcelona Luxury Villa', description: 'A stunning villa in Barcelona acquired during his successful years with FC Barcelona.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 },
       { id: 'dani-alves-2', type: 'car', name: 'Exotic Car Collection', description: 'A curated collection of luxury and exotic vehicles reflecting his flamboyant lifestyle.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 280 }
@@ -20,7 +20,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'danielle-brooks': {
-    avatar: 'https://ui-avatars.com/api/?name=Danielle+Brooks&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/pPSG2Vmq24cwAL5XGK1NLs3KEoZ.jpg',
     assets: [
       { id: 'danielle-brooks-1', type: 'real_estate', name: 'New York City Apartment', description: 'A stylish apartment in New York City where she built her career on stage and screen.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 150 }
     ],
@@ -29,7 +29,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'daryl-hall': {
-    avatar: 'https://ui-avatars.com/api/?name=Daryl+Hall&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/shjDQfXiybrhqz2zUfOdjfELm0D.jpg',
     assets: [
       { id: 'daryl-hall-1', type: 'real_estate', name: 'Connecticut Country Estate', description: 'A sprawling country estate in Connecticut where Hall has long retreated from the music industry spotlight.', estimatedValue: 0.025, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 },
       { id: 'daryl-hall-2', type: 'real_estate', name: 'New York City Townhouse', description: 'A historic townhouse in New York City that served as the iconic backdrop for his Live From Daryl\'s House web series.', estimatedValue: 0.01, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 220 }
@@ -39,7 +39,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'david-chang': {
-    avatar: 'https://ui-avatars.com/api/?name=David+Chang&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/xWcsJ5OQ6wS5I1c0pO1H0Hru2oS.jpg',
     assets: [
       { id: 'david-chang-1', type: 'real_estate', name: 'New York City Home', description: 'A property in New York City near his flagship Momofuku restaurant empire that transformed American dining.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 270 },
       { id: 'david-chang-2', type: 'art', name: 'Contemporary Art Collection', description: 'A curated collection of contemporary art pieces reflecting his avant-garde approach to culture and cuisine.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 190 }
@@ -49,7 +49,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'david-fincher': {
-    avatar: 'https://ui-avatars.com/api/?name=David+Fincher&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/tpEczFclQZeKAiCeKZZ0adRvtfz.jpg',
     assets: [
       { id: 'david-fincher-1', type: 'real_estate', name: 'Los Angeles Director\'s Residence', description: 'A sophisticated Los Angeles home befitting one of Hollywood\'s most meticulous and celebrated directors.', estimatedValue: 0.045, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
     ],
@@ -67,7 +67,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'dawn-french': {
-    avatar: 'https://ui-avatars.com/api/?name=Dawn+French&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/eLFCJSTEeh7CDRw50RzowKz4h7V.jpg',
     assets: [
       { id: 'dawn-french-1', type: 'real_estate', name: 'Cornwall Countryside Retreat', description: 'A beloved countryside home in Cornwall where Dawn French has settled and draws inspiration for her creative work.', estimatedValue: 0.01, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 230 }
     ],
@@ -76,7 +76,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'deb-haaland': {
-    avatar: 'https://ui-avatars.com/api/?name=Deb+Haaland&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/jzvZgGVfyohBv9SxEjgs9h8ViqR.jpg',
     assets: [
       { id: 'deb-haaland-1', type: 'real_estate', name: 'Albuquerque Home', description: 'A modest home in Albuquerque, New Mexico reflecting her community-focused values and deep roots in the state.', estimatedValue: 0.8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 90 }
     ],
@@ -85,7 +85,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'deborah-ann-woll': {
-    avatar: 'https://ui-avatars.com/api/?name=Deborah+Ann+Woll&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/btTnyvRLXOH0pz2SLBwyKbmnFhX.jpg',
     assets: [
       { id: 'deborah-ann-woll-1', type: 'real_estate', name: 'Los Angeles Home', description: 'A comfortable Los Angeles residence where she balances her acting career and her passion for tabletop gaming.', estimatedValue: 7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 175 }
     ],
@@ -104,7 +104,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'deontay-wilder': {
-    avatar: 'https://ui-avatars.com/api/?name=Deontay+Wilder&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/aDrUJ2ZPyJQOhlI6PI6RA3DDqfF.jpg',
     assets: [
       { id: 'deontay-wilder-1', type: 'real_estate', name: 'Alabama Estate', description: 'A grand estate in Alabama near his hometown of Tuscaloosa, where he remains a local hero and community figure.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 },
       { id: 'deontay-wilder-2', type: 'car', name: 'Luxury Car Collection', description: 'An impressive fleet of luxury and custom vehicles reflecting the Bronze Bomber\'s flamboyant ring persona.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 220 }
@@ -123,7 +123,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'dmitry-peskov': {
-    avatar: 'https://ui-avatars.com/api/?name=Dmitry+Peskov&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/vHsbhMvC6oEymUAIDYQepthuWSY.jpg',
     assets: [
       { id: 'dmitry-peskov-1', type: 'watch', name: 'Luxury Watch Collection', description: 'Peskov sparked controversy when photographed wearing an expensive Richard Mille watch worth hundreds of thousands of dollars while serving as Kremlin spokesman.', estimatedValue: 3.5, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 140 }
     ],
@@ -141,7 +141,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'dominic-calvert-lewin': {
-    avatar: 'https://ui-avatars.com/api/?name=Dominic+Calvert-Lewin&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/hQTZdrppADkTIBXuY2yLSslDM5p.jpg',
     assets: [
       { id: 'dominic-calvert-lewin-1', type: 'real_estate', name: 'Merseyside Property', description: 'A modern property on Merseyside acquired during his time as Everton\'s star striker and England international.', estimatedValue: 0.01, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 180 }
     ],
@@ -159,7 +159,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'don-cheadle': {
-    avatar: 'https://ui-avatars.com/api/?name=Don+Cheadle&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/umhTmcVF26qZKEpSfG1ZNpcbs9D.jpg',
     assets: [
       { id: 'don-cheadle-1', type: 'real_estate', name: 'Los Angeles Family Home', description: 'A comfortable family home in Los Angeles where he has raised his family while maintaining a prolific acting career.', estimatedValue: 0.025, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 }
     ],
@@ -168,7 +168,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'donatella-versace': {
-    avatar: 'https://ui-avatars.com/api/?name=Donatella+Versace&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/mVnfGSm5oGqnkHcrUsst7xCFAHX.jpg',
     assets: [
       { id: 'donatella-versace-1', type: 'real_estate', name: 'Milan Fashion Palace', description: 'A palatial residence in Milan at the heart of the fashion world, fitting for the creative director of one of luxury\'s most iconic houses.', estimatedValue: 0.2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 890 },
       { id: 'donatella-versace-2', type: 'yacht', name: 'Mediterranean Superyacht', description: 'A stunning superyacht used for glamorous Mediterranean cruises, frequently hosting A-list celebrities and fashion elite.', estimatedValue: 0.12, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 1100 }
@@ -187,7 +187,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'dr-phil': {
-    avatar: 'https://ui-avatars.com/api/?name=Dr+Phil+McGraw&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/71Nqs57x1sIbWvy6SjYLAo5KcUQ.jpg',
     assets: [
       { id: 'dr-phil-1', type: 'real_estate', name: 'Beverly Hills Mega-Mansion', description: 'A sprawling Beverly Hills estate purchased for over $20 million, featuring every luxury amenity imaginable.', estimatedValue: 0.25, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1050 },
       { id: 'dr-phil-2', type: 'yacht', name: 'Monterey Motor Yacht', description: 'A substantial private yacht named Montserrat used for leisure cruising along the California coastline.', estimatedValue: 0.075, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 780 }
@@ -197,7 +197,7 @@ export const extras_18: Record<string, Ext> = {
     ]
   },
   'dua-saleh': {
-    avatar: 'https://ui-avatars.com/api/?name=Moses+Sumney&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/jf4YMifXVPSIEGdttacM1X2bFxO.jpg',
     assets: [
       { id: 'dua-saleh-1', type: 'real_estate', name: 'Minneapolis Creative Space', description: 'A creative living and working space in Minneapolis that reflects their artistic and activist community ties.', estimatedValue: 1.2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 70 }
     ],
