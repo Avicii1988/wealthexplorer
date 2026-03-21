@@ -1,7 +1,7 @@
 import type { Ext } from './extraCelebritiesExtended'
 export const extras_04: Record<string, Ext> = {
   'garth-brooks': {
-    avatar: 'https://ui-avatars.com/api/?name=Garth+Brooks&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/dN4cOZDdnkIknPDn7E6cjVuJjkX.jpg',
     assets: [
       { id: 'garth-brooks-1', type: 'real_estate', name: 'Oklahoma Ranch', description: 'A sprawling ranch property in his home state of Oklahoma.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 }
     ],
@@ -10,7 +10,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'george-clooney': {
-    avatar: 'https://ui-avatars.com/api/?name=George+Clooney&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/4s3wI0bqOP7K3hhcmKqV6m3GYiQ.jpg',
     assets: [
       { id: 'george-clooney-1', type: 'real_estate', name: 'Villa Oleandra, Lake Como', description: 'A stunning 18th-century Italian villa on Lake Como, one of Clooney\'s most prized properties.', estimatedValue: 100, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 870 },
       { id: 'george-clooney-2', type: 'yacht', name: 'Fortunate Sun', description: 'A luxury yacht used for Mediterranean getaways with family and friends.', estimatedValue: 40, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 620 }
@@ -20,7 +20,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'george-soros': {
-    avatar: 'https://ui-avatars.com/api/?name=George+Soros&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/wNWuUFEPRCb6tW29sYgD6Yjkp8p.jpg',
     assets: [
       { id: 'george-soros-1', type: 'real_estate', name: 'Southampton Estate', description: 'A grand estate in the exclusive Hamptons area of Southampton, New York.', estimatedValue: 25, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 390 },
       { id: 'george-soros-2', type: 'art', name: 'Fine Art Collection', description: 'An extensive collection of modern and contemporary art amassed over decades.', estimatedValue: 200, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 450 }
@@ -30,7 +30,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'gerard-pique': {
-    avatar: 'https://ui-avatars.com/api/?name=Gerard+Pique&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/eiIGJmk5skw1srWRY7xvmpQm31Q.jpg',
     assets: [
       { id: 'gerard-pique-1', type: 'real_estate', name: 'Barcelona Mansion', description: 'A luxury residence in the upscale Pedralbes neighborhood of Barcelona.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 420 }
     ],
@@ -39,7 +39,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'gisele-bundchen': {
-    avatar: 'https://ui-avatars.com/api/?name=Gisele+Bundchen&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/rXPQOeTQRtBoSVfrqEfVE6hS2xF.jpg',
     assets: [
       { id: 'gisele-bundchen-1', type: 'real_estate', name: 'Miami Mansion', description: 'A stunning waterfront mansion in Miami purchased after her divorce from Tom Brady.', estimatedValue: 11, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 580 },
       { id: 'gisele-bundchen-2', type: 'real_estate', name: 'Costa Rica Estate', description: 'An eco-friendly retreat nestled in the rainforests of Costa Rica, reflecting her environmental values.', estimatedValue: 10, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 490 }
@@ -59,7 +59,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'grace-kelly': {
-    avatar: 'https://ui-avatars.com/api/?name=Grace+Kelly&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/gnz3NGJrUERwklqfuPWXxcOPs0Q.jpg',
     assets: [
       { id: 'grace-kelly-1', type: 'real_estate', name: 'Palace of Monaco', description: 'As Princess of Monaco, Grace Kelly resided in the historic Palace of Monaco overlooking the Mediterranean Sea.', estimatedValue: 300, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 920 }
     ],
@@ -68,7 +68,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'gwen-stefani': {
-    avatar: 'https://ui-avatars.com/api/?name=Gwen+Stefani&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/pZDg9B0SFPCzfPCgYDKfROFzsBP.jpg',
     assets: [
       { id: 'gwen-stefani-1', type: 'real_estate', name: 'Beverly Hills Estate', description: 'A luxurious compound in Beverly Hills that Gwen Stefani has called home for years.', estimatedValue: 15, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 460 }
     ],
@@ -77,7 +77,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'hank-aaron': {
-    avatar: 'https://ui-avatars.com/api/?name=Hank+Aaron&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/sIRiQXUYNbetopkrC4UP7l3gMwm.jpg',
     assets: [
       { id: 'hank-aaron-1', type: 'real_estate', name: 'Atlanta Family Home', description: 'A beloved family residence in Atlanta, Georgia, the city where Aaron became a baseball legend.', estimatedValue: 1.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 280 }
     ],
@@ -86,7 +86,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'harry-styles': {
-    avatar: 'https://ui-avatars.com/api/?name=Harry+Styles&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/kCHF4vPX9PxjN0CaUt2G2k3fy3J.jpg',
     assets: [
       { id: 'harry-styles-1', type: 'real_estate', name: 'London Townhouse', description: 'An elegant townhouse in the upscale North London neighborhood that Harry calls his primary home.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 710 },
       { id: 'harry-styles-2', type: 'watch', name: 'Rolex Daytona Collection', description: 'Harry Styles is known for his eclectic taste, including a prized collection of vintage and modern Rolex timepieces.', estimatedValue: 0.15, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 590 }
@@ -96,7 +96,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'heidi-klum': {
-    avatar: 'https://ui-avatars.com/api/?name=Heidi+Klum&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/dITwK1mYprcZ9VX44t0m0at2HIH.jpg',
     assets: [
       { id: 'heidi-klum-1', type: 'real_estate', name: 'Bel Air Mansion', description: 'A sprawling estate in the exclusive Bel Air neighborhood of Los Angeles.', estimatedValue: 12, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 480 }
     ],
@@ -105,7 +105,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'hillary-clinton': {
-    avatar: 'https://ui-avatars.com/api/?name=Hillary+Clinton&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/67D6LJgwfbF0baKknUx6OPIoVlu.jpg',
     assets: [
       { id: 'hillary-clinton-1', type: 'real_estate', name: 'Chappaqua Home', description: 'The Clinton family\'s primary residence in Chappaqua, New York, purchased when Hillary ran for Senate.', estimatedValue: 2.8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 }
     ],
@@ -114,7 +114,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'hugh-jackman': {
-    avatar: 'https://ui-avatars.com/api/?name=Hugh+Jackman&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/oX6CpXmnXCHLyqsa4NEed1DZAKx.jpg',
     assets: [
       { id: 'hugh-jackman-1', type: 'real_estate', name: 'New York City Penthouse', description: 'A stunning penthouse apartment in the West Village neighborhood of Manhattan.', estimatedValue: 21, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 550 }
     ],
@@ -142,7 +142,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jack-ma': {
-    avatar: 'https://ui-avatars.com/api/?name=Jack+Ma&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/rpQ8woHjo3ZzsJNT3RJSfJGDNIQ.jpg',
     assets: [
       { id: 'jack-ma-1', type: 'real_estate', name: 'Hangzhou Villa Complex', description: 'An extensive private villa complex in Hangzhou, China, the city where Alibaba was founded.', estimatedValue: 50, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 610 },
       { id: 'jack-ma-2', type: 'yacht', name: 'Zen', description: 'A luxury superyacht acquired by Jack Ma for leisure travel and private retreats.', estimatedValue: 80, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 740 }
@@ -152,7 +152,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jackie-chan': {
-    avatar: 'https://ui-avatars.com/api/?name=Jackie+Chan&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg',
     assets: [
       { id: 'jackie-chan-1', type: 'real_estate', name: 'Hong Kong Estate', description: 'A grand private estate in Hong Kong, Jackie Chan\'s home city and the base of his entertainment empire.', estimatedValue: 18, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 570 },
       { id: 'jackie-chan-2', type: 'car', name: 'Vintage Ferrari Collection', description: 'Jackie Chan is a passionate car collector with a fleet of rare Ferraris and other exotic vehicles.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 630 }
@@ -162,7 +162,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jacqueline-onassis': {
-    avatar: 'https://ui-avatars.com/api/?name=Jacqueline+Kennedy+Onassis&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/Raykdz9PN1D69gn1lvKyzA8UQT.jpg',
     assets: [
       { id: 'jacqueline-onassis-1', type: 'real_estate', name: 'Martha\'s Vineyard Estate', description: 'The beloved Red Gate Farm on Martha\'s Vineyard, a 375-acre oceanfront estate Jackie treasured for privacy.', estimatedValue: 30, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 740 }
     ],
@@ -171,7 +171,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jada-pinkett-smith': {
-    avatar: 'https://ui-avatars.com/api/?name=Jada+Pinkett+Smith&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/3RyvVVSlgRbZANDFkYiAsRMaHW.jpg',
     assets: [
       { id: 'jada-pinkett-smith-1', type: 'real_estate', name: 'Calabasas Compound', description: 'A large family compound in Calabasas, California, shared with the Smith family for many years.', estimatedValue: 9, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 360 }
     ],
@@ -190,7 +190,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'james-may': {
-    avatar: 'https://ui-avatars.com/api/?name=James+May&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/hiYZZKlWPPuo1KJjQErkzpTehKZ.jpg',
     assets: [
       { id: 'james-may-1', type: 'car', name: 'Porsche 911 GT3', description: 'The most prized piece of James May\'s carefully curated collection of classic and performance cars.', estimatedValue: 0.2, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 490 }
     ],
@@ -199,7 +199,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jane-fonda': {
-    avatar: 'https://ui-avatars.com/api/?name=Jane+Fonda&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/5Yb3nmRWXXZAxNhfhEuOMdfyVNN.jpg',
     assets: [
       { id: 'jane-fonda-1', type: 'real_estate', name: 'Bel Air Home', description: 'An elegant residence in the Bel Air neighborhood of Los Angeles, long a staple of Fonda\'s California life.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 370 }
     ],
@@ -208,7 +208,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'janet-jackson': {
-    avatar: 'https://ui-avatars.com/api/?name=Janet+Jackson&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/qNUFuXg10cH7n1ggFgOaLbjBglg.jpg',
     assets: [
       { id: 'janet-jackson-1', type: 'real_estate', name: 'Malibu Oceanfront Estate', description: 'A stunning Malibu property with direct beach access and sweeping Pacific Ocean views.', estimatedValue: 15, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 510 }
     ],
@@ -217,7 +217,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jared-leto': {
-    avatar: 'https://ui-avatars.com/api/?name=Jared+Leto&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/ca3x0OfIKbJppZh8S1Alx3GfUZO.jpg',
     assets: [
       { id: 'jared-leto-1', type: 'real_estate', name: 'Hollywood Hills Compound', description: 'A sprawling compound in the Hollywood Hills with stunning views of Los Angeles below.', estimatedValue: 6, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 440 }
     ],
@@ -226,7 +226,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jay-z': {
-    avatar: 'https://ui-avatars.com/api/?name=Jay-Z&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/rqyNr2CSOjTniW1VinNNvFBYz9I.jpg',
     assets: [
       { id: 'jay-z-1', type: 'real_estate', name: 'Bel Air Mega-Mansion', description: 'A $88 million Bel Air estate purchased with Beyoncé, featuring six structures on 8.5 acres.', estimatedValue: 88, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 950 },
       { id: 'jay-z-2', type: 'art', name: 'Jean-Michel Basquiat Collection', description: 'Jay-Z owns several major works by Jean-Michel Basquiat, part of a fine art portfolio worth tens of millions.', estimatedValue: 70, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 780 }
@@ -236,7 +236,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jennifer-aniston': {
-    avatar: 'https://ui-avatars.com/api/?name=Jennifer+Aniston&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/vq7KKJE4gsb8WQEUkvMB2zUcsOO.jpg',
     assets: [
       { id: 'jennifer-aniston-1', type: 'real_estate', name: 'Bel Air Estate', description: 'A magnificent $21 million Bel Air estate that Jennifer Aniston purchased and extensively renovated.', estimatedValue: 21, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 680 }
     ],
@@ -245,7 +245,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jennifer-garner': {
-    avatar: 'https://ui-avatars.com/api/?name=Jennifer+Garner&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/ftymEXqdTnXfaI6dGd9qrJoFOSE.jpg',
     assets: [
       { id: 'jennifer-garner-1', type: 'real_estate', name: 'Pacific Palisades Home', description: 'A charming family home in the Pacific Palisades neighborhood of Los Angeles where she raised her children.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 390 }
     ],
@@ -254,7 +254,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jennifer-lawrence': {
-    avatar: 'https://ui-avatars.com/api/?name=Jennifer+Lawrence&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg',
     assets: [
       { id: 'jennifer-lawrence-1', type: 'real_estate', name: 'Beverly Hills Home', description: 'A stylish Beverly Hills property that Jennifer Lawrence purchased at the height of her Hunger Games fame.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 470 }
     ],
@@ -263,7 +263,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jessica-alba': {
-    avatar: 'https://ui-avatars.com/api/?name=Jessica+Alba&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/4Ltk0ghRffjLjmilkttFoJJboVQ.jpg',
     assets: [
       { id: 'jessica-alba-1', type: 'real_estate', name: 'Beverly Hills Family Home', description: 'A beautiful family home in Beverly Hills where Jessica Alba lives with her husband and children.', estimatedValue: 10, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 430 }
     ],
@@ -272,7 +272,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jessica-biel': {
-    avatar: 'https://ui-avatars.com/api/?name=Jessica+Biel&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/3txkpzteYNW12vpREFpagSrWe6d.jpg',
     assets: [
       { id: 'jessica-biel-1', type: 'real_estate', name: 'Hollywood Hills Home', description: 'A private and stylish home in the Hollywood Hills shared with husband Justin Timberlake.', estimatedValue: 6, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 350 }
     ],
@@ -281,7 +281,7 @@ export const extras_04: Record<string, Ext> = {
     ]
   },
   'jessica-simpson': {
-    avatar: 'https://ui-avatars.com/api/?name=Jessica+Simpson&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/kDH7ugn59hYhVVzCdBqc3YyX27z.jpg',
     assets: [
       { id: 'jessica-simpson-1', type: 'real_estate', name: 'Hidden Hills Estate', description: 'A grand family estate in the gated community of Hidden Hills, California, befitting her fashion empire status.', estimatedValue: 12, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 460 }
     ],

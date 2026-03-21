@@ -1,7 +1,7 @@
 import type { Ext } from './extraCelebritiesExtended'
 export const extras_12: Record<string, Ext> = {
   'katharine-hepburn': {
-    avatar: 'https://ui-avatars.com/api/?name=Katharine+Hepburn&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/hzBSOe6bburyMeeCqD9kR9tRfdD.jpg',
     assets: [
       { id: 'katharine-hepburn-1', type: 'real_estate', name: 'Old Saybrook Estate', description: 'Historic Connecticut waterfront estate where Hepburn lived for decades, a beloved family retreat.', estimatedValue: 0.03, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 }
     ],
@@ -10,7 +10,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'keith-urban': {
-    avatar: 'https://ui-avatars.com/api/?name=Keith+Urban&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/6jB3gPO4yhdr24iqLjNS1Nw83SL.jpg',
     assets: [
       { id: 'keith-urban-1', type: 'real_estate', name: 'Nashville Estate', description: 'Luxurious Nashville home shared with wife Nicole Kidman, featuring recording studio and sprawling grounds.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 420 },
       { id: 'keith-urban-2', type: 'car', name: 'Classic Car Collection', description: 'A curated collection of vintage and classic automobiles reflecting his passion for speed and craftsmanship.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 290 }
@@ -20,7 +20,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'kim-kardashian': {
-    avatar: 'https://ui-avatars.com/api/?name=Kim+Kardashian&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/3TLSq0aHXyxtqaXe9p7yB5Daqsa.jpg',
     assets: [
       { id: 'kim-kardashian-1', type: 'real_estate', name: 'Hidden Hills Mansion', description: 'Sprawling minimalist compound in Hidden Hills, California, designed by Axel Vervoordt with seven bedrooms.', estimatedValue: 0.06, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1850 },
       { id: 'kim-kardashian-2', type: 'art', name: 'Contemporary Art Collection', description: 'An extensive collection of contemporary and fine art adorning her minimalist home and offices.', estimatedValue: 0.05, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 970 }
@@ -30,7 +30,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'kylie-jenner': {
-    avatar: 'https://ui-avatars.com/api/?name=Kylie+Jenner&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/jncD8hqf4PKZT31JKj0lNoAg9hK.jpg',
     assets: [
       { id: 'kylie-jenner-1', type: 'real_estate', name: 'Holmby Hills Estate', description: 'Stunning Holmby Hills mansion purchased for over $36 million, featuring a beauty salon and movie theater.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 2100 },
       { id: 'kylie-jenner-2', type: 'jet', name: 'Private Jet', description: 'A custom Bombardier Global 7500 jet nicknamed "Kylie Air," complete with personalized interior and pink accents.', estimatedValue: 0.07, image: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop', likes: 1560 }
@@ -40,7 +40,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'lance-armstrong': {
-    avatar: 'https://ui-avatars.com/api/?name=Lance+Armstrong&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/3tp5rTOAeOHsQX8PN7trSQYidhH.jpg',
     assets: [
       { id: 'lance-armstrong-1', type: 'real_estate', name: 'Austin Ranch', description: 'Expansive Texas ranch and primary residence where Armstrong lives with his family after his return to Austin.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 280 }
     ],
@@ -49,7 +49,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'lil-nas-x': {
-    avatar: 'https://ui-avatars.com/api/?name=Lil+Nas+X&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/yJ7Umwc2t6aSDYIs7ztsDrYMec8.jpg',
     assets: [
       { id: 'lil-nas-x-1', type: 'watch', name: 'Luxury Watch Collection', description: 'A growing collection of high-end timepieces including Audemars Piguet and Rolex models.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 640 }
     ],
@@ -58,7 +58,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'logan-paul': {
-    avatar: 'https://ui-avatars.com/api/?name=Logan+Paul&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/6TW3gdIDnRrI0XUXjNpJbGvxQvP.jpg',
     assets: [
       { id: 'logan-paul-1', type: 'real_estate', name: 'Puerto Rico Mansion', description: 'Luxurious estate in Puerto Rico purchased for tax advantages, featuring ocean views and entertainment spaces.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 730 }
     ],
@@ -67,7 +67,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'lori-harvey': {
-    avatar: 'https://ui-avatars.com/api/?name=Lori+Harvey&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/iP17erjKZpj66XlKuxCCPuMHjYA.jpg',
     assets: [
       { id: 'lori-harvey-1', type: 'car', name: 'Luxury Vehicle Collection', description: 'A stylish collection of high-end vehicles including a Porsche 911 and Range Rover befitting her influencer lifestyle.', estimatedValue: 1, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 480 }
     ],
@@ -76,7 +76,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'martin-luther-king': {
-    avatar: 'https://ui-avatars.com/api/?name=Martin+Luther+King+Jr&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/bclVGQbWbPRQRC94e855oP4Inw0.jpg',
     assets: [
       { id: 'martin-luther-king-1', type: 'real_estate', name: 'Atlanta Family Home', description: 'The historic Vine City home in Atlanta where Dr. King lived with his family, now preserved as a landmark.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1200 }
     ],
@@ -85,7 +85,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'marvin-gaye': {
-    avatar: 'https://ui-avatars.com/api/?name=Marvin+Gaye&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/9Su0b4zeVTFCPiMesBb7Xv8goEO.jpg',
     assets: [
       { id: 'marvin-gaye-1', type: 'real_estate', name: 'Los Angeles Estate', description: 'A classic Los Angeles property associated with the soul legend during the height of his Motown career.', estimatedValue: 0.12, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 560 }
     ],
@@ -94,7 +94,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'michael-jordan': {
-    avatar: 'https://ui-avatars.com/api/?name=Michael+Jordan&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg',
     assets: [
       { id: 'michael-jordan-1', type: 'real_estate', name: 'Highland Park Mansion', description: 'Iconic Highland Park, Illinois mansion spanning 56,000 square feet with a full basketball court, listed for sale for years.', estimatedValue: 0.15, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 2800 },
       { id: 'michael-jordan-2', type: 'jet', name: 'Gulfstream G700', description: 'A customized Gulfstream G700 private jet befitting the billionaire basketball legend and team owner.', estimatedValue: 0.075, image: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop', likes: 3100 }
@@ -104,7 +104,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'michael-strahan': {
-    avatar: 'https://ui-avatars.com/api/?name=Michael+Strahan&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/bdXOA1Omme0v7TXt3TrpVKewaVB.jpg',
     assets: [
       { id: 'michael-strahan-1', type: 'real_estate', name: 'New York City Penthouse', description: 'A stunning penthouse in New York City offering panoramic views, reflecting his success in media and television.', estimatedValue: 0.035, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 650 }
     ],
@@ -113,7 +113,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'mike-tyson': {
-    avatar: 'https://ui-avatars.com/api/?name=Mike+Tyson&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/7eI1WK9985q8XiUgg3rDjOwa3MR.jpg',
     assets: [
       { id: 'mike-tyson-1', type: 'real_estate', name: 'Nevada Desert Ranch', description: 'A sprawling ranch in Nevada serving as home and cannabis farm for Tyson\'s marijuana business venture.', estimatedValue: 0.01, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 490 }
     ],
@@ -122,7 +122,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'missy-elliott': {
-    avatar: 'https://ui-avatars.com/api/?name=Missy+Elliott&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/qlu4qyqorTEfkeiHXTZ13x50z3X.jpg',
     assets: [
       { id: 'missy-elliott-1', type: 'real_estate', name: 'Virginia Beach Estate', description: 'A lavish estate in her home state of Virginia, a testament to her journey from humble beginnings to superstardom.', estimatedValue: 0.03, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 720 }
     ],
@@ -131,7 +131,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'nelson-mandela': {
-    avatar: 'https://ui-avatars.com/api/?name=Nelson+Mandela&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/p7gjjliB2PyWE8hjVoETpArLk0b.jpg',
     assets: [
       { id: 'nelson-mandela-1', type: 'real_estate', name: 'Johannesburg Family Home', description: 'The Houghton estate in Johannesburg that served as Mandela\'s primary residence after his release from prison.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1400 }
     ],
@@ -149,7 +149,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'nile-rodgers': {
-    avatar: 'https://ui-avatars.com/api/?name=Nile+Rodgers&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/g3ApsaEiNiuwL1k51xIXwOgvQiE.jpg',
     assets: [
       { id: 'nile-rodgers-1', type: 'real_estate', name: 'Connecticut Estate', description: 'A classic New England estate owned by the legendary producer and guitarist, filled with music memorabilia.', estimatedValue: 0.06, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 },
       { id: 'nile-rodgers-2', type: 'art', name: 'Music Memorabilia Collection', description: 'An invaluable collection of guitars, platinum records, and artifacts from decades of groundbreaking music production.', estimatedValue: 0.025, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 310 }
@@ -159,7 +159,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'olivia-wilde': {
-    avatar: 'https://ui-avatars.com/api/?name=Olivia+Wilde&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/jYopRE6nhYGqpb64fVUKrbJVMy1.jpg',
     assets: [
       { id: 'olivia-wilde-1', type: 'real_estate', name: 'Los Angeles Home', description: 'A stylish Los Angeles property where she resides with her children, blending her artistic sensibility with family life.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 480 }
     ],
@@ -168,7 +168,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'oscar-piastri': {
-    avatar: 'https://ui-avatars.com/api/?name=Oscar+Piastri&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/mVOW773YHgtBF5eq9LWsvQKLSx6.jpg',
     assets: [
       { id: 'oscar-piastri-1', type: 'car', name: 'Performance Vehicle Collection', description: 'A collection of high-performance road cars befitting the young Formula One star who lives and breathes motorsport.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 560 }
     ],
@@ -177,7 +177,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'paris-hilton': {
-    avatar: 'https://ui-avatars.com/api/?name=Paris+Hilton&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/v7l2mJc7mcmsYavpmxaZp7oq4xg.jpg',
     assets: [
       { id: 'paris-hilton-1', type: 'real_estate', name: 'Malibu Beach House', description: 'A stunning beachfront property in Malibu that serves as a weekend retreat for Paris and her growing family.', estimatedValue: 0.08, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1100 },
       { id: 'paris-hilton-2', type: 'watch', name: 'Diamond Watch Collection', description: 'An extraordinary collection of diamond-encrusted timepieces and jewelry worth millions accumulated over two decades.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 890 }
@@ -187,7 +187,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'paul-pogba': {
-    avatar: 'https://ui-avatars.com/api/?name=Paul+Pogba&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/4SH8ANPfjT8ThsUS7LX0Zrg5oGD.jpg',
     assets: [
       { id: 'paul-pogba-1', type: 'car', name: 'Luxury Car Fleet', description: 'An impressive fleet including Ferraris, Lamborghinis, and a custom Rolls-Royce Cullinan worth millions combined.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 1050 },
       { id: 'paul-pogba-2', type: 'real_estate', name: 'Manchester Mansion', description: 'A grand mansion in Cheshire, England, purchased during his record-breaking return to Manchester United.', estimatedValue: 0.025, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 780 }
@@ -197,7 +197,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'pharrell-williams': {
-    avatar: 'https://ui-avatars.com/api/?name=Pharrell+Williams&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/3VdAd4rnxWFvcnBL7aEUVWxEH6V.jpg',
     assets: [
       { id: 'pharrell-williams-1', type: 'real_estate', name: 'Miami Beach Estate', description: 'A spectacular Miami Beach property reflecting Pharrell\'s affinity for art, design, and the ocean lifestyle.', estimatedValue: 0.1, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1300 },
       { id: 'pharrell-williams-2', type: 'art', name: 'Fine Art Collection', description: 'An internationally renowned art collection featuring works by contemporary masters and emerging artists from around the world.', estimatedValue: 0.08, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 960 }
@@ -216,7 +216,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'prince-william': {
-    avatar: 'https://ui-avatars.com/api/?name=Prince+William&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/pxzpxrMHSA4C8kOGcSuERRQsyVw.jpg',
     assets: [
       { id: 'prince-william-1', type: 'real_estate', name: 'Windsor Castle Residence', description: 'Adelaide Cottage at Windsor Castle, chosen as the family\'s more modest primary residence after leaving Kensington Palace.', estimatedValue: 0.08, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1650 }
     ],
@@ -225,7 +225,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'queen-elizabeth-ii': {
-    avatar: 'https://ui-avatars.com/api/?name=Queen+Elizabeth+II&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/rO3H0ndtekEtNzRScYQMREiB3gI.jpg',
     assets: [
       { id: 'queen-elizabeth-ii-1', type: 'real_estate', name: 'Sandringham Estate', description: 'The beloved 20,000-acre Sandringham Estate in Norfolk, a private royal residence passed through generations of the royal family.', estimatedValue: 0.3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 2200 },
       { id: 'queen-elizabeth-ii-2', type: 'art', name: 'Royal Art Collection', description: 'Part of the vast Royal Collection comprising over one million objects including paintings, sculptures, and decorative arts.', estimatedValue: 0.1, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 1900 }
@@ -235,7 +235,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'randy-orton': {
-    avatar: 'https://ui-avatars.com/api/?name=Randy+Orton&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/1vNbHy35sXO3RPZLw29ATOdE7yJ.jpg',
     assets: [
       { id: 'randy-orton-1', type: 'real_estate', name: 'St. Louis Family Home', description: 'A comfortable family estate in the St. Louis area where Randy Orton resides between his wrestling commitments.', estimatedValue: 0.01, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 380 }
     ],
@@ -244,7 +244,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'rob-lowe': {
-    avatar: 'https://ui-avatars.com/api/?name=Rob+Lowe&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/77decDyKXB34i9A1FnMM1suI5cA.jpg',
     assets: [
       { id: 'rob-lowe-1', type: 'real_estate', name: 'Montecito Estate', description: 'A magnificent estate in Montecito, California that Rob Lowe sold for over $45 million, one of the most expensive sales in the area.', estimatedValue: 0.06, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 520 },
       { id: 'rob-lowe-2', type: 'art', name: 'Fine Art and Antique Collection', description: 'A sophisticated collection of fine art and antiques curated over decades, reflecting his passion for history and culture.', estimatedValue: 0.025, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 310 }
@@ -254,7 +254,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'rob-kardashian': {
-    avatar: 'https://ui-avatars.com/api/?name=Rob+Kardashian&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/tEy4vOBwuHMtDWilbgnAwmIDzsk.jpg',
     assets: [
       { id: 'rob-kardashian-1', type: 'real_estate', name: 'Calabasas Home', description: 'A property in the upscale Calabasas community where Rob resides close to his famous family.', estimatedValue: 7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 280 }
     ],
@@ -263,7 +263,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'roberto-mancini': {
-    avatar: 'https://ui-avatars.com/api/?name=Roberto+Mancini&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/65NI5xm80CnhUKKRfLrtPrJ3Tut.jpg',
     assets: [
       { id: 'roberto-mancini-1', type: 'real_estate', name: 'Italian Villa', description: 'An elegant villa in northern Italy reflecting the stylish former manager\'s deep ties to his homeland.', estimatedValue: 0.02, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 }
     ],
@@ -272,7 +272,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'sean-combs': {
-    avatar: 'https://ui-avatars.com/api/?name=Sean+Combs&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/4AIfaoGkcuWPhTRR4A6k5tjYJci.jpg',
     assets: [
       { id: 'sean-combs-1', type: 'yacht', name: 'Luxury Superyacht', description: 'A spectacular superyacht used for entertaining and travel, a signature of Diddy\'s legendary lavish lifestyle.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 980 },
       { id: 'sean-combs-2', type: 'real_estate', name: 'Miami Star Island Mansion', description: 'A grand Star Island compound in Miami previously owned by Diddy, sold amid his legal troubles in 2024.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 760 }
@@ -282,7 +282,7 @@ export const extras_12: Record<string, Ext> = {
     ]
   },
   'serge-gnabry': {
-    avatar: 'https://ui-avatars.com/api/?name=Serge+Gnabry&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/gEOePcqM1Jqapfmvzk3U1Z45jw0.jpg',
     assets: [
       { id: 'serge-gnabry-1', type: 'car', name: 'Sports Car Collection', description: 'A growing collection of high-performance sports cars including a Porsche and Mercedes-AMG, reflecting his love of speed.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 420 }
     ],

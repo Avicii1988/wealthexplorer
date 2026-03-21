@@ -1,7 +1,7 @@
 import type { Ext } from './extraCelebritiesExtended'
 export const extras_17: Record<string, Ext> = {
   'diplo': {
-    avatar: 'https://ui-avatars.com/api/?name=Diplo&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/34SHIq30hDc9uwgbWCOPKDFBiLP.jpg',
     assets: [
       { id: 'diplo-1', type: 'real_estate', name: 'Los Angeles Home', description: 'Modern LA residence used as a creative hub for music production.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 310 },
       { id: 'diplo-2', type: 'watch', name: 'Rolex Daytona', description: 'Luxury chronograph favored by the globe-trotting DJ.', estimatedValue: 0.04, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 220 }
@@ -11,7 +11,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'abel-makkonen': {
-    avatar: 'https://ui-avatars.com/api/?name=The+Weeknd&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/y6HDzvC2qvgfit1UboEIP7u7cO9.jpg',
     assets: [
       { id: 'abel-makkonen-1', type: 'real_estate', name: 'Bel Air Mansion', description: 'Expansive Bel Air estate featuring recording studio, pool, and panoramic city views.', estimatedValue: 0.07, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1850 },
       { id: 'abel-makkonen-2', type: 'car', name: 'Lamborghini Aventador', description: 'Custom Lamborghini featured in several of his music videos and red carpet appearances.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 1420 }
@@ -21,7 +21,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'abby-wambach': {
-    avatar: 'https://ui-avatars.com/api/?name=Abby+Wambach&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/rWkBTutM3US0TdTCnmTjl5SMENm.jpg',
     assets: [
       { id: 'abby-wambach-1', type: 'real_estate', name: 'Portland Family Home', description: 'Comfortable Pacific Northwest home shared with wife Glennon Doyle and family.', estimatedValue: 7, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 390 }
     ],
@@ -40,7 +40,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'alan-sugar': {
-    avatar: 'https://ui-avatars.com/api/?name=Alan+Sugar&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/sNjtwck7HKH4kCQi7SrLbcT7lMU.jpg',
     assets: [
       { id: 'alan-sugar-1', type: 'yacht', name: 'Lady A', description: 'Luxurious private yacht used for Mediterranean cruises and corporate entertaining.', estimatedValue: 0.025, image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', likes: 940 },
       { id: 'alan-sugar-2', type: 'real_estate', name: 'Chigwell Estate', description: 'Grand Essex estate that has been the Sugar family home for decades.', estimatedValue: 0.015, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 780 }
@@ -50,7 +50,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'anne-marie': {
-    avatar: 'https://ui-avatars.com/api/?name=Anne-Marie&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/cxXW8vC1pXfzuMAbgGYTZMXYi5C.jpg',
     assets: [
       { id: 'anne-marie-1', type: 'real_estate', name: 'London Apartment', description: 'Stylish London flat in a sought-after neighborhood, reflecting her pop star success.', estimatedValue: 9, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 420 }
     ],
@@ -68,7 +68,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'armando-iannucci': {
-    avatar: 'https://ui-avatars.com/api/?name=Armando+Iannucci&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/9kdnLu0iALWI19dLTUEVDOxyyCB.jpg',
     assets: [
       { id: 'armando-iannucci-1', type: 'real_estate', name: 'London Home', description: 'Well-appointed London residence befitting the acclaimed writer and director.', estimatedValue: 0.018, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 280 }
     ],
@@ -77,7 +77,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'ashley-tisdale': {
-    avatar: 'https://ui-avatars.com/api/?name=Ashley+Tisdale&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/ot6ib67jxvKVG1JCBl0ROPGtdeP.jpg',
     assets: [
       { id: 'ashley-tisdale-1', type: 'real_estate', name: 'Studio City Home', description: 'Beautifully renovated Studio City property frequently featured on her lifestyle social media.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 510 }
     ],
@@ -104,7 +104,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'becky-g': {
-    avatar: 'https://ui-avatars.com/api/?name=Becky+G&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/vbLeM59VY3gjPn7mggIBZTN2VcC.jpg',
     assets: [
       { id: 'becky-g-1', type: 'real_estate', name: 'Inglewood Family Home', description: 'Family home in Inglewood, California, where Becky G grew up and still supports her extended family.', estimatedValue: 4, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 520 }
     ],
@@ -113,7 +113,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'benedict-cumberbatch': {
-    avatar: 'https://ui-avatars.com/api/?name=Benedict+Cumberbatch&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg',
     assets: [
       { id: 'benedict-cumberbatch-1', type: 'real_estate', name: 'London Georgian Home', description: 'Elegant Georgian townhouse in a prestigious London neighborhood, purchased after his Hollywood breakthrough.', estimatedValue: 0.012, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 890 },
       { id: 'benedict-cumberbatch-2', type: 'watch', name: 'Patek Philippe Calatrava', description: 'Classic dress watch worn at major award ceremonies and premieres.', estimatedValue: 0.035, image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', likes: 560 }
@@ -123,7 +123,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'billie-lourd': {
-    avatar: 'https://ui-avatars.com/api/?name=Billie+Lourd&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/1u8bZL6ZXu5iDbPO3Z0Spetyt34.jpg',
     assets: [
       { id: 'billie-lourd-1', type: 'real_estate', name: 'Los Angeles Estate', description: 'Inherited property and personal LA home reflecting her Hollywood dynasty lineage.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 360 }
     ],
@@ -141,7 +141,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'bonnie-raitt': {
-    avatar: 'https://ui-avatars.com/api/?name=Bonnie+Raitt&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/lN2PD7LGsltMmZj03DpaVrd7gYJ.jpg',
     assets: [
       { id: 'bonnie-raitt-1', type: 'real_estate', name: 'Northern California Ranch', description: 'Peaceful Northern California property where the blues legend writes music and recharges.', estimatedValue: 0.012, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 430 }
     ],
@@ -150,7 +150,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'brett-favre': {
-    avatar: 'https://ui-avatars.com/api/?name=Brett+Favre&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/FvwMoPT6dmN3pPfVpFCpydu2rn.jpg',
     assets: [
       { id: 'brett-favre-1', type: 'real_estate', name: 'Hattiesburg Mississippi Estate', description: 'Sprawling Mississippi estate in the quarterback\'s home state, featuring extensive sporting facilities.', estimatedValue: 0.012, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 580 }
     ],
@@ -159,7 +159,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'cassie-ventura': {
-    avatar: 'https://ui-avatars.com/api/?name=Cassie+Ventura&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/hrKZTgQyvPJBh2t9WvBWgpdaqE8.jpg',
     assets: [
       { id: 'cassie-ventura-1', type: 'real_estate', name: 'Los Angeles Home', description: 'Comfortable LA residence where she has rebuilt her life after high-profile personal challenges.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 290 }
     ],
@@ -177,7 +177,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'chadwick-boseman': {
-    avatar: 'https://ui-avatars.com/api/?name=Chadwick+Boseman&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/1lz1wLOuPFSRIratMz0SxD3tkJ.jpg',
     assets: [
       { id: 'chadwick-boseman-1', type: 'real_estate', name: 'Los Angeles Home', description: 'LA residence where the Black Panther star lived while battling cancer privately for four years.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1450 }
     ],
@@ -186,7 +186,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'charlie-sheen': {
-    avatar: 'https://ui-avatars.com/api/?name=Charlie+Sheen&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/sxoSLhXPEL1Hp1yaTpejTLfd1As.jpg',
     assets: [
       { id: 'charlie-sheen-1', type: 'real_estate', name: 'Mulholland Estates Home', description: 'Former luxury home in Mulholland Estates, sold during financial difficulties following his Two and a Half Men departure.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 340 }
     ],
@@ -195,7 +195,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'chiara-ferragni': {
-    avatar: 'https://ui-avatars.com/api/?name=Chiara+Ferragni&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/lGzO8PmIjJwdn2WSkNRNtK11swZ.jpg',
     assets: [
       { id: 'chiara-ferragni-1', type: 'real_estate', name: 'Milan Penthouse', description: 'Stylish Milan penthouse frequently featured in her fashion content and brand campaigns.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 1120 },
       { id: 'chiara-ferragni-2', type: 'art', name: 'Contemporary Art Collection', description: 'Curated collection of contemporary Italian and international art displayed throughout her Milan home.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 640 }
@@ -205,7 +205,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'christian-pulisic': {
-    avatar: 'https://ui-avatars.com/api/?name=Christian+Pulisic&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/5iWoN6dvscekGjHCZbh8qY7LaoR.jpg',
     assets: [
       { id: 'christian-pulisic-1', type: 'car', name: 'Porsche 911', description: 'Sports car favored by the US soccer star during his time playing in Europe.', estimatedValue: 2, image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop', likes: 480 }
     ],
@@ -214,7 +214,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'chuck-berry': {
-    avatar: 'https://ui-avatars.com/api/?name=Chuck+Berry&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/9faTPqWt3cBmQZWfB16REh1jUwl.jpg',
     assets: [
       { id: 'chuck-berry-1', type: 'real_estate', name: 'Berry Park Estate', description: 'The legendary Berry Park estate in Wentzville, Missouri, Chuck Berry\'s personal retreat and concert venue that he built over decades.', estimatedValue: 3, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 760 }
     ],
@@ -223,7 +223,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'cillian-murphy': {
-    avatar: 'https://ui-avatars.com/api/?name=Cillian+Murphy&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/llkbyWKwpfowZ6C8peBjIV9jj99.jpg',
     assets: [
       { id: 'cillian-murphy-1', type: 'real_estate', name: 'Dublin Family Home', description: 'Private Dublin residence where the actor maintains his Irish roots away from the Hollywood spotlight.', estimatedValue: 0.01, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 870 }
     ],
@@ -232,7 +232,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'claire-foy': {
-    avatar: 'https://ui-avatars.com/api/?name=Claire+Foy&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/4IS02g8RHFOG4YQUSZu8EDu7Oxa.jpg',
     assets: [
       { id: 'claire-foy-1', type: 'real_estate', name: 'London Home', description: 'Understated London home reflecting the actress\'s preference for privacy over celebrity.', estimatedValue: 5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 320 }
     ],
@@ -251,7 +251,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'claudia-schiffer': {
-    avatar: 'https://ui-avatars.com/api/?name=Claudia+Schiffer&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/wDLlMs7aTELNZSEQfQKYBxG6TYW.jpg',
     assets: [
       { id: 'claudia-schiffer-1', type: 'real_estate', name: 'Suffolk Country Manor', description: 'Stunning English country manor estate shared with husband Matthew Vaughn, set in the Suffolk countryside.', estimatedValue: 0.012, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 740 },
       { id: 'claudia-schiffer-2', type: 'art', name: 'Supermodel Era Photography Collection', description: 'Curated collection of iconic fashion photography from the golden age of supermodels including works by Helmut Newton.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', likes: 560 }
@@ -261,7 +261,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'colin-kaepernick': {
-    avatar: 'https://ui-avatars.com/api/?name=Colin+Kaepernick&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/9ossxjX5ZLg2VaYzi5FRJf4Ejr7.jpg',
     assets: [
       { id: 'colin-kaepernick-1', type: 'real_estate', name: 'Los Angeles Home', description: 'LA base from which he has continued his activism and media work since leaving the NFL.', estimatedValue: 8, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 640 }
     ],
@@ -270,7 +270,7 @@ export const extras_17: Record<string, Ext> = {
     ]
   },
   'courtney-love': {
-    avatar: 'https://ui-avatars.com/api/?name=Courtney+Love&background=1a1a1a&color=c9a84c&size=200&bold=true',
+    avatar: 'https://image.tmdb.org/t/p/w400/xOhKd9y4IdsUVecAVz0AR5Ye7yQ.jpg',
     assets: [
       { id: 'courtney-love-1', type: 'real_estate', name: 'Los Angeles Victorian', description: 'Eccentric Victorian-style Los Angeles home reflecting her unique artistic personality.', estimatedValue: 9, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', likes: 420 }
     ],
