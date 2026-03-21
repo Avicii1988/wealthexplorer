@@ -1,0 +1,14 @@
+{
+  "name": "Kim Kardashian",
+  "slug": "kim-kardashian",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://s.yimg.com/ny/api/res/1.2/hMyewbqBdBo1JCIGBIseDg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM2MA--/https://media.zenfs.com/en/aol_the_fashion_spot_392/01de6f15d607385ed022015a3a1610ce",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR_BEtWvQWsjOXrrW-PNuaoDiHAH9BuTB3rw&s",
+    "source": "searchapi",
+    "width": 640,
+    "height": 360,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

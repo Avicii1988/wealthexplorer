@@ -1,0 +1,14 @@
+{
+  "name": "Serena Williams",
+  "slug": "serena-williams",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://i0.wp.com/www.sun-sentinel.com/wp-content/uploads/2026/03/TFL-L-Barbie-Dream-Fest-Serena-Williams-Headshot-202553-01.jpg?fit=620%2C9999px&ssl=1",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRykBrIosbNG390j0RUOq1Aj93Nj2q9CGrJTA&s",
+    "source": "searchapi",
+    "width": 620,
+    "height": 997,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

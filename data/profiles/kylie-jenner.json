@@ -1,0 +1,14 @@
+{
+  "name": "Kylie Jenner",
+  "slug": "kylie-jenner",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3853704575249354286",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9xrZFXALsTpacdrQet6uohug_5ynlB787w&s",
+    "source": "searchapi",
+    "width": 1440,
+    "height": 1440,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

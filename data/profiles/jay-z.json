@@ -1,0 +1,14 @@
+{
+  "name": "Jay-Z",
+  "slug": "jay-z",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3855792506777071928",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfvAZcFEkx2ZSqb7ytyggmCDuByN81Obcjg&s",
+    "source": "searchapi",
+    "width": 1350,
+    "height": 1688,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Warren Buffett",
+  "slug": "warren-buffett",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://www.newtraderu.com/wp-content/uploads/a-professional-headshot-photograph-of-wa_0NtVeM7cTDGiifgqvHwCpw_eaY6E1SFRjuQ4CuMsdBygQ_cover.png",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfe8zgi0P9BQN5O-kNQh5OCQtytJon-yo6HQ&s",
+    "source": "searchapi",
+    "width": 1248,
+    "height": 832,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

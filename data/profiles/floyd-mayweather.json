@@ -1,0 +1,14 @@
+{
+  "name": "Floyd Mayweather",
+  "slug": "floyd-mayweather",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://m.media-amazon.com/images/M/MV5BYzVjMmI4MDYtNjliMS00ODFkLTg4OGEtZWZhY2ViYmU4NzA3XkEyXkFqcGc@._V1_.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1gxstjs9wfLtDIFm306QvYkVX7FcIHqpiew&s",
+    "source": "searchapi",
+    "width": 2550,
+    "height": 3300,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

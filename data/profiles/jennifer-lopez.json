@@ -1,0 +1,14 @@
+{
+  "name": "Jennifer Lopez",
+  "slug": "jennifer-lopez",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1248603069961749",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4TX3OxKZHzuZ9wOYqbkIV0AXvcXgS3xa-ww&s",
+    "source": "searchapi",
+    "width": 960,
+    "height": 960,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Drake",
+  "slug": "drake",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://news.drake.edu/wp-content/uploads/2025/06/Staub_headshot-copy.jpeg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuq64deccjGkXgPDYc2fgjp5p6qI_DlQdaw&s",
+    "source": "searchapi",
+    "width": 900,
+    "height": 1199,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

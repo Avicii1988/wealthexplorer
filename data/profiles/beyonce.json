@@ -1,0 +1,14 @@
+{
+  "name": "Beyoncé",
+  "slug": "beyonce",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://lookaside.fbsbx.com/lookaside/crawler/threads/DFr1O0IRpWK/0/image.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOsDtEkc9w8RTxX_X30Zr7jTXK5QidEhcdkA&s",
+    "source": "searchapi",
+    "width": 1440,
+    "height": 1736,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

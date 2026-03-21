@@ -1,0 +1,14 @@
+{
+  "name": "Will Smith",
+  "slug": "will-smith",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://the1a.org/wp-content/uploads/sites/4/2021/12/Will-Smith-new-headshot-credit-Lorenzo-Agius-e1640093317368-1500x1500.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5qYh4zvJz0qQnzWcy3BjFSD_CL5_b6bpAoA&s",
+    "source": "searchapi",
+    "width": 1500,
+    "height": 1500,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

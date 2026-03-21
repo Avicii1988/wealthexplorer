@@ -1,0 +1,14 @@
+{
+  "name": "LeBron James",
+  "slug": "lebron-james",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3856079061098475387",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSgQPfyp-DOGQkxZr5zuwzEYy_TfbZjn6yLw&s",
+    "source": "searchapi",
+    "width": 1549,
+    "height": 1935,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

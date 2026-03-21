@@ -1,0 +1,14 @@
+{
+  "name": "Tiger Woods",
+  "slug": "tiger-woods",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://cdn.golfmagic.com/2025-12/tiger-woods-2222.jpg?width=1600&aspect_ratio=16:9",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ38RkDIgxeadYatrWVDRExz25RzcTxQcIzWQ&s",
+    "source": "searchapi",
+    "width": 1600,
+    "height": 900,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

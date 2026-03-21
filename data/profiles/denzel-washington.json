@@ -1,0 +1,14 @@
+{
+  "name": "Denzel Washington",
+  "slug": "denzel-washington",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://m.media-amazon.com/images/M/MV5BYWZmNWQ5NDctNTJkZi00OWNlLTgwNGQtYjRiY2NlNDg4MzQyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAsP_VNt5uYgkia0To9dxKrIn7JFIFP1MARyKZ6__zyQ&s&ec=121585071",
+    "source": "searchapi",
+    "width": 1000,
+    "height": 1333,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

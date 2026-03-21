@@ -1,0 +1,14 @@
+{
+  "name": "Elon Musk",
+  "slug": "elon-musk",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://m.media-amazon.com/images/I/81OPsiZSgEL._AC_UF894,1000_QL80_.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0rGV3TB-9r9KuvRHDkXN3f78Geu_O3G1tlw&s",
+    "source": "searchapi",
+    "width": 666,
+    "height": 1000,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}
