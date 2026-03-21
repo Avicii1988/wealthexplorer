@@ -36,7 +36,8 @@ function saveFollowed(ids: Set<string>) {
 // ── GEM-CUT DIAMOND LOGO ─────────────────────────────────────────────────────
 function DiamondSVG({ size = 28 }: { size?: number }) {
   return (
-    <svg width={size} height={Math.round(size * 46 / 40)} viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size} height={Math.round(size * 46 / 40)} viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg"
+      style={{ animation: 'diamond-spin 8s linear infinite', transformOrigin: 'center' }}>
       {/* CROWN — four distinct facets with light/shadow depth */}
       <path d="M20 2 L4 16 L12 16 Z"  fill="rgba(110,78,12,0.6)"   stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
       <path d="M20 2 L12 16 L20 16 Z" fill="rgba(201,168,76,0.55)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
