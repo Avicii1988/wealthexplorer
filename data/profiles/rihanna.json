@@ -1,0 +1,14 @@
+{
+  "name": "Rihanna",
+  "slug": "rihanna",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://m.media-amazon.com/images/I/81u74X4O3jL._AC_UF894,1000_QL80_.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ7smqaH_rsTxrbf3s_lGIWkM3r3igc1rRNA&s",
+    "source": "searchapi",
+    "width": 711,
+    "height": 1000,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

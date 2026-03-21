@@ -1,0 +1,14 @@
+{
+  "name": "Meryl Streep",
+  "slug": "meryl-streep",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://www.conferencesforwomen.org/wp-content/uploads/2025/06/meryl-streep-speaker-portrait.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMx3vRH6ZkZE7JgxTXxg9ZsDRLY0oWRi__sg&s",
+    "source": "searchapi",
+    "width": 2048,
+    "height": 2048,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

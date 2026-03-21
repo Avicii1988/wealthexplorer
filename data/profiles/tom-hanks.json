@@ -1,0 +1,14 @@
+{
+  "name": "Tom Hanks",
+  "slug": "tom-hanks",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=722352747425202",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9rQGx4hyoVQby6HZndUpdMgQKLwqueZSPg&s",
+    "source": "searchapi",
+    "width": 855,
+    "height": 960,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

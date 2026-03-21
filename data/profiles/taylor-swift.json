@@ -1,0 +1,14 @@
+{
+  "name": "Taylor Swift",
+  "slug": "taylor-swift",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://www.thesun.co.uk/wp-content/uploads/2025/10/c6f1fedf-ddd3-4b0f-b53e-b47b65eb93e5.jpg?w=960",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRI_Y7ASdaWRgxDKR9NyujxdGAfa0yNim4uQ&s",
+    "source": "searchapi",
+    "width": 960,
+    "height": 933,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

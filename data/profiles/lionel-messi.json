@@ -1,0 +1,14 @@
+{
+  "name": "Lionel Messi",
+  "slug": "lionel-messi",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://play-lh.googleusercontent.com/ksh_ppq7xJ2nxARvM4i34iolhrYDB-0I_qExt97zEE5VXnA_nJFK-nYc8x65cv52dg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSusyE_apT_CGaLHzPEtHGwme9MJYlKezKYgg&s",
+    "source": "searchapi",
+    "width": 512,
+    "height": 512,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

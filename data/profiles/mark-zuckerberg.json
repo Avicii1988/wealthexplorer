@@ -1,0 +1,14 @@
+{
+  "name": "Mark Zuckerberg",
+  "slug": "mark-zuckerberg",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://media.gq.com/photos/560beb2d445a175859b88454/master/pass/Zuckerburg_No%20Text.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC5LdOLYBRNXBaNExd8WsW_bPC6unjjs0tOA&s",
+    "source": "searchapi",
+    "width": 2219,
+    "height": 2700,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Jeff Bezos",
+  "slug": "jeff-bezos",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://www.usatoday.com/gcdn/authoring/authoring-images/2025/06/21/USAT/84301190007-20250405-t-000000-z-1848649941-mt-1-abcpr-943528340-rtrmadp-3-abacapress.JPG?crop=3689,4916,x0,y0&width=458&height=610&format=pjpg&auto=webp",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRPMbs60ml3m1J8olVLr3qC25vRxa8hJGU8g&s",
+    "source": "searchapi",
+    "width": 458,
+    "height": 610,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Brad Pitt",
+  "slug": "brad-pitt",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://pyxis.nymag.com/v1/imgs/70a/8bf/035e2a45436f3c1ee8bb609b2beabfd93c-9-brad-pitt.rsquare.w400.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToIDzg9_BxcZpzvK14xeAAvhDYr8E039oLgA&s",
+    "source": "searchapi",
+    "width": 400,
+    "height": 400,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Dwayne Johnson",
+  "slug": "dwayne-johnson",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://www.abffpopup.com/wp-content/uploads/2025/11/news-Dwayne-Johnson.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoJGG0v_LPrkRvfHBGh1mdDkdTSyBOW3nyrg&s",
+    "source": "searchapi",
+    "width": 900,
+    "height": 650,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

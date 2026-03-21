@@ -1,0 +1,14 @@
+{
+  "name": "Leonardo DiCaprio",
+  "slug": "leonardo-dicaprio",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://www.desertsun.com/gcdn/authoring/authoring-images/2025/11/17/PPAS/87326432007-ldc-headshot.png?width=458&height=610&fit=crop&format=pjpg&auto=webp",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeJYxdk7aiNNLCtCREBGRDWlOfoNNcQld1Wg&s",
+    "source": "searchapi",
+    "width": 458,
+    "height": 610,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

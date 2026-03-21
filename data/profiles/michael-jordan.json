@@ -1,0 +1,14 @@
+{
+  "name": "Michael Jordan",
+  "slug": "michael-jordan",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://rmyauctions.com/images_items/item_52598_1_110748.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjcjszpjty9gwG-jbU5qlOywqheOXfZqNxMw&s",
+    "source": "searchapi",
+    "width": 1091,
+    "height": 1500,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}

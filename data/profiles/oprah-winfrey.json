@@ -1,0 +1,14 @@
+{
+  "name": "Oprah Winfrey",
+  "slug": "oprah-winfrey",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1324957808988607",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUA8FURw5Z8Ely_SFuR7QjnAbssGI7l621MQ&s",
+    "source": "searchapi",
+    "width": 1080,
+    "height": 1350,
+    "found": true
+  },
+  "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+}
