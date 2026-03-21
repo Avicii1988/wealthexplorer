@@ -1,0 +1,13 @@
+{
+  "name": "Donald Trump",
+  "slug": "donald-trump",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Donald_Trump_official_portrait%2C_2025_%28cropped_headshot%29.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7d7KDuUk9YIKWC2X37sjavubqF7df6UxHeA&s",
+    "source": "searchapi",
+    "width": 1270,
+    "height": 1707,
+    "notes": "Wikipedia unavailable or no suitable image"
+  }
+}

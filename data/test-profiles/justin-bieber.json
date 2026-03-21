@@ -1,0 +1,13 @@
+{
+  "name": "Justin Bieber",
+  "slug": "justin-bieber",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://cloudimages2.broadwayworld.com/headshots/350806sm.jpg?format=auto&width=464",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbZLxfoHVnn3D1d9eqsuc47O_N2qX4K4lUAw&s",
+    "source": "searchapi",
+    "width": 464,
+    "height": 578,
+    "notes": "Wikipedia unavailable or no suitable image"
+  }
+}

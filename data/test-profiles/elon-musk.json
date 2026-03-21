@@ -1,0 +1,13 @@
+{
+  "name": "Elon Musk",
+  "slug": "elon-musk",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://reproductiverights.org/wp-content/uploads/2025/09/musk-600x600.jpg",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThwJR5jVfofEq9bMZ2lBMMl66D2xye2auctw&s",
+    "source": "searchapi",
+    "width": 600,
+    "height": 600,
+    "notes": "Wikipedia unavailable or no suitable image"
+  }
+}
