@@ -3,11 +3,12 @@
   "slug": "justin-bieber",
   "last_updated": "2026-03-21",
   "profile_image": {
-    "url": "https://cloudimages2.broadwayworld.com/headshots/350806sm.jpg?format=auto&width=464",
-    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbZLxfoHVnn3D1d9eqsuc47O_N2qX4K4lUAw&s",
-    "source": "searchapi",
-    "width": 464,
-    "height": 578,
-    "notes": "Wikipedia unavailable or no suitable image"
+    "url": "https://image.tmdb.org/t/p/original/evCF7wPyjaEVMMgHf5j15Nfpwhp.jpg",
+    "thumbnail_url": "https://image.tmdb.org/t/p/w400/evCF7wPyjaEVMMgHf5j15Nfpwhp.jpg",
+    "source": "tmdb",
+    "width": 1181,
+    "height": 1772,
+    "tmdb_person_id": 150810,
+    "notes": "TMDB person id=150810, popularity=1.9"
   }
 }

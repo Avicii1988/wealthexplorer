@@ -3,11 +3,12 @@
   "slug": "elon-musk",
   "last_updated": "2026-03-21",
   "profile_image": {
-    "url": "https://reproductiverights.org/wp-content/uploads/2025/09/musk-600x600.jpg",
-    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThwJR5jVfofEq9bMZ2lBMMl66D2xye2auctw&s",
-    "source": "searchapi",
-    "width": 600,
-    "height": 600,
-    "notes": "Wikipedia unavailable or no suitable image"
+    "url": "https://image.tmdb.org/t/p/original/i5a0XRXLfu0meGB3g5Sy4qP8pY.jpg",
+    "thumbnail_url": "https://image.tmdb.org/t/p/w400/i5a0XRXLfu0meGB3g5Sy4qP8pY.jpg",
+    "source": "tmdb",
+    "width": 1400,
+    "height": 2100,
+    "tmdb_person_id": 57563,
+    "notes": "TMDB person id=57563, popularity=2.0"
   }
 }
