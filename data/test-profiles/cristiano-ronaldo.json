@@ -1,0 +1,13 @@
+{
+  "name": "Cristiano Ronaldo",
+  "slug": "cristiano-ronaldo",
+  "last_updated": "2026-03-21",
+  "profile_image": {
+    "url": "https://b.fssta.com/uploads/application/soccer/headshots/885.vresize.350.350.medium.1.png",
+    "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBhVVSMM4g2bdFx0S6Vw2jzXfTlT01XelwmA&s",
+    "source": "searchapi",
+    "width": 350,
+    "height": 350,
+    "notes": "Wikipedia unavailable or no suitable image"
+  }
+}
