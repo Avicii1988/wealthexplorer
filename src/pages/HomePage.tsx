@@ -167,27 +167,86 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   )
 }
 
-// ── GEM-CUT DIAMOND LOGO ─────────────────────────────────────────────────────
+// ── 3-D BRILLIANT-CUT DIAMOND LOGO ───────────────────────────────────────────
 function DiamondSVG({ size = 36 }: { size?: number }) {
   return (
-    <svg width={size} height={Math.round(size * 46 / 40)} viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg"
-      style={{ animation: 'diamond-spin 8s linear infinite', transformOrigin: 'center' }}>
-      {/* CROWN — four distinct facets with light/shadow depth */}
-      <path d="M20 2 L4 16 L12 16 Z"  fill="rgba(110,78,12,0.6)"   stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M20 2 L12 16 L20 16 Z" fill="rgba(201,168,76,0.55)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M20 2 L20 16 L28 16 Z" fill="rgba(245,217,128,0.6)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M20 2 L28 16 L36 16 Z" fill="rgba(110,78,12,0.55)"  stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      {/* Table highlight — shimmer on crown */}
-      <path d="M20 3 L15 9 L20 13 L25 9 Z" fill="rgba(255,248,200,0.22)"/>
-      {/* GIRDLE — bright gold band */}
-      <rect x="4" y="15.4" width="32" height="2.2" fill="rgba(201,168,76,0.75)"/>
-      <line x1="4" y1="15.4" x2="36" y2="15.4" stroke="rgba(245,220,120,0.9)" strokeWidth="0.5"/>
-      <line x1="4" y1="17.6" x2="36" y2="17.6" stroke="rgba(100,70,10,0.7)"  strokeWidth="0.5"/>
-      {/* PAVILION — four facets, darkens toward culet */}
-      <path d="M4 18 L12 18 L20 43 Z"  fill="rgba(80,55,8,0.7)"    stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M12 18 L20 18 L20 43 Z" fill="rgba(180,140,40,0.38)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M20 18 L28 18 L20 43 Z" fill="rgba(245,217,128,0.3)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M28 18 L36 18 L20 43 Z" fill="rgba(80,55,8,0.65)"   stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+    <svg
+      width={size} height={Math.round(size * 56 / 44)} viewBox="0 0 44 56"
+      fill="none" xmlns="http://www.w3.org/2000/svg"
+      style={{
+        animation: 'diamond-spin 8s linear infinite',
+        transformOrigin: 'center',
+        filter: 'drop-shadow(0 4px 10px rgba(0,0,0,0.75)) drop-shadow(0 0 6px rgba(201,168,76,0.45))',
+      }}
+    >
+      <defs>
+        {/* Crown facet gradients — light source top-right */}
+        <linearGradient id="dcL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#4a3208" stopOpacity="1"/><stop offset="100%" stopColor="#7a5510" stopOpacity="0.9"/></linearGradient>
+        <linearGradient id="dcCL" x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#c9a84c" stopOpacity="0.85"/><stop offset="100%" stopColor="#e8cc7a" stopOpacity="0.95"/></linearGradient>
+        <linearGradient id="dcCR" x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#fff8c0" stopOpacity="1"/><stop offset="100%" stopColor="#f5d980" stopOpacity="0.9"/></linearGradient>
+        <linearGradient id="dcR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#d4a840" stopOpacity="0.75"/><stop offset="100%" stopColor="#6b4b0e" stopOpacity="0.85"/></linearGradient>
+        {/* Table — bright central face */}
+        <radialGradient id="dtbl" cx="48%" cy="38%" r="58%">
+          <stop offset="0%"   stopColor="#ffffff"  stopOpacity="0.95"/>
+          <stop offset="30%"  stopColor="#fff4b8"  stopOpacity="0.85"/>
+          <stop offset="100%" stopColor="#c9a84c"  stopOpacity="0.55"/>
+        </radialGradient>
+        {/* Pavilion facet gradients — darker toward culet */}
+        <linearGradient id="dpL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#2d1e04" stopOpacity="1"/><stop offset="100%" stopColor="#5a3c08" stopOpacity="0.95"/></linearGradient>
+        <linearGradient id="dpCL" x1="0%" y1="0%"   x2="80%"  y2="100%"><stop offset="0%" stopColor="#a87828" stopOpacity="0.8"/><stop offset="100%" stopColor="#1a1005" stopOpacity="1"/></linearGradient>
+        <linearGradient id="dpCR" x1="100%" y1="0%" x2="20%"  y2="100%"><stop offset="0%" stopColor="#f5d980" stopOpacity="0.45"/><stop offset="100%" stopColor="#1a1005" stopOpacity="1"/></linearGradient>
+        <linearGradient id="dpR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#c8942a" stopOpacity="0.65"/><stop offset="100%" stopColor="#251504" stopOpacity="0.95"/></linearGradient>
+        {/* Star-shimmer overlay */}
+        <radialGradient id="dshim" cx="50%" cy="45%" r="50%">
+          <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.35"/>
+          <stop offset="100%" stopColor="#ffffff" stopOpacity="0"/>
+        </radialGradient>
+        {/* Girdle highlight */}
+        <linearGradient id="dgrd" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%"   stopColor="#fff4b0" stopOpacity="0.95"/>
+          <stop offset="50%"  stopColor="#c9a84c" stopOpacity="0.8"/>
+          <stop offset="100%" stopColor="#4a3208" stopOpacity="0.7"/>
+        </linearGradient>
+      </defs>
+
+      {/* ── CROWN (8-facet brilliant cut) ── */}
+      {/* Far-left shadow facet */}
+      <path d="M22 2 L2 18 L9 18 Z"   fill="url(#dcL)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      {/* Left-center mid-bright facet */}
+      <path d="M22 2 L9 18 L22 18 Z"  fill="url(#dcCL)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      {/* Right-center brightest facet */}
+      <path d="M22 2 L22 18 L35 18 Z" fill="url(#dcCR)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      {/* Far-right shadow facet */}
+      <path d="M22 2 L35 18 L42 18 Z" fill="url(#dcR)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+
+      {/* ── TABLE (octagonal top face) ── */}
+      <polygon points="22,2 35,18 22,18 9,18" fill="url(#dtbl)" strokeLinejoin="round"/>
+      {/* Table inner highlight — sharp diamond catch-light */}
+      <polygon points="22,4 27,10 22,15 17,10" fill="rgba(255,255,255,0.18)" stroke="rgba(255,248,200,0.35)" strokeWidth="0.3"/>
+      {/* Bright specular highlight top-right */}
+      <path d="M26 5 L30 11 L25 9 Z" fill="rgba(255,255,255,0.75)"/>
+      <path d="M27 5 L29 8 L27 7 Z"  fill="rgba(255,255,255,0.9)"/>
+
+      {/* ── GIRDLE (bevelled rim) ── */}
+      <rect x="2" y="17.5" width="40" height="3" fill="url(#dgrd)" rx="0.3"/>
+      <line x1="2"  y1="17.5" x2="42" y2="17.5" stroke="rgba(255,240,160,0.95)" strokeWidth="0.6"/>
+      <line x1="2"  y1="20.5" x2="42" y2="20.5" stroke="rgba(40,25,4,0.85)"    strokeWidth="0.5"/>
+
+      {/* ── PAVILION (8-facet brilliant cut) ── */}
+      <path d="M2 21 L9 21 L22 53 Z"  fill="url(#dpL)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M9 21 L22 21 L22 53 Z" fill="url(#dpCL)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M22 21 L35 21 L22 53 Z" fill="url(#dpCR)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M35 21 L42 21 L22 53 Z" fill="url(#dpR)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+
+      {/* ── PAVILION inner extra facets for depth ── */}
+      <path d="M2 21 L9 21 L22 53 Z"  fill="rgba(0,0,0,0.12)"  stroke="none"/>
+      <path d="M35 21 L42 21 L22 53 Z" fill="rgba(0,0,0,0.1)" stroke="none"/>
+
+      {/* ── SHIMMER OVERLAY (depth glow) ── */}
+      <path d="M2 18 L42 18 L22 53 Z" fill="url(#dshim)"/>
+
+      {/* ── CULET — tiny bright point ── */}
+      <circle cx="22" cy="53" r="0.7" fill="rgba(255,248,200,0.85)"/>
     </svg>
   )
 }
