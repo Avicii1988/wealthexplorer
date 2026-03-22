@@ -704,7 +704,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Gloria Marie James'],
       spouse: 'Savannah James',
-      children: ['LeBron James Jr.', 'Bryce Maximus James', 'Zhuri Nova James'],
+      children: ['LeBron James Jr. (Bronny)', 'Bryce Maximus James', 'Zhuri Nova James'],
     },
     gossip: [
       {
@@ -1162,8 +1162,10 @@ export const celebrities: Celebrity[] = [
       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&q=85',
     ],
     relationships: {
-      parents: ['Vernita Lee', 'Vernon Winfrey'],
+      parents: ['Vernita Lee (†)', 'Vernon Winfrey'],
       partner: 'Stedman Graham',
+      siblings: ['Jeffrey Lee (†)', 'Patricia Lee Lloyd (†)'],
+      children: ['Canaan (†, 1968)'],
     },
     gossip: [
       {
@@ -1526,7 +1528,8 @@ export const celebrities: Celebrity[] = [
       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&q=85',
     ],
     relationships: {
-      parents: ['Florence Spellman', 'Louis Ellison'],
+      parents: ['Florence Spellman (†)', 'Louis Ellison (†)'],
+      exSpouse: ['Adda Quinn', 'Nancy Wheeler', 'Barbara Boothe', 'Melanie Craft'],
       children: ['David Ellison', 'Megan Ellison'],
     },
     gossip: [
@@ -1617,8 +1620,9 @@ export const celebrities: Celebrity[] = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Kanye_West_at_the_2009_Tribeca_Film_Festival.jpg/440px-Kanye_West_at_the_2009_Tribeca_Film_Festival.jpg',
     ],
     relationships: {
+      parents: ['Ray West (†)', 'Donda West (†)'],
       exSpouse: ['Kim Kardashian'],
-      partner: 'Bianca Censori',
+      spouse: 'Bianca Censori',
       children: ['North West', 'Saint West', 'Chicago West', 'Psalm West'],
     },
     gossip: [
@@ -1714,7 +1718,8 @@ export const celebrities: Celebrity[] = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Drake_July_2016.jpg/440px-Drake_July_2016.jpg',
     ],
     relationships: {
-      exPartner: ['Rihanna', 'Serena Williams', 'Jennifer Lopez'],
+      parents: ['Dennis Graham', 'Sandi Graham'],
+      exPartner: ['Rihanna', 'Serena Williams', 'Jennifer Lopez', 'Sophie Brussaux'],
       children: ['Adonis Graham'],
     },
     gossip: [
@@ -1813,8 +1818,10 @@ export const celebrities: Celebrity[] = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/TigerWoods_2016.jpg/440px-TigerWoods_2016.jpg',
     ],
     relationships: {
+      parents: ['Earl Woods (†)', 'Kultida Woods'],
       exSpouse: ['Elin Nordegren'],
       exPartner: ['Erica Herman'],
+      siblings: ['Earl Dennison Woods Jr.', 'Royce Renee Woods'],
       children: ['Sam Alexis Woods', 'Charlie Axel Woods'],
     },
     gossip: [
@@ -1912,7 +1919,9 @@ export const celebrities: Celebrity[] = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Floyd_Mayweather_Jr._2015.jpg/440px-Floyd_Mayweather_Jr._2015.jpg',
     ],
     relationships: {
-      exPartner: ['Josie Harris', 'Melissa Brim'],
+      parents: ['Floyd Mayweather Sr.', 'Deborah Sinclair'],
+      exPartner: ['Josie Harris (†)', 'Melissa Brim', 'Shantel Jackson'],
+      siblings: ['Deltricia Mayweather'],
       children: ['Iyanna Mayweather', 'Koraun Mayweather', 'Zion Shamaree Mayweather', 'Jirah Mayweather'],
     },
     gossip: [
@@ -2020,8 +2029,10 @@ export const celebrities: Celebrity[] = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Will_Smith_August_2014_%28cropped%29.jpg/440px-Will_Smith_August_2014_%28cropped%29.jpg',
     ],
     relationships: {
+      parents: ['Willard Carroll Smith Sr.', 'Caroline Bright'],
       exSpouse: ['Sheree Zampino'],
       spouse: 'Jada Pinkett Smith',
+      siblings: ['Pamela Smith', 'Harry Smith', 'Ellen Smith'],
       children: ['Trey Smith', 'Jaden Smith', 'Willow Smith'],
     },
     gossip: [
@@ -2119,8 +2130,10 @@ export const celebrities: Celebrity[] = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tom_Brady%2C_2018_%28cropped%29.jpg/440px-Tom_Brady%2C_2018_%28cropped%29.jpg',
     ],
     relationships: {
+      parents: ['Tom Brady Sr.', 'Galynn Patricia Brady'],
       exSpouse: ['Gisele Bündchen'],
       exPartner: ['Bridget Moynahan'],
+      siblings: ['Maureen Brady', 'Julie Brady', 'Nancy Brady'],
       children: ['Jack Edward Moynahan', 'Benjamin Rein Brady', 'Vivian Lake Brady'],
     },
     gossip: [
