@@ -2220,7 +2220,11 @@ export const celebrities: Celebrity[] = [
       ...c,
       avatar: ext.avatar || c.avatar,
       photos: ext.avatar ? [ext.avatar, ...c.photos.slice(1)] : c.photos,
-      assets: [...c.assets, ...(ext.assets || [])],
+      assets: (() => {
+        const assetMap = new Map<string, Asset>();
+        for (const a of [...c.assets, ...(ext.assets || [])]) assetMap.set(a.id, a);
+        return [...assetMap.values()];
+      })(),
       gossip: [...(c.gossip || []), ...(ext.gossip || [])],
     }
   }) as unknown as Celebrity[]),
