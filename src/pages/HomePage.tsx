@@ -61,7 +61,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
       {/* A-Z letter bar */}
       <div className="sticky top-[57px] z-30 bg-[#0a0a0a]/95 backdrop-blur-sm -mx-5 px-5 py-2.5 mb-8 border-b border-white/5">
-        <div className="flex items-center gap-0.5 overflow-x-auto scrollbar-hide">
+        <div className="flex items-center justify-between w-full">
           {alphabet.map(letter => {
             const hasProfiles = !!grouped[letter]
             return (
@@ -69,7 +69,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                 key={letter}
                 onClick={() => hasProfiles && scrollToLetter(letter)}
                 disabled={!hasProfiles}
-                className={`w-7 h-7 rounded-lg text-xs font-semibold flex items-center justify-center flex-shrink-0 transition-all ${
+                className={`flex-1 h-7 rounded-lg text-xs font-semibold flex items-center justify-center transition-all ${
                   hasProfiles
                     ? 'text-[#c9a84c] hover:bg-[#c9a84c]/15 cursor-pointer'
                     : 'text-gray-800 cursor-default'
@@ -167,100 +167,10 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   )
 }
 
-// ── 3-D BRILLIANT-CUT DIAMOND LOGO ───────────────────────────────────────────
-function DiamondSVG({ size = 26 }: { size?: number }) {
-  const h = Math.round(size * 56 / 44)
-  return (
-    <div style={{ width: size, height: h, perspective: '220px', perspectiveOrigin: 'center center', flexShrink: 0, display: 'inline-block' }}>
-    <svg
-      width={size} height={h} viewBox="0 0 44 56"
-      fill="none" xmlns="http://www.w3.org/2000/svg"
-      style={{
-        animation: 'diamond-spin3d 10s linear infinite',
-        transformOrigin: 'center',
-        display: 'block',
-        filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.9)) drop-shadow(0 0 12px rgba(201,168,76,0.6)) drop-shadow(0 0 3px rgba(255,248,200,0.4))',
-      }}
-    >
-      <defs>
-        {/* Crown facet gradients — strong light source top-right */}
-        <linearGradient id="dcL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#2e1d04" stopOpacity="1"/><stop offset="100%" stopColor="#5a3c08" stopOpacity="1"/></linearGradient>
-        <linearGradient id="dcCL" x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#d4a840" stopOpacity="1"/><stop offset="100%" stopColor="#f0d878" stopOpacity="1"/></linearGradient>
-        <linearGradient id="dcCR" x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#fffce8" stopOpacity="1"/><stop offset="100%" stopColor="#f7e090" stopOpacity="1"/></linearGradient>
-        <linearGradient id="dcR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#e8b840" stopOpacity="1"/><stop offset="100%" stopColor="#7a5510" stopOpacity="1"/></linearGradient>
-        {/* Table — brilliantly lit top face */}
-        <radialGradient id="dtbl" cx="40%" cy="30%" r="65%">
-          <stop offset="0%"   stopColor="#ffffff"  stopOpacity="1"/>
-          <stop offset="20%"  stopColor="#fffce0"  stopOpacity="0.98"/>
-          <stop offset="60%"  stopColor="#f5d960"  stopOpacity="0.9"/>
-          <stop offset="100%" stopColor="#c9a84c"  stopOpacity="0.7"/>
-        </radialGradient>
-        {/* Pavilion facet gradients — deep fire toward culet */}
-        <linearGradient id="dpL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#1a0e02" stopOpacity="1"/><stop offset="100%" stopColor="#3d2804" stopOpacity="1"/></linearGradient>
-        <linearGradient id="dpCL" x1="0%" y1="0%"   x2="80%"  y2="100%"><stop offset="0%" stopColor="#c9921e" stopOpacity="1"/><stop offset="100%" stopColor="#0e0804" stopOpacity="1"/></linearGradient>
-        <linearGradient id="dpCR" x1="100%" y1="0%" x2="20%"  y2="100%"><stop offset="0%" stopColor="#fff0a0" stopOpacity="0.9"/><stop offset="100%" stopColor="#0e0804" stopOpacity="1"/></linearGradient>
-        <linearGradient id="dpR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#e8a020" stopOpacity="1"/><stop offset="100%" stopColor="#160e02" stopOpacity="1"/></linearGradient>
-        {/* Shimmer overlay — fire & brilliance */}
-        <radialGradient id="dshim" cx="38%" cy="38%" r="55%">
-          <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.55"/>
-          <stop offset="50%"  stopColor="#fff8c0" stopOpacity="0.15"/>
-          <stop offset="100%" stopColor="#ffffff" stopOpacity="0"/>
-        </radialGradient>
-        {/* Girdle — polished gold band */}
-        <linearGradient id="dgrd" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stopColor="#fffce0" stopOpacity="1"/>
-          <stop offset="40%"  stopColor="#e8c040" stopOpacity="1"/>
-          <stop offset="100%" stopColor="#3a2404" stopOpacity="1"/>
-        </linearGradient>
-      </defs>
-
-      {/* ── CROWN (8-facet brilliant cut) ── */}
-      {/* Far-left shadow facet */}
-      <path d="M22 2 L2 18 L9 18 Z"   fill="url(#dcL)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      {/* Left-center mid-bright facet */}
-      <path d="M22 2 L9 18 L22 18 Z"  fill="url(#dcCL)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      {/* Right-center brightest facet */}
-      <path d="M22 2 L22 18 L35 18 Z" fill="url(#dcCR)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      {/* Far-right shadow facet */}
-      <path d="M22 2 L35 18 L42 18 Z" fill="url(#dcR)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-
-      {/* ── TABLE (octagonal top face) ── */}
-      <polygon points="22,2 35,18 22,18 9,18" fill="url(#dtbl)" strokeLinejoin="round"/>
-      {/* Table inner highlight — sharp diamond catch-light */}
-      <polygon points="22,4 27,10 22,15 17,10" fill="rgba(255,255,255,0.18)" stroke="rgba(255,248,200,0.35)" strokeWidth="0.3"/>
-      {/* Bright specular highlight top-right */}
-      <path d="M26 5 L30 11 L25 9 Z" fill="rgba(255,255,255,0.75)"/>
-      <path d="M27 5 L29 8 L27 7 Z"  fill="rgba(255,255,255,0.9)"/>
-
-      {/* ── GIRDLE (bevelled rim) ── */}
-      <rect x="2" y="17.5" width="40" height="3" fill="url(#dgrd)" rx="0.3"/>
-      <line x1="2"  y1="17.5" x2="42" y2="17.5" stroke="rgba(255,240,160,0.95)" strokeWidth="0.6"/>
-      <line x1="2"  y1="20.5" x2="42" y2="20.5" stroke="rgba(40,25,4,0.85)"    strokeWidth="0.5"/>
-
-      {/* ── PAVILION (8-facet brilliant cut) ── */}
-      <path d="M2 21 L9 21 L22 53 Z"  fill="url(#dpL)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M9 21 L22 21 L22 53 Z" fill="url(#dpCL)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M22 21 L35 21 L22 53 Z" fill="url(#dpCR)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M35 21 L42 21 L22 53 Z" fill="url(#dpR)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-
-      {/* ── PAVILION inner extra facets for depth ── */}
-      <path d="M2 21 L9 21 L22 53 Z"  fill="rgba(0,0,0,0.12)"  stroke="none"/>
-      <path d="M35 21 L42 21 L22 53 Z" fill="rgba(0,0,0,0.1)" stroke="none"/>
-
-      {/* ── SHIMMER OVERLAY (depth glow) ── */}
-      <path d="M2 18 L42 18 L22 53 Z" fill="url(#dshim)"/>
-
-      {/* ── CULET — tiny bright point ── */}
-      <circle cx="22" cy="53" r="0.7" fill="rgba(255,248,200,0.85)"/>
-    </svg>
-    </div>
-  )
-}
-
 function WealthLogo() {
   return (
-    <div className="flex items-center gap-2.5">
-      <DiamondSVG size={22} />
+    <div className="flex items-center gap-2">
+      <span style={{ fontSize: '20px', lineHeight: 1 }}>💎</span>
       <span style={{
         fontFamily: "'Playfair Display', Georgia, serif",
         color: '#c9a84c',
@@ -433,8 +343,8 @@ export default function HomePage() {
   )
 
   const assetFeed = useMemo(() => {
-    const filtered = activeAssetType === 'All' ? allFeedItems : allFeedItems.filter(a => a.type === activeAssetType)
-    return filtered.slice(0, 15)
+    if (activeAssetType === 'All') return allFeedItems.slice(0, 15)
+    return allFeedItems.filter(a => a.type === activeAssetType)
   }, [allFeedItems, activeAssetType])
 
   const assetTypeCounts = useMemo(() => {
