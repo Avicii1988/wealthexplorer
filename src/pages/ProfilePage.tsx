@@ -33,70 +33,10 @@ function saveFollowed(ids: Set<string>) {
   localStorage.setItem(FOLLOWS_KEY, JSON.stringify([...ids]))
 }
 
-// ── GEM-CUT DIAMOND LOGO ─────────────────────────────────────────────────────
-function DiamondSVG({ size = 22 }: { size?: number }) {
-  const h = Math.round(size * 56 / 44)
-  return (
-    <div style={{ width: size, height: h, perspective: '220px', perspectiveOrigin: 'center center', flexShrink: 0, display: 'inline-block' }}>
-    <svg width={size} height={h} viewBox="0 0 44 56" fill="none" xmlns="http://www.w3.org/2000/svg"
-      style={{
-        animation: 'diamond-spin3d 10s linear infinite',
-        transformOrigin: 'center',
-        display: 'block',
-        filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.9)) drop-shadow(0 0 10px rgba(201,168,76,0.55)) drop-shadow(0 0 3px rgba(255,248,200,0.35))',
-      }}>
-      <defs>
-        <linearGradient id="pL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#2e1d04"/><stop offset="100%" stopColor="#5a3c08"/></linearGradient>
-        <linearGradient id="pCL" x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#d4a840"/><stop offset="100%" stopColor="#f0d878"/></linearGradient>
-        <linearGradient id="pCR" x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#fffce8"/><stop offset="100%" stopColor="#f7e090"/></linearGradient>
-        <linearGradient id="pR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#e8b840"/><stop offset="100%" stopColor="#7a5510"/></linearGradient>
-        <radialGradient id="ptbl" cx="40%" cy="30%" r="65%">
-          <stop offset="0%"   stopColor="#ffffff"  stopOpacity="1"/>
-          <stop offset="20%"  stopColor="#fffce0"  stopOpacity="0.98"/>
-          <stop offset="60%"  stopColor="#f5d960"  stopOpacity="0.9"/>
-          <stop offset="100%" stopColor="#c9a84c"  stopOpacity="0.7"/>
-        </radialGradient>
-        <linearGradient id="pvL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#1a0e02"/><stop offset="100%" stopColor="#3d2804"/></linearGradient>
-        <linearGradient id="pvCL" x1="0%" y1="0%"   x2="80%"  y2="100%"><stop offset="0%" stopColor="#c9921e"/><stop offset="100%" stopColor="#0e0804"/></linearGradient>
-        <linearGradient id="pvCR" x1="100%" y1="0%" x2="20%"  y2="100%"><stop offset="0%" stopColor="#fff0a0" stopOpacity="0.9"/><stop offset="100%" stopColor="#0e0804"/></linearGradient>
-        <linearGradient id="pvR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#e8a020"/><stop offset="100%" stopColor="#160e02"/></linearGradient>
-        <radialGradient id="pshim" cx="38%" cy="38%" r="55%">
-          <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.55"/>
-          <stop offset="50%"  stopColor="#fff8c0" stopOpacity="0.15"/>
-          <stop offset="100%" stopColor="#ffffff" stopOpacity="0"/>
-        </radialGradient>
-        <linearGradient id="pgrd" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stopColor="#fffce0" stopOpacity="1"/>
-          <stop offset="40%"  stopColor="#e8c040" stopOpacity="1"/>
-          <stop offset="100%" stopColor="#3a2404" stopOpacity="1"/>
-        </linearGradient>
-      </defs>
-      <path d="M22 2 L2 18 L9 18 Z"   fill="url(#pL)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M22 2 L9 18 L22 18 Z"  fill="url(#pCL)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M22 2 L22 18 L35 18 Z" fill="url(#pCR)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M22 2 L35 18 L42 18 Z" fill="url(#pR)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <polygon points="22,2 35,18 22,18 9,18" fill="url(#ptbl)"/>
-      <polygon points="22,4 27,10 22,15 17,10" fill="rgba(255,255,255,0.22)" stroke="rgba(255,248,200,0.4)" strokeWidth="0.3"/>
-      <path d="M26 5 L30 11 L25 9 Z" fill="rgba(255,255,255,0.85)"/>
-      <path d="M27 5 L29 8 L27 7 Z"  fill="white"/>
-      <rect x="2" y="17.5" width="40" height="3" fill="url(#pgrd)" rx="0.3"/>
-      <line x1="2" y1="17.5" x2="42" y2="17.5" stroke="rgba(255,240,160,0.95)" strokeWidth="0.6"/>
-      <line x1="2" y1="20.5" x2="42" y2="20.5" stroke="rgba(40,25,4,0.85)"    strokeWidth="0.5"/>
-      <path d="M2 21 L9 21 L22 53 Z"  fill="url(#pvL)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M9 21 L22 21 L22 53 Z" fill="url(#pvCL)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M22 21 L35 21 L22 53 Z" fill="url(#pvCR)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M35 21 L42 21 L22 53 Z" fill="url(#pvR)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
-      <path d="M2 18 L42 18 L22 53 Z" fill="url(#pshim)"/>
-      <circle cx="22" cy="53" r="0.8" fill="rgba(255,248,200,0.9)"/>
-    </svg>
-    </div>
-  )
-}
-
 function WealthLogoSmall() {
   return (
     <div className="flex items-center gap-2">
-      <DiamondSVG size={20} />
+      <span style={{ fontSize: '18px', lineHeight: 1 }}>💎</span>
       <span style={{
         fontFamily: "'Playfair Display', Georgia, serif",
         color: '#c9a84c',
@@ -351,162 +291,6 @@ function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
           <ItemList items={controversyItems} />
         </div>
       )}
-    </div>
-  )
-}
-
-// ── WEALTHSCAPE RADAR ─────────────────────────────────────────────────────────
-const RADAR_AXES: { label: string; types: AssetType[]; icon: string }[] = [
-  { label: 'Real Estate', types: ['real_estate', 'island'],     icon: '🏛️' },
-  { label: 'Aviation',    types: ['jet', 'helicopter'],         icon: '✈️' },
-  { label: 'Marine',      types: ['yacht'],                     icon: '⛵' },
-  { label: 'Automotive',  types: ['car'],                       icon: '🚗' },
-  { label: 'Collectibles',types: ['watch', 'art'],              icon: '💎' },
-  { label: 'Enterprise',  types: ['sports_team', 'rocket'],     icon: '🏆' },
-]
-
-function WealthscapeRadar({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
-  if (celeb.assets.length === 0) return null
-
-  // Compute total value per axis
-  const values = RADAR_AXES.map(axis =>
-    celeb.assets
-      .filter(a => axis.types.includes(a.type as AssetType))
-      .reduce((s, a) => s + a.estimatedValue, 0)
-  )
-
-  // If all zeros, nothing meaningful to show
-  const maxVal = Math.max(...values)
-  if (maxVal === 0) return null
-
-  // Normalize 0–1
-  const norm = values.map(v => v / maxVal)
-
-  const N = RADAR_AXES.length
-  const CX = 120, CY = 120, R = 92
-
-  function point(i: number, r: number): [number, number] {
-    const angle = (2 * Math.PI * i) / N - Math.PI / 2
-    return [CX + r * Math.cos(angle), CY + r * Math.sin(angle)]
-  }
-
-  function toPath(pts: [number, number][]) {
-    return pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0].toFixed(2)},${p[1].toFixed(2)}`).join(' ') + ' Z'
-  }
-
-  const gridLevels = [0.25, 0.5, 0.75, 1]
-  const dataPath = toPath(norm.map((v, i) => point(i, v * R)))
-  const outerPts = RADAR_AXES.map((_, i) => point(i, R))
-
-  return (
-    <div className="rounded-2xl overflow-hidden bg-[#111]">
-      <div className="px-5 py-4 bg-[#161616]">
-        <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-          WealthScape Radar
-        </h2>
-        <p className="text-[11px] text-gray-600 mt-0.5">Asset portfolio distribution · hover to explore</p>
-      </div>
-
-      <div className="flex flex-col sm:flex-row items-center gap-6 px-5 py-6">
-        {/* SVG Radar */}
-        <div className="flex-shrink-0 relative" style={{ width: 240, height: 240 }}>
-          <svg width={240} height={240} viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="radarFill" cx="50%" cy="50%" r="50%">
-                <stop offset="0%"   stopColor="#c9a84c" stopOpacity="0.30" />
-                <stop offset="100%" stopColor="#c9a84c" stopOpacity="0.06" />
-              </radialGradient>
-              <filter id="radarGlow">
-                <feGaussianBlur stdDeviation="2.5" result="blur" />
-                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-
-            {/* Grid rings */}
-            {gridLevels.map(level => (
-              <polygon
-                key={level}
-                points={RADAR_AXES.map((_, i) => { const [x,y] = point(i, level * R); return `${x.toFixed(2)},${y.toFixed(2)}` }).join(' ')}
-                fill="none"
-                stroke="rgba(255,255,255,0.06)"
-                strokeWidth="1"
-              />
-            ))}
-
-            {/* Axis lines */}
-            {outerPts.map(([x, y], i) => (
-              <line key={i} x1={CX} y1={CY} x2={x.toFixed(2)} y2={y.toFixed(2)}
-                stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
-            ))}
-
-            {/* Data fill */}
-            <path d={dataPath} fill="url(#radarFill)" />
-
-            {/* Data stroke */}
-            <path d={dataPath} fill="none" stroke="#c9a84c" strokeWidth="1.8"
-              strokeLinejoin="round" filter="url(#radarGlow)"
-              style={{ opacity: 0.9 }} />
-
-            {/* Data points */}
-            {norm.map((v, i) => {
-              const [x, y] = point(i, v * R)
-              return (
-                <circle key={i} cx={x.toFixed(2)} cy={y.toFixed(2)} r="3.5"
-                  fill="#c9a84c" stroke="#0a0a0a" strokeWidth="1.5" />
-              )
-            })}
-
-            {/* Axis labels — icons positioned outside the chart */}
-            {RADAR_AXES.map((axis, i) => {
-              const [x, y] = point(i, R + 22)
-              return (
-                <text key={i} x={x.toFixed(2)} y={y.toFixed(2)}
-                  textAnchor="middle" dominantBaseline="middle"
-                  fontSize="16" style={{ userSelect: 'none' }}>
-                  {axis.icon}
-                </text>
-              )
-            })}
-          </svg>
-        </div>
-
-        {/* Legend */}
-        <div className="flex-1 w-full grid grid-cols-2 gap-x-6 gap-y-3">
-          {RADAR_AXES.map((axis, i) => {
-            const val = values[i]
-            const pct = maxVal > 0 ? Math.round((val / maxVal) * 100) : 0
-            const count = celeb.assets.filter(a => axis.types.includes(a.type as AssetType)).length
-            return (
-              <div key={axis.label} className="flex flex-col gap-1">
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-xs text-gray-400 flex items-center gap-1.5">
-                    <span className="text-sm leading-none">{axis.icon}</span>
-                    {axis.label}
-                  </span>
-                  <span className="text-[10px] tabular-nums" style={{ color: pct > 0 ? '#c9a84c' : '#444' }}>
-                    {pct}%
-                  </span>
-                </div>
-                {/* Progress bar */}
-                <div className="h-1 rounded-full bg-white/5 overflow-hidden">
-                  <div
-                    className="h-full rounded-full transition-all duration-700"
-                    style={{
-                      width: `${pct}%`,
-                      background: pct > 0
-                        ? 'linear-gradient(90deg, rgba(201,168,76,0.5), #c9a84c)'
-                        : 'transparent',
-                    }}
-                  />
-                </div>
-                {count > 0 && (
-                  <p className="text-[10px] text-gray-700">{count} {count === 1 ? 'asset' : 'assets'}</p>
-                )}
-              </div>
-            )
-          })}
-        </div>
-      </div>
     </div>
   )
 }
@@ -1053,7 +837,6 @@ export default function ProfilePage() {
       {/* ── MAIN CONTENT ─────────────────────────────────────────── */}
       <main className="max-w-5xl mx-auto px-5 py-10 flex flex-col gap-6">
         <GlanceTable celeb={celeb} />
-        <WealthscapeRadar celeb={celeb} />
         <RelationshipsSection celeb={celeb} />
         <GossipSection celeb={celeb} />
         {celeb.assets.length > 0 && <AssetsSection key={celeb.id} celeb={celeb} />}
@@ -1102,7 +885,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Tagline */}
-          <p className="text-[11px] text-gray-700 mb-6 tracking-wide">
+          <p className="text-[11px] text-white/60 mb-6 tracking-wide">
             Data updated daily from public sources
           </p>
 
@@ -1110,7 +893,7 @@ export default function ProfilePage() {
           <div className="w-12 h-px mx-auto mb-6" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.35), transparent)' }} />
 
           {/* Disclaimer */}
-          <p className="text-[11px] text-gray-700 leading-relaxed mb-6 max-w-xl mx-auto">
+          <p className="text-[11px] text-white/40 leading-relaxed mb-6 max-w-xl mx-auto">
             All data sourced from public reports (Forbes, Celebrity News, Bloomberg, etc.). Net worth estimates are approximate and may vary.
             Gossip and controversies based on public news; not verified. Images from public domain or fair-use sources.
             For informational purposes only — not financial advice.
@@ -1125,16 +908,16 @@ export default function ProfilePage() {
               { label: 'Terms of Use', to: '/terms' },
             ].map((link, i, arr) => (
               <span key={link.label} className="flex items-center gap-5">
-                <Link to={link.to} className="text-[11px] text-gray-600 hover:text-[#c9a84c] transition-colors">
+                <Link to={link.to} className="text-[11px] text-white hover:text-[#c9a84c] transition-colors font-medium tracking-wide">
                   {link.label}
                 </Link>
-                {i < arr.length - 1 && <span className="text-gray-800 text-[11px]">|</span>}
+                {i < arr.length - 1 && <span className="text-white/25 text-[11px]">|</span>}
               </span>
             ))}
           </nav>
 
           {/* Copyright */}
-          <p className="text-[10px] text-gray-800 tracking-wide">
+          <p className="text-[10px] text-white/30 tracking-wide">
             © 2026 Wealth Explorer
           </p>
         </div>
