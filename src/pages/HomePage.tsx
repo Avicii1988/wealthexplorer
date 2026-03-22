@@ -168,44 +168,46 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 }
 
 // ── 3-D BRILLIANT-CUT DIAMOND LOGO ───────────────────────────────────────────
-function DiamondSVG({ size = 36 }: { size?: number }) {
+function DiamondSVG({ size = 26 }: { size?: number }) {
   return (
     <svg
       width={size} height={Math.round(size * 56 / 44)} viewBox="0 0 44 56"
       fill="none" xmlns="http://www.w3.org/2000/svg"
       style={{
-        animation: 'diamond-spin 8s linear infinite',
+        animation: 'diamond-spin 12s linear infinite',
         transformOrigin: 'center',
-        filter: 'drop-shadow(0 4px 10px rgba(0,0,0,0.75)) drop-shadow(0 0 6px rgba(201,168,76,0.45))',
+        filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.9)) drop-shadow(0 0 12px rgba(201,168,76,0.6)) drop-shadow(0 0 3px rgba(255,248,200,0.4))',
       }}
     >
       <defs>
-        {/* Crown facet gradients — light source top-right */}
-        <linearGradient id="dcL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#4a3208" stopOpacity="1"/><stop offset="100%" stopColor="#7a5510" stopOpacity="0.9"/></linearGradient>
-        <linearGradient id="dcCL" x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#c9a84c" stopOpacity="0.85"/><stop offset="100%" stopColor="#e8cc7a" stopOpacity="0.95"/></linearGradient>
-        <linearGradient id="dcCR" x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#fff8c0" stopOpacity="1"/><stop offset="100%" stopColor="#f5d980" stopOpacity="0.9"/></linearGradient>
-        <linearGradient id="dcR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#d4a840" stopOpacity="0.75"/><stop offset="100%" stopColor="#6b4b0e" stopOpacity="0.85"/></linearGradient>
-        {/* Table — bright central face */}
-        <radialGradient id="dtbl" cx="48%" cy="38%" r="58%">
-          <stop offset="0%"   stopColor="#ffffff"  stopOpacity="0.95"/>
-          <stop offset="30%"  stopColor="#fff4b8"  stopOpacity="0.85"/>
-          <stop offset="100%" stopColor="#c9a84c"  stopOpacity="0.55"/>
+        {/* Crown facet gradients — strong light source top-right */}
+        <linearGradient id="dcL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#2e1d04" stopOpacity="1"/><stop offset="100%" stopColor="#5a3c08" stopOpacity="1"/></linearGradient>
+        <linearGradient id="dcCL" x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#d4a840" stopOpacity="1"/><stop offset="100%" stopColor="#f0d878" stopOpacity="1"/></linearGradient>
+        <linearGradient id="dcCR" x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#fffce8" stopOpacity="1"/><stop offset="100%" stopColor="#f7e090" stopOpacity="1"/></linearGradient>
+        <linearGradient id="dcR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#e8b840" stopOpacity="1"/><stop offset="100%" stopColor="#7a5510" stopOpacity="1"/></linearGradient>
+        {/* Table — brilliantly lit top face */}
+        <radialGradient id="dtbl" cx="40%" cy="30%" r="65%">
+          <stop offset="0%"   stopColor="#ffffff"  stopOpacity="1"/>
+          <stop offset="20%"  stopColor="#fffce0"  stopOpacity="0.98"/>
+          <stop offset="60%"  stopColor="#f5d960"  stopOpacity="0.9"/>
+          <stop offset="100%" stopColor="#c9a84c"  stopOpacity="0.7"/>
         </radialGradient>
-        {/* Pavilion facet gradients — darker toward culet */}
-        <linearGradient id="dpL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#2d1e04" stopOpacity="1"/><stop offset="100%" stopColor="#5a3c08" stopOpacity="0.95"/></linearGradient>
-        <linearGradient id="dpCL" x1="0%" y1="0%"   x2="80%"  y2="100%"><stop offset="0%" stopColor="#a87828" stopOpacity="0.8"/><stop offset="100%" stopColor="#1a1005" stopOpacity="1"/></linearGradient>
-        <linearGradient id="dpCR" x1="100%" y1="0%" x2="20%"  y2="100%"><stop offset="0%" stopColor="#f5d980" stopOpacity="0.45"/><stop offset="100%" stopColor="#1a1005" stopOpacity="1"/></linearGradient>
-        <linearGradient id="dpR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#c8942a" stopOpacity="0.65"/><stop offset="100%" stopColor="#251504" stopOpacity="0.95"/></linearGradient>
-        {/* Star-shimmer overlay */}
-        <radialGradient id="dshim" cx="50%" cy="45%" r="50%">
-          <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.35"/>
+        {/* Pavilion facet gradients — deep fire toward culet */}
+        <linearGradient id="dpL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#1a0e02" stopOpacity="1"/><stop offset="100%" stopColor="#3d2804" stopOpacity="1"/></linearGradient>
+        <linearGradient id="dpCL" x1="0%" y1="0%"   x2="80%"  y2="100%"><stop offset="0%" stopColor="#c9921e" stopOpacity="1"/><stop offset="100%" stopColor="#0e0804" stopOpacity="1"/></linearGradient>
+        <linearGradient id="dpCR" x1="100%" y1="0%" x2="20%"  y2="100%"><stop offset="0%" stopColor="#fff0a0" stopOpacity="0.9"/><stop offset="100%" stopColor="#0e0804" stopOpacity="1"/></linearGradient>
+        <linearGradient id="dpR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#e8a020" stopOpacity="1"/><stop offset="100%" stopColor="#160e02" stopOpacity="1"/></linearGradient>
+        {/* Shimmer overlay — fire & brilliance */}
+        <radialGradient id="dshim" cx="38%" cy="38%" r="55%">
+          <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.55"/>
+          <stop offset="50%"  stopColor="#fff8c0" stopOpacity="0.15"/>
           <stop offset="100%" stopColor="#ffffff" stopOpacity="0"/>
         </radialGradient>
-        {/* Girdle highlight */}
+        {/* Girdle — polished gold band */}
         <linearGradient id="dgrd" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stopColor="#fff4b0" stopOpacity="0.95"/>
-          <stop offset="50%"  stopColor="#c9a84c" stopOpacity="0.8"/>
-          <stop offset="100%" stopColor="#4a3208" stopOpacity="0.7"/>
+          <stop offset="0%"   stopColor="#fffce0" stopOpacity="1"/>
+          <stop offset="40%"  stopColor="#e8c040" stopOpacity="1"/>
+          <stop offset="100%" stopColor="#3a2404" stopOpacity="1"/>
         </linearGradient>
       </defs>
 
@@ -253,16 +255,17 @@ function DiamondSVG({ size = 36 }: { size?: number }) {
 
 function WealthLogo() {
   return (
-    <div className="flex items-center gap-3">
-      <DiamondSVG size={36} />
+    <div className="flex items-center gap-2.5">
+      <DiamondSVG size={22} />
       <span style={{
         fontFamily: "'Playfair Display', Georgia, serif",
         color: '#c9a84c',
-        fontSize: '13px',
-        letterSpacing: '0.24em',
+        fontSize: '12px',
+        letterSpacing: '0.28em',
         textTransform: 'uppercase' as const,
         fontWeight: 400,
         lineHeight: 1,
+        textShadow: '0 0 18px rgba(201,168,76,0.35)',
       }}>
         Wealth Explorer
       </span>

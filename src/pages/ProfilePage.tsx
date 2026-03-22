@@ -34,42 +34,74 @@ function saveFollowed(ids: Set<string>) {
 }
 
 // ── GEM-CUT DIAMOND LOGO ─────────────────────────────────────────────────────
-function DiamondSVG({ size = 28 }: { size?: number }) {
+function DiamondSVG({ size = 22 }: { size?: number }) {
   return (
-    <svg width={size} height={Math.round(size * 46 / 40)} viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg"
-      style={{ animation: 'diamond-spin 8s linear infinite', transformOrigin: 'center' }}>
-      {/* CROWN — four distinct facets with light/shadow depth */}
-      <path d="M20 2 L4 16 L12 16 Z"  fill="rgba(110,78,12,0.6)"   stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M20 2 L12 16 L20 16 Z" fill="rgba(201,168,76,0.55)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M20 2 L20 16 L28 16 Z" fill="rgba(245,217,128,0.6)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M20 2 L28 16 L36 16 Z" fill="rgba(110,78,12,0.55)"  stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      {/* Table highlight — shimmer on crown */}
-      <path d="M20 3 L15 9 L20 13 L25 9 Z" fill="rgba(255,248,200,0.22)"/>
-      {/* GIRDLE — bright gold band */}
-      <rect x="4" y="15.4" width="32" height="2.2" fill="rgba(201,168,76,0.75)"/>
-      <line x1="4" y1="15.4" x2="36" y2="15.4" stroke="rgba(245,220,120,0.9)" strokeWidth="0.5"/>
-      <line x1="4" y1="17.6" x2="36" y2="17.6" stroke="rgba(100,70,10,0.7)"  strokeWidth="0.5"/>
-      {/* PAVILION — four facets, darkens toward culet */}
-      <path d="M4 18 L12 18 L20 43 Z"  fill="rgba(80,55,8,0.7)"    stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M12 18 L20 18 L20 43 Z" fill="rgba(180,140,40,0.38)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M20 18 L28 18 L20 43 Z" fill="rgba(245,217,128,0.3)" stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
-      <path d="M28 18 L36 18 L20 43 Z" fill="rgba(80,55,8,0.65)"   stroke="#c9a84c" strokeWidth="0.65" strokeLinejoin="round"/>
+    <svg width={size} height={Math.round(size * 56 / 44)} viewBox="0 0 44 56" fill="none" xmlns="http://www.w3.org/2000/svg"
+      style={{
+        animation: 'diamond-spin 12s linear infinite',
+        transformOrigin: 'center',
+        filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.9)) drop-shadow(0 0 10px rgba(201,168,76,0.55)) drop-shadow(0 0 3px rgba(255,248,200,0.35))',
+      }}>
+      <defs>
+        <linearGradient id="pL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#2e1d04"/><stop offset="100%" stopColor="#5a3c08"/></linearGradient>
+        <linearGradient id="pCL" x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#d4a840"/><stop offset="100%" stopColor="#f0d878"/></linearGradient>
+        <linearGradient id="pCR" x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#fffce8"/><stop offset="100%" stopColor="#f7e090"/></linearGradient>
+        <linearGradient id="pR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#e8b840"/><stop offset="100%" stopColor="#7a5510"/></linearGradient>
+        <radialGradient id="ptbl" cx="40%" cy="30%" r="65%">
+          <stop offset="0%"   stopColor="#ffffff"  stopOpacity="1"/>
+          <stop offset="20%"  stopColor="#fffce0"  stopOpacity="0.98"/>
+          <stop offset="60%"  stopColor="#f5d960"  stopOpacity="0.9"/>
+          <stop offset="100%" stopColor="#c9a84c"  stopOpacity="0.7"/>
+        </radialGradient>
+        <linearGradient id="pvL"  x1="0%" y1="0%"   x2="100%" y2="100%"><stop offset="0%" stopColor="#1a0e02"/><stop offset="100%" stopColor="#3d2804"/></linearGradient>
+        <linearGradient id="pvCL" x1="0%" y1="0%"   x2="80%"  y2="100%"><stop offset="0%" stopColor="#c9921e"/><stop offset="100%" stopColor="#0e0804"/></linearGradient>
+        <linearGradient id="pvCR" x1="100%" y1="0%" x2="20%"  y2="100%"><stop offset="0%" stopColor="#fff0a0" stopOpacity="0.9"/><stop offset="100%" stopColor="#0e0804"/></linearGradient>
+        <linearGradient id="pvR"  x1="100%" y1="0%" x2="0%"   y2="100%"><stop offset="0%" stopColor="#e8a020"/><stop offset="100%" stopColor="#160e02"/></linearGradient>
+        <radialGradient id="pshim" cx="38%" cy="38%" r="55%">
+          <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.55"/>
+          <stop offset="50%"  stopColor="#fff8c0" stopOpacity="0.15"/>
+          <stop offset="100%" stopColor="#ffffff" stopOpacity="0"/>
+        </radialGradient>
+        <linearGradient id="pgrd" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%"   stopColor="#fffce0" stopOpacity="1"/>
+          <stop offset="40%"  stopColor="#e8c040" stopOpacity="1"/>
+          <stop offset="100%" stopColor="#3a2404" stopOpacity="1"/>
+        </linearGradient>
+      </defs>
+      <path d="M22 2 L2 18 L9 18 Z"   fill="url(#pL)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M22 2 L9 18 L22 18 Z"  fill="url(#pCL)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M22 2 L22 18 L35 18 Z" fill="url(#pCR)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M22 2 L35 18 L42 18 Z" fill="url(#pR)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <polygon points="22,2 35,18 22,18 9,18" fill="url(#ptbl)"/>
+      <polygon points="22,4 27,10 22,15 17,10" fill="rgba(255,255,255,0.22)" stroke="rgba(255,248,200,0.4)" strokeWidth="0.3"/>
+      <path d="M26 5 L30 11 L25 9 Z" fill="rgba(255,255,255,0.85)"/>
+      <path d="M27 5 L29 8 L27 7 Z"  fill="white"/>
+      <rect x="2" y="17.5" width="40" height="3" fill="url(#pgrd)" rx="0.3"/>
+      <line x1="2" y1="17.5" x2="42" y2="17.5" stroke="rgba(255,240,160,0.95)" strokeWidth="0.6"/>
+      <line x1="2" y1="20.5" x2="42" y2="20.5" stroke="rgba(40,25,4,0.85)"    strokeWidth="0.5"/>
+      <path d="M2 21 L9 21 L22 53 Z"  fill="url(#pvL)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M9 21 L22 21 L22 53 Z" fill="url(#pvCL)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M22 21 L35 21 L22 53 Z" fill="url(#pvCR)" stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M35 21 L42 21 L22 53 Z" fill="url(#pvR)"  stroke="#c9a84c" strokeWidth="0.5" strokeLinejoin="round"/>
+      <path d="M2 18 L42 18 L22 53 Z" fill="url(#pshim)"/>
+      <circle cx="22" cy="53" r="0.8" fill="rgba(255,248,200,0.9)"/>
     </svg>
   )
 }
 
 function WealthLogoSmall() {
   return (
-    <div className="flex items-center gap-2.5">
-      <DiamondSVG size={24} />
+    <div className="flex items-center gap-2">
+      <DiamondSVG size={20} />
       <span style={{
         fontFamily: "'Playfair Display', Georgia, serif",
         color: '#c9a84c',
         fontSize: '11px',
-        letterSpacing: '0.24em',
+        letterSpacing: '0.28em',
         textTransform: 'uppercase' as const,
         fontWeight: 400,
         lineHeight: 1,
+        textShadow: '0 0 16px rgba(201,168,76,0.3)',
       }}>
         Wealth Explorer
       </span>
@@ -101,6 +133,24 @@ function ScrollToTopButton() {
   )
 }
 
+// Calculate age from a birthdate string like "May 5, 1988"
+function calcAge(birthdate: string): number | null {
+  const d = new Date(birthdate)
+  if (isNaN(d.getTime())) return null
+  const today = new Date()
+  let age = today.getFullYear() - d.getFullYear()
+  const m = today.getMonth() - d.getMonth()
+  if (m < 0 || (m === 0 && today.getDate() < d.getDate())) age--
+  return age
+}
+
+function formatBirthdate(birthdate: string, isDeceased: boolean): string {
+  if (isDeceased) return birthdate
+  const age = calcAge(birthdate)
+  if (age === null || age < 0 || age > 120) return birthdate
+  return `${birthdate} (${age} years old)`
+}
+
 // Convert "X ft Y in" → "X ft Y in (Z.ZZ m)"
 function addMetres(height: string): string {
   const match = height.match(/(\d+)\s*ft\s*(\d+)?\s*in?/)
@@ -114,11 +164,12 @@ function addMetres(height: string): string {
 // ── AT A GLANCE TABLE — 2-column grid ─────────────────────────────────────────
 function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
   const { t } = useLang()
+  const isDeceased = DECEASED_IDS.has(celeb.id)
 
   const leftCol: [string, string][] = [
     [t('category'), celeb.category],
     [t('netWorth'), formatNetWorth(celeb.netWorth)],
-    [t('birthday'), celeb.birthdate],
+    [t('birthday'), formatBirthdate(celeb.birthdate, isDeceased)],
   ]
   const rightCol: [string, string][] = [
     [t('birthplace'), celeb.birthplace],
