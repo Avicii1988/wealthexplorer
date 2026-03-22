@@ -36,7 +36,7 @@ function saveFollowed(ids: Set<string>) {
 function WealthLogoSmall() {
   return (
     <div className="flex items-center gap-2">
-      <span style={{ fontSize: '18px', lineHeight: 1 }}>💎</span>
+      <span style={{ fontSize: '18px', lineHeight: 1, filter: 'sepia(1) saturate(4) hue-rotate(5deg) brightness(1.1)' }}>💎</span>
       <span style={{
         fontFamily: "'Playfair Display', Georgia, serif",
         color: '#c9a84c',
