@@ -35,11 +35,14 @@ function saveFollowed(ids: Set<string>) {
 
 // ── GEM-CUT DIAMOND LOGO ─────────────────────────────────────────────────────
 function DiamondSVG({ size = 22 }: { size?: number }) {
+  const h = Math.round(size * 56 / 44)
   return (
-    <svg width={size} height={Math.round(size * 56 / 44)} viewBox="0 0 44 56" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <div style={{ width: size, height: h, perspective: '220px', perspectiveOrigin: 'center center', flexShrink: 0, display: 'inline-block' }}>
+    <svg width={size} height={h} viewBox="0 0 44 56" fill="none" xmlns="http://www.w3.org/2000/svg"
       style={{
-        animation: 'diamond-spin 12s linear infinite',
+        animation: 'diamond-spin3d 10s linear infinite',
         transformOrigin: 'center',
+        display: 'block',
         filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.9)) drop-shadow(0 0 10px rgba(201,168,76,0.55)) drop-shadow(0 0 3px rgba(255,248,200,0.35))',
       }}>
       <defs>
@@ -86,6 +89,7 @@ function DiamondSVG({ size = 22 }: { size?: number }) {
       <path d="M2 18 L42 18 L22 53 Z" fill="url(#pshim)"/>
       <circle cx="22" cy="53" r="0.8" fill="rgba(255,248,200,0.9)"/>
     </svg>
+    </div>
   )
 }
 
@@ -565,6 +569,8 @@ function LanguageSelector() {
 function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[number]>[] }) {
   const { t } = useLang()
   const trackRef = useRef<HTMLDivElement>(null)
+  const touchStartX = useRef(0)
+  const touchScrollLeft = useRef(0)
   const CARD_W = 96   // card width px
   const CARD_GAP = 12 // gap-3
   const STEP = (CARD_W + CARD_GAP) * 4 // scroll 4 cards at a time
@@ -638,7 +644,17 @@ function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[n
         ref={trackRef}
         onScroll={updateBounds}
         className="flex gap-3 overflow-x-auto scrollbar-hide"
-        style={{ paddingLeft: '20px', paddingRight: '20px', cursor: 'grab' }}
+        style={{ paddingLeft: '20px', paddingRight: '20px', cursor: 'grab', touchAction: 'pan-x' }}
+        onTouchStart={e => {
+          touchStartX.current = e.touches[0].clientX
+          touchScrollLeft.current = trackRef.current?.scrollLeft ?? 0
+        }}
+        onTouchMove={e => {
+          if (!trackRef.current) return
+          const delta = touchStartX.current - e.touches[0].clientX
+          trackRef.current.scrollLeft = touchScrollLeft.current + delta
+          updateBounds()
+        }}
         onMouseDown={e => {
           const el = e.currentTarget
           el.style.cursor = 'grabbing'
@@ -654,7 +670,7 @@ function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[n
         }}
       >
         {pool.map(c => (
-          <Link key={c.id} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: CARD_W, touchAction: 'pan-y' }}>
+          <Link key={c.id} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: CARD_W }}>
             <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2">
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
@@ -946,10 +962,10 @@ export default function ProfilePage() {
           {/* Nav links */}
           <nav className="flex items-center justify-center flex-wrap gap-x-5 gap-y-2 mb-7">
             {[
-              { label: 'About Us', to: '/' },
-              { label: 'Privacy Policy', to: '/' },
-              { label: 'Contact', to: '/' },
-              { label: 'Terms of Use', to: '/' },
+              { label: 'About Us', to: '/about' },
+              { label: 'Privacy Policy', to: '/terms' },
+              { label: 'Contact', to: '/about' },
+              { label: 'Terms of Use', to: '/terms' },
             ].map((link, i, arr) => (
               <span key={link.label} className="flex items-center gap-5">
                 <Link to={link.to} className="text-[11px] text-gray-600 hover:text-[#c9a84c] transition-colors">

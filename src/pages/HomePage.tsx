@@ -169,13 +169,16 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
 // ── 3-D BRILLIANT-CUT DIAMOND LOGO ───────────────────────────────────────────
 function DiamondSVG({ size = 26 }: { size?: number }) {
+  const h = Math.round(size * 56 / 44)
   return (
+    <div style={{ width: size, height: h, perspective: '220px', perspectiveOrigin: 'center center', flexShrink: 0, display: 'inline-block' }}>
     <svg
-      width={size} height={Math.round(size * 56 / 44)} viewBox="0 0 44 56"
+      width={size} height={h} viewBox="0 0 44 56"
       fill="none" xmlns="http://www.w3.org/2000/svg"
       style={{
-        animation: 'diamond-spin 12s linear infinite',
+        animation: 'diamond-spin3d 10s linear infinite',
         transformOrigin: 'center',
+        display: 'block',
         filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.9)) drop-shadow(0 0 12px rgba(201,168,76,0.6)) drop-shadow(0 0 3px rgba(255,248,200,0.4))',
       }}
     >
@@ -250,6 +253,7 @@ function DiamondSVG({ size = 26 }: { size?: number }) {
       {/* ── CULET — tiny bright point ── */}
       <circle cx="22" cy="53" r="0.7" fill="rgba(255,248,200,0.85)"/>
     </svg>
+    </div>
   )
 }
 
@@ -718,10 +722,10 @@ export default function HomePage() {
           {/* Nav links */}
           <nav className="flex items-center justify-center flex-wrap gap-x-5 gap-y-2 mb-7">
             {[
-              { label: 'About Us', to: '/' },
-              { label: 'Privacy Policy', to: '/' },
-              { label: 'Contact', to: '/' },
-              { label: 'Terms of Use', to: '/' },
+              { label: 'About Us', to: '/about' },
+              { label: 'Privacy Policy', to: '/terms' },
+              { label: 'Contact', to: '/about' },
+              { label: 'Terms of Use', to: '/terms' },
             ].map((link, i, arr) => (
               <span key={link.label} className="flex items-center gap-5">
                 <Link to={link.to} className="text-[11px] text-white hover:text-[#c9a84c] transition-colors font-medium tracking-wide">
