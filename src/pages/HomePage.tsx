@@ -701,7 +701,7 @@ export default function HomePage() {
           </div>
 
           {/* Tagline */}
-          <p className="text-[11px] text-gray-700 mb-6 tracking-wide">
+          <p className="text-[11px] text-white/60 mb-6 tracking-wide">
             Data updated daily from public sources
           </p>
 
@@ -709,7 +709,7 @@ export default function HomePage() {
           <div className="w-12 h-px mx-auto mb-6" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.35), transparent)' }} />
 
           {/* Disclaimer */}
-          <p className="text-[11px] text-gray-700 leading-relaxed mb-6 max-w-xl mx-auto">
+          <p className="text-[11px] text-white/40 leading-relaxed mb-6 max-w-xl mx-auto">
             All data sourced from public reports (Forbes, Celebrity News, Bloomberg, etc.). Net worth estimates are approximate and may vary.
             Gossip and controversies based on public news; not verified. Images from public domain or fair-use sources.
             For informational purposes only — not financial advice.
@@ -724,16 +724,16 @@ export default function HomePage() {
               { label: 'Terms of Use', to: '/' },
             ].map((link, i, arr) => (
               <span key={link.label} className="flex items-center gap-5">
-                <Link to={link.to} className="text-[11px] text-gray-600 hover:text-[#c9a84c] transition-colors">
+                <Link to={link.to} className="text-[11px] text-white hover:text-[#c9a84c] transition-colors font-medium tracking-wide">
                   {link.label}
                 </Link>
-                {i < arr.length - 1 && <span className="text-gray-800 text-[11px]">|</span>}
+                {i < arr.length - 1 && <span className="text-white/25 text-[11px]">|</span>}
               </span>
             ))}
           </nav>
 
           {/* Copyright */}
-          <p className="text-[10px] text-gray-800 tracking-wide">
+          <p className="text-[10px] text-white/30 tracking-wide">
             © 2026 Wealth Explorer
           </p>
         </div>
