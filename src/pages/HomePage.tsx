@@ -170,7 +170,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 function WealthLogo() {
   return (
     <div className="flex items-center gap-2">
-      <span style={{ fontSize: '20px', lineHeight: 1 }}>💎</span>
+      <span style={{ fontSize: '20px', lineHeight: 1, filter: 'sepia(1) saturate(4) hue-rotate(5deg) brightness(1.1)' }}>💎</span>
       <span style={{
         fontFamily: "'Playfair Display', Georgia, serif",
         color: '#c9a84c',
@@ -343,8 +343,8 @@ export default function HomePage() {
   )
 
   const assetFeed = useMemo(() => {
-    if (activeAssetType === 'All') return allFeedItems.slice(0, 15)
-    return allFeedItems.filter(a => a.type === activeAssetType)
+    const filtered = activeAssetType === 'All' ? allFeedItems : allFeedItems.filter(a => a.type === activeAssetType)
+    return filtered.slice(0, 15)
   }, [allFeedItems, activeAssetType])
 
   const assetTypeCounts = useMemo(() => {
