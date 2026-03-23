@@ -320,9 +320,9 @@ export const celebrities: Celebrity[] = [
       'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&q=85',
     ],
     relationships: {
-      parents: ['Jacklyn Gise Bezos', 'Ted Jorgensen'],
+      parents: ['Jacklyn Gise Bezos', 'Ted Jorgensen (biological)', 'Miguel Bezos (adoptive father)'],
+      fiancé: 'Lauren Sánchez',
       exSpouse: ['MacKenzie Scott'],
-      partner: 'Lauren Sánchez',
       siblings: ['Mark Bezos', 'Christina Bezos'],
       children: ['Preston Bezos', 'Zahara Bezos', 'Phinneas Bezos', 'Ella Bezos'],
     },
@@ -523,7 +523,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Andrea Swift', 'Scott Swift'],
       partner: 'Travis Kelce',
-      exPartner: ['Joe Alwyn', 'Jake Gyllenhaal', 'Harry Styles', 'Calvin Harris', 'John Mayer', 'Eddie Redmayne (dated briefly)'],
+      exPartner: ['Joe Alwyn', 'Tom Hiddleston', 'Calvin Harris', 'Harry Styles', 'Jake Gyllenhaal', 'Joe Jonas', 'Taylor Lautner', 'John Mayer'],
       siblings: ['Austin Swift'],
     },
     gossip: [
@@ -617,6 +617,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Gloria Carter', 'Adnis Reeves'],
       spouse: 'Beyoncé',
+      exPartner: ['Carmen Bryan'],
       siblings: ['Eric Carter', 'Michelle Carter', 'Andrea Carter'],
       children: ['Blue Ivy Carter', 'Rumi Carter', 'Sir Carter'],
     },
@@ -705,6 +706,7 @@ export const celebrities: Celebrity[] = [
       parents: ['Gloria Marie James'],
       spouse: 'Savannah James',
       children: ['LeBron James Jr. (Bronny)', 'Bryce Maximus James', 'Zhuri Nova James'],
+      grandchildren: ['Ahsir James'],
     },
     gossip: [
       {
@@ -787,6 +789,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Monica Braithwaite', 'Ronald Fenty'],
       partner: 'A$AP Rocky',
+      exPartner: ['Chris Brown', 'Hassan Jameel', 'Drake', 'Matt Kemp'],
       siblings: ['Rorrey Fenty', 'Rajad Fenty'],
       children: ['RZA Athelston Mayers', 'Riot Rose Mayers'],
     },
@@ -893,6 +896,7 @@ export const celebrities: Celebrity[] = [
       exSpouse: ['Susan Thompson Buffett'],
       siblings: ['Doris Buffett', 'Roberta Buffett Elliott'],
       children: ['Susan Alice Buffett', 'Howard Graham Buffett', 'Peter Buffett'],
+      grandchildren: ['Howard Warren Buffett', 'Devon Buffett', 'Alexander Buffett', 'Doris Ann Buffett', 'Howie B. Buffett', 'Nicole Buffett', 'Nora Buffett'],
     },
     gossip: [
       {
@@ -1164,7 +1168,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Vernita Lee (†)', 'Vernon Winfrey'],
       partner: 'Stedman Graham',
-      siblings: ['Jeffrey Lee (†)', 'Patricia Lee Lloyd (†)'],
+      siblings: ['Jeffrey Lee (†)', 'Patricia Lee Lloyd (†)', 'Aquarius Lowe'],
       children: ['Canaan (†, 1968)'],
     },
     gossip: [
@@ -1343,6 +1347,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Mathew Knowles', 'Tina Knowles'],
       spouse: 'Jay-Z',
+      exPartner: ['Lyndall Locke'],
       siblings: ['Solange Knowles'],
       children: ['Blue Ivy Carter', 'Rumi Carter', 'Sir Carter'],
     },
@@ -1530,6 +1535,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Florence Spellman (†)', 'Louis Ellison (†)'],
       exSpouse: ['Adda Quinn', 'Nancy Wheeler', 'Barbara Boothe', 'Melanie Craft'],
+      partner: 'Nikita Kahn',
       children: ['David Ellison', 'Megan Ellison'],
     },
     gossip: [
@@ -1719,7 +1725,7 @@ export const celebrities: Celebrity[] = [
     ],
     relationships: {
       parents: ['Dennis Graham', 'Sandi Graham'],
-      exPartner: ['Rihanna', 'Serena Williams', 'Jennifer Lopez', 'Sophie Brussaux'],
+      exPartner: ['Rihanna', 'Serena Williams', 'Jennifer Lopez', 'Sophie Brussaux', 'Bella Harris', 'Johanna Leia'],
       children: ['Adonis Graham'],
     },
     gossip: [
@@ -1920,7 +1926,8 @@ export const celebrities: Celebrity[] = [
     ],
     relationships: {
       parents: ['Floyd Mayweather Sr.', 'Deborah Sinclair'],
-      exPartner: ['Josie Harris (†)', 'Melissa Brim', 'Shantel Jackson'],
+      fiancé: 'Gallienne Nabila',
+      exPartner: ['Josie Harris (†)', 'Melissa Brim', 'Shantel Jackson', 'Anna Monroe'],
       siblings: ['Deltricia Mayweather'],
       children: ['Iyanna Mayweather', 'Koraun Mayweather', 'Zion Shamaree Mayweather', 'Jirah Mayweather'],
     },
@@ -2132,7 +2139,7 @@ export const celebrities: Celebrity[] = [
     relationships: {
       parents: ['Tom Brady Sr.', 'Galynn Patricia Brady'],
       exSpouse: ['Gisele Bündchen'],
-      exPartner: ['Bridget Moynahan'],
+      exPartner: ['Bridget Moynahan', 'Layla Roberts', 'Irina Shayk'],
       siblings: ['Maureen Brady', 'Julie Brady', 'Nancy Brady'],
       children: ['Jack Edward Moynahan', 'Benjamin Rein Brady', 'Vivian Lake Brady'],
     },
