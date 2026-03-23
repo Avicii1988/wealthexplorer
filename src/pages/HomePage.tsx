@@ -171,7 +171,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 function WealthLogo() {
   return (
     <div className="flex items-center gap-2">
-      <span style={{ fontSize: '20px', lineHeight: 1, filter: 'sepia(1) saturate(4) hue-rotate(5deg) brightness(1.1)' }}>💎</span>
+      <span style={{ fontSize: '22px', lineHeight: 1, color: '#c9a84c' }}>◆</span>
       <span style={{
         fontFamily: "'Playfair Display', Georgia, serif",
         color: '#c9a84c',
