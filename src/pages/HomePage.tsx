@@ -13,6 +13,7 @@ import {
   formatValue,
   formatNetWorth,
   getAvatar,
+  getAssetImage,
   DECEASED_IDS,
 } from '../data/celebrities'
 import NotificationBell from '../components/NotificationBell'
@@ -570,7 +571,7 @@ export default function HomePage() {
                 className="relative aspect-square overflow-hidden bg-[#111] group block"
               >
                 <img
-                  src={asset.image}
+                  src={getAssetImage(asset)}
                   alt={asset.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   onError={e => {
