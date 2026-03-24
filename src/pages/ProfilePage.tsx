@@ -601,63 +601,12 @@ function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[n
   const touchStartX = useRef(0)
   const touchScrollLeft = useRef(0)
   const CARD_W = 96   // card width px
-  const CARD_GAP = 12 // gap-3
-  const STEP = (CARD_W + CARD_GAP) * 4 // scroll 4 cards at a time
-
-  function canScrollLeft() {
-    return (trackRef.current?.scrollLeft ?? 0) > 4
-  }
-  function canScrollRight() {
-    const el = trackRef.current
-    if (!el) return false
-    return el.scrollLeft + el.clientWidth < el.scrollWidth - 4
-  }
-
-  const [atStart, setAtStart] = useState(true)
-  const [atEnd, setAtEnd] = useState(false)
-
-  function updateBounds() {
-    setAtStart(!canScrollLeft())
-    setAtEnd(!canScrollRight())
-  }
-
-  function scrollBy(dir: -1 | 1) {
-    trackRef.current?.scrollBy({ left: dir * STEP, behavior: 'smooth' })
-  }
 
   return (
     <section className="py-12 relative overflow-hidden">
-      {/* Header row with label + nav buttons */}
-      <div className="max-w-5xl mx-auto px-5 mb-5 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500">{t('moreProfiles')}</p>
-          {/* Subtle scroll hint */}
-          <div className="flex items-center gap-0.5 opacity-40">
-            <ChevronLeft size={10} className="text-gray-500" />
-            <ChevronRight size={10} className="text-gray-500" />
-          </div>
-        </div>
-        {/* Prev / Next buttons */}
-        <div className="flex items-center gap-2 flex-shrink-0">
-          <button
-            onClick={() => scrollBy(-1)}
-            disabled={atStart}
-            aria-label="Scroll left"
-            className="w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-200 disabled:opacity-25 disabled:cursor-not-allowed"
-            style={{ borderColor: 'rgba(201,168,76,0.35)', color: '#c9a84c', background: 'rgba(201,168,76,0.06)' }}
-          >
-            <ChevronLeft size={14} />
-          </button>
-          <button
-            onClick={() => scrollBy(1)}
-            disabled={atEnd}
-            aria-label="Scroll right"
-            className="w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-200 disabled:opacity-25 disabled:cursor-not-allowed"
-            style={{ borderColor: 'rgba(201,168,76,0.35)', color: '#c9a84c', background: 'rgba(201,168,76,0.06)' }}
-          >
-            <ChevronRight size={14} />
-          </button>
-        </div>
+      {/* Header row with label */}
+      <div className="max-w-5xl mx-auto px-5 mb-5">
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500">{t('moreProfiles')}</p>
       </div>
 
       {/* Fade overlays on edges */}
@@ -671,7 +620,6 @@ function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[n
       {/* Scrollable track — no animation, user-controlled */}
       <div
         ref={trackRef}
-        onScroll={updateBounds}
         className="flex gap-3 overflow-x-auto scrollbar-hide"
         style={{ paddingLeft: '20px', paddingRight: '20px', cursor: 'grab', touchAction: 'pan-x' }}
         onTouchStart={e => {
@@ -682,7 +630,6 @@ function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[n
           if (!trackRef.current) return
           const delta = touchStartX.current - e.touches[0].clientX
           trackRef.current.scrollLeft = touchScrollLeft.current + delta
-          updateBounds()
         }}
         onMouseDown={e => {
           const el = e.currentTarget
@@ -700,7 +647,7 @@ function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[n
       >
         {pool.map(c => (
           <Link key={c.id} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: CARD_W }}>
-            <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2">
+            <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2 h-[128px]">
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
               />
