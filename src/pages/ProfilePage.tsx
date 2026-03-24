@@ -295,6 +295,61 @@ function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
   )
 }
 
+// ── LIGHTBOX ──────────────────────────────────────────────────────────────────
+function Lightbox({ photos, startIndex, onClose }: { photos: string[]; startIndex: number; onClose: () => void }) {
+  const [idx, setIdx] = useState(startIndex)
+  const prev = () => setIdx(i => (i - 1 + photos.length) % photos.length)
+  const next = () => setIdx(i => (i + 1) % photos.length)
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+      if (e.key === 'ArrowLeft') prev()
+      if (e.key === 'ArrowRight') next()
+    }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [photos.length])
+
+  return (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <button className="absolute top-4 right-5 text-white/70 hover:text-white text-3xl leading-none" onClick={onClose}>✕</button>
+
+      {photos.length > 1 && (
+        <button className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-2" onClick={e => { e.stopPropagation(); prev() }}>
+          <ChevronLeft size={36} />
+        </button>
+      )}
+
+      <img
+        src={photos[idx]}
+        alt=""
+        className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl"
+        onClick={e => e.stopPropagation()}
+      />
+
+      {photos.length > 1 && (
+        <button className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-2" onClick={e => { e.stopPropagation(); next() }}>
+          <ChevronRight size={36} />
+        </button>
+      )}
+
+      {photos.length > 1 && (
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          {photos.map((_, i) => (
+            <button key={i} onClick={e => { e.stopPropagation(); setIdx(i) }}
+              className={`w-2 h-2 rounded-full transition-all ${i === idx ? 'bg-[#c9a84c] scale-125' : 'bg-white/40'}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 // ── ASSET CARD ────────────────────────────────────────────────────────────────
 function AssetCard({ asset }: { asset: Asset }) {
   const { t } = useLang()
@@ -302,6 +357,7 @@ function AssetCard({ asset }: { asset: Asset }) {
   const [expanded, setExpanded] = useState(false)
   const [imgError, setImgError] = useState(false)
   const [activePhoto, setActivePhoto] = useState(0)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
 
   const galleryPhotos = asset.photos && asset.photos.length > 0
     ? asset.photos.slice(0, 3)
@@ -309,9 +365,14 @@ function AssetCard({ asset }: { asset: Asset }) {
   const mainSrc = galleryPhotos[activePhoto] ?? getAssetImage(asset)
 
   return (
+    <>
+      {lightboxOpen && <Lightbox photos={galleryPhotos} startIndex={activePhoto} onClose={() => setLightboxOpen(false)} />}
     <article className="bg-[#111] rounded-2xl overflow-hidden group hover:bg-[#161616] transition-colors duration-300">
       {/* Image */}
-      <div className="relative aspect-video overflow-hidden bg-[#1a1a1a]">
+      <div
+        className="relative aspect-video overflow-hidden bg-[#1a1a1a] cursor-zoom-in"
+        onClick={() => !imgError && setLightboxOpen(true)}
+      >
         {!imgError ? (
           <img
             src={mainSrc}
@@ -422,6 +483,7 @@ function AssetCard({ asset }: { asset: Asset }) {
         </div>
       </div>
     </article>
+    </>
   )
 }
 
