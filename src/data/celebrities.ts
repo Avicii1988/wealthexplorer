@@ -15,6 +15,7 @@ export interface Asset {
   description: string;
   estimatedValue: number; // millions USD
   image?: string;
+  photos?: string[]; // up to 3 gallery images shown in asset card
   year?: number;
   location?: string;
   specs?: string;

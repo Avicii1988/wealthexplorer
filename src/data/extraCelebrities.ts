@@ -3,9 +3,9 @@
 type ExtraCat = 'Athletes'|'Actors'|'Musicians'|'Entrepreneurs'|'Politicians'|'Models'
 type ExtraAssetType = 'jet'|'yacht'|'real_estate'|'car'|'watch'|'art'|'helicopter'|'island'|'sports_team'|'rocket'
 
-interface ExtraAsset {
+export interface ExtraAsset {
   id: string; type: ExtraAssetType; name: string; description: string
-  estimatedValue: number; image: string; likes: number; isNew?: boolean
+  estimatedValue: number; image: string; photos?: string[]; likes: number; isNew?: boolean
   year?: number; location?: string; specs?: string
 }
 export interface ExtraCelebrity {
