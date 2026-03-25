@@ -3291,6 +3291,7 @@ export const celebrities: Celebrity[] = [
         return [...assetMap.values()];
       })(),
       gossip: [...(c.gossip || []), ...(ext.gossip || [])],
+      relationships: ext.relationships ?? c.relationships,
     }
   }) as unknown as Celebrity[]),
 ];

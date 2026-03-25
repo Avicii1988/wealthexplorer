@@ -256,6 +256,158 @@ function firstSentence(text: string): string {
   return m ? m[0].trim() : text.slice(0, 130) + (text.length > 130 ? '…' : '')
 }
 
+// ── WEALTHSCAPE RADAR ─────────────────────────────────────────────────────────
+const RADAR_AXES: { label: string; types: AssetType[]; icon: string }[] = [
+  { label: 'Real Estate',  types: ['real_estate', 'island'],   icon: '🏛️' },
+  { label: 'Aviation',     types: ['jet', 'helicopter'],       icon: '✈️' },
+  { label: 'Marine',       types: ['yacht'],                   icon: '⛵' },
+  { label: 'Automotive',   types: ['car'],                     icon: '🚗' },
+  { label: 'Collectibles', types: ['watch', 'art'],            icon: '💎' },
+  { label: 'Enterprise',   types: ['sports_team', 'rocket'],   icon: '🏆' },
+]
+
+function WealthscapeRadar({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+  if (celeb.assets.length === 0) return null
+
+  const values = RADAR_AXES.map(axis =>
+    celeb.assets
+      .filter(a => axis.types.includes(a.type as AssetType))
+      .reduce((s, a) => s + a.estimatedValue, 0)
+  )
+
+  const maxVal = Math.max(...values)
+  if (maxVal === 0) return null
+
+  const norm = values.map(v => v / maxVal)
+
+  const N = RADAR_AXES.length
+  const CX = 120, CY = 120, R = 92
+
+  function point(i: number, r: number): [number, number] {
+    const angle = (2 * Math.PI * i) / N - Math.PI / 2
+    return [CX + r * Math.cos(angle), CY + r * Math.sin(angle)]
+  }
+
+  function toPath(pts: [number, number][]) {
+    return pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0].toFixed(2)},${p[1].toFixed(2)}`).join(' ') + ' Z'
+  }
+
+  const gridLevels = [0.25, 0.5, 0.75, 1]
+  const dataPath = toPath(norm.map((v, i) => point(i, v * R)))
+  const outerPts = RADAR_AXES.map((_, i) => point(i, R))
+
+  return (
+    <div className="rounded-2xl overflow-hidden bg-[#111]">
+      <div className="px-5 py-4 bg-[#161616]">
+        <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+          WealthScape Radar
+        </h2>
+        <p className="text-[11px] text-gray-600 mt-0.5">Asset portfolio distribution</p>
+      </div>
+
+      <div className="flex flex-col sm:flex-row items-center gap-6 px-5 py-6">
+        {/* SVG Radar */}
+        <div className="flex-shrink-0" style={{ width: 240, height: 240 }}>
+          <svg width={240} height={240} viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="radarFill" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"   stopColor="#c9a84c" stopOpacity="0.30" />
+                <stop offset="100%" stopColor="#c9a84c" stopOpacity="0.06" />
+              </radialGradient>
+              <filter id="radarGlow">
+                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            {/* Grid rings */}
+            {gridLevels.map(level => (
+              <polygon
+                key={level}
+                points={RADAR_AXES.map((_, i) => { const [x,y] = point(i, level * R); return `${x.toFixed(2)},${y.toFixed(2)}` }).join(' ')}
+                fill="none"
+                stroke="rgba(255,255,255,0.06)"
+                strokeWidth="1"
+              />
+            ))}
+
+            {/* Axis lines */}
+            {outerPts.map(([x, y], i) => (
+              <line key={i} x1={CX} y1={CY} x2={x.toFixed(2)} y2={y.toFixed(2)}
+                stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
+            ))}
+
+            {/* Data fill */}
+            <path d={dataPath} fill="url(#radarFill)" />
+
+            {/* Data stroke */}
+            <path d={dataPath} fill="none" stroke="#c9a84c" strokeWidth="1.8"
+              strokeLinejoin="round" filter="url(#radarGlow)"
+              style={{ opacity: 0.9 }} />
+
+            {/* Data points */}
+            {norm.map((v, i) => {
+              const [x, y] = point(i, v * R)
+              return (
+                <circle key={i} cx={x.toFixed(2)} cy={y.toFixed(2)} r="3.5"
+                  fill="#c9a84c" stroke="#0a0a0a" strokeWidth="1.5" />
+              )
+            })}
+
+            {/* Axis labels */}
+            {RADAR_AXES.map((axis, i) => {
+              const [x, y] = point(i, R + 22)
+              return (
+                <text key={i} x={x.toFixed(2)} y={y.toFixed(2)}
+                  textAnchor="middle" dominantBaseline="middle"
+                  fontSize="16" style={{ userSelect: 'none' }}>
+                  {axis.icon}
+                </text>
+              )
+            })}
+          </svg>
+        </div>
+
+        {/* Legend */}
+        <div className="flex-1 w-full grid grid-cols-2 gap-x-6 gap-y-3">
+          {RADAR_AXES.map((axis, i) => {
+            const val = values[i]
+            const pct = maxVal > 0 ? Math.round((val / maxVal) * 100) : 0
+            const count = celeb.assets.filter(a => axis.types.includes(a.type as AssetType)).length
+            return (
+              <div key={axis.label} className="flex flex-col gap-1">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-xs text-gray-400 flex items-center gap-1.5">
+                    <span className="text-sm leading-none">{axis.icon}</span>
+                    {axis.label}
+                  </span>
+                  <span className="text-[10px] tabular-nums" style={{ color: pct > 0 ? '#c9a84c' : '#444' }}>
+                    {pct}%
+                  </span>
+                </div>
+                <div className="h-1 rounded-full bg-white/5 overflow-hidden">
+                  <div
+                    className="h-full rounded-full transition-all duration-700"
+                    style={{
+                      width: `${pct}%`,
+                      background: pct > 0
+                        ? 'linear-gradient(90deg, rgba(201,168,76,0.5), #c9a84c)'
+                        : 'transparent',
+                    }}
+                  />
+                </div>
+                {count > 0 && (
+                  <p className="text-[10px] text-gray-700">{count} {count === 1 ? 'asset' : 'assets'}</p>
+                )}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // ── GOSSIP & CONTROVERSY — Flat list, two separate sections ──────────────────
 function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
   const allItems = celeb.gossip
@@ -934,6 +1086,7 @@ export default function ProfilePage() {
       {/* ── MAIN CONTENT ─────────────────────────────────────────── */}
       <main className="max-w-5xl mx-auto px-5 py-10 flex flex-col gap-6">
         <GlanceTable celeb={celeb} />
+        <WealthscapeRadar celeb={celeb} />
         <RelationshipsSection celeb={celeb} />
         <GossipSection celeb={celeb} />
         {celeb.assets.length > 0 && <AssetsSection key={celeb.id} celeb={celeb} />}
