@@ -36,48 +36,39 @@ function saveFollowed(ids: Set<string>) {
 function WealthLogoSmall() {
   return (
     <div className="flex items-center gap-2.5">
-      {/* Crown monogram — small */}
-      <svg width="22" height="19" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+      {/* W monogram — small version */}
+      <svg width="30" height="23" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
         <defs>
-          <linearGradient id="crownGoldSm" x1="0" y1="0" x2="26" y2="22" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#f0d060"/>
-            <stop offset="45%" stopColor="#c9a84c"/>
-            <stop offset="100%" stopColor="#9a7530"/>
+          <linearGradient id="logoGoldSm" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stopColor="#f5e070"/>
+            <stop offset="48%" stopColor="#c9a84c"/>
+            <stop offset="100%" stopColor="#8a6218"/>
           </linearGradient>
         </defs>
-        <path d="M2 19.5h22M3 19.5L4 11l4.5 4.5L13 3l4.5 12.5L22 11l1 8.5" stroke="url(#crownGoldSm)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-        <circle cx="2.8" cy="10.5" r="1.6" fill="url(#crownGoldSm)"/>
-        <circle cx="13" cy="2.8" r="1.8" fill="url(#crownGoldSm)"/>
-        <circle cx="23.2" cy="10.5" r="1.6" fill="url(#crownGoldSm)"/>
-        <line x1="2" y1="19.5" x2="24" y2="19.5" stroke="url(#crownGoldSm)" strokeWidth="1.6" strokeLinecap="round"/>
+        <line x1="1" y1="1.5" x2="39" y2="1.5" stroke="url(#logoGoldSm)" strokeWidth="0.45" opacity="0.55"/>
+        <path d="M20 2.5 L22.8 7 L20 11.5 L17.2 7 Z" fill="url(#logoGoldSm)"/>
+        <line x1="2"  y1="5"  x2="11" y2="26" stroke="url(#logoGoldSm)" strokeWidth="2.1" strokeLinecap="round"/>
+        <line x1="11" y1="26" x2="20" y2="13" stroke="url(#logoGoldSm)" strokeWidth="0.85" strokeLinecap="round"/>
+        <line x1="20" y1="13" x2="29" y2="26" stroke="url(#logoGoldSm)" strokeWidth="0.85" strokeLinecap="round"/>
+        <line x1="29" y1="26" x2="38" y2="5"  stroke="url(#logoGoldSm)" strokeWidth="2.1" strokeLinecap="round"/>
+        <line x1="1" y1="28.5" x2="39" y2="28.5" stroke="url(#logoGoldSm)" strokeWidth="0.45" opacity="0.55"/>
       </svg>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
         <span style={{
           fontFamily: "'Playfair Display', Georgia, serif",
-          background: 'linear-gradient(135deg, #f0d060 0%, #c9a84c 50%, #9a7530 100%)',
+          background: 'linear-gradient(135deg, #f5e070 0%, #c9a84c 48%, #8a6218 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
           fontSize: '11px',
-          letterSpacing: '0.32em',
+          letterSpacing: '0.35em',
           textTransform: 'uppercase' as const,
-          fontWeight: 600,
+          fontWeight: 700,
           lineHeight: 1,
         }}>
           Wealthscape
         </span>
-        <span style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          color: 'rgba(201,168,76,0.45)',
-          fontSize: '6px',
-          letterSpacing: '0.55em',
-          textTransform: 'uppercase' as const,
-          fontWeight: 400,
-          lineHeight: 1,
-          paddingLeft: '1px',
-        }}>
-          Radar
-        </span>
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, rgba(201,168,76,0.7), rgba(201,168,76,0.25), transparent)' }} />
       </div>
     </div>
   )
@@ -791,7 +782,7 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-[#0a0a0a] text-white">
 
       {/* ── HEADER ──────────────────────────────────────────────── */}
-      <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8">
+      <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b" style={{ borderBottomColor: 'rgba(201,168,76,0.18)' }}>
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
           <Link
             to="/"
@@ -982,7 +973,7 @@ export default function ProfilePage() {
       </section>
 
       {/* ── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+      <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(201,168,76,0.18)' }}>
         <div className="max-w-2xl mx-auto text-center">
 
           {/* Logo */}
