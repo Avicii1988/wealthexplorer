@@ -108,7 +108,8 @@ export async function get_single_asset_image(celebrity, asset) {
     return null
   }
 
-  const images = data?.images_results ?? data?.inline_images ?? []
+  // Handle both flat (images_results) and nested (images[n].original.link) formats
+  const images = data?.images ?? data?.images_results ?? data?.inline_images ?? []
   if (!images.length) {
     console.warn(`[fetch-asset-images] No images found for "${celebrity} ${asset}"`)
     return null
@@ -116,17 +117,21 @@ export async function get_single_asset_image(celebrity, asset) {
 
   const first = images[0]
 
+  // Support both nested original.link and flat original/original_url formats
+  const url = first.original?.link ?? first.original ?? first.original_url ?? first.link ?? ''
+  const thumbnail = first.thumbnail ?? first.original?.link ?? first.original ?? ''
+
   // Derive a clean domain from the source URL
   let source = ''
   try {
-    source = new URL(first.original_url ?? first.link ?? first.url ?? '').hostname
+    source = new URL(first.source?.link ?? url).hostname
   } catch { /* ignore */ }
 
   return {
-    url:       first.original    ?? first.original_url ?? first.link   ?? '',
-    thumbnail: first.thumbnail   ?? first.original    ?? '',    // hotlink safety net
+    url,
+    thumbnail,
     source,
-    title:     first.title ?? '',
+    title: first.title ?? '',
   }
 }
 
