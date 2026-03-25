@@ -66,7 +66,7 @@ function WealthLogoSmall() {
           fontWeight: 700,
           lineHeight: 1,
         }}>
-          Wealthscape
+          Wealth Explorer
         </span>
         <div style={{ height: '1px', background: 'linear-gradient(90deg, rgba(201,168,76,0.7), rgba(201,168,76,0.25), transparent)' }} />
       </div>

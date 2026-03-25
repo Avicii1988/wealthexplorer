@@ -205,7 +205,7 @@ function WealthLogo() {
           fontWeight: 700,
           lineHeight: 1,
         }}>
-          Wealthscape
+          Wealth Explorer
         </span>
         {/* Decorative gold rule instead of text subtitle */}
         <div style={{ height: '1px', background: 'linear-gradient(90deg, rgba(201,168,76,0.7), rgba(201,168,76,0.25), transparent)' }} />
@@ -416,12 +416,12 @@ export default function HomePage() {
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section className="text-center px-5 pt-20 pb-14 max-w-3xl mx-auto">
         <h1
-          className="text-6xl sm:text-7xl font-semibold text-white mb-5 leading-tight"
+          className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-white mb-5 leading-tight"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
           Wealth Explorer
         </h1>
-        <p className="text-gray-500 text-lg leading-relaxed mb-10">
+        <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-10">
           {t('heroSubtitle')}
         </p>
 
@@ -594,10 +594,7 @@ export default function HomePage() {
         {assetFeed.length === 0 ? (
           <div className="text-center py-24 text-gray-700">{t('noResults')}</div>
         ) : (
-          <div
-            className="grid gap-px"
-            style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}
-          >
+          <div className="grid gap-px grid-cols-2 sm:grid-cols-3">
             {assetFeed.map(asset => (
               <button
                 key={asset.id}
