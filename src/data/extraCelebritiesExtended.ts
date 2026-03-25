@@ -23,7 +23,8 @@ import { extras_18 } from './extras_18'
 type AT = 'jet'|'yacht'|'real_estate'|'car'|'watch'|'art'|'helicopter'|'island'|'sports_team'|'rocket'
 type XA = { id:string; type:AT; name:string; description:string; estimatedValue:number; image:string; likes:number; year?:number; location?:string; specs?:string }
 type GI = { title:string; summary:string; type?:'gossip'|'controversy'; date?:string }
-export type Ext = { avatar?:string; assets?:XA[]; gossip?:GI[] }
+type Rels = { parents?: string[]; spouse?: string; partner?: string; fiancé?: string; siblings?: string[]; children?: string[]; exSpouse?: string[]; exPartner?: string[] }
+export type Ext = { avatar?:string; assets?:XA[]; gossip?:GI[]; relationships?:Rels }
 
 export const allExtensions: Record<string, Ext> = {
   ...extras_01,
