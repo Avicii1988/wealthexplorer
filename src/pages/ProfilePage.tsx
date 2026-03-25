@@ -35,20 +35,41 @@ function saveFollowed(ids: Set<string>) {
 
 function WealthLogoSmall() {
   return (
-    <div className="flex items-center gap-2">
-      <span style={{ fontSize: '20px', lineHeight: 1, color: '#c9a84c' }}>◆</span>
-      <span style={{
-        fontFamily: "'Playfair Display', Georgia, serif",
-        color: '#c9a84c',
-        fontSize: '11px',
-        letterSpacing: '0.28em',
-        textTransform: 'uppercase' as const,
-        fontWeight: 400,
-        lineHeight: 1,
-        textShadow: '0 0 16px rgba(201,168,76,0.3)',
-      }}>
-        Wealth Explorer
-      </span>
+    <div className="flex items-center gap-2.5">
+      {/* W monogram — small version */}
+      <svg width="30" height="23" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+        <defs>
+          <linearGradient id="logoGoldSm" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stopColor="#f5e070"/>
+            <stop offset="48%" stopColor="#c9a84c"/>
+            <stop offset="100%" stopColor="#8a6218"/>
+          </linearGradient>
+        </defs>
+        <line x1="1" y1="1.5" x2="39" y2="1.5" stroke="url(#logoGoldSm)" strokeWidth="0.45" opacity="0.55"/>
+        <path d="M20 2.5 L22.8 7 L20 11.5 L17.2 7 Z" fill="url(#logoGoldSm)"/>
+        <line x1="2"  y1="5"  x2="11" y2="26" stroke="url(#logoGoldSm)" strokeWidth="2.1" strokeLinecap="round"/>
+        <line x1="11" y1="26" x2="20" y2="13" stroke="url(#logoGoldSm)" strokeWidth="0.85" strokeLinecap="round"/>
+        <line x1="20" y1="13" x2="29" y2="26" stroke="url(#logoGoldSm)" strokeWidth="0.85" strokeLinecap="round"/>
+        <line x1="29" y1="26" x2="38" y2="5"  stroke="url(#logoGoldSm)" strokeWidth="2.1" strokeLinecap="round"/>
+        <line x1="1" y1="28.5" x2="39" y2="28.5" stroke="url(#logoGoldSm)" strokeWidth="0.45" opacity="0.55"/>
+      </svg>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+        <span style={{
+          fontFamily: "'Playfair Display', Georgia, serif",
+          background: 'linear-gradient(135deg, #f5e070 0%, #c9a84c 48%, #8a6218 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontSize: '11px',
+          letterSpacing: '0.35em',
+          textTransform: 'uppercase' as const,
+          fontWeight: 700,
+          lineHeight: 1,
+        }}>
+          Wealthscape
+        </span>
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, rgba(201,168,76,0.7), rgba(201,168,76,0.25), transparent)' }} />
+      </div>
     </div>
   )
 }
@@ -507,7 +528,7 @@ function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
       </div>
 
       {assetTypes.length > 1 && (
-        <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide border-b border-white/5 bg-[#111]">
+        <div className="flex items-center gap-2 flex-wrap px-4 py-3 border-b border-white/5 bg-[#111]">
           {tabs.map(type => {
             const count = type === ALL ? celeb.assets.length : celeb.assets.filter(a => a.type === type).length
             const isActive = activeType === type
@@ -515,13 +536,15 @@ function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number
               <button
                 key={type}
                 onClick={() => setActiveType(type)}
-                className={`flex items-center gap-1.5 px-4 py-3 text-xs font-medium border-b-2 transition-all duration-200 flex-shrink-0 whitespace-nowrap ${
-                  isActive ? 'border-[#c9a84c] text-[#c9a84c]' : 'border-transparent text-gray-600 hover:text-gray-400'
+                className={`flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-medium rounded-full border transition-all duration-200 whitespace-nowrap ${
+                  isActive
+                    ? 'bg-[#c9a84c]/15 border-[#c9a84c]/50 text-[#c9a84c]'
+                    : 'bg-white/4 border-white/8 text-gray-500 hover:text-gray-300 hover:border-white/16 hover:bg-white/8'
                 }`}
               >
                 {type !== ALL && <span className="text-sm leading-none">{assetTypeIcons[type]}</span>}
                 <span>{type === ALL ? t('allAssets') : assetTypeLabels[type]}</span>
-                <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${isActive ? 'bg-[#c9a84c]/20 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
+                <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${isActive ? 'bg-[#c9a84c]/25 text-[#c9a84c]' : 'bg-white/8 text-gray-600'}`}>
                   {count}
                 </span>
               </button>
@@ -594,83 +617,121 @@ function LanguageSelector() {
   )
 }
 
-// ── MORE PROFILES — static scrollable carousel ────────────────────────────────
+// ── MORE PROFILES — content-width carousel with arrow navigation ───────────────
 function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[number]>[] }) {
   const { t } = useLang()
   const trackRef = useRef<HTMLDivElement>(null)
   const touchStartX = useRef(0)
   const touchScrollLeft = useRef(0)
-  const CARD_W = 96   // card width px
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+  const CARD_W = 104  // card width px
+  const STEP = (CARD_W + 12) * 4  // scroll 4 cards at a time
+
+  const updateArrows = () => {
+    const el = trackRef.current
+    if (!el) return
+    setCanScrollLeft(el.scrollLeft > 4)
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4)
+  }
+
+  const scrollBy = (dir: 1 | -1) => {
+    const el = trackRef.current
+    if (!el) return
+    el.scrollBy({ left: dir * STEP, behavior: 'smooth' })
+    setTimeout(updateArrows, 350)
+  }
 
   return (
-    <section className="py-12 relative overflow-hidden">
-      {/* Header row with label */}
-      <div className="max-w-5xl mx-auto px-5 mb-5">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500">{t('moreProfiles')}</p>
-      </div>
+    <section className="py-10">
+      <div className="max-w-5xl mx-auto px-5">
+        {/* Header row — label + arrows */}
+        <div className="flex items-center justify-between mb-5">
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500">{t('moreProfiles')}</p>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => scrollBy(-1)}
+              disabled={!canScrollLeft}
+              aria-label="Scroll left"
+              className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 ${
+                canScrollLeft
+                  ? 'border-[#c9a84c]/40 text-[#c9a84c] hover:bg-[#c9a84c]/10 hover:border-[#c9a84c]/60'
+                  : 'border-white/8 text-gray-700 cursor-not-allowed'
+              }`}
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 11L5 7l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+            <button
+              onClick={() => scrollBy(1)}
+              disabled={!canScrollRight}
+              aria-label="Scroll right"
+              className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 ${
+                canScrollRight
+                  ? 'border-[#c9a84c]/40 text-[#c9a84c] hover:bg-[#c9a84c]/10 hover:border-[#c9a84c]/60'
+                  : 'border-white/8 text-gray-700 cursor-not-allowed'
+              }`}
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
 
-      {/* Fade overlays on edges */}
-      <div className="absolute inset-y-0 left-0 pointer-events-none z-10"
-        style={{ width: 'calc((100% - min(100%, 1024px)) / 2 + 40px)', background: 'linear-gradient(to right, #0a0a0a 40%, transparent)' }}
-      />
-      <div className="absolute inset-y-0 right-0 pointer-events-none z-10"
-        style={{ width: 'calc((100% - min(100%, 1024px)) / 2 + 40px)', background: 'linear-gradient(to left, #0a0a0a 40%, transparent)' }}
-      />
-
-      {/* Scrollable track — no animation, user-controlled */}
-      <div
-        ref={trackRef}
-        className="flex gap-3 overflow-x-auto scrollbar-hide"
-        style={{ paddingLeft: '20px', paddingRight: '20px', cursor: 'grab', touchAction: 'pan-x' }}
-        onTouchStart={e => {
-          touchStartX.current = e.touches[0].clientX
-          touchScrollLeft.current = trackRef.current?.scrollLeft ?? 0
-        }}
-        onTouchMove={e => {
-          if (!trackRef.current) return
-          const delta = touchStartX.current - e.touches[0].clientX
-          trackRef.current.scrollLeft = touchScrollLeft.current + delta
-        }}
-        onMouseDown={e => {
-          const el = e.currentTarget
-          el.style.cursor = 'grabbing'
-          const startX = e.pageX - el.scrollLeft
-          const onMove = (ev: MouseEvent) => { el.scrollLeft = ev.pageX - startX }
-          const onUp = () => {
-            el.style.cursor = 'grab'
-            window.removeEventListener('mousemove', onMove)
-            window.removeEventListener('mouseup', onUp)
-          }
-          window.addEventListener('mousemove', onMove)
-          window.addEventListener('mouseup', onUp)
-        }}
-      >
-        {pool.map(c => (
-          <Link key={c.id} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: CARD_W }}>
-            <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2 h-[128px]">
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
-              />
-              <div className="rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_10px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0" style={{ width: 52, height: 52 }}>
-                <img
-                  src={getAvatar(c)}
-                  alt={c.name}
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: 'center 15%' }}
-                  onError={e => {
-                    (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
-                  }}
+        {/* Scrollable track — no fade, content-constrained */}
+        <div
+          ref={trackRef}
+          className="flex gap-3 overflow-x-auto scrollbar-hide"
+          style={{ cursor: 'grab', touchAction: 'pan-x' }}
+          onScroll={updateArrows}
+          onTouchStart={e => {
+            touchStartX.current = e.touches[0].clientX
+            touchScrollLeft.current = trackRef.current?.scrollLeft ?? 0
+          }}
+          onTouchMove={e => {
+            if (!trackRef.current) return
+            const delta = touchStartX.current - e.touches[0].clientX
+            trackRef.current.scrollLeft = touchScrollLeft.current + delta
+          }}
+          onMouseDown={e => {
+            const el = e.currentTarget
+            el.style.cursor = 'grabbing'
+            const startX = e.pageX - el.scrollLeft
+            const onMove = (ev: MouseEvent) => { el.scrollLeft = ev.pageX - startX }
+            const onUp = () => {
+              el.style.cursor = 'grab'
+              window.removeEventListener('mousemove', onMove)
+              window.removeEventListener('mouseup', onUp)
+            }
+            window.addEventListener('mousemove', onMove)
+            window.addEventListener('mouseup', onUp)
+          }}
+        >
+          {pool.map(c => (
+            <Link key={c.id} to={`/celebrities/${c.id}`} className="group flex-shrink-0" style={{ width: CARD_W }}>
+              <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2 h-[136px]">
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
                 />
+                <div className="rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_10px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0" style={{ width: 56, height: 56 }}>
+                  <img
+                    src={getAvatar(c)}
+                    alt={c.name}
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 15%' }}
+                    onError={e => {
+                      (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
+                    }}
+                  />
+                </div>
+                <div className="w-full">
+                  <p className="text-[10px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
+                    {c.name}{DECEASED_IDS.has(c.id) && <span className="text-gray-600"> (†)</span>}
+                  </p>
+                  <p className="text-[9px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(c.netWorth)}</p>
+                </div>
               </div>
-              <div className="w-full">
-                <p className="text-[10px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
-                  {c.name}{DECEASED_IDS.has(c.id) && <span className="text-gray-600"> (†)</span>}
-                </p>
-                <p className="text-[9px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(c.netWorth)}</p>
-              </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -721,7 +782,7 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-[#0a0a0a] text-white">
 
       {/* ── HEADER ──────────────────────────────────────────────── */}
-      <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/8">
+      <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-b" style={{ borderBottomColor: 'rgba(201,168,76,0.18)' }}>
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
           <Link
             to="/"
@@ -912,7 +973,7 @@ export default function ProfilePage() {
       </section>
 
       {/* ── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+      <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(201,168,76,0.18)' }}>
         <div className="max-w-2xl mx-auto text-center">
 
           {/* Logo */}

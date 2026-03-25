@@ -170,20 +170,46 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
 function WealthLogo() {
   return (
-    <div className="flex items-center gap-2">
-      <span style={{ fontSize: '22px', lineHeight: 1, color: '#c9a84c' }}>◆</span>
-      <span style={{
-        fontFamily: "'Playfair Display', Georgia, serif",
-        color: '#c9a84c',
-        fontSize: '12px',
-        letterSpacing: '0.28em',
-        textTransform: 'uppercase' as const,
-        fontWeight: 400,
-        lineHeight: 1,
-        textShadow: '0 0 18px rgba(201,168,76,0.35)',
-      }}>
-        Wealth Explorer
-      </span>
+    <div className="flex items-center gap-3.5">
+      {/* W monogram: diamond gem + thick/thin letterform + hairline rules */}
+      <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+        <defs>
+          <linearGradient id="logoGold" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stopColor="#f5e070"/>
+            <stop offset="48%" stopColor="#c9a84c"/>
+            <stop offset="100%" stopColor="#8a6218"/>
+          </linearGradient>
+        </defs>
+        {/* Top hairline rule */}
+        <line x1="1" y1="1.5" x2="39" y2="1.5" stroke="url(#logoGold)" strokeWidth="0.45" opacity="0.55"/>
+        {/* Diamond gem — center top */}
+        <path d="M20 2.5 L22.8 7 L20 11.5 L17.2 7 Z" fill="url(#logoGold)"/>
+        {/* W — thick outer strokes, thin inner strokes */}
+        <line x1="2"  y1="5"  x2="11" y2="26" stroke="url(#logoGold)" strokeWidth="2.1" strokeLinecap="round"/>
+        <line x1="11" y1="26" x2="20" y2="13" stroke="url(#logoGold)" strokeWidth="0.85" strokeLinecap="round"/>
+        <line x1="20" y1="13" x2="29" y2="26" stroke="url(#logoGold)" strokeWidth="0.85" strokeLinecap="round"/>
+        <line x1="29" y1="26" x2="38" y2="5"  stroke="url(#logoGold)" strokeWidth="2.1" strokeLinecap="round"/>
+        {/* Bottom hairline rule */}
+        <line x1="1" y1="28.5" x2="39" y2="28.5" stroke="url(#logoGold)" strokeWidth="0.45" opacity="0.55"/>
+      </svg>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+        <span style={{
+          fontFamily: "'Playfair Display', Georgia, serif",
+          background: 'linear-gradient(135deg, #f5e070 0%, #c9a84c 48%, #8a6218 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontSize: '14px',
+          letterSpacing: '0.38em',
+          textTransform: 'uppercase' as const,
+          fontWeight: 700,
+          lineHeight: 1,
+        }}>
+          Wealthscape
+        </span>
+        {/* Decorative gold rule instead of text subtitle */}
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, rgba(201,168,76,0.7), rgba(201,168,76,0.25), transparent)' }} />
+      </div>
     </div>
   )
 }
@@ -293,7 +319,15 @@ export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState<Category>('All')
   const [activeAssetType, setActiveAssetType] = useState<AssetType | 'All'>('All')
   const [searchFocused, setSearchFocused] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   const filteredCelebs = useMemo(() => {
     let list = [...celebrities]
@@ -369,7 +403,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#0a0a0a] text-white">
 
       {/* ── HEADER ──────────────────────────────────────────────── */}
-      <header className="border-b border-white/8 bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40">
+      <header className="border-b bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40" style={{ borderBottomColor: 'rgba(201,168,76,0.18)' }}>
         <div className="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between">
           <Link to="/" onClick={() => window.scrollTo(0, 0)}><WealthLogo /></Link>
           <div className="flex items-center gap-2">
@@ -400,7 +434,7 @@ export default function HomePage() {
             onChange={e => setSearch(e.target.value)}
             onFocus={() => setSearchFocused(true)}
             onBlur={() => setTimeout(() => setSearchFocused(false), 150)}
-            placeholder={t('searchPlaceholder')}
+            placeholder={isMobile ? 'Search profiles & assets…' : t('searchPlaceholder')}
             className="w-full bg-[#161616] border border-white/12 rounded-2xl pl-12 pr-10 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-[#c9a84c]/40 text-[16px] sm:text-sm transition-colors"
             style={{ WebkitTextSizeAdjust: 'none' }}
           />
@@ -442,9 +476,9 @@ export default function HomePage() {
                           }}
                         />
                       </div>
-                      <div className="flex-1 text-left min-w-0">
-                        <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors truncate">{celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 text-xs ml-0.5"> (†)</span>}</p>
-                        <p className="text-xs text-gray-600 truncate">{celeb.profession} · {celeb.nationality}</p>
+                      <div className="flex-1 text-left">
+                        <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors leading-snug">{celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 text-xs ml-0.5"> (†)</span>}</p>
+                        <p className="text-xs text-gray-600 leading-snug">{celeb.profession} · {celeb.nationality}</p>
                       </div>
                       <div className="text-right flex-shrink-0">
                         <p className="text-sm font-semibold" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
@@ -607,7 +641,7 @@ export default function HomePage() {
       <ScrollToTopButton />
 
       {/* ── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+      <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(201,168,76,0.18)' }}>
         <div className="max-w-2xl mx-auto text-center">
 
           {/* Logo */}
