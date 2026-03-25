@@ -170,20 +170,53 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 
 function WealthLogo() {
   return (
-    <div className="flex items-center gap-2">
-      <span style={{ fontSize: '22px', lineHeight: 1, color: '#c9a84c' }}>◆</span>
-      <span style={{
-        fontFamily: "'Playfair Display', Georgia, serif",
-        color: '#c9a84c',
-        fontSize: '12px',
-        letterSpacing: '0.28em',
-        textTransform: 'uppercase' as const,
-        fontWeight: 400,
-        lineHeight: 1,
-        textShadow: '0 0 18px rgba(201,168,76,0.35)',
-      }}>
-        Wealth Explorer
-      </span>
+    <div className="flex items-center gap-3">
+      {/* Crown monogram */}
+      <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+        <defs>
+          <linearGradient id="crownGold" x1="0" y1="0" x2="26" y2="22" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#f0d060"/>
+            <stop offset="45%" stopColor="#c9a84c"/>
+            <stop offset="100%" stopColor="#9a7530"/>
+          </linearGradient>
+        </defs>
+        {/* Crown shape */}
+        <path d="M2 19.5h22M3 19.5L4 11l4.5 4.5L13 3l4.5 12.5L22 11l1 8.5" stroke="url(#crownGold)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+        {/* Jewel dots at peaks */}
+        <circle cx="2.8" cy="10.5" r="1.6" fill="url(#crownGold)"/>
+        <circle cx="13" cy="2.8" r="1.8" fill="url(#crownGold)"/>
+        <circle cx="23.2" cy="10.5" r="1.6" fill="url(#crownGold)"/>
+        {/* Base line decoration */}
+        <line x1="2" y1="19.5" x2="24" y2="19.5" stroke="url(#crownGold)" strokeWidth="1.6" strokeLinecap="round"/>
+      </svg>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+        <span style={{
+          fontFamily: "'Playfair Display', Georgia, serif",
+          background: 'linear-gradient(135deg, #f0d060 0%, #c9a84c 50%, #9a7530 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontSize: '13px',
+          letterSpacing: '0.32em',
+          textTransform: 'uppercase' as const,
+          fontWeight: 600,
+          lineHeight: 1,
+        }}>
+          Wealthscape
+        </span>
+        <span style={{
+          fontFamily: "'Playfair Display', Georgia, serif",
+          color: 'rgba(201,168,76,0.45)',
+          fontSize: '7px',
+          letterSpacing: '0.55em',
+          textTransform: 'uppercase' as const,
+          fontWeight: 400,
+          lineHeight: 1,
+          paddingLeft: '1px',
+        }}>
+          Radar
+        </span>
+      </div>
     </div>
   )
 }
@@ -442,9 +475,9 @@ export default function HomePage() {
                           }}
                         />
                       </div>
-                      <div className="flex-1 text-left min-w-0">
-                        <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors truncate">{celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 text-xs ml-0.5"> (†)</span>}</p>
-                        <p className="text-xs text-gray-600 truncate">{celeb.profession} · {celeb.nationality}</p>
+                      <div className="flex-1 text-left">
+                        <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors leading-snug">{celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 text-xs ml-0.5"> (†)</span>}</p>
+                        <p className="text-xs text-gray-600 leading-snug">{celeb.profession} · {celeb.nationality}</p>
                       </div>
                       <div className="text-right flex-shrink-0">
                         <p className="text-sm font-semibold" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
