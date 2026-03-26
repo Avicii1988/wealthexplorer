@@ -18,7 +18,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Super Bowl Halftime Spectacle', summary: 'The Weeknd delivered one of the most watched Super Bowl halftime performances in history, self-funding much of the $7 million production. The performance cemented his status as one of music\'s biggest global stars.', type: 'gossip', date: 'Feb 2021' }
-    ]
+    ],
+    relationships: { parents: ['Makkonen Tesfaye', 'Samrawit Hailu'], exPartner: ['Bella Hadid', 'Selena Gomez', 'Angelina Jolie'] }
   },
   'abby-wambach': {
     avatar: 'https://image.tmdb.org/t/p/w400/rWkBTutM3US0TdTCnmTjl5SMENm.jpg',
@@ -27,7 +28,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Bestselling Author and Activist', summary: 'After retiring from soccer, Abby Wambach became a bestselling author with her book "Wolfpack," selling over 500,000 copies. She has leveraged her platform to advocate for gender equity in sports and pay equality.', type: 'gossip', date: 'Mar 2019' }
-    ]
+    ],
+    relationships: { exSpouse: ['Sarah Huffman'], spouse: 'Glennon Doyle' }
   },
   'afrobeats-burna-boy': {
     avatar: 'https://ui-avatars.com/api/?name=Burna+Boy&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -37,7 +39,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Grammy Win Puts Afrobeats on Global Stage', summary: 'Burna Boy won the Grammy Award for Best Global Music Album, becoming one of the most decorated African artists in Grammy history. The win was credited with dramatically boosting global streaming of Afrobeats music.', type: 'gossip', date: 'Mar 2021' }
-    ]
+    ],
+    relationships: { parents: ['Samuel Ogulu', 'Bose Ogulu'], exPartner: ['Stefflon Don', 'Linathe Etshedi'] }
   },
   'alan-sugar': {
     avatar: 'https://image.tmdb.org/t/p/w400/sNjtwck7HKH4kCQi7SrLbcT7lMU.jpg',
@@ -47,7 +50,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'The Apprentice Empire', summary: 'Sir Alan Sugar has hosted The Apprentice UK since 2005, turning the show into one of Britain\'s most enduring reality TV franchises. The program has invested millions into successful UK businesses through the years.', type: 'gossip', date: 'Jan 2022' }
-    ]
+    ],
+    relationships: { spouse: 'Ann Sugar', children: ['Daniel Sugar', 'Simon Sugar', 'Louise Sugar'] }
   },
   'anne-marie': {
     avatar: 'https://image.tmdb.org/t/p/w400/cxXW8vC1pXfzuMAbgGYTZMXYi5C.jpg',
@@ -56,7 +60,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Billion Stream Milestone', summary: 'Anne-Marie\'s collaboration "Rockabye" with Clean Bandit surpassed one billion streams on Spotify, making her one of the UK\'s most streamed female artists. The success launched her into international stardom.', type: 'gossip', date: 'Sep 2020' }
-    ]
+    ],
+    relationships: { spouse: 'Slowthai' }
   },
   'archie-harrison': {
     avatar: 'https://ui-avatars.com/api/?name=Prince+Harry&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -65,7 +70,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Netflix and Spotify Deals', summary: 'Prince Harry and Meghan Markle signed landmark deals with Netflix and Spotify reportedly worth over $100 million combined. The deals marked a new commercial chapter following their departure from royal duties.', type: 'gossip', date: 'Sep 2020' }
-    ]
+    ],
+    relationships: { parents: ['King Charles III', 'Princess Diana (†)'], spouse: 'Meghan Markle', siblings: ['Prince William'], children: ['Archie Harrison', 'Lilibet Diana'] }
   },
   'armando-iannucci': {
     avatar: 'https://image.tmdb.org/t/p/w400/9kdnLu0iALWI19dLTUEVDOxyyCB.jpg',
@@ -74,7 +80,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Veep Sweeps Emmy Awards', summary: 'Armando Iannucci\'s political satire Veep won Outstanding Comedy Series at the Emmy Awards, becoming one of the most acclaimed comedies in television history. The show is widely considered the definitive political comedy of its era.', type: 'gossip', date: 'Sep 2019' }
-    ]
+    ],
+    relationships: { spouse: 'Rachel Spence', children: ['Matthew Iannucci', 'Madeleine Iannucci'] }
   },
   'ashley-tisdale': {
     avatar: 'https://image.tmdb.org/t/p/w400/ot6ib67jxvKVG1JCBl0ROPGtdeP.jpg',
@@ -83,7 +90,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Lifestyle Brand Success', summary: 'Ashley Tisdale launched her lifestyle and wellness brand Frenshe, which quickly gained a dedicated following. The business venture marked a successful transition from her Disney Channel roots into entrepreneurship.', type: 'gossip', date: 'Oct 2020' }
-    ]
+    ],
+    relationships: { spouse: 'Christopher French', children: ['Jupiter Iris French'] }
   },
   'austin-butts': {
     avatar: 'https://ui-avatars.com/api/?name=Austin+Butler&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -92,7 +100,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Elvis Role Earns Oscar Nomination', summary: 'Austin Butler received an Academy Award nomination for Best Actor for his portrayal of Elvis Presley in Baz Luhrmann\'s biopic. Critics praised his dedication, noting he maintained Elvis\'s accent for months after filming wrapped.', type: 'gossip', date: 'Jan 2023' }
-    ]
+    ],
+    relationships: { exPartner: ['Vanessa Hudgens'], partner: 'Kaia Gerber' }
   },
   'baraka-donn': {
     avatar: 'https://ui-avatars.com/api/?name=Halle+Bailey&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -101,7 +110,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Little Mermaid Casting Breaks the Internet', summary: 'Halle Bailey\'s casting as Ariel in Disney\'s live-action The Little Mermaid sparked global conversation and became one of the most talked-about casting announcements of the decade. The film grossed over $569 million worldwide.', type: 'gossip', date: 'Sep 2022' }
-    ]
+    ],
+    relationships: { siblings: ['Chlöe Bailey'], partner: 'DDG', children: ['Halo Bailey'] }
   },
   'becky-g': {
     avatar: 'https://image.tmdb.org/t/p/w400/vbLeM59VY3gjPn7mggIBZTN2VcC.jpg',
@@ -110,7 +120,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Latin Grammy Nominated Hit', summary: 'Becky G\'s hit "Shower" and subsequent Spanish-language tracks earned her multiple Latin Grammy nominations, establishing her as a crossover star bridging English and Spanish-speaking markets.', type: 'gossip', date: 'Nov 2021' }
-    ]
+    ],
+    relationships: { exPartner: ['Sebastian Lletget'] }
   },
   'benedict-cumberbatch': {
     avatar: 'https://image.tmdb.org/t/p/w400/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg',
@@ -120,7 +131,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Doctor Strange Multiverse Opening Weekend Record', summary: 'Doctor Strange in the Multiverse of Madness, starring Benedict Cumberbatch, opened to $449 million globally in its opening weekend. The film broke several box office records and cemented his place in the MCU.', type: 'gossip', date: 'May 2022' }
-    ]
+    ],
+    relationships: { parents: ['Timothy Carlton', 'Wanda Ventham'], spouse: 'Sophie Hunter', children: ['Christopher Carlton Cumberbatch', 'Hal Auden Cumberbatch', 'Finn Cumberbatch'] }
   },
   'billie-lourd': {
     avatar: 'https://image.tmdb.org/t/p/w400/1u8bZL6ZXu5iDbPO3Z0Spetyt34.jpg',
@@ -129,7 +141,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Carrie Fisher Memorial Tribute', summary: 'Billie Lourd honored her mother Carrie Fisher by reprising the role of Lieutenant Connix in Star Wars: The Rise of Skywalker. Her performance was widely praised as a touching tribute to her late mother\'s legacy.', type: 'gossip', date: 'Dec 2019' }
-    ]
+    ],
+    relationships: { parents: ['Carrie Fisher (†)', 'Bryan Lourd'], grandchildren: [], spouse: 'Austen Rydell', children: ['Kingston Fisher Lourd Rydell'] }
   },
   'bogdan-popescu': {
     avatar: 'https://ui-avatars.com/api/?name=Novak+Djokovic+Father&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -138,7 +151,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Srdan Djokovic Controversial Media Presence', summary: 'Novak Djokovic\'s father Srdan became a controversial figure after making inflammatory statements and appearing alongside political figures at public events. His behavior prompted widespread media criticism across Europe.', type: 'controversy', date: 'Jan 2023' }
-    ]
+    ],
+    relationships: { spouse: 'Dijana Ristić', children: ['Novak Djokovic', 'Marko Djokovic', 'Djordje Djokovic'] }
   },
   'bonnie-raitt': {
     avatar: 'https://image.tmdb.org/t/p/w400/lN2PD7LGsltMmZj03DpaVrd7gYJ.jpg',
@@ -147,7 +161,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Grammy Upset of the Year', summary: 'Bonnie Raitt won the Grammy for Song of the Year with "Just Like That," a stunning upset over heavily favored nominees. At age 73, she became one of the oldest winners of that category in Grammy history.', type: 'gossip', date: 'Feb 2023' }
-    ]
+    ],
+    relationships: { parents: ['John Raitt (†)', 'Marjorie Haydock'], exSpouse: ['Michael O\'Keefe'] }
   },
   'brett-favre': {
     avatar: 'https://image.tmdb.org/t/p/w400/FvwMoPT6dmN3pPfVpFCpydu2rn.jpg',
@@ -156,7 +171,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Mississippi Welfare Scandal', summary: 'Brett Favre was implicated in a Mississippi welfare fraud scandal involving the alleged misuse of $77 million in public funds. He was accused of directing welfare money toward a volleyball facility at his alma mater.', type: 'controversy', date: 'Sep 2022' }
-    ]
+    ],
+    relationships: { spouse: 'Deanna Favre', children: ['Brittany Favre', 'Breleigh Favre'] }
   },
   'cassie-ventura': {
     avatar: 'https://image.tmdb.org/t/p/w400/hrKZTgQyvPJBh2t9WvBWgpdaqE8.jpg',

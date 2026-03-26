@@ -153,7 +153,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Streaming Record Breaker', summary: 'A Boogie Wit da Hoodie became one of the most streamed artists of his generation with multiple platinum albums by his mid-twenties. His Artist 2.0 album debuted at number one on the Billboard 200.', type: 'gossip', date: 'Dec 2021' }
-    ]
+    ],
+    relationships: { children: ['Melody Valentine Dubose', 'Artist Dubose'] }
   },
   'abdeslam-ouadou': {
     avatar: 'https://ui-avatars.com/api/?name=Hamza+Choudhury&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -162,7 +163,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Premier League Journey', summary: 'Hamza Choudhury established himself as a tough-tackling midfielder in the Premier League with Leicester City before moving on to other clubs. He has represented the England national team at youth level.', type: 'gossip', date: 'Aug 2023' }
-    ]
+    ],
+    relationships: { parents: ['Abdeslam Ouadou', 'Nathalie Ouadou'] }
   },
   'abubakar-atiku': {
     avatar: 'https://ui-avatars.com/api/?name=Atiku+Abubakar&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -172,7 +174,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: '2023 Nigerian Presidential Bid', summary: 'Atiku Abubakar ran as the PDP presidential candidate in Nigeria\'s 2023 general elections, finishing second to Bola Tinubu. He contested the results in court in a landmark legal challenge.', type: 'gossip', date: 'Mar 2023' }
-    ]
+    ],
+    relationships: { spouse: 'Titi Abubakar', children: ['Aminu Atiku Abubakar', 'Aisha Atiku Abubakar', 'Fatima Atiku Abubakar', 'Adamu Atiku Abubakar'] }
   },
   'acun-ilicali': {
     avatar: 'https://image.tmdb.org/t/p/w400/pdsO9unfAerz8E5fneAmmipzzCa.jpg',
@@ -182,7 +185,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Hull City Takeover', summary: 'Turkish media mogul Acun Ilicali completed his takeover of English Championship club Hull City in 2022, bringing significant investment and attention to the club. His ownership has been marked by ambitious transfer activity.', type: 'gossip', date: 'Feb 2022' }
-    ]
+    ],
+    relationships: { exSpouse: ['Şeyma Subaşı'], spouse: 'Mukaddes Ilicali', children: ['Banu Ilicali', 'Naz Ilicali'] }
   },
   'adnan-sami': {
     avatar: 'https://ui-avatars.com/api/?name=Adnan+Sami&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -191,7 +195,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Indian Citizenship Journey', summary: 'Pakistani-born singer Adnan Sami was granted Indian citizenship in 2016 after years of living in the country, sparking political debate on both sides of the border. He has since been awarded India\'s fourth-highest civilian honor, the Padma Shri.', type: 'gossip', date: 'Jan 2020' }
-    ]
+    ],
+    relationships: { parents: ['Arshad Sami Khan', 'Naureen Sami'], spouse: 'Roya Faryabi', children: ['Medina Sami Khan'] }
   },
   'afua-asante': {
     avatar: 'https://ui-avatars.com/api/?name=Didier+Ndong&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -200,7 +205,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Contract Dispute at Sunderland', summary: 'Didier Ndong departed Sunderland AFC amid controversy when the club was unable to fulfill his contract obligations following their relegation and financial difficulties. The saga highlighted the financial risks for players at struggling clubs.', type: 'gossip', date: 'Oct 2018' }
-    ]
+    ],
+    relationships: { parents: ['Armand Ndong', 'Sylvie Ndong'] }
   },
   'agbani-darego': {
     avatar: 'https://ui-avatars.com/api/?name=Agbani+Darego&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -209,7 +215,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Historic Miss World Victory', summary: 'Agbani Darego became the first Black African woman to win the Miss World pageant in 2001, a landmark moment for the continent. She subsequently built a modeling and business career across Africa and internationally.', type: 'gossip', date: 'Jan 2022' }
-    ]
+    ],
+    relationships: { spouse: 'Abiodun Ajisafe', children: ['Zara Ajisafe'] }
   },
   'agnes-monica': {
     avatar: 'https://image.tmdb.org/t/p/w400/iBDWJbhwQv9wxxOX2V4gDiJ5HU9.jpg',
@@ -218,7 +225,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Southeast Asia to Hollywood', summary: 'Agnez Mo successfully transitioned from Indonesia\'s biggest pop star to pursuing an international music career in the United States, collaborating with American artists. She rebranded under the name Agnez Mo for her global push.', type: 'gossip', date: 'Nov 2022' }
-    ]
+    ],
+    relationships: { parents: ['Jenny Siswono', 'Steve Christian'] }
   },
   'ahmed-ezz': {
     avatar: 'https://image.tmdb.org/t/p/w400/mgQhox7AbzVsQ8xeTZvkK5Gvkd4.jpg',
@@ -228,7 +236,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Steel Monopoly and Legal Battles', summary: 'Ahmed Ezz, Egypt\'s steel magnate, faced legal proceedings following the 2011 Egyptian Revolution with accusations of monopolistic practices. He was eventually acquitted after years of legal battles.', type: 'gossip', date: 'Mar 2022' }
-    ]
+    ],
+    relationships: { spouse: 'Ghada Abd El Razek' }
   },
   'ai-weiwei': {
     avatar: 'https://image.tmdb.org/t/p/w400/hD3ot74TFao8xDaeUaxuRK0RKsS.jpg',
@@ -237,7 +246,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Exile and Artistic Defiance', summary: 'Ai Weiwei continues to produce provocative political art from his base in Europe after leaving China following his 2011 detention by Chinese authorities. His work consistently addresses themes of human rights and government accountability.', type: 'gossip', date: 'Sep 2023' }
-    ]
+    ],
+    relationships: { parents: ['Ai Qing (†)', 'Gao Ying'], partner: 'Wang Fen', children: ['Ai Lao'] }
   },
   'aishwarya-rai': {
     avatar: 'https://image.tmdb.org/t/p/w400/tXlRA4gZgUiKx2P1odBpyXjnkbX.jpg',
@@ -247,7 +257,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Cannes Red Carpet Icon', summary: 'Aishwarya Rai Bachchan has been a fixture at the Cannes Film Festival for over two decades as a L\'Oreal Paris ambassador, consistently making international best-dressed lists. Her appearances generate global media coverage each year.', type: 'gossip', date: 'May 2023' }
-    ]
+    ],
+    relationships: { parents: ['Krishnaraj Rai', 'Vrinda Rai'], spouse: 'Abhishek Bachchan', children: ['Aaradhya Bachchan'] }
   },
   'alain-prost': {
     avatar: 'https://image.tmdb.org/t/p/w400/uWzHseRHbGnzagKzeEXGTuyeoXV.jpg',
@@ -257,7 +268,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Alpine F1 Departure', summary: 'Alain Prost departed his non-executive director role at Alpine F1 Team in 2022 amid reported disagreements over the team\'s strategic direction. His exit marked the end of a significant chapter in his post-driving career.', type: 'gossip', date: 'Jan 2022' }
-    ]
+    ],
+    relationships: { exSpouse: ['Anne-Marie Bryner', 'Catherine Prost'], children: ['Nicolas Prost', 'Sacha Prost', 'Victoria Prost'] }
   },
   'alec-baldwin': {
     avatar: 'https://image.tmdb.org/t/p/w400/hzKy7x574eeUS3wt1R3yvWBRpeR.jpg',
@@ -266,7 +278,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Rust Shooting Legal Case', summary: 'Alec Baldwin faced involuntary manslaughter charges following the fatal shooting of cinematographer Halyna Hutchins on the set of Rust in 2021. The case was ultimately dismissed in 2024 due to prosecutorial misconduct.', type: 'gossip', date: 'Jul 2024' }
-    ]
+    ],
+    relationships: { siblings: ['Daniel Baldwin', 'William Baldwin', 'Stephen Baldwin'], exSpouse: ['Kim Basinger'], spouse: 'Hilaria Baldwin', children: ['Ireland Baldwin', 'Carmen Gabriela Baldwin', 'Rafael Thomas Baldwin', 'Leonardo Ángel Charles Baldwin', 'Romeo Alejandro David Baldwin', 'Eduardo Pau Lucas Baldwin', 'Lucía Baldwin'] }
   },
   'aleksander-ceferin': {
     avatar: 'https://ui-avatars.com/api/?name=Aleksander+Ceferin&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -275,7 +288,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Super League Opposition', summary: 'UEFA President Aleksander Ceferin led the fierce institutional opposition to the proposed European Super League in 2021, successfully pressuring most clubs to withdraw within days of the announcement. He positioned UEFA as the defender of football\'s traditional structure.', type: 'gossip', date: 'Apr 2021' }
-    ]
+    ],
+    relationships: { spouse: 'Marija Ceferin', children: ['Tia Ceferin', 'Nika Ceferin'] }
   },
   'alex-ferguson': {
     avatar: 'https://image.tmdb.org/t/p/w400/zzRldIXzQohouEzbXxcyJQDoFnM.jpg',
@@ -285,7 +299,8 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Health Scare and Recovery', summary: 'Sir Alex Ferguson suffered a serious brain hemorrhage in 2018 requiring emergency surgery, stunning the football world. His remarkable recovery and return to public life was widely celebrated as an inspiration.', type: 'gossip', date: 'May 2018' }
-    ]
+    ],
+    relationships: { spouse: 'Cathy Ferguson', children: ['Mark Ferguson', 'Jason Ferguson', 'Darren Ferguson'] }
   },
   'alex-morgan': {
     avatar: 'https://image.tmdb.org/t/p/w400/eQTBpSdPiEkiWqLBxZILOAkULne.jpg',
@@ -295,6 +310,7 @@ export const extras_13: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'USWNT Equal Pay Victory', summary: 'Alex Morgan was a central figure in the landmark US Women\'s National Team equal pay lawsuit that resulted in a $24 million settlement with US Soccer in 2022. The victory set a precedent for gender equity in professional sports.', type: 'gossip', date: 'Feb 2022' }
-    ]
+    ],
+    relationships: { spouse: 'Servando Carrasco', children: ['Charlie Elena Carrasco'] }
   },
 }
