@@ -4,10 +4,12 @@ import ProfilePage from './pages/ProfilePage'
 import AboutPage from './pages/AboutPage'
 import TermsPage from './pages/TermsPage'
 import { LanguageProvider } from './i18n'
+import { ThemeProvider } from './context/ThemeContext'
 import './index.css'
 
 function App() {
   return (
+    <ThemeProvider>
     <LanguageProvider>
       <BrowserRouter basename="/wealthexplorer">
         <Routes>
@@ -18,6 +20,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </LanguageProvider>
+    </ThemeProvider>
   )
 }
 

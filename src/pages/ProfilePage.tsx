@@ -15,6 +15,7 @@ import {
   type Asset,
 } from '../data/celebrities'
 import NotificationBell from '../components/NotificationBell'
+import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
 
 const ALL = 'All' as const
@@ -795,6 +796,7 @@ export default function ProfilePage() {
 
           <div className="flex items-center gap-3">
             <NotificationBell />
+            <ThemeToggle />
             <LanguageSelector />
           </div>
         </div>
