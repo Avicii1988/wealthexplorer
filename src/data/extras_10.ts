@@ -160,7 +160,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Fashion and Football Icon', summary: 'Cam Newton became as well known for his flamboyant fashion choices as his on-field heroics during his MVP-winning career. He regularly made best-dressed lists and launched his own clothing initiatives after retiring from the NFL.', type: 'gossip', date: 'Aug 2021' }
-    ]
+    ],
+    relationships: { exPartner: ['Kia Proctor'], children: ['Chosen Sebastian Newton', 'Sovereign Dior Newton', 'Camidas Newton Jr.', 'Cashmere Newton'] }
   },
   'cedric-the-entertainer': {
     avatar: 'https://image.tmdb.org/t/p/w400/s6UrY5uofyxXsU5PydWBoLFReK0.jpg',
@@ -169,7 +170,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'The Neighborhood Success Run', summary: 'Cedric the Entertainer has starred in CBS sitcom The Neighborhood since 2018, consistently pulling in strong ratings for the network. The show helped introduce him to a new generation of comedy fans.', type: 'gossip', date: 'Oct 2018' }
-    ]
+    ],
+    relationships: { spouse: 'Lorna Wells', children: ['Lucky Rose Kyle', 'Croix Kyle', 'Tiara Kyle'] }
   },
   'chamath-palihapitiya': {
     avatar: 'https://ui-avatars.com/api/?name=Chamath+Palihapitiya&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -179,7 +181,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'All-In Podcast Influence', summary: 'Chamath Palihapitiya co-hosts the All-In Podcast alongside prominent tech investors, making it one of the most influential business podcasts in Silicon Valley. The show regularly shapes discourse around technology, markets, and politics.', type: 'gossip', date: 'Jan 2021' }
-    ]
+    ],
+    relationships: { exSpouse: ['Brigitte Lau'], partner: 'Nathalie Lau', children: ['three children with Brigitte Lau'] }
   },
   'charlie-chaplin': {
     avatar: 'https://image.tmdb.org/t/p/w400/lRI9Ky1SMOehn04OqhYJ5hQfgIK.jpg',
@@ -188,7 +191,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Exiled from America', summary: 'Charlie Chaplin was denied re-entry to the United States in 1952 amid McCarthyera suspicions about his political beliefs, and he chose to settle permanently in Switzerland. He was only welcomed back to accept an honorary Oscar in 1972.', type: 'gossip', date: 'Sep 1952' }
-    ]
+    ],
+    relationships: { exSpouse: ['Mildred Harris', 'Lita Grey', 'Paulette Goddard'], spouse: 'Oona O\'Neill (†)', children: ['Charles Chaplin Jr. (†)', 'Sydney Chaplin', 'Geraldine Chaplin', 'Michael Chaplin', 'Josephine Chaplin', 'Victoria Chaplin', 'Eugene Chaplin', 'Jane Chaplin', 'Annette Chaplin', 'Christopher Chaplin'] }
   },
   'chrissy-teigen': {
     avatar: 'https://image.tmdb.org/t/p/w400/mSr84rB656sz6rjhxIS9gjiWGEZ.jpg',
@@ -197,7 +201,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Cyberbullying Controversy and Apology', summary: 'Chrissy Teigen faced significant backlash in 2021 after old tweets and messages revealing cruel behavior toward celebrities resurfaced online. She issued public apologies and took a break from social media before gradually returning.', type: 'gossip', date: 'Jun 2021' }
-    ]
+    ],
+    relationships: { spouse: 'John Legend', children: ['Luna Simone Stephens', 'Miles Theodore Stephens', 'Esti Maxine Stephens'] }
   },
   'claire-danes': {
     avatar: 'https://image.tmdb.org/t/p/w400/vTKKniIwbXWMmnuMmGKHYS41Vif.jpg',
@@ -206,7 +211,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Homeland Emmy Dominance', summary: 'Claire Danes won three Primetime Emmy Awards for her role as Carrie Mathison in Homeland, cementing her status as one of television\'s finest dramatic actresses. The show ran for eight seasons and remained a critical favorite throughout.', type: 'gossip', date: 'Sep 2013' }
-    ]
+    ],
+    relationships: { spouse: 'Hugh Dancy', children: ['Cyrus Michael Christopher Dancy', 'Rowan Dancy', 'Story Dancy'] }
   },
   'coco-gauff': {
     avatar: 'https://image.tmdb.org/t/p/w400/iubLSxTfntq5fV44Sm044zqIKzz.jpg',
@@ -215,7 +221,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'US Open Champion at 19', summary: 'Coco Gauff won the 2023 US Open at just 19 years old, defeating Aryna Sabalenka in a thrilling final to claim her first Grand Slam title. Her victory made her one of the youngest US Open champions in the Open Era.', type: 'gossip', date: 'Sep 2023' }
-    ]
+    ],
+    relationships: { parents: ['Corey Gauff', 'Candi Gauff'] }
   },
   'dan-bilzerian': {
     avatar: 'https://image.tmdb.org/t/p/w400/9UKqkVEVMaNa6RpfFKeoeuQILxw.jpg',
@@ -225,7 +232,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Ignite Cannabis Company Struggles', summary: 'Dan Bilzerian\'s cannabis and lifestyle company Ignite International faced significant financial difficulties and repeated losses after going public. The company became emblematic of social media-driven ventures that struggled to translate hype into profits.', type: 'gossip', date: 'Mar 2020' }
-    ]
+    ],
+    relationships: { parents: ['Paul Bilzerian', 'Terri Steffen'] }
   },
   'david-guetta': {
     avatar: 'https://image.tmdb.org/t/p/w400/o0hjTcatffqrWpYsjANhRLUYcNA.jpg',
@@ -234,7 +242,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'AI Music Experiment', summary: 'David Guetta experimented with AI-generated vocals that mimicked Eminem\'s voice at a live concert, sparking widespread debate about artificial intelligence in the music industry. The clip went viral and ignited conversations about copyright and creativity.', type: 'gossip', date: 'Feb 2023' }
-    ]
+    ],
+    relationships: { exSpouse: ['Cathy Lobé'], partner: 'Jessica Ledon', children: ['Tim Guetta', 'Angie Guetta'] }
   },
   'david-letterman': {
     avatar: 'https://image.tmdb.org/t/p/w400/nk1rMabb84e52G2oax6yO9FBiAd.jpg',
@@ -243,7 +252,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'My Next Guest Needs No Introduction', summary: 'David Letterman returned to television with a highly praised Netflix interview series, sitting down with luminaries including Barack Obama, Jay-Z, and Malala Yousafzai. The format allowed for longer, more intimate conversations than his late-night tenure permitted.', type: 'gossip', date: 'Jan 2018' }
-    ]
+    ],
+    relationships: { exPartner: ['Merrill Markoe'], spouse: 'Regina Lasko', children: ['Harry Joseph Letterman'] }
   },
   'deion-sanders': {
     avatar: 'https://image.tmdb.org/t/p/w400/qaB8YwSHMMuL9rhrPmFLDJZuigC.jpg',
@@ -253,7 +263,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Coach Prime at Colorado', summary: 'Deion Sanders took over as head football coach at the University of Colorado in 2023, instantly transforming the program\'s national profile. His bold recruiting moves and outspoken style made him one of college football\'s most compelling figures.', type: 'gossip', date: 'Feb 2023' }
-    ]
+    ],
+    relationships: { exSpouse: ['Carolyn Chambers', 'Pilar Sanders'], children: ['Deiondra Sanders', 'Deion Sanders Jr.', 'Shilo Sanders', 'Shedeur Sanders', 'Shelomi Sanders'] }
   },
   'diana-ross': {
     avatar: 'https://image.tmdb.org/t/p/w400/bY5fDEQvq1rRELGgbO38D2F2qC.jpg',
@@ -262,7 +273,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Motown Legend and Global Icon', summary: 'Diana Ross\'s career spanning over six decades has produced dozens of top-ten hits and established her as one of the most influential recording artists in history. She received the Presidential Medal of Freedom in 2016 in recognition of her cultural contributions.', type: 'gossip', date: 'Nov 2016' }
-    ]
+    ],
+    relationships: { exSpouse: ['Robert Ellis Silberstein', 'Arne Næss Jr. (†)'], children: ['Rhonda Ross Kendrick', 'Tracee Ellis Ross', 'Chudney Ross', 'Ross Næss', 'Evan Næss'] }
   },
   'elizabeth-warren': {
     avatar: 'https://image.tmdb.org/t/p/w400/zsujqK0DLQ48y3T1L96Ett76gQ2.jpg',
@@ -271,7 +283,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: '2020 Presidential Campaign', summary: 'Elizabeth Warren ran a prominent campaign for the 2020 Democratic presidential nomination, gaining national attention for her detailed policy proposals on healthcare and economic inequality. She dropped out of the race in March 2020 after a disappointing Super Tuesday performance.', type: 'gossip', date: 'Mar 2020' }
-    ]
+    ],
+    relationships: { exSpouse: ['Jim Warren'], spouse: 'Bruce Mann', children: ['Amelia Warren Tyagi', 'Alexander Warren'] }
   },
   'elliot-page': {
     avatar: 'https://image.tmdb.org/t/p/w400/nXO8DE4biVXY4UDYP0NdIY1zvXS.jpg',
@@ -280,7 +293,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Transgender Coming Out', summary: 'Elliot Page publicly came out as transgender in December 2020, receiving an enormous outpouring of support from fans and fellow celebrities worldwide. His announcement was widely seen as a landmark moment for transgender visibility in Hollywood.', type: 'gossip', date: 'Dec 2020' }
-    ]
+    ],
+    relationships: { exSpouse: ['Emma Portner'] }
   },
   'emily-ratajkowski': {
     avatar: 'https://image.tmdb.org/t/p/w400/1YngeK5Bbgw9bu6YG5ZgvCIo4ZX.jpg',
@@ -289,7 +303,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'My Body Essay Collection', summary: 'Emily Ratajkowski published My Body in 2021, a collection of personal essays exploring feminism, objectification, and agency in the modeling industry. The book became a bestseller and sparked significant cultural debate about women\'s ownership of their own image.', type: 'gossip', date: 'Nov 2021' }
-    ]
+    ],
+    relationships: { exSpouse: ['Sebastian Bear-McClard'], children: ['Sylvester Apollo Bear'] }
   },
   'eric-clapton': {
     avatar: 'https://image.tmdb.org/t/p/w400/3bz7GpKG8ZPqUt4nuJg8rZuQ7Kk.jpg',
@@ -299,6 +314,7 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Crossroads Guitar Festival', summary: 'Eric Clapton founded the Crossroads Guitar Festival, a recurring charity concert event that has raised tens of millions of dollars for his Crossroads Centre rehabilitation facility. The festival brings together the world\'s greatest guitarists for a once-in-a-generation showcase.', type: 'gossip', date: 'Jun 2019' }
-    ]
+    ],
+    relationships: { exPartner: ['Pattie Boyd', 'Lory Del Santo'], spouse: 'Melia McEnery', children: ['Conor Clapton (†)', 'Ruth Clapton', 'Julie Rose Clapton', 'Ella Mae Clapton', 'Sophie Clapton'] }
   },
 }

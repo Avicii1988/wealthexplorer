@@ -195,12 +195,14 @@ export const extras_02: Record<string, Ext> = {
   'cameron-diaz': {
     avatar: av('Cameron Diaz'),
     assets: [{ id: 'cameron-diaz-1', type: 'real_estate', name: 'Beverly Hills Estate', description: "Cameron's Beverly Hills family home, where she lives with husband Benji Madden and their children.", estimatedValue: 7, image: RE, likes: 1220 }],
-    gossip: [{ title: 'Unretirement: Back for Back in Action', summary: "Cameron Diaz retired from acting in 2014 after The Other Woman. She made a comeback 10 years later in the Netflix action comedy Back in Action (2024) with Jamie Foxx, surprising fans who had assumed her retirement was permanent.", type: 'gossip', date: 'Jan 2024' }]
+    gossip: [{ title: 'Unretirement: Back for Back in Action', summary: "Cameron Diaz retired from acting in 2014 after The Other Woman. She made a comeback 10 years later in the Netflix action comedy Back in Action (2024) with Jamie Foxx, surprising fans who had assumed her retirement was permanent.", type: 'gossip', date: 'Jan 2024' }],
+    relationships: { spouse: 'Benji Madden', children: ['Raddix Chloe Wildflower Madden'] }
   },
   'camila-cabello': {
     avatar: av('Camila Cabello'),
     assets: [{ id: 'camila-cabello-1', type: 'real_estate', name: 'Los Angeles Home', description: "Camila's contemporary home in the Bel Air area of Los Angeles.", estimatedValue: 3.5, image: RE, likes: 810 }],
-    gossip: [{ title: 'Havana: 1 Billion Streams & the Fifth Harmony Exit', summary: "Camila Cabello's departure from Fifth Harmony in 2016 was one of pop's most dramatic exits. Her solo debut Havana became one of the biggest songs of 2017, surpassing 1 billion Spotify streams.", type: 'gossip', date: 'Dec 2016' }]
+    gossip: [{ title: 'Havana: 1 Billion Streams & the Fifth Harmony Exit', summary: "Camila Cabello's departure from Fifth Harmony in 2016 was one of pop's most dramatic exits. Her solo debut Havana became one of the biggest songs of 2017, surpassing 1 billion Spotify streams.", type: 'gossip', date: 'Dec 2016' }],
+    relationships: { parents: ['Alejandro Cabello', 'Sinuhe Estrabao'], exPartner: ['Shawn Mendes'] }
   },
   'canelo-alvarez': {
     avatar: av('Canelo Alvarez'),
@@ -208,17 +210,20 @@ export const extras_02: Record<string, Ext> = {
       { id: 'canelo-alvarez-1', type: 'car', name: 'Ferrari SF90 Stradale', description: "Canelo's prized Ferrari SF90 — one of several luxury cars in his Guadalajara collection.", estimatedValue: 0.5, image: CA, likes: 1130 },
       { id: 'canelo-alvarez-2', type: 'real_estate', name: 'Guadalajara Estate', description: "The boxing champion's grand estate in his hometown of Guadalajara, Mexico.", estimatedValue: 8, image: RE, likes: 1280 }
     ],
-    gossip: [{ title: 'Undisputed Super Middleweight Champion', summary: "Canelo Alvarez became undisputed super middleweight champion in 2021 by defeating Caleb Plant, unifying all four major belts. With a reported net worth of $140M+, he signed the most lucrative boxing contract ever with DAZN.", type: 'gossip', date: 'Nov 2021' }]
+    gossip: [{ title: 'Undisputed Super Middleweight Champion', summary: "Canelo Alvarez became undisputed super middleweight champion in 2021 by defeating Caleb Plant, unifying all four major belts. With a reported net worth of $140M+, he signed the most lucrative boxing contract ever with DAZN.", type: 'gossip', date: 'Nov 2021' }],
+    relationships: { children: ['Emily Cinnamon Alvarez', 'Mía Ener Álvarez', 'Fernanda Alvarez', 'Saúl Adiel Álvarez'] }
   },
   'cara-delevingne': {
     avatar: av('Cara Delevingne'),
     assets: [{ id: 'cara-delevingne-1', type: 'real_estate', name: "Los Angeles 'Playhouse'", description: "Cara's eccentric Los Angeles home, famous for its elaborate adult treehouse and slide.", estimatedValue: 7, image: RE, likes: 1220 }],
-    gossip: [{ title: 'The Playhouse & Public Wellness Struggles', summary: "Cara Delevingne's custom Los Angeles 'playhouse' went viral in a 2021 Architectural Digest feature. She later opened up about struggles with mental health and substance use, becoming an advocate for wellness in the fashion industry.", type: 'gossip', date: 'Dec 2021' }]
+    gossip: [{ title: 'The Playhouse & Public Wellness Struggles', summary: "Cara Delevingne's custom Los Angeles 'playhouse' went viral in a 2021 Architectural Digest feature. She later opened up about struggles with mental health and substance use, becoming an advocate for wellness in the fashion industry.", type: 'gossip', date: 'Dec 2021' }],
+    relationships: { parents: ['Charles Delevingne', 'Pandora Delevingne'], siblings: ['Poppy Delevingne', 'Chloe Delevingne'], exPartner: ['St. Vincent', 'Ashley Benson'] }
   },
   'cardi-b': {
     avatar: av('Cardi B'),
     assets: [{ id: 'cardi-b-1', type: 'real_estate', name: 'Atlanta Mansion', description: "Cardi B's sprawling Atlanta mansion with luxury finishes, home theatre, and custom walk-in closets.", estimatedValue: 5.8, image: RE, likes: 1148 }],
-    gossip: [{ title: 'Bodak Yellow: From Instagram to #1 Billboard', summary: "Cardi B became the first solo female rapper to reach #1 on the Billboard Hot 100 in 19 years with Bodak Yellow in 2017. Her Invasion of Privacy won the first Grammy for Best Rap Album by a solo female artist.", type: 'gossip', date: 'Sep 2017' }]
+    gossip: [{ title: 'Bodak Yellow: From Instagram to #1 Billboard', summary: "Cardi B became the first solo female rapper to reach #1 on the Billboard Hot 100 in 19 years with Bodak Yellow in 2017. Her Invasion of Privacy won the first Grammy for Best Rap Album by a solo female artist.", type: 'gossip', date: 'Sep 2017' }],
+    relationships: { spouse: 'Offset', children: ['Kulture Kiari Cephus', 'Wave Set Cephus'] }
   },
   'carl-icahn': {
     avatar: av('Carl Icahn'),
@@ -226,6 +231,7 @@ export const extras_02: Record<string, Ext> = {
       { id: 'carl-icahn-1', type: 'real_estate', name: 'Palm Beach Villa', description: "Icahn's oceanfront Palm Beach estate — his primary winter residence.", estimatedValue: 18, image: RE, likes: 1880 },
       { id: 'carl-icahn-2', type: 'yacht', name: 'Starfire', description: "Icahn's 53-metre superyacht Starfire, docked in Palm Beach Marina.", estimatedValue: 25, image: YA, likes: 2300 }
     ],
-    gossip: [{ title: 'Hindenburg Research Short Report Wipes $9B', summary: "In 2023, short seller Hindenburg Research released a damning report alleging Icahn Enterprises was overvalued. The stock dropped 50%, wiping $9 billion from its market cap — one of the most dramatic short-seller attacks in history.", type: 'controversy', date: 'May 2023' }]
+    gossip: [{ title: 'Hindenburg Research Short Report Wipes $9B', summary: "In 2023, short seller Hindenburg Research released a damning report alleging Icahn Enterprises was overvalued. The stock dropped 50%, wiping $9 billion from its market cap — one of the most dramatic short-seller attacks in history.", type: 'controversy', date: 'May 2023' }],
+    relationships: { exSpouse: ['Liba Trejbal'], spouse: 'Gail Golden', children: ['Brett Icahn'] }
   },
 }

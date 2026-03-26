@@ -8,7 +8,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Major Lazer World Tour', summary: 'Diplo and Major Lazer completed a record-breaking world tour spanning over 40 countries. The tour grossed over $50 million and brought electronic music to new global audiences.', type: 'gossip', date: 'Jun 2023' }
-    ]
+    ],
+    relationships: { exPartner: ['M.I.A.', 'Katy Perry'], children: ['Lazer Pentz', 'Pace Pentz'] }
   },
   'abel-makkonen': {
     avatar: 'https://image.tmdb.org/t/p/w400/y6HDzvC2qvgfit1UboEIP7u7cO9.jpg',
@@ -181,7 +182,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Lawsuit Against Sean Combs', summary: 'Cassie Ventura filed a landmark lawsuit against Sean "Diddy" Combs alleging years of abuse, which was settled within 24 hours. The case opened the door to numerous additional allegations against Combs.', type: 'controversy', date: 'Nov 2023' }
-    ]
+    ],
+    relationships: { spouse: 'Alex Fine', children: ['Frankie Stone Fine', 'Sunny Cinco Fine'] }
   },
   'cedric-diallo': {
     avatar: 'https://ui-avatars.com/api/?name=Kylian+Mbappe+Father&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -199,7 +201,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Legacy of Black Panther', summary: 'Chadwick Boseman\'s portrayal of T\'Challa in Black Panther became a global cultural phenomenon, inspiring millions and grossing $1.3 billion worldwide. He filmed multiple Marvel films while privately battling colon cancer, a fact only revealed after his death.', type: 'gossip', date: 'Aug 2020' }
-    ]
+    ],
+    relationships: { parents: ['Leroy Boseman', 'Carolyn Boseman'], spouse: 'Taylor Simone Ledward' }
   },
   'charlie-sheen': {
     avatar: 'https://image.tmdb.org/t/p/w400/sxoSLhXPEL1Hp1yaTpejTLfd1As.jpg',
@@ -208,7 +211,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Highest Paid TV Actor Then Public Meltdown', summary: 'Charlie Sheen was once the highest-paid actor on television earning $1.8 million per episode of Two and a Half Men before a very public breakdown led to his firing. His "Winning" catchphrase briefly became a global phenomenon.', type: 'controversy', date: 'Feb 2011' }
-    ]
+    ],
+    relationships: { exSpouse: ['Donna Peele', 'Denise Richards', 'Brooke Mueller'], children: ['Cassandra Jade Estevez', 'Sam Sheen', 'Lola Rose Sheen', 'Bob Sheen', 'Max Sheen'] }
   },
   'chiara-ferragni': {
     avatar: 'https://image.tmdb.org/t/p/w400/lGzO8PmIjJwdn2WSkNRNtK11swZ.jpg',
@@ -218,7 +222,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Pandoro Charity Scandal', summary: 'Chiara Ferragni faced a major Italian consumer fraud investigation related to charity campaigns around branded Pandoro and Easter eggs. The scandal cost her millions in brand deals and severely damaged her reputation.', type: 'controversy', date: 'Dec 2023' }
-    ]
+    ],
+    relationships: { exSpouse: ['Fedez'], children: ['Leone Lucia Ferragni', 'Vittoria Lucia Ferragni'] }
   },
   'christian-pulisic': {
     avatar: 'https://image.tmdb.org/t/p/w400/5iWoN6dvscekGjHCZbh8qY7LaoR.jpg',
@@ -227,7 +232,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Captain America of Soccer', summary: 'Christian Pulisic became the face of US soccer and earned the nickname "Captain America" for his performances at the World Cup and in the Premier League. His move to AC Milan reignited his career and boosted his global profile.', type: 'gossip', date: 'Jul 2023' }
-    ]
+    ],
+    relationships: { parents: ['Mark Pulisic', 'Kelley Pulisic'] }
   },
   'chuck-berry': {
     avatar: 'https://image.tmdb.org/t/p/w400/9faTPqWt3cBmQZWfB16REh1jUwl.jpg',
@@ -236,7 +242,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Final Album Released at Age 90', summary: 'Chuck Berry released his first studio album in nearly 40 years, titled "Chuck," just months before his death at age 90. The project was a final artistic statement from the man widely credited as the father of rock and roll.', type: 'gossip', date: 'Jun 2017' }
-    ]
+    ],
+    relationships: { spouse: 'Themetta Suggs', children: ['Charles Berry Jr.', 'Darlin Ingrid Berry', 'Aloha Isa Lei Berry', 'Melody Exes Berry'] }
   },
   'cillian-murphy': {
     avatar: 'https://image.tmdb.org/t/p/w400/llkbyWKwpfowZ6C8peBjIV9jj99.jpg',
@@ -245,7 +252,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Oscar Win for Oppenheimer', summary: 'Cillian Murphy won the Academy Award for Best Actor for his portrayal of J. Robert Oppenheimer, ending a long awards season campaign. The win was celebrated across Ireland as a landmark moment for Irish cinema.', type: 'gossip', date: 'Mar 2024' }
-    ]
+    ],
+    relationships: { spouse: 'Yvonne McGuinness', children: ['Malachy Murphy', 'Aran Murphy'] }
   },
   'claire-foy': {
     avatar: 'https://image.tmdb.org/t/p/w400/4IS02g8RHFOG4YQUSZu8EDu7Oxa.jpg',
@@ -254,7 +262,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Crown Pay Gap Controversy', summary: 'It emerged that Claire Foy was paid less than her male co-star Matt Smith during Season 1 of The Crown despite playing the lead role of Queen Elizabeth II. The pay gap scandal prompted Netflix and Left Bank Pictures to apologize and pay her the difference.', type: 'controversy', date: 'Mar 2018' }
-    ]
+    ],
+    relationships: { exSpouse: ['Stephen Campbell Moore'], children: ['Ivy Rose Campbell Moore'] }
   },
   'claude-giroux': {
     avatar: 'https://ui-avatars.com/api/?name=Claude+Giroux&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -264,7 +273,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Trade from Philadelphia Ends 15-Year Run', summary: 'Claude Giroux\'s trade from the Philadelphia Flyers in 2022 ended one of the longest captain tenures in franchise history. He went on to help Canada win gold at the World Hockey Championship, cementing his legacy as one of his generation\'s finest players.', type: 'gossip', date: 'Mar 2022' }
-    ]
+    ],
+    relationships: { spouse: 'Ryanne Workman', children: ['Gavin Giroux'] }
   },
   'claudia-schiffer': {
     avatar: 'https://image.tmdb.org/t/p/w400/wDLlMs7aTELNZSEQfQKYBxG6TYW.jpg',
@@ -274,7 +284,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Return to Vogue Covers at 50', summary: 'Claudia Schiffer appeared on major Vogue covers to celebrate her 50th birthday, demonstrating the enduring power of 1990s supermodel icons. The covers sparked a renewed appreciation for the original supermodel era.', type: 'gossip', date: 'Aug 2020' }
-    ]
+    ],
+    relationships: { spouse: 'Matthew Vaughn', children: ['Caspar Matthew Vaughn', 'Clementine Vaughn', 'Cosima Violet Vaughn'] }
   },
   'colin-kaepernick': {
     avatar: 'https://image.tmdb.org/t/p/w400/9ossxjX5ZLg2VaYzi5FRJf4Ejr7.jpg',
@@ -283,7 +294,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Nike Just Do It Campaign', summary: 'Colin Kaepernick starred in Nike\'s 30th anniversary "Just Do It" campaign, a bold move that initially sparked boycott calls but ultimately drove Nike\'s online sales up 31%. The campaign won the Emmy for Outstanding Commercial.', type: 'gossip', date: 'Sep 2018' }
-    ]
+    ],
+    relationships: { parents: ['Rick Kaepernick', 'Teresa Kaepernick'], partner: 'Nessa Diab' }
   },
   'courtney-love': {
     avatar: 'https://image.tmdb.org/t/p/w400/xOhKd9y4IdsUVecAVz0AR5Ye7yQ.jpg',
@@ -292,7 +304,8 @@ export const extras_17: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Nirvana Catalog Rights Battle', summary: 'Courtney Love has been involved in long-running legal and public disputes over the Nirvana music catalog and Kurt Cobain\'s estate. She has also been vocal about streaming royalties affecting musicians in the digital age.', type: 'controversy', date: 'Apr 2021' }
-    ]
+    ],
+    relationships: { exSpouse: ['James Moreland', 'Kurt Cobain (†)'], children: ['Frances Bean Cobain'] }
   },
   'curren-y': {
     avatar: 'https://ui-avatars.com/api/?name=Curren+Y&background=1a1a1a&color=c9a84c&size=200&bold=true',

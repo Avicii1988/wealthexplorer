@@ -233,7 +233,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Viral Ballad Tops Global Charts', summary: 'Calum Scott\'s latest emotional ballad climbed to the top of streaming charts in multiple countries, building on the success he found after his Britain\'s Got Talent audition. The Hull-born singer continues to grow his devoted international fanbase.', type: 'gossip', date: 'Feb 2025' }
-    ]
+    ],
+    relationships: { parents: ['David Scott', 'Lynda Scott'], siblings: ['Jade Scott'] }
   },
   'carl-froch': {
     avatar: 'https://image.tmdb.org/t/p/w400/n2bW3gquD0qukvA51reHf9dWdFM.jpg',
@@ -242,7 +243,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Commentary Career Sparks Controversy', summary: 'Carl Froch\'s outspoken boxing commentary and social media opinions have stirred debate within the sport, with some appreciating his directness and others criticizing his assessments. The Cobra remains one of boxing\'s most recognizable media personalities.', type: 'gossip', date: 'Jul 2024' }
-    ]
+    ],
+    relationships: { spouse: 'Rachael Cordingley', children: ['Rocco Froch', 'Grace Froch'] }
   },
   'carlisle-floyd': {
     avatar: 'https://image.tmdb.org/t/p/w400/b41uG0t3irWQpTfghy0wvc0M5Io.jpg',
@@ -252,7 +254,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Super League Vision Remains Alive', summary: 'Florentino Perez, president of Real Madrid and primary architect of the European Super League proposal, has indicated the project is still being developed in modified form. His ACS construction conglomerate also reported record revenues, cementing his status as one of Spain\'s wealthiest businessmen.', type: 'gossip', date: 'Jan 2025' }
-    ]
+    ],
+    relationships: { spouse: 'Carmen Domínguez Álvarez (†)', children: ['Laura Pérez'] }
   },
   'carrie-fisher': {
     avatar: 'https://image.tmdb.org/t/p/w400/of4yHmryKPy92eeskUQ7MRmjC3l.jpg',
@@ -261,7 +264,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Estate Releases Unreleased Writings', summary: 'The Carrie Fisher estate published a collection of previously unreleased personal writings, diary entries, and humorous essays that showcase the beloved actress and author at her most candid and witty. Fans and critics alike praised the posthumous publication.', type: 'gossip', date: 'Oct 2023' }
-    ]
+    ],
+    relationships: { parents: ['Eddie Fisher (†)', 'Debbie Reynolds (†)'], siblings: ['Todd Fisher'], exSpouse: ['Paul Simon'], children: ['Billie Lourd'] }
   },
   'celine-dion': {
     avatar: 'https://image.tmdb.org/t/p/w400/jllrwudKITObOznhY8nXsA571mF.jpg',
@@ -271,7 +275,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Triumphant Olympic Performance Stuns World', summary: 'Celine Dion delivered a stunning performance at the Paris Olympics opening ceremony, marking her return to the stage after battling Stiff Person Syndrome. The emotional performance was widely praised as one of the most memorable moments of the 2024 Games.', type: 'gossip', date: 'Aug 2024' }
-    ]
+    ],
+    relationships: { exSpouse: ['René Angélil (†)'], children: ['René-Charles Angélil', 'Nelson Angélil', 'Eddy Angélil'] }
   },
   'chad-ochocinco': {
     avatar: 'https://image.tmdb.org/t/p/w400/y4KuATSkx40qLuTaFe79X2QIFjU.jpg',
@@ -280,7 +285,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Soccer Tryout Attempt Goes Viral', summary: 'Chad Ochocinco\'s serious attempt to try out for professional soccer in Europe years after his NFL career remained a beloved sports crossover story that continues to circulate on social media. The former Pro Bowl receiver maintains a highly engaged following through his unfiltered social media presence.', type: 'gossip', date: 'May 2023' }
-    ]
+    ],
+    relationships: { exSpouse: ['Evelyn Lozada'], children: ['Chad Johnson Jr.', 'Jicyra Johnson', 'Chayla Johnson', 'Chade Johnson', 'Ché Johnson', 'Char Johnson'] }
   },
   'chance-the-rapper': {
     avatar: 'https://image.tmdb.org/t/p/w400/cXlzPkVu1T1g9mMnXRCOrEgERB5.jpg',
@@ -289,7 +295,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Chicago Philanthropy Efforts Recognized', summary: 'Chance the Rapper\'s sustained philanthropic work in Chicago\'s public schools and communities earned him a civic award from the city. The Grammy-winning rapper has donated millions to Chicago Public Schools and continues to organize community initiatives.', type: 'gossip', date: 'Dec 2024' }
-    ]
+    ],
+    relationships: { parents: ['Ken Bennett', 'Lisa Bennett'], spouse: 'Kirsten Corley', children: ['Kinsley Bennett', 'Kensli Bennett'] }
   },
   'charles-de-gaulle': {
     avatar: 'https://image.tmdb.org/t/p/w400/dvJ2c6x0KoWEGLDZFGxls5pqrwS.jpg',
@@ -298,7 +305,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Legacy Reassessed on Anniversary of Liberation', summary: 'French historians and politicians gathered for ceremonies marking a major anniversary of the liberation of Paris, with debate renewed about Charles de Gaulle\'s complex wartime leadership and lasting influence on French republicanism. His vision of French sovereignty continues to shape political discourse.', type: 'gossip', date: 'Aug 2024' }
-    ]
+    ],
+    relationships: { spouse: 'Yvonne de Gaulle (†)', children: ['Philippe de Gaulle', 'Élisabeth de Gaulle (†)', 'Anne de Gaulle (†)'] }
   },
   'charles-leclerc': {
     avatar: 'https://image.tmdb.org/t/p/w400/p3m3qc9ZZAIFrTXO3kwOpcp7XGf.jpg',
@@ -308,6 +316,7 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Home Race Victory Sends Monaco Wild', summary: 'Charles Leclerc finally ended his Monaco Grand Prix curse with a dominant home victory that brought the Principality to a standstill in celebration. The Ferrari driver dedicated the win to his late father, an emotional moment that resonated around the world.', type: 'gossip', date: 'May 2024' }
-    ]
+    ],
+    relationships: { parents: ['Hervé Leclerc (†)', 'Pascale Leclerc'], siblings: ['Arthur Leclerc'], exPartner: ['Charlotte Siné', 'Alexandra Saint Mleux'] }
   },
 }
