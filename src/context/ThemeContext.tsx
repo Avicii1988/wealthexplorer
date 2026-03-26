@@ -17,6 +17,7 @@ const LIGHT_MODE_CSS = `
 html.light body { background-color: #f2ede4; color: #1a1a1a; }
 html.light [class*="bg-[#0a0a0a"] { background-color: #f2ede4 !important; }
 html.light [class*="bg-[#111"] { background-color: #e8e1d5 !important; }
+html.light [class*="bg-[#131313"] { background-color: #e5ddd1 !important; }
 html.light [class*="bg-[#141414"] { background-color: #e2dace !important; }
 html.light [class*="bg-[#161616"] { background-color: #dbd3c5 !important; }
 html.light [class*="bg-[#1a1a1a"] { background-color: #d5cbbe !important; }
