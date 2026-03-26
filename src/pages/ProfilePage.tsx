@@ -411,7 +411,7 @@ function AssetCard({ asset }: { asset: Asset }) {
         {/* Badges */}
         <div className="absolute top-4 left-4 right-4 flex items-start justify-between pointer-events-none">
           <div className="flex items-center gap-2">
-            <span className="text-[11px] font-medium tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-gray-300">
+            <span className="text-[11px] font-medium tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm" style={{ color: '#fff' }}>
               {assetTypeIcons[asset.type]}&nbsp;{assetTypeLabels[asset.type]}
             </span>
             {asset.isNew && (
@@ -823,7 +823,7 @@ export default function ProfilePage() {
               {celeb.category}
             </span>
             {celeb.trending && (
-              <span className="text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-sm text-gray-300">
+              <span className="text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-sm" style={{ color: '#fff' }}>
                 Trending
               </span>
             )}

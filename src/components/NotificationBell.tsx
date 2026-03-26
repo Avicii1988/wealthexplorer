@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { Bell, BellOff } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { celebrities, getAvatar, formatValue } from '../data/celebrities'
@@ -28,6 +28,7 @@ export default function NotificationBell() {
   const [seen, setSeen]         = useState<Set<string>>(getSeen)
   const ref     = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
+  const btnRef   = useRef<HTMLButtonElement>(null)
 
   // Listen for follow-state changes dispatched by ProfilePage
   useEffect(() => {
@@ -45,18 +46,37 @@ export default function NotificationBell() {
     return () => document.removeEventListener('mousedown', h)
   }, [])
 
-  // Clamp dropdown so it never overflows the left edge of the viewport
-  useEffect(() => {
-    if (!open || !panelRef.current) return
+  // Position dropdown with fixed positioning relative to button — immune to any
+  // containing-block, overflow, or backdrop-filter stacking context issues.
+  const positionPanel = useCallback(() => {
+    if (!panelRef.current || !btnRef.current) return
     const panel = panelRef.current
-    panel.style.right = ''
-    panel.style.left = ''
-    const rect = panel.getBoundingClientRect()
-    if (rect.left < 8) {
-      panel.style.right = 'auto'
-      panel.style.left = `${8 - rect.left}px`
+    const btn   = btnRef.current.getBoundingClientRect()
+    const margin = 8
+    const panelW = panel.offsetWidth || 320
+
+    // Place below button
+    panel.style.top = `${btn.bottom + 6}px`
+
+    // Align right edge to button's right edge, then clamp to viewport
+    let left = btn.right - panelW
+    if (left < margin) left = margin
+    if (left + panelW > window.innerWidth - margin) left = window.innerWidth - margin - panelW
+    panel.style.left  = `${left}px`
+    panel.style.right = 'auto'
+  }, [])
+
+  useEffect(() => {
+    if (!open) return
+    // Run after the panel is rendered so offsetWidth is available
+    requestAnimationFrame(positionPanel)
+    window.addEventListener('resize', positionPanel)
+    window.addEventListener('scroll', positionPanel, true)
+    return () => {
+      window.removeEventListener('resize', positionPanel)
+      window.removeEventListener('scroll', positionPanel, true)
     }
-  }, [open])
+  }, [open, positionPanel])
 
   // Build notification list from followed celebrities only
   const followedCelebs = celebrities.filter(c => followed.has(c.id))
@@ -105,6 +125,7 @@ export default function NotificationBell() {
     return (
       <div ref={ref} className="relative">
         <button
+          ref={btnRef}
           onClick={() => setOpen(v => !v)}
           className="relative flex items-center justify-center w-9 h-9 rounded-full border border-white/10 text-gray-600 hover:border-white/20 hover:text-gray-400 transition-all"
           aria-label="Notifications"
@@ -112,7 +133,7 @@ export default function NotificationBell() {
           <BellOff size={15} />
         </button>
         {open && (
-          <div ref={panelRef} className="absolute right-0 top-full mt-2 w-72 max-w-[calc(100vw-2rem)] bg-[#141414] border border-white/10 rounded-2xl shadow-2xl z-50 p-6 text-center">
+          <div ref={panelRef} className="fixed w-72 bg-[#141414] border border-white/10 rounded-2xl shadow-2xl z-[9999] p-6 text-center">
             <BellOff size={26} className="text-gray-700 mx-auto mb-3" />
             <p className="text-xs font-medium text-gray-400 mb-1">No followed profiles</p>
             <p className="text-[11px] text-gray-600 leading-relaxed">
@@ -128,6 +149,7 @@ export default function NotificationBell() {
   return (
     <div ref={ref} className="relative">
       <button
+        ref={btnRef}
         onClick={() => setOpen(v => !v)}
         className="relative flex items-center justify-center w-9 h-9 rounded-full border border-white/10 text-gray-400 hover:border-white/20 hover:text-gray-200 transition-all"
         aria-label="Notifications"
@@ -141,7 +163,7 @@ export default function NotificationBell() {
       </button>
 
       {open && (
-        <div ref={panelRef} className="absolute right-0 top-full mt-2 w-80 max-w-[calc(100vw-2rem)] bg-[#141414] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-50">
+        <div ref={panelRef} className="fixed w-80 bg-[#141414] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-[9999]">
 
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-white/8">
