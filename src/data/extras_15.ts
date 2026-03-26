@@ -7,7 +7,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Rising Star on the Runway', summary: 'Awa Traore has been making waves in the fashion industry with appearances at major European fashion weeks. Her distinctive look has attracted attention from leading luxury brands.', type: 'gossip', date: 'Mar 2024' }
-    ]
+    ],
+    relationships: { parents: ['Djibril Traore', 'Kadiatou Traore'] }
   },
   'ayesha-curry': {
     avatar: 'https://image.tmdb.org/t/p/w400/fhQNbSlEXqXEmyDpQVqzrbIWe0T.jpg',
@@ -17,7 +18,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Expanding Culinary Empire', summary: 'Ayesha Curry announced the expansion of her International Smoke restaurant brand to three new cities. The celebrity chef and entrepreneur continues to grow her food and media empire alongside husband Stephen Curry.', type: 'gossip', date: 'Feb 2025' }
-    ]
+    ],
+    relationships: { spouse: 'Stephen Curry', children: ['Riley Curry', 'Ryan Carson Curry', 'Canon W. Jack Curry'] }
   },
   'aziz-karimov': {
     avatar: 'https://ui-avatars.com/api/?name=Aziz+Karimov&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -26,7 +28,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'International Competition Debut', summary: 'Aziz Karimov represented his country at an international athletics competition, earning recognition for his performance. The young athlete is considered a rising prospect in Central Asian sports.', type: 'gossip', date: 'Aug 2023' }
-    ]
+    ],
+    relationships: { parents: ['Karim Karimov', 'Zulfiya Karimova'] }
   },
   'babatunde-fashola': {
     avatar: 'https://ui-avatars.com/api/?name=Babatunde+Fashola&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -35,7 +38,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Infrastructure Legacy Evaluated', summary: 'Former Lagos governor Babatunde Fashola\'s infrastructure projects are being assessed years after his tenure, with analysts noting the long-term impact on the city\'s development. His work as Minister of Works and Housing also continues to be scrutinized.', type: 'gossip', date: 'Nov 2023' }
-    ]
+    ],
+    relationships: { spouse: 'Abimbola Fashola', children: ['Fiyinfolu Fashola', 'Feyisola Fashola'] }
   },
   'bae-suzy': {
     avatar: 'https://image.tmdb.org/t/p/w400/xdmQeM0UuwVGyZucc3eLhynlb7b.jpg',
@@ -45,7 +49,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Drama Comeback Breaks Records', summary: 'Bae Suzy\'s return to television drama attracted record viewership ratings for the streaming platform. The multi-hyphenate star continues to balance acting, modeling, and music with remarkable success.', type: 'gossip', date: 'Jan 2025' }
-    ]
+    ],
+    relationships: { exPartner: ['Lee Min-ho', 'Lee Dong-wook', 'Jung Gyu-woon'] }
   },
   'banda-nkhosi': {
     avatar: 'https://ui-avatars.com/api/?name=Hastings+Banda&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -54,7 +59,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Political Legacy Reassessed', summary: 'Historians continue to debate the complex legacy of Hastings Banda, Malawi\'s first president, weighing his nation-building achievements against his authoritarian rule. Archival research has shed new light on decisions made during his 30-year presidency.', type: 'gossip', date: 'Jul 2023' }
-    ]
+    ],
+    relationships: { parents: ['Nkhosi Banda (†)', 'Akupingamnyama Banda (†)'] }
   },
   'benicio-del-toro': {
     avatar: 'https://image.tmdb.org/t/p/w400/aYomJWx0B2B8ra6Rmgt8lr0XCrw.jpg',
@@ -63,7 +69,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Acclaimed Performance Earns Award Buzz', summary: 'Benicio del Toro\'s latest film role has generated significant awards season discussion, with critics praising his intense and nuanced portrayal. The Oscar-winning actor is considered a frontrunner for several major nominations.', type: 'gossip', date: 'Dec 2024' }
-    ]
+    ],
+    relationships: { children: ['Delilah del Toro'] }
   },
   'benjamin-netanyahu': {
     avatar: 'https://image.tmdb.org/t/p/w400/bmpbaBWPwvPE0Wp1KyNaj8nfVzL.jpg',
@@ -72,7 +79,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Corruption Trial Continues', summary: 'Benjamin Netanyahu\'s long-running corruption trial has entered a new phase, with testimony from key witnesses drawing intense media coverage. The Israeli prime minister has maintained his innocence throughout the proceedings.', type: 'gossip', date: 'Feb 2025' }
-    ]
+    ],
+    relationships: { exSpouse: ['Miriam Weizmann', 'Fleur Cates'], spouse: 'Sara Netanyahu', children: ['Noa Netanyahu', 'Avner Netanyahu', 'Yair Netanyahu'] }
   },
   'bert-kreischer': {
     avatar: 'https://image.tmdb.org/t/p/w400/oXgdaIBFOIjQkbrq3JfJflZFTa6.jpg',
@@ -81,7 +89,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Netflix Special Breaks Viewership Records', summary: 'Bert Kreischer\'s latest Netflix stand-up special became one of the platform\'s most-watched comedy events within its first week. The Machine continues to expand his fanbase with his signature shirtless and energetic performance style.', type: 'gossip', date: 'Oct 2024' }
-    ]
+    ],
+    relationships: { spouse: 'LeeAnn Kreischer', children: ['Georgia Kreischer', 'Ila Kreischer'] }
   },
   'bethenny-frankel': {
     avatar: 'https://image.tmdb.org/t/p/w400/j7cBeGPjCAdkMmsYNn8MrWn984y.jpg',
@@ -91,7 +100,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Skinnygirl Brand Evolves Post-Sale', summary: 'Bethenny Frankel continues to develop new business ventures years after selling the Skinnygirl Margarita brand for a reported $100 million. The entrepreneur and reality TV star remains a vocal commentator on celebrity culture and business.', type: 'gossip', date: 'Mar 2025' }
-    ]
+    ],
+    relationships: { exSpouse: ['Jason Hoppy'], partner: 'Paul Bernon', children: ['Bryn Hoppy'] }
   },
   'bilal-erdogan': {
     avatar: 'https://ui-avatars.com/api/?name=Bilal+Erdogan&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -101,7 +111,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Shipping Business Expands Internationally', summary: 'Bilal Erdogan\'s maritime shipping company has secured new contracts across the Black Sea and Mediterranean regions, growing the family business substantially. The son of Turkish President Recep Tayyip Erdogan continues to expand his entrepreneurial portfolio.', type: 'gossip', date: 'Sep 2024' }
-    ]
+    ],
+    relationships: { parents: ['Recep Tayyip Erdoğan', 'Emine Erdoğan'], siblings: ['Ahmet Burak Erdoğan', 'Esra Erdoğan Albayrak', 'Sümeyye Erdoğan Bayraktar'] }
   },
   'bjorn-borg': {
     avatar: 'https://image.tmdb.org/t/p/w400/5zShJbVeErGR0ttYGjI4KDGYKz6.jpg',
@@ -110,7 +121,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Fashion Brand Celebrates Anniversary', summary: 'The Bjorn Borg fashion and sportswear brand celebrated a major milestone anniversary with a retrospective collection honoring the tennis icon\'s era-defining style. The brand continues to be popular across Scandinavia and Europe.', type: 'gossip', date: 'Apr 2024' }
-    ]
+    ],
+    relationships: { exSpouse: ['Mariana Simionescu', 'Patricia Östfeldt'], children: ['Robin Söderling', 'Leo Borg'] }
   },
   'bo-diddley': {
     avatar: 'https://image.tmdb.org/t/p/w400/wEvWkvFJU7DAl74d6mvZJDv6ceq.jpg',
@@ -119,7 +131,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Estate Honors Rock and Roll Pioneer', summary: 'The Bo Diddley estate announced new licensing deals to introduce his foundational rhythm and catalog to new generations of music fans. The pioneering rock and roll musician\'s influence on modern music continues to be celebrated posthumously.', type: 'gossip', date: 'Jun 2023' }
-    ]
+    ],
+    relationships: { exSpouse: ['Ethel Mae Smith', 'Kay Reynolds'], children: ['Ellas Bates Jr.', 'Evelyn Kelly'] }
   },
   'bob-dylan': {
     avatar: 'https://image.tmdb.org/t/p/w400/pMGkRge9jE0TRgENbUYt3N5qDPl.jpg',
@@ -129,7 +142,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Music Catalog Sale Valued at Historic Sum', summary: 'Bob Dylan\'s sale of his complete music catalog to Universal Music Group was valued at over $300 million, one of the largest such deals in music history. The Nobel Prize-winning songwriter continues to tour and record new material.', type: 'gossip', date: 'Jan 2025' }
-    ]
+    ],
+    relationships: { exSpouse: ['Sara Dylan', 'Carolyn Dennis'], children: ['Jesse Byron Dylan', 'Anna Dylan', 'Samuel Isaac Abram Dylan', 'Jakob Luke Dylan', 'Maria Dylan'] }
   },
   'bob-marley': {
     avatar: 'https://image.tmdb.org/t/p/w400/pLgUCU5hvTH6BeiPLq5QNebPUok.jpg',
@@ -138,7 +152,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Biopic Becomes Global Box Office Success', summary: 'The biographical film about Bob Marley\'s life became one of the highest-grossing music biopics of all time, introducing his story to a new global audience. The Marley family was closely involved in the production to ensure an authentic portrayal.', type: 'gossip', date: 'Mar 2024' }
-    ]
+    ],
+    relationships: { exSpouse: ['Cecelia Livingston'], spouse: 'Rita Marley', children: ['Cedella Marley', 'David Marley', 'Stephen Marley', 'Rohan Marley', 'Karen Marley', 'Stephanie Marley', 'Robert Marley', 'Julian Marley', 'Ky-Mani Marley', 'Damian Marley', 'Makeda Marley'] }
   },
   'bobby-brown': {
     avatar: 'https://image.tmdb.org/t/p/w400/k9KGzGDVhXKfOGpoN62MNuXL28q.jpg',
@@ -147,7 +162,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Memoir Revisits Career and Personal Struggles', summary: 'Bobby Brown\'s memoir provided candid accounts of his rise to fame as an R&B pioneer and his turbulent personal life. The singer spoke openly about grief, recovery, and his musical legacy in a series of promotional interviews.', type: 'gossip', date: 'Nov 2022' }
-    ]
+    ],
+    relationships: { exSpouse: ['Whitney Houston (†)'], spouse: 'Alicia Etheredge', children: ['Landon Brown', 'La\'Princia Brown', 'Bobby Brown Jr. (†)', 'Bobbi Kristina Brown (†)', 'Cassius Brown', 'Bodhi Brown', 'Hendrix Brown'] }
   },
   'bongani-zulu': {
     avatar: 'https://ui-avatars.com/api/?name=Samuel+Etoo&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -157,7 +173,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Cameroon FA Presidency Brings Controversy', summary: 'Samuel Eto\'o\'s tenure as president of the Cameroonian Football Federation has been marked by both progress and controversy, including disciplinary incidents that drew global media attention. He continues to advocate for African football development despite the challenges.', type: 'gossip', date: 'Dec 2024' }
-    ]
+    ],
+    relationships: { spouse: 'Georgette Eto\'o', children: ['Maelle Eto\'o', 'Ethan Eto\'o', 'Lynn Eto\'o', 'Muriel Eto\'o'] }
   },
   'boris-becker': {
     avatar: 'https://image.tmdb.org/t/p/w400/jaArwerpyY01sivLipYHJ5Et0rS.jpg',
@@ -166,7 +183,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Life After Prison Documentary Released', summary: 'Boris Becker participated in a documentary about his imprisonment and life after release following his 2022 conviction for hiding assets during bankruptcy proceedings. The six-time Grand Slam champion spoke candidly about the experience and his future plans.', type: 'gossip', date: 'May 2024' }
-    ]
+    ],
+    relationships: { exSpouse: ['Barbara Feltus', 'Barbara Becker'], partner: 'Lilian de Carvalho Monteiro', children: ['Noah Gabriel Becker', 'Elias Balthasar Becker', 'Anna Ermakova', 'Amadeus Benedict Edley Luis Becker'] }
   },
   'brian-lara': {
     avatar: 'https://ui-avatars.com/api/?name=Brian+Lara&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -175,7 +193,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Record Anniversary Celebrated Worldwide', summary: 'The cricket world celebrated the anniversary of Brian Lara\'s world record Test innings of 400 not out, widely regarded as one of the greatest individual achievements in the sport. Lara appeared at commemorative events in the Caribbean and England.', type: 'gossip', date: 'Apr 2024' }
-    ]
+    ],
+    relationships: { exSpouse: ['Leasel Rovedas'], children: ['Sydney Lara'] }
   },
   'brigitte-macron': {
     avatar: 'https://ui-avatars.com/api/?name=Brigitte+Macron&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -184,7 +203,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'First Lady\'s Education Initiatives Expand', summary: 'Brigitte Macron\'s advocacy work focused on education and inclusion has grown significantly during her husband\'s presidency, with new programs launched across France. Her background as a former literature teacher informs her passionate commitment to educational causes.', type: 'gossip', date: 'Oct 2024' }
-    ]
+    ],
+    relationships: { exSpouse: ['André-Louis Auzière'], spouse: 'Emmanuel Macron', children: ['Sébastien Auzière', 'Laurence Auzière', 'Tiphaine Auzière'] }
   },
   'bruce-lee': {
     avatar: 'https://image.tmdb.org/t/p/w400/vFtLJ37tjqPdq6oJr0OSpyo9Wcp.jpg',
@@ -193,7 +213,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Estate Launches Global Exhibition Tour', summary: 'The Bruce Lee estate launched an international exhibition tour featuring never-before-seen personal artifacts, writings, and film memorabilia. The show attracted record attendance at venues across Asia, North America, and Europe.', type: 'gossip', date: 'Nov 2024' }
-    ]
+    ],
+    relationships: { parents: ['Lee Hoi-chuen (†)', 'Grace Ho (†)'], spouse: 'Linda Lee Cadwell', children: ['Brandon Lee (†)', 'Shannon Lee'] }
   },
   'busta-rhymes': {
     avatar: 'https://image.tmdb.org/t/p/w400/f0MX6SdEsGYJYDy8vF6ghTZ25N6.jpg',
@@ -202,7 +223,8 @@ export const extras_15: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Surprise Album Drop Receives Critical Acclaim', summary: 'Busta Rhymes released a surprise album that received widespread praise for his still-ferocious rapid-fire delivery and contemporary production choices. The veteran rapper proved he remains a dominant force in hip-hop more than three decades into his career.', type: 'gossip', date: 'Aug 2024' }
-    ]
+    ],
+    relationships: { children: ['T\'Ziah Smith', 'T\'Khi Smith', 'Trillian Smith', 'Mariah Smith'] }
   },
   'calum-scott': {
     avatar: 'https://image.tmdb.org/t/p/w400/edo73jg6JAovDClAmuFL7zkIBt.jpg',

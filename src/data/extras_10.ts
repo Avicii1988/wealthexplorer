@@ -55,7 +55,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Akon City Ambitions', summary: 'Akon unveiled ambitious plans to build a $6 billion futuristic city in Senegal powered entirely by renewable energy. The project, named Akon City, has faced skepticism but continues to generate global media attention.', type: 'gossip', date: 'Jan 2020' }
-    ]
+    ],
+    relationships: { parents: ['Mor Thiam', 'Kine Thiam'], spouse: 'Rozina Negusei' }
   },
   'alicia-keys': {
     avatar: 'https://image.tmdb.org/t/p/w400/uMTAlXlQfgXHmyJrWqDv7LLnn0z.jpg',
@@ -64,7 +65,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'No-Makeup Movement Advocate', summary: 'Alicia Keys sparked a cultural conversation when she publicly committed to wearing no makeup, citing the industry\'s unrealistic beauty standards. Her stance inspired millions of fans and sparked widespread media discussion about authenticity.', type: 'gossip', date: 'May 2016' }
-    ]
+    ],
+    relationships: { parents: ['Craig Cook', 'Terria Joseph'], spouse: 'Swizz Beatz', children: ['Egypt Daoud Dean', 'Genesis Ali Dean'] }
   },
   'amber-heard': {
     avatar: 'https://image.tmdb.org/t/p/w400/vnDolRlZWiOLBg1N0hsUTz4OH4C.jpg',
@@ -73,7 +75,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Defamation Trial with Johnny Depp', summary: 'Amber Heard lost a highly publicized defamation lawsuit brought by ex-husband Johnny Depp in 2022, with a jury awarding Depp $10 million in compensatory damages. The trial was livestreamed globally and became one of the most-watched legal proceedings in history.', type: 'gossip', date: 'Jun 2022' }
-    ]
+    ],
+    relationships: { exSpouse: ['Johnny Depp'], children: ['Oonagh Paige Heard'] }
   },
   'andrew-garfield': {
     avatar: 'https://image.tmdb.org/t/p/w400/5ydZ6TluPtxlz5G8nlWMB7SGmow.jpg',
@@ -82,7 +85,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Spider-Man: No Way Home Surprise Return', summary: 'Andrew Garfield secretly reprised his role as Spider-Man in the 2021 blockbuster No Way Home alongside Tobey Maguire, to the delight of fans worldwide. He had repeatedly denied his involvement in the film before its release.', type: 'gossip', date: 'Dec 2021' }
-    ]
+    ],
+    relationships: { exPartner: ['Emma Stone', 'Susie Dent'] }
   },
   'antonio-conte': {
     avatar: 'https://image.tmdb.org/t/p/w400/8mNZFxdbQTcmHQn3T4djQXVRbCC.jpg',
@@ -92,7 +96,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Napoli Title Charge', summary: 'Antonio Conte took over Napoli in 2024 on a mission to restore the club\'s competitive edge after a tumultuous post-Scudetto season. His intense training methods and tactical discipline quickly revitalized the squad.', type: 'gossip', date: 'Jul 2024' }
-    ]
+    ],
+    relationships: { spouse: 'Elisabetta Muscarello', children: ['Vittoria Conte'] }
   },
   'bella-hadid': {
     avatar: 'https://image.tmdb.org/t/p/w400/2e8qNiLiLCH11JAgqNodZxMCKov.jpg',
@@ -101,7 +106,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Chronic Illness Revelation', summary: 'Bella Hadid publicly revealed her long battle with Lyme disease, sharing detailed health updates with her millions of followers. Her openness sparked widespread awareness of the chronic illness and its often debilitating effects.', type: 'gossip', date: 'Sep 2022' }
-    ]
+    ],
+    relationships: { parents: ['Mohamed Hadid', 'Yolanda Hadid'], siblings: ['Gigi Hadid', 'Anwar Hadid'], exPartner: ['The Weeknd', 'Marc Kalman'] }
   },
   'ben-stiller': {
     avatar: 'https://image.tmdb.org/t/p/w400/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg',
@@ -111,7 +117,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Severance Directorial Success', summary: 'Ben Stiller directed and executive produced the critically acclaimed Apple TV+ series Severance, earning widespread praise for its eerie atmosphere and sharp storytelling. The show became one of the most talked-about streaming series of 2022.', type: 'gossip', date: 'Feb 2022' }
-    ]
+    ],
+    relationships: { parents: ['Jerry Stiller', 'Anne Meara'], exSpouse: ['Christine Taylor'], children: ['Ella Olivia Stiller', 'Quinlin Dempsey Stiller'] }
   },
   'beyonce': {
     avatar: 'https://image.tmdb.org/t/p/w400/fzpzgonemwX4tSMAks9WtIb9pFD.jpg',
@@ -122,7 +129,8 @@ export const extras_10: Record<string, Ext> = {
     gossip: [
       { title: 'Renaissance World Tour Record', summary: 'Beyonce\'s Renaissance World Tour in 2023 became one of the highest-grossing concert tours in history, earning over $580 million globally. The tour\'s elaborate production design and fashion moments sparked massive cultural conversations.', type: 'gossip', date: 'Dec 2023' },
       { title: 'Country Music Crossover', summary: 'Beyonce surprised the world by releasing Cowboy Carter, a genre-blending country album that debuted at number one on the Billboard 200. The album challenged country music\'s cultural gatekeeping and won multiple Grammy Awards.', type: 'gossip', date: 'Mar 2024' }
-    ]
+    ],
+    relationships: { parents: ['Mathew Knowles', 'Tina Knowles'], spouse: 'Jay-Z', siblings: ['Solange Knowles'], children: ['Blue Ivy Carter', 'Rumi Carter', 'Sir Carter'] }
   },
   'boban-marjanovic': {
     avatar: 'https://image.tmdb.org/t/p/w400/1VSX0Fvq2hwpONVMA5kNolRpBLD.jpg',
@@ -131,7 +139,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Hollywood Cameo Career', summary: 'Boban Marjanovic appeared alongside Luka Doncic in the John Wick franchise, showcasing his surprising acting chops. His towering 7\'4" frame made him a natural scene-stealer in action films.', type: 'gossip', date: 'Mar 2023' }
-    ]
+    ],
+    relationships: { spouse: 'Milica Krstic Marjanovic', children: ['Vuk Marjanovic'] }
   },
   'brendan-fraser': {
     avatar: 'https://image.tmdb.org/t/p/w400/tFj5PaWWQbb8rHBBhu1EHklznph.jpg',
@@ -140,7 +149,8 @@ export const extras_10: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Oscar-Winning Comeback', summary: 'Brendan Fraser won the Academy Award for Best Actor in 2023 for his role in The Whale, completing one of Hollywood\'s most celebrated comeback stories. His emotional acceptance speech moved audiences worldwide.', type: 'gossip', date: 'Mar 2023' }
-    ]
+    ],
+    relationships: { exSpouse: ['Afton Smith'], children: ['Griffin Arthur Fraser', 'Holden Fletcher Fraser', 'Leland Francis Fraser'] }
   },
   'cam-newton': {
     avatar: 'https://image.tmdb.org/t/p/w400/8PwEPyPRwzsjfxHU0DH7voCSjks.jpg',
