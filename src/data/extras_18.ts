@@ -7,7 +7,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Logan Breakout Star', summary: 'Dafne Keen gained worldwide recognition for her role as X-23 in Logan opposite Hugh Jackman. Her powerful performance earned her a BAFTA nomination at just 12 years old.', type: 'gossip', date: 'Mar 2017' }
-    ]
+    ],
+    relationships: { parents: ['Will Keen', 'María Fernández Ache'] }
   },
   'dani-alves': {
     avatar: 'https://image.tmdb.org/t/p/w400/7DyQkyHqROjlaZXeOpokklO1xGH.jpg',
@@ -17,7 +18,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Most Decorated Footballer Ever', summary: 'Dani Alves holds the record for the most trophies won by any footballer in history, with over 40 titles across his career. His trophy haul includes multiple Champions League and league titles across Europe.', type: 'gossip', date: 'Jul 2022' }
-    ]
+    ],
+    relationships: { exSpouse: ['Dinorah Santana', 'Joana Sanz'], children: ['Vitor Hugo Alves', 'Daniel Alves Filho'] }
   },
   'danielle-brooks': {
     avatar: 'https://image.tmdb.org/t/p/w400/pPSG2Vmq24cwAL5XGK1NLs3KEoZ.jpg',
@@ -26,7 +28,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Oscar Nomination for The Color Purple', summary: 'Danielle Brooks received an Academy Award nomination for Best Supporting Actress for her role in The Color Purple musical film adaptation. The nomination marked a major milestone in her career beyond her beloved OITNB role.', type: 'gossip', date: 'Jan 2024' }
-    ]
+    ],
+    relationships: { spouse: 'Dennis Gelin', children: ['Freeya Brooks Gelin'] }
   },
   'daryl-hall': {
     avatar: 'https://image.tmdb.org/t/p/w400/shjDQfXiybrhqz2zUfOdjfELm0D.jpg',
@@ -36,7 +39,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Hall & Oates Legal Dispute', summary: 'Daryl Hall filed a lawsuit against his longtime musical partner John Oates in 2022, alleging breach of contract over a business deal. The legal battle marked a shocking end to one of music\'s most successful partnerships.', type: 'gossip', date: 'Nov 2022' }
-    ]
+    ],
+    relationships: { exSpouse: ['Bryna Lublin', 'Amanda Aspinall'], children: ['Darren Hall'] }
   },
   'david-chang': {
     avatar: 'https://image.tmdb.org/t/p/w400/xWcsJ5OQ6wS5I1c0pO1H0Hru2oS.jpg',
@@ -46,7 +50,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Momofuku Empire Expansion', summary: 'David Chang\'s Momofuku restaurant group expanded into a major culinary brand with locations across North America and a successful line of consumer food products. His pivot to packaged goods during the pandemic proved remarkably successful.', type: 'gossip', date: 'Sep 2021' }
-    ]
+    ],
+    relationships: { spouse: 'Grace Seo Chang', children: ['Hugo Chang', 'Remy Chang'] }
   },
   'david-fincher': {
     avatar: 'https://image.tmdb.org/t/p/w400/tpEczFclQZeKAiCeKZZ0adRvtfz.jpg',
@@ -55,7 +60,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Netflix Exclusive Deal', summary: 'David Fincher signed a lucrative exclusive deal with Netflix following the success of Mindhunter and Mank, cementing his status as a premier prestige filmmaker. The deal gave him significant creative control over his projects.', type: 'gossip', date: 'Mar 2021' }
-    ]
+    ],
+    relationships: { exPartner: ['Donya Fiorentino'], children: ['Pheodora Fincher'] }
   },
   'davy-klaassen': {
     avatar: 'https://ui-avatars.com/api/?name=Davy+Klaassen&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -64,7 +70,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Ajax Captain and Return', summary: 'Davy Klaassen served as Ajax captain and became a fan favorite before his move to Everton and subsequent return to Amsterdam. His loyalty to Ajax and leadership qualities made him one of the most respected players in Dutch football.', type: 'gossip', date: 'Aug 2020' }
-    ]
+    ],
+    relationships: { spouse: 'Roos Broersen', children: ['Sem Klaassen', 'Cas Klaassen'] }
   },
   'dawn-french': {
     avatar: 'https://image.tmdb.org/t/p/w400/eLFCJSTEeh7CDRw50RzowKz4h7V.jpg',
@@ -73,7 +80,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Divorce from Lenny Henry', summary: 'Dawn French and comedian Lenny Henry announced their divorce in 2010 after 25 years of marriage, shocking British fans who had long seen them as a beloved celebrity couple. Both remained gracious about the split in public statements.', type: 'gossip', date: 'Apr 2010' }
-    ]
+    ],
+    relationships: { exSpouse: ['Lenny Henry'], spouse: 'Mark Bignell', children: ['Billie Henry'] }
   },
   'deb-haaland': {
     avatar: 'https://image.tmdb.org/t/p/w400/jzvZgGVfyohBv9SxEjgs9h8ViqR.jpg',
@@ -82,7 +90,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Historic Cabinet Appointment', summary: 'Deb Haaland became the first Native American to serve as a U.S. Cabinet secretary when she was confirmed as Secretary of the Interior in 2021. Her appointment was celebrated as a historic milestone for Indigenous representation in American government.', type: 'gossip', date: 'Mar 2021' }
-    ]
+    ],
+    relationships: { children: ['Somah Haaland'] }
   },
   'deborah-ann-woll': {
     avatar: 'https://image.tmdb.org/t/p/w400/btTnyvRLXOH0pz2SLBwyKbmnFhX.jpg',
@@ -91,7 +100,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Dungeons & Dragons Influencer', summary: 'Deborah Ann Woll became a prominent figure in the tabletop gaming community through her game mastering and advocacy for D&D as a therapeutic tool. Her campaign for accessibility and inclusion in gaming has inspired thousands of fans.', type: 'gossip', date: 'Jun 2023' }
-    ]
+    ],
+    relationships: { partner: 'E.J. Scott' }
   },
   'degrassi-aubrey': {
     avatar: 'https://ui-avatars.com/api/?name=Aubrey+Graham&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -101,7 +111,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Degrassi to Global Superstar', summary: 'Drake began his career as actor Aubrey Graham on the Canadian teen drama Degrassi: The Next Generation before becoming one of the best-selling music artists of all time. His transition from child actor to rap mogul remains one of entertainment\'s most remarkable success stories.', type: 'gossip', date: 'Jan 2010' }
-    ]
+    ],
+    relationships: { parents: ['Dennis Graham', 'Sandi Graham'], children: ['Adonis Graham'] }
   },
   'deontay-wilder': {
     avatar: 'https://image.tmdb.org/t/p/w400/aDrUJ2ZPyJQOhlI6PI6RA3DDqfF.jpg',
@@ -111,7 +122,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Fury Trilogy Epic Rivalry', summary: 'Deontay Wilder and Tyson Fury engaged in one of boxing\'s greatest modern trilogies, with Wilder suffering back-to-back stoppages after their dramatic first draw. The rivalry captivated the heavyweight division and brought boxing back to mainstream attention.', type: 'gossip', date: 'Oct 2021' }
-    ]
+    ],
+    relationships: { spouse: 'Telli Swift', children: ['Naieya Wilder', 'Damion Wilder', 'Deontay Wilder Jr.', 'Ava Wilder', 'Dereon Wilder', 'Jaylen Wilder', 'Hendrix Wilder'] }
   },
   'desiigner': {
     avatar: 'https://ui-avatars.com/api/?name=Desiigner+Sidney&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -120,7 +132,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Panda Reaches Number One', summary: 'Desiigner\'s debut single Panda reached number one on the Billboard Hot 100 in 2016, making him a global sensation overnight. Despite the massive hit, he struggled to replicate the success and was released from G.O.O.D. Music in 2019.', type: 'gossip', date: 'Feb 2016' }
-    ]
+    ],
+    relationships: { parents: ['Sidney Selby Jr.', 'Renee Selby'] }
   },
   'dmitry-peskov': {
     avatar: 'https://image.tmdb.org/t/p/w400/vHsbhMvC6oEymUAIDYQepthuWSY.jpg',
@@ -129,7 +142,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Luxury Watch Scandal', summary: 'Dmitry Peskov drew significant criticism when he was spotted wearing a Richard Mille watch estimated at over $600,000 at his wedding, contradicting Russia\'s official narrative about Western sanctions having little impact. The incident became a symbol of elite hypocrisy in Russia.', type: 'gossip', date: 'Aug 2015' }
-    ]
+    ],
+    relationships: { exSpouse: ['Ekaterina Solomonova'], spouse: 'Tatyana Navka', children: ['Nikolai Peskov', 'Liza Peskov'] }
   },
   'dolores-huerta': {
     avatar: 'https://ui-avatars.com/api/?name=Dolores+Huerta&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -138,7 +152,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Presidential Medal of Freedom', summary: 'Dolores Huerta received the Presidential Medal of Freedom from President Obama in 2012, recognizing her decades of work co-founding the United Farm Workers union with Cesar Chavez. At over 90 years old, she continues to actively campaign for workers\' rights.', type: 'gossip', date: 'May 2012' }
-    ]
+    ],
+    relationships: { exSpouse: ['Ralph Head', 'Ventura Huerta'], partner: 'Richard Chávez', children: ['Celeste Huerta', 'Lori Huerta', 'Fidel Huerta', 'Emilio Huerta', 'Alicia Huerta', 'Camila Chávez', 'Ricky Chávez', 'Vivian Chávez', 'Maria Elena Chávez', 'Juanita Chávez', 'Christy Chávez'] }
   },
   'dominic-calvert-lewin': {
     avatar: 'https://image.tmdb.org/t/p/w400/hQTZdrppADkTIBXuY2yLSslDM5p.jpg',
@@ -147,7 +162,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Fashion Forward Footballer', summary: 'Dominic Calvert-Lewin became one of English football\'s most fashion-forward stars, regularly appearing in avant-garde outfits and collaborating with luxury brands. His bold style choices sparked widespread debate among fans and fashion critics alike.', type: 'gossip', date: 'Oct 2021' }
-    ]
+    ],
+    relationships: { parents: ['Lee Calvert-Lewin', 'Donna Calvert-Lewin'] }
   },
   'domino-kirke': {
     avatar: 'https://ui-avatars.com/api/?name=Domino+Kirke&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -156,7 +172,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Marriage to Penn Badgley', summary: 'Domino Kirke married actor Penn Badgley of You fame in 2017, combining two creative New York families into one artistic household. The couple welcomed a son together while both continued to pursue their respective careers.', type: 'gossip', date: 'Feb 2017' }
-    ]
+    ],
+    relationships: { spouse: 'Penn Badgley', siblings: ['Jemima Kirke', 'Lola Kirke'], children: ['James Badgley'] }
   },
   'don-cheadle': {
     avatar: 'https://image.tmdb.org/t/p/w400/umhTmcVF26qZKEpSfG1ZNpcbs9D.jpg',
@@ -165,7 +182,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'War Machine MCU Longevity', summary: 'Don Cheadle has portrayed War Machine in the Marvel Cinematic Universe across numerous films and the Armor Wars series, making him one of the longest-serving actors in the franchise. His commitment to the role has spanned over 15 years.', type: 'gossip', date: 'May 2010' }
-    ]
+    ],
+    relationships: { partner: 'Bridgid Coulter', children: ['Ayana Tai Cheadle', 'Imara Cheadle'] }
   },
   'donatella-versace': {
     avatar: 'https://image.tmdb.org/t/p/w400/mVnfGSm5oGqnkHcrUsst7xCFAHX.jpg',
@@ -175,7 +193,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Versace Sale to Capri Holdings', summary: 'Donatella Versace oversaw the sale of the Versace brand to Michael Kors\' parent company Capri Holdings for $2.12 billion in 2018, while remaining as creative director. The deal secured the brand\'s financial future while preserving its iconic identity under her creative leadership.', type: 'gossip', date: 'Dec 2018' }
-    ]
+    ],
+    relationships: { parents: ['Antonio Versace (†)', 'Francesca De Olio (†)'], siblings: ['Gianni Versace (†)', 'Santo Versace'], exSpouse: ['Paul Beck'], children: ['Allegra Versace Beck', 'Daniel Beck'] }
   },
   'dougie-b': {
     avatar: 'https://ui-avatars.com/api/?name=Dougie+B+Extra&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -194,7 +213,8 @@ export const extras_18: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Dr. Phil Show Ends After 21 Seasons', summary: 'Dr. Phil McGraw ended his long-running daytime talk show in 2023 after 21 seasons, announcing a new venture with his Merit Street Media platform. The show had made him one of television\'s highest-paid personalities for over two decades.', type: 'gossip', date: 'May 2023' }
-    ]
+    ],
+    relationships: { exSpouse: ['Debbie Higgins McCall'], spouse: 'Robin McGraw', children: ['Jay McGraw', 'Jordan McGraw'] }
   },
   'dua-saleh': {
     avatar: 'https://image.tmdb.org/t/p/w400/jf4YMifXVPSIEGdttacM1X2bFxO.jpg',

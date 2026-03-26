@@ -7,7 +7,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Record-Breaking Comeback Tour', summary: 'Garth Brooks launched one of the highest-grossing country music tours of the decade, selling out stadiums worldwide. The tour solidified his status as one of the best-selling music artists of all time.', type: 'gossip', date: 'Mar 2022' }
-    ]
+    ],
+    relationships: { exSpouse: ['Sandy Mahl'], spouse: 'Trisha Yearwood', children: ['Taylor Mayne Pearl Brooks', 'August Anna Brooks', 'Allie Colleen Brooks'] }
   },
   'george-clooney': {
     avatar: 'https://image.tmdb.org/t/p/w400/4s3wI0bqOP7K3hhcmKqV6m3GYiQ.jpg',
@@ -17,7 +18,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Casamigos Tequila Windfall', summary: 'George Clooney co-founded Casamigos Tequila and sold it to Diageo for up to $1 billion in 2017. The deal transformed him from a wealthy actor into a billionaire-adjacent entrepreneur.', type: 'gossip', date: 'Jun 2017' }
-    ]
+    ],
+    relationships: { exSpouse: ['Talia Balsam'], spouse: 'Amal Clooney', children: ['Ella Clooney', 'Alexander Clooney'] }
   },
   'george-soros': {
     avatar: 'https://image.tmdb.org/t/p/w400/wNWuUFEPRCb6tW29sYgD6Yjkp8p.jpg',
@@ -27,7 +29,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'The Man Who Broke the Bank of England', summary: 'George Soros famously shorted the British pound in 1992, earning over $1 billion in a single day during the Black Wednesday currency crisis. The trade cemented his legend as the world\'s most famous currency speculator.', type: 'gossip', date: 'Sep 1992' }
-    ]
+    ],
+    relationships: { exSpouse: ['Annaliese Witschak', 'Susan Weber'], spouse: 'Tamiko Bolton', children: ['Robert Soros', 'Andrea Soros', 'Jonathan Soros', 'Alexander Soros', 'Gregory Soros'] }
   },
   'gerard-pique': {
     avatar: 'https://image.tmdb.org/t/p/w400/eiIGJmk5skw1srWRY7xvmpQm31Q.jpg',
@@ -36,7 +39,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Davis Cup Takeover', summary: 'Gerard Pique founded Kosmos Tennis and acquired the rights to reinvent the Davis Cup, transforming the traditional tennis competition into a modern team event held in a single city. The deal was reportedly worth $3 billion over 25 years.', type: 'gossip', date: 'Jan 2019' }
-    ]
+    ],
+    relationships: { exPartner: ['Shakira'], children: ['Milan Piqué Mebarak', 'Sasha Piqué Mebarak'] }
   },
   'gisele-bundchen': {
     avatar: 'https://image.tmdb.org/t/p/w400/rXPQOeTQRtBoSVfrqEfVE6hS2xF.jpg',
@@ -46,7 +50,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'World\'s Highest-Paid Model for 14 Years', summary: 'Gisele Bundchen held the title of the world\'s highest-paid model for 14 consecutive years, earning hundreds of millions from endorsements with brands like Chanel, Louis Vuitton, and Victoria\'s Secret. Her business acumen helped her amass a fortune independent of her athletic ex-husband.', type: 'gossip', date: 'Nov 2016' }
-    ]
+    ],
+    relationships: { exSpouse: ['Tom Brady'], partner: 'Joaquim Valente', children: ['Benjamin Rein Brady', 'Vivian Lake Brady'] }
   },
   'gordon-ramsey': {
     avatar: 'https://ui-avatars.com/api/?name=Gordon+Ramsay&background=1a1a1a&color=c9a84c&size=200&bold=true',
@@ -56,7 +61,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Global Restaurant Empire', summary: 'Gordon Ramsay\'s restaurant group spans over 35 establishments across multiple countries, earning him multiple Michelin stars. His fiery TV persona turned his culinary brand into a global media empire worth hundreds of millions.', type: 'gossip', date: 'Apr 2021' }
-    ]
+    ],
+    relationships: { spouse: 'Tana Ramsay', children: ['Megan Jane Ramsay', 'Holly Anna Ramsay', 'Jack Scott Ramsay', 'Tilly Ramsay', 'Oscar James Ramsay', 'Jesse James Ramsay'] }
   },
   'grace-kelly': {
     avatar: 'https://image.tmdb.org/t/p/w400/gnz3NGJrUERwklqfuPWXxcOPs0Q.jpg',
@@ -65,7 +71,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Hollywood Star Becomes a Princess', summary: 'Grace Kelly retired from acting at the peak of her career to marry Prince Rainier III of Monaco in 1956, becoming Her Serene Highness Princess Grace. The fairy-tale wedding was watched by 30 million television viewers around the world.', type: 'gossip', date: 'Apr 1956' }
-    ]
+    ],
+    relationships: { parents: ['John B. Kelly Sr. (†)', 'Margaret Majer (†)'], siblings: ['Peggy Kelly (†)', 'John B. Kelly Jr. (†)', 'Lizanne Kelly'], spouse: 'Prince Rainier III of Monaco (†)', children: ['Caroline of Monaco', 'Albert II of Monaco', 'Stéphanie of Monaco'] }
   },
   'gwen-stefani': {
     avatar: 'https://image.tmdb.org/t/p/w400/pZDg9B0SFPCzfPCgYDKfROFzsBP.jpg',
@@ -74,7 +81,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'L.A.M.B. Fashion Success', summary: 'Gwen Stefani launched her fashion line L.A.M.B. in 2004, which quickly became a multimillion-dollar brand sold in major retailers worldwide. The line expanded to include accessories and fragrances, significantly boosting her net worth beyond music.', type: 'gossip', date: 'Sep 2004' }
-    ]
+    ],
+    relationships: { exSpouse: ['Gavin Rossdale'], spouse: 'Blake Shelton', children: ['Kingston James McGregor Rossdale', 'Zuma Nesta Rock Rossdale', 'Apollo Bowie Flynn Rossdale'] }
   },
   'hank-aaron': {
     avatar: 'https://image.tmdb.org/t/p/w400/sIRiQXUYNbetopkrC4UP7l3gMwm.jpg',
