@@ -142,7 +142,7 @@ export const extras_17: Record<string, Ext> = {
     gossip: [
       { title: 'Carrie Fisher Memorial Tribute', summary: 'Billie Lourd honored her mother Carrie Fisher by reprising the role of Lieutenant Connix in Star Wars: The Rise of Skywalker. Her performance was widely praised as a touching tribute to her late mother\'s legacy.', type: 'gossip', date: 'Dec 2019' }
     ],
-    relationships: { parents: ['Carrie Fisher (†)', 'Bryan Lourd'], grandchildren: [], spouse: 'Austen Rydell', children: ['Kingston Fisher Lourd Rydell'] }
+    relationships: { parents: ['Carrie Fisher (†)', 'Bryan Lourd'], spouse: 'Austen Rydell', children: ['Kingston Fisher Lourd Rydell'] }
   },
   'bogdan-popescu': {
     avatar: 'https://ui-avatars.com/api/?name=Novak+Djokovic+Father&background=1a1a1a&color=c9a84c&size=200&bold=true',

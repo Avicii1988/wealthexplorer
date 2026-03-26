@@ -20,55 +20,6 @@
   #root { width: 100%; min-height: 100vh; }
 }
 
-/* ── LIGHT MODE OVERRIDES ──────────────────────────────────────────────────── */
-
-/* Page / section backgrounds */
-html.light .bg-\[#0a0a0a\] { background-color: #f2ede4 !important; }
-html.light .bg-\[#0a0a0a\]\/95 { background-color: rgba(242,237,228,0.97) !important; }
-html.light .bg-\[#111111\] { background-color: #e8e1d5 !important; }
-html.light .bg-\[#111\] { background-color: #e8e1d5 !important; }
-html.light .bg-\[#141414\] { background-color: #e2dace !important; }
-html.light .bg-\[#141414\]\/80 { background-color: rgba(226,218,206,0.80) !important; }
-html.light .bg-\[#161616\] { background-color: #dbd3c5 !important; }
-html.light .bg-\[#1a1a1a\] { background-color: #d5cbbe !important; }
-html.light .bg-\[#0d0d0d\] { background-color: #eae4da !important; }
-html.light .bg-\[#0f0f0f\] { background-color: #ebe5db !important; }
-html.light .bg-\[#101010\] { background-color: #ece6dc !important; }
-html.light .bg-\[#1c1c1c\] { background-color: #d2c9ba !important; }
-html.light .bg-\[#222222\] { background-color: #cbc1b0 !important; }
-html.light .bg-\[#2a2a2a\] { background-color: #c2b8a5 !important; }
-
-/* Text */
-html.light .text-white { color: #1a1a1a !important; }
-html.light .text-gray-100 { color: #2a2a2a !important; }
-html.light .text-gray-200 { color: #333 !important; }
-html.light .text-gray-300 { color: #444 !important; }
-html.light .text-gray-400 { color: #5c5750 !important; }
-html.light .text-gray-500 { color: #7a7168 !important; }
-html.light .text-gray-600 { color: #9a9188 !important; }
-
-/* Borders */
-html.light .border-white\/10 { border-color: rgba(0,0,0,0.12) !important; }
-html.light .border-white\/12 { border-color: rgba(0,0,0,0.14) !important; }
-html.light .border-white\/15 { border-color: rgba(0,0,0,0.16) !important; }
-html.light .border-white\/20 { border-color: rgba(0,0,0,0.18) !important; }
-html.light .border-white\/30 { border-color: rgba(0,0,0,0.22) !important; }
-html.light .border-b { border-color: rgba(0,0,0,0.1) !important; }
-
-/* Dividers */
-html.light .divide-white\/10 > * + * { border-color: rgba(0,0,0,0.10) !important; }
-
-/* Hover backgrounds */
-html.light .hover\:bg-white\/5:hover { background-color: rgba(0,0,0,0.05) !important; }
-html.light .hover\:bg-white\/10:hover { background-color: rgba(0,0,0,0.08) !important; }
-
-/* Placeholder text */
-html.light .placeholder-gray-600::placeholder { color: #a09890 !important; }
-html.light .placeholder-gray-700::placeholder { color: #b0a898 !important; }
-
-/* ThemeToggle button in light mode */
-html.light .border-white\/10 { border-color: rgba(0,0,0,0.15) !important; }
-html.light .text-gray-400 { color: #5c5750 !important; }
 
 @layer utilities {
   .font-serif { font-family: 'Playfair Display', Georgia, serif; }
