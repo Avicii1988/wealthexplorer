@@ -17,6 +17,7 @@ import {
   DECEASED_IDS,
 } from '../data/celebrities'
 import NotificationBell from '../components/NotificationBell'
+import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
 
 type FeedItem = Asset & { ownerName: string; ownerId: string }
@@ -408,6 +409,7 @@ export default function HomePage() {
           <Link to="/" onClick={() => window.scrollTo(0, 0)}><WealthLogo /></Link>
           <div className="flex items-center gap-2">
             <NotificationBell />
+            <ThemeToggle />
             <LanguageSelector />
           </div>
         </div>
