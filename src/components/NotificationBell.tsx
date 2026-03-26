@@ -26,7 +26,8 @@ export default function NotificationBell() {
   const [open, setOpen]         = useState(false)
   const [followed, setFollowed] = useState<Set<string>>(getFollowed)
   const [seen, setSeen]         = useState<Set<string>>(getSeen)
-  const ref = useRef<HTMLDivElement>(null)
+  const ref     = useRef<HTMLDivElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
 
   // Listen for follow-state changes dispatched by ProfilePage
   useEffect(() => {
@@ -43,6 +44,19 @@ export default function NotificationBell() {
     document.addEventListener('mousedown', h)
     return () => document.removeEventListener('mousedown', h)
   }, [])
+
+  // Clamp dropdown so it never overflows the left edge of the viewport
+  useEffect(() => {
+    if (!open || !panelRef.current) return
+    const panel = panelRef.current
+    panel.style.right = ''
+    panel.style.left = ''
+    const rect = panel.getBoundingClientRect()
+    if (rect.left < 8) {
+      panel.style.right = 'auto'
+      panel.style.left = `${8 - rect.left}px`
+    }
+  }, [open])
 
   // Build notification list from followed celebrities only
   const followedCelebs = celebrities.filter(c => followed.has(c.id))
@@ -98,7 +112,7 @@ export default function NotificationBell() {
           <BellOff size={15} />
         </button>
         {open && (
-          <div className="absolute right-0 top-full mt-2 w-72 max-w-[calc(100vw-1rem)] bg-[#141414] border border-white/10 rounded-2xl shadow-2xl z-50 p-6 text-center">
+          <div ref={panelRef} className="absolute right-0 top-full mt-2 w-72 max-w-[calc(100vw-2rem)] bg-[#141414] border border-white/10 rounded-2xl shadow-2xl z-50 p-6 text-center">
             <BellOff size={26} className="text-gray-700 mx-auto mb-3" />
             <p className="text-xs font-medium text-gray-400 mb-1">No followed profiles</p>
             <p className="text-[11px] text-gray-600 leading-relaxed">
@@ -127,7 +141,7 @@ export default function NotificationBell() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-80 max-w-[calc(100vw-1rem)] bg-[#141414] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-50">
+        <div ref={panelRef} className="absolute right-0 top-full mt-2 w-80 max-w-[calc(100vw-2rem)] bg-[#141414] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-50">
 
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-white/8">
