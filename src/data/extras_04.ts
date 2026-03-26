@@ -91,7 +91,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Breaking Babe Ruth\'s Record', summary: 'Hank Aaron broke Babe Ruth\'s all-time home run record on April 8, 1974, hitting his 715th career home run before a crowd of 53,775 at Atlanta\'s Fulton County Stadium. The achievement came despite receiving thousands of death threats from racists opposed to a Black man breaking the record.', type: 'gossip', date: 'Apr 1974' }
-    ]
+    ],
+    relationships: { parents: ['Herbert Aaron (†)', 'Estella Aaron (†)'], siblings: ['Tommie Aaron (†)'], exSpouse: ['Barbara Lucas'], spouse: 'Billye Williams', children: ['Gaile Aaron', 'Hank Aaron Jr.', 'Lary Aaron', 'Dorinda Aaron', 'Ceci Aaron'] }
   },
   'harry-styles': {
     avatar: 'https://image.tmdb.org/t/p/w400/kCHF4vPX9PxjN0CaUt2G2k3fy3J.jpg',
@@ -101,7 +102,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Love On Tour Breaks Records', summary: 'Harry Styles\' Love On Tour became one of the highest-grossing concert tours in history, earning over $600 million across its run. The tour showcased his transition from boy band member to a solo stadium-filling global superstar.', type: 'gossip', date: 'Oct 2022' }
-    ]
+    ],
+    relationships: { parents: ['Desmond Styles', 'Anne Twist'], siblings: ['Gemma Styles'], exPartner: ['Taylor Swift', 'Kendall Jenner', 'Camille Rowe', 'Olivia Wilde'] }
   },
   'heidi-klum': {
     avatar: 'https://image.tmdb.org/t/p/w400/dITwK1mYprcZ9VX44t0m0at2HIH.jpg',
@@ -110,7 +112,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Project Runway Media Empire', summary: 'Heidi Klum served as host and executive producer of Project Runway for 16 seasons, earning an estimated $10 million per season. Her savvy television career extended her supermodel income into a long-running entertainment empire.', type: 'gossip', date: 'Jan 2020' }
-    ]
+    ],
+    relationships: { exSpouse: ['Ric Pipino', 'Seal'], spouse: 'Tom Kaulitz', children: ['Helene Klum', 'Henry Günther Ademola Dashtu Samuel', 'Johan Riley Fyodor Taiwo Samuel', 'Lou Sulola Samuel'] }
   },
   'hillary-clinton': {
     avatar: 'https://image.tmdb.org/t/p/w400/67D6LJgwfbF0baKknUx6OPIoVlu.jpg',
@@ -119,7 +122,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Record-Breaking Speaking Fees', summary: 'Following her tenure as Secretary of State, Hillary Clinton commanded speaking fees of up to $225,000 per speech, earning millions on the corporate lecture circuit. The fees became a major talking point during her 2016 presidential campaign.', type: 'gossip', date: 'May 2014' }
-    ]
+    ],
+    relationships: { spouse: 'Bill Clinton', children: ['Chelsea Clinton'] }
   },
   'hugh-jackman': {
     avatar: 'https://image.tmdb.org/t/p/w400/oX6CpXmnXCHLyqsa4NEed1DZAKx.jpg',
@@ -128,7 +132,8 @@ export const extras_04: Record<string, Ext> = {
     ],
     gossip: [
       { title: 'Laughing Man Coffee Philanthropy', summary: 'Hugh Jackman founded Laughing Man Coffee in 2011 after meeting Ethiopian farmer Dukale during a World Vision trip. The company donates 100% of its profits to support farmers and communities in developing countries around the world.', type: 'gossip', date: 'Apr 2011' }
-    ]
+    ],
+    relationships: { exSpouse: ['Deborra-Lee Furness'], children: ['Oscar Maximilian Jackman', 'Ava Eliot Jackman'] }
   },
   'j-lo': {
     avatar: 'https://ui-avatars.com/api/?name=Jennifer+Lopez&background=1a1a1a&color=c9a84c&size=200&bold=true',
