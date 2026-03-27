@@ -193,7 +193,7 @@ function WealthLogo() {
         {/* Bottom hairline rule */}
         <line x1="1" y1="28.5" x2="39" y2="28.5" stroke="url(#logoGold)" strokeWidth="0.45" opacity="0.55"/>
       </svg>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
         <span style={{
           fontFamily: "'Playfair Display', Georgia, serif",
           background: 'linear-gradient(135deg, #f5e070 0%, #c9a84c 48%, #8a6218 100%)',
@@ -206,10 +206,24 @@ function WealthLogo() {
           fontWeight: 700,
           lineHeight: 1,
         }}>
-          Wealth Explorer
+          Wealth
+        </span>
+        <span style={{
+          fontFamily: "'Playfair Display', Georgia, serif",
+          background: 'linear-gradient(135deg, #f5e070 0%, #c9a84c 48%, #8a6218 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontSize: '10px',
+          letterSpacing: '0.42em',
+          textTransform: 'uppercase' as const,
+          fontWeight: 400,
+          lineHeight: 1,
+        }}>
+          Explorer
         </span>
         {/* Decorative gold rule instead of text subtitle */}
-        <div style={{ height: '1px', background: 'linear-gradient(90deg, rgba(201,168,76,0.7), rgba(201,168,76,0.25), transparent)' }} />
+        <div style={{ height: '1px', marginTop: '3px', background: 'linear-gradient(90deg, rgba(201,168,76,0.7), rgba(201,168,76,0.25), transparent)' }} />
       </div>
     </div>
   )
