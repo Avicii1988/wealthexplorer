@@ -183,43 +183,51 @@ export const extras_07: Record<string, Ext> = {
   'halle-berry': {
     avatar: av('Halle Berry'),
     assets: [{ id: 'halle-berry-1', type: 'real_estate', name: 'Cleveland Avenue Home, LA', description: "Halle Berry's Los Angeles home purchased following her divorce from Olivier Martinez.", estimatedValue: 5, image: RE, likes: 1100 }],
-    gossip: [{ title: 'First Black Woman to Win Best Actress Oscar', summary: "Halle Berry won the Academy Award for Best Actress for Monster's Ball in 2002, becoming the first Black woman to win the award. Her tearful acceptance speech referencing all women of colour who came before her remains one of Oscar history's most memorable moments.", type: 'gossip', date: 'Mar 2002' }]
+    gossip: [{ title: 'First Black Woman to Win Best Actress Oscar', summary: "Halle Berry won the Academy Award for Best Actress for Monster's Ball in 2002, becoming the first Black woman to win the award. Her tearful acceptance speech referencing all women of colour who came before her remains one of Oscar history's most memorable moments.", type: 'gossip', date: 'Mar 2002' }],
+    relationships: { exSpouse: ['David Justice', 'Eric Benét', 'Olivier Martinez'], exPartner: ['Gabriel Aubry'], children: ['Nahla Ariela Aubry', 'Maceo Robert Martinez'] }
   },
   'harrison-ford': {
     avatar: av('Harrison Ford'),
     assets: [
       { id: 'harrison-ford-1', type: 'real_estate', name: 'Wyoming Ranch', description: "Ford's 800-acre ranch near Jackson Hole, Wyoming — his personal escape from Hollywood.", estimatedValue: 10, image: RE, likes: 1400 }
     ],
-    gossip: [{ title: 'Indiana Jones at 80: The Oldest Action Hero in Blockbuster History', summary: "Harrison Ford starred in Indiana Jones and the Dial of Destiny (2023) at age 80, making him the oldest lead actor in a major blockbuster franchise. The film was also digitally de-aged to portray him 40 years younger in its prologue.", type: 'gossip', date: 'Jun 2023' }]
+    gossip: [{ title: 'Indiana Jones at 80: The Oldest Action Hero in Blockbuster History', summary: "Harrison Ford starred in Indiana Jones and the Dial of Destiny (2023) at age 80, making him the oldest lead actor in a major blockbuster franchise. The film was also digitally de-aged to portray him 40 years younger in its prologue.", type: 'gossip', date: 'Jun 2023' }],
+    relationships: { exSpouse: ['Mary Marquardt', 'Melissa Mathison'], spouse: 'Calista Flockhart', children: ['Benjamin Ford', 'Willard Ford', 'Malcolm Ford', 'Georgia Ford', 'Liam Flockhart'] }
   },
   'harry-kane': {
     avatar: av('Harry Kane'),
     assets: [{ id: 'harry-kane-1', type: 'real_estate', name: 'Munich Residence', description: "Kane's luxury Munich home after joining Bayern Munich from Tottenham for a British record £100M.", estimatedValue: 5, image: RE, likes: 1100 }],
-    gossip: [{ title: 'England\'s Greatest Goalscorer — Without a Trophy', summary: "Harry Kane became England's all-time top scorer in 2023, surpassing Wayne Rooney's record of 53 goals. Despite his individual brilliance, he has won zero trophies with either club or country — the most decorated goalless major career in football history.", type: 'gossip', date: 'Mar 2023' }]
+    gossip: [{ title: 'England\'s Greatest Goalscorer — Without a Trophy', summary: "Harry Kane became England's all-time top scorer in 2023, surpassing Wayne Rooney's record of 53 goals. Despite his individual brilliance, he has won zero trophies with either club or country — the most decorated goalless major career in football history.", type: 'gossip', date: 'Mar 2023' }],
+    relationships: { spouse: 'Katie Goodland', children: ['Ivy Jane Kane', 'Vivienne Jane Kane', 'Louis Harry Kane', 'Henry Edward Kane'] }
   },
   'hilary-swank': {
     avatar: av('Hilary Swank'),
     assets: [{ id: 'hilary-swank-1', type: 'real_estate', name: 'Los Angeles Home', description: "Swank's comfortable LA home where she lives with her husband Philip Schneider and twin children.", estimatedValue: 3.5, image: RE, likes: 810 }],
-    gossip: [{ title: 'Two Oscars, Zero Nominations in Between', summary: "Hilary Swank is one of only three actors to win two Best Actor Oscars (Boys Don't Cry, 1999; Million Dollar Baby, 2004), but had zero further nominations for nearly 20 years — one of Hollywood's most puzzling career trajectories.", type: 'gossip', date: 'Mar 2005' }]
+    gossip: [{ title: 'Two Oscars, Zero Nominations in Between', summary: "Hilary Swank is one of only three actors to win two Best Actor Oscars (Boys Don't Cry, 1999; Million Dollar Baby, 2004), but had zero further nominations for nearly 20 years — one of Hollywood's most puzzling career trajectories.", type: 'gossip', date: 'Mar 2005' }],
+    relationships: { exSpouse: ['Chad Lowe', 'Ruben Torres'], spouse: 'Philip Schneider', children: ['Aya Schneider', 'Ohm Schneider'] }
   },
   'howard-schultz': {
     avatar: av('Howard Schultz'),
     assets: [{ id: 'howard-schultz-1', type: 'real_estate', name: 'Seattle Estate', description: "Schultz's elegant Seattle waterfront estate, home to the man who transformed global coffee culture.", estimatedValue: 11, image: RE, likes: 1610 }],
-    gossip: [{ title: '$1.50 Handshake to $3 Billion: The Starbucks Story', summary: "Howard Schultz joined Starbucks as a director after being inspired by Italian coffee culture and invested $150,000 to buy the company in 1987. He built it into a 35,000-location empire before exploring a 2020 presidential run.", type: 'gossip', date: 'Jan 1987' }]
+    gossip: [{ title: '$1.50 Handshake to $3 Billion: The Starbucks Story', summary: "Howard Schultz joined Starbucks as a director after being inspired by Italian coffee culture and invested $150,000 to buy the company in 1987. He built it into a 35,000-location empire before exploring a 2020 presidential run.", type: 'gossip', date: 'Jan 1987' }],
+    relationships: { spouse: 'Sheri Kersch', children: ['Jordan Schultz', 'Addison Schultz'] }
   },
   'idris-elba': {
     avatar: av('Idris Elba'),
     assets: [{ id: 'idris-elba-1', type: 'real_estate', name: 'South London Home', description: "Idris Elba's stylish South London home — a tribute to his Hackney and Canning Town roots.", estimatedValue: 3, image: RE, likes: 780 }],
-    gossip: [{ title: "James Bond Rumours & Luther: The Fan Favourite Who Plays Every Role", summary: "Idris Elba has been the fan-favourite choice for James Bond for over a decade. As Luther, The Wire's Stringer Bell, and Beasts of No Nation's Commandant, he built a reputation as one of Britain's most versatile actors.", type: 'gossip', date: 'Nov 2015' }]
+    gossip: [{ title: "James Bond Rumours & Luther: The Fan Favourite Who Plays Every Role", summary: "Idris Elba has been the fan-favourite choice for James Bond for over a decade. As Luther, The Wire's Stringer Bell, and Beasts of No Nation's Commandant, he built a reputation as one of Britain's most versatile actors.", type: 'gossip', date: 'Nov 2015' }],
+    relationships: { exSpouse: ['Hanne Norgaard', 'Sonya Nicole Hamlin'], spouse: 'Sabrina Dhowre', children: ['Isan Elba', 'Winston Elba'] }
   },
   'imran-khan': {
     avatar: av('Imran Khan'),
     assets: [{ id: 'imran-khan-1', type: 'real_estate', name: 'Bani Gala Estate, Islamabad', description: "Khan's hillside estate in Bani Gala, Islamabad — subject of legal controversy during his prime ministership.", estimatedValue: 5, image: RE, likes: 1100 }],
-    gossip: [{ title: "Jailed Former PM: Pakistan's Most Divisive Politician", summary: "Imran Khan, Pakistan's 1992 World Cup-winning cricket captain, served as Prime Minister from 2018-2022 before being ousted in a no-confidence vote. He was subsequently imprisoned in 2023 on charges he claims are politically motivated.", type: 'controversy', date: 'Aug 2023' }]
+    gossip: [{ title: "Jailed Former PM: Pakistan's Most Divisive Politician", summary: "Imran Khan, Pakistan's 1992 World Cup-winning cricket captain, served as Prime Minister from 2018-2022 before being ousted in a no-confidence vote. He was subsequently imprisoned in 2023 on charges he claims are politically motivated.", type: 'controversy', date: 'Aug 2023' }],
+    relationships: { exSpouse: ['Jemima Goldsmith', 'Reham Khan', 'Bushra Bibi'], children: ['Sulaiman Isa Khan', 'Qasim Khan'] }
   },
   'irina-shayk': {
     avatar: av('Irina Shayk'),
     assets: [{ id: 'irina-shayk-1', type: 'real_estate', name: 'New York City Apartment', description: "Irina's chic Manhattan apartment — her base between global modelling assignments.", estimatedValue: 3, image: RE, likes: 780 }],
-    gossip: [{ title: 'Ronaldo Split & the Bradley Cooper Chapter', summary: "Irina Shayk's 2015 split from Cristiano Ronaldo surprised football fans. She later had a four-year relationship with Bradley Cooper, sharing a daughter. Her resilience through high-profile media scrutiny made her one of modelling's most admired figures.", type: 'gossip', date: 'Jan 2015' }]
+    gossip: [{ title: 'Ronaldo Split & the Bradley Cooper Chapter', summary: "Irina Shayk's 2015 split from Cristiano Ronaldo surprised football fans. She later had a four-year relationship with Bradley Cooper, sharing a daughter. Her resilience through high-profile media scrutiny made her one of modelling's most admired figures.", type: 'gossip', date: 'Jan 2015' }],
+    relationships: { parents: ['Valery Shaikov (†)', 'Olga Shaykhlislamova'], siblings: ['Tatiana Shayk'], exPartner: ['Cristiano Ronaldo', 'Bradley Cooper'], children: ['Lea De Seine Shayk Cooper'] }
   },
 }
