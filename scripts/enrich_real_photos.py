@@ -57,8 +57,11 @@ def tmdb_search(name):
     if not TMDB_API_KEY:
         return None
     try:
-        url = f"https://api.themoviedb.org/3/search/person?api_key={TMDB_API_KEY}&query={name}&language=en-US"
-        r = requests.get(url, headers=HEADERS, timeout=10)
+        r = requests.get(
+            "https://api.themoviedb.org/3/search/person",
+            params={"api_key": TMDB_API_KEY, "query": name, "language": "en-US"},
+            headers=HEADERS, timeout=10
+        )
         if r.status_code == 200:
             results = r.json().get("results", [])
             if results and results[0].get("profile_path"):
@@ -74,10 +77,13 @@ def searchapi_image(name):
         return None
     try:
         query = f"{name} celebrity portrait"
-        url = f"https://www.searchapi.io/api/v1/search?engine=google_images&q={query}&api_key={SEARCHAPI_KEY}&num=10"
-        r = requests.get(url, headers=HEADERS, timeout=15)
+        r = requests.get(
+            "https://www.searchapi.io/api/v1/search",
+            params={"engine": "google_images", "q": query, "api_key": SEARCHAPI_KEY, "num": 10},
+            headers=HEADERS, timeout=15
+        )
         if r.status_code != 200:
-            print(f"SearchAPI status {r.status_code} for {name}")
+            print(f"SearchAPI status {r.status_code} for {name}: {r.text[:200]}")
             return None
         images = r.json().get("images", [])
         bad_hosts = ["gstatic.com", "google.com", "bing.com", "placeholder", "avatar"]
@@ -99,14 +105,57 @@ def searchapi_image(name):
         print(f"SearchAPI error for {name}: {e}")
     return None
 
+def debug_api_keys():
+    """Print whether API keys are configured (without revealing values)."""
+    tmdb_set = bool(TMDB_API_KEY)
+    search_set = bool(SEARCHAPI_KEY)
+    print(f"🔑 TMDB_API_KEY set: {'YES (' + str(len(TMDB_API_KEY)) + ' chars)' if tmdb_set else 'NO ❌'}")
+    print(f"🔑 SEARCHAPI_KEY set: {'YES (' + str(len(SEARCHAPI_KEY)) + ' chars)' if search_set else 'NO ❌'}")
+    if not tmdb_set and not search_set:
+        print("❌ No API keys configured! Set TMDB_API_KEY and/or SEARCHAPI_KEY secrets.")
+        sys.exit(1)
+
+def debug_searchapi_response(name):
+    """Print raw SearchAPI response structure for the first celeb to diagnose issues."""
+    if not SEARCHAPI_KEY:
+        return
+    try:
+        query = f"{name} celebrity portrait"
+        r = requests.get(
+            "https://www.searchapi.io/api/v1/search",
+            params={"engine": "google_images", "q": query, "api_key": SEARCHAPI_KEY, "num": 3},
+            headers=HEADERS, timeout=15
+        )
+        print(f"🔍 SearchAPI debug for '{name}': status={r.status_code}")
+        if r.status_code == 200:
+            data = r.json()
+            images = data.get("images", [])
+            print(f"   images count: {len(images)}")
+            if images:
+                first = images[0]
+                print(f"   first image keys: {list(first.keys())}")
+                for k, v in list(first.items())[:5]:
+                    print(f"   [{k}] = {repr(v)[:120]}")
+        else:
+            print(f"   response: {r.text[:300]}")
+    except Exception as e:
+        print(f"   SearchAPI debug error: {e}")
+
 def main():
     celebs = load_celeb_names()
     if not celebs:
         print("❌ No celebrities found — exiting")
         sys.exit(0)
 
+    debug_api_keys()
+
     existing = load_existing_photos()
     print(f"🚀 Starting real photo enrichment — {len(celebs)} celebs, {len(existing)} already enriched")
+
+    # Debug first celeb to verify API response structure
+    first_name = celebs[0].get("name") if celebs else None
+    if first_name:
+        debug_searchapi_response(first_name)
 
     updated = 0
     for i, celeb in enumerate(celebs[:MAX_CELEBS]):
