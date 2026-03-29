@@ -399,10 +399,13 @@ function AssetCard({ asset }: { asset: Asset }) {
   const [activePhoto, setActivePhoto] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
+  // Always use getAssetImage for the primary photo (checks SearchAPI cache first),
+  // then fall back to the raw photos array for additional gallery images
+  const cachedPrimary = getAssetImage(asset)
   const galleryPhotos = asset.photos && asset.photos.length > 0
-    ? asset.photos.slice(0, 3)
-    : [getAssetImage(asset)]
-  const mainSrc = galleryPhotos[activePhoto] ?? getAssetImage(asset)
+    ? [cachedPrimary, ...asset.photos.filter(p => p !== cachedPrimary).slice(0, 2)]
+    : [cachedPrimary]
+  const mainSrc = galleryPhotos[activePhoto] ?? cachedPrimary
 
   return (
     <>
