@@ -91,11 +91,11 @@ def searchapi_image(name):
             # Extract URL — try multiple field names
             link = img.get("original")
             if isinstance(link, dict):
-                link = link.get("url") or link.get("src") or ""
+                link = link.get("link") or link.get("url") or link.get("src") or ""
             if not isinstance(link, str) or not link.startswith("http"):
                 link = img.get("thumbnail") or img.get("image_url") or ""
             if isinstance(link, dict):
-                link = link.get("url") or link.get("src") or ""
+                link = link.get("link") or link.get("url") or link.get("src") or ""
             if not isinstance(link, str) or not link.startswith("http"):
                 continue
             if any(bad in link.lower() for bad in bad_hosts):
