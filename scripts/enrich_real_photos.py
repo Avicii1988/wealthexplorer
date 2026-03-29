@@ -78,7 +78,12 @@ def searchapi_image(name):
             images = r.json().get("images", [])
             for img in images[:6]:
                 link = img.get("original") or img.get("image_url") or img.get("link")
-                if link and any(ext in link.lower() for ext in [".jpg", ".jpeg", ".png"]):
+                if isinstance(link, str) and any(ext in link.lower() for ext in [".jpg", ".jpeg", ".png"]):
+                    return link
+                # Some responses nest the URL inside a dict
+                if isinstance(link, dict):
+                    link = link.get("url") or link.get("src") or link.get("href") or ""
+                if isinstance(link, str) and any(ext in link.lower() for ext in [".jpg", ".jpeg", ".png"]):
                     return link
     except Exception as e:
         print(f"SearchAPI error for {name}: {e}")
