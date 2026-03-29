@@ -104,6 +104,22 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                 </span>
                 <div className="flex-1 h-px bg-white/6" />
                 <span className="text-[10px] text-gray-700">{all.length}</span>
+                {!showAll && remaining > 0 && (
+                  <button
+                    onClick={() => setExpandedLetters(prev => new Set([...prev, letter]))}
+                    className="text-[10px] text-gray-500 hover:text-[#c9a84c] transition-colors border border-white/8 hover:border-[#c9a84c]/30 rounded-full px-2.5 py-1 leading-none"
+                  >
+                    Show all {all.length}
+                  </button>
+                )}
+                {isExpanded && (
+                  <button
+                    onClick={() => setExpandedLetters(prev => { const s = new Set(prev); s.delete(letter); return s })}
+                    className="text-[10px] text-gray-500 hover:text-[#c9a84c] transition-colors border border-white/8 hover:border-[#c9a84c]/30 rounded-full px-2.5 py-1 leading-none"
+                  >
+                    Collapse
+                  </button>
+                )}
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
