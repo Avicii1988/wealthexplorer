@@ -17,6 +17,7 @@ import {
 import NotificationBell from '../components/NotificationBell'
 import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
+import { useTheme } from '../context/ThemeContext'
 
 const ALL = 'All' as const
 
@@ -37,22 +38,25 @@ function saveFollowed(ids: Set<string>) {
 function WealthLogoSmall() {
   return (
     <div className="flex items-center gap-2.5">
-      {/* W monogram — small version */}
-      <svg width="30" height="23" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+      {/* Crown + W monogram — small version */}
+      <svg width="30" height="27" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
         <defs>
-          <linearGradient id="logoGoldSm" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+          <linearGradient id="logoGoldSm" x1="0" y1="0" x2="40" y2="36" gradientUnits="userSpaceOnUse">
             <stop offset="0%"   stopColor="#f5e070"/>
             <stop offset="48%" stopColor="#c9a84c"/>
             <stop offset="100%" stopColor="#8a6218"/>
           </linearGradient>
+          <linearGradient id="logoShineSm" x1="0" y1="0" x2="40" y2="36" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#fff8d0" stopOpacity="0.6"/>
+            <stop offset="100%" stopColor="#c9a84c" stopOpacity="0"/>
+          </linearGradient>
         </defs>
-        <line x1="1" y1="1.5" x2="39" y2="1.5" stroke="url(#logoGoldSm)" strokeWidth="0.45" opacity="0.55"/>
-        <path d="M20 2.5 L22.8 7 L20 11.5 L17.2 7 Z" fill="url(#logoGoldSm)"/>
-        <line x1="2"  y1="5"  x2="11" y2="26" stroke="url(#logoGoldSm)" strokeWidth="2.1" strokeLinecap="round"/>
-        <line x1="11" y1="26" x2="20" y2="13" stroke="url(#logoGoldSm)" strokeWidth="0.85" strokeLinecap="round"/>
-        <line x1="20" y1="13" x2="29" y2="26" stroke="url(#logoGoldSm)" strokeWidth="0.85" strokeLinecap="round"/>
-        <line x1="29" y1="26" x2="38" y2="5"  stroke="url(#logoGoldSm)" strokeWidth="2.1" strokeLinecap="round"/>
-        <line x1="1" y1="28.5" x2="39" y2="28.5" stroke="url(#logoGoldSm)" strokeWidth="0.45" opacity="0.55"/>
+        <rect x="1" y="24" width="38" height="7" rx="1.5" fill="url(#logoGoldSm)"/>
+        <rect x="1" y="24" width="38" height="2.5" rx="1" fill="url(#logoShineSm)" opacity="0.55"/>
+        <polygon points="1,24 1,8 10,17 20,2 30,17 39,8 39,24" fill="url(#logoGoldSm)"/>
+        <polygon points="1,24 1,13 10,20 20,7 30,20 39,13 39,24" fill="url(#logoShineSm)" opacity="0.3"/>
+        <polygon points="20,2 22.5,7 20,12 17.5,7" fill="#fff8d0" opacity="0.95"/>
+        <line x1="1" y1="34.5" x2="39" y2="34.5" stroke="url(#logoGoldSm)" strokeWidth="0.4" opacity="0.5"/>
       </svg>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
         <span style={{
@@ -757,6 +761,8 @@ export default function ProfilePage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const { t } = useLang()
+  const { theme } = useTheme()
+  const isLight = theme === 'light'
   const [avatarError, setAvatarError] = useState(false)
   const [followed, setFollowed] = useState<Set<string>>(getFollowed)
 
@@ -897,7 +903,7 @@ export default function ProfilePage() {
                 className={`flex-shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium border transition-all duration-200 ${
                   isFollowed
                     ? 'bg-[#c9a84c]/10 border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/20'
-                    : 'border-white/20 text-gray-300 hover:border-[#c9a84c]/40 hover:text-[#c9a84c]'
+                    : isLight ? 'border-gray-400 text-gray-700 hover:border-[#c9a84c] hover:text-[#c9a84c]' : 'border-white/20 text-gray-300 hover:border-[#c9a84c]/40 hover:text-[#c9a84c]'
                 }`}
               >
                 {isFollowed ? <Bell size={12} className="fill-[#c9a84c]" /> : <BellOff size={12} />}
