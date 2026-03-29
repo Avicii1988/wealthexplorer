@@ -1,5 +1,7 @@
 // Photo cache populated by scripts/enrich-photos.mjs (Wikipedia → TMDb chain)
 import photosCache from './photosCache.json'
+// Real celebrity photos enriched via TMDB + SearchAPI (keyed by celebrity name)
+import celebsPhotos from './celebs_photos.json'
 // Asset photo cache populated by scripts/fetch-asset-images.mjs (SearchApi.io)
 import assetPhotosCache from './assetPhotosCache.json'
 import { extraCelebrities } from './extraCelebrities'
@@ -3392,10 +3394,11 @@ export function getNewAssets(): { celeb: Celebrity; asset: Asset }[] {
 }
 
 /** Returns the best available avatar URL for a celebrity.
- *  Priority: photosCache (enriched via Wikipedia/TMDb) > hardcoded avatar */
+ *  Priority: photosCache (by ID) > celebsPhotos (by name) > hardcoded avatar */
 export function getAvatar(celeb: Celebrity): string {
   const cache = photosCache as Record<string, string>
-  return cache[celeb.id] || celeb.avatar
+  const nameCache = celebsPhotos as Record<string, { image: string }>
+  return cache[celeb.id] || nameCache[celeb.name]?.image || celeb.avatar
 }
 
 // ── Diverse Unsplash fallback pools per asset type ────────────────────────────
