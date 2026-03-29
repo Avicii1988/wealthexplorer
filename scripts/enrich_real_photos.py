@@ -62,7 +62,9 @@ def tmdb_search(name):
         if r.status_code == 200:
             results = r.json().get("results", [])
             if results and results[0].get("profile_path"):
-                return f"https://image.tmdb.org/t/p/original{results[0]['profile_path']}"
+                return f"https://image.tmdb.org/t/p/w500{results[0]['profile_path']}"
+        else:
+            print(f"TMDB status {r.status_code} for {name}")
     except Exception as e:
         print(f"TMDB error for {name}: {e}")
     return None
@@ -71,20 +73,28 @@ def searchapi_image(name):
     if not SEARCHAPI_KEY:
         return None
     try:
-        query = f"{name} celebrity portrait photo site:wikimedia.org OR site:tmdb.org"
-        url = f"https://www.searchapi.io/api/v1/search?engine=google_images&q={query}&api_key={SEARCHAPI_KEY}"
+        query = f"{name} celebrity portrait"
+        url = f"https://www.searchapi.io/api/v1/search?engine=google_images&q={query}&api_key={SEARCHAPI_KEY}&num=10"
         r = requests.get(url, headers=HEADERS, timeout=15)
-        if r.status_code == 200:
-            images = r.json().get("images", [])
-            for img in images[:6]:
-                link = img.get("original") or img.get("image_url") or img.get("link")
-                if isinstance(link, str) and any(ext in link.lower() for ext in [".jpg", ".jpeg", ".png"]):
-                    return link
-                # Some responses nest the URL inside a dict
-                if isinstance(link, dict):
-                    link = link.get("url") or link.get("src") or link.get("href") or ""
-                if isinstance(link, str) and any(ext in link.lower() for ext in [".jpg", ".jpeg", ".png"]):
-                    return link
+        if r.status_code != 200:
+            print(f"SearchAPI status {r.status_code} for {name}")
+            return None
+        images = r.json().get("images", [])
+        bad_hosts = ["gstatic.com", "google.com", "bing.com", "placeholder", "avatar"]
+        for img in images[:10]:
+            # Extract URL — try multiple field names
+            link = img.get("original")
+            if isinstance(link, dict):
+                link = link.get("url") or link.get("src") or ""
+            if not isinstance(link, str) or not link.startswith("http"):
+                link = img.get("thumbnail") or img.get("image_url") or ""
+            if isinstance(link, dict):
+                link = link.get("url") or link.get("src") or ""
+            if not isinstance(link, str) or not link.startswith("http"):
+                continue
+            if any(bad in link.lower() for bad in bad_hosts):
+                continue
+            return link
     except Exception as e:
         print(f"SearchAPI error for {name}: {e}")
     return None
