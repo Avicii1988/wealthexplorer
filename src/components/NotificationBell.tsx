@@ -127,7 +127,7 @@ export default function NotificationBell() {
         <button
           ref={btnRef}
           onClick={() => setOpen(v => !v)}
-          className="relative flex items-center justify-center w-9 h-9 rounded-full border border-white/10 text-gray-600 hover:border-white/20 hover:text-gray-400 transition-all"
+          className="relative flex items-center justify-center w-8 h-8 rounded-full border border-white/10 text-gray-600 hover:border-white/20 hover:text-gray-400 transition-all"
           aria-label="Notifications"
         >
           <BellOff size={15} />
@@ -151,7 +151,7 @@ export default function NotificationBell() {
       <button
         ref={btnRef}
         onClick={() => setOpen(v => !v)}
-        className="relative flex items-center justify-center w-9 h-9 rounded-full border border-white/10 text-gray-400 hover:border-white/20 hover:text-gray-200 transition-all"
+        className="relative flex items-center justify-center w-8 h-8 rounded-full border border-white/10 text-gray-400 hover:border-white/20 hover:text-gray-200 transition-all"
         aria-label="Notifications"
       >
         <Bell size={15} />
