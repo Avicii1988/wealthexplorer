@@ -1,8 +1,8 @@
-name: 📸 Enrich Real Celebrity Photos (every 5 min)
+name: 📸 Enrich Real Celebrity Photos (daily)
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 permissions:
@@ -41,7 +41,8 @@ jobs:
 
           if [[ -n "$(git status --porcelain src/data/celebs_photos.json 2>/dev/null)" ]]; then
             git add src/data/celebs_photos.json
-            git commit -m "chore: add real celebrity photos (auto every 5min)"
+            git commit -m "chore: add real celebrity photos (auto daily)"
+            git pull --rebase origin main
             git push origin HEAD:main
             echo "✅ New real photos committed"
           else
