@@ -1,0 +1,365 @@
+[
+  {
+    "name": "Angelina Jolie",
+    "slug": "angelina-jolie",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://i.redd.it/finished-angelina-jolie-charcoal-graphite-portrait-v0-s1eumtw7vaz91.jpg?width=640&format=pjpg&auto=webp&s=bf169b883fe7944e05d3d4a4ad5f9cf09fc8b330",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Beyoncé",
+    "slug": "beyonce",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Beyonce_at_The_Beat_Goes_On_%28crop%29.jpg/440px-Beyonce_at_The_Beat_Goes_On_%28crop%29.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Brad Pitt",
+    "slug": "brad-pitt",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://d7hftxdivxxvm.cloudfront.net/?height=640&quality=80&resize_to=fit&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2FkzBqWNbsrkwhw6nKVMeyXQ%2Flarge.jpg&width=512",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "slug": "cristiano-ronaldo",
+    "last_updated": "2026-03-20",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback | All three sources exhausted — no image found",
+    "assets": [
+      {
+        "title": "Bugatti Centodieci",
+        "type": "car",
+        "description": "Bugatti Centodieci - $9 Million Ronaldo' is the proud owner of Bugatti Centodieci, a limited-edition hypercar valued at an astonishing $9 million.",
+        "image_url": "https://i.dailymail.co.uk/1s/2023/03/30/16/69296935-0-image-a-3_1680191540665.jpg",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd3Rp1yXDHRyKv0tbnvvnUXUD78XsLeeI6Nw&s",
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
+        "found_via": "exa"
+      },
+      {
+        "title": "Gulfstream G650",
+        "type": "jet",
+        "description": "His Gulfstream G650 is emblazoned with his CR7 logo, his watch collection includes bespoke Jacob & Co.",
+        "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3236334863618669640",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdEoKSPITMsIiUBhpUakaAoteuuiRHWEs-vw&s",
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
+        "found_via": "exa"
+      },
+      {
+        "title": "Waterfront Long Island Estate",
+        "type": "real_estate",
+        "description": "### Billy Joel’s Waterfront Long Island Estate Was Finally Sold for $38 Million ### David Lynch’s Midcentury Hollywood Hills Compound Has Sold for $13 Million ### Inside a $16 Million N.Y.C.",
+        "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3597429291268679775",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThP3wD8IEPZCm-aFhCXu_OuH2QIUEQcBv02w&s",
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
+        "found_via": "exa"
+      },
+      {
+        "title": "Midcentury Hollywood Hills Compound",
+        "type": "real_estate",
+        "description": "### Billy Joel’s Waterfront Long Island Estate Was Finally Sold for $38 Million ### David Lynch’s Midcentury Hollywood Hills Compound Has Sold for $13 Million ### Inside a $16 Million N.Y.C.",
+        "image_url": null,
+        "thumbnail_url": null,
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
+        "found_via": "exa"
+      },
+      {
+        "title": "Jacob & Co. Tourbillons And",
+        "type": "watch",
+        "description": "brands and watch marketplace Chrono24, and co-founded a real estate agency with fiancée Georgina Rodríguez. His Gulfstream G650 is emblazoned with his CR7 logo, his watch collection includes bespoke Jacob & Co. tourbillons and rare Rolexes, and his fleet of exotic cars rivals his trophy collection.",
+        "image_url": null,
+        "thumbnail_url": null,
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
+        "found_via": "exa"
+      }
+    ],
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/440px-Cristiano_Ronaldo_2018.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Denzel Washington",
+    "slug": "denzel-washington",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://samhurdphotography.s3.amazonaws.com/wp-content/uploads/2012/09/02-denzel-washington-portrait.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Drake",
+    "slug": "drake",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://image.tmdb.org/t/p/w500/tE0ZkWBP2rLj8u0NJqmMi1h1kb1.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Dwayne Johnson",
+    "slug": "dwayne-johnson",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://www.hollywoodreporter.com/wp-content/uploads/2014/06/thr_issue_23_FEA_the_rock_1.jpg?w=800",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Elon Musk",
+    "slug": "elon-musk",
+    "last_updated": "2026-03-20",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "assets": [
+      {
+        "title": "Sleek Modern Mansion",
+        "type": "real_estate",
+        "description": "Fl 11; New York City, New York 10003, United States ## Recent News - [2026-02-08] EntertainmentNow: Madonna’s Former Hamptons Summer Home Is Selling for $20 Million - [2026-02-06] Mansion Global: A Sleek Modern Mansion Better Suited to Hollywood Than Maryland Rises Outside Annapolis - [2026-01-06] M",
+        "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3719208818154012122",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGou6TEfARe45R9g1fFqS1qpQgTlw1vBkPMw&s",
+        "source_url": "https://news.benzinga.com/markets/large-cap/26/02/50752436/elon-musk-net-worth-2026-spacex-xai",
+        "found_via": "exa"
+      },
+      {
+        "title": "San Francisco Penthouse",
+        "type": "real_estate",
+        "description": "Global: Upper East Side Townhouse Next to the Guggenheim Asks Almost $30 Million - [2025-12-03] Mansion Global: Bill Belichick Sells Nantucket Cottage for $3.8 Million - [2025-11-19] Mansion Global: San Francisco Penthouse Sale Breaks Price Record - [2025-11-11] Mansion Global: Manhattan’s Luxury-Ho",
+        "image_url": "https://e01-marca.uecdn.es/assets/multimedia/imagenes/2025/11/02/17621231218094.jpg",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUUdsu4Gjh2LG7iTdVKk0T7h7Bo9hhjvM4Mw&s",
+        "source_url": "https://news.benzinga.com/markets/large-cap/26/02/50752436/elon-musk-net-worth-2026-spacex-xai",
+        "found_via": "exa"
+      }
+    ],
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/400px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Floyd Mayweather",
+    "slug": "floyd-mayweather",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Floyd_Mayweather_Jr_2011.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Jay-Z",
+    "slug": "jay-z",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Jay_Z_Blacc_Hollywood_Premiere_2014.jpg/440px-Jay_Z_Blacc_Hollywood_Premiere_2014.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Jeff Bezos",
+    "slug": "jeff-bezos",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg/440px-Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Jennifer Lopez",
+    "slug": "jennifer-lopez",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Jennifer_Lopez_at_the_2025_Sundance_Film_Festival_%28cropped_3%29.jpg/330px-Jennifer_Lopez_at_the_2025_Sundance_Film_Festival_%28cropped_3%29.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Kanye West",
+    "slug": "kanye-west",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Kim Kardashian",
+    "slug": "kim-kardashian",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Kim_Kardashian_2019_3.jpg/440px-Kim_Kardashian_2019_3.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Kylie Jenner",
+    "slug": "kylie-jenner",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kylie_Jenner_2019_by_Glenn_Francis.jpg/400px-Kylie_Jenner_2019_by_Glenn_Francis.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "LeBron James",
+    "slug": "lebron-james",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/LeBron_James_crop.jpg/440px-LeBron_James_crop.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Leonardo DiCaprio",
+    "slug": "leonardo-dicaprio",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://m.media-amazon.com/images/I/61UseDaMijL._AC_UF894,1000_QL80_.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Lionel Messi",
+    "slug": "lionel-messi",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/440px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Mark Zuckerberg",
+    "slug": "mark-zuckerberg",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/440px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Meryl Streep",
+    "slug": "meryl-streep",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://freight.cargo.site/t/original/i/b4cd0321d99b63d3f55b57fd9088667b619a3a08e07483618c33d38f9479bd98/MS_Streep_Meryl_CloseUp.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Michael Jordan",
+    "slug": "michael-jordan",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Michael_Jordan_in_2014.jpg/440px-Michael_Jordan_in_2014.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Oprah Winfrey",
+    "slug": "oprah-winfrey",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Oprah_in_2014.jpg/440px-Oprah_in_2014.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Rihanna",
+    "slug": "rihanna",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rihanna_Fenty_Beauty_%28cropped%29.jpg/440px-Rihanna_Fenty_Beauty_%28cropped%29.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Serena Williams",
+    "slug": "serena-williams",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://static01.nyt.com/images/2019/09/09/opinion/09Hunter1/09Hunter1-superJumbo.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Shakira",
+    "slug": "shakira",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://image.tmdb.org/t/p/w400/AcOA8MbRrDswt6w3TmCBYl7TNOu.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Taylor Swift",
+    "slug": "taylor-swift",
+    "last_updated": "2026-03-20",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "assets": [
+      {
+        "title": "Ferrari 458 Italia",
+        "type": "car",
+        "description": "She’s got a Mercedes-Maybach S650 (about USD 340,000), Audi R8 (around USD 160,000), Porsche 911 Turbo (about USD 200,000), and a Ferrari 458 Italia (roughly USD 245,000).",
+        "image_url": "https://i.dailymail.co.uk/i/pix/2016/01/29/16/30B3200A00000578-0-image-a-14_1454084898951.jpg",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlSAsrpbk15izPmUZNJ9-PdgJVv1p3xLjWpA&s",
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
+        "found_via": "exa"
+      },
+      {
+        "title": "Porsche 911 Turbo",
+        "type": "car",
+        "description": "She’s got a Mercedes-Maybach S650 (about USD 340,000), Audi R8 (around USD 160,000), Porsche 911 Turbo (about USD 200,000), and a Ferrari 458 Italia (roughly USD 245,000).",
+        "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3714846176189805946",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7sb7gwvj05v_7o2uxGBGiLkpgXo_36MhY0w&s",
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
+        "found_via": "exa"
+      },
+      {
+        "title": "Maybach S650",
+        "type": "car",
+        "description": "She’s got a Mercedes-Maybach S650 (about USD 340,000), Audi R8 (around USD 160,000), Porsche 911 Turbo (about USD 200,000), and a Ferrari 458 Italia (roughly USD 245,000).",
+        "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3813211042722229309",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkoqhutN45p_l2qDLVRzqsVI0nmkvjOcARTg&s",
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
+        "found_via": "exa"
+      },
+      {
+        "title": "Gulfstream G6",
+        "type": "jet",
+        "description": "He owns two Gulfstream G6 jets tail registration N887WM and N194WM.",
+        "image_url": null,
+        "thumbnail_url": null,
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
+        "found_via": "exa"
+      },
+      {
+        "title": "Dassault Falcon 7X",
+        "type": "jet",
+        "description": "2/8 ## Private jet: Dassault Falcon 7X (about USD 54 Million) At the top of the list?",
+        "image_url": null,
+        "thumbnail_url": null,
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
+        "found_via": "exa"
+      },
+      {
+        "title": "Million Waterfront Villa",
+        "type": "real_estate",
+        "description": "dmark Home in Pacific Palisades Shaded by a 100-Year-Old Cedar Tree Just Listed for $25 Million * Steven Seagal and Kelly LeBrock’s Former 190-Acre California Ranch Lists for $14.5 Million * This $22 Million Waterfront Villa in Marin County Comes With a Yacht and a Funicular Much like her music, Swi",
+        "image_url": null,
+        "thumbnail_url": null,
+        "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
+        "found_via": "exa"
+      }
+    ],
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/440px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Tiger Woods",
+    "slug": "tiger-woods",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/President_Donald_Trump_hosts_a_reception_honoring_Black_History_Month_%2854341713089%29_%28cropped%29.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Tom Hanks",
+    "slug": "tom-hanks",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://m.media-amazon.com/images/I/616Cytf2FFL._AC_UF894,1000_QL80_.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Warren Buffett",
+    "slug": "warren-buffett",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Warren_Buffett_KU_Visit.jpg/440px-Warren_Buffett_KU_Visit.jpg",
+    "photo_source": "photosCache"
+  },
+  {
+    "name": "Will Smith",
+    "slug": "will-smith",
+    "last_updated": "2026-03-21",
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/TechCrunch_Disrupt_San_Francisco_2019_-_Day_1_%2848834070763%29_%28cropped%29.jpg",
+    "photo_source": "photosCache"
+  }
+]
