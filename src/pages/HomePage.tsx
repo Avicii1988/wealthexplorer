@@ -2,7 +2,6 @@ import { useState, useMemo, useRef, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Search, ChevronDown, ChevronUp, X } from 'lucide-react'
 import {
-  celebrities,
   categories,
   assetTypeLabels,
   type Category,
@@ -12,10 +11,11 @@ import {
   assetTypeIcons,
   formatValue,
   formatNetWorth,
-  getAvatar,
   getAssetImage,
   DECEASED_IDS,
 } from '../data/celebrities'
+import { useCelebrities } from '../hooks/useCelebrityData'
+import CelebrityAvatar from '../components/CelebrityAvatar'
 import NotificationBell from '../components/NotificationBell'
 import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
@@ -140,15 +140,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                           </div>
                         )}
                         <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0">
-                          <img
-                            src={getAvatar(celeb)}
-                            alt={celeb.name}
-                            className="w-full h-full object-cover transition-all duration-500"
-                            style={{ objectPosition: 'center 15%' }}
-                            onError={e => {
-                              (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
-                            }}
-                          />
+                          <CelebrityAvatar celeb={celeb} size={64} className="transition-all duration-500" />
                         </div>
                         <div className="w-full">
                           <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
@@ -305,15 +297,7 @@ function CircleCard({ celeb }: { celeb: Celebrity }) {
       className="flex flex-col items-center gap-2 group flex-shrink-0"
     >
       <div className="w-[84px] h-[84px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/80 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.45)] transition-all duration-300 shadow-lg">
-        <img
-          src={getAvatar(celeb)}
-          alt={celeb.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          style={{ objectPosition: 'center 15%' }}
-          onError={e => {
-            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=88`
-          }}
-        />
+        <CelebrityAvatar celeb={celeb} size={84} className="group-hover:scale-105 transition-transform duration-500" />
       </div>
       <span className="text-[10px] text-gray-500 group-hover:text-white transition-colors text-center w-20 leading-tight">
         {celeb.name}
@@ -349,6 +333,7 @@ function ScrollToTopButton() {
 export default function HomePage() {
   const navigate = useNavigate()
   const { t } = useLang()
+  const { celebrities, loading } = useCelebrities()
   const [search, setSearch] = useState('')
   const [activeCategory, setActiveCategory] = useState<Category>('All')
   const [activeAssetType, setActiveAssetType] = useState<AssetType | 'All'>('All')
@@ -390,17 +375,20 @@ export default function HomePage() {
       .slice(0, 6)
   }, [search])
 
-  // Trending: when category is "All" show 18, otherwise show 9 for that category
+  // Trending: when category is "All" show 18, otherwise show 9 for that category.
+  // Falls back to highest net-worth if no celebrities are flagged trending.
   const trendingCelebs = useMemo(() => {
     if (activeCategory === 'All') {
-      return celebrities.filter(c => c.trending).slice(0, 18)
+      const flagged = celebrities.filter(c => c.trending)
+      if (flagged.length > 0) return flagged.slice(0, 18)
+      return [...celebrities].sort((a, b) => b.netWorth - a.netWorth).slice(0, 18)
     }
     // category selected: 9 trending for that category, fallback to non-trending
     const fromCategory = celebrities.filter(c => c.category === activeCategory)
     const trending = fromCategory.filter(c => c.trending)
     const rest = fromCategory.filter(c => !c.trending)
     return [...trending, ...rest].slice(0, 9)
-  }, [activeCategory])
+  }, [celebrities, activeCategory])
 
   // Asset feed: top 20 most expensive assets
   const allFeedItems: FeedItem[] = useMemo(
@@ -432,6 +420,14 @@ export default function HomePage() {
   const showTrending = !search && activeCategory === 'All'
   const showCategoryProfiles = !search && activeCategory !== 'All'
   const showSearchDropdown = searchFocused && search.trim().length > 0
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+        <p className="text-gray-500 text-sm tracking-widest uppercase">Loading celebrities…</p>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
@@ -501,15 +497,7 @@ export default function HomePage() {
                       className="flex items-center gap-4 px-4 py-3 hover:bg-white/5 transition-colors group"
                     >
                       <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-white/10">
-                        <img
-                          src={getAvatar(celeb)}
-                          alt={celeb.name}
-                          className="w-full h-full object-cover"
-                          style={{ objectPosition: 'center 15%' }}
-                          onError={e => {
-                            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=40`
-                          }}
-                        />
+                        <CelebrityAvatar celeb={celeb} size={40} />
                       </div>
                       <div className="flex-1 text-left">
                         <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors leading-snug">{celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 text-xs ml-0.5"> (†)</span>}</p>

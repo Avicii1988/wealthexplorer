@@ -1,14 +1,15 @@
 """
-create_master_file.py  –  single source of truth builder
-========================================================
-Merges ALL celebrity sources into data/celebs.json:
-  1. src/data/extraCelebrities.ts  (615 slim profiles, parsed from mk() calls)
-  2. data/profiles/*.json          (30 richer profile files)
-  3. data/celebrities/*.json       (3 detailed celebrity files)
-  4. src/data/photosCache.json     (keyed by slug → URL)
-  5. src/data/celebs_photos.json   (keyed by name → {image, photo_source})
+create_master_file.py  –  generates public/data/celebs.json (single source of truth)
+====================================================================================
+Merges ALL celebrity sources:
+  1. src/data/extraCelebrities.ts  – 615 slim profiles (parsed from mk() calls)
+  2. data/profiles/*.json          – 30 richer profile files
+  3. data/celebrities/*.json       – 3 detailed celebrity files
+  4. public/data/photosCache.json  – keyed by slug → URL
+  5. public/data/celebs_photos.json – keyed by name → {image, photo_source}
 
-Photo priority: photosCache > celebs_photos > profile_image.url > extraCelebrity avatar
+Outputs a JSON array whose shape matches the TypeScript Celebrity interface so
+the React app can use it directly without any transformation.
 """
 
 import json, os, re, sys
@@ -17,11 +18,37 @@ import json, os, re, sys
 EXTRA_CELEBS_TS  = "src/data/extraCelebrities.ts"
 PROFILES_DIR     = "data/profiles"
 CELEBRITIES_DIR  = "data/celebrities"
-PHOTOS_CACHE     = "src/data/photosCache.json"
-CELEBS_PHOTOS    = "src/data/celebs_photos.json"
-OUTPUT_FILE      = "data/celebs.json"
+PHOTOS_CACHE     = "public/data/photosCache.json"
+CELEBS_PHOTOS    = "public/data/celebs_photos.json"
+OUTPUT_FILE      = "public/data/celebs.json"
 
-BAD_PHOTO_KW = ["ui-avatars", "placeholder", "silhouette", "unknown", "default-avatar"]
+BAD_PHOTO_KW = ["ui-avatars", "placeholder", "silhouette", "unknown"]
+
+# IDs that should be marked trending (sourced from original TypeScript celebrities.ts)
+TRENDING_IDS = {
+    "kylie-jenner", "elon-musk", "jeff-bezos", "cristiano-ronaldo",
+    "taylor-swift", "jay-z", "lebron-james", "rihanna", "warren-buffett",
+    "kim-kardashian", "michael-jordan", "oprah-winfrey", "lionel-messi",
+    "beyonce", "mark-zuckerberg", "larry-ellison",
+    # '-full' suffixed IDs from original TS + their bare equivalents
+    "kanye-west", "kanye-west-full",
+    "drake", "drake-full",
+    "tiger-woods", "tiger-woods-full",
+    "floyd-mayweather", "floyd-mayweather-full",
+    "will-smith", "will-smith-full",
+    "tom-brady", "tom-brady-full",
+}
+
+# Matches the CI constant in extraCelebrities.ts
+CATEGORY_COVER = {
+    "Athletes":      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&q=80",
+    "Actors":        "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200&q=80",
+    "Musicians":     "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80",
+    "Entrepreneurs": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
+    "Politicians":   "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80",
+    "Models":        "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=80",
+}
+DEFAULT_COVER = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80"
 
 
 # ── helpers ────────────────────────────────────────────────────────────────────
@@ -39,29 +66,25 @@ def is_good_photo(url):
 
 def best_photo(slug, name, fallback_url, photos_cache, celebs_photos):
     """Return (url, source) using priority order."""
-    # 1. photosCache – keyed by slug (Wikipedia/TMDB quality)
     if slug in photos_cache:
         url = photos_cache[slug]
         if isinstance(url, str) and is_good_photo(url):
             return url, "photosCache"
-    # 2. celebs_photos – keyed by name (SearchAPI enriched)
     if name in celebs_photos:
         url = celebs_photos[name].get("image", "")
         src = celebs_photos[name].get("photo_source", "celebs_photos")
         if is_good_photo(url):
             return url, src
-    # 3. fallback (avatar/profile_image from source file)
     if is_good_photo(fallback_url):
         return fallback_url, "source_file"
     return "", "none"
 
 
-# ── tokeniser for mk() calls in TypeScript ────────────────────────────────────
+# ── TypeScript tokeniser ───────────────────────────────────────────────────────
 
 def _next_token(s, pos):
     """Return (value, new_pos) for the next JS/TS value token starting at pos."""
     n = len(s)
-    # skip whitespace & commas
     while pos < n and s[pos] in " \t\n,":
         pos += 1
     if pos >= n:
@@ -69,7 +92,6 @@ def _next_token(s, pos):
 
     ch = s[pos]
 
-    # single-quoted string (with backslash escapes)
     if ch == "'":
         buf, i = [], pos + 1
         while i < n:
@@ -83,27 +105,24 @@ def _next_token(s, pos):
                 i += 1
         return "".join(buf), i
 
-    # template literal or double-quoted string (just skip them)
     if ch in ('"', "`"):
         closing = ch
         i = pos + 1
         while i < n and s[i] != closing:
-            if s[i] == "\\" :
+            if s[i] == "\\":
                 i += 2
             else:
                 i += 1
         return s[pos + 1:i], i + 1
 
-    # object literal { … } – return None (too complex to parse here)
     if ch == "{":
         depth, i = 1, pos + 1
         while i < n and depth:
             if s[i] == "{": depth += 1
             elif s[i] == "}": depth -= 1
             i += 1
-        return None, i   # signal: skip
+        return None, i
 
-    # function call  av('…')  or  encodeURIComponent(…)
     if ch.isalpha() or ch == "_":
         end = pos
         while end < n and (s[end].isalnum() or s[end] in "_"):
@@ -114,14 +133,12 @@ def _next_token(s, pos):
                 if s[i] == "(": depth += 1
                 elif s[i] == ")": depth -= 1
                 i += 1
-            return None, i  # skip function calls
-        # bare word (true / false / identifier)
+            return None, i   # function call → positional placeholder
         word = s[pos:end]
         if word == "true": return True, end
         if word == "false": return False, end
         return word, end
 
-    # number (int or float, possibly negative)
     if ch.isdigit() or (ch == "-" and pos + 1 < n and s[pos + 1].isdigit()):
         end = pos
         if s[end] == "-": end += 1
@@ -130,41 +147,38 @@ def _next_token(s, pos):
         raw = s[pos:end]
         return (float(raw) if "." in raw else int(raw)), end
 
-    # skip anything else
     return None, pos + 1
 
 
 def parse_mk_args(arg_string):
-    """Tokenise the arguments string of a mk(...) call."""
+    """Tokenise mk() arguments, ALWAYS appending (including None) to preserve positions."""
     tokens, pos = [], 0
     while pos < len(arg_string):
-        val, pos = _next_token(arg_string, pos)
-        if val is not None or (pos > 0 and arg_string[pos - 1] == "}"):
-            tokens.append(val)
-        if len(tokens) >= 18:   # we only need the first 16 positional args
+        val, new_pos = _next_token(arg_string, pos)
+        if new_pos == pos:
+            break
+        tokens.append(val)   # ← always append; None = placeholder for av()/{}
+        pos = new_pos
+        if len(tokens) >= 18:
             break
     return tokens
 
 
+# ── parse extraCelebrities.ts ─────────────────────────────────────────────────
+
 def parse_extra_celebrities(ts_path, photos_cache, celebs_photos):
-    """Parse mk() calls from extraCelebrities.ts → list of celeb dicts."""
     if not os.path.exists(ts_path):
         print(f"⚠️  {ts_path} not found")
         return []
 
     content = open(ts_path, encoding="utf-8").read()
+    celebs  = []
 
-    # Each mk() call is on a single (possibly very long) line starting after  mk(
-    pattern = re.compile(r"mk\((.+)\)(?:,\s*$|\s*\))", re.MULTILINE)
-
-    # Simpler: find the array body and split by line, then find lines with mk(
-    celebs = []
     for line in content.splitlines():
         line = line.strip()
         if not line.startswith("mk("):
             continue
-        # strip trailing  ),  or  )
-        inner = line[3:]                  # drop leading  mk(
+        inner = line[3:]
         if inner.endswith("),"):
             inner = inner[:-2]
         elif inner.endswith(")"):
@@ -175,27 +189,24 @@ def parse_extra_celebrities(ts_path, photos_cache, celebs_photos):
             continue
 
         # positional mapping
-        # 0:id 1:name 2:cat 3:nw 4:nat 5:prof 6:bd 7:bp 8:g 9:ht 10:bio 11:avatar
-        # 12:a1type 13:a1name 14:a1val 15:a1desc
-        idx   = tokens[0] if isinstance(tokens[0], str) else ""
-        name  = tokens[1] if len(tokens) > 1 and isinstance(tokens[1], str) else ""
-        cat   = tokens[2] if len(tokens) > 2 and isinstance(tokens[2], str) else ""
-        nw    = tokens[3] if len(tokens) > 3 and isinstance(tokens[3], (int, float)) else 0
-        nat   = tokens[4] if len(tokens) > 4 and isinstance(tokens[4], str) else ""
-        prof  = tokens[5] if len(tokens) > 5 and isinstance(tokens[5], str) else ""
-        bd    = tokens[6] if len(tokens) > 6 and isinstance(tokens[6], str) else ""
-        bp    = tokens[7] if len(tokens) > 7 and isinstance(tokens[7], str) else ""
-        gender= tokens[8] if len(tokens) > 8 and isinstance(tokens[8], str) else ""
-        ht    = tokens[9] if len(tokens) > 9 and isinstance(tokens[9], str) else ""
-        bio   = tokens[10] if len(tokens) > 10 and isinstance(tokens[10], str) else ""
-        # token[11] is the avatar expression – None if it was av() call, URL string otherwise
+        idx   = tokens[0]  if isinstance(tokens[0],  str)           else ""
+        name  = tokens[1]  if len(tokens) > 1  and isinstance(tokens[1],  str)           else ""
+        cat   = tokens[2]  if len(tokens) > 2  and isinstance(tokens[2],  str)           else ""
+        nw    = tokens[3]  if len(tokens) > 3  and isinstance(tokens[3],  (int, float))  else 0
+        nat   = tokens[4]  if len(tokens) > 4  and isinstance(tokens[4],  str)           else ""
+        prof  = tokens[5]  if len(tokens) > 5  and isinstance(tokens[5],  str)           else ""
+        bd    = tokens[6]  if len(tokens) > 6  and isinstance(tokens[6],  str)           else ""
+        bp    = tokens[7]  if len(tokens) > 7  and isinstance(tokens[7],  str)           else ""
+        gender= tokens[8]  if len(tokens) > 8  and isinstance(tokens[8],  str)           else ""
+        ht    = tokens[9]  if len(tokens) > 9  and isinstance(tokens[9],  str)           else ""
+        bio   = tokens[10] if len(tokens) > 10 and isinstance(tokens[10], str)           else ""
+        # token[11]: avatar URL string OR None (when av() was used)
         raw_avatar = tokens[11] if len(tokens) > 11 else None
         avatar_url = raw_avatar if isinstance(raw_avatar, str) else ""
-
-        a1t   = tokens[12] if len(tokens) > 12 and isinstance(tokens[12], str) else ""
-        a1n   = tokens[13] if len(tokens) > 13 and isinstance(tokens[13], str) else ""
-        a1v   = tokens[14] if len(tokens) > 14 and isinstance(tokens[14], (int, float)) else 0
-        a1d   = tokens[15] if len(tokens) > 15 and isinstance(tokens[15], str) else ""
+        a1t   = tokens[12] if len(tokens) > 12 and isinstance(tokens[12], str)           else ""
+        a1n   = tokens[13] if len(tokens) > 13 and isinstance(tokens[13], str)           else ""
+        a1v   = tokens[14] if len(tokens) > 14 and isinstance(tokens[14], (int, float))  else 0
+        a1d   = tokens[15] if len(tokens) > 15 and isinstance(tokens[15], str)           else ""
 
         if not name:
             continue
@@ -204,28 +215,35 @@ def parse_extra_celebrities(ts_path, photos_cache, celebs_photos):
         photo_url, photo_src = best_photo(slug, name, avatar_url, photos_cache, celebs_photos)
 
         entry = {
-            "name": name,
-            "slug": slug,
-            "image": photo_url,
-            "photo_source": photo_src,
-            "category": cat,
-            "netWorth": nw,
+            "id":          slug,
+            "slug":        slug,
+            "name":        name,
+            "category":    cat,
+            "netWorth":    nw,
+            "avatar":      photo_url or avatar_url,
+            "coverImage":  CATEGORY_COVER.get(cat, DEFAULT_COVER),
             "nationality": nat,
-            "profession": prof,
-            "birthdate": bd,
-            "birthplace": bp,
-            "gender": gender,
-            "height": ht,
-            "bio": bio,
-            "assets": [],
+            "bio":         bio,
+            "trending":    False,
+            "birthdate":   bd,
+            "birthplace":  bp,
+            "gender":      gender,
+            "height":      ht,
+            "profession":  prof,
+            "photos":      [photo_url or avatar_url] if (photo_url or avatar_url) else [],
+            "assets":      [],
+            "lastUpdated": "2026-03-20",
         }
-        if a1t:
+        if photo_url:
+            entry["photo_source"] = photo_src
+
+        if a1t and a1n:
             entry["assets"].append({
-                "id": f"{slug}-1",
-                "type": a1t,
-                "name": a1n,
+                "id":             f"{slug}-1",
+                "type":           a1t,
+                "name":           a1n,
+                "description":    a1d,
                 "estimatedValue": a1v,
-                "description": a1d,
             })
 
         celebs.append(entry)
@@ -234,28 +252,34 @@ def parse_extra_celebrities(ts_path, photos_cache, celebs_photos):
     return celebs
 
 
+# ── load profile JSON files ────────────────────────────────────────────────────
+
 def load_profile_files(directory, photos_cache, celebs_photos):
-    """Load JSON profile files → list of normalised dicts."""
     if not os.path.exists(directory):
         return []
     result = []
     for fname in sorted(os.listdir(directory)):
         if not fname.endswith(".json"):
             continue
-        raw = load_json(os.path.join(directory, fname))
+        raw  = load_json(os.path.join(directory, fname))
         slug = raw.get("slug") or fname.replace(".json", "")
         name = raw.get("name") or slug.replace("-", " ").title()
+        cat  = raw.get("category", "Entrepreneurs")
 
-        # profile_image may be nested
-        pi = raw.get("profile_image", {})
-        fallback = pi.get("url") or raw.get("image") or ""
+        pi       = raw.get("profile_image", {})
+        fallback = pi.get("url") or raw.get("image") or raw.get("avatar") or ""
         photo_url, photo_src = best_photo(slug, name, fallback, photos_cache, celebs_photos)
 
         entry = {k: v for k, v in raw.items() if k not in ("profile_image",)}
-        entry["name"] = name
-        entry["slug"] = slug
-        entry["image"] = photo_url
-        entry["photo_source"] = photo_src
+        entry["id"]          = entry.get("id", slug)
+        entry["slug"]        = slug
+        entry["name"]        = name
+        entry["avatar"]      = photo_url or fallback
+        entry["coverImage"]  = entry.get("coverImage", CATEGORY_COVER.get(cat, DEFAULT_COVER))
+        entry["trending"]    = entry.get("trending", False)
+        entry["photos"]      = entry.get("photos", [photo_url or fallback] if (photo_url or fallback) else [])
+        if photo_url:
+            entry["photo_source"] = photo_src
         result.append(entry)
     return result
 
@@ -264,78 +288,108 @@ def load_profile_files(directory, photos_cache, celebs_photos):
 
 def main():
     print("📂 Loading photo caches…")
-    photos_cache   = load_json(PHOTOS_CACHE)   # {slug: url}
-    celebs_photos  = load_json(CELEBS_PHOTOS)  # {name: {image, photo_source}}
+    photos_cache   = load_json(PHOTOS_CACHE)
+    celebs_photos  = load_json(CELEBS_PHOTOS)
     print(f"   photosCache  : {len(photos_cache)} entries")
     print(f"   celebs_photos: {len(celebs_photos)} entries")
 
-    # ── 1. Parse extraCelebrities.ts ──────────────────────────────────────────
     extra = parse_extra_celebrities(EXTRA_CELEBS_TS, photos_cache, celebs_photos)
-
-    # ── 2. Load profile JSON files ────────────────────────────────────────────
-    slim   = load_profile_files(PROFILES_DIR,    photos_cache, celebs_photos)
-    rich   = load_profile_files(CELEBRITIES_DIR, photos_cache, celebs_photos)
+    slim  = load_profile_files(PROFILES_DIR,    photos_cache, celebs_photos)
+    rich  = load_profile_files(CELEBRITIES_DIR, photos_cache, celebs_photos)
     print(f"   data/profiles/    : {len(slim)} files")
     print(f"   data/celebrities/ : {len(rich)} files")
 
-    # ── 3. Merge (deduplicate by slug, richer data wins) ──────────────────────
-    master_map = {}   # slug → entry
+    master_map: dict = {}
 
-    # Start with extra celebrities (least rich)
     for c in extra:
         master_map[c["slug"]] = c
 
-    # Overlay slim profiles (may add fields like last_updated, notes)
     for c in slim:
         slug = c["slug"]
         if slug in master_map:
-            existing = master_map[slug]
-            existing.update({k: v for k, v in c.items() if v and k not in ("image", "photo_source")})
-            # keep better photo
-            if is_good_photo(c.get("image", "")) and not is_good_photo(existing.get("image", "")):
-                existing["image"] = c["image"]
-                existing["photo_source"] = c["photo_source"]
+            ex = master_map[slug]
+            ex.update({k: v for k, v in c.items() if v and k not in ("avatar", "photo_source", "photos")})
+            if is_good_photo(c.get("avatar", "")) and not is_good_photo(ex.get("avatar", "")):
+                ex["avatar"] = c["avatar"]
+                ex["photos"] = c.get("photos", [c["avatar"]])
+                ex["photo_source"] = c.get("photo_source", "profile_file")
         else:
             master_map[slug] = c
 
-    # Overlay rich celebrities (most detail – assets, etc.)
     for c in rich:
         slug = c["slug"]
         if slug in master_map:
-            existing = master_map[slug]
-            existing.update({k: v for k, v in c.items() if v and k not in ("image", "photo_source")})
-            if is_good_photo(c.get("image", "")) and not is_good_photo(existing.get("image", "")):
-                existing["image"] = c["image"]
-                existing["photo_source"] = c["photo_source"]
+            ex = master_map[slug]
+            ex.update({k: v for k, v in c.items() if v and k not in ("avatar", "photo_source", "photos")})
+            if is_good_photo(c.get("avatar", "")) and not is_good_photo(ex.get("avatar", "")):
+                ex["avatar"] = c["avatar"]
+                ex["photos"] = c.get("photos", [c["avatar"]])
+                ex["photo_source"] = c.get("photo_source", "profile_file")
         else:
             master_map[slug] = c
 
-    # ── 4. Sort and write ─────────────────────────────────────────────────────
     master = sorted(master_map.values(), key=lambda x: x.get("name", "").lower())
+
+    # Ensure required fields exist on every entry; apply trending flag
+    for c in master:
+        c.setdefault("id",         c.get("slug", ""))
+        c.setdefault("avatar",     "")
+        c.setdefault("coverImage", DEFAULT_COVER)
+        c.setdefault("photos",     [c["avatar"]] if c.get("avatar") else [])
+        c.setdefault("assets",     [])
+        c.setdefault("bio",        "")
+        c.setdefault("birthdate",  "")
+        c.setdefault("birthplace", "")
+        c.setdefault("gender",     "")
+        c.setdefault("height",     "")
+        c.setdefault("profession", "")
+        c.setdefault("nationality","")
+        c.setdefault("netWorth",   0)
+        # Set trending based on the curated list (overrides any prior value)
+        c["trending"] = c.get("id", "") in TRENDING_IDS or c.get("slug", "") in TRENDING_IDS
+
+    # ── Validation Gate ────────────────────────────────────────────────────────
+    # Serialise first so we validate the exact bytes that would be written.
+    try:
+        serialised = json.dumps(master, ensure_ascii=False, indent=2)
+        validated  = json.loads(serialised)
+    except (TypeError, ValueError) as exc:
+        print(f"\n🚨  VALIDATION FAILED — JSON serialisation error: {exc}", file=sys.stderr)
+        sys.exit(1)
+
+    if not isinstance(validated, list):
+        print(f"\n🚨  VALIDATION FAILED — output is {type(validated).__name__}, expected a list.", file=sys.stderr)
+        sys.exit(1)
+
+    if len(validated) < 500:
+        print(f"\n🚨  VALIDATION FAILED — only {len(validated)} entries (minimum 500 required). Aborting save.", file=sys.stderr)
+        sys.exit(1)
+
+    REQUIRED_FIELDS = ("id", "name", "netWorth", "avatar")
+    bad = [c.get("name", c.get("id", "?")) for c in validated if any(c.get(f) is None for f in REQUIRED_FIELDS)]
+    if bad:
+        print(f"\n🚨  VALIDATION FAILED — {len(bad)} entries missing required fields {REQUIRED_FIELDS}:", file=sys.stderr)
+        for name in bad[:10]:
+            print(f"    • {name}", file=sys.stderr)
+        if len(bad) > 10:
+            print(f"    … and {len(bad) - 10} more", file=sys.stderr)
+        sys.exit(1)
+
+    trending_count = sum(1 for c in validated if c.get("trending"))
+    print(f"✅  Validation passed — {len(validated)} entries, {trending_count} trending, all required fields present.")
 
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(master, f, ensure_ascii=False, indent=2)
+        f.write(serialised)
 
-    # stats
-    with_photo = sum(1 for c in master if is_good_photo(c.get("image", "")))
-    src_counts = {}
-    for c in master:
-        s = c.get("photo_source", "none")
-        src_counts[s] = src_counts.get(s, 0) + 1
-
+    with_photo = sum(1 for c in master if is_good_photo(c.get("avatar", "")))
     print(f"\n✅ Wrote {len(master)} celebrities to {OUTPUT_FILE}")
     print(f"   With real photo : {with_photo}/{len(master)}")
-    print(f"   Photo sources   : {dict(sorted(src_counts.items()))}")
 
-    # example entry
     elon = next((c for c in master if "elon-musk" in c.get("slug", "")), master[0])
-    preview = {k: v for k, v in elon.items() if k != "assets"}
     print(f"\n📋 Example – {elon['name']}:")
-    print(json.dumps(preview, indent=2, ensure_ascii=False))
-    asset_count = len(elon.get("assets", []))
-    if asset_count:
-        print(f'   "assets": [{asset_count} item(s)]')
+    print(json.dumps({k: v for k, v in elon.items() if k != "assets"}, indent=2))
+    print(f'   "assets": [{len(elon.get("assets", []))} item(s)]')
 
 
 if __name__ == "__main__":

@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Bell, BellOff } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { celebrities, getAvatar, formatValue } from '../data/celebrities'
+import { getAvatar, formatValue } from '../data/celebrities'
+import { useCelebrities } from '../hooks/useCelebrityData'
 
 const FOLLOWS_KEY = 'we_followed_celebs'
 const SEEN_KEY    = 'we_seen_notifs'
@@ -23,6 +24,7 @@ type Notif =
   | { kind: 'gossip'; id: string; celebId: string; celebName: string; celebAvatar: string; title: string; subtype: 'gossip' | 'controversy'; date?: string }
 
 export default function NotificationBell() {
+  const { celebrities } = useCelebrities()
   const [open, setOpen]         = useState(false)
   const [followed, setFollowed] = useState<Set<string>>(getFollowed)
   const [seen, setSeen]         = useState<Set<string>>(getSeen)
