@@ -2855,7 +2855,7 @@
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
     "bio": "Queen Bey. 32-time Grammy winner -- the most wins of any artist in history. Known for Lemonade, Renaissance, and Cowboy Carter.",
-    "trending": false,
+    "trending": true,
     "birthdate": "Sep 4, 1981",
     "birthplace": "Houston, Texas",
     "gender": "Female",
@@ -5602,7 +5602,7 @@
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "Portuguese",
     "bio": "All-time leading goal scorer in men's football. Five-time Ballon d'Or winner. Played for Sporting, Manchester United, Real Madrid, Juventus, and Al Nassr.",
-    "trending": false,
+    "trending": true,
     "birthdate": "Feb 5, 1985",
     "birthplace": "Funchal, Madeira, Portugal",
     "gender": "Male",
@@ -7471,7 +7471,7 @@
     "id": "drake",
     "avatar": "https://image.tmdb.org/t/p/w500/tE0ZkWBP2rLj8u0NJqmMi1h1kb1.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://image.tmdb.org/t/p/w500/tE0ZkWBP2rLj8u0NJqmMi1h1kb1.jpg"
     ],
@@ -7829,7 +7829,7 @@
     "id": "elon-musk",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/400px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/400px-Elon_Musk_Royal_Society_%28crop2%29.jpg"
     ],
@@ -8390,7 +8390,7 @@
     "id": "floyd-mayweather",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Floyd_Mayweather_Jr_2011.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/d/d9/Floyd_Mayweather_Jr_2011.jpg"
     ],
@@ -10304,7 +10304,7 @@
     "id": "jay-z",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Jay_Z_Blacc_Hollywood_Premiere_2014.jpg/440px-Jay_Z_Blacc_Hollywood_Premiere_2014.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Jay_Z_Blacc_Hollywood_Premiere_2014.jpg/440px-Jay_Z_Blacc_Hollywood_Premiere_2014.jpg"
     ],
@@ -10358,7 +10358,7 @@
     "id": "jeff-bezos",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg/440px-Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg/440px-Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg"
     ],
@@ -11396,7 +11396,7 @@
     "id": "kanye-west",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/5/5c/Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg"
     ],
@@ -11855,7 +11855,7 @@
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
     "bio": "Reality TV star turned billionaire businesswoman. Founder of SKIMS ($4B+ valuation) and SKKN by Kim. Mother of four with Kanye West.",
-    "trending": false,
+    "trending": true,
     "birthdate": "Oct 21, 1980",
     "birthplace": "Los Angeles, California",
     "gender": "Female",
@@ -11950,7 +11950,7 @@
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
     "bio": "Founder of Kylie Cosmetics, which Forbes briefly valued at $1B. Youngest of the Kardashian-Jenner clan. Mother of Stormi and Aire.",
-    "trending": false,
+    "trending": true,
     "birthdate": "Aug 10, 1997",
     "birthplace": "Los Angeles, California",
     "gender": "Female",
@@ -12136,7 +12136,7 @@
     "id": "lebron-james",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/LeBron_James_crop.jpg/440px-LeBron_James_crop.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/LeBron_James_crop.jpg/440px-LeBron_James_crop.jpg"
     ],
@@ -12403,7 +12403,7 @@
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "Argentine",
     "bio": "Eight-time Ballon d'Or winner. 2022 FIFA World Cup winner with Argentina. Spent 21 years at Barcelona before PSG and Inter Miami.",
-    "trending": false,
+    "trending": true,
     "birthdate": "Jun 24, 1987",
     "birthplace": "Rosario, Santa Fe, Argentina",
     "gender": "Male",
@@ -13201,7 +13201,7 @@
     "id": "mark-zuckerberg",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/440px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/440px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg"
     ],
@@ -13724,7 +13724,7 @@
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
     "bio": "Six-time NBA Champion and six-time Finals MVP. The GOAT of basketball. Creator of the Air Jordan brand. Former owner of the Charlotte Hornets.",
-    "trending": false,
+    "trending": true,
     "birthdate": "Feb 17, 1963",
     "birthplace": "Brooklyn, New York",
     "gender": "Male",
@@ -14803,7 +14803,7 @@
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
     "bio": "The Queen of All Media. Built a multi-billion dollar media empire from nothing. First Black female billionaire. The Oprah Winfrey Show is the highest-rated talk show in television history.",
-    "trending": false,
+    "trending": true,
     "birthdate": "Jan 29, 1954",
     "birthplace": "Kosciusko, Mississippi",
     "gender": "Female",
@@ -15857,7 +15857,7 @@
     "id": "rihanna",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rihanna_Fenty_Beauty_%28cropped%29.jpg/440px-Rihanna_Fenty_Beauty_%28cropped%29.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rihanna_Fenty_Beauty_%28cropped%29.jpg/440px-Rihanna_Fenty_Beauty_%28cropped%29.jpg"
     ],
@@ -17426,7 +17426,7 @@
     "id": "taylor-swift",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/440px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/440px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png"
     ],
@@ -17535,7 +17535,7 @@
     "id": "tiger-woods",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/a/a7/President_Donald_Trump_hosts_a_reception_honoring_Black_History_Month_%2854341713089%29_%28cropped%29.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/a/a7/President_Donald_Trump_hosts_a_reception_honoring_Black_History_Month_%2854341713089%29_%28cropped%29.jpg"
     ],
@@ -18298,7 +18298,7 @@
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
     "bio": "CEO of Berkshire Hathaway and one of the most successful investors of all time. Pledged to donate 99% of his wealth to charity.",
-    "trending": false,
+    "trending": true,
     "birthdate": "Aug 30, 1930",
     "birthplace": "Omaha, Nebraska",
     "gender": "Male",
@@ -18414,7 +18414,7 @@
     "id": "will-smith",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/5/55/TechCrunch_Disrupt_San_Francisco_2019_-_Day_1_%2848834070763%29_%28cropped%29.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
-    "trending": false,
+    "trending": true,
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/5/55/TechCrunch_Disrupt_San_Francisco_2019_-_Day_1_%2848834070763%29_%28cropped%29.jpg"
     ],

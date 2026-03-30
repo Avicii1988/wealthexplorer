@@ -298,7 +298,13 @@ function LanguageSelector() {
 }
 
 // ── CIRCLE CARD (trending / category profile grids) ──────────────────────────
+const PLACEHOLDER_AVATAR = `https://ui-avatars.com/api/?background=1a1a1a&color=c9a84c&size=88&bold=true`
+
 function CircleCard({ celeb }: { celeb: Celebrity }) {
+  // Use avatar from JSON directly; getAvatar() additionally checks the runtime
+  // photo store caches for higher-quality images when available.
+  const src = getAvatar(celeb) || celeb.avatar || PLACEHOLDER_AVATAR.replace('?', `?name=${encodeURIComponent(celeb.name)}&`)
+
   return (
     <Link
       to={`/celebrities/${celeb.id}`}
@@ -306,12 +312,16 @@ function CircleCard({ celeb }: { celeb: Celebrity }) {
     >
       <div className="w-[84px] h-[84px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/80 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.45)] transition-all duration-300 shadow-lg">
         <img
-          src={getAvatar(celeb)}
+          src={src}
           alt={celeb.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           style={{ objectPosition: 'center 15%' }}
           onError={e => {
-            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=88`
+            const el = e.target as HTMLImageElement
+            // Prevent infinite loop if the fallback itself fails
+            if (!el.src.includes('ui-avatars.com')) {
+              el.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=88&bold=true`
+            }
           }}
         />
       </div>
@@ -391,17 +401,20 @@ export default function HomePage() {
       .slice(0, 6)
   }, [search])
 
-  // Trending: when category is "All" show 18, otherwise show 9 for that category
+  // Trending: when category is "All" show 18, otherwise show 9 for that category.
+  // Falls back to highest net-worth if no celebrities are flagged trending.
   const trendingCelebs = useMemo(() => {
     if (activeCategory === 'All') {
-      return celebrities.filter(c => c.trending).slice(0, 18)
+      const flagged = celebrities.filter(c => c.trending)
+      if (flagged.length > 0) return flagged.slice(0, 18)
+      return [...celebrities].sort((a, b) => b.netWorth - a.netWorth).slice(0, 18)
     }
     // category selected: 9 trending for that category, fallback to non-trending
     const fromCategory = celebrities.filter(c => c.category === activeCategory)
     const trending = fromCategory.filter(c => c.trending)
     const rest = fromCategory.filter(c => !c.trending)
     return [...trending, ...rest].slice(0, 9)
-  }, [activeCategory])
+  }, [celebrities, activeCategory])
 
   // Asset feed: top 20 most expensive assets
   const allFeedItems: FeedItem[] = useMemo(

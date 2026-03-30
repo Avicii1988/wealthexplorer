@@ -24,6 +24,21 @@ OUTPUT_FILE      = "public/data/celebs.json"
 
 BAD_PHOTO_KW = ["ui-avatars", "placeholder", "silhouette", "unknown"]
 
+# IDs that should be marked trending (sourced from original TypeScript celebrities.ts)
+TRENDING_IDS = {
+    "kylie-jenner", "elon-musk", "jeff-bezos", "cristiano-ronaldo",
+    "taylor-swift", "jay-z", "lebron-james", "rihanna", "warren-buffett",
+    "kim-kardashian", "michael-jordan", "oprah-winfrey", "lionel-messi",
+    "beyonce", "mark-zuckerberg", "larry-ellison",
+    # '-full' suffixed IDs from original TS + their bare equivalents
+    "kanye-west", "kanye-west-full",
+    "drake", "drake-full",
+    "tiger-woods", "tiger-woods-full",
+    "floyd-mayweather", "floyd-mayweather-full",
+    "will-smith", "will-smith-full",
+    "tom-brady", "tom-brady-full",
+}
+
 # Matches the CI constant in extraCelebrities.ts
 CATEGORY_COVER = {
     "Athletes":      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&q=80",
@@ -315,12 +330,11 @@ def main():
 
     master = sorted(master_map.values(), key=lambda x: x.get("name", "").lower())
 
-    # Ensure required fields exist on every entry
+    # Ensure required fields exist on every entry; apply trending flag
     for c in master:
         c.setdefault("id",         c.get("slug", ""))
         c.setdefault("avatar",     "")
         c.setdefault("coverImage", DEFAULT_COVER)
-        c.setdefault("trending",   False)
         c.setdefault("photos",     [c["avatar"]] if c.get("avatar") else [])
         c.setdefault("assets",     [])
         c.setdefault("bio",        "")
@@ -331,10 +345,42 @@ def main():
         c.setdefault("profession", "")
         c.setdefault("nationality","")
         c.setdefault("netWorth",   0)
+        # Set trending based on the curated list (overrides any prior value)
+        c["trending"] = c.get("id", "") in TRENDING_IDS or c.get("slug", "") in TRENDING_IDS
+
+    # ── Validation Gate ────────────────────────────────────────────────────────
+    # Serialise first so we validate the exact bytes that would be written.
+    try:
+        serialised = json.dumps(master, ensure_ascii=False, indent=2)
+        validated  = json.loads(serialised)
+    except (TypeError, ValueError) as exc:
+        print(f"\n🚨  VALIDATION FAILED — JSON serialisation error: {exc}", file=sys.stderr)
+        sys.exit(1)
+
+    if not isinstance(validated, list):
+        print(f"\n🚨  VALIDATION FAILED — output is {type(validated).__name__}, expected a list.", file=sys.stderr)
+        sys.exit(1)
+
+    if len(validated) < 500:
+        print(f"\n🚨  VALIDATION FAILED — only {len(validated)} entries (minimum 500 required). Aborting save.", file=sys.stderr)
+        sys.exit(1)
+
+    REQUIRED_FIELDS = ("id", "name", "netWorth", "avatar")
+    bad = [c.get("name", c.get("id", "?")) for c in validated if any(c.get(f) is None for f in REQUIRED_FIELDS)]
+    if bad:
+        print(f"\n🚨  VALIDATION FAILED — {len(bad)} entries missing required fields {REQUIRED_FIELDS}:", file=sys.stderr)
+        for name in bad[:10]:
+            print(f"    • {name}", file=sys.stderr)
+        if len(bad) > 10:
+            print(f"    … and {len(bad) - 10} more", file=sys.stderr)
+        sys.exit(1)
+
+    trending_count = sum(1 for c in validated if c.get("trending"))
+    print(f"✅  Validation passed — {len(validated)} entries, {trending_count} trending, all required fields present.")
 
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(master, f, ensure_ascii=False, indent=2)
+        f.write(serialised)
 
     with_photo = sum(1 for c in master if is_good_photo(c.get("avatar", "")))
     print(f"\n✅ Wrote {len(master)} celebrities to {OUTPUT_FILE}")
