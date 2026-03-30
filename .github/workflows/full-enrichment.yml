@@ -1,0 +1,51 @@
+name: 🌟 Full Celebrity Enrichment (every 30 min)
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run full enrichment
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          SEARCHAPI_KEY: ${{ secrets.SEARCHAPI_KEY }}
+        run: python scripts/full_enrichment_cron.py
+
+      - name: Commit & push if data/celebs.json changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+          if [[ -n "$(git status --porcelain data/celebs.json 2>/dev/null)" ]]; then
+            git add data/celebs.json
+            git commit -m "chore: enrich data/celebs.json (auto)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+            echo "✅ data/celebs.json updated"
+          else
+            echo "ℹ️  No changes to commit"
+          fi
