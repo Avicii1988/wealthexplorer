@@ -15,6 +15,7 @@ import {
 } from '../data/celebrities'
 import { useCelebrities } from '../hooks/useCelebrityData'
 import CelebrityAvatar from '../components/CelebrityAvatar'
+import AssetImage from '../components/AssetImage'
 import NotificationBell from '../components/NotificationBell'
 import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
@@ -396,137 +397,116 @@ function AssetCard({ asset }: { asset: Asset }) {
   const { t } = useLang()
   const [liked, setLiked] = useState(false)
   const [expanded, setExpanded] = useState(false)
-  const [imgError, setImgError] = useState(false)
-  const [activePhoto, setActivePhoto] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
-  // Always use getAssetImage for the primary photo (checks SearchAPI cache first),
-  // then fall back to the raw photos array for additional gallery images
-  const cachedPrimary = getAssetImage(asset)
-  const galleryPhotos = asset.photos && asset.photos.length > 0
-    ? [cachedPrimary, ...asset.photos.filter(p => p !== cachedPrimary).slice(0, 2)]
-    : [cachedPrimary]
-  const mainSrc = galleryPhotos[activePhoto] ?? cachedPrimary
+  // Build the lightbox gallery: cached primary + deduped extras (max 3 total)
+  const primary = getAssetImage(asset)
+  const lightboxPhotos = [
+    primary,
+    ...(asset.photos?.filter(p => p && p !== primary) ?? []),
+  ].filter(Boolean).slice(0, 3) as string[]
+  const hasMultiple = lightboxPhotos.length > 1
 
   return (
     <>
-      {lightboxOpen && <Lightbox photos={galleryPhotos} startIndex={activePhoto} onClose={() => setLightboxOpen(false)} />}
-    <article className="bg-[#111] rounded-2xl overflow-hidden group hover:bg-[#161616] transition-colors duration-300">
-      {/* Image */}
-      <div
-        className="relative aspect-video overflow-hidden bg-[#1a1a1a] cursor-zoom-in"
-        onClick={() => !imgError && setLightboxOpen(true)}
-      >
-        {!imgError ? (
-          <img
-            src={mainSrc}
-            alt={asset.name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-            onError={() => setImgError(true)}
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center text-5xl">
-            {assetTypeIcons[asset.type]}
-          </div>
-        )}
-
-        {/* Badges */}
-        <div className="absolute top-4 left-4 right-4 flex items-start justify-between pointer-events-none">
-          <div className="flex items-center gap-2">
-            <span className="text-[11px] font-medium tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm" style={{ color: '#fff' }}>
-              {assetTypeIcons[asset.type]}&nbsp;{assetTypeLabels[asset.type]}
-            </span>
-            {asset.isNew && (
-              <span className="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full bg-[#c9a84c] text-[#0a0a0a]">
-                NEW
-              </span>
-            )}
-          </div>
-          <span
-            className="text-sm font-semibold px-3 py-1 rounded-full backdrop-blur-sm"
-            style={{ background: 'rgba(0,0,0,0.6)', color: '#c9a84c' }}
-          >
-            {formatValue(asset.estimatedValue)}
-          </span>
-        </div>
-      </div>
-
-      {/* Photo gallery strip — shown when 2+ photos are available */}
-      {galleryPhotos.length > 1 && (
-        <div className="flex gap-1.5 px-3 pt-2">
-          {galleryPhotos.map((src, i) => (
-            <button
-              key={i}
-              onClick={() => setActivePhoto(i)}
-              className={`flex-1 rounded overflow-hidden border-2 transition-all duration-200 ${
-                activePhoto === i
-                  ? 'border-[#c9a84c] opacity-100'
-                  : 'border-transparent opacity-50 hover:opacity-80'
-              }`}
-              style={{ aspectRatio: '16/9' }}
-              aria-label={`View photo ${i + 1}`}
-            >
-              <img src={src} alt="" className="w-full h-full object-cover" />
-            </button>
-          ))}
-        </div>
+      {lightboxOpen && (
+        <Lightbox photos={lightboxPhotos} startIndex={0} onClose={() => setLightboxOpen(false)} />
       )}
+      <article className="bg-[#111] rounded-2xl overflow-hidden group hover:bg-[#161616] transition-colors duration-300">
 
-      {/* Content */}
-      <div className="p-5">
-        {asset.year && (
-          <p className="text-[11px] tracking-widest uppercase text-gray-600 mb-2">{asset.year}</p>
-        )}
-
-        <div className="flex items-start justify-between gap-3 mb-3">
-          <h3 className="font-serif text-xl font-normal leading-snug text-white flex-1" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-            {asset.name}
-          </h3>
-          <button
-            onClick={() => setLiked(l => !l)}
-            className="flex-shrink-0 mt-1 transition-transform active:scale-90"
-            aria-label="Like"
-          >
-            <Heart
-              size={19}
-              className={`transition-all duration-200 ${liked ? 'fill-red-500 text-red-500 scale-110' : 'text-gray-600 hover:text-gray-400'}`}
-            />
-          </button>
-        </div>
-
-        {asset.location && (
-          <p className="flex items-center gap-1.5 text-xs text-gray-500 mb-3">
-            <MapPin size={11} className="flex-shrink-0" />
-            {asset.location}
-          </p>
-        )}
-
-        {asset.specs && (
-          <p className="text-xs text-gray-500 leading-relaxed mb-3 font-mono">{asset.specs}</p>
-        )}
-
-        <button
-          onClick={() => setExpanded(e => !e)}
-          className="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition-colors mb-1"
+        {/* ── Single image — 16:9, object-cover, click for lightbox ── */}
+        <div
+          className={`relative aspect-video overflow-hidden bg-[#1a1a1a] ${hasMultiple ? 'cursor-zoom-in' : ''}`}
+          onClick={() => hasMultiple && setLightboxOpen(true)}
         >
-          {expanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
-          {expanded ? t('less') : t('moreDetails')}
-        </button>
+          <AssetImage
+            asset={asset}
+            className="group-hover:scale-105 transition-transform duration-700 ease-out"
+          />
 
-        {expanded && (
-          <p className="text-sm text-gray-400 leading-relaxed mt-2 pt-3">
-            {asset.description}
-          </p>
-        )}
+          {/* Type badge + NEW + value */}
+          <div className="absolute top-4 left-4 right-4 flex items-start justify-between pointer-events-none">
+            <div className="flex items-center gap-2">
+              <span className="text-[11px] font-medium tracking-widest uppercase px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm" style={{ color: '#fff' }}>
+                {assetTypeIcons[asset.type]}&nbsp;{assetTypeLabels[asset.type]}
+              </span>
+              {asset.isNew && (
+                <span className="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full bg-[#c9a84c] text-[#0a0a0a]">
+                  NEW
+                </span>
+              )}
+            </div>
+            <span
+              className="text-sm font-semibold px-3 py-1 rounded-full backdrop-blur-sm"
+              style={{ background: 'rgba(0,0,0,0.6)', color: '#c9a84c' }}
+            >
+              {formatValue(asset.estimatedValue)}
+            </span>
+          </div>
 
-        <div className="flex items-center gap-1.5 mt-4 pt-4">
-          <Heart size={11} className="text-gray-600" />
-          <span className="text-xs text-gray-600">
-            {(asset.likes + (liked ? 1 : 0)).toLocaleString()} {t('likes')}
-          </span>
+          {/* Photo count hint — only when lightbox has extra images */}
+          {hasMultiple && (
+            <div className="absolute bottom-2 right-2 flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-sm pointer-events-none">
+              <span className="text-[10px] text-gray-300">+{lightboxPhotos.length - 1} photos</span>
+            </div>
+          )}
         </div>
-      </div>
-    </article>
+
+        {/* ── Content ── */}
+        <div className="p-5">
+          {asset.year && (
+            <p className="text-[11px] tracking-widest uppercase text-gray-600 mb-2">{asset.year}</p>
+          )}
+
+          <div className="flex items-start justify-between gap-3 mb-3">
+            <h3 className="font-serif text-xl font-normal leading-snug text-white flex-1" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+              {asset.name}
+            </h3>
+            <button
+              onClick={() => setLiked(l => !l)}
+              className="flex-shrink-0 mt-1 transition-transform active:scale-90"
+              aria-label="Like"
+            >
+              <Heart
+                size={19}
+                className={`transition-all duration-200 ${liked ? 'fill-red-500 text-red-500 scale-110' : 'text-gray-600 hover:text-gray-400'}`}
+              />
+            </button>
+          </div>
+
+          {asset.location && (
+            <p className="flex items-center gap-1.5 text-xs text-gray-500 mb-3">
+              <MapPin size={11} className="flex-shrink-0" />
+              {asset.location}
+            </p>
+          )}
+
+          {asset.specs && (
+            <p className="text-xs text-gray-500 leading-relaxed mb-3 font-mono">{asset.specs}</p>
+          )}
+
+          <button
+            onClick={() => setExpanded(e => !e)}
+            className="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition-colors mb-1"
+          >
+            {expanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+            {expanded ? t('less') : t('moreDetails')}
+          </button>
+
+          {expanded && (
+            <p className="text-sm text-gray-400 leading-relaxed mt-2 pt-3">
+              {asset.description}
+            </p>
+          )}
+
+          <div className="flex items-center gap-1.5 mt-4 pt-4">
+            <Heart size={11} className="text-gray-600" />
+            <span className="text-xs text-gray-600">
+              {(asset.likes + (liked ? 1 : 0)).toLocaleString()} {t('likes')}
+            </span>
+          </div>
+        </div>
+      </article>
     </>
   )
 }

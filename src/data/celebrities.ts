@@ -159,12 +159,25 @@ export function getNationalityFlag(nationality: string): string {
 
 
 /** Returns the best available avatar URL for a celebrity.
- *  Priority: photosCache (by ID, reliable only) > celebsPhotos (by name) > hardcoded avatar */
+ *  Priority:
+ *   1. photosCache[id]       — Wikipedia / TMDB, reliability-checked
+ *   2. celebsPhotos[name]    — SearchAPI result, reliability-checked
+ *   3. celeb.avatar          — URL stored directly in celebs.json (already enriched)
+ */
 export function getAvatar(celeb: Celebrity): string {
   const { photosCache, celebsPhotos } = getStore()
+
   const cached = photosCache[celeb.id]
   if (cached && isReliableUrl(cached)) return cached
-  return celebsPhotos[celeb.name]?.image || celeb.avatar
+
+  // Apply the same reliability guard to SearchAPI results — CDN URLs
+  // like shortpixel / fbsbx often block hotlinking and cause broken images.
+  const fromSearch = celebsPhotos[celeb.name]?.image
+  if (fromSearch && isReliableUrl(fromSearch)) return fromSearch
+
+  // celeb.avatar comes from celebs.json which is already enriched with the
+  // best available Wikipedia / TMDB URL — use it directly as the last resort.
+  return celeb.avatar || ''
 }
 
 // ── Diverse Unsplash fallback pools per asset type ────────────────────────────
