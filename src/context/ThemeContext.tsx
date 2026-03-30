@@ -36,6 +36,15 @@ html.light [class*="text-gray-600"] { color: #9a9188 !important; }
 html.light [class*="border-white"] { border-color: rgba(0,0,0,0.14) !important; }
 html.light [class*="divide-white"] > * + * { border-color: rgba(0,0,0,0.10) !important; }
 html.light [class*="placeholder-gray"]::placeholder { color: #a09890 !important; }
+/* Profile hero stays dark — keep all text white inside data-hero-dark sections */
+html.light [data-hero-dark] [class*="text-white"] { color: #fff !important; }
+html.light [data-hero-dark] [class*="text-gray-100"] { color: #f3f4f6 !important; }
+html.light [data-hero-dark] [class*="text-gray-200"] { color: #e5e7eb !important; }
+html.light [data-hero-dark] [class*="text-gray-300"] { color: #d1d5db !important; }
+html.light [data-hero-dark] [class*="text-gray-400"] { color: #9ca3af !important; }
+html.light [data-hero-dark] [class*="text-gray-500"] { color: #6b7280 !important; }
+html.light [data-hero-dark] [class*="text-gray-600"] { color: #6b7280 !important; }
+html.light [data-hero-dark] [class*="border-white"] { border-color: rgba(255,255,255,0.2) !important; }
 `
 
 let styleEl: HTMLStyleElement | null = null

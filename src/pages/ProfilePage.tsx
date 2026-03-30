@@ -17,7 +17,6 @@ import {
 import NotificationBell from '../components/NotificationBell'
 import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
-import { useTheme } from '../context/ThemeContext'
 
 const ALL = 'All' as const
 
@@ -764,8 +763,6 @@ export default function ProfilePage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const { t } = useLang()
-  const { theme } = useTheme()
-  const isLight = theme === 'light'
   const [avatarError, setAvatarError] = useState(false)
   const [followed, setFollowed] = useState<Set<string>>(getFollowed)
 
@@ -826,7 +823,7 @@ export default function ProfilePage() {
       </header>
 
       {/* ── HERO ────────────────────────────────────────────────── */}
-      <section className="relative">
+      <section className="relative" data-hero-dark>
         {/* Mobile: full-width portrait image */}
         <div className="sm:hidden w-full relative overflow-hidden" style={{ aspectRatio: '3/4', maxHeight: '70vh' }}>
           <img
@@ -906,7 +903,7 @@ export default function ProfilePage() {
                 className={`flex-shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium border transition-all duration-200 ${
                   isFollowed
                     ? 'bg-[#c9a84c]/10 border-[#c9a84c]/50 text-[#c9a84c] hover:bg-[#c9a84c]/20'
-                    : isLight ? 'border-gray-400 text-gray-700 hover:border-[#c9a84c] hover:text-[#c9a84c]' : 'border-white/20 text-gray-300 hover:border-[#c9a84c]/40 hover:text-[#c9a84c]'
+                    : 'border-white/20 text-gray-300 hover:border-[#c9a84c]/40 hover:text-[#c9a84c]'
                 }`}
               >
                 {isFollowed ? <Bell size={12} className="fill-[#c9a84c]" /> : <BellOff size={12} />}
