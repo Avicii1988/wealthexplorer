@@ -128,21 +128,30 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                   const showNewBadge = isWithin24h(celeb.isNew) || celeb.assets.some(a => a.isNew)
                   return (
                     <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
-                      <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 group-hover:bg-[#131107] flex flex-col items-center text-center pt-4 pb-3 px-2 gap-2.5">
+                      <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 overflow-hidden">
+                        {/* Magazine portrait image — fixed 3:4 ratio */}
+                        <div className="aspect-[3/4] overflow-hidden">
+                          <CelebrityAvatar
+                            celeb={celeb}
+                            size={200}
+                            className="group-hover:scale-105 transition-transform duration-700 ease-out"
+                          />
+                        </div>
+
                         {/* Gold shimmer overlay on hover */}
-                        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                          style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                          style={{ background: 'linear-gradient(180deg, rgba(201,168,76,0.08) 0%, transparent 40%, rgba(201,168,76,0.04) 100%)' }}
                         />
+
                         {showNewBadge && (
                           <div className="absolute top-2 right-2 flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-[#c9a84c] shadow-lg z-10">
                             <span className="w-1 h-1 rounded-full bg-[#0a0a0a] animate-pulse" />
                             <span className="text-[8px] font-bold text-[#0a0a0a] tracking-wider uppercase leading-none">New</span>
                           </div>
                         )}
-                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0">
-                          <CelebrityAvatar celeb={celeb} size={64} className="transition-all duration-500" />
-                        </div>
-                        <div className="w-full">
+
+                        {/* Name + net worth */}
+                        <div className="px-2.5 pt-2 pb-3 text-center">
                           <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
                             {celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 ml-0.5 text-[10px]"> (†)</span>}
                           </p>
@@ -157,15 +166,10 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                 {!showAll && remaining > 0 && (
                   <button
                     onClick={() => setExpandedLetters(prev => new Set([...prev, letter]))}
-                    className="bg-[#111] rounded-2xl border border-gray-800 hover:border-gray-600 transition-all duration-300 hover:bg-[#141414] flex flex-col items-center justify-center text-center pt-4 pb-3 px-2 gap-2 min-h-[140px]"
+                    className="bg-[#111] rounded-2xl border border-dashed border-gray-800 hover:border-[#c9a84c]/30 transition-all duration-300 hover:bg-[#141414] flex flex-col items-center justify-center text-center gap-2 aspect-[3/4]"
                   >
-                    <div className="w-16 h-16 rounded-full border-2 border-dashed border-gray-700 flex items-center justify-center">
-                      <span className="text-xl text-gray-600">+</span>
-                    </div>
-                    <p className="text-[10px] text-gray-500 leading-tight">
-                      {remaining} more
-                    </p>
-                    <p className="text-[9px] text-gray-700">Show all</p>
+                    <span className="text-2xl text-gray-700 leading-none">+{remaining}</span>
+                    <p className="text-[9px] text-gray-600 tracking-widest uppercase">Show all</p>
                   </button>
                 )}
               </div>
