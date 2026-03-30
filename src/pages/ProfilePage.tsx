@@ -399,12 +399,13 @@ function AssetCard({ asset }: { asset: Asset }) {
   const [expanded, setExpanded] = useState(false)
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
-  // Build the lightbox gallery: cached primary + deduped extras (max 3 total)
+  // Build the lightbox gallery: enriched images > legacy photos > primary only
   const primary = getAssetImage(asset)
-  const lightboxPhotos = [
-    primary,
-    ...(asset.photos?.filter(p => p && p !== primary) ?? []),
-  ].filter(Boolean).slice(0, 3) as string[]
+  const extraSources: string[] = asset.images
+    ? asset.images.filter(p => p && p !== primary)
+    : (asset.photos?.filter(p => p && p !== primary) ?? [])
+  const lightboxPhotos = [primary, ...extraSources]
+    .filter(Boolean).slice(0, 3) as string[]
   const hasMultiple = lightboxPhotos.length > 1
 
   return (

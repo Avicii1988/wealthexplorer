@@ -14,6 +14,10 @@ export interface Asset {
   estimatedValue: number; // millions USD
   image?: string;
   photos?: string[]; // up to 3 gallery images shown in asset card
+  images?: string[]; // enriched: up to 3 validated high-res URLs (from enrich_assets.py)
+  valueFormatted?: string; // enriched: e.g. "$4.2M" from valuation search
+  valuationSource?: string; // enriched: domain that provided the valuation
+  lastValuated?: string; // enriched: ISO date of last valuation search
   year?: number;
   location?: string;
   specs?: string;
@@ -270,18 +274,25 @@ function hashId(id: string): number {
 
 /**
  * Returns the best image URL for an asset.
- * Priority: SearchApi cache > hardcoded image (if not a repeated generic) > diverse pool fallback
+ * Priority:
+ *  1. asset.images[0]    — enriched by enrich_assets.py (brand-validated, high-res)
+ *  2. assetPhotosCache   — legacy SearchAPI per-asset cache
+ *  3. asset.image        — hardcoded URL (if not a known repeated placeholder)
+ *  4. Diverse pool       — deterministic per-type fallback
  */
 export function getAssetImage(asset: Asset): string {
-  // 1. Use the SearchApi-fetched real photo if available
+  // 1. Prefer the enriched images array (strict brand-validated, up to 3 URLs)
+  if (asset.images && asset.images.length > 0) return asset.images[0]
+
+  // 2. Use the legacy SearchApi-fetched photo if available
   const apiCache = getStore().assetPhotosCache as Record<string, AssetCacheEntry>
   const cached = apiCache[asset.id]
   if (cached) return typeof cached === 'string' ? cached : cached.url
 
-  // 2. Use the hardcoded image if it's not one of the known repeated placeholders
+  // 3. Use the hardcoded image if it's not one of the known repeated placeholders
   if (asset.image && !REPEATED_URLS.has(asset.image)) return asset.image
 
-  // 3. Deterministically pick from the diverse per-type pool
+  // 4. Deterministically pick from the diverse per-type pool
   const pool = ASSET_IMAGE_POOLS[asset.type] ?? ASSET_IMAGE_POOLS.real_estate
   return pool[hashId(asset.id) % pool.length]
 }
