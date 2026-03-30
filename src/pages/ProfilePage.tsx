@@ -7,7 +7,6 @@ import {
   formatValue,
   formatNetWorth,
   getNationalityFlag,
-  getAvatar,
   getAssetImage,
   DECEASED_IDS,
   type AssetType,
@@ -15,6 +14,7 @@ import {
   type Celebrity,
 } from '../data/celebrities'
 import { useCelebrities } from '../hooks/useCelebrityData'
+import CelebrityAvatar from '../components/CelebrityAvatar'
 import NotificationBell from '../components/NotificationBell'
 import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
@@ -735,15 +735,7 @@ function MoreProfilesCarousel({ pool }: { pool: Celebrity[] }) {
                   style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.01) 50%, rgba(201,168,76,0.05) 100%)' }}
                 />
                 <div className="rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_10px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0" style={{ width: 56, height: 56 }}>
-                  <img
-                    src={getAvatar(c)}
-                    alt={c.name}
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: 'center 15%' }}
-                    onError={e => {
-                      (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(c.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
-                    }}
-                  />
+                  <CelebrityAvatar celeb={c} size={56} />
                 </div>
                 <div className="w-full">
                   <p className="text-[10px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
@@ -766,13 +758,11 @@ export default function ProfilePage() {
   const navigate = useNavigate()
   const { t } = useLang()
   const { celebrities, loading } = useCelebrities()
-  const [avatarError, setAvatarError] = useState(false)
   const [followed, setFollowed] = useState<Set<string>>(getFollowed)
 
-  // Scroll to top and reset per-profile UI state whenever the profile changes
+  // Scroll to top whenever the profile changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
-    setAvatarError(false)
   }, [id])
 
   if (loading) {
@@ -797,7 +787,6 @@ export default function ProfilePage() {
   }
 
   const totalValue = celeb.assets.reduce((s, a) => s + a.estimatedValue, 0)
-  const fallbackAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
   const isFollowed = followed.has(celeb.id)
 
   function toggleFollow() {
@@ -837,13 +826,7 @@ export default function ProfilePage() {
       <section className="relative" data-hero-dark>
         {/* Mobile: full-width portrait image */}
         <div className="sm:hidden w-full relative overflow-hidden" style={{ aspectRatio: '3/4', maxHeight: '70vh' }}>
-          <img
-            src={avatarError ? fallbackAvatar : getAvatar(celeb)}
-            alt={celeb.name}
-            className="w-full h-full object-cover"
-            style={{ objectPosition: 'center 15%' }}
-            onError={() => setAvatarError(true)}
-          />
+          <CelebrityAvatar celeb={celeb} size={400} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent" />
           {/* Category + trending badges over image */}
           <div className="absolute top-4 left-4 flex items-center gap-2">
@@ -874,13 +857,7 @@ export default function ProfilePage() {
               className="w-48 h-48 rounded-full overflow-hidden shadow-2xl border-2"
               style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.7)', borderColor: 'rgba(201,168,76,0.25)' }}
             >
-              <img
-                src={avatarError ? fallbackAvatar : getAvatar(celeb)}
-                alt={celeb.name}
-                className="w-full h-full object-cover"
-                style={{ objectPosition: 'center 15%' }}
-                onError={() => setAvatarError(true)}
-              />
+              <CelebrityAvatar celeb={celeb} size={192} />
             </div>
           </div>
 

@@ -11,11 +11,11 @@ import {
   assetTypeIcons,
   formatValue,
   formatNetWorth,
-  getAvatar,
   getAssetImage,
   DECEASED_IDS,
 } from '../data/celebrities'
 import { useCelebrities } from '../hooks/useCelebrityData'
+import CelebrityAvatar from '../components/CelebrityAvatar'
 import NotificationBell from '../components/NotificationBell'
 import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
@@ -140,15 +140,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                           </div>
                         )}
                         <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-[#c9a84c]/60 group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)] transition-all duration-300 flex-shrink-0">
-                          <img
-                            src={getAvatar(celeb)}
-                            alt={celeb.name}
-                            className="w-full h-full object-cover transition-all duration-500"
-                            style={{ objectPosition: 'center 15%' }}
-                            onError={e => {
-                              (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=200&bold=true`
-                            }}
-                          />
+                          <CelebrityAvatar celeb={celeb} size={64} className="transition-all duration-500" />
                         </div>
                         <div className="w-full">
                           <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
@@ -298,32 +290,14 @@ function LanguageSelector() {
 }
 
 // ── CIRCLE CARD (trending / category profile grids) ──────────────────────────
-const PLACEHOLDER_AVATAR = `https://ui-avatars.com/api/?background=1a1a1a&color=c9a84c&size=88&bold=true`
-
 function CircleCard({ celeb }: { celeb: Celebrity }) {
-  // Use avatar from JSON directly; getAvatar() additionally checks the runtime
-  // photo store caches for higher-quality images when available.
-  const src = getAvatar(celeb) || celeb.avatar || PLACEHOLDER_AVATAR.replace('?', `?name=${encodeURIComponent(celeb.name)}&`)
-
   return (
     <Link
       to={`/celebrities/${celeb.id}`}
       className="flex flex-col items-center gap-2 group flex-shrink-0"
     >
       <div className="w-[84px] h-[84px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/80 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.45)] transition-all duration-300 shadow-lg">
-        <img
-          src={src}
-          alt={celeb.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          style={{ objectPosition: 'center 15%' }}
-          onError={e => {
-            const el = e.target as HTMLImageElement
-            // Prevent infinite loop if the fallback itself fails
-            if (!el.src.includes('ui-avatars.com')) {
-              el.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=88&bold=true`
-            }
-          }}
-        />
+        <CelebrityAvatar celeb={celeb} size={84} className="group-hover:scale-105 transition-transform duration-500" />
       </div>
       <span className="text-[10px] text-gray-500 group-hover:text-white transition-colors text-center w-20 leading-tight">
         {celeb.name}
@@ -523,15 +497,7 @@ export default function HomePage() {
                       className="flex items-center gap-4 px-4 py-3 hover:bg-white/5 transition-colors group"
                     >
                       <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-white/10">
-                        <img
-                          src={getAvatar(celeb)}
-                          alt={celeb.name}
-                          className="w-full h-full object-cover"
-                          style={{ objectPosition: 'center 15%' }}
-                          onError={e => {
-                            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(celeb.name)}&background=1a1a1a&color=c9a84c&size=40`
-                          }}
-                        />
+                        <CelebrityAvatar celeb={celeb} size={40} />
                       </div>
                       <div className="flex-1 text-left">
                         <p className="text-sm font-medium text-white group-hover:text-[#c9a84c] transition-colors leading-snug">{celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 text-xs ml-0.5"> (†)</span>}</p>
