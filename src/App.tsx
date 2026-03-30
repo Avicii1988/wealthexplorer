@@ -11,7 +11,7 @@ function App() {
   return (
     <ThemeProvider>
     <LanguageProvider>
-      <BrowserRouter basename="/wealthexplorer">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/celebrities/:id" element={<ProfilePage />} />
