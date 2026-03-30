@@ -1,9 +1,7 @@
 // Photo cache populated by scripts/enrich-photos.mjs (Wikipedia → TMDb chain)
-import photosCache from './photosCache.json'
-// Real celebrity photos enriched via TMDB + SearchAPI (keyed by celebrity name)
-import celebsPhotos from './celebs_photos.json'
-// Asset photo cache populated by scripts/fetch-asset-images.mjs (SearchApi.io)
-import assetPhotosCache from './assetPhotosCache.json'
+// NOTE: photosCache, celebsPhotos and assetPhotosCache are no longer bundled —
+// they are fetched at runtime from public/data/ by src/data/photoStore.ts.
+import { getStore, isReliableUrl, type AssetCacheEntry } from './photoStore'
 import { extraCelebrities } from './extraCelebrities'
 import { allExtensions } from './extraCelebritiesExtended'
 
@@ -3394,11 +3392,12 @@ export function getNewAssets(): { celeb: Celebrity; asset: Asset }[] {
 }
 
 /** Returns the best available avatar URL for a celebrity.
- *  Priority: photosCache (by ID) > celebsPhotos (by name) > hardcoded avatar */
+ *  Priority: photosCache (by ID, reliable only) > celebsPhotos (by name) > hardcoded avatar */
 export function getAvatar(celeb: Celebrity): string {
-  const cache = photosCache as Record<string, string>
-  const nameCache = celebsPhotos as Record<string, { image: string }>
-  return cache[celeb.id] || nameCache[celeb.name]?.image || celeb.avatar
+  const { photosCache, celebsPhotos } = getStore()
+  const cached = photosCache[celeb.id]
+  if (cached && isReliableUrl(cached)) return cached
+  return celebsPhotos[celeb.name]?.image || celeb.avatar
 }
 
 // ── Diverse Unsplash fallback pools per asset type ────────────────────────────
@@ -3495,7 +3494,7 @@ function hashId(id: string): number {
  */
 export function getAssetImage(asset: Asset): string {
   // 1. Use the SearchApi-fetched real photo if available
-  const apiCache = assetPhotosCache as Record<string, { url: string; thumbnail: string } | string>
+  const apiCache = getStore().assetPhotosCache as Record<string, AssetCacheEntry>
   const cached = apiCache[asset.id]
   if (cached) return typeof cached === 'string' ? cached : cached.url
 
