@@ -2,7 +2,6 @@ import { useState, useMemo, useRef, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Search, ChevronDown, ChevronUp, X } from 'lucide-react'
 import {
-  celebrities,
   categories,
   assetTypeLabels,
   type Category,
@@ -16,6 +15,7 @@ import {
   getAssetImage,
   DECEASED_IDS,
 } from '../data/celebrities'
+import { useCelebrities } from '../hooks/useCelebrityData'
 import NotificationBell from '../components/NotificationBell'
 import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
@@ -349,6 +349,7 @@ function ScrollToTopButton() {
 export default function HomePage() {
   const navigate = useNavigate()
   const { t } = useLang()
+  const { celebrities, loading } = useCelebrities()
   const [search, setSearch] = useState('')
   const [activeCategory, setActiveCategory] = useState<Category>('All')
   const [activeAssetType, setActiveAssetType] = useState<AssetType | 'All'>('All')
@@ -432,6 +433,14 @@ export default function HomePage() {
   const showTrending = !search && activeCategory === 'All'
   const showCategoryProfiles = !search && activeCategory !== 'All'
   const showSearchDropdown = searchFocused && search.trim().length > 0
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+        <p className="text-gray-500 text-sm tracking-widest uppercase">Loading celebrities…</p>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">

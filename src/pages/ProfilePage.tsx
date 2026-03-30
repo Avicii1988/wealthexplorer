@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { ArrowLeft, Heart, MapPin, ChevronDown, ChevronUp, Bell, BellOff, ArrowUp, ChevronLeft, ChevronRight } from 'lucide-react'
 import {
-  celebrities,
   assetTypeIcons,
   assetTypeLabels,
   formatValue,
@@ -13,7 +12,9 @@ import {
   DECEASED_IDS,
   type AssetType,
   type Asset,
+  type Celebrity,
 } from '../data/celebrities'
+import { useCelebrities } from '../hooks/useCelebrityData'
 import NotificationBell from '../components/NotificationBell'
 import ThemeToggle from '../components/ThemeToggle'
 import { LANGUAGES, useLang } from '../i18n'
@@ -145,7 +146,7 @@ function addMetres(height: string): string {
 }
 
 // ── AT A GLANCE TABLE — 2-column grid ─────────────────────────────────────────
-function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+function GlanceTable({ celeb }: { celeb: Celebrity }) {
   const { t } = useLang()
   const isDeceased = DECEASED_IDS.has(celeb.id)
 
@@ -194,6 +195,7 @@ function GlanceTable({ celeb }: { celeb: NonNullable<typeof celebrities[number]>
 // ── RELATIONSHIPS ─────────────────────────────────────────────────────────────
 // Link to a celeb profile if this name matches one in the database
 function CelebName({ name }: { name: string }) {
+  const { celebrities } = useCelebrities()
   const match = celebrities.find(c => c.name.toLowerCase() === name.toLowerCase())
   if (match) {
     return (
@@ -225,7 +227,7 @@ function NameList({ names }: { names: string[] }) {
   )
 }
 
-function RelationshipsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+function RelationshipsSection({ celeb }: { celeb: Celebrity }) {
   const { t } = useLang()
   const r = celeb.relationships
   if (!r) return null
@@ -275,7 +277,7 @@ function firstSentence(text: string): string {
 }
 
 // ── GOSSIP & CONTROVERSY — Flat list, two separate sections ──────────────────
-function GossipSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+function GossipSection({ celeb }: { celeb: Celebrity }) {
   const allItems = celeb.gossip
   if (!allItems?.length) return null
 
@@ -530,7 +532,7 @@ function AssetCard({ asset }: { asset: Asset }) {
 }
 
 // ── ASSETS SECTION ────────────────────────────────────────────────────────────
-function AssetsSection({ celeb }: { celeb: NonNullable<typeof celebrities[number]> }) {
+function AssetsSection({ celeb }: { celeb: Celebrity }) {
   const { t } = useLang()
   const [activeType, setActiveType] = useState<AssetType | typeof ALL>(ALL)
 
@@ -639,7 +641,7 @@ function LanguageSelector() {
 }
 
 // ── MORE PROFILES — content-width carousel with arrow navigation ───────────────
-function MoreProfilesCarousel({ pool }: { pool: NonNullable<typeof celebrities[number]>[] }) {
+function MoreProfilesCarousel({ pool }: { pool: Celebrity[] }) {
   const { t } = useLang()
   const trackRef = useRef<HTMLDivElement>(null)
   const touchStartX = useRef(0)
@@ -763,6 +765,7 @@ export default function ProfilePage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const { t } = useLang()
+  const { celebrities, loading } = useCelebrities()
   const [avatarError, setAvatarError] = useState(false)
   const [followed, setFollowed] = useState<Set<string>>(getFollowed)
 
@@ -771,6 +774,14 @@ export default function ProfilePage() {
     window.scrollTo({ top: 0, behavior: 'instant' })
     setAvatarError(false)
   }, [id])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+        <p className="text-gray-500 text-sm tracking-widest uppercase">Loading celebrities…</p>
+      </div>
+    )
+  }
 
   const celeb = celebrities.find(c => c.id === id)
 
