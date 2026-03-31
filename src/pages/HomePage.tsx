@@ -128,19 +128,22 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                   const showNewBadge = isWithin24h(celeb.isNew) || (celeb.assets ?? []).some(a => a.isNew)
                   return (
                     <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
-                      <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 overflow-hidden">
-                        {/* Magazine portrait image — fixed 3:4 ratio */}
-                        <div className="aspect-[3/4] overflow-hidden">
-                          <CelebrityAvatar
-                            celeb={celeb}
-                            size={200}
-                            className="group-hover:scale-105 transition-transform duration-700 ease-out"
-                          />
-                        </div>
+                      <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 overflow-hidden aspect-[3/4]">
+                        {/* Photo fills the entire card */}
+                        <CelebrityAvatar
+                          celeb={celeb}
+                          size={200}
+                          className="absolute inset-0 group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+
+                        {/* Gradient scrim so text is legible over the photo */}
+                        <div className="absolute inset-x-0 bottom-0 h-2/5 pointer-events-none"
+                          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)' }}
+                        />
 
                         {/* Gold shimmer overlay on hover */}
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                          style={{ background: 'linear-gradient(180deg, rgba(201,168,76,0.08) 0%, transparent 40%, rgba(201,168,76,0.04) 100%)' }}
+                          style={{ background: 'linear-gradient(180deg, rgba(201,168,76,0.06) 0%, transparent 50%)' }}
                         />
 
                         {showNewBadge && (
@@ -150,12 +153,12 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                           </div>
                         )}
 
-                        {/* Name + net worth */}
-                        <div className="px-2.5 pt-2 pb-3 text-center">
-                          <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
-                            {celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 ml-0.5 text-[10px]"> (†)</span>}
+                        {/* Name + net worth — overlaid at bottom */}
+                        <div className="absolute inset-x-0 bottom-0 px-2 pb-2 pt-1 text-center z-10">
+                          <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2 drop-shadow-sm">
+                            {celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-500 ml-0.5 text-[10px]"> (†)</span>}
                           </p>
-                          <p className="text-[10px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
+                          <p className="text-[10px] mt-0.5 drop-shadow-sm" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
                         </div>
                       </div>
                     </Link>
