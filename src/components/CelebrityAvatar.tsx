@@ -52,6 +52,7 @@ export default function CelebrityAvatar({
       height={size}
       loading="lazy"
       draggable={false}
+      referrerPolicy="no-referrer"
       className={`w-full h-full object-cover ${className}`.trim()}
       style={{ objectPosition: position }}
       onError={() => {

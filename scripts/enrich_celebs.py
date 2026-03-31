@@ -192,35 +192,129 @@ def _searchapi_available() -> bool:
         return False
 
 
-def fetch_bio(name: str) -> Optional[str]:
-    """
-    Fetch a 2-3 sentence bio for *name* using SearchAPI Google.
-    Returns None on any failure.
-    """
+def _searchapi_get(query: str, num: int = 5) -> list[dict]:
+    """Make a SearchAPI Google search and return organic_results list."""
     if not SEARCHAPI_KEY or not _REQUESTS:
-        return None
-    query = f'"{name}" biography entrepreneur net worth 2025'
+        return []
     try:
         r = requests.get(
             SEARCHAPI_URL,
-            params={"engine": "google", "q": query, "api_key": SEARCHAPI_KEY, "num": 5},
+            params={"engine": "google", "q": query, "api_key": SEARCHAPI_KEY, "num": num},
             timeout=15,
         )
         if r.status_code == 429:
-            print(f"    [SearchAPI] 429 rate limit for {name!r} — skipping")
+            print("    [SearchAPI] 429 rate limit — waiting 30s")
             time.sleep(30)
-            return None
+            return []
         if not r.ok:
-            return None
-        results = r.json().get("organic_results") or []
-        for result in results:
-            snippet = result.get("snippet") or ""
-            bio = _extract_bio_from_snippet(snippet, name)
-            if len(bio) >= 60:
-                return bio
+            return []
+        return r.json().get("organic_results") or []
     except Exception as e:
-        print(f"    [SearchAPI] error for {name!r}: {e}")
+        print(f"    [SearchAPI] error: {e}")
+        return []
+
+
+def fetch_bio(name: str) -> Optional[str]:
+    """Fetch a 2-3 sentence bio via SearchAPI Google."""
+    for result in _searchapi_get(f'"{name}" biography net worth 2025', num=5):
+        bio = _extract_bio_from_snippet(result.get("snippet") or "", name)
+        if len(bio) >= 60:
+            return bio
     return None
+
+
+def fetch_relationships(name: str) -> Optional[dict]:
+    """
+    Query SearchAPI for family/relationship info and return a relationships dict.
+    Keys: spouse, partner, exSpouse, exPartner, children (list)
+    """
+    results = _searchapi_get(f'"{name}" wife husband children family relationships', num=8)
+    rel: dict = {}
+    children: list[str] = []
+
+    for result in results:
+        snippet = result.get("snippet") or ""
+
+        # Detect spouse/partner patterns
+        for pattern, key in [
+            (r"married to ([A-Z][a-z]+ [A-Z][a-z]+)", "spouse"),
+            (r"wife[,\s]+([A-Z][a-z]+ [A-Z][a-z]+)", "spouse"),
+            (r"husband[,\s]+([A-Z][a-z]+ [A-Z][a-z]+)", "spouse"),
+            (r"partner[,\s]+([A-Z][a-z]+ [A-Z][a-z]+)", "partner"),
+        ]:
+            m = re.search(pattern, snippet)
+            if m and key not in rel:
+                rel[key] = m.group(1)
+
+        # Detect children
+        m = re.search(
+            r"(?:children|kids|daughters?|sons?).*?named? ([A-Z][a-z]+(?:,\s*[A-Z][a-z]+)*)",
+            snippet,
+        )
+        if m:
+            for child in m.group(1).split(","):
+                child = child.strip()
+                if child and child not in children:
+                    children.append(child)
+
+    if children:
+        rel["children"] = children[:6]
+    return rel if rel else None
+
+
+def fetch_gossip(name: str) -> Optional[list[dict]]:
+    """
+    Query SearchAPI for recent controversies and return a gossip list.
+    Each item: {title, summary, type: 'gossip'|'controversy', date}
+    """
+    results = _searchapi_get(f'"{name}" controversy scandal news 2024 2025', num=10)
+    items: list[dict] = []
+    seen_titles: set[str] = set()
+
+    for result in results:
+        title   = (result.get("title") or "").strip()
+        snippet = (result.get("snippet") or "").strip()
+        if not title or not snippet or len(snippet) < 40:
+            continue
+
+        norm = re.sub(r"\W+", " ", title.lower()).strip()
+        if norm in seen_titles:
+            continue
+        seen_titles.add(norm)
+
+        # Classify
+        low = title.lower() + " " + snippet.lower()
+        gtype = "controversy" if any(
+            w in low for w in ["sued", "lawsuit", "trial", "arrested", "scandal",
+                                "controversy", "fired", "ban", "fine", "court"]
+        ) else "gossip"
+
+        # Extract a rough date from the snippet
+        date_m = re.search(
+            r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+(\d{4})",
+            snippet,
+        )
+        date_m2 = re.search(r"\b(20\d{2})\b", snippet)
+        date_str = ""
+        if date_m:
+            date_str = f"{date_m.group(1)} {date_m.group(2)}"
+        elif date_m2:
+            date_str = date_m2.group(1)
+
+        # Remove " - TMZ" / " | CNN" suffix from title
+        clean_title = re.sub(r"\s*[-|]\s*[A-Z][A-Za-z ]+$", "", title).strip()
+
+        items.append({
+            "title":   clean_title[:120],
+            "summary": _first_sentences(snippet, 2)[:300],
+            "type":    gtype,
+            "date":    date_str,
+        })
+
+        if len(items) >= 4:
+            break
+
+    return items if items else None
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -279,6 +373,24 @@ def enrich_celeb(
             celeb["bio"] = bio
             changed = True
             print(f"    [bio] {bio[:80]}…")
+        time.sleep(SLEEP_BETWEEN)
+
+    # ── 3. Relationships — only fetch if empty ────────────────────────────────
+    if not celeb.get("relationships") or force:
+        rel = fetch_relationships(name)
+        if rel:
+            celeb["relationships"] = rel
+            changed = True
+            print(f"    [relationships] {list(rel.keys())}")
+        time.sleep(SLEEP_BETWEEN)
+
+    # ── 4. Gossip — only fetch if empty ──────────────────────────────────────
+    if not celeb.get("gossip") or force:
+        gossip = fetch_gossip(name)
+        if gossip:
+            celeb["gossip"] = gossip
+            changed = True
+            print(f"    [gossip] {len(gossip)} items")
         time.sleep(SLEEP_BETWEEN)
 
     return changed
