@@ -61,6 +61,7 @@ export default function AssetImage({ asset, className = '' }: Props) {
       alt={asset.name}
       loading="lazy"
       draggable={false}
+      referrerPolicy="no-referrer"
       className={`w-full h-full object-cover ${className}`.trim()}
       onError={() => setErrored(true)}
     />
