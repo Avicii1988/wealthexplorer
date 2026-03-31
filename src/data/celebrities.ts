@@ -31,6 +31,8 @@ export interface Celebrity {
   category: Exclude<Category, 'All'>;
   netWorth: number; // billions
   avatar: string;
+  image?: string;       // TMDB/Wikipedia URL from enrichment pipeline (higher quality)
+  photo_source?: string; // 'TMDB' | 'Wikipedia' etc.
   coverImage: string; // wide hero image
   nationality: string;
   bio: string;
@@ -164,9 +166,11 @@ export function getNationalityFlag(nationality: string): string {
 
 /** Returns the best available avatar URL for a celebrity.
  *  Priority:
- *   1. photosCache[id]       — Wikipedia / TMDB, reliability-checked
- *   2. celebsPhotos[name]    — SearchAPI result, reliability-checked
- *   3. celeb.avatar          — URL stored directly in celebs.json (already enriched)
+ *   1. photosCache[id]    — Wikipedia / TMDB cached by enrichment scripts
+ *   2. celebsPhotos[name] — SearchAPI result
+ *   3. celeb.image        — TMDB/Wikipedia URL added by full_enrichment_cron.py
+ *   4. celeb.avatar       — fallback URL in celebs.json
+ *  All sources are checked with isReliableUrl() — blocked CDN domains return ''.
  */
 export function getAvatar(celeb: Celebrity): string {
   const { photosCache, celebsPhotos } = getStore()
@@ -174,14 +178,18 @@ export function getAvatar(celeb: Celebrity): string {
   const cached = photosCache[celeb.id]
   if (cached && isReliableUrl(cached)) return cached
 
-  // Apply the same reliability guard to SearchAPI results — CDN URLs
-  // like shortpixel / fbsbx often block hotlinking and cause broken images.
   const fromSearch = celebsPhotos[celeb.name]?.image
   if (fromSearch && isReliableUrl(fromSearch)) return fromSearch
 
-  // celeb.avatar comes from celebs.json which is already enriched with the
-  // best available Wikipedia / TMDB URL — use it directly as the last resort.
-  return celeb.avatar || ''
+  // celeb.image is populated by the enrichment pipeline (TMDB, Wikipedia)
+  if (celeb.image && isReliableUrl(celeb.image)) return celeb.image
+
+  // celeb.avatar: apply the same reliability guard — Instagram/Facebook CDN
+  // URLs block hotlinking and cause broken images; return '' to let CelebrityAvatar
+  // fall through to the ui-avatars.com initials placeholder instead.
+  if (celeb.avatar && isReliableUrl(celeb.avatar)) return celeb.avatar
+
+  return ''
 }
 
 // ── Diverse Unsplash fallback pools per asset type ────────────────────────────
