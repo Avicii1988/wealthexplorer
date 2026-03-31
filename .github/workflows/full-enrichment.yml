@@ -31,21 +31,42 @@ jobs:
       - name: Run full enrichment
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-          SEARCHAPI_KEY: ${{ secrets.SEARCHAPI_KEY }}
+          SEARCHAPI_KEY: ${{ secrets.SEARCH_API_KEY }}
+          SEARCHAPI_API_KEY: ${{ secrets.SEARCH_API_KEY }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
         run: python scripts/full_enrichment_cron.py
 
-      - name: Commit & push if data/celebs.json changed
+      - name: Validate output before committing
+        run: |
+          python3 -c "
+          import json, sys
+          try:
+              data = json.load(open('public/data/celebs.json'))
+          except Exception as e:
+              print(f'❌ JSON parse error: {e}')
+              sys.exit(1)
+          if not isinstance(data, list) or len(data) < 500:
+              print(f'❌ Safety check failed: only {len(data)} entries — refusing to commit')
+              sys.exit(1)
+          nulls = sum(1 for c in data if not c.get('name'))
+          if nulls > 10:
+              print(f'❌ Too many null names ({nulls}) — likely a corrupt run')
+              sys.exit(1)
+          print(f'✅ Validated: {len(data)} entries, {nulls} null names')
+          "
+
+      - name: Commit & push if public/data/celebs.json changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
-          if [[ -n "$(git status --porcelain data/celebs.json 2>/dev/null)" ]]; then
-            git add data/celebs.json
-            git commit -m "chore: enrich data/celebs.json (auto)"
+          if [[ -n "$(git status --porcelain public/data/celebs.json 2>/dev/null)" ]]; then
+            git add public/data/celebs.json
+            git commit -m "chore: enrich public/data/celebs.json (auto)"
             git pull --rebase origin main
             git push origin HEAD:main
-            echo "✅ data/celebs.json updated"
+            echo "✅ public/data/celebs.json updated"
           else
             echo "ℹ️  No changes to commit"
           fi

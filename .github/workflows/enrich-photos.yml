@@ -30,21 +30,24 @@ jobs:
       - name: Enrich real photos only
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-          SEARCHAPI_KEY: ${{ secrets.SEARCHAPI_KEY }}
+          SEARCHAPI_KEY: ${{ secrets.SEARCH_API_KEY }}
+          SEARCHAPI_API_KEY: ${{ secrets.SEARCH_API_KEY }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
         run: python scripts/enrich_real_photos.py
 
-      - name: Commit & push if changes
+      - name: Commit & push if photos changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
-          if [[ -n "$(git status --porcelain src/data/celebs_photos.json 2>/dev/null)" ]]; then
-            git add src/data/celebs_photos.json
-            git commit -m "chore: add real celebrity photos (auto daily)"
+          CHANGED=$(git status --porcelain src/data/celebs_photos.json public/data/celebs.json 2>/dev/null)
+          if [[ -n "$CHANGED" ]]; then
+            git add src/data/celebs_photos.json public/data/celebs.json 2>/dev/null || true
+            git commit -m "chore: update celebrity photos (auto daily)"
             git pull --rebase origin main
             git push origin HEAD:main
-            echo "✅ New real photos committed"
+            echo "✅ Photos committed"
           else
             echo "ℹ️ No new photos this run"
           fi
