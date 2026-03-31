@@ -1109,7 +1109,13 @@
         "type": "real_estate",
         "name": "Hacendado Stud Farm",
         "description": "Ortega's sprawling equestrian estate in A Coruna, Spain, home to champion thoroughbreds.",
-        "estimatedValue": 200
+        "estimatedValue": 200,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$200M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -1419,7 +1425,13 @@
         "type": "yacht",
         "name": "A",
         "description": "His legendary 119-metre sailing yacht A -- one of the most visually distinctive vessels ever built.",
-        "estimatedValue": 300
+        "estimatedValue": 300,
+        "images": [
+          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$300M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -2777,7 +2789,13 @@
         "type": "yacht",
         "name": "Symphony",
         "description": "The 101-metre superyacht Symphony, used for family vacations in the Mediterranean.",
-        "estimatedValue": 150
+        "estimatedValue": 150,
+        "images": [
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1505916349660-8d91a99f8901?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$150M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -3478,7 +3496,13 @@
         "type": "real_estate",
         "name": "San Francisco Home",
         "description": "Chesky's stylish San Francisco home -- fittingly, originally discovered on Airbnb.",
-        "estimatedValue": 14
+        "estimatedValue": 14,
+        "images": [
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$14M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -4036,7 +4060,13 @@
         "type": "real_estate",
         "name": "Palm Beach Estate",
         "description": "Icahn's sprawling beachfront estate in Palm Beach, adjacent to similar properties owned by fellow billionaires.",
-        "estimatedValue": 50
+        "estimatedValue": 50,
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$50M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -4160,7 +4190,13 @@
         "type": "real_estate",
         "name": "Mexico City Mansion",
         "description": "Slim's palatial Mexico City compound in the exclusive Lomas de Chapultepec neighbourhood.",
-        "estimatedValue": 70
+        "estimatedValue": 70,
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$70M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -5619,7 +5655,12 @@
         "image_url": "https://i.dailymail.co.uk/1s/2023/03/30/16/69296935-0-image-a-3_1680191540665.jpg",
         "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd3Rp1yXDHRyKv0tbnvvnUXUD78XsLeeI6Nw&s",
         "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "Gulfstream G650",
@@ -5628,7 +5669,12 @@
         "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3236334863618669640",
         "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdEoKSPITMsIiUBhpUakaAoteuuiRHWEs-vw&s",
         "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1569930784542-c6e1e6ef7ad4?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "Waterfront Long Island Estate",
@@ -5637,7 +5683,12 @@
         "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3597429291268679775",
         "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThP3wD8IEPZCm-aFhCXu_OuH2QIUEQcBv02w&s",
         "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "Midcentury Hollywood Hills Compound",
@@ -5646,7 +5697,12 @@
         "image_url": null,
         "thumbnail_url": null,
         "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "Jacob & Co. Tourbillons And",
@@ -5655,7 +5711,12 @@
         "image_url": null,
         "thumbnail_url": null,
         "source_url": "https://robbreport.com/shelter/celebrity-homes/lists/cristiano-ronaldo-property-portfolio-1236973685/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1620625515032-6ed0c1790c75?w=900&h=600&fit=crop&q=85"
+        ]
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7333,7 +7394,13 @@
         "type": "real_estate",
         "name": "Mar-a-Lago",
         "description": "The 17-acre Palm Beach estate that serves as Trump's winter White House and primary residence.",
-        "estimatedValue": 300
+        "estimatedValue": 300,
+        "images": [
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$300M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7842,7 +7909,12 @@
         "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3719208818154012122",
         "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGou6TEfARe45R9g1fFqS1qpQgTlw1vBkPMw&s",
         "source_url": "https://news.benzinga.com/markets/large-cap/26/02/50752436/elon-musk-net-worth-2026-spacex-xai",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "San Francisco Penthouse",
@@ -7851,7 +7923,12 @@
         "image_url": "https://e01-marca.uecdn.es/assets/multimedia/imagenes/2025/11/02/17621231218094.jpg",
         "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUUdsu4Gjh2LG7iTdVKk0T7h7Bo9hhjvM4Mw&s",
         "source_url": "https://news.benzinga.com/markets/large-cap/26/02/50752436/elon-musk-net-worth-2026-spacex-xai",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
+        ]
       }
     ],
     "bio": "",
@@ -8740,7 +8817,13 @@
         "type": "real_estate",
         "name": "Katonah Estate",
         "description": "Soros' sprawling Westchester County estate in Katonah, New York.",
-        "estimatedValue": 18
+        "estimatedValue": 18,
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$18M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -8895,7 +8978,13 @@
         "type": "yacht",
         "name": "Main",
         "description": "Armani's 65-metre superyacht Main, his floating retreat in the Mediterranean.",
-        "estimatedValue": 70
+        "estimatedValue": 70,
+        "images": [
+          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$70M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -9794,7 +9883,13 @@
         "type": "real_estate",
         "name": "San Francisco Victorian",
         "description": "Dorsey's renovated Victorian in San Francisco's SoMa neighbourhood.",
-        "estimatedValue": 23
+        "estimatedValue": 23,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$23M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -9856,7 +9951,13 @@
         "type": "yacht",
         "name": "Amphitrite",
         "description": "Ma's 262-foot superyacht Amphitrite, one of the largest privately owned yachts from China.",
-        "estimatedValue": 56
+        "estimatedValue": 56,
+        "images": [
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1505916349660-8d91a99f8901?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$56M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -10545,7 +10646,13 @@
         "type": "real_estate",
         "name": "Atherton Estate",
         "description": "Sprawling estate in Silicon Valley's most exclusive enclave, Atherton, California.",
-        "estimatedValue": 30
+        "estimatedValue": 30,
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$30M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -11684,7 +11791,13 @@
         "type": "real_estate",
         "name": "Palm Beach Estate",
         "description": "One of the most expensive homes ever sold in the US — a sprawling Palm Beach compound purchased for $106 million.",
-        "estimatedValue": 130
+        "estimatedValue": 130,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$130M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -11870,7 +11983,13 @@
         "type": "real_estate",
         "name": "Hidden Hills Compound",
         "description": "The ultra-minimalist Hidden Hills compound Kim bought from Kanye, which she has since redecorated.",
-        "estimatedValue": 60
+        "estimatedValue": 60,
+        "images": [
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$60M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -11965,7 +12084,13 @@
         "type": "real_estate",
         "name": "Holmby Hills Mansion",
         "description": "Kylie's sprawling $36M Holmby Hills mansion, purchased in 2020.",
-        "estimatedValue": 36
+        "estimatedValue": 36,
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$36M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -12122,7 +12247,13 @@
         "type": "yacht",
         "name": "Senses",
         "description": "Page's 193-foot superyacht Senses, fitted with a liveaboard submarine.",
-        "estimatedValue": 45
+        "estimatedValue": 45,
+        "images": [
+          "https://images.unsplash.com/photo-1505916349660-8d91a99f8901?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$45M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -12207,7 +12338,13 @@
         "type": "real_estate",
         "name": "Manhattan Penthouse",
         "description": "Luxurious penthouse apartment in Manhattan with panoramic views of Central Park.",
-        "estimatedValue": 50
+        "estimatedValue": 50,
+        "images": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$50M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -12238,7 +12375,13 @@
         "type": "art",
         "name": "Cubist Art Collection",
         "description": "One of the world's greatest private collections of Cubist art, donated to the Met in 2013.",
-        "estimatedValue": 1100
+        "estimatedValue": 1100,
+        "images": [
+          "https://images.unsplash.com/photo-1549490349-8643362247b5?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$1.1B"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -12815,7 +12958,13 @@
         "type": "real_estate",
         "name": "Seattle Home",
         "description": "Elegant Seattle home retained after her divorce from Jeff Bezos.",
-        "estimatedValue": 22
+        "estimatedValue": 22,
+        "images": [
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$22M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13156,7 +13305,13 @@
         "type": "sports_team",
         "name": "Dallas Mavericks",
         "description": "Former majority owner of the NBA's Dallas Mavericks, sold for ~$3.5 billion in 2023.",
-        "estimatedValue": 3500
+        "estimatedValue": 3500,
+        "images": [
+          "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1565620731385-539de3f57112?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1598891562936-6e1a75a24d93?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$3.5B"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13782,7 +13937,13 @@
         "type": "real_estate",
         "name": "Bermuda Estate",
         "description": "Bloomberg's sprawling Bermuda estate, a Caribbean retreat away from public life.",
-        "estimatedValue": 13
+        "estimatedValue": 13,
+        "images": [
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$13M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13813,7 +13974,13 @@
         "type": "real_estate",
         "name": "Austin Compound",
         "description": "Dell's sprawling Austin compound near his company's headquarters.",
-        "estimatedValue": 18
+        "estimatedValue": 18,
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$18M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -14303,7 +14470,13 @@
         "type": "real_estate",
         "name": "Antilia",
         "description": "The 27-storey Mumbai skyscraper home. The most expensive private residence in the world at an estimated $2B.",
-        "estimatedValue": 2000
+        "estimatedValue": 2000,
+        "images": [
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$2.0B"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -14923,7 +15096,13 @@
         "type": "real_estate",
         "name": "The Promised Land",
         "description": "Oprah's stunning 65-acre estate in Montecito, California, with sweeping ocean and mountain views.",
-        "estimatedValue": 90
+        "estimatedValue": 90,
+        "images": [
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$90M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15297,7 +15476,13 @@
         "type": "real_estate",
         "name": "New Zealand Compound",
         "description": "Remote New Zealand estate where Thiel secured permanent residency and retreat from Silicon Valley.",
-        "estimatedValue": 14
+        "estimatedValue": 14,
+        "images": [
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$14M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15359,7 +15544,13 @@
         "type": "real_estate",
         "name": "Oregon Estate",
         "description": "Knight's vast Oregon compound, close to Nike's Beaverton headquarters.",
-        "estimatedValue": 30
+        "estimatedValue": 30,
+        "images": [
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$30M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15700,7 +15891,13 @@
         "type": "car",
         "name": "Bugatti Type 57SC Atlantic",
         "description": "One of only four Bugatti Type 57SC Atlantics ever built. The rarest and most valuable car in the world.",
-        "estimatedValue": 40
+        "estimatedValue": 40,
+        "images": [
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$40M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15793,7 +15990,13 @@
         "type": "yacht",
         "name": "Andromeda",
         "description": "Dalio's stunning 87-metre sailing superyacht Andromeda, one of the largest sailing vessels in the world.",
-        "estimatedValue": 100
+        "estimatedValue": 100,
+        "images": [
+          "https://images.unsplash.com/photo-1505916349660-8d91a99f8901?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$100M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15824,7 +16027,13 @@
         "type": "real_estate",
         "name": "Santa Cruz Estate",
         "description": "Hastings' Santa Cruz compound overlooking the Pacific Ocean.",
-        "estimatedValue": 3.5
+        "estimatedValue": 3.5,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$3.5M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -16180,7 +16389,13 @@
         "type": "yacht",
         "name": "Eclipse",
         "description": "The 162.5-metre superyacht Eclipse -- one of the largest privately owned yachts in the world.",
-        "estimatedValue": 1500
+        "estimatedValue": 1500,
+        "images": [
+          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$1.5B"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17238,7 +17453,13 @@
         "type": "real_estate",
         "name": "Manhattan Triplex",
         "description": "Schwarzman's Park Avenue triplex penthouse in Manhattan.",
-        "estimatedValue": 40
+        "estimatedValue": 40,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$40M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17269,7 +17490,13 @@
         "type": "sports_team",
         "name": "LA Clippers",
         "description": "Ballmer's Los Angeles Clippers NBA franchise, purchased for a record-setting $2B in 2014.",
-        "estimatedValue": 3500
+        "estimatedValue": 3500,
+        "images": [
+          "https://images.unsplash.com/photo-1598891562936-6e1a75a24d93?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1565620731385-539de3f57112?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$3.5B"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17544,7 +17771,12 @@
         "image_url": "https://i.dailymail.co.uk/i/pix/2016/01/29/16/30B3200A00000578-0-image-a-14_1454084898951.jpg",
         "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlSAsrpbk15izPmUZNJ9-PdgJVv1p3xLjWpA&s",
         "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "Porsche 911 Turbo",
@@ -17553,7 +17785,12 @@
         "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3714846176189805946",
         "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7sb7gwvj05v_7o2uxGBGiLkpgXo_36MhY0w&s",
         "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "Maybach S650",
@@ -17562,7 +17799,12 @@
         "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3813211042722229309",
         "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkoqhutN45p_l2qDLVRzqsVI0nmkvjOcARTg&s",
         "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "Gulfstream G6",
@@ -17571,7 +17813,12 @@
         "image_url": null,
         "thumbnail_url": null,
         "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1569930784542-c6e1e6ef7ad4?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "Dassault Falcon 7X",
@@ -17580,7 +17827,12 @@
         "image_url": null,
         "thumbnail_url": null,
         "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1569930784542-c6e1e6ef7ad4?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop&q=85"
+        ]
       },
       {
         "title": "Million Waterfront Villa",
@@ -17589,7 +17841,12 @@
         "image_url": null,
         "thumbnail_url": null,
         "source_url": "https://robbreport.com/shelter/celebrity-homes/taylor-swift-property-portfolio-1236698956/",
-        "found_via": "exa"
+        "found_via": "exa",
+        "images": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85"
+        ]
       }
     ],
     "bio": "",

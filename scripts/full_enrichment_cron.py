@@ -16,7 +16,7 @@ from datetime import datetime
 from pathlib import Path
 
 # ── config ──────────────────────────────────────────────────────────────────
-MASTER_FILE   = "data/celebs.json"
+MASTER_FILE   = "public/data/celebs.json"
 SLEEP         = 1.4          # seconds between API calls
 MAX_PER_RUN   = 200          # max celebrities to enrich per run (avoids timeout)
 

@@ -28,13 +28,20 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run full enrichment
+      - name: Run photo enrichment (avatars)
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           SEARCHAPI_KEY: ${{ secrets.SEARCH_API_KEY }}
           SEARCHAPI_API_KEY: ${{ secrets.SEARCH_API_KEY }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
         run: python scripts/full_enrichment_cron.py
+
+      - name: Run profile enrichment (bios + asset images)
+        env:
+          SEARCHAPI_KEY: ${{ secrets.SEARCH_API_KEY }}
+          SEARCHAPI_API_KEY: ${{ secrets.SEARCH_API_KEY }}
+          SEARCH_API_KEY: ${{ secrets.SEARCH_API_KEY }}
+        run: python scripts/enrich_celebs.py --limit 100
 
       - name: Validate output before committing
         run: |

@@ -451,8 +451,14 @@ export default function HomePage() {
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section className="text-center px-5 pt-20 pb-14 max-w-3xl mx-auto">
         <h1
-          className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-white mb-5 leading-tight"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          className="text-4xl sm:text-6xl lg:text-7xl font-semibold mb-5 leading-tight"
+          style={{
+            fontFamily: "'Playfair Display', Georgia, serif",
+            background: 'linear-gradient(135deg, #ffffff 0%, #f5e070 40%, #c9a84c 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}
         >
           Wealth Explorer
         </h1>
@@ -486,7 +492,11 @@ export default function HomePage() {
           {showSearchDropdown && (
             <div className="absolute top-full left-0 right-0 mt-2 bg-[#141414] border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-50">
               {searchResults.length === 0 ? (
-                <div className="px-5 py-6 text-sm text-gray-600 text-center">No results for "{search}"</div>
+                <div className="px-5 py-8 text-center">
+                  <p className="text-2xl mb-2">🔍</p>
+                  <p className="text-sm font-medium text-gray-400">No billionaires found matching</p>
+                  <p className="text-sm text-gray-600 mt-0.5">"{search}"</p>
+                </div>
               ) : (
                 <>
                   <div className="px-4 pt-3 pb-1.5">
