@@ -28,7 +28,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/4KgTVzi6sgAElRRyK35VSVcUFd4.jpg",
+    "photo_updated": "2026-03-31T13:55:22.303977"
   },
   {
     "id": "abby-wambach",
@@ -59,7 +61,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/rWkBTutM3US0TdTCnmTjl5SMENm.jpg",
+    "photo_updated": "2026-03-31T13:55:23.834698"
   },
   {
     "id": "acun-ilicali",
@@ -86,11 +90,19 @@
         "type": "yacht",
         "name": "Lady Lara",
         "description": "Acun's luxury 88-metre superyacht Lady Lara.",
-        "estimatedValue": 80
+        "estimatedValue": 80,
+        "images": [
+          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$80M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/pdsO9unfAerz8E5fneAmmipzzCa.jpg",
+    "photo_updated": "2026-03-31T13:55:25.362461"
   },
   {
     "id": "adam-neumann",
@@ -117,11 +129,19 @@
         "type": "real_estate",
         "name": "Gramercy Park Townhouse",
         "description": "Neumann's Manhattan townhouse near Gramercy Park, sold after WeWork's collapse.",
-        "estimatedValue": 35
+        "estimatedValue": 35,
+        "images": [
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$35M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/6vuH9ldsqpT41iOXUaDQRqtemYL.jpg",
+    "photo_updated": "2026-03-31T13:55:26.893895"
   },
   {
     "id": "adele",
@@ -152,7 +172,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/kKIDm4BMIzbCBPn45BV2DqAfq7S.jpg",
+    "photo_updated": "2026-03-31T13:55:28.414315"
   },
   {
     "id": "adnan-sami",
@@ -183,7 +205,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/yD5svgSiRPAaUEnsKeJ9RnSwJG5.jpg",
+    "photo_updated": "2026-03-31T13:55:29.946928"
   },
   {
     "id": "adriana-lima",
@@ -214,7 +238,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/b8LNqUPTTdt77XSO4qLT2a0NaQe.jpg",
+    "photo_updated": "2026-03-31T13:55:31.477682"
   },
   {
     "id": "agbani-darego",
@@ -276,7 +302,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/iBDWJbhwQv9wxxOX2V4gDiJ5HU9.jpg",
+    "photo_updated": "2026-03-31T13:55:34.682807"
   },
   {
     "id": "ahmed-ezz",
@@ -303,11 +331,19 @@
         "type": "real_estate",
         "name": "Cairo Mansion",
         "description": "His grand Cairo mansion in Zamalek.",
-        "estimatedValue": 40
+        "estimatedValue": 40,
+        "images": [
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$40M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/mgQhox7AbzVsQ8xeTZvkK5Gvkd4.jpg",
+    "photo_updated": "2026-03-31T13:55:36.210089"
   },
   {
     "id": "ai-weiwei",
@@ -338,7 +374,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/hD3ot74TFao8xDaeUaxuRK0RKsS.jpg",
+    "photo_updated": "2026-03-31T13:55:37.728007"
   },
   {
     "id": "aishwarya-rai",
@@ -369,7 +407,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/tXlRA4gZgUiKx2P1odBpyXjnkbX.jpg",
+    "photo_updated": "2026-03-31T13:55:39.243555"
   },
   {
     "id": "akon",
@@ -400,7 +440,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/r4s4jrnCigyYEMgaBwXWF54IBgN.jpg",
+    "photo_updated": "2026-03-31T13:55:40.778118"
   },
   {
     "id": "alain-prost",
@@ -431,7 +473,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/uWzHseRHbGnzagKzeEXGTuyeoXV.jpg",
+    "photo_updated": "2026-03-31T13:55:42.303277"
   },
   {
     "id": "alan-sugar",
@@ -458,11 +502,19 @@
         "type": "yacht",
         "name": "Amina",
         "description": "Lord Sugar's 73-metre superyacht Amina, frequently docked in Monaco and Sardinia.",
-        "estimatedValue": 30
+        "estimatedValue": 30,
+        "images": [
+          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$30M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/sNjtwck7HKH4kCQi7SrLbcT7lMU.jpg",
+    "photo_updated": "2026-03-31T13:55:43.831532"
   },
   {
     "id": "alec-baldwin",
@@ -493,7 +545,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/hzKy7x574eeUS3wt1R3yvWBRpeR.jpg",
+    "photo_updated": "2026-03-31T13:55:45.345881"
   },
   {
     "id": "aleksander-ceferin",
@@ -555,7 +609,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/hrNKuUW40qhHVBRkBMgmux7h7uf.jpg",
+    "photo_updated": "2026-03-31T13:55:48.521113"
   },
   {
     "id": "alex-ferguson",
@@ -586,7 +642,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/zzRldIXzQohouEzbXxcyJQDoFnM.jpg",
+    "photo_updated": "2026-03-31T13:55:50.055333"
   },
   {
     "id": "alex-morgan",
@@ -617,7 +675,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/eQTBpSdPiEkiWqLBxZILOAkULne.jpg",
+    "photo_updated": "2026-03-31T13:55:51.585140"
   },
   {
     "id": "alex-rodriguez",
@@ -648,7 +708,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/iKAc8yOxFYi2xCOuRQiRI5X5L07.jpg",
+    "photo_updated": "2026-03-31T13:55:53.114913"
   },
   {
     "id": "alexander-volkanovski",
@@ -679,7 +741,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/zCEe5Le93whbKXgUikCJ3hFz4Y0.jpg",
+    "photo_updated": "2026-03-31T13:55:54.642411"
   },
   {
     "id": "alexei-navalny",
@@ -710,7 +774,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/8mI7pu9Dam4YvfZc7TTOUfK6XQu.jpg",
+    "photo_updated": "2026-03-31T13:55:56.155886"
   },
   {
     "id": "ali-banat",
@@ -768,7 +834,13 @@
         "type": "real_estate",
         "name": "Libreville Palace",
         "description": "The Presidential Palace in Libreville.",
-        "estimatedValue": 50
+        "estimatedValue": 50,
+        "images": [
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$50M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -834,7 +906,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/lS5th9izeqpYMM9iAvEqF4ZsjjH.jpg",
+    "photo_updated": "2026-03-31T13:56:02.628820"
   },
   {
     "id": "alicia-keys",
@@ -865,7 +939,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/uMTAlXlQfgXHmyJrWqDv7LLnn0z.jpg",
+    "photo_updated": "2026-03-31T13:56:04.158615"
   },
   {
     "id": "alkiviades-david",
@@ -892,7 +968,13 @@
         "type": "yacht",
         "name": "Mia Kai",
         "description": "His private superyacht.",
-        "estimatedValue": 50
+        "estimatedValue": 50,
+        "images": [
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1505916349660-8d91a99f8901?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$50M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -927,7 +1009,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/quuNSvrx5cddrqBvick4ly7JDYJ.jpg",
+    "photo_updated": "2026-03-31T13:56:07.322476"
   },
   {
     "id": "allu-arjun",
@@ -958,7 +1042,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/icSybtPa0yQncOvIbnH0sCndv5i.jpg",
+    "photo_updated": "2026-03-31T13:56:08.836544"
   },
   {
     "id": "aloe-blacc",
@@ -989,7 +1075,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/omrVWsEh237RREqYCAZhoSSAInX.jpg",
+    "photo_updated": "2026-03-31T13:56:10.369237"
   },
   {
     "id": "alphonso-davies",
@@ -1020,7 +1108,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/xtAIHlDIQ6oB3EVzcTCdN4271vU.jpg",
+    "photo_updated": "2026-03-31T13:56:11.898385"
   },
   {
     "id": "alshon-jeffery",
@@ -1082,7 +1172,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/cXQtCkL0OFz38C4Sxd1XnQ5E4P7.jpg",
+    "photo_updated": "2026-03-31T13:56:15.094112"
   },
   {
     "id": "amancio-ortega",
@@ -1150,7 +1242,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/vnDolRlZWiOLBg1N0hsUTz4OH4C.jpg",
+    "photo_updated": "2026-03-31T13:56:18.184287"
   },
   {
     "id": "amitabh-bachchan",
@@ -1181,7 +1275,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/u69PvpWqGkywSm0YjFiw77j9eqS.jpg",
+    "photo_updated": "2026-03-31T13:56:19.707248"
   },
   {
     "id": "amy-winehouse",
@@ -1212,7 +1308,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/7Imqp8eqt1je4kMwJrV7WfhAZnW.jpg",
+    "photo_updated": "2026-03-31T13:56:21.238043"
   },
   {
     "id": "ana-de-armas",
@@ -1243,7 +1341,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/3vxvsmYLTf4jnr163SUlBIw51ee.jpg",
+    "photo_updated": "2026-03-31T13:56:22.766990"
   },
   {
     "id": "anderson-paak",
@@ -1274,7 +1374,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/fhoNMocbdaGwuVdDOVJF2rQxNwZ.jpg",
+    "photo_updated": "2026-03-31T13:56:24.295433"
   },
   {
     "id": "andile-ramaphosa",
@@ -1336,7 +1438,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/7kBqtd1vKfNsQFDyqHQ8MsPNrFt.jpg",
+    "photo_updated": "2026-03-31T13:56:27.469079"
   },
   {
     "id": "andrea-bocelli",
@@ -1367,7 +1471,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/koZUibnlXwaz4TI5ZDE8F4OjvYx.jpg",
+    "photo_updated": "2026-03-31T13:56:28.993176"
   },
   {
     "id": "andrew-garfield",
@@ -1398,7 +1504,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/amGkwrFGIuNsbbCE1O84MJJ2ZSa.jpg",
+    "photo_updated": "2026-03-31T13:56:30.504403"
   },
   {
     "id": "andrey-melnichenko",
@@ -1466,7 +1574,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/f3rIgEJe4G30Qjs6LRUInaXYsli.jpg",
+    "photo_updated": "2026-03-31T13:56:33.662396"
   },
   {
     "id": "angela-merkel",
@@ -1497,7 +1607,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/fjlqfSwhiRpwgsEtzJ8X004NpBw.jpg",
+    "photo_updated": "2026-03-31T13:56:35.189628"
   },
   {
     "id": "angelina-jolie",
@@ -1528,9 +1640,11 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache",
+    "photo_source": "TMDB",
     "last_updated": "2026-03-21",
-    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://image.tmdb.org/t/p/original/nXA9vMvskmIDB5NqHCkTQPmemep.jpg",
+    "photo_updated": "2026-03-31T13:56:36.701709"
   },
   {
     "id": "anitta",
@@ -1561,7 +1675,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/xjLuKFN8SZlWid2JN3NILVHxy6R.jpg",
+    "photo_updated": "2026-03-31T13:56:38.217008"
   },
   {
     "id": "ann-widdecombe",
@@ -1592,7 +1708,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/2CWhVIxKVMhFNVh9rFVIvDQFDcJ.jpg",
+    "photo_updated": "2026-03-31T13:56:39.745573"
   },
   {
     "id": "anna-kournikova",
@@ -1623,7 +1741,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/nb3bcTHz5nZQCcD4WVOqT7uELs1.jpg",
+    "photo_updated": "2026-03-31T13:56:41.271303"
   },
   {
     "id": "anna-netrebko",
@@ -1654,7 +1774,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/2SdYMHksZoKwMDllc8C2rhLmXX6.jpg",
+    "photo_updated": "2026-03-31T13:56:42.797936"
   },
   {
     "id": "anne-hathaway",
@@ -1685,7 +1807,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/nbccV2pMoyLTCeg5DQip24Eq0Jp.jpg",
+    "photo_updated": "2026-03-31T13:56:44.313816"
   },
   {
     "id": "anne-hidalgo",
@@ -1716,7 +1840,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/he2B3bTaxX5bnxVZt9Zl0Ibq6K7.jpg",
+    "photo_updated": "2026-03-31T13:56:45.839877"
   },
   {
     "id": "anne-marie",
@@ -1747,7 +1873,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/wA89fCCwU3jrMRSquKaKXpYJZbA.jpg",
+    "photo_updated": "2026-03-31T13:56:47.379673"
   },
   {
     "id": "anthony-joshua",
@@ -1778,7 +1906,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/qJmTk9VazCxpPEW0ImqrYH1B4sj.jpg",
+    "photo_updated": "2026-03-31T13:56:48.893344"
   },
   {
     "id": "antoine-griezmann",
@@ -1840,7 +1970,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/8mNZFxdbQTcmHQn3T4djQXVRbCC.jpg",
+    "photo_updated": "2026-03-31T13:56:52.116301"
   },
   {
     "id": "antony-blinken",
@@ -1871,7 +2003,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/ccUPrCldBBITrKK1xRGlzXer44k.jpg",
+    "photo_updated": "2026-03-31T13:56:53.642943"
   },
   {
     "id": "anya-taylor-joy",
@@ -1902,7 +2036,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/yZpghhtKM2VZHDx6JGAZqAVU4PL.jpg",
+    "photo_updated": "2026-03-31T13:56:55.157855"
   },
   {
     "id": "ariana-grande",
@@ -1933,7 +2069,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/r32wWnx7CKW9SgRKaQ4qAgja5QK.jpg",
+    "photo_updated": "2026-03-31T13:56:56.669675"
   },
   {
     "id": "armando-iannucci",
@@ -1964,7 +2102,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/9kdnLu0iALWI19dLTUEVDOxyyCB.jpg",
+    "photo_updated": "2026-03-31T13:56:58.183815"
   },
   {
     "id": "arnold-schwarzenegger",
@@ -1995,7 +2135,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/dgCABuZp2HBehCT84O4WBp7KIoe.jpg",
+    "photo_updated": "2026-03-31T13:56:59.694753"
   },
   {
     "id": "asafa-powell",
@@ -2088,7 +2230,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/srCfLgrHWVEOH2MDoJbMTusuwfn.jpg",
+    "photo_updated": "2026-03-31T13:57:04.535414"
   },
   {
     "id": "ashley-tisdale",
@@ -2119,7 +2263,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/ot6ib67jxvKVG1JCBl0ROPGtdeP.jpg",
+    "photo_updated": "2026-03-31T13:57:06.048424"
   },
   {
     "id": "asim-azhar",
@@ -2150,7 +2296,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/l1mWioFMAvnDvXYUKu8cByG5bQ6.jpg",
+    "photo_updated": "2026-03-31T13:57:07.575936"
   },
   {
     "id": "atif-aslam",
@@ -2181,7 +2329,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/cGZaaaq3AGchW0OF1i1bOtIabl3.jpg",
+    "photo_updated": "2026-03-31T13:57:09.103469"
   },
   {
     "id": "abubakar-atiku",
@@ -2208,7 +2358,13 @@
         "type": "real_estate",
         "name": "Abuja Compound",
         "description": "His sprawling Abuja presidential compound.",
-        "estimatedValue": 25
+        "estimatedValue": 25,
+        "images": [
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$25M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -2243,7 +2399,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/9py6iOsoUjrIOipnT9WetYlayfI.jpg",
+    "photo_updated": "2026-03-31T13:57:12.283189"
   },
   {
     "id": "austin-butts",
@@ -2274,7 +2432,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/atdAs4pFGjUQ4m2W8kJYly7N6cC.jpg",
+    "photo_updated": "2026-03-31T13:57:13.795476"
   },
   {
     "id": "austin-butler",
@@ -2305,7 +2465,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/atdAs4pFGjUQ4m2W8kJYly7N6cC.jpg",
+    "photo_updated": "2026-03-31T13:57:15.247178"
   },
   {
     "id": "ayesha-curry",
@@ -2336,7 +2498,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/fhQNbSlEXqXEmyDpQVqzrbIWe0T.jpg",
+    "photo_updated": "2026-03-31T13:57:16.760550"
   },
   {
     "id": "ayrton-senna",
@@ -2367,7 +2531,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/qnQoejAqWO6ECCZAZNGJmXwURWs.jpg",
+    "photo_updated": "2026-03-31T13:57:18.284669"
   },
   {
     "id": "aziz-karimov",
@@ -2460,7 +2626,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/6DABuEahOaJ95VrpKhrk7XeFfJY.jpg",
+    "photo_updated": "2026-03-31T13:57:23.108036"
   },
   {
     "id": "barack-obama",
@@ -2483,7 +2651,9 @@
     ],
     "assets": [],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/reEkbvLlNknpCo2I37Vim6XpqGu.jpg",
+    "photo_updated": "2026-03-31T13:57:24.630734"
   },
   {
     "id": "barry-bonds",
@@ -2514,7 +2684,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/b25RDvAXECJTHXQ4MPLtxWy9Ldx.jpg",
+    "photo_updated": "2026-03-31T13:57:26.161373"
   },
   {
     "id": "barry-sanders",
@@ -2545,7 +2717,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/tP1RMwWFnIKVXUnsCBwmM9Ei3Di.jpg",
+    "photo_updated": "2026-03-31T13:57:27.672969"
   },
   {
     "id": "becky-g",
@@ -2576,7 +2750,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/vbLeM59VY3gjPn7mggIBZTN2VcC.jpg",
+    "photo_updated": "2026-03-31T13:57:29.187863"
   },
   {
     "id": "bella-hadid",
@@ -2607,7 +2783,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/2e8qNiLiLCH11JAgqNodZxMCKov.jpg",
+    "photo_updated": "2026-03-31T13:57:30.713174"
   },
   {
     "id": "ben-affleck",
@@ -2638,7 +2816,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/u525jeDOzg9hVdvYfeehTGnw7Aa.jpg",
+    "photo_updated": "2026-03-31T13:57:32.229974"
   },
   {
     "id": "ben-stiller",
@@ -2669,7 +2849,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg",
+    "photo_updated": "2026-03-31T13:57:33.744939"
   },
   {
     "id": "benedict-cumberbatch",
@@ -2700,7 +2882,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg",
+    "photo_updated": "2026-03-31T13:57:35.259401"
   },
   {
     "id": "benicio-del-toro",
@@ -2731,7 +2915,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/aYomJWx0B2B8ra6Rmgt8lr0XCrw.jpg",
+    "photo_updated": "2026-03-31T13:57:36.774469"
   },
   {
     "id": "benjamin-netanyahu",
@@ -2762,7 +2948,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/bmpbaBWPwvPE0Wp1KyNaj8nfVzL.jpg",
+    "photo_updated": "2026-03-31T13:57:38.299659"
   },
   {
     "id": "bernard-arnault",
@@ -2799,7 +2987,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/mNIH5HDfNCGd7aPpiVXWvCSuozg.jpg",
+    "photo_updated": "2026-03-31T13:57:39.829343"
   },
   {
     "id": "bert-kreischer",
@@ -2830,7 +3020,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/oXgdaIBFOIjQkbrq3JfJflZFTa6.jpg",
+    "photo_updated": "2026-03-31T13:57:41.343131"
   },
   {
     "id": "bethenny-frankel",
@@ -2861,7 +3053,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/j7cBeGPjCAdkMmsYNn8MrWn984y.jpg",
+    "photo_updated": "2026-03-31T13:57:42.870473"
   },
   {
     "id": "beyonce",
@@ -2884,9 +3078,11 @@
     ],
     "assets": [],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache",
+    "photo_source": "TMDB",
     "last_updated": "2026-03-21",
-    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://image.tmdb.org/t/p/original/2HbjNtiCtmbArEnELuDFU7knaVK.jpg",
+    "photo_updated": "2026-03-31T13:57:44.422140"
   },
   {
     "id": "bilal-erdogan",
@@ -2948,7 +3144,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/mIgqL0UAEKSl1Ry58wgQYq2sAt6.jpg",
+    "photo_updated": "2026-03-31T13:57:47.581954"
   },
   {
     "id": "bill-gates",
@@ -2971,7 +3169,9 @@
     ],
     "assets": [],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/pfcHWxPaK6xqqSVlH28kGEJmShs.jpg",
+    "photo_updated": "2026-03-31T13:57:49.143379"
   },
   {
     "id": "billie-eilish",
@@ -3002,7 +3202,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/4K69OtW6PVQ8gDozNB9Ja4j5iQS.jpg",
+    "photo_updated": "2026-03-31T13:57:50.656438"
   },
   {
     "id": "billie-jean-king",
@@ -3033,7 +3235,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/iim56BMfTZxeifP4Y5HiAdyhFit.jpg",
+    "photo_updated": "2026-03-31T13:57:52.180579"
   },
   {
     "id": "billie-lourd",
@@ -3064,7 +3268,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/1u8bZL6ZXu5iDbPO3Z0Spetyt34.jpg",
+    "photo_updated": "2026-03-31T13:57:53.694846"
   },
   {
     "id": "bjorn-borg",
@@ -3095,7 +3301,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/5zShJbVeErGR0ttYGjI4KDGYKz6.jpg",
+    "photo_updated": "2026-03-31T13:57:55.219600"
   },
   {
     "id": "blake-shelton",
@@ -3126,7 +3334,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/fXgQ4O20f49wJHgTHUIM9T3XBAQ.jpg",
+    "photo_updated": "2026-03-31T13:57:56.730713"
   },
   {
     "id": "bo-diddley",
@@ -3157,7 +3367,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/wEvWkvFJU7DAl74d6mvZJDv6ceq.jpg",
+    "photo_updated": "2026-03-31T13:57:58.256756"
   },
   {
     "id": "bob-dylan",
@@ -3184,11 +3396,19 @@
         "type": "real_estate",
         "name": "Malibu Estate",
         "description": "His secluded Malibu estate where he recorded multiple albums.",
-        "estimatedValue": 12
+        "estimatedValue": 12,
+        "images": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$12M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/pMGkRge9jE0TRgENbUYt3N5qDPl.jpg",
+    "photo_updated": "2026-03-31T13:57:59.769006"
   },
   {
     "id": "bob-marley",
@@ -3219,7 +3439,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/v2GrUpvYAuRqf0Mxm8W91WqDH1Y.jpg",
+    "photo_updated": "2026-03-31T13:58:01.295556"
   },
   {
     "id": "boban-marjanovic",
@@ -3250,7 +3472,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/1VSX0Fvq2hwpONVMA5kNolRpBLD.jpg",
+    "photo_updated": "2026-03-31T13:58:02.809157"
   },
   {
     "id": "bobby-brown",
@@ -3281,7 +3505,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/k9KGzGDVhXKfOGpoN62MNuXL28q.jpg",
+    "photo_updated": "2026-03-31T13:58:04.321858"
   },
   {
     "id": "bonnie-raitt",
@@ -3312,7 +3538,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/lN2PD7LGsltMmZj03DpaVrd7gYJ.jpg",
+    "photo_updated": "2026-03-31T13:58:05.844397"
   },
   {
     "id": "bono",
@@ -3339,11 +3567,19 @@
         "type": "real_estate",
         "name": "Killiney Mansion",
         "description": "Bono's spectacular cliff-top estate overlooking Dublin Bay in the exclusive Killiney area.",
-        "estimatedValue": 25
+        "estimatedValue": 25,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$25M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/r1jCFctRrEAHBHOyJun8rWCH0AD.jpg",
+    "photo_updated": "2026-03-31T13:58:07.358818"
   },
   {
     "id": "boris-becker",
@@ -3374,7 +3610,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/jaArwerpyY01sivLipYHJ5Et0rS.jpg",
+    "photo_updated": "2026-03-31T13:58:08.888480"
   },
   {
     "id": "brad-pitt",
@@ -3405,9 +3643,11 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache",
+    "photo_source": "TMDB",
     "last_updated": "2026-03-21",
-    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback",
+    "image": "https://image.tmdb.org/t/p/original/cckcYc2v0yh1tc9QjRelptcOBko.jpg",
+    "photo_updated": "2026-03-31T13:58:10.405915"
   },
   {
     "id": "brendan-fraser",
@@ -3438,7 +3678,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/tFj5PaWWQbb8rHBBhu1EHklznph.jpg",
+    "photo_updated": "2026-03-31T13:58:11.917025"
   },
   {
     "id": "brett-favre",
@@ -3469,7 +3711,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/FvwMoPT6dmN3pPfVpFCpydu2rn.jpg",
+    "photo_updated": "2026-03-31T13:58:13.444447"
   },
   {
     "id": "brian-chesky",
@@ -3568,7 +3812,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/eSP4pbmwbgNVUlIZMWkU5asXisC.jpg",
+    "photo_updated": "2026-03-31T13:58:18.196735"
   },
   {
     "id": "brooks-koepka",
@@ -3599,7 +3845,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/jYF7G2iInQWhQAprotdyZTsHkHQ.jpg",
+    "photo_updated": "2026-03-31T13:58:19.724947"
   },
   {
     "id": "bruce-lee",
@@ -3630,7 +3878,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/vFtLJ37tjqPdq6oJr0OSpyo9Wcp.jpg",
+    "photo_updated": "2026-03-31T13:58:21.237905"
   },
   {
     "id": "bruce-springsteen",
@@ -3657,11 +3907,19 @@
         "type": "real_estate",
         "name": "Monmouth County Farm",
         "description": "Springsteen's 378-acre horse farm in Colts Neck, New Jersey.",
-        "estimatedValue": 14
+        "estimatedValue": 14,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$14M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/gH0MnPZ0VcolE3nytvcbuoKaUnz.jpg",
+    "photo_updated": "2026-03-31T13:58:22.750818"
   },
   {
     "id": "bruce-willis",
@@ -3692,7 +3950,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg",
+    "photo_updated": "2026-03-31T13:58:24.278084"
   },
   {
     "id": "afrobeats-burna-boy",
@@ -3723,7 +3983,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/h7MuWy83fFDtZ7FIRyACJerdJhf.jpg",
+    "photo_updated": "2026-03-31T13:58:25.803250"
   },
   {
     "id": "busta-rhymes",
@@ -3754,7 +4016,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/f0MX6SdEsGYJYDy8vF6ghTZ25N6.jpg",
+    "photo_updated": "2026-03-31T13:58:27.329247"
   },
   {
     "id": "caitlin-clark",
@@ -3785,7 +4049,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/RvbHmHRAB72POCgBLBSPujKhml.jpg",
+    "photo_updated": "2026-03-31T13:58:28.856084"
   },
   {
     "id": "calum-scott",
@@ -3816,7 +4082,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/edo73jg6JAovDClAmuFL7zkIBt.jpg",
+    "photo_updated": "2026-03-31T13:58:30.422241"
   },
   {
     "id": "cam-newton",
@@ -3847,7 +4115,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/8PwEPyPRwzsjfxHU0DH7voCSjks.jpg",
+    "photo_updated": "2026-03-31T13:58:31.947506"
   },
   {
     "id": "cameron-diaz",
@@ -3878,7 +4148,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/d4f4cQ9EiYuvNMjT1IB2h06KoRx.jpg",
+    "photo_updated": "2026-03-31T13:58:33.457376"
   },
   {
     "id": "camila-cabello",
@@ -3909,7 +4181,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/oXScbfmhbNk3Qf8cqpHjQjdMAhe.jpg",
+    "photo_updated": "2026-03-31T13:58:34.968817"
   },
   {
     "id": "canelo-alvarez",
@@ -3940,7 +4214,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/7kyB0FMcHKnfsJYlu3jvHtKmslr.jpg",
+    "photo_updated": "2026-03-31T13:58:36.500831"
   },
   {
     "id": "cara-delevingne",
@@ -3971,7 +4247,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/c4tJZGeygZf0tX2VCyOqzxICijb.jpg",
+    "photo_updated": "2026-03-31T13:58:38.015301"
   },
   {
     "id": "cardi-b",
@@ -4002,7 +4280,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/x3hazhdT0Lcpv2ys4WG6Af2F24S.jpg",
+    "photo_updated": "2026-03-31T13:58:39.531939"
   },
   {
     "id": "carl-froch",
@@ -4033,7 +4313,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/n2bW3gquD0qukvA51reHf9dWdFM.jpg",
+    "photo_updated": "2026-03-31T13:58:41.059553"
   },
   {
     "id": "carl-icahn",
@@ -4101,7 +4383,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/XOkU3h9tD9NyKxprRNkCbkN3K8.jpg",
+    "photo_updated": "2026-03-31T13:58:44.244118"
   },
   {
     "id": "carlos-alcaraz",
@@ -4132,7 +4416,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/8zlb4jEPOyZdwpj44JsNf0Y89qz.jpg",
+    "photo_updated": "2026-03-31T13:58:45.770239"
   },
   {
     "id": "carlos-santana",
@@ -4163,7 +4449,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/hphAanWETS2h42G7mx4QLzV2w0s.jpg",
+    "photo_updated": "2026-03-31T13:58:47.286594"
   },
   {
     "id": "carlos-slim",
@@ -4231,7 +4519,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/of4yHmryKPy92eeskUQ7MRmjC3l.jpg",
+    "photo_updated": "2026-03-31T13:58:50.463399"
   },
   {
     "id": "cassie-ventura",
@@ -4262,7 +4552,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/hrKZTgQyvPJBh2t9WvBWgpdaqE8.jpg",
+    "photo_updated": "2026-03-31T13:58:52.009521"
   },
   {
     "id": "cate-blanchett",
@@ -4293,7 +4585,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/vUuEHiAR0eD3XEJhg2DWIjymUAA.jpg",
+    "photo_updated": "2026-03-31T13:58:53.523486"
   },
   {
     "id": "cedric-the-entertainer",
@@ -4324,7 +4618,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/s6UrY5uofyxXsU5PydWBoLFReK0.jpg",
+    "photo_updated": "2026-03-31T13:58:55.034473"
   },
   {
     "id": "celine-dion",
@@ -4351,11 +4647,19 @@
         "type": "real_estate",
         "name": "Jupiter Island Mansion",
         "description": "Her sprawling Jupiter Island, Florida estate with a water park.",
-        "estimatedValue": 25
+        "estimatedValue": 25,
+        "images": [
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$25M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/jllrwudKITObOznhY8nXsA571mF.jpg",
+    "photo_updated": "2026-03-31T13:58:56.605483"
   },
   {
     "id": "chad-ochocinco",
@@ -4386,7 +4690,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/y4KuATSkx40qLuTaFe79X2QIFjU.jpg",
+    "photo_updated": "2026-03-31T13:58:58.120656"
   },
   {
     "id": "chadwick-boseman",
@@ -4417,7 +4723,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/1lz1wLOuPFSRIratMz0SxD3tkJ.jpg",
+    "photo_updated": "2026-03-31T13:58:59.631808"
   },
   {
     "id": "chamath-palihapitiya",
@@ -4444,7 +4752,13 @@
         "type": "real_estate",
         "name": "Silicon Valley Estate",
         "description": "Chamath's Silicon Valley compound.",
-        "estimatedValue": 15
+        "estimatedValue": 15,
+        "images": [
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$15M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -4479,7 +4793,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/cXlzPkVu1T1g9mMnXRCOrEgERB5.jpg",
+    "photo_updated": "2026-03-31T13:59:02.788456"
   },
   {
     "id": "chappell-roan",
@@ -4510,7 +4826,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/3C8bgHqhmktgVR1bSlOcqlmumm3.jpg",
+    "photo_updated": "2026-03-31T13:59:04.301512"
   },
   {
     "id": "charles-de-gaulle",
@@ -4541,7 +4859,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/dvJ2c6x0KoWEGLDZFGxls5pqrwS.jpg",
+    "photo_updated": "2026-03-31T13:59:05.827121"
   },
   {
     "id": "charles-leclerc",
@@ -4572,7 +4892,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/p3m3qc9ZZAIFrTXO3kwOpcp7XGf.jpg",
+    "photo_updated": "2026-03-31T13:59:07.352444"
   },
   {
     "id": "charlie-chaplin",
@@ -4599,11 +4921,19 @@
         "type": "real_estate",
         "name": "Manoir de Ban",
         "description": "Chaplin's Swiss estate on Lake Geneva, now the Chaplin's World museum.",
-        "estimatedValue": 10
+        "estimatedValue": 10,
+        "images": [
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$10M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/lRI9Ky1SMOehn04OqhYJ5hQfgIK.jpg",
+    "photo_updated": "2026-03-31T13:59:08.872237"
   },
   {
     "id": "charlie-munger",
@@ -4630,7 +4960,13 @@
         "type": "real_estate",
         "name": "Los Angeles Home",
         "description": "His modest Los Angeles home.",
-        "estimatedValue": 3
+        "estimatedValue": 3,
+        "images": [
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$3M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -4665,7 +5001,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/48GB5aISoibd9IYXBO40jrSgFRl.jpg",
+    "photo_updated": "2026-03-31T13:59:12.028744"
   },
   {
     "id": "charlize-theron",
@@ -4696,7 +5034,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/ie1KbeYFG5E0GVr1QP7tDNuXvga.jpg",
+    "photo_updated": "2026-03-31T13:59:13.545039"
   },
   {
     "id": "chen-guangbiao",
@@ -4723,7 +5063,13 @@
         "type": "real_estate",
         "name": "Nanjing Mansion",
         "description": "His Nanjing headquarters and adjoining residence.",
-        "estimatedValue": 20
+        "estimatedValue": 20,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$20M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -4758,7 +5104,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/lGzO8PmIjJwdn2WSkNRNtK11swZ.jpg",
+    "photo_updated": "2026-03-31T13:59:16.719204"
   },
   {
     "id": "chidi-odinkalu",
@@ -4789,7 +5137,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/vIRojqaPyt6XtJPtP1Hjj10pjOp.jpg",
+    "photo_updated": "2026-03-31T13:59:18.246909"
   },
   {
     "id": "chris-brown",
@@ -4820,7 +5170,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/92NXoO1129xwDL65KEJUDvgG8iW.jpg",
+    "photo_updated": "2026-03-31T13:59:19.761493"
   },
   {
     "id": "chris-evans",
@@ -4851,7 +5203,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/jEzGktEMdEkQKemPVR0YGlIYEVl.jpg",
+    "photo_updated": "2026-03-31T13:59:21.276626"
   },
   {
     "id": "chris-hemsworth",
@@ -4882,7 +5236,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg",
+    "photo_updated": "2026-03-31T13:59:22.789345"
   },
   {
     "id": "chris-martin",
@@ -4913,7 +5269,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/trMRmw7IaCt1NaiOOuiAvRzF1AN.jpg",
+    "photo_updated": "2026-03-31T13:59:24.521275"
   },
   {
     "id": "chris-paul",
@@ -4944,7 +5302,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/lJiAKaD1aQVAsWoVlEKk3w5PUfW.jpg",
+    "photo_updated": "2026-03-31T13:59:26.062937"
   },
   {
     "id": "chris-pratt",
@@ -4975,7 +5335,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/872Hzdq95gsbMRabsColTW3TLrD.jpg",
+    "photo_updated": "2026-03-31T13:59:27.577260"
   },
   {
     "id": "chris-tucker",
@@ -5006,7 +5368,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/k0oLIL0xTgDR6Qn3yCsNuLCJhFT.jpg",
+    "photo_updated": "2026-03-31T13:59:29.095054"
   },
   {
     "id": "chrissy-teigen",
@@ -5037,7 +5401,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/mSr84rB656sz6rjhxIS9gjiWGEZ.jpg",
+    "photo_updated": "2026-03-31T13:59:30.612266"
   },
   {
     "id": "christian-horner",
@@ -5068,7 +5434,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/dxz1fkfJNAUiYEpaGlvV0Ecxgk3.jpg",
+    "photo_updated": "2026-03-31T13:59:32.127753"
   },
   {
     "id": "christian-pulisic",
@@ -5099,7 +5467,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/5iWoN6dvscekGjHCZbh8qY7LaoR.jpg",
+    "photo_updated": "2026-03-31T13:59:33.659026"
   },
   {
     "id": "chuck-berry",
@@ -5130,7 +5500,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/9faTPqWt3cBmQZWfB16REh1jUwl.jpg",
+    "photo_updated": "2026-03-31T13:59:35.175669"
   },
   {
     "id": "cillian-murphy",
@@ -5161,7 +5533,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/2lKs67r7FI4bPu0AXxMUJZxmUXn.jpg",
+    "photo_updated": "2026-03-31T13:59:36.689843"
   },
   {
     "id": "cindy-crawford",
@@ -5192,7 +5566,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/ncJLWNKFtNDg5HFZspDMrexw2Pf.jpg",
+    "photo_updated": "2026-03-31T13:59:38.253805"
   },
   {
     "id": "claire-danes",
@@ -5223,7 +5599,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/vTKKniIwbXWMmnuMmGKHYS41Vif.jpg",
+    "photo_updated": "2026-03-31T13:59:39.767924"
   },
   {
     "id": "claire-foy",
@@ -5254,7 +5632,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/ypQrZFp3UPS6VE4TwGibgG2VB0n.jpg",
+    "photo_updated": "2026-03-31T13:59:41.281001"
   },
   {
     "id": "claude-giroux",
@@ -5285,7 +5665,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/g3xX3Uo6F9SxFd2EKvwuGpeytFm.jpg",
+    "photo_updated": "2026-03-31T13:59:42.807701"
   },
   {
     "id": "claudia-schiffer",
@@ -5316,7 +5698,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/wDLlMs7aTELNZSEQfQKYBxG6TYW.jpg",
+    "photo_updated": "2026-03-31T13:59:44.333683"
   },
   {
     "id": "claudia-sheinbaum",
@@ -5347,7 +5731,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/8fklc7AHxZK1j9WObWndnRfGH1r.jpg",
+    "photo_updated": "2026-03-31T13:59:45.871393"
   },
   {
     "id": "coco-gauff",
@@ -5378,7 +5764,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/iubLSxTfntq5fV44Sm044zqIKzz.jpg",
+    "photo_updated": "2026-03-31T13:59:47.397934"
   },
   {
     "id": "colin-kaepernick",
@@ -5409,7 +5797,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/9ossxjX5ZLg2VaYzi5FRJf4Ejr7.jpg",
+    "photo_updated": "2026-03-31T13:59:48.927935"
   },
   {
     "id": "colman-domingo",
@@ -5440,7 +5830,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/2tu6T9ugnf82qIMGVKWSb0dvvq5.jpg",
+    "photo_updated": "2026-03-31T13:59:50.440818"
   },
   {
     "id": "conan-obrien",
@@ -5471,7 +5863,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/deRbViPut0t80miscBpP2DhBJU5.jpg",
+    "photo_updated": "2026-03-31T13:59:51.950609"
   },
   {
     "id": "connie-chiume",
@@ -5502,7 +5896,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/3ET4rE2aAEyczhognWWi1rPAdWo.jpg",
+    "photo_updated": "2026-03-31T13:59:53.483665"
   },
   {
     "id": "connor-mcdavid",
@@ -5564,7 +5960,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/aEamMRQTl1P6fgvQnrEHGfd07El.jpg",
+    "photo_updated": "2026-03-31T13:59:56.690865"
   },
   {
     "id": "cormac-mccarthy",
@@ -5595,7 +5993,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/4tqwneKNKadHKgGLGNyiqzGR7t2.jpg",
+    "photo_updated": "2026-03-31T13:59:58.218972"
   },
   {
     "id": "courtney-love",
@@ -5626,7 +6026,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/xOhKd9y4IdsUVecAVz0AR5Ye7yQ.jpg",
+    "photo_updated": "2026-03-31T13:59:59.732274"
   },
   {
     "id": "cristiano-ronaldo",
@@ -5720,9 +6122,11 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache",
+    "photo_source": "TMDB",
     "last_updated": "2026-03-20",
-    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback | All three sources exhausted — no image found"
+    "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback | All three sources exhausted — no image found",
+    "image": "https://image.tmdb.org/t/p/original/hAsxOYVLzHIteHwqWYGYJrO0WlC.jpg",
+    "photo_updated": "2026-03-31T14:00:01.244107"
   },
   {
     "id": "curren-y",
@@ -5815,7 +6219,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/xYJvMe52wf0L22Qs6N5M3rR0Uyx.jpg",
+    "photo_updated": "2026-03-31T14:00:05.966669"
   },
   {
     "id": "dafne-keen",
@@ -5846,7 +6252,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/34BhddK5z2YHjfppOleezVrQ7Jt.jpg",
+    "photo_updated": "2026-03-31T14:00:07.478762"
   },
   {
     "id": "dak-prescott",
@@ -5877,7 +6285,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/d9EfhtWrTh3Oo7iscgSG0lU9Prr.jpg",
+    "photo_updated": "2026-03-31T14:00:08.994858"
   },
   {
     "id": "dalai-lama",
@@ -5908,7 +6318,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/dAtWYY56kQURZFKmdgrCTkakXTw.jpg",
+    "photo_updated": "2026-03-31T14:00:10.521007"
   },
   {
     "id": "damian-lillard",
@@ -5939,7 +6351,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/vON4oymQinw0yW3oEw2b7LEfZU6.jpg",
+    "photo_updated": "2026-03-31T14:00:12.047744"
   },
   {
     "id": "dame-dash",
@@ -5970,7 +6384,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/iZc3IlfO0p5sVpQjxswKtm8JLYC.jpg",
+    "photo_updated": "2026-03-31T14:00:13.562505"
   },
   {
     "id": "dan-bilzerian",
@@ -6001,7 +6417,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/9UKqkVEVMaNa6RpfFKeoeuQILxw.jpg",
+    "photo_updated": "2026-03-31T14:00:15.092898"
   },
   {
     "id": "dana-white",
@@ -6028,11 +6446,19 @@
         "type": "real_estate",
         "name": "Las Vegas Compound",
         "description": "His lavish Las Vegas compound near the UFC Performance Institute.",
-        "estimatedValue": 14
+        "estimatedValue": 14,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$14M"
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/urhiqgeFAnzuZUse32YwtL0xr53.jpg",
+    "photo_updated": "2026-03-31T14:00:16.611163"
   },
   {
     "id": "dani-alves",
@@ -6063,7 +6489,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/7DyQkyHqROjlaZXeOpokklO1xGH.jpg",
+    "photo_updated": "2026-03-31T14:00:18.140183"
   },
   {
     "id": "daniel-craig",
@@ -6094,7 +6522,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg",
+    "photo_updated": "2026-03-31T14:00:19.655047"
   },
   {
     "id": "danielle-brooks",
@@ -6125,7 +6555,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/pPSG2Vmq24cwAL5XGK1NLs3KEoZ.jpg",
+    "photo_updated": "2026-03-31T14:00:21.205715"
   },
   {
     "id": "danilo-gallinari",
@@ -6218,7 +6650,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/eRf1OKLCrdAk4X2l8JOL94GrV2j.jpg",
+    "photo_updated": "2026-03-31T14:00:26.090854"
   },
   {
     "id": "dave-chappelle",
@@ -6249,7 +6683,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/hDVe67wjmjtbOTzDrFaJfcobcE.jpg",
+    "photo_updated": "2026-03-31T14:00:27.644129"
   },
   {
     "id": "david-beckham",
@@ -6280,7 +6716,9 @@
       }
     ],
     "lastUpdated": "2026-03-20",
-    "photo_source": "photosCache"
+    "photo_source": "TMDB",
+    "image": "https://image.tmdb.org/t/p/original/9MOY95jds58WtvEwUTYZgXlTVr0.jpg",
+    "photo_updated": "2026-03-31T14:00:29.172305"
   },
   {
     "id": "david-chang",
@@ -6338,7 +6776,13 @@
         "type": "island",
         "name": "Islands of Copperfield Bay",
         "description": "His private 11-island archipelago in the Exumas, Bahamas.",
-        "estimatedValue": 50
+        "estimatedValue": 50,
+        "images": [
+          "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$50M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7239,7 +7683,13 @@
         "type": "real_estate",
         "name": "Brentwood Tennessee Estate",
         "description": "Dolly's manicured Tennessee estate with a dedicated music room and butterfly garden.",
-        "estimatedValue": 5.5
+        "estimatedValue": 5.5,
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$5.5M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7493,7 +7943,13 @@
         "type": "real_estate",
         "name": "Brentwood Mansion",
         "description": "The luxurious Brentwood estate Dre bought from Tom Brady for $50M in 2021. Fully staffed.",
-        "estimatedValue": 100
+        "estimatedValue": 100,
+        "images": [
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$100M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7524,7 +7980,13 @@
         "type": "real_estate",
         "name": "Beverly Hills Mansion",
         "description": "Dr. Phil's Beverly Hills mansion near Sunset Boulevard.",
-        "estimatedValue": 6.5
+        "estimatedValue": 6.5,
+        "images": [
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$6.5M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7702,7 +8164,13 @@
         "type": "jet",
         "name": "Gulfstream G650ER",
         "description": "The Rock's custom G650ER, used for his incredibly busy filming and production schedule.",
-        "estimatedValue": 65
+        "estimatedValue": 65,
+        "images": [
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$65M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7965,7 +8433,13 @@
         "type": "real_estate",
         "name": "Atlanta Megamansion",
         "description": "Elton's grand Atlanta residence, his US base during extensive tour years.",
-        "estimatedValue": 9.5
+        "estimatedValue": 9.5,
+        "images": [
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$9.5M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -8236,7 +8710,13 @@
         "type": "real_estate",
         "name": "Bel-Air Mega-Mansion",
         "description": "Spiegel and Kerr's stunning Bel-Air estate with panoramic LA views.",
-        "estimatedValue": 20
+        "estimatedValue": 20,
+        "images": [
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$20M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -8453,7 +8933,13 @@
         "type": "real_estate",
         "name": "Madrid Penthouse",
         "description": "His Madrid luxury penthouse.",
-        "estimatedValue": 8
+        "estimatedValue": 8,
+        "images": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$8M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -8786,7 +9272,13 @@
         "type": "real_estate",
         "name": "Villa Oleandra",
         "description": "The historic Italian villa on Lake Como that Clooney purchased in 2002 for $10M.",
-        "estimatedValue": 100
+        "estimatedValue": 100,
+        "images": [
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$100M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -9449,7 +9941,13 @@
         "type": "real_estate",
         "name": "Zomba Mansion",
         "description": "His Zomba government mansion.",
-        "estimatedValue": 5
+        "estimatedValue": 5,
+        "images": [
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$5M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -9573,7 +10071,13 @@
         "type": "real_estate",
         "name": "Seattle Compound",
         "description": "Schultz's Pacific Northwest compound overlooking Puget Sound.",
-        "estimatedValue": 10
+        "estimatedValue": 10,
+        "images": [
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$10M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -9988,7 +10492,13 @@
         "type": "real_estate",
         "name": "Hong Kong Villa",
         "description": "Jackie's sprawling hillside villa in the exclusive Deep Water Bay area of Hong Kong.",
-        "estimatedValue": 14
+        "estimatedValue": 14,
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$14M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -10714,7 +11224,13 @@
         "type": "real_estate",
         "name": "Beverly Hills Family Home",
         "description": "Beautiful family home in Beverly Hills.",
-        "estimatedValue": 10
+        "estimatedValue": 10,
+        "images": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$10M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -11148,7 +11664,13 @@
         "type": "real_estate",
         "name": "Hendersonville Home",
         "description": "The famous Hendersonville, Tennessee lakeside home shared with wife June Carter Cash.",
-        "estimatedValue": 1.5
+        "estimatedValue": 1.5,
+        "images": [
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$1.5M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -12022,7 +12544,12 @@
         "type": "helicopter",
         "name": "Sikorsky S-76B",
         "description": "The type of Sikorsky helicopter Kobe used for his famous commute from Orange County to Los Angeles.",
-        "estimatedValue": 1.5
+        "estimatedValue": 1.5,
+        "images": [
+          "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$1.5M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -12995,7 +13522,13 @@
         "type": "real_estate",
         "name": "Lisbon Mansion",
         "description": "Madonna's Lisbon estate in the historic Mouraria neighbourhood, where she moved in 2017.",
-        "estimatedValue": 7.4
+        "estimatedValue": 7.4,
+        "images": [
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$7.4M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13026,7 +13559,13 @@
         "type": "real_estate",
         "name": "Beverly Hills Mansion",
         "description": "Magic's longtime Beverly Hills estate, his family home for decades.",
-        "estimatedValue": 10
+        "estimatedValue": 10,
+        "images": [
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$10M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13119,7 +13658,13 @@
         "type": "real_estate",
         "name": "Atherton Mansion",
         "description": "Palatial estate in Atherton, Silicon Valley, one of the most expensive zip codes in the US.",
-        "estimatedValue": 45
+        "estimatedValue": 45,
+        "images": [
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$45M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13361,120 +13906,15 @@
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/440px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg"
     ],
     "photo_source": "photosCache",
-    "assets": [
-      {
-        "id": "mark-zuckerberg-koolau-ranch",
-        "type": "real_estate",
-        "name": "Ko'olau Ranch, Kauai",
-        "description": "A sprawling 1,500-acre compound on the north shore of Kauai, Hawaii. The estate features a main mansion, multiple guest houses, its own beach, an underground bunker, and sustainable farming operations — making it one of the most expensive private properties ever assembled in Hawaii.",
-        "estimatedValue": 270.0,
-        "location": "Kauai, Hawaii, USA",
-        "images": [
-          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
-        ],
-        "valueFormatted": "$270M",
-        "valuationSource": "mansionglobal.com",
-        "lastValuated": "2026-03-31",
-        "likes": 0
-      },
-      {
-        "id": "mark-zuckerberg-palo-alto",
-        "type": "real_estate",
-        "name": "Palo Alto Compound",
-        "description": "Zuckerberg's primary Silicon Valley residence in Palo Alto, California. Purchased in 2011, the property has been expanded over the years by acquiring and demolishing surrounding homes to create a private compound with extensive security.",
-        "estimatedValue": 7.0,
-        "location": "Palo Alto, California, USA",
-        "images": [
-          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85"
-        ],
-        "valueFormatted": "$7M",
-        "valuationSource": "businessinsider.com",
-        "lastValuated": "2026-03-31",
-        "likes": 0
-      },
-      {
-        "id": "mark-zuckerberg-lake-tahoe",
-        "type": "real_estate",
-        "name": "Lake Tahoe Lakefront Estate",
-        "description": "A luxury lakefront retreat on the shores of Lake Tahoe offering sweeping mountain and water views. The estate serves as Zuckerberg's primary vacation property for skiing and outdoor activities.",
-        "estimatedValue": 59.0,
-        "location": "Lake Tahoe, Nevada, USA",
-        "images": [
-          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85"
-        ],
-        "valueFormatted": "$59M",
-        "valuationSource": "businessinsider.com",
-        "lastValuated": "2026-03-31",
-        "likes": 0
-      },
-      {
-        "id": "mark-zuckerberg-gulfstream-g650er",
-        "type": "jet",
-        "name": "Gulfstream G650ER",
-        "description": "One of the world's most capable ultra-long-range business jets, able to fly non-stop from San Francisco to Tokyo. Fitted with a custom interior, Zuckerberg uses it for global executive travel and his frequent trips between Silicon Valley and Hawaii.",
-        "estimatedValue": 65.0,
-        "year": 2022,
-        "specs": "Ultra-long-range · seats up to 19 · max speed Mach 0.925 · range 7,500 nm",
-        "images": [
-          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=900&h=600&fit=crop&q=85"
-        ],
-        "valueFormatted": "$65M",
-        "valuationSource": "privatefly.com",
-        "lastValuated": "2026-03-31",
-        "likes": 0
-      }
-    ],
-    "bio": "Mark Zuckerberg co-founded Facebook from his Harvard dorm room in 2004, transforming it into Meta Platforms — a $1.4 trillion conglomerate owning Facebook, Instagram, and WhatsApp. As Chairman and CEO he has steered the company through landmark regulatory battles and a bold pivot toward AI and augmented reality. A disciplined practitioner of Brazilian jiu-jitsu, he is consistently ranked among the world's five wealthiest individuals.",
-    "birthdate": "May 14, 1984",
-    "birthplace": "White Plains, New York, USA",
-    "gender": "Male",
-    "height": "5'7\" (170 cm)",
-    "profession": "Software Developer, Entrepreneur",
-    "nationality": "American",
-    "netWorth": 175.0,
-    "category": "Entrepreneurs",
-    "relationships": {
-      "spouse": "Priscilla Chan",
-      "children": [
-        "Maxima Zuckerberg",
-        "August Zuckerberg",
-        "Aurelia Zuckerberg"
-      ]
-    },
-    "gossip": [
-      {
-        "title": "Senate Hearing Apology",
-        "summary": "In January 2024, Zuckerberg stood up and turned to face a gallery of parents of child victims during a Senate Judiciary Committee hearing on social media and child safety, delivering a public apology in one of the most dramatic moments in recent congressional history.",
-        "type": "controversy",
-        "date": "Jan 2024"
-      },
-      {
-        "title": "Cage-Fight Challenge to Elon Musk",
-        "summary": "After Musk threatened to restrict Threads on X, Zuckerberg challenged him to a cage fight. Musk accepted on X, but the bout never materialised despite weeks of trash-talk, sparring clips, and breathless media coverage that captivated the internet for months.",
-        "type": "gossip",
-        "date": "Summer 2023"
-      },
-      {
-        "title": "Metaverse: $46 Billion Lost",
-        "summary": "Meta's Reality Labs division burned through more than $46 billion between 2019 and 2023 chasing Zuckerberg's metaverse vision, with sluggish headset sales and internal frustration mounting. Zuckerberg defended the bet, calling it 'one of the most important things we'll do in our lifetime.'",
-        "type": "controversy",
-        "date": "2022–2023"
-      },
-      {
-        "title": "Kauai Ranch Land Dispute",
-        "summary": "Zuckerberg faced years of backlash from Native Hawaiian communities and local advocates over his 1,500-acre Ko'olau Ranch compound on Kauai, including a bitter legal battle over ancient trails and traditional land access rights.",
-        "type": "controversy",
-        "date": "2021–2023"
-      }
-    ]
+    "assets": [],
+    "bio": "",
+    "birthdate": "",
+    "birthplace": "",
+    "gender": "",
+    "height": "",
+    "profession": "",
+    "nationality": "",
+    "netWorth": 0
   },
   {
     "id": "chito-vera",
@@ -14067,7 +14507,13 @@
         "type": "real_estate",
         "name": "Lake Geneva Chalet",
         "description": "Schumacher's private Lake Geneva chalet in Switzerland, where he lives away from public view.",
-        "estimatedValue": 9
+        "estimatedValue": 9,
+        "images": [
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$9M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -14129,7 +14575,13 @@
         "type": "real_estate",
         "name": "Richmond Hill Home",
         "description": "Jagger's Georgian townhouse on Richmond Hill in southwest London.",
-        "estimatedValue": 6
+        "estimatedValue": 6,
+        "images": [
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$6M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15228,7 +15680,13 @@
         "type": "real_estate",
         "name": "San Francisco Home",
         "description": "San Francisco home where Collison lives near the Stripe headquarters.",
-        "estimatedValue": 15
+        "estimatedValue": 15,
+        "images": [
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$15M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15290,7 +15748,13 @@
         "type": "real_estate",
         "name": "Sussex Farmhouse",
         "description": "McCartney's historic 160-acre estate in East Sussex, owned since the early 1970s.",
-        "estimatedValue": 5
+        "estimatedValue": 5,
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$5M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15798,7 +16262,13 @@
         "type": "real_estate",
         "name": "Balmoral Castle",
         "description": "The Scottish Highland estate of Balmoral, privately owned by the Royal Family.",
-        "estimatedValue": 140
+        "estimatedValue": 140,
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$140M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -16095,7 +16565,13 @@
         "type": "real_estate",
         "name": "Palo Alto Estate",
         "description": "Hoffman's Palo Alto estate, close to the LinkedIn and Stanford campuses.",
-        "estimatedValue": 10
+        "estimatedValue": 10,
+        "images": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$10M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -16767,7 +17243,13 @@
         "type": "real_estate",
         "name": "San Francisco Home",
         "description": "San Francisco home that Sam Altman owns in one of the Bay Area's most prime locations.",
-        "estimatedValue": 27
+        "estimatedValue": 27,
+        "images": [
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$27M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -16891,7 +17373,13 @@
         "type": "real_estate",
         "name": "Bellevue Mansion",
         "description": "Nadella's mansion in Bellevue, Washington, close to Microsoft's Redmond campus.",
-        "estimatedValue": 8
+        "estimatedValue": 8,
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$8M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17172,7 +17660,13 @@
         "type": "real_estate",
         "name": "Mannat",
         "description": "SRK's iconic six-storey sea-facing bungalow in Bandstand, Bandra -- the most visited celebrity home in India.",
-        "estimatedValue": 18
+        "estimatedValue": 18,
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$18M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17589,7 +18083,13 @@
         "type": "real_estate",
         "name": "Los Altos Hills Home",
         "description": "Pichai's Los Altos Hills home in Silicon Valley.",
-        "estimatedValue": 40
+        "estimatedValue": 40,
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$40M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17937,7 +18437,13 @@
         "type": "real_estate",
         "name": "Palo Alto Home",
         "description": "Cook's understated Palo Alto home near Apple's campus.",
-        "estimatedValue": 4
+        "estimatedValue": 4,
+        "images": [
+          "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$4M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -18030,7 +18536,12 @@
         "type": "helicopter",
         "name": "Bell 206 JetRanger",
         "description": "Cruise is a licensed pilot who owns several aircraft. His Bell 206 is used for his famous stunt training.",
-        "estimatedValue": 0.4
+        "estimatedValue": 0.4,
+        "images": [
+          "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$400K"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -18148,7 +18659,13 @@
         "type": "real_estate",
         "name": "Hollywood Hills Home",
         "description": "Kalanick's Hollywood Hills home overlooking the Los Angeles skyline.",
-        "estimatedValue": 15
+        "estimatedValue": 15,
+        "images": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$15M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -18520,7 +19037,13 @@
         "type": "real_estate",
         "name": "Holland Park Mansion",
         "description": "The Beckhams' Holland Park mansion, shared with husband David.",
-        "estimatedValue": 40
+        "estimatedValue": 40,
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$40M"
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -18762,7 +19285,13 @@
         "type": "real_estate",
         "name": "Austin Home",
         "description": "Whitney's Austin, Texas home, close to Bumble's headquarters.",
-        "estimatedValue": 6
+        "estimatedValue": 6,
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
+          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
+        ],
+        "valueFormatted": "$6M"
       }
     ],
     "lastUpdated": "2026-03-20",
