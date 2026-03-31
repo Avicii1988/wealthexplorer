@@ -31,14 +31,14 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   const [expandedLetters, setExpandedLetters] = useState<Set<string>>(new Set())
 
   const sorted = useMemo(
-    () => [...filteredCelebs].sort((a, b) => a.name.localeCompare(b.name)),
+    () => [...filteredCelebs].sort((a, b) => (a.name ?? '').localeCompare(b.name ?? '')),
     [filteredCelebs]
   )
 
   const grouped = useMemo(() => {
     const map: Record<string, Celebrity[]> = {}
     for (const c of sorted) {
-      const letter = c.name[0].toUpperCase()
+      const letter = (c.name ?? '#')[0].toUpperCase()
       if (!map[letter]) map[letter] = []
       map[letter].push(c)
     }
@@ -125,7 +125,7 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                 {celebsToShow.map(celeb => {
                   const isWithin24h = (d?: string) => !!d && (Date.now() - new Date(d).getTime() < 86_400_000)
-                  const showNewBadge = isWithin24h(celeb.isNew) || celeb.assets.some(a => a.isNew)
+                  const showNewBadge = isWithin24h(celeb.isNew) || (celeb.assets ?? []).some(a => a.isNew)
                   return (
                     <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
                       <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 overflow-hidden">
@@ -358,10 +358,10 @@ export default function HomePage() {
     if (search.trim()) {
       const q = search.toLowerCase()
       list = list.filter(c =>
-        c.name.toLowerCase().includes(q) ||
-        c.category.toLowerCase().includes(q) ||
-        c.nationality.toLowerCase().includes(q) ||
-        c.assets.some(a => a.name.toLowerCase().includes(q) || a.type.includes(q))
+        (c.name ?? '').toLowerCase().includes(q) ||
+        (c.category ?? '').toLowerCase().includes(q) ||
+        (c.nationality ?? '').toLowerCase().includes(q) ||
+        (c.assets ?? []).some(a => (a.name ?? '').toLowerCase().includes(q) || a.type.includes(q))
       )
     }
     return list
@@ -372,9 +372,9 @@ export default function HomePage() {
     const q = search.toLowerCase()
     return celebrities
       .filter(c =>
-        c.name.toLowerCase().includes(q) ||
-        c.category.toLowerCase().includes(q) ||
-        c.profession.toLowerCase().includes(q)
+        (c.name ?? '').toLowerCase().includes(q) ||
+        (c.category ?? '').toLowerCase().includes(q) ||
+        (c.profession ?? '').toLowerCase().includes(q)
       )
       .slice(0, 6)
   }, [search])
@@ -398,8 +398,8 @@ export default function HomePage() {
   const allFeedItems: FeedItem[] = useMemo(
     () =>
       filteredCelebs
-        .flatMap(c => c.assets.map(a => ({ ...a, ownerName: c.name, ownerId: c.id })))
-        .sort((a, b) => b.estimatedValue - a.estimatedValue),
+        .flatMap(c => (c.assets ?? []).filter(a => a.name && a.type).map(a => ({ ...a, ownerName: c.name, ownerId: c.id })))
+        .sort((a, b) => (b.estimatedValue ?? 0) - (a.estimatedValue ?? 0)),
     [filteredCelebs]
   )
 

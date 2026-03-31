@@ -197,7 +197,7 @@ function GlanceTable({ celeb }: { celeb: Celebrity }) {
 // Link to a celeb profile if this name matches one in the database
 function CelebName({ name }: { name: string }) {
   const { celebrities } = useCelebrities()
-  const match = celebrities.find(c => c.name.toLowerCase() === name.toLowerCase())
+  const match = celebrities.find(c => c.name?.toLowerCase() === name.toLowerCase())
   if (match) {
     return (
       <Link
@@ -517,10 +517,11 @@ function AssetsSection({ celeb }: { celeb: Celebrity }) {
   const { t } = useLang()
   const [activeType, setActiveType] = useState<AssetType | typeof ALL>(ALL)
 
-  const assetTypes = Array.from(new Set(celeb.assets.map(a => a.type))) as AssetType[]
+  const safeAssets = (celeb.assets ?? []).filter(a => a.id && a.type)
+  const assetTypes = Array.from(new Set(safeAssets.map(a => a.type))) as AssetType[]
   const tabs: (AssetType | typeof ALL)[] = [ALL, ...assetTypes]
-  const filtered = (activeType === ALL ? celeb.assets : celeb.assets.filter(a => a.type === activeType))
-    .slice().sort((a, b) => b.estimatedValue - a.estimatedValue)
+  const filtered = (activeType === ALL ? safeAssets : safeAssets.filter(a => a.type === activeType))
+    .slice().sort((a, b) => (b.estimatedValue ?? 0) - (a.estimatedValue ?? 0))
 
   return (
     <div className="rounded-2xl overflow-hidden bg-[#111]">
@@ -528,13 +529,13 @@ function AssetsSection({ celeb }: { celeb: Celebrity }) {
         <h2 className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
           {t('assets')}
         </h2>
-        <span className="text-[11px] text-gray-600">{celeb.assets.length} total</span>
+        <span className="text-[11px] text-gray-600">{safeAssets.length} total</span>
       </div>
 
       {assetTypes.length > 1 && (
         <div className="flex items-center gap-2 flex-wrap px-4 py-3 border-b border-white/5 bg-[#111]">
           {tabs.map(type => {
-            const count = type === ALL ? celeb.assets.length : celeb.assets.filter(a => a.type === type).length
+            const count = type === ALL ? safeAssets.length : safeAssets.filter(a => a.type === type).length
             const isActive = activeType === type
             return (
               <button
@@ -767,7 +768,7 @@ export default function ProfilePage() {
     )
   }
 
-  const totalValue = celeb.assets.reduce((s, a) => s + a.estimatedValue, 0)
+  const totalValue = (celeb.assets ?? []).reduce((s, a) => s + (a.estimatedValue ?? 0), 0)
   const isFollowed = followed.has(celeb.id)
 
   function toggleFollow() {
@@ -907,7 +908,7 @@ export default function ProfilePage() {
               </div>
               <div>
                 <p className="text-2xl font-semibold text-white tabular-nums" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-                  {celeb.assets.length}
+                  {(celeb.assets ?? []).length}
                 </p>
                 <p className="text-xs text-gray-600 mt-0.5 uppercase tracking-wider">{t('assets')}</p>
               </div>
@@ -927,7 +928,7 @@ export default function ProfilePage() {
         <GlanceTable celeb={celeb} />
         <RelationshipsSection celeb={celeb} />
         <GossipSection celeb={celeb} />
-        {celeb.assets.length > 0 && <AssetsSection key={celeb.id} celeb={celeb} />}
+        {(celeb.assets ?? []).filter(a => a.id && a.type).length > 0 && <AssetsSection key={celeb.id} celeb={celeb} />}
       </main>
 
       {/* ── MORE PROFILES — static scrollable carousel ──────────────── */}
