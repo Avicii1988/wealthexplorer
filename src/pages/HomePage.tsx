@@ -12,6 +12,7 @@ import {
   formatValue,
   formatNetWorth,
   getAssetImage,
+  getAvatar,
   DECEASED_IDS,
 } from '../data/celebrities'
 import { useCelebrities } from '../hooks/useCelebrityData'
@@ -233,6 +234,23 @@ function LanguageSelector() {
   )
 }
 
+// ── CIRCLE CARD (trending profile grids) ─────────────────────────────────────
+function CircleCard({ celeb }: { celeb: Celebrity }) {
+  return (
+    <Link
+      to={`/celebrities/${celeb.id}`}
+      className="flex flex-col items-center gap-2 group flex-shrink-0"
+    >
+      <div className="w-[84px] h-[84px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/80 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.45)] transition-all duration-300 shadow-lg">
+        <CelebrityAvatar celeb={celeb} size={84} className="group-hover:scale-105 transition-transform duration-500" />
+      </div>
+      <span className="text-[10px] text-gray-500 group-hover:text-white transition-colors text-center w-20 leading-tight">
+        {celeb.name}
+      </span>
+    </Link>
+  )
+}
+
 // ── SCROLL TO TOP BUTTON (mobile only) ────────────────────────────────────────
 function ScrollToTopButton() {
   const [visible, setVisible] = useState(false)
@@ -301,6 +319,24 @@ export default function HomePage() {
       )
       .slice(0, 6)
   }, [search])
+
+  // Trending circles: 9 celebs with real photos per category
+  const trendingCelebs = useMemo(() => {
+    const hasPhoto = (c: Celebrity) => {
+      const url = getAvatar(c)
+      return !!url && !url.includes('ui-avatars.com')
+    }
+    const pool = activeCategory === 'All'
+      ? celebrities
+      : celebrities.filter(c => c.category === activeCategory)
+    const trending = pool.filter(c => c.trending && hasPhoto(c))
+    if (trending.length >= 9) return trending.slice(0, 9)
+    const trendingIds = new Set(trending.map(c => c.id))
+    const filler = pool
+      .filter(c => !trendingIds.has(c.id) && hasPhoto(c))
+      .sort((a, b) => b.netWorth - a.netWorth)
+    return [...trending, ...filler].slice(0, 9)
+  }, [celebrities, activeCategory])
 
   // Asset feed: top 20 most expensive assets
   const allFeedItems: FeedItem[] = useMemo(
@@ -459,6 +495,20 @@ export default function HomePage() {
         ))}
       </div>
 
+
+      {/* ── TRENDING PROFILES ───────────────────────────────────── */}
+      {!search.trim() && (
+        <section className="px-5 pb-12 max-w-5xl mx-auto">
+          <p className="text-center text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase mb-8">
+            {t('trendingProfiles')}
+          </p>
+          <div className="flex gap-5 pb-2 justify-center flex-wrap">
+            {trendingCelebs.map((celeb) => (
+              <CircleCard key={celeb.id} celeb={celeb} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Search active — show filtered results banner */}
       {search.trim() && (
