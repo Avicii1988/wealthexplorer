@@ -12,7 +12,6 @@ import {
   formatValue,
   formatNetWorth,
   getAssetImage,
-  getAvatar,
   DECEASED_IDS,
 } from '../data/celebrities'
 import { useCelebrities } from '../hooks/useCelebrityData'
@@ -185,121 +184,6 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   )
 }
 
-function WealthLogo() {
-  return (
-    <div className="flex items-center gap-3.5">
-      {/*
-        Brilliant-cut diamond viewed from the front.
-        Key geometry (viewBox 0 0 44 54):
-          Table edge:   A(11,0) — B(33,0)
-          Crown points: E(0,18)  — C(44,18)   (girdle, widest)
-          Culet:        D(22,54)              (bottom tip)
-          Crown centre: F(22,13)              (inner crown facet hub)
-          Girdle mid:   G(22,18)
-      */}
-      <svg width="34" height="42" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-        <defs>
-          <linearGradient id="gBase" x1="0" y1="0" x2="44" y2="54" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"  stopColor="#f9ef82"/>
-            <stop offset="50%" stopColor="#c9a84c"/>
-            <stop offset="100%" stopColor="#6b3f0a"/>
-          </linearGradient>
-          <linearGradient id="gShine" x1="0" y1="0" x2="22" y2="27" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"  stopColor="#fffde0" stopOpacity="1"/>
-            <stop offset="100%" stopColor="#c9a84c" stopOpacity="0"/>
-          </linearGradient>
-          <linearGradient id="gShadow" x1="44" y1="0" x2="0" y2="54" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"  stopColor="#000" stopOpacity="0.32"/>
-            <stop offset="100%" stopColor="#000" stopOpacity="0"/>
-          </linearGradient>
-          <linearGradient id="gPavL" x1="0" y1="18" x2="22" y2="54" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"  stopColor="#e8c84a"/>
-            <stop offset="100%" stopColor="#8a5c10"/>
-          </linearGradient>
-          <linearGradient id="gPavR" x1="44" y1="18" x2="22" y2="54" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"  stopColor="#c9a84c"/>
-            <stop offset="100%" stopColor="#4a2800"/>
-          </linearGradient>
-        </defs>
-
-        {/* ── Base fill (whole outline) ── */}
-        <polygon points="11,0 33,0 44,18 22,54 0,18" fill="url(#gBase)"/>
-
-        {/* ── Crown facets ── */}
-        {/* Left bezel: E-A-F  (bright: catches top-left light) */}
-        <polygon points="0,18 11,0 22,13 22,18" fill="url(#gShine)" opacity="0.60"/>
-        {/* Table: A-B-F  (the flat top face — brightest) */}
-        <polygon points="11,0 33,0 22,13" fill="url(#gShine)" opacity="0.45"/>
-        {/* Right bezel: B-C-F  (shadow side) */}
-        <polygon points="33,0 44,18 22,18 22,13" fill="url(#gShadow)" opacity="0.80"/>
-
-        {/* ── Pavilion facets ── */}
-        {/* Left pavilion: E-G-D */}
-        <polygon points="0,18 22,18 22,54" fill="url(#gPavL)" opacity="0.70"/>
-        {/* Right pavilion: G-C-D  (darker) */}
-        <polygon points="22,18 44,18 22,54" fill="url(#gPavR)" opacity="0.85"/>
-        {/* Inner pavilion subdivisions */}
-        <polygon points="0,18 11,18 22,54"  fill="#fff8c0" opacity="0.08"/>
-        <polygon points="33,18 44,18 22,54" fill="#000" opacity="0.10"/>
-
-        {/* ── Facet lines ── */}
-        {/* Crown */}
-        <line x1="22" y1="0"  x2="22" y2="13" stroke="#fffde0" strokeWidth="0.45" opacity="0.75"/>
-        <line x1="22" y1="13" x2="0"  y2="18" stroke="#f9ef82" strokeWidth="0.40" opacity="0.55"/>
-        <line x1="22" y1="13" x2="44" y2="18" stroke="#6b3f0a" strokeWidth="0.40" opacity="0.60"/>
-        <line x1="22" y1="13" x2="22" y2="18" stroke="#c9a84c" strokeWidth="0.35" opacity="0.50"/>
-        {/* Girdle */}
-        <line x1="0"  y1="18" x2="44" y2="18" stroke="#f9ef82" strokeWidth="0.55" opacity="0.65"/>
-        {/* Pavilion */}
-        <line x1="11" y1="18" x2="22" y2="54" stroke="#e8c84a" strokeWidth="0.40" opacity="0.45"/>
-        <line x1="33" y1="18" x2="22" y2="54" stroke="#6b3f0a" strokeWidth="0.40" opacity="0.45"/>
-
-        {/* ── Outer outline ── */}
-        <polygon points="11,0 33,0 44,18 22,54 0,18"
-          fill="none" stroke="#f9ef82" strokeWidth="0.7" opacity="0.55"/>
-        {/* Table top edge highlight */}
-        <line x1="11" y1="0" x2="33" y2="0" stroke="#fffde0" strokeWidth="1.1" opacity="0.85"/>
-
-        {/* ── Culet sparkle ── */}
-        <circle cx="22" cy="54" r="1" fill="#fffde0" opacity="0.95"/>
-        <circle cx="22" cy="54" r="2" fill="#fffde0" opacity="0.20"/>
-      </svg>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-        <span style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          background: 'linear-gradient(135deg, #f5e070 0%, #c9a84c 48%, #8a6218 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          fontSize: '14px',
-          letterSpacing: '0.38em',
-          textTransform: 'uppercase' as const,
-          fontWeight: 700,
-          lineHeight: 1,
-        }}>
-          Wealth
-        </span>
-        <span style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          background: 'linear-gradient(135deg, #f5e070 0%, #c9a84c 48%, #8a6218 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          fontSize: '10px',
-          letterSpacing: '0.42em',
-          textTransform: 'uppercase' as const,
-          fontWeight: 400,
-          lineHeight: 1,
-        }}>
-          Explorer
-        </span>
-        {/* Decorative gold rule instead of text subtitle */}
-        <div style={{ height: '1px', marginTop: '3px', background: 'linear-gradient(90deg, rgba(201,168,76,0.7), rgba(201,168,76,0.25), transparent)' }} />
-      </div>
-    </div>
-  )
-}
-
 // ── LANGUAGE SELECTOR ─────────────────────────────────────────────────────────
 function LanguageSelector() {
   const { activeLang, setLang } = useLang()
@@ -346,23 +230,6 @@ function LanguageSelector() {
         </div>
       )}
     </div>
-  )
-}
-
-// ── CIRCLE CARD (trending / category profile grids) ──────────────────────────
-function CircleCard({ celeb }: { celeb: Celebrity }) {
-  return (
-    <Link
-      to={`/celebrities/${celeb.id}`}
-      className="flex flex-col items-center gap-2 group flex-shrink-0"
-    >
-      <div className="w-[84px] h-[84px] rounded-full overflow-hidden border-2 border-[#c9a84c]/20 group-hover:border-[#c9a84c]/80 group-hover:shadow-[0_0_18px_rgba(201,168,76,0.45)] transition-all duration-300 shadow-lg">
-        <CelebrityAvatar celeb={celeb} size={84} className="group-hover:scale-105 transition-transform duration-500" />
-      </div>
-      <span className="text-[10px] text-gray-500 group-hover:text-white transition-colors text-center w-20 leading-tight">
-        {celeb.name}
-      </span>
-    </Link>
   )
 }
 
@@ -435,28 +302,6 @@ export default function HomePage() {
       .slice(0, 6)
   }, [search])
 
-  // Trending: show only celebs with a profile picture. Fill 9 slots.
-  const trendingCelebs = useMemo(() => {
-    const hasPhoto = (c: Celebrity) => {
-      const url = getAvatar(c)
-      return !!url && !url.includes('ui-avatars.com')
-    }
-    if (activeCategory === 'All') {
-      const flagged = celebrities.filter(c => c.trending && hasPhoto(c))
-      if (flagged.length >= 9) return flagged.slice(0, 9)
-      const flaggedIds = new Set(flagged.map(c => c.id))
-      const filler = celebrities
-        .filter(c => !flaggedIds.has(c.id) && hasPhoto(c))
-        .sort((a, b) => b.netWorth - a.netWorth)
-      return [...flagged, ...filler].slice(0, 9)
-    }
-    // category selected: 9 trending for that category, fallback to non-trending
-    const fromCategory = celebrities.filter(c => c.category === activeCategory && hasPhoto(c))
-    const trending = fromCategory.filter(c => c.trending)
-    const rest = fromCategory.filter(c => !c.trending)
-    return [...trending, ...rest].slice(0, 9)
-  }, [celebrities, activeCategory])
-
   // Asset feed: top 20 most expensive assets
   const allFeedItems: FeedItem[] = useMemo(
     () =>
@@ -484,8 +329,6 @@ export default function HomePage() {
     [assetTypeCounts]
   )
 
-  const showTrending = !search && activeCategory === 'All'
-  const showCategoryProfiles = !search && activeCategory !== 'All'
   const showSearchDropdown = searchFocused && search.trim().length > 0
 
   if (loading) {
@@ -502,7 +345,6 @@ export default function HomePage() {
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="border-b bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40" style={{ borderBottomColor: 'rgba(201,168,76,0.18)' }}>
         <div className="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between">
-          <Link to="/" onClick={() => window.scrollTo(0, 0)}><WealthLogo /></Link>
           <div className="flex items-center gap-2">
             <NotificationBell />
             <ThemeToggle />
@@ -617,20 +459,6 @@ export default function HomePage() {
         ))}
       </div>
 
-      {/* ── PROFILES — trending (all) or top 8 (category) ───── */}
-      {(showTrending || showCategoryProfiles) && (
-        <section className="px-5 pb-16 max-w-5xl mx-auto">
-          <p className="text-center text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase mb-8">
-            {showTrending ? t('trendingProfiles') : `${activeCategory}`}
-          </p>
-          {/* Circle card grid — centered on all screens */}
-          <div className="flex gap-5 pb-2 justify-center flex-wrap">
-            {trendingCelebs.map((celeb) => (
-              <CircleCard key={celeb.id} celeb={celeb} />
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* Search active — show filtered results banner */}
       {search.trim() && (
@@ -651,7 +479,7 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-5 pb-16">
         <div className="flex items-center justify-center gap-3 mb-6">
           <p className="text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase text-center">
-            {showTrending ? t('featuredAssets') : `${t('assets')} · ${filteredCelebs.length} profiles`}
+            {t('featuredAssets')}
           </p>
         </div>
 
@@ -738,11 +566,6 @@ export default function HomePage() {
       {/* ── FOOTER ──────────────────────────────────────────────── */}
       <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(201,168,76,0.18)' }}>
         <div className="max-w-2xl mx-auto text-center">
-
-          {/* Logo */}
-          <div className="flex justify-center mb-5">
-            <Link to="/" onClick={() => window.scrollTo(0, 0)}><WealthLogo /></Link>
-          </div>
 
           {/* Tagline */}
           <p className="text-[11px] text-white/60 mb-6 tracking-wide">

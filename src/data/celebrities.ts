@@ -197,8 +197,16 @@ export function getAvatar(celeb: Celebrity): string {
 // placeholders. A deterministic hash of the asset ID picks a unique slot so the
 // same asset always gets the same picture, but different assets get different ones.
 const REPEATED_URLS = new Set([
-  'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop',
-  'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop', // real_estate
+  'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop',    // car
+  'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop', // yacht
+  'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop', // jet
+  'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&h=600&fit=crop', // watch
+  'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop', // art
+  'https://images.unsplash.com/photo-1569702846516-9b1e3e6b1e79?w=900&h=600&fit=crop', // helicopter
+  'https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop',   // island
+  'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=900&h=600&fit=crop', // sports_team
+  'https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=900&h=600&fit=crop',   // rocket
 ])
 
 const ASSET_IMAGE_POOLS: Record<AssetType, string[]> = {
