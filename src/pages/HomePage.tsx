@@ -188,29 +188,44 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 function WealthLogo() {
   return (
     <div className="flex items-center gap-3.5">
-      {/* Crown + W monogram — luxury mark */}
-      <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+      {/* Diamond gem mark */}
+      <svg width="36" height="40" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
         <defs>
-          <linearGradient id="logoGold" x1="0" y1="0" x2="40" y2="36" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"   stopColor="#f5e070"/>
-            <stop offset="48%" stopColor="#c9a84c"/>
-            <stop offset="100%" stopColor="#8a6218"/>
+          <linearGradient id="dGold" x1="0" y1="0" x2="36" y2="40" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stopColor="#f7e97a"/>
+            <stop offset="45%" stopColor="#c9a84c"/>
+            <stop offset="100%" stopColor="#7a5010"/>
           </linearGradient>
-          <linearGradient id="logoShine" x1="0" y1="0" x2="40" y2="36" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#fff8d0" stopOpacity="0.6"/>
+          <linearGradient id="dLight" x1="0" y1="0" x2="18" y2="20" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stopColor="#fff8c0" stopOpacity="0.85"/>
             <stop offset="100%" stopColor="#c9a84c" stopOpacity="0"/>
           </linearGradient>
+          <linearGradient id="dDark" x1="36" y1="0" x2="0" y2="40" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stopColor="#000" stopOpacity="0.25"/>
+            <stop offset="100%" stopColor="#000" stopOpacity="0"/>
+          </linearGradient>
         </defs>
-        {/* Crown base band */}
-        <rect x="1" y="24" width="38" height="7" rx="1.5" fill="url(#logoGold)"/>
-        <rect x="1" y="24" width="38" height="2.5" rx="1" fill="url(#logoShine)" opacity="0.55"/>
-        {/* Crown body with 3 points */}
-        <polygon points="1,24 1,8 10,17 20,2 30,17 39,8 39,24" fill="url(#logoGold)"/>
-        <polygon points="1,24 1,13 10,20 20,7 30,20 39,13 39,24" fill="url(#logoShine)" opacity="0.3"/>
-        {/* Center crown gem */}
-        <polygon points="20,2 22.5,7 20,12 17.5,7" fill="#fff8d0" opacity="0.95"/>
-        {/* Bottom rule */}
-        <line x1="1" y1="34.5" x2="39" y2="34.5" stroke="url(#logoGold)" strokeWidth="0.4" opacity="0.5"/>
+        {/* Girdle (top belt) */}
+        <polygon points="6,13 30,13 36,20 18,20 0,20" fill="url(#dGold)"/>
+        {/* Crown facets — left */}
+        <polygon points="0,20 6,13 18,20" fill="url(#dLight)" opacity="0.7"/>
+        {/* Crown facets — right */}
+        <polygon points="36,20 30,13 18,20" fill="url(#dDark)" opacity="0.9"/>
+        {/* Table (top flat face) */}
+        <polygon points="6,13 10,2 26,2 30,13 18,8" fill="url(#dLight)" opacity="0.55"/>
+        <polygon points="6,13 10,2 26,2 30,13 18,8" fill="url(#dGold)" opacity="0.6"/>
+        {/* Pavilion — main base */}
+        <polygon points="0,20 18,20 18,38" fill="url(#dGold)" opacity="0.85"/>
+        <polygon points="36,20 18,20 18,38" fill="url(#dDark)" opacity="0.95"/>
+        {/* Pavilion facet lines */}
+        <line x1="0"  y1="20" x2="18" y2="38" stroke="#f7e97a" strokeWidth="0.4" opacity="0.5"/>
+        <line x1="36" y1="20" x2="18" y2="38" stroke="#7a5010" strokeWidth="0.4" opacity="0.5"/>
+        <line x1="9"  y1="20" x2="18" y2="38" stroke="#c9a84c" strokeWidth="0.3" opacity="0.4"/>
+        <line x1="27" y1="20" x2="18" y2="38" stroke="#c9a84c" strokeWidth="0.3" opacity="0.4"/>
+        {/* Crown girdle outline */}
+        <polyline points="0,20 6,13 10,2 26,2 30,13 36,20" fill="none" stroke="#f7e97a" strokeWidth="0.5" opacity="0.6"/>
+        {/* Culet spark */}
+        <circle cx="18" cy="38" r="0.8" fill="#fff8c0" opacity="0.9"/>
       </svg>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
         <span style={{
@@ -385,7 +400,10 @@ export default function HomePage() {
 
   // Trending: show only celebs with a profile picture. Fill 9 slots.
   const trendingCelebs = useMemo(() => {
-    const hasPhoto = (c: Celebrity) => !!getAvatar(c)
+    const hasPhoto = (c: Celebrity) => {
+      const url = getAvatar(c)
+      return !!url && !url.includes('ui-avatars.com')
+    }
     if (activeCategory === 'All') {
       const flagged = celebrities.filter(c => c.trending && hasPhoto(c))
       if (flagged.length >= 9) return flagged.slice(0, 9)
