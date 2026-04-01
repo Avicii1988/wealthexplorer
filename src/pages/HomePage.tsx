@@ -12,6 +12,7 @@ import {
   formatValue,
   formatNetWorth,
   getAssetImage,
+  getAvatar,
   DECEASED_IDS,
 } from '../data/celebrities'
 import { useCelebrities } from '../hooks/useCelebrityData'
@@ -382,16 +383,20 @@ export default function HomePage() {
       .slice(0, 6)
   }, [search])
 
-  // Trending: when category is "All" show 18, otherwise show 9 for that category.
-  // Falls back to highest net-worth if no celebrities are flagged trending.
+  // Trending: show only celebs with a profile picture. Fill 9 slots.
   const trendingCelebs = useMemo(() => {
+    const hasPhoto = (c: Celebrity) => !!getAvatar(c)
     if (activeCategory === 'All') {
-      const flagged = celebrities.filter(c => c.trending)
-      if (flagged.length > 0) return flagged.slice(0, 9)
-      return [...celebrities].sort((a, b) => b.netWorth - a.netWorth).slice(0, 9)
+      const flagged = celebrities.filter(c => c.trending && hasPhoto(c))
+      if (flagged.length >= 9) return flagged.slice(0, 9)
+      const flaggedIds = new Set(flagged.map(c => c.id))
+      const filler = celebrities
+        .filter(c => !flaggedIds.has(c.id) && hasPhoto(c))
+        .sort((a, b) => b.netWorth - a.netWorth)
+      return [...flagged, ...filler].slice(0, 9)
     }
     // category selected: 9 trending for that category, fallback to non-trending
-    const fromCategory = celebrities.filter(c => c.category === activeCategory)
+    const fromCategory = celebrities.filter(c => c.category === activeCategory && hasPhoto(c))
     const trending = fromCategory.filter(c => c.trending)
     const rest = fromCategory.filter(c => !c.trending)
     return [...trending, ...rest].slice(0, 9)
