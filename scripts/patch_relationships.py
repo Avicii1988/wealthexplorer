@@ -355,7 +355,21 @@ def main():
         for cid, entry in entries.items():
             if cid not in all_data:
                 all_data[cid] = {}
-            all_data[cid].update(entry)
+            # For assets: merge rather than overwrite — keep mk() asset if it has a
+            # non-generic type (helicopter, jet, etc.) and the new entry has a different type.
+            if 'assets' in entry and 'assets' in all_data[cid]:
+                existing = all_data[cid]['assets']
+                incoming = entry['assets']
+                existing_types = {a['type'] for a in existing}
+                # Add any incoming asset whose type isn't already covered
+                extra = [a for a in incoming if a['type'] not in existing_types]
+                all_data[cid]['assets'] = existing + extra
+                # Update all other keys (gossip, relationships, etc.)
+                for k, v in entry.items():
+                    if k != 'assets':
+                        all_data[cid][k] = v
+            else:
+                all_data[cid].update(entry)
 
     print(f"\nTotal entries: {len(all_data)}")
 

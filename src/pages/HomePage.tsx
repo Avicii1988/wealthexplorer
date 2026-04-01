@@ -188,44 +188,81 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 function WealthLogo() {
   return (
     <div className="flex items-center gap-3.5">
-      {/* Diamond gem mark */}
-      <svg width="36" height="40" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+      {/*
+        Brilliant-cut diamond viewed from the front.
+        Key geometry (viewBox 0 0 44 54):
+          Table edge:   A(11,0) — B(33,0)
+          Crown points: E(0,18)  — C(44,18)   (girdle, widest)
+          Culet:        D(22,54)              (bottom tip)
+          Crown centre: F(22,13)              (inner crown facet hub)
+          Girdle mid:   G(22,18)
+      */}
+      <svg width="34" height="42" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
         <defs>
-          <linearGradient id="dGold" x1="0" y1="0" x2="36" y2="40" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"   stopColor="#f7e97a"/>
-            <stop offset="45%" stopColor="#c9a84c"/>
-            <stop offset="100%" stopColor="#7a5010"/>
+          <linearGradient id="gBase" x1="0" y1="0" x2="44" y2="54" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"  stopColor="#f9ef82"/>
+            <stop offset="50%" stopColor="#c9a84c"/>
+            <stop offset="100%" stopColor="#6b3f0a"/>
           </linearGradient>
-          <linearGradient id="dLight" x1="0" y1="0" x2="18" y2="20" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"   stopColor="#fff8c0" stopOpacity="0.85"/>
+          <linearGradient id="gShine" x1="0" y1="0" x2="22" y2="27" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"  stopColor="#fffde0" stopOpacity="1"/>
             <stop offset="100%" stopColor="#c9a84c" stopOpacity="0"/>
           </linearGradient>
-          <linearGradient id="dDark" x1="36" y1="0" x2="0" y2="40" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"   stopColor="#000" stopOpacity="0.25"/>
+          <linearGradient id="gShadow" x1="44" y1="0" x2="0" y2="54" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"  stopColor="#000" stopOpacity="0.32"/>
             <stop offset="100%" stopColor="#000" stopOpacity="0"/>
           </linearGradient>
+          <linearGradient id="gPavL" x1="0" y1="18" x2="22" y2="54" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"  stopColor="#e8c84a"/>
+            <stop offset="100%" stopColor="#8a5c10"/>
+          </linearGradient>
+          <linearGradient id="gPavR" x1="44" y1="18" x2="22" y2="54" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"  stopColor="#c9a84c"/>
+            <stop offset="100%" stopColor="#4a2800"/>
+          </linearGradient>
         </defs>
-        {/* Girdle (top belt) */}
-        <polygon points="6,13 30,13 36,20 18,20 0,20" fill="url(#dGold)"/>
-        {/* Crown facets — left */}
-        <polygon points="0,20 6,13 18,20" fill="url(#dLight)" opacity="0.7"/>
-        {/* Crown facets — right */}
-        <polygon points="36,20 30,13 18,20" fill="url(#dDark)" opacity="0.9"/>
-        {/* Table (top flat face) */}
-        <polygon points="6,13 10,2 26,2 30,13 18,8" fill="url(#dLight)" opacity="0.55"/>
-        <polygon points="6,13 10,2 26,2 30,13 18,8" fill="url(#dGold)" opacity="0.6"/>
-        {/* Pavilion — main base */}
-        <polygon points="0,20 18,20 18,38" fill="url(#dGold)" opacity="0.85"/>
-        <polygon points="36,20 18,20 18,38" fill="url(#dDark)" opacity="0.95"/>
-        {/* Pavilion facet lines */}
-        <line x1="0"  y1="20" x2="18" y2="38" stroke="#f7e97a" strokeWidth="0.4" opacity="0.5"/>
-        <line x1="36" y1="20" x2="18" y2="38" stroke="#7a5010" strokeWidth="0.4" opacity="0.5"/>
-        <line x1="9"  y1="20" x2="18" y2="38" stroke="#c9a84c" strokeWidth="0.3" opacity="0.4"/>
-        <line x1="27" y1="20" x2="18" y2="38" stroke="#c9a84c" strokeWidth="0.3" opacity="0.4"/>
-        {/* Crown girdle outline */}
-        <polyline points="0,20 6,13 10,2 26,2 30,13 36,20" fill="none" stroke="#f7e97a" strokeWidth="0.5" opacity="0.6"/>
-        {/* Culet spark */}
-        <circle cx="18" cy="38" r="0.8" fill="#fff8c0" opacity="0.9"/>
+
+        {/* ── Base fill (whole outline) ── */}
+        <polygon points="11,0 33,0 44,18 22,54 0,18" fill="url(#gBase)"/>
+
+        {/* ── Crown facets ── */}
+        {/* Left bezel: E-A-F  (bright: catches top-left light) */}
+        <polygon points="0,18 11,0 22,13 22,18" fill="url(#gShine)" opacity="0.60"/>
+        {/* Table: A-B-F  (the flat top face — brightest) */}
+        <polygon points="11,0 33,0 22,13" fill="url(#gShine)" opacity="0.45"/>
+        {/* Right bezel: B-C-F  (shadow side) */}
+        <polygon points="33,0 44,18 22,18 22,13" fill="url(#gShadow)" opacity="0.80"/>
+
+        {/* ── Pavilion facets ── */}
+        {/* Left pavilion: E-G-D */}
+        <polygon points="0,18 22,18 22,54" fill="url(#gPavL)" opacity="0.70"/>
+        {/* Right pavilion: G-C-D  (darker) */}
+        <polygon points="22,18 44,18 22,54" fill="url(#gPavR)" opacity="0.85"/>
+        {/* Inner pavilion subdivisions */}
+        <polygon points="0,18 11,18 22,54"  fill="#fff8c0" opacity="0.08"/>
+        <polygon points="33,18 44,18 22,54" fill="#000" opacity="0.10"/>
+
+        {/* ── Facet lines ── */}
+        {/* Crown */}
+        <line x1="22" y1="0"  x2="22" y2="13" stroke="#fffde0" strokeWidth="0.45" opacity="0.75"/>
+        <line x1="22" y1="13" x2="0"  y2="18" stroke="#f9ef82" strokeWidth="0.40" opacity="0.55"/>
+        <line x1="22" y1="13" x2="44" y2="18" stroke="#6b3f0a" strokeWidth="0.40" opacity="0.60"/>
+        <line x1="22" y1="13" x2="22" y2="18" stroke="#c9a84c" strokeWidth="0.35" opacity="0.50"/>
+        {/* Girdle */}
+        <line x1="0"  y1="18" x2="44" y2="18" stroke="#f9ef82" strokeWidth="0.55" opacity="0.65"/>
+        {/* Pavilion */}
+        <line x1="11" y1="18" x2="22" y2="54" stroke="#e8c84a" strokeWidth="0.40" opacity="0.45"/>
+        <line x1="33" y1="18" x2="22" y2="54" stroke="#6b3f0a" strokeWidth="0.40" opacity="0.45"/>
+
+        {/* ── Outer outline ── */}
+        <polygon points="11,0 33,0 44,18 22,54 0,18"
+          fill="none" stroke="#f9ef82" strokeWidth="0.7" opacity="0.55"/>
+        {/* Table top edge highlight */}
+        <line x1="11" y1="0" x2="33" y2="0" stroke="#fffde0" strokeWidth="1.1" opacity="0.85"/>
+
+        {/* ── Culet sparkle ── */}
+        <circle cx="22" cy="54" r="1" fill="#fffde0" opacity="0.95"/>
+        <circle cx="22" cy="54" r="2" fill="#fffde0" opacity="0.20"/>
       </svg>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
         <span style={{
