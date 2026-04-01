@@ -185,6 +185,51 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   )
 }
 
+// ── LOGO ─────────────────────────────────────────────────────────────────────
+// Diamond: hollow pentagon outline (middle-top reference design).
+// Outer: (10,0)–(34,0)–(44,17)–22,45)–(0,17)
+// Inner cutout (≈7 px inset): (15,7)–(29,7)–(37,20)–(22,38)–(7,20)
+// evenodd fill rule punches the inner shape out of the outer → thick border.
+function WealthLogo() {
+  return (
+    <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-3 select-none">
+      <svg width="38" height="40" viewBox="0 0 44 46" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+        <defs>
+          <linearGradient id="wlg" x1="0" y1="0" x2="44" y2="46" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stopColor="#fdf0a0"/>
+            <stop offset="40%" stopColor="#d4a843"/>
+            <stop offset="100%" stopColor="#7a4e08"/>
+          </linearGradient>
+        </defs>
+        {/* Hollow diamond — evenodd cuts inner pentagon out of outer */}
+        <path
+          fillRule="evenodd"
+          d="M10,0 L34,0 L44,17 L22,45 L0,17 Z M15,7 L29,7 L37,20 L22,38 L7,20 Z"
+          fill="url(#wlg)"
+        />
+      </svg>
+      <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+        <span style={{
+          fontFamily: "'Playfair Display', Georgia, serif",
+          background: 'linear-gradient(135deg, #fdf0a0 0%, #d4a843 50%, #7a4e08 100%)',
+          WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontSize: '15px', fontWeight: 700, letterSpacing: '0.18em',
+          textTransform: 'uppercase' as const,
+        }}>Wealth</span>
+        <span style={{
+          fontFamily: "'Playfair Display', Georgia, serif",
+          background: 'linear-gradient(135deg, #fdf0a0 0%, #d4a843 50%, #7a4e08 100%)',
+          WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontSize: '10px', fontWeight: 400, letterSpacing: '0.35em',
+          textTransform: 'uppercase' as const, marginTop: '2px',
+        }}>Explorer</span>
+      </div>
+    </Link>
+  )
+}
+
 // ── LANGUAGE SELECTOR ─────────────────────────────────────────────────────────
 function LanguageSelector() {
   const { activeLang, setLang } = useLang()
@@ -381,6 +426,7 @@ export default function HomePage() {
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="border-b bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40" style={{ borderBottomColor: 'rgba(201,168,76,0.18)' }}>
         <div className="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between">
+          <WealthLogo />
           <div className="flex items-center gap-2">
             <NotificationBell />
             <ThemeToggle />
@@ -616,6 +662,11 @@ export default function HomePage() {
       {/* ── FOOTER ──────────────────────────────────────────────── */}
       <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(201,168,76,0.18)' }}>
         <div className="max-w-2xl mx-auto text-center">
+
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <WealthLogo />
+          </div>
 
           {/* Tagline */}
           <p className="text-[11px] text-white/60 mb-6 tracking-wide">
