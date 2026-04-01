@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
-Extract relationship data from TypeScript extras files and patch celebs.json.
+Extract relationship and gossip/controversy data from TypeScript extras files
+and patch celebs.json.
+
 Handles two formats:
   1. mk('id', ..., { relationships object }) — in extraCelebrities.ts
-  2. 'id': { ..., relationships: { ... } }   — in extras_01.ts … extras_18.ts
+  2. 'id': { ..., relationships: {...}, gossip: [...] } — in extras_*.ts
 """
 import json, re
 from pathlib import Path
@@ -15,10 +17,12 @@ EXTRAS_FILES = [
     *sorted((ROOT / 'src' / 'data').glob('extras_*.ts')),
 ]
 
+REL_KEYS = ('spouse', 'partner', 'parents', 'children', 'siblings',
+            'exSpouse', 'exPartner', 'fiancé', 'grandchildren')
+
 # ── helpers ──────────────────────────────────────────────────────────────────
 
 def js_arr_to_py(s: str) -> list:
-    """Convert JS ['a', 'b', ...] string to Python list."""
     s = s.strip()
     if not s.startswith('['):
         return []
@@ -47,56 +51,88 @@ def parse_rel_obj(obj_str: str) -> dict:
                 rel[field] = val
     return rel
 
-REL_KEYS = ('spouse', 'partner', 'parents', 'children', 'siblings',
-            'exSpouse', 'exPartner', 'fiancé', 'grandchildren')
 
-def find_brace_blocks(source: str):
-    """
-    Yield (start, end) of every top-level { } block in source,
-    skipping strings and nested braces.
-    """
-    i = 0
+def scan_braces(source: str, start: int) -> int:
+    """Given index of '{', return index just past the matching '}'."""
+    depth = 1
+    i = start + 1
     n = len(source)
-    while i < n:
+    while i < n and depth > 0:
         ch = source[i]
-        if ch in ('"', "'"):
+        if ch == '{':
+            depth += 1
+        elif ch == '}':
+            depth -= 1
+        elif ch in ('"', "'"):
             q = ch; i += 1
             while i < n:
                 if source[i] == '\\': i += 2; continue
                 if source[i] == q: break
                 i += 1
-        elif ch == '`':
-            i += 1
-            while i < n and source[i] != '`':
-                if source[i] == '\\': i += 1
-                i += 1
-        elif ch == '{':
-            depth = 1; start = i; i += 1
-            while i < n and depth > 0:
-                c = source[i]
-                if c == '{': depth += 1
-                elif c == '}': depth -= 1
-                elif c in ('"', "'"):
-                    q = c; i += 1
-                    while i < n:
-                        if source[i] == '\\': i += 2; continue
-                        if source[i] == q: break
-                        i += 1
-                i += 1
-            yield start, i
-            continue
         i += 1
+    return i
+
+
+def scan_brackets(source: str, start: int) -> int:
+    """Given index of '[', return index just past the matching ']'."""
+    depth = 1
+    i = start + 1
+    n = len(source)
+    while i < n and depth > 0:
+        ch = source[i]
+        if ch == '[': depth += 1
+        elif ch == ']': depth -= 1
+        elif ch in ('"', "'"):
+            q = ch; i += 1
+            while i < n:
+                if source[i] == '\\': i += 2; continue
+                if source[i] == q: break
+                i += 1
+        i += 1
+    return i
+
+
+def parse_gossip_array(arr_str: str) -> list:
+    """
+    Parse a JS gossip array string:
+    [{ title: '...', summary: '...', type: 'gossip'|'controversy', date: '...' }, ...]
+    """
+    items = []
+    # Find each object block in the array
+    i = 1  # skip opening [
+    n = len(arr_str)
+    while i < n:
+        ch = arr_str[i]
+        if ch == '{':
+            end = scan_braces(arr_str, i)
+            obj_str = arr_str[i:end]
+            item = {}
+            for field in ('title', 'summary', 'type', 'date'):
+                # Match field: 'value' or field: "value"  (possibly multi-line for summary)
+                m = re.search(
+                    rf"""\b{field}\s*:\s*(['"])(.*?)\1""",
+                    obj_str, re.DOTALL
+                )
+                if m:
+                    item[field] = m.group(2)
+            if item.get('title') and item.get('summary'):
+                items.append(item)
+            i = end
+        else:
+            i += 1
+    return items
+
+
+# ── Format 1: mk() calls ─────────────────────────────────────────────────────
 
 def extract_from_mk_calls(source: str) -> dict:
-    """Format 1: mk('id', ..., { spouse: ... }) in extraCelebrities.ts"""
     results = {}
     for m in re.finditer(r'\bmk\(', source):
         call_start = m.end()
-        # find matching closing paren
         depth = 1; i = call_start; n = len(source)
         while i < n and depth > 0:
             ch = source[i]
-            if ch == '(': depth += 1
+            if ch == '(':   depth += 1
             elif ch == ')': depth -= 1
             elif ch in ('"', "'"):
                 q = ch; i += 1
@@ -112,78 +148,82 @@ def extract_from_mk_calls(source: str) -> dict:
             i += 1
         call_body = source[call_start:i-1]
 
-        # first arg = id
         id_m = re.match(r"""\s*['"]([^'"]+)['"]""", call_body)
         if not id_m:
             continue
         celeb_id = id_m.group(1)
 
-        # find the last brace block that contains relationship keys
-        last_rel_block = None
-        for bstart, bend in find_brace_blocks(call_body):
-            snippet = call_body[bstart:bend]
-            if any(k in snippet for k in REL_KEYS):
-                last_rel_block = snippet
+        # Find last brace block with relationship keys
+        last_rel = None
+        j = 0
+        bn = len(call_body)
+        while j < bn:
+            ch = call_body[j]
+            if ch in ('"', "'"):
+                q = ch; j += 1
+                while j < bn:
+                    if call_body[j] == '\\': j += 2; continue
+                    if call_body[j] == q: break
+                    j += 1
+            elif ch == '{':
+                end = scan_braces(call_body, j)
+                snippet = call_body[j:end]
+                if any(k in snippet for k in REL_KEYS):
+                    last_rel = snippet
+                j = end
+                continue
+            j += 1
 
-        if last_rel_block:
-            rel = parse_rel_obj(last_rel_block)
+        entry = {}
+        if last_rel:
+            rel = parse_rel_obj(last_rel)
             if rel:
-                results[celeb_id] = rel
+                entry['relationships'] = rel
+        if entry:
+            results[celeb_id] = entry
 
     return results
 
+
+# ── Format 2: Record<string, Ext> ────────────────────────────────────────────
 
 def extract_from_record_format(source: str) -> dict:
-    """
-    Format 2: 'id': { ..., relationships: { ... }, ... }
-    Used in extras_01.ts … extras_18.ts
-    """
     results = {}
-    # Find each entry key: 'some-id': {
     for m in re.finditer(r"""'([^']+)'\s*:\s*\{""", source):
         celeb_id = m.group(1)
-        obj_start = m.end() - 1  # points to the opening {
-        # find the matching }
-        depth = 1; i = obj_start + 1; n = len(source)
-        while i < n and depth > 0:
-            ch = source[i]
-            if ch == '{': depth += 1
-            elif ch == '}': depth -= 1
-            elif ch in ('"', "'"):
-                q = ch; i += 1
-                while i < n:
-                    if source[i] == '\\': i += 2; continue
-                    if source[i] == q: break
-                    i += 1
-            i += 1
-        entry_body = source[obj_start:i]
+        obj_start = m.end() - 1
+        obj_end = scan_braces(source, obj_start)
+        entry_body = source[obj_start:obj_end]
 
-        # Look for `relationships: { ... }` inside this entry
+        entry = {}
+
+        # relationships
         rel_m = re.search(r'\brelationships\s*:\s*(\{)', entry_body)
-        if not rel_m:
-            continue
+        if rel_m:
+            rs = rel_m.start(1)
+            rel_end = scan_braces(entry_body, rs)
+            rel_str = entry_body[rs:rel_end]
+            rel = parse_rel_obj(rel_str)
+            if rel:
+                entry['relationships'] = rel
 
-        # Find the matching } for this inner block
-        rs = rel_m.start(1)
-        rdepth = 1; ri = rs + 1
-        while ri < len(entry_body) and rdepth > 0:
-            rc = entry_body[ri]
-            if rc == '{': rdepth += 1
-            elif rc == '}': rdepth -= 1
-            elif rc in ('"', "'"):
-                q = rc; ri += 1
-                while ri < len(entry_body):
-                    if entry_body[ri] == '\\': ri += 2; continue
-                    if entry_body[ri] == q: break
-                    ri += 1
-            ri += 1
-        rel_str = entry_body[rs:ri]
-        rel = parse_rel_obj(rel_str)
-        if rel:
-            results[celeb_id] = rel
+        # gossip
+        gossip_m = re.search(r'\bgossip\s*:\s*(\[)', entry_body)
+        if gossip_m:
+            gs = gossip_m.start(1)
+            gossip_end = scan_brackets(entry_body, gs)
+            arr_str = entry_body[gs:gossip_end]
+            gossip = parse_gossip_array(arr_str)
+            if gossip:
+                entry['gossip'] = gossip
+
+        if entry:
+            results[celeb_id] = entry
 
     return results
 
+
+# ── main ─────────────────────────────────────────────────────────────────────
 
 def main():
     print(f"Loading {CELEBS_JSON} …")
@@ -191,40 +231,51 @@ def main():
         celebs = json.load(f)
     id_map = {c['id']: i for i, c in enumerate(celebs)}
 
-    all_rels: dict = {}
+    all_data: dict = {}
     for path in EXTRAS_FILES:
         if not path.exists():
-            print(f"  skip (not found): {path.name}")
             continue
         src = path.read_text(encoding='utf-8')
-
         if 'mk(' in src:
-            rels = extract_from_mk_calls(src)
+            entries = extract_from_mk_calls(src)
         else:
-            rels = extract_from_record_format(src)
+            entries = extract_from_record_format(src)
+        if entries:
+            print(f"  {path.name}: {len(entries)} entries "
+                  f"(rel: {sum(1 for e in entries.values() if 'relationships' in e)}, "
+                  f"gossip: {sum(1 for e in entries.values() if 'gossip' in e)})")
+        # Merge: combine relationships from mk() format with gossip from extras_ files
+        for cid, entry in entries.items():
+            if cid not in all_data:
+                all_data[cid] = {}
+            all_data[cid].update(entry)
 
-        if rels:
-            print(f"  {path.name}: {len(rels)} entries")
-        all_rels.update(rels)
+    print(f"\nTotal entries: {len(all_data)}")
+    print(f"  With relationships: {sum(1 for e in all_data.values() if 'relationships' in e)}")
+    print(f"  With gossip:        {sum(1 for e in all_data.values() if 'gossip' in e)}")
 
-    print(f"\nTotal relationship entries: {len(all_rels)}")
-
-    patched = 0
+    patched_rel = patched_gossip = 0
     skipped = []
-    for celeb_id, rel in all_rels.items():
+    for celeb_id, entry in all_data.items():
         if celeb_id not in id_map:
             skipped.append(celeb_id)
             continue
-        celebs[id_map[celeb_id]]['relationships'] = rel
-        patched += 1
+        idx = id_map[celeb_id]
+        if 'relationships' in entry:
+            celebs[idx]['relationships'] = entry['relationships']
+            patched_rel += 1
+        if 'gossip' in entry:
+            celebs[idx]['gossip'] = entry['gossip']
+            patched_gossip += 1
 
-    print(f"Patched {patched} celebrities")
+    print(f"\nPatched relationships: {patched_rel}")
+    print(f"Patched gossip:        {patched_gossip}")
     if skipped:
-        print(f"  Not in celebs.json ({len(skipped)}): {', '.join(skipped[:20])}")
+        print(f"Not in celebs.json ({len(skipped)}): {', '.join(skipped[:20])}")
 
     with open(CELEBS_JSON, 'w', encoding='utf-8') as f:
         json.dump(celebs, f, ensure_ascii=False, separators=(',', ':'))
-    print(f"Wrote {CELEBS_JSON}")
+    print(f"\nWrote {CELEBS_JSON}")
 
 
 if __name__ == '__main__':
