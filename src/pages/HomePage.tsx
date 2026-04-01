@@ -192,19 +192,19 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
 // evenodd fill rule punches the inner shape out of the outer → thick border.
 function WealthLogo() {
   return (
-    <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-3 select-none">
-      <svg width="38" height="40" viewBox="0 0 44 46" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+    <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-4 select-none">
+      <svg width="60" height="64" viewBox="0 0 60 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
         <defs>
-          <linearGradient id="wlg" x1="0" y1="0" x2="44" y2="46" gradientUnits="userSpaceOnUse">
+          <linearGradient id="wlg" x1="0" y1="0" x2="60" y2="64" gradientUnits="userSpaceOnUse">
             <stop offset="0%"   stopColor="#fdf0a0"/>
-            <stop offset="40%" stopColor="#d4a843"/>
+            <stop offset="45%" stopColor="#d4a843"/>
             <stop offset="100%" stopColor="#7a4e08"/>
           </linearGradient>
         </defs>
         {/* Hollow diamond — evenodd cuts inner pentagon out of outer */}
         <path
           fillRule="evenodd"
-          d="M10,0 L34,0 L44,17 L22,45 L0,17 Z M15,7 L29,7 L37,20 L22,38 L7,20 Z"
+          d="M11,0 L49,0 L60,22 L30,62 L0,22 Z M21,11 L39,11 L47,26 L30,50 L13,26 Z"
           fill="url(#wlg)"
         />
       </svg>
@@ -214,7 +214,7 @@ function WealthLogo() {
           background: 'linear-gradient(135deg, #fdf0a0 0%, #d4a843 50%, #7a4e08 100%)',
           WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          fontSize: '15px', fontWeight: 700, letterSpacing: '0.18em',
+          fontSize: '18px', fontWeight: 700, letterSpacing: '0.22em',
           textTransform: 'uppercase' as const,
         }}>Wealth</span>
         <span style={{
@@ -222,8 +222,8 @@ function WealthLogo() {
           background: 'linear-gradient(135deg, #fdf0a0 0%, #d4a843 50%, #7a4e08 100%)',
           WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          fontSize: '10px', fontWeight: 400, letterSpacing: '0.35em',
-          textTransform: 'uppercase' as const, marginTop: '2px',
+          fontSize: '13px', fontWeight: 400, letterSpacing: '0.38em',
+          textTransform: 'uppercase' as const, marginTop: '4px',
         }}>Explorer</span>
       </div>
     </Link>
