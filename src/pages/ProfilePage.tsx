@@ -417,8 +417,8 @@ function AssetCard({ asset }: { asset: Asset }) {
 
         {/* ── Single image — 16:9, object-cover, click for lightbox ── */}
         <div
-          className={`relative aspect-video overflow-hidden bg-[#1a1a1a] ${hasMultiple ? 'cursor-zoom-in' : ''}`}
-          onClick={() => hasMultiple && setLightboxOpen(true)}
+          className="relative aspect-video overflow-hidden bg-[#1a1a1a] cursor-zoom-in"
+          onClick={() => setLightboxOpen(true)}
         >
           <AssetImage
             asset={asset}
