@@ -387,8 +387,8 @@ export default function HomePage() {
   const trendingCelebs = useMemo(() => {
     if (activeCategory === 'All') {
       const flagged = celebrities.filter(c => c.trending)
-      if (flagged.length > 0) return flagged.slice(0, 18)
-      return [...celebrities].sort((a, b) => b.netWorth - a.netWorth).slice(0, 18)
+      if (flagged.length > 0) return flagged.slice(0, 9)
+      return [...celebrities].sort((a, b) => b.netWorth - a.netWorth).slice(0, 9)
     }
     // category selected: 9 trending for that category, fallback to non-trending
     const fromCategory = celebrities.filter(c => c.category === activeCategory)
@@ -565,10 +565,8 @@ export default function HomePage() {
           </p>
           {/* Circle card grid — centered on all screens */}
           <div className="flex gap-5 pb-2 justify-center flex-wrap">
-            {trendingCelebs.map((celeb, i) => (
-              <div key={celeb.id} className={i >= 9 ? 'hidden sm:block' : ''}>
-                <CircleCard celeb={celeb} />
-              </div>
+            {trendingCelebs.map((celeb) => (
+              <CircleCard key={celeb.id} celeb={celeb} />
             ))}
           </div>
         </section>
