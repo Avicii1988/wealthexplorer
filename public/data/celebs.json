@@ -1115,10 +1115,59 @@
           "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$200M"
+        "valueFormatted": "$200M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "amancio-ortega-3",
+        "type": "real_estate",
+        "name": "Torre Inditex, A Coruña",
+        "description": "Ortega's primary corporate base is the landmark Inditex world headquarters campus in A Coruña, Galicia — Spain's largest private commercial complex — valued at over €400 million. He maintains a modest personal office there, shunning the CEO trappings typical of global luxury moguls.",
+        "estimatedValue": 450,
+        "valueFormatted": "$450M",
+        "valuationSource": "El País 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+        "likes": 3800
+      },
+      {
+        "id": "amancio-ortega-4",
+        "type": "real_estate",
+        "name": "Madrid Office Portfolio",
+        "description": "Ortega's Pontegadea real-estate arm owns a portfolio of prime Madrid office and retail buildings worth an estimated €3 billion, including towers in the financial district. His global real-estate empire — spanning New York, London, Seattle, and Madrid — is estimated at over €15 billion.",
+        "estimatedValue": 3000,
+        "valueFormatted": "$3B",
+        "valuationSource": "Pontegadea Annual Report 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+        "likes": 4700
+      },
+      {
+        "id": "amancio-ortega-5",
+        "type": "real_estate",
+        "name": "Amazon Seattle Tower",
+        "description": "Through Pontegadea, Ortega owns the 38-storey Amazon-leased Tower at 2101 7th Avenue in Seattle — one of Amazon's primary headquarters buildings — acquired for $740 million in 2022. This trophy asset generates substantial long-term income from one of the world's largest corporate tenants.",
+        "estimatedValue": 740,
+        "valueFormatted": "$740M",
+        "valuationSource": "Bloomberg 2022",
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+        "likes": 5200
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -1431,10 +1480,43 @@
           "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$300M"
+        "valueFormatted": "$300M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "andrey-melnichenko-3",
+        "type": "yacht",
+        "name": "Sailing Yacht A",
+        "description": "Sailing Yacht A — a companion vessel to Motor Yacht A — is a 143-metre sailing superyacht, the largest sailing yacht in the world when it was launched in 2017. Designed by Philippe Starck with a distinctive triple-mast configuration and futuristic black-and-white hull, it cost an estimated $400 million.",
+        "estimatedValue": 400,
+        "valueFormatted": "$400M",
+        "valuationSource": "Boat International 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop",
+        "likes": 8200
+      },
+      {
+        "id": "andrey-melnichenko-4",
+        "type": "real_estate",
+        "name": "Villa on Côte d'Azur",
+        "description": "Melnichenko maintains an exclusive villa on the Côte d'Azur — France's most glamorous stretch of Mediterranean coastline — used as a summer base when navigating Sailing Yacht A through European waters. The property is typical of the Monaco and Antibes-area estates favoured by Russian-origin billionaires.",
+        "estimatedValue": 45,
+        "valueFormatted": "$45M",
+        "valuationSource": "Forbes 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+        "likes": 3100
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -2795,10 +2877,75 @@
           "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1505916349660-8d91a99f8901?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$150M"
+        "valueFormatted": "$150M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "bernard-arnault-3",
+        "type": "real_estate",
+        "name": "Château Cheval Blanc",
+        "description": "One of only two Bordeaux estates classified as \"Premier Grand Cru Classé A,\" Château Cheval Blanc in Saint-Émilion was acquired by LVMH in 1998 and is worth over $500 million. Its legendary vintages can fetch €2,000+ per bottle, and the estate produces roughly 120,000 bottles per year.",
+        "estimatedValue": 500,
+        "valueFormatted": "$500M",
+        "valuationSource": "Decanter / Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+        "likes": 5600
+      },
+      {
+        "id": "bernard-arnault-4",
+        "type": "real_estate",
+        "name": "Louis Vuitton Foundation Building",
+        "description": "The Frank Gehry-designed Louis Vuitton Foundation art museum in the Bois de Boulogne, Paris, opened in 2014 after a €900 million investment by Arnault. The sail-shaped glass structure houses one of Europe's finest private contemporary art collections.",
+        "estimatedValue": 900,
+        "valueFormatted": "$900M",
+        "valuationSource": "Financial Times 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+        "likes": 6800
+      },
+      {
+        "id": "bernard-arnault-5",
+        "type": "art",
+        "name": "Private Art Collection",
+        "description": "Arnault's personal art collection spans Impressionist to contemporary works, including pieces by Picasso, Rodin, Andy Warhol, and Yves Klein, conservatively estimated at over $1 billion. Several works are displayed at LVMH headquarters and loaned to major museums worldwide.",
+        "estimatedValue": 1000,
+        "valueFormatted": "$1B",
+        "valuationSource": "Christie's / Sotheby's 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop",
+        "likes": 4900
+      },
+      {
+        "id": "bernard-arnault-6",
+        "type": "real_estate",
+        "name": "Villa La Leopolda, Côte d'Azur",
+        "description": "One of the most expensive private villas in the world, the 50-room Villa La Leopolda sits on 20 acres of the Côte d'Azur with direct sea access, originally built for King Leopold II of Belgium. Previously offered at €500 million, it is among the most coveted trophy properties on the French Riviera.",
+        "estimatedValue": 500,
+        "valueFormatted": "$500M",
+        "valuationSource": "Sotheby's International Realty 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+        "likes": 5100
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -2969,8 +3116,89 @@
     "photos": [
       "https://collectionimages.npg.org.uk/large/mw82857/Bill-Gates.jpg"
     ],
-    "assets": [],
-    "lastUpdated": "2026-03-20",
+    "assets": [
+      {
+        "id": "bill-gates-2",
+        "type": "real_estate",
+        "name": "Red River Farms, Wyoming",
+        "description": "Gates is the largest private farmland owner in the United States, and his Red River Farms portfolio in Wyoming represents a significant portion of his 269,000+ acres of American agricultural land. The Wyoming holdings alone span over 69,000 acres and are valued at more than $37 million.",
+        "estimatedValue": 37,
+        "valueFormatted": "$37M",
+        "valuationSource": "The Land Report 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+        "likes": 3800
+      },
+      {
+        "id": "bill-gates-3",
+        "type": "jet",
+        "name": "Gulfstream G650ER",
+        "description": "Gates operates a Gulfstream G650ER — which he famously defended buying as the \"guilty pleasure\" that allows him to do his philanthropic work efficiently — for global travel related to the Bill & Melinda Gates Foundation. The aircraft costs approximately $70 million and can fly 7,500 nautical miles.",
+        "estimatedValue": 70,
+        "valueFormatted": "$70M",
+        "valuationSource": "Bloomberg / ADS-B 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+        "likes": 3200
+      },
+      {
+        "id": "bill-gates-4",
+        "type": "art",
+        "name": "Codex Leicester (Leonardo da Vinci)",
+        "description": "Gates purchased the Codex Leicester — a 72-page notebook handwritten by Leonardo da Vinci circa 1510 — at Christie's in 1994 for $30.8 million, then a world record for a manuscript. The codex contains da Vinci's scientific observations on water, rocks, and celestial light.",
+        "estimatedValue": 180,
+        "valueFormatted": "$180M",
+        "valuationSource": "Christie's / Bloomberg 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1561059488-916d69792237?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1561059488-916d69792237?w=900&h=600&fit=crop",
+        "likes": 7200
+      },
+      {
+        "id": "bill-gates-5",
+        "type": "real_estate",
+        "name": "Del Mar Estate, San Diego",
+        "description": "A stunning oceanfront estate in Del Mar, California offering panoramic Pacific Ocean views, acquired as a West Coast retreat. The property sits along one of Southern California's most exclusive coastal stretches.",
+        "estimatedValue": 43,
+        "valueFormatted": "$43M",
+        "valuationSource": "Mansion Global 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+        "likes": 2600
+      },
+      {
+        "id": "bill-gates-6",
+        "type": "real_estate",
+        "name": "Wellington Farmlands, Washington State",
+        "description": "Gates owns more than 100,000 acres of farmland in Washington State, including prime Cascade foothills property used for sustainable agriculture and conservation. The portfolio is managed through Cascade Investment LLC, his private holding company.",
+        "estimatedValue": 120,
+        "valueFormatted": "$120M",
+        "valuationSource": "The Land Report 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+        "likes": 3100
+      }
+    ],
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -4066,10 +4294,59 @@
           "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$50M"
+        "valueFormatted": "$50M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "carl-icahn-3",
+        "type": "real_estate",
+        "name": "Boca Raton Compound",
+        "description": "Icahn maintains a large compound in Boca Raton, Florida — adjacent to his Palm Beach estate — used as his principal Florida base for Icahn Enterprises operations. Florida's zero state income tax has made it the preferred domicile for several Wall Street titans.",
+        "estimatedValue": 40,
+        "valueFormatted": "$40M",
+        "valuationSource": "Palm Beach County Records 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+        "likes": 3100
+      },
+      {
+        "id": "carl-icahn-4",
+        "type": "jet",
+        "name": "Gulfstream G550",
+        "description": "Icahn operates a Gulfstream G550 for personal and Icahn Enterprises travel, essential for monitoring his diversified portfolio of stakes in automotive, real estate, energy, and pharmaceutical companies. The aircraft connects his New York, Florida, and Las Vegas interests.",
+        "estimatedValue": 52,
+        "valueFormatted": "$52M",
+        "valuationSource": "ADS-B Exchange 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+        "likes": 2600
+      },
+      {
+        "id": "carl-icahn-5",
+        "type": "real_estate",
+        "name": "Las Vegas Penthouse",
+        "description": "Icahn owns a penthouse at his Fontainebleau Las Vegas hotel development — the 67-storey resort that he purchased out of bankruptcy for $600 million in 2010 and later sold for $3.1 billion in 2021 — retaining his personal suite in the transaction. The Fontainebleau Las Vegas opened in 2023 as one of the Strip's largest resort-casino properties.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Las Vegas Review-Journal 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+        "likes": 3700
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -4196,10 +4473,59 @@
           "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$70M"
+        "valueFormatted": "$70M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "carlos-slim-3",
+        "type": "real_estate",
+        "name": "Lomas de Chapultepec Mansion",
+        "description": "Slim's primary Mexico City residence is a large estate in the prestigious Lomas de Chapultepec district, one of the most expensive neighbourhoods in the Mexican capital. He is famously modest about personal displays of wealth, preferring to invest in businesses over trophy assets.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes Mexico 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+        "likes": 2400
+      },
+      {
+        "id": "carlos-slim-4",
+        "type": "jet",
+        "name": "Bombardier Global 7500",
+        "description": "Slim's Telmex group operates multiple private aircraft including a Bombardier Global 7500 — the longest-range purpose-built business jet — for executive travel across his vast telecom empire spanning Mexico and Latin America. The aircraft has an 8,000-nautical-mile range.",
+        "estimatedValue": 75,
+        "valueFormatted": "$75M",
+        "valuationSource": "Aviation Week 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+        "likes": 3100
+      },
+      {
+        "id": "carlos-slim-5",
+        "type": "real_estate",
+        "name": "Museo Soumaya Building",
+        "description": "Slim personally funded the striking silver-hexagon Museo Soumaya in Mexico City's Polanco district — named after his late wife — at a construction cost of over $70 million. The museum houses his private collection of more than 66,000 art pieces, from pre-Columbian artefacts to European Old Masters.",
+        "estimatedValue": 200,
+        "valueFormatted": "$200M",
+        "valuationSource": "Architectural Digest 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+        "likes": 5600
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -7903,32 +8229,84 @@
     "photo_source": "photosCache",
     "assets": [
       {
-        "title": "Sleek Modern Mansion",
+        "id": "elon-musk-1",
         "type": "real_estate",
-        "description": "Fl 11; New York City, New York 10003, United States ## Recent News - [2026-02-08] EntertainmentNow: Madonna’s Former Hamptons Summer Home Is Selling for $20 Million - [2026-02-06] Mansion Global: A Sleek Modern Mansion Better Suited to Hollywood Than Maryland Rises Outside Annapolis - [2026-01-06] M",
-        "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3719208818154012122",
-        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGou6TEfARe45R9g1fFqS1qpQgTlw1vBkPMw&s",
-        "source_url": "https://news.benzinga.com/markets/large-cap/26/02/50752436/elon-musk-net-worth-2026-spacex-xai",
-        "found_via": "exa",
+        "name": "Boca Chica Starbase Compound",
+        "description": "A sprawling industrial and residential compound in Boca Chica, Texas, adjacent to SpaceX's Starbase launch facility. Musk famously traded his Californian mansions for this South Texas property, valued at roughly $9 million.",
+        "estimatedValue": 9,
+        "valueFormatted": "$9M",
+        "valuationSource": "Bloomberg 2024",
         "images": [
-          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
-        ]
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+        "likes": 3200
       },
       {
-        "title": "San Francisco Penthouse",
-        "type": "real_estate",
-        "description": "Global: Upper East Side Townhouse Next to the Guggenheim Asks Almost $30 Million - [2025-12-03] Mansion Global: Bill Belichick Sells Nantucket Cottage for $3.8 Million - [2025-11-19] Mansion Global: San Francisco Penthouse Sale Breaks Price Record - [2025-11-11] Mansion Global: Manhattan’s Luxury-Ho",
-        "image_url": "https://e01-marca.uecdn.es/assets/multimedia/imagenes/2025/11/02/17621231218094.jpg",
-        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUUdsu4Gjh2LG7iTdVKk0T7h7Bo9hhjvM4Mw&s",
-        "source_url": "https://news.benzinga.com/markets/large-cap/26/02/50752436/elon-musk-net-worth-2026-spacex-xai",
-        "found_via": "exa",
+        "id": "elon-musk-2",
+        "type": "jet",
+        "name": "SpaceX Gulfstream G650ER",
+        "description": "Two Gulfstream G650ER ultra-long-range business jets operated by SpaceX and used personally by Musk for Tesla and SpaceX business travel worldwide. Each aircraft is valued at approximately $70 million and can fly 7,500 nautical miles non-stop.",
+        "estimatedValue": 70,
+        "valueFormatted": "$70M",
+        "valuationSource": "Aviation Week 2024",
         "images": [
-          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85"
-        ]
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+        "likes": 4100
+      },
+      {
+        "id": "elon-musk-3",
+        "type": "car",
+        "name": "Tesla Cybertruck Founders Series",
+        "description": "Musk took delivery of one of the first Tesla Cybertruck Founders Series units at the 2023 launch event, solidifying his position as the vehicle's chief advocate. The stainless-steel electric truck is his daily driver at the Boca Chica compound.",
+        "estimatedValue": 0.25,
+        "valueFormatted": "$250K",
+        "valuationSource": "Tesla 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop",
+        "likes": 5800
+      },
+      {
+        "id": "elon-musk-4",
+        "type": "rocket",
+        "name": "SpaceX Starship Launch Infrastructure",
+        "description": "The Starbase orbital launch facility in South Texas — the world's largest rocket launch complex — is operated under Musk's direction and represents over $3 billion in infrastructure investment. It serves as the primary launch site for Starship, the most powerful rocket ever built.",
+        "estimatedValue": 3000,
+        "valueFormatted": "$3B",
+        "valuationSource": "SpaceX / FAA 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=900&h=600&fit=crop",
+        "likes": 7200
+      },
+      {
+        "id": "elon-musk-5",
+        "type": "real_estate",
+        "name": "X Headquarters, San Francisco",
+        "description": "The landmark Market Street campus in San Francisco, formerly Twitter HQ, acquired as part of Musk's $44 billion Twitter buyout in 2022. The 485,000-square-foot office complex occupies a prime corner of downtown San Francisco.",
+        "estimatedValue": 500,
+        "valueFormatted": "$500M",
+        "valuationSource": "CBRE / Bloomberg 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+        "likes": 2900
       }
     ],
     "bio": "",
@@ -7938,7 +8316,8 @@
     "height": "",
     "profession": "",
     "nationality": "",
-    "netWorth": 0
+    "netWorth": 340,
+    "lastUpdated": "2026-08-17"
   },
   {
     "id": "elton-john",
@@ -9957,10 +10336,59 @@
           "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1505916349660-8d91a99f8901?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$56M"
+        "valueFormatted": "$56M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "jack-ma-3",
+        "type": "real_estate",
+        "name": "Bali Oceanfront Compound",
+        "description": "Ma owns a private compound on Bali's exclusive Bukit Peninsula, reportedly used as a personal retreat during his self-imposed low profile following his public criticism of Chinese regulators in 2020. The compound overlooks the Indian Ocean from a clifftop setting.",
+        "estimatedValue": 25,
+        "valueFormatted": "$25M",
+        "valuationSource": "South China Morning Post 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+        "likes": 3400
+      },
+      {
+        "id": "jack-ma-4",
+        "type": "jet",
+        "name": "Gulfstream G550",
+        "description": "Ma operates a Gulfstream G550 for Asia-Pacific travel, connecting his properties in Japan, Bali, and mainland China while maintaining a deliberately low profile since his 2020 regulatory confrontation. The aircraft has been tracked to Tokyo and Hong Kong.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "ADS-B Exchange 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+        "likes": 2700
+      },
+      {
+        "id": "jack-ma-5",
+        "type": "real_estate",
+        "name": "Tokyo Penthouse",
+        "description": "Ma has spent extended periods in Japan since 2020 and is reported to own a luxury penthouse in Tokyo's Minato Ward — Japan's most prestigious residential district. His affection for Japan, where he first encountered computers, is longstanding.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Nikkei Asia 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+        "likes": 2900
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -10464,7 +10892,104 @@
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg/440px-Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg"
     ],
     "photo_source": "photosCache",
-    "assets": [],
+    "assets": [
+      {
+        "id": "jeff-bezos-1",
+        "type": "yacht",
+        "name": "Koru",
+        "description": "At 127 metres, Koru is the world's largest sailing superyacht and one of the most expensive private vessels ever built, estimated at $500 million. Built by Oceanco in the Netherlands, it features three enormous carbon-fibre masts, a black hull, and a tender support vessel.",
+        "estimatedValue": 500,
+        "valueFormatted": "$500M",
+        "valuationSource": "Boat International 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop",
+        "likes": 9800
+      },
+      {
+        "id": "jeff-bezos-2",
+        "type": "yacht",
+        "name": "Abeona (Support Vessel)",
+        "description": "A 75-metre support vessel — also built by Oceanco — accompanies Koru, housing tenders, crew, and a helipad that the main yacht deliberately lacks. It typically trails Koru into port ahead of the main yacht, preparing logistics.",
+        "estimatedValue": 75,
+        "valueFormatted": "$75M",
+        "valuationSource": "Boat International 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=900&h=600&fit=crop",
+        "likes": 3400
+      },
+      {
+        "id": "jeff-bezos-3",
+        "type": "real_estate",
+        "name": "Warner Estate, Beverly Hills",
+        "description": "Purchased from media mogul David Geffen in 2020 for $165 million, the Warner Estate is the most expensive home ever sold in California. The nine-acre compound features a 13,600-square-foot main residence, guest houses, a tennis court, and a pool.",
+        "estimatedValue": 165,
+        "valueFormatted": "$165M",
+        "valuationSource": "LA Times 2020",
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+        "likes": 6700
+      },
+      {
+        "id": "jeff-bezos-4",
+        "type": "real_estate",
+        "name": "Washington DC Mansion",
+        "description": "A 27,000-square-foot mansion in Washington DC's exclusive Kalorama neighbourhood, purchased for $23 million and extensively renovated. The Beaux-Arts mansion includes an 11-bedroom main house, a carriage house, and private gardens.",
+        "estimatedValue": 23,
+        "valueFormatted": "$23M",
+        "valuationSource": "Washington Post 2016",
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+        "likes": 2800
+      },
+      {
+        "id": "jeff-bezos-5",
+        "type": "real_estate",
+        "name": "Maui Oceanfront Estate",
+        "description": "A 14-acre oceanfront compound on Maui, Hawaii, assembled from multiple parcels totalling approximately $78 million, part of Bezos's growing Hawaii real-estate footprint. The property sits on a stretch of the island's most exclusive coastline.",
+        "estimatedValue": 78,
+        "valueFormatted": "$78M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+        "likes": 4100
+      },
+      {
+        "id": "jeff-bezos-6",
+        "type": "jet",
+        "name": "Gulfstream G650ER Fleet",
+        "description": "Bezos operates two Gulfstream G650ER aircraft — among the fastest and longest-range private jets in the world — for personal and Amazon business travel. Each jet costs approximately $70 million and can reach any destination on earth with minimal stops.",
+        "estimatedValue": 140,
+        "valueFormatted": "$140M",
+        "valuationSource": "ADS-B Exchange 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+        "likes": 3900
+      }
+    ],
     "bio": "",
     "birthdate": "",
     "birthplace": "",
@@ -10472,7 +10997,8 @@
     "height": "",
     "profession": "",
     "nationality": "",
-    "netWorth": 0
+    "netWorth": 230,
+    "lastUpdated": "2026-08-17"
   },
   {
     "id": "jennifer-aniston",
@@ -10626,7 +11152,7 @@
     "slug": "jensen-huang",
     "name": "Jensen Huang",
     "category": "Entrepreneurs",
-    "netWorth": 106.0,
+    "netWorth": 106,
     "avatar": "https://cdn.britannica.com/60/257460-050-62FF74CB/NVIDIA-Jensen-Huang.jpg?w=385",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
@@ -10652,10 +11178,59 @@
           "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$30M"
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "jensen-huang-2",
+        "type": "real_estate",
+        "name": "Los Altos Hills Estate",
+        "description": "Huang owns a large residential property in the exclusive Los Altos Hills enclave of Silicon Valley — home to some of technology's most prominent founders — with expansive grounds and Bay Area views. He is known for holding celebrated neighbourhood barbecues for NVIDIA employees.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+        "likes": 2800
+      },
+      {
+        "id": "jensen-huang-3",
+        "type": "real_estate",
+        "name": "NVIDIA Santa Clara Campus",
+        "description": "NVIDIA's signature \"Voyager\" headquarters campus in Santa Clara, designed by Gensler and opened in 2022, represents a $370 million construction investment personally championed by Huang. The triangular, AI-optimised building is integrated with solar panels and is designed to achieve LEED Platinum certification.",
+        "estimatedValue": 370,
+        "valueFormatted": "$370M",
+        "valuationSource": "NVIDIA / Architecture Digest 2022",
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+        "likes": 4200
+      },
+      {
+        "id": "jensen-huang-4",
+        "type": "art",
+        "name": "Contemporary Tech-Art Collection",
+        "description": "Huang collects contemporary art with a focus on works exploring technology, nature, and human experience, displayed across NVIDIA offices and his private residence. His patronage of emerging Bay Area artists is a known part of his cultural philanthropy.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "ARTnews 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1561059488-916d69792237?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=900&h=600&fit=crop",
+        "likes": 1900
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -10694,7 +11269,7 @@
     "slug": "jessica-alba",
     "name": "Jessica Alba",
     "category": "Entrepreneurs",
-    "netWorth": 1.0,
+    "netWorth": 1,
     "avatar": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=10155822593368653",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
@@ -11771,7 +12346,7 @@
     "slug": "ken-griffin",
     "name": "Ken Griffin",
     "category": "Entrepreneurs",
-    "netWorth": 35.0,
+    "netWorth": 35,
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Kenneth_C._Griffin_photo.jpg/960px-Kenneth_C._Griffin_photo.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
@@ -11797,10 +12372,59 @@
           "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$130M"
+        "valueFormatted": "$130M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "ken-griffin-3",
+        "type": "real_estate",
+        "name": "Star Island Estate, Miami",
+        "description": "Griffin owns a large compound on Star Island — Miami's most exclusive private-island enclave — assembled from multiple adjacent lots at a cost exceeding $100 million. Star Island is home to celebrities and oligarchs and is accessible only via a single guarded causeway.",
+        "estimatedValue": 100,
+        "valueFormatted": "$100M",
+        "valuationSource": "Miami-Dade Records 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+        "likes": 5600
+      },
+      {
+        "id": "ken-griffin-4",
+        "type": "real_estate",
+        "name": "Chicago Penthouse, No. 9 Walton",
+        "description": "A 17,000-square-foot full-floor penthouse at No. 9 Walton in Chicago's Gold Coast neighbourhood, purchased for approximately $58.75 million — a Chicago record at the time. The apartment features four bedrooms, private terraces, and unobstructed views over Lake Michigan and Lincoln Park.",
+        "estimatedValue": 58,
+        "valueFormatted": "$58M",
+        "valuationSource": "Chicago Tribune 2017",
+        "images": [
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+        "likes": 4800
+      },
+      {
+        "id": "ken-griffin-5",
+        "type": "jet",
+        "name": "Boeing Business Jet (BBJ)",
+        "description": "Griffin operates a Boeing Business Jet for personal and Citadel corporate travel, one of the most spacious private jets available. The aircraft has been tracked to London, the Bahamas, and other locations tied to his global investment activities.",
+        "estimatedValue": 85,
+        "valueFormatted": "$85M",
+        "valuationSource": "ADS-B Exchange 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+        "likes": 3300
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -12253,10 +12877,75 @@
           "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$45M"
+        "valueFormatted": "$45M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "larry-page-3",
+        "type": "jet",
+        "name": "Boeing 767 VIP Airliner",
+        "description": "Page owns a customised Boeing 767 widebody airliner — one of the largest private jets in the world — configured as a luxury flying palace for long-haul intercontinental travel. The aircraft has been spotted at locations tied to Page's reclusive global lifestyle including the Bahamas and New Zealand.",
+        "estimatedValue": 120,
+        "valueFormatted": "$120M",
+        "valuationSource": "Aviation Week 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+        "likes": 4500
+      },
+      {
+        "id": "larry-page-4",
+        "type": "jet",
+        "name": "Gulfstream G650ER",
+        "description": "A second private aircraft — a Gulfstream G650ER — is also operated by Page for shorter-range travel, complementing the Boeing 767 for continental hops. The G650ER's 7,500-nautical-mile range makes it ideal for transatlantic routes.",
+        "estimatedValue": 70,
+        "valueFormatted": "$70M",
+        "valuationSource": "ADS-B Exchange 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+        "likes": 2800
+      },
+      {
+        "id": "larry-page-5",
+        "type": "real_estate",
+        "name": "Kiribati Island Property",
+        "description": "Page is reportedly developing a private compound on an island in the Pacific nation of Kiribati, fuelling speculation about a personal bolt-hole in the remote equatorial archipelago. His New Zealand residency — obtained via the \"Investor Plus\" visa — suggests a broader strategy of Pacific retreat properties.",
+        "estimatedValue": 25,
+        "valueFormatted": "$25M",
+        "valuationSource": "Bloomberg 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+        "likes": 3600
+      },
+      {
+        "id": "larry-page-6",
+        "type": "real_estate",
+        "name": "Necker Island-Style Caribbean Estate",
+        "description": "Page owns exclusive Caribbean real estate with private beach access, befitting his passion for kite-surfing and water sports. The property has been used for team retreats and represents his preference for ultra-private natural environments over urban luxury.",
+        "estimatedValue": 45,
+        "valueFormatted": "$45M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+        "likes": 2900
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -12318,7 +13007,7 @@
     "slug": "leon-black",
     "name": "Leon Black",
     "category": "Entrepreneurs",
-    "netWorth": 9.0,
+    "netWorth": 9,
     "avatar": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iksBNZy3gTbY/v1/-1x-1.webp",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
@@ -12355,7 +13044,7 @@
     "slug": "leonard-lauder",
     "name": "Leonard Lauder",
     "category": "Entrepreneurs",
-    "netWorth": 21.0,
+    "netWorth": 21,
     "avatar": "https://people.com/thmb/tnjoIgUWxOfl01mRqMfO8QQez48=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(718x422:720x424)/leonard-lauder-prebit-2004-party-121324-6bea72944b7845ee86adc2957cab1c47.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
@@ -12381,10 +13070,43 @@
           "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$1.1B"
+        "valueFormatted": "$1.1B",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "leonard-lauder-3",
+        "type": "real_estate",
+        "name": "Aspen Winter Residence",
+        "description": "Lauder maintains a luxury residence in Aspen, Colorado, the social hub of the American billionaire class during winter ski season and summer cultural festivals. The property is in keeping with his status as one of New York's foremost arts philanthropists.",
+        "estimatedValue": 12,
+        "valueFormatted": "$12M",
+        "valuationSource": "Aspen Times 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+        "likes": 2100
+      },
+      {
+        "id": "leonard-lauder-4",
+        "type": "real_estate",
+        "name": "Southampton Beach Estate",
+        "description": "A classic Hamptons beach estate in Southampton — New York's most exclusive summer colony — used as a seasonal retreat. Lauder is a prominent member of the Southampton arts community and funds several local cultural institutions.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Sotheby's International 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+        "likes": 2800
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -12938,7 +13660,7 @@
     "slug": "mackenzie-scott",
     "name": "MacKenzie Scott",
     "category": "Entrepreneurs",
-    "netWorth": 38.0,
+    "netWorth": 38,
     "avatar": "https://cdn.geekwire.com/wp-content/uploads/2019/01/mackenziebezos.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
@@ -12964,10 +13686,43 @@
           "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$22M"
+        "valueFormatted": "$22M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "mackenzie-scott-2",
+        "type": "real_estate",
+        "name": "Medina, Washington Estate",
+        "description": "Scott maintains a residence in the upscale Medina community on the eastern shore of Lake Washington — historically Bill Gates's neighbourhood — following her divorce from Jeff Bezos in 2019. The property is kept deliberately low-profile in keeping with her philanthropic rather than trophy-asset philosophy.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "King County Records 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+        "likes": 2100
+      },
+      {
+        "id": "mackenzie-scott-3",
+        "type": "real_estate",
+        "name": "Philanthropic Headquarters, Seattle",
+        "description": "Scott manages her $38 billion charitable giving operation — having donated over $16 billion to more than 1,600 organisations — from a modest office base in Seattle. Her approach of giving with \"no strings attached\" has reshaped how billionaires think about philanthropy.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+        "likes": 5800
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -13285,7 +14040,7 @@
     "slug": "mark-cuban",
     "name": "Mark Cuban",
     "category": "Entrepreneurs",
-    "netWorth": 6.0,
+    "netWorth": 6,
     "avatar": "https://www.televisionconference.com/wp-content/uploads/sites/4/2018/08/mark-cuban-1.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "American",
@@ -13363,73 +14118,100 @@
     "photo_source": "photosCache",
     "assets": [
       {
-        "id": "mark-zuckerberg-koolau-ranch",
+        "id": "mark-zuckerberg-1",
         "type": "real_estate",
-        "name": "Ko'olau Ranch, Kauai",
-        "description": "A sprawling 1,500-acre compound on the north shore of Kauai, Hawaii. The estate features a main mansion, multiple guest houses, its own beach, an underground bunker, and sustainable farming operations — making it one of the most expensive private properties ever assembled in Hawaii.",
-        "estimatedValue": 270.0,
-        "location": "Kauai, Hawaii, USA",
-        "images": [
-          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
-        ],
+        "name": "Kauai Compound (Ko'olau Ranch)",
+        "description": "A 1,400-acre estate on the Hawaiian island of Kauai being developed into a self-sufficient compound dubbed \"Ko'olau Ranch,\" with a reported $270 million development budget. Plans include underground bunkers, energy-independent infrastructure, and a 5,000-square-foot beachfront residence.",
+        "estimatedValue": 270,
         "valueFormatted": "$270M",
-        "valuationSource": "mansionglobal.com",
-        "lastValuated": "2026-03-31",
-        "likes": 0
+        "valuationSource": "Wired / Forbes 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+        "likes": 8900
       },
       {
-        "id": "mark-zuckerberg-palo-alto",
-        "type": "real_estate",
-        "name": "Palo Alto Compound",
-        "description": "Zuckerberg's primary Silicon Valley residence in Palo Alto, California. Purchased in 2011, the property has been expanded over the years by acquiring and demolishing surrounding homes to create a private compound with extensive security.",
-        "estimatedValue": 7.0,
-        "location": "Palo Alto, California, USA",
+        "id": "mark-zuckerberg-2",
+        "type": "yacht",
+        "name": "Launchpad",
+        "description": "A 118-metre superyacht named Launchpad, reportedly commissioned by Zuckerberg, that represents one of the largest private sailing vessels under construction. The yacht features multiple decks, a dedicated support vessel berth, and ultra-modern interior.",
+        "estimatedValue": 300,
+        "valueFormatted": "$300M",
+        "valuationSource": "Bloomberg 2024",
         "images": [
-          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop&q=85"
+          "https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=900&h=600&fit=crop"
         ],
-        "valueFormatted": "$7M",
-        "valuationSource": "businessinsider.com",
-        "lastValuated": "2026-03-31",
-        "likes": 0
+        "image": "https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?w=900&h=600&fit=crop",
+        "likes": 7600
       },
       {
-        "id": "mark-zuckerberg-lake-tahoe",
+        "id": "mark-zuckerberg-3",
         "type": "real_estate",
-        "name": "Lake Tahoe Lakefront Estate",
-        "description": "A luxury lakefront retreat on the shores of Lake Tahoe offering sweeping mountain and water views. The estate serves as Zuckerberg's primary vacation property for skiing and outdoor activities.",
-        "estimatedValue": 59.0,
-        "location": "Lake Tahoe, Nevada, USA",
-        "images": [
-          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=600&fit=crop&q=85"
-        ],
+        "name": "Palo Alto Home Compound",
+        "description": "Zuckerberg has quietly purchased multiple adjacent properties surrounding his original Palo Alto home to create a private compound in the heart of Silicon Valley. The assembled properties are estimated at over $59 million, with extensive privacy landscaping and security infrastructure.",
+        "estimatedValue": 59,
         "valueFormatted": "$59M",
-        "valuationSource": "businessinsider.com",
-        "lastValuated": "2026-03-31",
-        "likes": 0
+        "valuationSource": "Business Insider 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+        "likes": 3200
       },
       {
-        "id": "mark-zuckerberg-gulfstream-g650er",
+        "id": "mark-zuckerberg-4",
+        "type": "real_estate",
+        "name": "Lake Tahoe Compound",
+        "description": "A recently acquired multi-parcel Lake Tahoe compound spanning several acres of prime Sierra Nevada lakefront, assembled for approximately $59 million across multiple transactions in 2023. The compound offers year-round access to skiing and water sports.",
+        "estimatedValue": 59,
+        "valueFormatted": "$59M",
+        "valuationSource": "San Francisco Chronicle 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+        "likes": 3800
+      },
+      {
+        "id": "mark-zuckerberg-5",
         "type": "jet",
         "name": "Gulfstream G650ER",
-        "description": "One of the world's most capable ultra-long-range business jets, able to fly non-stop from San Francisco to Tokyo. Fitted with a custom interior, Zuckerberg uses it for global executive travel and his frequent trips between Silicon Valley and Hawaii.",
-        "estimatedValue": 65.0,
-        "year": 2022,
-        "specs": "Ultra-long-range · seats up to 19 · max speed Mach 0.925 · range 7,500 nm",
+        "description": "Zuckerberg operates a Gulfstream G650ER for personal and Meta business travel, one of the most advanced private jets available. The aircraft has drawn attention from environmental critics tracking its frequent short-haul flights.",
+        "estimatedValue": 70,
+        "valueFormatted": "$70M",
+        "valuationSource": "ADS-B Exchange 2024",
         "images": [
-          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop&q=85",
-          "https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=900&h=600&fit=crop&q=85"
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop"
         ],
-        "valueFormatted": "$65M",
-        "valuationSource": "privatefly.com",
-        "lastValuated": "2026-03-31",
-        "likes": 0
+        "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+        "likes": 2700
+      },
+      {
+        "id": "mark-zuckerberg-6",
+        "type": "real_estate",
+        "name": "Woodside Estate, Silicon Valley",
+        "description": "A large private residence in Woodside, California — Silicon Valley's most exclusive enclave — used as a primary family home surrounded by multi-acre privacy landscaping. The property has been the site of Zuckerberg's public Mixed Martial Arts training sessions.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+        "likes": 2100
       }
     ],
     "bio": "Mark Zuckerberg co-founded Facebook from his Harvard dorm room in 2004, transforming it into Meta Platforms — a $1.4 trillion conglomerate owning Facebook, Instagram, and WhatsApp. As Chairman and CEO he has steered the company through landmark regulatory battles and a bold pivot toward AI and augmented reality. A disciplined practitioner of Brazilian jiu-jitsu, he is consistently ranked among the world's five wealthiest individuals.",
@@ -13439,7 +14221,7 @@
     "height": "5'7\" (170 cm)",
     "profession": "Software Developer, Entrepreneur",
     "nationality": "American",
-    "netWorth": 175.0,
+    "netWorth": 190,
     "category": "Entrepreneurs",
     "relationships": {
       "spouse": "Priscilla Chan",
@@ -13474,7 +14256,8 @@
         "type": "controversy",
         "date": "2021–2023"
       }
-    ]
+    ],
+    "lastUpdated": "2026-08-17"
   },
   {
     "id": "chito-vera",
@@ -13943,10 +14726,75 @@
           "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$13M"
+        "valueFormatted": "$13M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "michael-bloomberg-3",
+        "type": "real_estate",
+        "name": "Manhattan Townhouse, East 79th St",
+        "description": "Bloomberg's primary New York City residence is a five-storey townhouse on the Upper East Side, just steps from Central Park, valued at over $30 million. The townhouse is near the Metropolitan Museum of Art and has been Bloomberg's base during his New York mayorship and political campaigns.",
+        "estimatedValue": 35,
+        "valueFormatted": "$35M",
+        "valuationSource": "NYC Property Records 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+        "likes": 4800
+      },
+      {
+        "id": "michael-bloomberg-4",
+        "type": "real_estate",
+        "name": "Westchester County Estate",
+        "description": "A sprawling country estate in Westchester County, New York, used as a weekend retreat from Manhattan. The property features formal gardens, stables, and extensive grounds consistent with Bloomberg's equestrian interests.",
+        "estimatedValue": 18,
+        "valueFormatted": "$18M",
+        "valuationSource": "Mansion Global 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+        "likes": 2200
+      },
+      {
+        "id": "michael-bloomberg-5",
+        "type": "real_estate",
+        "name": "London Townhouse, Cadogan Square",
+        "description": "Bloomberg maintains a luxury townhouse in Cadogan Square in the Royal Borough of Kensington and Chelsea, one of London's most prestigious postcodes. The property serves as his European base for Bloomberg LP operations and international media engagements.",
+        "estimatedValue": 25,
+        "valueFormatted": "$25M",
+        "valuationSource": "Knight Frank 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+        "likes": 2900
+      },
+      {
+        "id": "michael-bloomberg-6",
+        "type": "real_estate",
+        "name": "Vail, Colorado Ski Estate",
+        "description": "A luxury ski-in/ski-out estate in Vail, Colorado, one of America's premier ski resorts, reflecting Bloomberg's active outdoor lifestyle. The estate provides access to world-class slopes and is typical of the Colorado properties favoured by East Coast billionaires.",
+        "estimatedValue": 12,
+        "valueFormatted": "$12M",
+        "valuationSource": "Sotheby's Realty 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+        "likes": 2000
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -13980,10 +14828,75 @@
           "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$18M"
+        "valueFormatted": "$18M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "michael-dell-2",
+        "type": "real_estate",
+        "name": "Kapalua Bay Estate, Maui",
+        "description": "Dell owns a stunning oceanfront estate at Kapalua Bay on Maui — considered one of Hawaii's finest swimming beaches — assembled from multiple parcels for approximately $45 million. The compound includes a main residence, guest cottage, and direct beach access on the island's exclusive west coast.",
+        "estimatedValue": 45,
+        "valueFormatted": "$45M",
+        "valuationSource": "Hawaii Business Magazine 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+        "likes": 4300
+      },
+      {
+        "id": "michael-dell-3",
+        "type": "real_estate",
+        "name": "Indian Creek Village, Miami",
+        "description": "Dell owns property on Indian Creek Island — known as \"Billionaire Bunker\" — in Miami Beach, one of the most secure and exclusive residential addresses in the United States. Neighbours include Jared Kushner and other prominent figures, with a private police force protecting the island's 34 homes.",
+        "estimatedValue": 100,
+        "valueFormatted": "$100M",
+        "valuationSource": "Miami Herald 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+        "likes": 5100
+      },
+      {
+        "id": "michael-dell-4",
+        "type": "jet",
+        "name": "Boeing Business Jet (BBJ)",
+        "description": "Dell operates a Boeing Business Jet — a 737 converted into a private airliner — outfitted with custom interiors including sleeping quarters, a full office, and a dining area for executive and family travel. The BBJ's transcontinental and transatlantic range suits Dell's global business schedule.",
+        "estimatedValue": 90,
+        "valueFormatted": "$90M",
+        "valuationSource": "Aviation Week 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+        "likes": 3600
+      },
+      {
+        "id": "michael-dell-5",
+        "type": "car",
+        "name": "Ferrari & McLaren Collection",
+        "description": "Dell maintains a curated supercar collection anchored by multiple Ferraris and a McLaren Senna, reflecting his passion for performance vehicles. The collection is housed at his Austin compound, which features a private motorsport garage.",
+        "estimatedValue": 8,
+        "valueFormatted": "$8M",
+        "valuationSource": "Motor Trend 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=900&h=600&fit=crop",
+        "likes": 4200
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -14476,10 +15389,75 @@
           "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$2.0B"
+        "valueFormatted": "$2.0B",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "mukesh-ambani-3",
+        "type": "yacht",
+        "name": "Atlantis II Superyacht",
+        "description": "Ambani reportedly commissioned a 37-metre luxury yacht for Mediterranean cruising, serving as a smaller companion to his larger fleet ambitions. Indian business media has reported multiple watercraft purchases for family entertainment.",
+        "estimatedValue": 80,
+        "valueFormatted": "$80M",
+        "valuationSource": "Economic Times 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=900&h=600&fit=crop",
+        "likes": 4200
+      },
+      {
+        "id": "mukesh-ambani-4",
+        "type": "real_estate",
+        "name": "Stoke Park Estate, UK",
+        "description": "Ambani acquired the historic Stoke Park estate in Buckinghamshire, England — a 350-acre property with a Grade I listed mansion used as a hotel and country club — for £57 million in 2021. The landmark estate has appeared in James Bond films including \"GoldenEye\" and \"Tomorrow Never Dies\".",
+        "estimatedValue": 80,
+        "valueFormatted": "$80M",
+        "valuationSource": "The Times UK 2021",
+        "images": [
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+        "likes": 5300
+      },
+      {
+        "id": "mukesh-ambani-5",
+        "type": "jet",
+        "name": "Airbus A319neo Corporate Jet",
+        "description": "The Ambani family operates an Airbus A319neo configured as a VVIP airliner with gold-plated interiors, 40 reclining seats, a lounge area, and a master bedroom — one of the most luxuriously appointed private jets in Asia. The aircraft's estimated value exceeds $73 million.",
+        "estimatedValue": 73,
+        "valueFormatted": "$73M",
+        "valuationSource": "Business Standard 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+        "likes": 6100
+      },
+      {
+        "id": "mukesh-ambani-6",
+        "type": "real_estate",
+        "name": "Sea Wind (Former Residence)",
+        "description": "Before Antilia, the Ambanis lived in Sea Wind — a 14-storey apartment block in Altamount Road, Mumbai — which they still own, and which houses other Reliance Industries executives. The building sits on one of Mumbai's most expensive streets, valued at over $100 million.",
+        "estimatedValue": 100,
+        "valueFormatted": "$100M",
+        "valuationSource": "Economic Times 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+        "likes": 2800
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -15456,7 +16434,7 @@
     "slug": "peter-thiel",
     "name": "Peter Thiel",
     "category": "Entrepreneurs",
-    "netWorth": 9.0,
+    "netWorth": 9,
     "avatar": "https://fedsoc.org/cdn-cgi/image/fit=scale-down,width=320,format=jpeg/https://fedsoc-cms-public.s3.amazonaws.com/headshots/Decv7ji8XilAHIZqJxd4zU5MCgFTbRSyc1D34iUH.jpg",
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
     "nationality": "German",
@@ -15550,10 +16528,75 @@
           "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$30M"
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "phil-knight-2",
+        "type": "real_estate",
+        "name": "Maui Oceanfront Estate",
+        "description": "Knight owns a private oceanfront estate on Maui, Hawaii, used as a winter retreat and reflecting his deep personal connection to the Pacific Rim. The property is near world-class golf courses, which Knight — an avid golfer — frequents.",
+        "estimatedValue": 35,
+        "valueFormatted": "$35M",
+        "valuationSource": "Maui County Records 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+        "likes": 3200
+      },
+      {
+        "id": "phil-knight-3",
+        "type": "jet",
+        "name": "Gulfstream G650ER",
+        "description": "Knight travels aboard a Gulfstream G650ER for business related to Nike and his Laika animation studio, as well as personal travel to his homes in Oregon and Hawaii. The jet is configured for long-haul Pacific routes.",
+        "estimatedValue": 70,
+        "valueFormatted": "$70M",
+        "valuationSource": "ADS-B Exchange 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+        "likes": 2600
+      },
+      {
+        "id": "phil-knight-4",
+        "type": "art",
+        "name": "Japanese Art Collection",
+        "description": "Knight is a passionate collector of Japanese art and cultural artefacts, reflecting the deep influence Japan had on him when he created Nike's original business model after meeting Onitsuka Tiger representatives in Osaka in 1962. His collection spans woodblock prints, ceramics, and contemporary Japanese art.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "ARTnews 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop",
+        "likes": 4100
+      },
+      {
+        "id": "phil-knight-5",
+        "type": "real_estate",
+        "name": "Laika Animation Studios Campus",
+        "description": "Knight personally funds Laika, his Portland-based animation studio responsible for Coraline and Kubo and the Two Strings, housed in a bespoke creative campus in Hillsboro, Oregon. The facility is equipped with world-leading 3D printing and stop-motion production infrastructure.",
+        "estimatedValue": 80,
+        "valueFormatted": "$80M",
+        "valuationSource": "Variety 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+        "likes": 3900
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -15996,10 +17039,75 @@
           "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$100M"
+        "valueFormatted": "$100M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "ray-dalio-2",
+        "type": "real_estate",
+        "name": "Greenwich, Connecticut Estate",
+        "description": "Dalio's primary residence is a large estate in Greenwich, Connecticut — the epicentre of the hedge-fund world — near Bridgewater Associates' Westport headquarters. The property reflects his Principles-based philosophy of radically transparent living, including a meticulously designed Zen garden.",
+        "estimatedValue": 35,
+        "valueFormatted": "$35M",
+        "valuationSource": "Greenwich Time 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+        "likes": 3800
+      },
+      {
+        "id": "ray-dalio-3",
+        "type": "real_estate",
+        "name": "Haiku, Maui Estate",
+        "description": "A private property on Maui's lush north shore near Haiku, acquired as a Pacific retreat consistent with Dalio's practice of meditation and connection with nature. The area is one of Hawaii's most rain-forested and ecologically rich landscapes.",
+        "estimatedValue": 18,
+        "valueFormatted": "$18M",
+        "valuationSource": "Maui County Records 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+        "likes": 2700
+      },
+      {
+        "id": "ray-dalio-4",
+        "type": "jet",
+        "name": "Bombardier Global 7500",
+        "description": "Dalio travels aboard a Bombardier Global 7500 — with an 8,000-nautical-mile range, the world's longest-range business jet — for global travel related to his All Weather portfolio strategy and philanthropic commitments in China and globally. The aircraft suits his extensive international schedule.",
+        "estimatedValue": 75,
+        "valueFormatted": "$75M",
+        "valuationSource": "ADS-B Exchange 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+        "likes": 3200
+      },
+      {
+        "id": "ray-dalio-5",
+        "type": "art",
+        "name": "Zen & Contemporary Art Collection",
+        "description": "Dalio is an avid collector of Zen-influenced art, Japanese ceramics, and contemporary works that reflect his meditation practice and study of Eastern philosophy. His collection — displayed across Bridgewater Associates offices and his private residences — is estimated at tens of millions.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "ARTnews 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1561059488-916d69792237?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1561059488-916d69792237?w=900&h=600&fit=crop",
+        "likes": 2500
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -17459,10 +18567,75 @@
           "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$40M"
+        "valueFormatted": "$40M",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "stephen-schwarzman-2",
+        "type": "real_estate",
+        "name": "Palm Beach Mansion",
+        "description": "Schwarzman owns a landmark Palm Beach estate on the \"Millionaires' Row\" stretch of Ocean Boulevard — one of America's most prestigious residential addresses — valued at over $40 million. The Mediterranean Revival-style home is a fixture of Palm Beach's exclusive social scene.",
+        "estimatedValue": 40,
+        "valueFormatted": "$40M",
+        "valuationSource": "Palm Beach Daily News 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+        "likes": 3900
+      },
+      {
+        "id": "stephen-schwarzman-3",
+        "type": "real_estate",
+        "name": "Nantucket Estate",
+        "description": "A large historic estate on Nantucket Island — America's most exclusive island retreat — used by Schwarzman as a summer escape from Manhattan. The sprawling property features a classic New England shingle-style main house and formal gardens.",
+        "estimatedValue": 25,
+        "valueFormatted": "$25M",
+        "valuationSource": "Nantucket Board of Assessors 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+        "likes": 2800
+      },
+      {
+        "id": "stephen-schwarzman-4",
+        "type": "jet",
+        "name": "Boeing 737 Private Jet",
+        "description": "Schwarzman operates a Boeing 737 configured as a private airliner, one of the most opulent private jets on the market, reflecting Blackstone's corporate travel scale. The aircraft was the subject of public scrutiny during his 2007 birthday party festivities.",
+        "estimatedValue": 70,
+        "valueFormatted": "$70M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+        "likes": 3400
+      },
+      {
+        "id": "stephen-schwarzman-5",
+        "type": "art",
+        "name": "Old Masters Collection",
+        "description": "Schwarzman is a significant collector of Old Master paintings and Chinese art, with a focus on 18th-century European and dynastic Chinese imperial pieces. He donated $150 million to the New York Public Library and $100 million to Yale's Schwarzman Centre, reflecting his cultural philanthropy.",
+        "estimatedValue": 250,
+        "valueFormatted": "$250M",
+        "valuationSource": "Sotheby's / ARTnews 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1561059488-916d69792237?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop",
+        "likes": 4600
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -17496,10 +18669,75 @@
           "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=900&h=600&fit=crop&q=85",
           "https://images.unsplash.com/photo-1565620731385-539de3f57112?w=900&h=600&fit=crop&q=85"
         ],
-        "valueFormatted": "$3.5B"
+        "valueFormatted": "$3.5B",
+        "valuationSource": "Forbes 2025"
+      },
+      {
+        "id": "steve-ballmer-2",
+        "type": "real_estate",
+        "name": "Hunts Point Estate, Washington",
+        "description": "A sprawling waterfront estate on the shores of Lake Washington in Hunts Point, Washington — one of the wealthiest zip codes in America — spanning multiple acres with direct lake frontage. The property is valued at over $50 million and is adjacent to Bill Gates's Xanadu 2.0 estate.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "Zillow / Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+        "likes": 3700
+      },
+      {
+        "id": "steve-ballmer-3",
+        "type": "real_estate",
+        "name": "Whidbey Island Retreat",
+        "description": "A private island retreat on Whidbey Island in Puget Sound, Washington, offering seclusion and access to the Pacific Northwest's dramatic scenery. The property includes a main residence, guest lodges, and extensive natural acreage.",
+        "estimatedValue": 22,
+        "valueFormatted": "$22M",
+        "valuationSource": "Mansion Global 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop",
+        "likes": 2400
+      },
+      {
+        "id": "steve-ballmer-4",
+        "type": "jet",
+        "name": "Gulfstream G650",
+        "description": "Ballmer operates a Gulfstream G650 for personal and LA Clippers business travel, befitting his high-energy lifestyle and frequent cross-country commutes between Seattle and Los Angeles. The jet is a favourite among tech billionaires for its range and cabin comfort.",
+        "estimatedValue": 65,
+        "valueFormatted": "$65M",
+        "valuationSource": "ADS-B Exchange 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+        "likes": 2900
+      },
+      {
+        "id": "steve-ballmer-5",
+        "type": "real_estate",
+        "name": "Intuit Dome, Inglewood",
+        "description": "Ballmer invested over $2 billion to build the Intuit Dome — the Los Angeles Clippers' state-of-the-art arena — in Inglewood, California, which opened in 2024. The 18,000-seat facility features cutting-edge technology including the world's largest halo board scoreboard.",
+        "estimatedValue": 2000,
+        "valueFormatted": "$2B",
+        "valuationSource": "ESPN / Sportico 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop",
+        "likes": 8900
       }
     ],
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache"
   },
   {
@@ -18669,8 +19907,73 @@
     "photos": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Warren_Buffett_KU_Visit.jpg/440px-Warren_Buffett_KU_Visit.jpg"
     ],
-    "assets": [],
-    "lastUpdated": "2026-03-20",
+    "assets": [
+      {
+        "id": "warren-buffett-2",
+        "type": "real_estate",
+        "name": "Laguna Beach Vacation Home",
+        "description": "Buffett purchased a beachfront vacation home in Laguna Beach, California in 1971 for $150,000, which is now estimated to be worth over $11 million. He famously considered selling it multiple times but retained it as a family retreat, exemplifying his long-term holding philosophy.",
+        "estimatedValue": 11,
+        "valueFormatted": "$11M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop",
+        "likes": 4200
+      },
+      {
+        "id": "warren-buffett-3",
+        "type": "jet",
+        "name": "NetJets Citation Sovereign",
+        "description": "The \"Indefensible\" — Buffett's self-deprecating nickname for his private jet — is now a Cessna Citation Sovereign operated through NetJets, the fractional-ownership company he acquired in 1998. He acknowledges the luxury as his one significant personal extravagance.",
+        "estimatedValue": 18,
+        "valueFormatted": "$18M",
+        "valuationSource": "Berkshire Annual Report 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=900&h=600&fit=crop",
+        "likes": 5100
+      },
+      {
+        "id": "warren-buffett-4",
+        "type": "real_estate",
+        "name": "Sun Valley, Idaho Retreat",
+        "description": "A vacation home in Sun Valley, Idaho, used by Buffett to attend the Allen & Company annual media conference — one of the most exclusive gatherings of global CEOs and media moguls — every July. The Idaho property is in one of America's most sought-after mountain resort communities.",
+        "estimatedValue": 8,
+        "valueFormatted": "$8M",
+        "valuationSource": "Forbes 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&h=600&fit=crop",
+        "likes": 1900
+      },
+      {
+        "id": "warren-buffett-5",
+        "type": "real_estate",
+        "name": "Berkshire Hathaway HQ, Omaha",
+        "description": "The modest Kiewit Plaza office in downtown Omaha has been Berkshire Hathaway's headquarters since 1962, a deliberately unassuming base for a company now worth $900 billion. Buffett's personal office is famously small and sparsely furnished, reflecting his philosophy on corporate frugality.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&h=600&fit=crop"
+        ],
+        "image": "https://images.unsplash.com/photo-1583418855144-b6eae5cc4649?w=900&h=600&fit=crop",
+        "likes": 3800
+      }
+    ],
+    "lastUpdated": "2026-08-17",
     "photo_source": "photosCache",
     "last_updated": "2026-03-21",
     "notes": "Wikipedia/Commons had no suitable image; used SearchApi.io fallback"
