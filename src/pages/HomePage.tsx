@@ -181,69 +181,6 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
   )
 }
 
-function WealthLogo() {
-  return (
-    <div className="flex items-center gap-3.5">
-      {/* Crown + W monogram — luxury mark */}
-      <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-        <defs>
-          <linearGradient id="logoGold" x1="0" y1="0" x2="40" y2="36" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"   stopColor="#f5e070"/>
-            <stop offset="48%" stopColor="#c9a84c"/>
-            <stop offset="100%" stopColor="#8a6218"/>
-          </linearGradient>
-          <linearGradient id="logoShine" x1="0" y1="0" x2="40" y2="36" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#fff8d0" stopOpacity="0.6"/>
-            <stop offset="100%" stopColor="#c9a84c" stopOpacity="0"/>
-          </linearGradient>
-        </defs>
-        {/* Crown base band */}
-        <rect x="1" y="24" width="38" height="7" rx="1.5" fill="url(#logoGold)"/>
-        <rect x="1" y="24" width="38" height="2.5" rx="1" fill="url(#logoShine)" opacity="0.55"/>
-        {/* Crown body with 3 points */}
-        <polygon points="1,24 1,8 10,17 20,2 30,17 39,8 39,24" fill="url(#logoGold)"/>
-        <polygon points="1,24 1,13 10,20 20,7 30,20 39,13 39,24" fill="url(#logoShine)" opacity="0.3"/>
-        {/* Center crown gem */}
-        <polygon points="20,2 22.5,7 20,12 17.5,7" fill="#fff8d0" opacity="0.95"/>
-        {/* Bottom rule */}
-        <line x1="1" y1="34.5" x2="39" y2="34.5" stroke="url(#logoGold)" strokeWidth="0.4" opacity="0.5"/>
-      </svg>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-        <span style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          background: 'linear-gradient(135deg, #f5e070 0%, #c9a84c 48%, #8a6218 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          fontSize: '14px',
-          letterSpacing: '0.38em',
-          textTransform: 'uppercase' as const,
-          fontWeight: 700,
-          lineHeight: 1,
-        }}>
-          Wealth
-        </span>
-        <span style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          background: 'linear-gradient(135deg, #f5e070 0%, #c9a84c 48%, #8a6218 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          fontSize: '10px',
-          letterSpacing: '0.42em',
-          textTransform: 'uppercase' as const,
-          fontWeight: 400,
-          lineHeight: 1,
-        }}>
-          Explorer
-        </span>
-        {/* Decorative gold rule instead of text subtitle */}
-        <div style={{ height: '1px', marginTop: '3px', background: 'linear-gradient(90deg, rgba(201,168,76,0.7), rgba(201,168,76,0.25), transparent)' }} />
-      </div>
-    </div>
-  )
-}
-
 // ── LANGUAGE SELECTOR ─────────────────────────────────────────────────────────
 function LanguageSelector() {
   const { activeLang, setLang } = useLang()
@@ -439,7 +376,6 @@ export default function HomePage() {
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="border-b bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40" style={{ borderBottomColor: 'rgba(201,168,76,0.18)' }}>
         <div className="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between">
-          <Link to="/" onClick={() => window.scrollTo(0, 0)}><WealthLogo /></Link>
           <div className="flex items-center gap-2">
             <NotificationBell />
             <ThemeToggle />
@@ -677,11 +613,6 @@ export default function HomePage() {
       {/* ── FOOTER ──────────────────────────────────────────────── */}
       <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(201,168,76,0.18)' }}>
         <div className="max-w-2xl mx-auto text-center">
-
-          {/* Logo */}
-          <div className="flex justify-center mb-5">
-            <Link to="/" onClick={() => window.scrollTo(0, 0)}><WealthLogo /></Link>
-          </div>
 
           {/* Tagline */}
           <p className="text-[11px] text-white/60 mb-6 tracking-wide">
