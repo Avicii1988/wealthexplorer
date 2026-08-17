@@ -2440,6 +2440,54 @@
         "name": "Ferrari 488 GTB",
         "description": "Griezmann's fire-engine red Ferrari 488, his favourite weekend drive in Madrid.",
         "estimatedValue": 0.3
+      },
+      {
+        "id": "antoine-griezmann-1",
+        "type": "business",
+        "name": "Undisputed Esports Team",
+        "description": "Griezmann co-owns the Undisputed esports organization — reflecting his deep passion for gaming, having famously delayed his wife's labour to play FIFA. He streams regularly on Twitch.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Esports Business 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4552
+      },
+      {
+        "id": "antoine-griezmann-2",
+        "type": "real_estate",
+        "name": "Atlético de Madrid Area Home",
+        "description": "Griezmann's primary Spanish property near Madrid — where he lives when playing for Atlético de Madrid, his beloved club where he's spent the majority of his La Liga career.",
+        "estimatedValue": 4,
+        "valueFormatted": "$4M",
+        "valuationSource": "Spanish Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3410
+      },
+      {
+        "id": "antoine-griezmann-3",
+        "type": "business",
+        "name": "Huawei & Volkswagen Sponsorships",
+        "description": "Griezmann's major European brand partnerships — Huawei, Volkswagen, and Konami eFootball — plus France national team commercial income from his World Cup-winning role.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Forbes France 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2300
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -3094,6 +3142,53 @@
         "name": "McLaren MP4/4",
         "description": "Senna's legendary 1988 McLaren-Honda, the most dominant F1 car ever built, winning 15 of 16 races.",
         "estimatedValue": 1
+      },
+      {
+        "id": "ayrton-senna-1",
+        "type": "business",
+        "name": "Instituto Ayrton Senna (Legacy Estate)",
+        "description": "The Ayrton Senna Foundation manages his estate and has distributed $120M+ for Brazilian education since his 1994 death. His estate licenses the Senna brand and image globally.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "Instituto Senna 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2847
+      },
+      {
+        "id": "ayrton-senna-2",
+        "type": "business",
+        "name": "Senna Brands & Racing Memorabilia",
+        "description": "The Senna estate manages extensive licensing — helmets, replicas, branded merchandise — generating millions annually. Senna racing collectibles are among motorsport's most valuable.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "RM Sotheby's 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2998
+      },
+      {
+        "id": "ayrton-senna-3",
+        "type": "car",
+        "name": "F1 Car Legacy Collection",
+        "description": "Senna's McLaren-Honda race cars from his three World Championship years (1988, 1990, 1991) are the most valuable F1 cars ever auctioned — his MP4/4 could fetch $100M+.",
+        "estimatedValue": 100,
+        "valueFormatted": "$100M",
+        "valuationSource": "RM Sotheby's 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800",
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800",
+        "likes": 2609
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -3446,6 +3541,54 @@
         "name": "Pacific Palisades Mansion",
         "description": "The $20M Beverly Hills home Ben purchased after reuniting with J-Lo.",
         "estimatedValue": 20
+      },
+      {
+        "id": "ben-affleck-1",
+        "type": "real_estate",
+        "name": "Pacific Palisades Home",
+        "description": "Ben Affleck and Jennifer Lopez's Pacific Palisades estate — a stunning $34.5M property purchased in 2023 following their rekindled romance and marriage, now listed amid their 2024 separation.",
+        "estimatedValue": 35,
+        "valueFormatted": "$35M",
+        "valuationSource": "Property Records 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1482
+      },
+      {
+        "id": "ben-affleck-2",
+        "type": "business",
+        "name": "Artists Equity Production Company",
+        "description": "Affleck and Matt Damon co-founded Artists Equity in 2022 — a studio model where talent takes equity instead of upfront fees. The company's first project Air (Nike/Jordan Brand) was a critical and commercial hit.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Deadline 2022",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3228
+      },
+      {
+        "id": "ben-affleck-3",
+        "type": "real_estate",
+        "name": "Brentwood Home",
+        "description": "Affleck's previous primary home in Brentwood — a California estate maintained during his earlier solo period and his children's school years.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1747
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -3934,6 +4077,54 @@
         "name": "Chappaqua Estate",
         "description": "The Clinton's Chappaqua, New York estate purchased in 1999 before leaving the White House.",
         "estimatedValue": 1.7
+      },
+      {
+        "id": "bill-clinton-1",
+        "type": "real_estate",
+        "name": "Chappaqua Home, New York",
+        "description": "The Clinton family's primary residence — a 5,232 sq ft Dutch Colonial home in Chappaqua, Westchester County, purchased in 1999 for $1.7M when Hillary Clinton ran for Senate.",
+        "estimatedValue": 2,
+        "valueFormatted": "$2M",
+        "valuationSource": "NY Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4468
+      },
+      {
+        "id": "bill-clinton-2",
+        "type": "real_estate",
+        "name": "Washington DC Home",
+        "description": "The Clintons' Washington DC home — a property in the upscale embassy row area, maintained for Hillary's Senate and State Department work and their continued DC presence.",
+        "estimatedValue": 8,
+        "valueFormatted": "$8M",
+        "valuationSource": "DC Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4378
+      },
+      {
+        "id": "bill-clinton-3",
+        "type": "business",
+        "name": "Clinton Presidential Foundation & Speaking",
+        "description": "Clinton founded the Clinton Foundation and commands up to $500K per speech — his cumulative post-presidential speaking earnings from Goldman Sachs, Laureate Education, and others exceeded $100M.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2016",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1238
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -5119,6 +5310,54 @@
         "name": "Turks & Caicos Estate",
         "description": "Willis' luxury compound in Turks & Caicos, a Caribbean retreat he has owned since the late 1990s.",
         "estimatedValue": 12
+      },
+      {
+        "id": "bruce-willis-1",
+        "type": "real_estate",
+        "name": "Bedford, New York Farm",
+        "description": "Bruce Willis' primary estate — a 350-acre property in Bedford, New York, where he and wife Emma Heming spend time with their daughters, close to the Vermont property where he also spends time.",
+        "estimatedValue": 12,
+        "valueFormatted": "$12M",
+        "valuationSource": "NY Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1746
+      },
+      {
+        "id": "bruce-willis-2",
+        "type": "real_estate",
+        "name": "Hailey, Idaho Compound",
+        "description": "Willis' beloved Idaho home — a large Hailey compound in the same Sun Valley area where he also owns the Mint Bar in nearby Ketchum, Idaho.",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "ID Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3196
+      },
+      {
+        "id": "bruce-willis-3",
+        "type": "business",
+        "name": "Die Hard Franchise Backend",
+        "description": "Willis negotiated significant backend participation in the Die Hard franchise — generating millions over its 30+ year run as one of action cinema's most beloved series.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Variety 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2179
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -5305,6 +5544,54 @@
         "name": "Beverly Hills Compound",
         "description": "Diaz's gated Belair compound where she lives quietly with husband Benji Madden.",
         "estimatedValue": 14
+      },
+      {
+        "id": "cameron-diaz-1",
+        "type": "real_estate",
+        "name": "Beverly Hills Home",
+        "description": "Cameron Diaz's primary California home — a Beverly Hills estate where she lives with husband Benji Madden and their children.",
+        "estimatedValue": 6.5,
+        "valueFormatted": "$7M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2509
+      },
+      {
+        "id": "cameron-diaz-2",
+        "type": "business",
+        "name": "Avaline Wine Brand",
+        "description": "Diaz co-founded Avaline wine in 2020 with entrepreneur Katherine Power — a clean wine brand focusing on transparency about ingredients. Avaline has become one of the fastest-growing wine brands in the US.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Forbes 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2268
+      },
+      {
+        "id": "cameron-diaz-3",
+        "type": "business",
+        "name": "Charlie's Angels & Mask Film Residuals",
+        "description": "Diaz's Charlie's Angels franchise (2000, 2003) plus The Mask, There's Something About Mary, and Shrek continue generating significant residuals as catalog content.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Variety 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3560
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -6304,6 +6591,54 @@
         "name": "Manoir de Ban",
         "description": "Chaplin's Swiss estate on Lake Geneva, now the Chaplin's World museum.",
         "estimatedValue": 10
+      },
+      {
+        "id": "charlie-chaplin-1",
+        "type": "business",
+        "name": "Roy Export Company (Film Rights)",
+        "description": "Chaplin founded Roy Export Company to control his films' distribution rights. The estate still earns from his masterpieces including Modern Times, City Lights, and The Great Dictator.",
+        "estimatedValue": 100,
+        "valueFormatted": "$100M",
+        "valuationSource": "Chaplin Estate 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2161
+      },
+      {
+        "id": "charlie-chaplin-2",
+        "type": "real_estate",
+        "name": "Manoir de Ban, Corsier-sur-Vevey",
+        "description": "Chaplin's former Swiss home on Lake Geneva — now the Chaplin's World museum attracting 300,000 visitors per year. The estate house was converted into an immersive experience of his life.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Chaplin's World 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1062
+      },
+      {
+        "id": "charlie-chaplin-3",
+        "type": "business",
+        "name": "The Tramp Licensing & IP",
+        "description": "The Little Tramp character remains one of cinema's most recognizable icons — licensed for merchandise, stage productions, and cultural references worldwide.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Chaplin Estate 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4780
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -6679,6 +7014,54 @@
         "name": "Byron Bay Compound",
         "description": "Hemsworth's beachfront 4,800 sqm compound in Byron Bay, Australia.",
         "estimatedValue": 20
+      },
+      {
+        "id": "chris-hemsworth-1",
+        "type": "business",
+        "name": "Centr Fitness App",
+        "description": "Hemsworth co-founded Centr — a comprehensive health, fitness, and nutrition app with celebrity trainers and meal planning. The subscription-based platform has millions of users.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2774
+      },
+      {
+        "id": "chris-hemsworth-2",
+        "type": "real_estate",
+        "name": "Byron Bay Estate, Australia",
+        "description": "Hemsworth's stunning Byron Bay family home — a custom-built 4,600 sq m estate on the hinterland near the famous New South Wales beach town, where he lives with wife Elsa Pataky and their children.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Australian Property 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3164
+      },
+      {
+        "id": "chris-hemsworth-3",
+        "type": "business",
+        "name": "Thor Franchise & MCU Backend",
+        "description": "Hemsworth's 10+ Marvel appearances as Thor — plus his action franchise Extraction for Netflix — have generated $50M+ in combined earnings.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3945
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -6710,6 +7093,54 @@
         "name": "Malibu Beach House",
         "description": "The Malibu beach house Chris shares with partner Dakota Johnson, their California base.",
         "estimatedValue": 14
+      },
+      {
+        "id": "chris-martin-1",
+        "type": "business",
+        "name": "Coldplay Catalog & Music of the Spheres Tour",
+        "description": "Coldplay's Music of the Spheres World Tour (2022-2025) is the highest-grossing tour in history at $1B+ and counting. As frontman and primary songwriter, Martin earns tens of millions per year.",
+        "estimatedValue": 100,
+        "valueFormatted": "$100M",
+        "valuationSource": "Pollstar 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4490
+      },
+      {
+        "id": "chris-martin-2",
+        "type": "real_estate",
+        "name": "Malibu Home, California",
+        "description": "Martin's primary California home — a Malibu property used when in Los Angeles with girlfriend Dakota Johnson and his children with ex-wife Gwyneth Paltrow.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2500
+      },
+      {
+        "id": "chris-martin-3",
+        "type": "real_estate",
+        "name": "London Home",
+        "description": "Chris Martin's UK home — a London property keeping him connected to his British roots and Coldplay's English identity.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "London Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 857
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -6975,6 +7406,54 @@
         "name": "Berry Park",
         "description": "His beloved Berry Park estate in Wentzville, Missouri -- a recording studio and concert venue.",
         "estimatedValue": 0.5
+      },
+      {
+        "id": "chuck-berry-1",
+        "type": "business",
+        "name": "Berry Park & Music Estate",
+        "description": "Berry Park — Chuck Berry's 30-acre entertainment park and recording studio in Wentzville, Missouri — was his primary asset. His estate now holds the rights to his legendary catalog including Johnny B. Goode.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Berry Estate 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4172
+      },
+      {
+        "id": "chuck-berry-2",
+        "type": "business",
+        "name": "Chess Records Catalog (Legacy)",
+        "description": "Chuck Berry's definitive rock 'n' roll recordings — Johnny B. Goode, Maybellene, Roll Over Beethoven — through the Chess Records legacy now owned by Universal Music, continuing to generate royalties.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Universal Music 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4221
+      },
+      {
+        "id": "chuck-berry-3",
+        "type": "real_estate",
+        "name": "Ladue Estate, St. Louis",
+        "description": "Berry's primary home near St. Louis, Missouri — where he famously hosted the local events that led to controversy but also where the 'Father of Rock 'n' Roll' spent his later years.",
+        "estimatedValue": 2,
+        "valueFormatted": "$2M",
+        "valuationSource": "MO Property Records 2017",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 803
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7316,6 +7795,54 @@
         "name": "Brentwood Estate",
         "description": "His Brentwood, LA estate.",
         "estimatedValue": 9
+      },
+      {
+        "id": "conan-obrien-1",
+        "type": "business",
+        "name": "Team Coco / SiriusXM Podcast",
+        "description": "Conan O'Brien's podcast \"Conan O'Brien Needs a Friend\" regularly tops charts. His Team Coco media company was acquired by SiriusXM for $150M+, giving him significant equity.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "Bloomberg 2022",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3647
+      },
+      {
+        "id": "conan-obrien-2",
+        "type": "real_estate",
+        "name": "Brentwood Home, Los Angeles",
+        "description": "Conan's primary California home in the affluent Brentwood neighborhood — where he moved when taking the Tonight Show gig in Los Angeles before his famous exit.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1349
+      },
+      {
+        "id": "conan-obrien-3",
+        "type": "business",
+        "name": "Travel Special Residuals (HBO Max)",
+        "description": "O'Brien's travel specials to places like Cuba, Armenia, Japan, and South Korea represent a successful post-late-night format generating ongoing streaming revenue.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "HBO Max 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1007
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7775,6 +8302,54 @@
         "name": "Bryanston Estate",
         "description": "His Bryanston, Johannesburg family estate.",
         "estimatedValue": 5
+      },
+      {
+        "id": "cyril-ramaphosa-1",
+        "type": "business",
+        "name": "Cyril Ramaphosa Foundation",
+        "description": "Ramaphosa's business empire spans the Phembani Group and multiple investments built during his post-apartheid business career — including the controversial Lonmin platinum mine deal.",
+        "estimatedValue": 200,
+        "valueFormatted": "$200M",
+        "valuationSource": "SA Business 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1588
+      },
+      {
+        "id": "cyril-ramaphosa-2",
+        "type": "real_estate",
+        "name": "Phala Phala Farm, Limpopo",
+        "description": "Ramaphosa's controversial buffalo-breeding farm in Limpopo — which became the center of an alleged scandal involving hidden foreign currency. The farm is believed worth $70M+.",
+        "estimatedValue": 70,
+        "valueFormatted": "$70M",
+        "valuationSource": "South African Media 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2607
+      },
+      {
+        "id": "cyril-ramaphosa-3",
+        "type": "business",
+        "name": "President of South Africa Salary & Benefits",
+        "description": "South Africa's head of state receives a salary of R4M ($215K) per year — representing a minor portion of the income generated from his broader investment portfolio.",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "SA Treasury 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2851
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7992,6 +8567,54 @@
         "name": "Twin Vee 320 GFX",
         "description": "Bilzerian's party boat, one of several watercraft in his collection.",
         "estimatedValue": 1
+      },
+      {
+        "id": "dan-bilzerian-1",
+        "type": "business",
+        "name": "Ignite International Cannabis & Tobacco",
+        "description": "Bilzerian's Ignite International brand — cannabis, CBD, vodka, tobacco, and apparel — using his social media empire to market lifestyle products globally. The brand reached $50M in revenue.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2021",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3230
+      },
+      {
+        "id": "dan-bilzerian-2",
+        "type": "real_estate",
+        "name": "Hollywood Hills Mansion",
+        "description": "Bilzerian's famous Hollywood Hills party mansion — the backdrop for his Instagram persona, featuring massive pool, view of LA, and the lifestyle content that made him famous.",
+        "estimatedValue": 7.5,
+        "valueFormatted": "$8M",
+        "valuationSource": "Property Records 2022",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4138
+      },
+      {
+        "id": "dan-bilzerian-3",
+        "type": "real_estate",
+        "name": "Las Vegas Compound",
+        "description": "Bilzerian's Las Vegas compound — a sprawling Nevada property featuring luxury amenities befitting his poker and lifestyle brand identity.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "NV Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4577
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -8133,6 +8756,54 @@
         "name": "New York Townhouse",
         "description": "Craig's Manhattan townhouse in the West Village, shared with wife Rachel Weisz.",
         "estimatedValue": 9
+      },
+      {
+        "id": "daniel-craig-1",
+        "type": "business",
+        "name": "James Bond Franchise Earnings",
+        "description": "Craig's five Bond films (2006-2021) earned him an estimated $230M in total compensation, making him the highest-paid Bond actor in history. No Time to Die alone paid him $25M plus backend.",
+        "estimatedValue": 80,
+        "valueFormatted": "$80M",
+        "valuationSource": "Forbes 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1929
+      },
+      {
+        "id": "daniel-craig-2",
+        "type": "real_estate",
+        "name": "Hamptons Home, New York",
+        "description": "Craig and Rachel Weisz's primary summer home in the Hamptons — where they vacation with their daughter, purchased during his Bond years.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Property Records 2018",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1692
+      },
+      {
+        "id": "daniel-craig-3",
+        "type": "real_estate",
+        "name": "London Townhouse",
+        "description": "The Craig-Weisz family's primary UK home — a stylish London townhouse near their theater roots, keeping ties to London's theater community.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "London Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4167
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -8766,6 +9437,54 @@
         "name": "Palm Springs Estate",
         "description": "His Palm Springs estate.",
         "estimatedValue": 5
+      },
+      {
+        "id": "dean-martin-1",
+        "type": "business",
+        "name": "Reprise Records Estate Income",
+        "description": "Dean Martin's recording catalog including That's Amore, Everybody Loves Somebody, and Volare continues generating royalties for his estate through Universal Music Group.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "RIAA 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1934
+      },
+      {
+        "id": "dean-martin-2",
+        "type": "real_estate",
+        "name": "Beverly Hills Estate (Estate Asset)",
+        "description": "The Dean Martin Beverly Hills home where the Rat Pack legend entertained Hollywood's elite — sold after his 1995 death but remaining an iconic piece of Hollywood history.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "LA Property Records 1995",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1269
+      },
+      {
+        "id": "dean-martin-3",
+        "type": "business",
+        "name": "NBC Dean Martin Show Legacy",
+        "description": "The Dean Martin Show (1965-1974) remains in syndication, generating ongoing licensing income for his estate through 9 seasons of classic NBC variety television.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "NBCUniversal 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4789
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -9485,6 +10204,54 @@
         "name": "Dallas Mansion",
         "description": "Dirk's sprawling Dallas estate where he settled after 21 years with the Mavericks.",
         "estimatedValue": 10
+      },
+      {
+        "id": "dirk-nowitzki-1",
+        "type": "real_estate",
+        "name": "Dallas Home, Texas",
+        "description": "Dirk Nowitzki's primary Dallas home — the city where he spent his entire 21-year NBA career, retiring as arguably the greatest international player ever to grace the game.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "TX Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1507
+      },
+      {
+        "id": "dirk-nowitzki-2",
+        "type": "real_estate",
+        "name": "Würzburg, Germany Property",
+        "description": "Nowitzki's German property near his hometown of Würzburg, Bavaria — where he returns regularly to see family and serve his Dirk Nowitzki Foundation.",
+        "estimatedValue": 2,
+        "valueFormatted": "$2M",
+        "valuationSource": "German Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3603
+      },
+      {
+        "id": "dirk-nowitzki-3",
+        "type": "business",
+        "name": "Dirk Nowitzki Foundation",
+        "description": "Nowitzki's charity foundation focused on youth sports and education in Germany and the Dallas area — while philanthropic, it has substantially elevated his brand value.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Foundation 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2487
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -10302,6 +11069,54 @@
         "name": "Montauk Beach House",
         "description": "Beloved Montauk, New York beach house where Barrymore retreats with her family.",
         "estimatedValue": 5
+      },
+      {
+        "id": "drew-barrymore-1",
+        "type": "business",
+        "name": "Drew Barrymore Beauty Brand",
+        "description": "Barrymore's Flower Beauty cosmetics line, founded in 2013, is a drugstore beauty brand carried in Walmart stores nationwide generating $60M+ in annual revenue.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2160
+      },
+      {
+        "id": "drew-barrymore-2",
+        "type": "business",
+        "name": "The Drew Barrymore Show (CBS)",
+        "description": "Drew's daytime talk show premiered in 2020 and has grown to become one of CBS Daytime's strongest performers — generating syndication fees and platform licensing.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Variety 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1045
+      },
+      {
+        "id": "drew-barrymore-3",
+        "type": "real_estate",
+        "name": "New York City Home",
+        "description": "Barrymore's primary New York home — where she lives with her daughters, based in the city where her successful talk show is produced.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "NYC Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2717
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -10730,6 +11545,54 @@
         "name": "Ferrari 812 Superfast",
         "description": "Hazard's Ferrari 812 Superfast, one of several exotic cars in his Brussels garage.",
         "estimatedValue": 0.35
+      },
+      {
+        "id": "eden-hazard-1",
+        "type": "real_estate",
+        "name": "La Louvière Home, Belgium",
+        "description": "Eden Hazard's primary home near La Louvière in Wallonia, Belgium — the Belgian football genius remains connected to his homeland after his career ended following injury-plagued Real Madrid years.",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "Belgian Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3720
+      },
+      {
+        "id": "eden-hazard-2",
+        "type": "real_estate",
+        "name": "Madrid Property",
+        "description": "Hazard maintained a Madrid property during his Real Madrid tenure (2019-2023) — the ill-fated €100M signing that couldn't replicate his Chelsea magic due to persistent injuries.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Spanish Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1499
+      },
+      {
+        "id": "eden-hazard-3",
+        "type": "business",
+        "name": "Bwin & EA Sports Sponsorships",
+        "description": "Hazard's peak commercial deals with Bwin, Nike, and EA Sports generated €5M+ annually — his face was one of the most recognizable in European football at his Chelsea peak.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Forbes 2020",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3903
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -11534,6 +12397,54 @@
         "name": "Tennessee Estate",
         "description": "Hill and Tim McGraw's expansive Tennessee estate.",
         "estimatedValue": 12
+      },
+      {
+        "id": "faith-hill-1",
+        "type": "real_estate",
+        "name": "Nashville Home, Williamson County",
+        "description": "Faith Hill and Tim McGraw's primary Tennessee residence — a magnificent estate in Williamson County south of Nashville, central to their family life with three daughters.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "TN Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4047
+      },
+      {
+        "id": "faith-hill-2",
+        "type": "real_estate",
+        "name": "New Orleans Home",
+        "description": "The McGraw-Hill family's New Orleans property — a Crescent City home reflecting their deep connection to Southern culture and music.",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "LA Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3616
+      },
+      {
+        "id": "faith-hill-3",
+        "type": "business",
+        "name": "Firefly Records & Music Catalog",
+        "description": "Hill's recording catalog spanning 7 studio albums and multiple Grammy wins continues generating royalties — alongside shared career income with husband Tim McGraw on their Soul2Soul tours.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Billboard 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2177
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -12915,6 +13826,53 @@
         "name": "Grimaldi Palace",
         "description": "The historic Palace of Monaco, the official royal residence of the Grimaldi family.",
         "estimatedValue": 250
+      },
+      {
+        "id": "grace-kelly-1",
+        "type": "real_estate",
+        "name": "Roc Agel Estate, Monaco (Estate)",
+        "description": "The Grace Kelly estate includes Roc Agel — a sprawling farmhouse estate on the hills above Monaco where the Grimaldi family has historically retreated from royal duties.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Monaco Royal Archives",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2211
+      },
+      {
+        "id": "grace-kelly-2",
+        "type": "business",
+        "name": "Film Rights & MGM Catalog",
+        "description": "Kelly's MGM film catalog — Rear Window, To Catch a Thief, Dial M for Murder, and The Country Girl — continues generating licensing income for her estate managed by the Grimaldi family.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "MGM / Warner Bros 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3270
+      },
+      {
+        "id": "grace-kelly-3",
+        "type": "art",
+        "name": "Jewelry & Couture Collection",
+        "description": "Grace Kelly's legendary jewelry and haute couture collection — pieces from Cartier, Van Cleef & Arpels, and Hermès (the Kelly bag was named after her) — are among history's most valuable personal collections.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Sotheby's / Christie's",
+        "images": [
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800",
+          "https://images.unsplash.com/photo-1501472312651-726afe119ff1?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800",
+        "likes": 2829
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13259,6 +14217,54 @@
         "name": "Atlanta Estate",
         "description": "Aaron's Atlanta estate, in the city where he became a legend.",
         "estimatedValue": 4
+      },
+      {
+        "id": "hank-aaron-1",
+        "type": "business",
+        "name": "BMW Dealership Network",
+        "description": "Hank Aaron was one of the first Black Americans to own automobile dealerships in the South — building a network of BMW/Toyota/Porsche dealerships in Atlanta generating millions annually.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2021",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3438
+      },
+      {
+        "id": "hank-aaron-2",
+        "type": "real_estate",
+        "name": "Atlanta Properties",
+        "description": "Aaron maintained multiple properties in Atlanta — the city where he broke Babe Ruth's home run record in 1974 and where he became a prominent businessman and civil rights advocate.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "GA Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3383
+      },
+      {
+        "id": "hank-aaron-3",
+        "type": "business",
+        "name": "Chasing the Dream Foundation",
+        "description": "Aaron's charitable foundation and his partnership with the Turner Broadcasting executive suite generated significant ongoing income, supplementing his baseball legacy royalties.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Foundation 2021",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2759
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13462,6 +14468,54 @@
         "name": "Bel-Air Mansion",
         "description": "Heidi's Bel-Air home, famously decorated with an over-the-top Halloween decor each year.",
         "estimatedValue": 25
+      },
+      {
+        "id": "heidi-klum-1",
+        "type": "business",
+        "name": "Heidi Klum Collection & QVC",
+        "description": "Klum's QVC and Amazon fashion and swimwear collections generate significant royalty income, with her clothing and jewelry lines representing consistent business success.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "QVC 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 997
+      },
+      {
+        "id": "heidi-klum-2",
+        "type": "real_estate",
+        "name": "Los Angeles Home",
+        "description": "Heidi's primary California home — an LA estate where she lives with husband Tom Kaulitz and her four children.",
+        "estimatedValue": 6,
+        "valueFormatted": "$6M",
+        "valuationSource": "Property Records 2022",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4153
+      },
+      {
+        "id": "heidi-klum-3",
+        "type": "business",
+        "name": "Project Runway (Producer/Host)",
+        "description": "Klum co-created and hosted Project Runway through 16+ seasons, earning producer royalties and ongoing syndication income as the co-face of Bravo's most iconic fashion competition.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Variety 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4228
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13524,6 +14578,54 @@
         "name": "Chappaqua Home",
         "description": "The Clintons' Chappaqua, New York Colonial home, their primary residence since 2000.",
         "estimatedValue": 1.7
+      },
+      {
+        "id": "hillary-clinton-1",
+        "type": "real_estate",
+        "name": "Chappaqua Home, New York",
+        "description": "The Clintons' primary family home in Chappaqua, Westchester — Hillary's Senate and presidential campaign base and the couple's main New York residence.",
+        "estimatedValue": 2,
+        "valueFormatted": "$2M",
+        "valuationSource": "NY Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3829
+      },
+      {
+        "id": "hillary-clinton-2",
+        "type": "business",
+        "name": "Speaking Fees & What Happened Memoir",
+        "description": "Clinton commands $200K+ per speaking engagement and her memoir \"What Happened\" (2017) sold millions of copies — collectively generating $50M+ in post-Secretary of State income.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "AP / Forbes 2018",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1307
+      },
+      {
+        "id": "hillary-clinton-3",
+        "type": "real_estate",
+        "name": "Washington DC Home",
+        "description": "The Clintons' DC property — used when in Washington for speaking and political engagements.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "DC Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3281
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -14243,6 +15345,37 @@
         "name": "Martha's Vineyard Estate",
         "description": "Jackie's beloved Vineyard retreat Red Gate Farm.",
         "estimatedValue": 4
+      },
+      {
+        "id": "jacqueline-onassis-1",
+        "type": "real_estate",
+        "name": "Ikaria & Skorpios Island Properties",
+        "description": "Jackie Kennedy Onassis received Skorpios, Aristotle Onassis's private Greek island, as part of her inheritance — a 500-acre private Ionian island featuring its own harbor, staff, and villa.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Greek Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1834
+      },
+      {
+        "id": "jacqueline-onassis-2",
+        "type": "art",
+        "name": "Jackie O Jewelry & Art Collection",
+        "description": "Jackie Kennedy's personal collection — including her famous triple-strand simulated pearl necklace (sold for $211K at Sotheby's), Louis Vuitton luggage, and private letters — are among the most sought collectibles.",
+        "estimatedValue": 40,
+        "valueFormatted": "$40M",
+        "valuationSource": "Sotheby's 1996 / Christie's",
+        "images": [
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800",
+          "https://images.unsplash.com/photo-1501472312651-726afe119ff1?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800",
+        "likes": 967
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -14398,6 +15531,54 @@
         "name": "Houston Mansion",
         "description": "Harden's contemporary Houston estate near The Woodlands.",
         "estimatedValue": 4.5
+      },
+      {
+        "id": "james-harden-1",
+        "type": "business",
+        "name": "Adidas Partnership (Harden Vol. Series)",
+        "description": "Harden's decade-long Adidas deal — one of the brand's biggest basketball endorsements — producing his signature line of shoes generating $175M+ over the life of the contract.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "Forbes / ESPN 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1542
+      },
+      {
+        "id": "james-harden-2",
+        "type": "real_estate",
+        "name": "Houston Home",
+        "description": "James Harden's primary Texas property — a Houston area estate where he settled during his Rockets years and maintains connections to the city.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "TX Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2805
+      },
+      {
+        "id": "james-harden-3",
+        "type": "business",
+        "name": "13 Restaurant & Nightlife Portfolio",
+        "description": "Harden's substantial investment in Houston's nightlife and restaurant scene — his love of going out turned into ownership of venues that capitalize on his social brand.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Houston Business Journal 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3706
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -14460,6 +15641,54 @@
         "name": "Tarzana Estate",
         "description": "Foxx's gated Tarzana estate in the San Fernando Valley.",
         "estimatedValue": 10
+      },
+      {
+        "id": "jamie-foxx-1",
+        "type": "real_estate",
+        "name": "Thousand Oaks Estate, California",
+        "description": "Foxx's primary California home — a $10M estate in Thousand Oaks featuring a recording studio, enabling his dual careers in music and acting.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1064
+      },
+      {
+        "id": "jamie-foxx-2",
+        "type": "business",
+        "name": "Blended Pictures & Comedy",
+        "description": "Foxx's production company and stand-up comedy rights generate significant residual income — his Netflix specials and touring complement his film earnings.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4550
+      },
+      {
+        "id": "jamie-foxx-3",
+        "type": "business",
+        "name": "Ray Charles Portrayal Backend",
+        "description": "Foxx earned $3M plus extensive backend for his Oscar-winning portrayal of Ray Charles in Ray (2004) — the definitive performance that cemented his A-list status.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Hollywood Reporter",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3917
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15077,6 +16306,54 @@
         "name": "Beverly Hills Home",
         "description": "Lawrence's Beverly Hills compound with a pool, gym, and guest house.",
         "estimatedValue": 8
+      },
+      {
+        "id": "jennifer-lawrence-1",
+        "type": "real_estate",
+        "name": "Beverly Hills Estate",
+        "description": "J-Law's primary California home — a Beverly Hills property she and husband Cooke Maroney share, combining her Hollywood lifestyle with their desire for privacy.",
+        "estimatedValue": 9,
+        "valueFormatted": "$9M",
+        "valuationSource": "Property Records 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1019
+      },
+      {
+        "id": "jennifer-lawrence-2",
+        "type": "real_estate",
+        "name": "Manhattan Apartment",
+        "description": "Lawrence's New York City home — a Lower Manhattan apartment she purchased when The Hunger Games launched her to superstardom.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "NYC Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2132
+      },
+      {
+        "id": "jennifer-lawrence-3",
+        "type": "business",
+        "name": "Hunger Games Franchise Earnings",
+        "description": "Lawrence earned $60M from the first three Hunger Games films — plus backend from the franchise. Her return in The Hunger Games: The Ballad of Songbirds & Snakes era adds ongoing royalties.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4565
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15910,6 +17187,53 @@
         "name": "Cherry Hills Village",
         "description": "Elway's sprawling Cherry Hills Village, Colorado mansion.",
         "estimatedValue": 8
+      },
+      {
+        "id": "john-elway-1",
+        "type": "business",
+        "name": "Elway's Restaurant Chain",
+        "description": "John Elway owns a chain of acclaimed steakhouse restaurants across the Denver metropolitan area — Elway's has become a Colorado dining institution.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Colorado Business 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1232
+      },
+      {
+        "id": "john-elway-2",
+        "type": "sports_team",
+        "name": "Denver Broncos (Front Office)",
+        "description": "As former GM and EVP of Football Operations, Elway helped build Super Bowl-winning Broncos teams. He retained business relationships with the franchise following the Walton Group's purchase.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "ESPN 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800",
+          "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800",
+        "likes": 1246
+      },
+      {
+        "id": "john-elway-3",
+        "type": "real_estate",
+        "name": "Denver Metro Home",
+        "description": "Elway's primary Colorado property — a Denver area estate befitting the two-time Super Bowl champion and franchise icon of Colorado's most beloved sports team.",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "CO Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4778
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17275,6 +18599,54 @@
         "name": "Georgia Estate",
         "description": "Rogers' stunning 1,200-acre estate in Athens, Georgia, sold after his death.",
         "estimatedValue": 5
+      },
+      {
+        "id": "kenny-rogers-1",
+        "type": "business",
+        "name": "Music Catalog (Universal Music)",
+        "description": "Kenny Rogers' catalog — The Gambler, Islands in the Stream, Lady, Lucille — sold to Universal Music Group before his 2020 death. His estate receives ongoing royalties from 165M+ records sold.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Universal Music 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1175
+      },
+      {
+        "id": "kenny-rogers-2",
+        "type": "business",
+        "name": "Kenny Rogers Roasters Legacy",
+        "description": "Kenny Rogers Roasters — the fast-food rotisserie chicken chain Kenny founded in 1991 — still operates 140+ locations in Asia and the Middle East, generating ongoing royalty income for his estate.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "QSR Magazine 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1527
+      },
+      {
+        "id": "kenny-rogers-3",
+        "type": "real_estate",
+        "name": "Sandy Springs, Georgia Estate (Estate)",
+        "description": "Kenny Rogers' primary Georgia home — a stunning Sandy Springs estate near Atlanta where the country legend lived before his 2020 passing.",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "GA Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2497
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17870,6 +19242,54 @@
         "name": "London Townhouse",
         "description": "Kylie's elegant Chelsea townhouse, her London base for over 20 years.",
         "estimatedValue": 6
+      },
+      {
+        "id": "kylie-minogue-1",
+        "type": "business",
+        "name": "Kylie Wines",
+        "description": "Kylie Minogue launched her own wine brand in 2020 — quickly becoming the UK's #1 celebrity wine with sales of 5M+ bottles in the first year, generating $100M+ in cumulative revenue.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Drinks Business 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1889
+      },
+      {
+        "id": "kylie-minogue-2",
+        "type": "real_estate",
+        "name": "Holland Park, London",
+        "description": "Kylie's primary London home — a Holland Park townhouse in one of west London's most desirable neighborhoods, acquired after her long-time Paris residence.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "London Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2184
+      },
+      {
+        "id": "kylie-minogue-3",
+        "type": "business",
+        "name": "Music Catalog & Infinite Disco Era",
+        "description": "Kylie's 30+ year catalog spanning 15 studio albums — her Tenerife Sea residency and Infinite Disco Netflix special represent renewed commercial momentum for one of pop's most enduring icons.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Billboard 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3177
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -18265,6 +19685,54 @@
         "name": "Miami Beach Home",
         "description": "Lewis' stunning Miami Beach waterfront estate, his retirement haven.",
         "estimatedValue": 8
+      },
+      {
+        "id": "lennox-lewis-1",
+        "type": "real_estate",
+        "name": "Miami Home",
+        "description": "Lewis's primary US home in Miami, Florida — the triple heavyweight champion settled in South Florida after retiring from boxing, enjoying the warm weather and proximity to business opportunities.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1315
+      },
+      {
+        "id": "lennox-lewis-2",
+        "type": "real_estate",
+        "name": "London Property",
+        "description": "Lewis maintains a London home connecting him to his British championship days and UK fight scene — the city where he grew up after moving from Jamaica.",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "London Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2108
+      },
+      {
+        "id": "lennox-lewis-3",
+        "type": "business",
+        "name": "Lion Promotions Boxing Company",
+        "description": "Lewis founded Lion Promotions to manage and promote boxing talent — leveraging his championship knowledge and global relationships built during his 44-fight professional career.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "BoxingScene 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1958
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -18698,6 +20166,54 @@
         "name": "Miami Mansion",
         "description": "Weezy's sprawling Star Island mansion in Miami, Florida.",
         "estimatedValue": 17
+      },
+      {
+        "id": "lil-wayne-1",
+        "type": "business",
+        "name": "Young Money Entertainment",
+        "description": "Lil Wayne founded Young Money Entertainment — home to Drake and Nicki Minaj at career-defining periods. The label generates ongoing royalties and licensing income.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1790
+      },
+      {
+        "id": "lil-wayne-2",
+        "type": "real_estate",
+        "name": "Miami Beach Mansion",
+        "description": "Wayne's primary Florida home — a waterfront Miami Beach estate fitting for the man who redefined Southern hip-hop and pioneered mixtape culture.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3552
+      },
+      {
+        "id": "lil-wayne-3",
+        "type": "business",
+        "name": "Cash Money Records Settlement",
+        "description": "Wayne received a $150M settlement from Cash Money Records after his protracted legal battle with Birdman — representing one of hip-hop's most significant business disputes resolved.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Rolling Stone 2018",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3362
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -18897,6 +20413,54 @@
         "name": "Long Island Estate",
         "description": "Sprawling estate on Long Island, New York.",
         "estimatedValue": 5
+      },
+      {
+        "id": "ll-cool-j-1",
+        "type": "real_estate",
+        "name": "Long Island Estate, New York",
+        "description": "LL Cool J's primary New York home — a Long Island estate near where he grew up in Queens, maintaining his New York roots throughout his entertainment career.",
+        "estimatedValue": 4,
+        "valueFormatted": "$4M",
+        "valuationSource": "NY Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3268
+      },
+      {
+        "id": "ll-cool-j-2",
+        "type": "business",
+        "name": "NCIS: Los Angeles (14 Seasons)",
+        "description": "LL Cool J starred in and executive produced NCIS: Los Angeles for 14 seasons on CBS — one of the most prolific acting runs in network TV history, earning $10M+ per season.",
+        "estimatedValue": 60,
+        "valueFormatted": "$60M",
+        "valuationSource": "CBS / Variety 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3133
+      },
+      {
+        "id": "ll-cool-j-3",
+        "type": "business",
+        "name": "Rock the Bells Brand",
+        "description": "LL Cool J's hip-hop heritage media brand Rock the Bells — an Amazon Music original channel and platform celebrating classic hip-hop culture.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Amazon Music 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2802
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -19114,6 +20678,54 @@
         "name": "Nashville Compound",
         "description": "Bryan's gated Nashville compound with a recording studio and guest cottages.",
         "estimatedValue": 8
+      },
+      {
+        "id": "luke-bryan-1",
+        "type": "real_estate",
+        "name": "Nashville Area Farm, Tennessee",
+        "description": "Luke Bryan's primary Tennessee home — a farmstead in the Nashville area that doubles as his retreat from the road, featuring agricultural land honoring his rural Georgia upbringing.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "TN Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4237
+      },
+      {
+        "id": "luke-bryan-2",
+        "type": "real_estate",
+        "name": "Florida Beach House",
+        "description": "Luke Bryan's Florida retreat — a beach house on Florida's Gulf Coast where he and wife Caroline relax during breaks from touring and American Idol filming.",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3022
+      },
+      {
+        "id": "luke-bryan-3",
+        "type": "business",
+        "name": "Spring Break Tour Franchise & Records",
+        "description": "Bryan's Spring Break tour franchise and his record label deal with Capitol Nashville — combined with his American Idol hosting fee — generate $30M+ annually.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Billboard 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3220
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -20400,6 +22012,54 @@
         "name": "Aspen Home",
         "description": "Navratilova's Aspen, Colorado estate where she has skied for decades.",
         "estimatedValue": 6
+      },
+      {
+        "id": "martina-navratilova-1",
+        "type": "real_estate",
+        "name": "Sarasota Home, Florida",
+        "description": "Navratilova's primary Florida home — a Sarasota residence on Florida's Gulf Coast, where she has lived since retiring from professional tennis.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "FL Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3305
+      },
+      {
+        "id": "martina-navratilova-2",
+        "type": "real_estate",
+        "name": "Aspen Property, Colorado",
+        "description": "Martina's Colorado ski retreat — long associated with Aspen, she has maintained property in the elite mountain resort since her tennis peak years.",
+        "estimatedValue": 4,
+        "valueFormatted": "$4M",
+        "valuationSource": "CO Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1622
+      },
+      {
+        "id": "martina-navratilova-3",
+        "type": "business",
+        "name": "Tennis Legacy Brand & Commentary",
+        "description": "Navratilova holds the record for most Grand Slam titles (18 singles) and commands premium rates for tennis commentary, speaking engagements, and sporting goods endorsements as the sport's greatest legend.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Tennis 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1228
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -20431,6 +22091,53 @@
         "name": "Ostende Flat",
         "description": "The modest Belgian flat where Gaye lived during his exile from America in the early 1980s.",
         "estimatedValue": 0.5
+      },
+      {
+        "id": "marvin-gaye-1",
+        "type": "business",
+        "name": "Motown Catalog Estate (What's Going On)",
+        "description": "The Marvin Gaye estate manages one of soul music's most valuable catalogs — What's Going On, Sexual Healing, Let's Get It On, and Mercy Mercy Me are consistently licensed and streamed.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "Motown / Universal 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4133
+      },
+      {
+        "id": "marvin-gaye-2",
+        "type": "business",
+        "name": "Blurred Lines Settlement & Royalties",
+        "description": "The Gaye estate won a landmark $7.4M copyright judgment against Pharrell Williams and Robin Thicke for Blurred Lines — establishing new precedent for musical copyright protection.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Court Records 2015",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1361
+      },
+      {
+        "id": "marvin-gaye-3",
+        "type": "art",
+        "name": "Legacy Memorabilia & Personal Effects",
+        "description": "Gaye's personal memorabilia — stage costumes, gold records, and personal letters — regularly sells for premium prices at auction, generating significant estate income.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Julien's Auctions 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800",
+          "https://images.unsplash.com/photo-1501472312651-726afe119ff1?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800",
+        "likes": 800
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -20572,6 +22279,54 @@
         "name": "Austin Ranch",
         "description": "Sprawling ranch property in Austin, Texas where McConaughey lives with his family.",
         "estimatedValue": 10
+      },
+      {
+        "id": "matthew-mcconaughey-1",
+        "type": "business",
+        "name": "Wild Turkey Bourbon Partnership",
+        "description": "McConaughey is Creative Director and co-owner of Wild Turkey Bourbon — partnering with Campari Group on a deal worth tens of millions plus equity. The brand has surged under his creative leadership.",
+        "estimatedValue": 40,
+        "valueFormatted": "$40M",
+        "valuationSource": "Forbes 2022",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2007
+      },
+      {
+        "id": "matthew-mcconaughey-2",
+        "type": "real_estate",
+        "name": "Austin, Texas Home",
+        "description": "McConaughey's primary Texas home — a sprawling Austin property in the Texas Hill Country where he has lived since returning to his home state. He was offered but declined Austin's mayoral candidacy.",
+        "estimatedValue": 8,
+        "valueFormatted": "$8M",
+        "valuationSource": "TX Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2321
+      },
+      {
+        "id": "matthew-mcconaughey-3",
+        "type": "business",
+        "name": "JKL (Just Keep Living) Foundation",
+        "description": "McConaughey's youth empowerment foundation, plus his philosophy-meets-memoir book \"Greenlights\" (bestseller for 100+ weeks) that expanded his brand into thought leadership.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Forbes 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 985
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -20727,6 +22482,54 @@
         "name": "Upper West Side Apartment",
         "description": "Meryl's sophisticated Manhattan apartment on the Upper West Side.",
         "estimatedValue": 7
+      },
+      {
+        "id": "meryl-streep-1",
+        "type": "real_estate",
+        "name": "Connecticut Home, Salisbury",
+        "description": "Meryl Streep's primary residence — a private property in Salisbury, Connecticut, where she and former husband Don Gummer (married 1978-2023) raised their family.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "CT Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2747
+      },
+      {
+        "id": "meryl-streep-2",
+        "type": "real_estate",
+        "name": "New York City Apartment",
+        "description": "Streep's Manhattan home — a long-time NYC apartment base used during Broadway and film productions. The most decorated film actress has maintained a New York presence for decades.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "NYC Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2334
+      },
+      {
+        "id": "meryl-streep-3",
+        "type": "business",
+        "name": "Film Royalties & SAG Pension",
+        "description": "Streep's 21 Oscar nominations and 3 wins command the highest per-picture fees of any actress — backend participation in Devil Wears Prada, Mamma Mia!, and The Iron Lady generate ongoing residuals.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Variety 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1271
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -21463,6 +23266,54 @@
         "name": "Hidden Hills Estate",
         "description": "Miley's Hidden Hills estate, purchased after her divorce from Liam Hemsworth.",
         "estimatedValue": 5
+      },
+      {
+        "id": "miley-cyrus-1",
+        "type": "real_estate",
+        "name": "Hidden Hills Home, California",
+        "description": "Miley Cyrus's primary California residence — a Hidden Hills compound in the Calabasas area featuring home recording studio and space for her collection of animals.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 974
+      },
+      {
+        "id": "miley-cyrus-2",
+        "type": "business",
+        "name": "Music Catalog & Bangerz Era Royalties",
+        "description": "Miley's catalog spanning Hannah Montana through Flowers includes some of pop's most streamed songs. \"Flowers\" broke Spotify records in 2023 with 100M streams in 17 days.",
+        "estimatedValue": 40,
+        "valueFormatted": "$40M",
+        "valuationSource": "Billboard / Spotify 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 1141
+      },
+      {
+        "id": "miley-cyrus-3",
+        "type": "real_estate",
+        "name": "Malibu Property (Post-Fire)",
+        "description": "Miley's Malibu property lost in the 2018 Woolsey Fire — she received significant insurance payouts and subsequently purchased other properties in the area.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Property Records 2021",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1612
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -22738,6 +24589,54 @@
         "name": "Pasadena Estate",
         "description": "De La Hoya's grand Pasadena estate in his home state of California.",
         "estimatedValue": 14
+      },
+      {
+        "id": "oscar-de-la-hoya-1",
+        "type": "business",
+        "name": "Golden Boy Promotions",
+        "description": "De La Hoya founded Golden Boy Promotions in 2002 — one of boxing's most successful promotional companies, now managing hundreds of fighters and major cards on DAZN.",
+        "estimatedValue": 50,
+        "valueFormatted": "$50M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3252
+      },
+      {
+        "id": "oscar-de-la-hoya-2",
+        "type": "real_estate",
+        "name": "Pasadena Estate, California",
+        "description": "De La Hoya's primary California home — a Pasadena estate near his East Los Angeles birthplace, maintaining roots in the community that shaped him.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4009
+      },
+      {
+        "id": "oscar-de-la-hoya-3",
+        "type": "business",
+        "name": "Golden Boy Beer Brand",
+        "description": "Oscar's branded beer — Golden Boy Lager — distributed across California and adding a consumer products revenue stream to his boxing empire.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Beverage Business 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2902
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -23272,6 +25171,54 @@
         "name": "Los Angeles Estate",
         "description": "Sampras' private LA estate where he lives with his family.",
         "estimatedValue": 10
+      },
+      {
+        "id": "pete-sampras-1",
+        "type": "real_estate",
+        "name": "Rolling Hills Estates, California",
+        "description": "Pete Sampras' primary California home — a Rolling Hills Estates residence in the Palos Verdes Peninsula area, where the 14-Grand-Slam champion lives quietly in retirement.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "CA Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2866
+      },
+      {
+        "id": "pete-sampras-2",
+        "type": "business",
+        "name": "Wilson Tennis Endorsement Legacy",
+        "description": "Sampras holds one of tennis's longest-running legacy endorsement deals with Wilson — his endorsement income continues in reduced form as a brand ambassador for the racquet company.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Wilson Sporting Goods 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2944
+      },
+      {
+        "id": "pete-sampras-3",
+        "type": "business",
+        "name": "Prize Money & Exhibition Income",
+        "description": "Sampras earned $43M+ in official prize money (pre-salary inflation era) plus significant exhibition earnings — and continues earning from exhibition matches and corporate appearances.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "ATP 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2258
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -23961,6 +25908,54 @@
         "name": "Mallorca Mansion",
         "description": "Nadal's stunning cliffside mansion in Porto Cristo, Mallorca, near where he grew up.",
         "estimatedValue": 7.5
+      },
+      {
+        "id": "rafael-nadal-1",
+        "type": "real_estate",
+        "name": "Porto Cristo Estate, Mallorca",
+        "description": "Rafa's primary home — a stunning private estate near Porto Cristo on the island of Mallorca, Spain. The waterfront Mallorcan compound is where he and wife Xisca Perelló began their family.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Spanish Property Records 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4241
+      },
+      {
+        "id": "rafael-nadal-2",
+        "type": "real_estate",
+        "name": "Monte Carlo Apartment, Monaco",
+        "description": "Nadal's tax-efficient Monaco residence — the principality's apartment used during the long European clay season and providing proximity to the Monte Carlo Masters.",
+        "estimatedValue": 8,
+        "valueFormatted": "$8M",
+        "valuationSource": "Monaco Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4638
+      },
+      {
+        "id": "rafael-nadal-3",
+        "type": "business",
+        "name": "Rafa Nadal Academy by Movistar",
+        "description": "Nadal's elite tennis academy in Manacor, Mallorca — a $21M facility opened in 2016 training junior and professional talent, growing into one of Spain's major sporting institutions.",
+        "estimatedValue": 25,
+        "valueFormatted": "$25M",
+        "valuationSource": "Tennis World USA 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3129
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -24547,6 +26542,54 @@
         "name": "Beverly Hills Home",
         "description": "Ricky's modern Beverly Hills home where he lives with his husband and children.",
         "estimatedValue": 10
+      },
+      {
+        "id": "ricky-martin-1",
+        "type": "real_estate",
+        "name": "Puerto Rico Home",
+        "description": "Martin's primary property in Puerto Rico — his beloved island home he has returned to and championed following Hurricane Maria, becoming a vocal advocate for Puerto Rican recovery.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "PR Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1638
+      },
+      {
+        "id": "ricky-martin-2",
+        "type": "real_estate",
+        "name": "Los Angeles Mansion",
+        "description": "Ricky's California home — a Los Angeles property used during his music productions and entertainment industry engagements.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 2545
+      },
+      {
+        "id": "ricky-martin-3",
+        "type": "business",
+        "name": "Music Catalog & Living la Vida Loca Legacy",
+        "description": "Martin's landmark 1999 English crossover album remains one of the best-selling Latin albums ever. His touring and catalog royalties underpin his ongoing income.",
+        "estimatedValue": 20,
+        "valueFormatted": "$20M",
+        "valuationSource": "Billboard 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4006
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -25106,6 +27149,52 @@
         "name": "Rio de Janeiro Estate",
         "description": "R9's stunning Rio estate overlooking the Atlantic.",
         "estimatedValue": 5
+      },
+      {
+        "id": "ronaldo-nazario-1",
+        "type": "sports_team",
+        "name": "Cruzeiro EC (Co-Owner)",
+        "description": "The original Ronaldo purchased a controlling interest in Brazilian club Cruzeiro Esporte Clube in 2021 — bringing the historic Belo Horizonte club back to Serie A after relegation.",
+        "estimatedValue": 30,
+        "valueFormatted": "$30M",
+        "valuationSource": "ESPN Brazil 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800",
+          "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800",
+        "likes": 1621
+      },
+      {
+        "id": "ronaldo-nazario-2",
+        "type": "sports_team",
+        "name": "Real Valladolid CF (Former Owner)",
+        "description": "Ronaldo Nazario owned Spanish La Liga club Real Valladolid from 2018 to 2023, taking the club from Segunda División to La Liga and back during his ownership.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "Spanish Football 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800",
+          "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800",
+        "likes": 1327
+      },
+      {
+        "id": "ronaldo-nazario-3",
+        "type": "business",
+        "name": "R9 brand Endorsements",
+        "description": "The R9 brand — Ronaldo Nazario's legendary marketing persona — remains one of football's most valuable retired player brands, with ongoing Nike royalties and global brand deals.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Forbes 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2863
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -25231,6 +27320,54 @@
         "name": "Beverly Hills Estate",
         "description": "Westbrook's modern Beverly Hills compound.",
         "estimatedValue": 7
+      },
+      {
+        "id": "russell-westbrook-1",
+        "type": "business",
+        "name": "Honor the Gift Fashion Brand",
+        "description": "Westbrook launched Honor the Gift — his fashion brand rooted in Los Angeles culture, sold in high-end retailers like PacSun and generating multimillion dollar revenue.",
+        "estimatedValue": 15,
+        "valueFormatted": "$15M",
+        "valuationSource": "WWD 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 4314
+      },
+      {
+        "id": "russell-westbrook-2",
+        "type": "real_estate",
+        "name": "Los Angeles Home",
+        "description": "Westbrook's primary California home — an LA area estate befitting the triple-double king and one of basketball's most explosive performers.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 4379
+      },
+      {
+        "id": "russell-westbrook-3",
+        "type": "business",
+        "name": "Why Not? Foundation",
+        "description": "Westbrook's community empowerment foundation focused on South LA communities — named after his father's famous advice. While charitable, it has elevated his commercial brand significantly.",
+        "estimatedValue": 5,
+        "valueFormatted": "$5M",
+        "valuationSource": "Foundation 2024",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2763
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -26138,7 +28275,7 @@
     "slug": "selena-gomez",
     "name": "Selena Gomez",
     "category": "Musicians",
-    "netWorth": 0.16,
+    "netWorth": 1.3,
     "avatar": "https://m.media-amazon.com/images/M/MV5BMjAwNTE2MDMyMl5BMl5BanBnXkFtZTgwMjAyODM3MTI@._V1_.jpg",
     "coverImage": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80",
     "nationality": "American",
@@ -26159,6 +28296,54 @@
         "name": "Fort Worth Estate",
         "description": "Selena's private Texas estate, close to where she grew up.",
         "estimatedValue": 4.9
+      },
+      {
+        "id": "selena-gomez-1",
+        "type": "business",
+        "name": "Rare Beauty Cosmetics",
+        "description": "Selena Gomez launched Rare Beauty in 2020 — a mental health-focused makeup brand that surpassed $300M in sales in its first year. The brand is now valued at $2B+ making Gomez a genuine billionaire in 2023.",
+        "estimatedValue": 1000,
+        "valueFormatted": "$1.0B",
+        "valuationSource": "Forbes 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 883
+      },
+      {
+        "id": "selena-gomez-2",
+        "type": "real_estate",
+        "name": "Tarzana Home, Los Angeles",
+        "description": "Gomez's primary California home — a 6,000+ sq ft Tarzana estate she bought for $4.9M, featuring a poolside backyard and close proximity to Studio City and the Valley.",
+        "estimatedValue": 6,
+        "valueFormatted": "$6M",
+        "valuationSource": "Property Records 2020",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 1539
+      },
+      {
+        "id": "selena-gomez-3",
+        "type": "business",
+        "name": "Wondermind Mental Health Platform",
+        "description": "Selena co-founded Wondermind in 2022 — a mental health media and community platform reflecting her advocacy for mental wellness born from her own public health journey.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "TechCrunch 2022",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 2118
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -27922,6 +30107,54 @@
         "name": "San Antonio Estate",
         "description": "Duncan's longtime San Antonio estate, where he still lives after retiring.",
         "estimatedValue": 10
+      },
+      {
+        "id": "tim-duncan-1",
+        "type": "real_estate",
+        "name": "San Antonio Area Home",
+        "description": "Tim Duncan's primary Texas home — close to the San Antonio Spurs where he spent his entire legendary 19-year career winning 5 championships as the \"Big Fundamental.\"",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "TX Property Records",
+        "images": [
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800",
+        "likes": 3324
+      },
+      {
+        "id": "tim-duncan-2",
+        "type": "business",
+        "name": "Restaurant & Investment Portfolio",
+        "description": "Duncan, known for frugal lifestyle on his max contracts, has diversified into restaurant investments and moderate real estate — prudently building long-term wealth unlike many athlete peers.",
+        "estimatedValue": 10,
+        "valueFormatted": "$10M",
+        "valuationSource": "Forbes 2023",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 917
+      },
+      {
+        "id": "tim-duncan-3",
+        "type": "business",
+        "name": "USVI Olympic Committee",
+        "description": "Tim Duncan represented the US Virgin Islands (his birthplace) in Olympic qualifying — serving as a goodwill ambassador for USVI sports development alongside his charitable foundation.",
+        "estimatedValue": 3,
+        "valueFormatted": "$3M",
+        "valuationSource": "USVI Olympics 2022",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+          "https://images.unsplash.com/photo-1444653389962-8149286c578a?w=800"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "likes": 3622
       }
     ],
     "lastUpdated": "2026-03-20",
