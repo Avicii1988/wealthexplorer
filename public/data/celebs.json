@@ -1396,6 +1396,54 @@
         "name": "Rolex Daytona Collection",
         "description": "Iverson's iconic Rolex Daytona watches, staple accessories throughout his career.",
         "estimatedValue": 0.2
+      },
+      {
+        "id": "allen-iverson-2",
+        "type": "real_estate",
+        "name": "Philadelphia Property",
+        "description": "Properties in Philadelphia reflecting his deep connection to the city that made him",
+        "estimatedValue": 1.5,
+        "valueFormatted": "$1.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1922
+      },
+      {
+        "id": "allen-iverson-3",
+        "type": "business",
+        "name": "Reebok Answer Series Royalties",
+        "description": "Reebok lifetime deal signed in 2001 pays AI $32,000 per day until 2030",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4261
+      },
+      {
+        "id": "allen-iverson-4",
+        "type": "business",
+        "name": "The Answer Brand",
+        "description": "Apparel brand and cultural icon memorabilia business across global basketball markets",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3061
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -1427,6 +1475,38 @@
         "name": "Hyderabad Villa",
         "description": "His grand Jubilee Hills villa in Hyderabad.",
         "estimatedValue": 10
+      },
+      {
+        "id": "allu-arjun-3",
+        "type": "business",
+        "name": "Pushpa Franchise Royalties",
+        "description": "Pushpa: The Rise and Pushpa 2 streaming royalties — pan-India blockbuster phenomenon",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Forbes India 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3728
+      },
+      {
+        "id": "allu-arjun-4",
+        "type": "business",
+        "name": "Brand Endorsements & Fan Army",
+        "description": "Manyavar, Parle and multiple South Indian brand deals reflecting his massive fan base",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Forbes India 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2277
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -2494,6 +2574,54 @@
         "name": "Miami Beach Home",
         "description": "Her Miami Beach waterfront property shared with Enrique Iglesias.",
         "estimatedValue": 8
+      },
+      {
+        "id": "anna-kournikova-2",
+        "type": "real_estate",
+        "name": "Miami Beach Estate",
+        "description": "Stunning Miami Beach waterfront estate shared with Enrique Iglesias",
+        "estimatedValue": 8.5,
+        "valueFormatted": "$8.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 3321
+      },
+      {
+        "id": "anna-kournikova-3",
+        "type": "business",
+        "name": "Tennis Academy Ownership",
+        "description": "Co-owner of tennis academies in Miami cultivating junior tennis talent",
+        "estimatedValue": 4,
+        "valueFormatted": "$4.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 902
+      },
+      {
+        "id": "anna-kournikova-4",
+        "type": "business",
+        "name": "Sports Illustrated Legacy",
+        "description": "Modelling career income and ongoing Adidas legacy from most Googled athlete era",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 901
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -3200,6 +3328,54 @@
         "name": "Brisbane Retreat",
         "description": "Barty's quiet Brisbane home where she retired to spend time with family.",
         "estimatedValue": 2
+      },
+      {
+        "id": "ashleigh-barty-2",
+        "type": "real_estate",
+        "name": "Brisbane Home",
+        "description": "Modern family home in Brisbane — Barty retired young to spend time in her Queensland hometown",
+        "estimatedValue": 1.5,
+        "valueFormatted": "$1.5B",
+        "valuationSource": "realestate.com.au 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1145
+      },
+      {
+        "id": "ashleigh-barty-3",
+        "type": "business",
+        "name": "Nike & ANZ Bank Deals",
+        "description": "Nike Australia ambassador and ANZ Bank sponsorship generating $5M+ annually",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4667
+      },
+      {
+        "id": "ashleigh-barty-4",
+        "type": "business",
+        "name": "Barty Golf Career",
+        "description": "Transitioned to professional golf following tennis retirement — endorsement continuation",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2836
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -3479,6 +3655,54 @@
         "name": "Atherton Estate",
         "description": "The Curry family's Atherton, California estate shared with Stephen.",
         "estimatedValue": 31
+      },
+      {
+        "id": "ayesha-curry-2",
+        "type": "real_estate",
+        "name": "Alamo California Estate",
+        "description": "Sprawling family estate in Alamo, California shared with Stephen Curry and family",
+        "estimatedValue": 7,
+        "valueFormatted": "$7.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4571
+      },
+      {
+        "id": "ayesha-curry-3",
+        "type": "business",
+        "name": "International Smoke Restaurant",
+        "description": "High-end restaurant chain with Michael Mina in multiple US cities",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2197
+      },
+      {
+        "id": "ayesha-curry-4",
+        "type": "business",
+        "name": "Sweet July Media & Lifestyle",
+        "description": "Food TV show, cookbook and Sweet July e-commerce lifestyle brand",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4547
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -3833,6 +4057,54 @@
         "name": "Beverly Hills Mansion",
         "description": "Bonds' Beverly Hills compound with a batting cage, pool, and private gym.",
         "estimatedValue": 8
+      },
+      {
+        "id": "barry-bonds-2",
+        "type": "real_estate",
+        "name": "Beverly Hills Compound",
+        "description": "Beverly Hills estate purchased during peak San Francisco Giants years",
+        "estimatedValue": 5.5,
+        "valueFormatted": "$5.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2313
+      },
+      {
+        "id": "barry-bonds-3",
+        "type": "business",
+        "name": "Bonds Enterprises",
+        "description": "Business investments and personal brand activities following MLB career",
+        "estimatedValue": 4,
+        "valueFormatted": "$4.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3190
+      },
+      {
+        "id": "barry-bonds-4",
+        "type": "business",
+        "name": "Barry Bonds Instruction Company",
+        "description": "Baseball training academies and hitting instruction business across California",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3107
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -5600,6 +5872,54 @@
         "name": "Bedford Estate",
         "description": "Fraser's country estate in Bedford, New York.",
         "estimatedValue": 4
+      },
+      {
+        "id": "brendan-fraser-2",
+        "type": "real_estate",
+        "name": "Bedford New York Estate",
+        "description": "Country estate in Westchester County, New York purchased during Mummy peak era",
+        "estimatedValue": 2.5,
+        "valueFormatted": "$2.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1873
+      },
+      {
+        "id": "brendan-fraser-3",
+        "type": "business",
+        "name": "The Whale & Oscar Renaissance",
+        "description": "Academy Award win for The Whale triggered major Hollywood comeback deals worth $20M+",
+        "estimatedValue": 20,
+        "valueFormatted": "$20.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1072
+      },
+      {
+        "id": "brendan-fraser-4",
+        "type": "business",
+        "name": "Mummy & George of the Jungle Royalties",
+        "description": "Streaming and cable residuals from franchise blockbuster catalog worth millions annually",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1689
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -5631,6 +5951,54 @@
         "name": "Mississippi Farm",
         "description": "Favre's vast Mississippi farmland estate near his hometown of Hattiesburg.",
         "estimatedValue": 8
+      },
+      {
+        "id": "brett-favre-2",
+        "type": "real_estate",
+        "name": "Hattiesburg Mississippi Estate",
+        "description": "Large Mississippi estate reflecting his Southern roots and rural lifestyle",
+        "estimatedValue": 2.5,
+        "valueFormatted": "$2.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4162
+      },
+      {
+        "id": "brett-favre-3",
+        "type": "business",
+        "name": "Mississippi Business Interests",
+        "description": "Various Mississippi business investments in ranching, real estate and local enterprises",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 919
+      },
+      {
+        "id": "brett-favre-4",
+        "type": "car",
+        "name": "Truck Collection",
+        "description": "Classic American pickup truck collection and country lifestyle vehicles",
+        "estimatedValue": 0.5,
+        "valueFormatted": "$500M",
+        "valuationSource": "Motortrend 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400",
+          "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+        "likes": 3073
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7459,6 +7827,54 @@
         "name": "Chicago Home",
         "description": "His Chicago family home.",
         "estimatedValue": 3
+      },
+      {
+        "id": "chance-the-rapper-2",
+        "type": "real_estate",
+        "name": "Chicago Family Home",
+        "description": "Family home in Chicago's Chatham neighbourhood — deeply rooted in his hometown community",
+        "estimatedValue": 1.8,
+        "valueFormatted": "$1.8B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4033
+      },
+      {
+        "id": "chance-the-rapper-3",
+        "type": "business",
+        "name": "Social Works Foundation",
+        "description": "Chicago social impact foundation and Magnificent Coloring World festival generating $10M+",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4339
+      },
+      {
+        "id": "chance-the-rapper-4",
+        "type": "business",
+        "name": "Acid Rap Streaming Royalties",
+        "description": "Streaming revenues from Coloring Book, Acid Rap and brand deals with Kit Kat and others",
+        "estimatedValue": 12,
+        "valueFormatted": "$12.0B",
+        "valuationSource": "Billboard 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2342
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -7837,6 +8253,54 @@
         "name": "Sherman Oaks Home",
         "description": "Sheen's modest Sherman Oaks home following his high-profile fall from wealth.",
         "estimatedValue": 2
+      },
+      {
+        "id": "charlie-sheen-2",
+        "type": "real_estate",
+        "name": "Sherman Oaks Estate",
+        "description": "Home in Sherman Oaks, Los Angeles following his Mulholland Drive estate sale",
+        "estimatedValue": 2,
+        "valueFormatted": "$2.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 942
+      },
+      {
+        "id": "charlie-sheen-3",
+        "type": "business",
+        "name": "Two and a Half Men Residuals",
+        "description": "Syndication income from Two and a Half Men — one of TV history's most profitable sitcoms",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1377
+      },
+      {
+        "id": "charlie-sheen-4",
+        "type": "business",
+        "name": "Winning! Brand",
+        "description": "Personal brand merchandise and media appearances capitalising on his cultural meme status",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1065
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -8545,6 +9009,38 @@
         "name": "Beverly Hills Mansion",
         "description": "Chrissy and John's $17.5M Beverly Hills estate.",
         "estimatedValue": 17.5
+      },
+      {
+        "id": "chrissy-teigen-3",
+        "type": "business",
+        "name": "Cravings by Chrissy Teigen",
+        "description": "Cookbook empire (2 NYT bestsellers) and Cravings kitchen product line in Target nationwide",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3473
+      },
+      {
+        "id": "chrissy-teigen-4",
+        "type": "business",
+        "name": "Safely Cleaning Products",
+        "description": "Co-founded Safely plant-based cleaning brand with John Legend — major retail distribution",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1687
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -8923,6 +9419,54 @@
         "name": "Brooklyn Townhouse",
         "description": "Danes' Brooklyn Heights townhouse.",
         "estimatedValue": 8
+      },
+      {
+        "id": "claire-danes-2",
+        "type": "real_estate",
+        "name": "New York City Townhouse",
+        "description": "Historic townhouse in Manhattan shared with Hugh Dancy and their family",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4143
+      },
+      {
+        "id": "claire-danes-3",
+        "type": "business",
+        "name": "Homeland & Netflix Productions",
+        "description": "Homeland Showtime residuals and streaming production deal — Emmy-winning career",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1662
+      },
+      {
+        "id": "claire-danes-4",
+        "type": "art",
+        "name": "Contemporary Art Collection",
+        "description": "Private art collection curated over decades of New York and Hollywood living",
+        "estimatedValue": 2,
+        "valueFormatted": "$2.0B",
+        "valuationSource": "Christie's 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400",
+          "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400",
+          "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400",
+        "likes": 4675
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -10882,6 +11426,38 @@
         "name": "Ibiza Villa",
         "description": "Guetta's stunning Ibiza villa where he hosts famous summer parties.",
         "estimatedValue": 9
+      },
+      {
+        "id": "david-guetta-2",
+        "type": "real_estate",
+        "name": "Miami Beach Penthouse",
+        "description": "Ultra-luxury penthouse in South Beach, Miami — fitting for EDM royalty",
+        "estimatedValue": 5.5,
+        "valueFormatted": "$5.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4438
+      },
+      {
+        "id": "david-guetta-4",
+        "type": "business",
+        "name": "Jack Back & Future Rave",
+        "description": "Music labels, streaming revenues from Titanium/When Love Takes Over and touring residencies",
+        "estimatedValue": 30,
+        "valueFormatted": "$30.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3905
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -10913,6 +11489,54 @@
         "name": "Los Angeles Home",
         "description": "His LA home.",
         "estimatedValue": 2.5
+      },
+      {
+        "id": "david-hasselhoff-2",
+        "type": "real_estate",
+        "name": "Beverly Hills Estate",
+        "description": "Beverly Hills property maintained from Baywatch and Knight Rider peak earning years",
+        "estimatedValue": 3.5,
+        "valueFormatted": "$3.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2162
+      },
+      {
+        "id": "david-hasselhoff-3",
+        "type": "business",
+        "name": "Baywatch Brand Licensing",
+        "description": "Licensing income from Baywatch IP revived by the Paramount film and global brand",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3095
+      },
+      {
+        "id": "david-hasselhoff-4",
+        "type": "business",
+        "name": "Germany Music Career",
+        "description": "Massive pop music career in Germany — sold millions of records during Berlin Wall era",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1835
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -11289,6 +11913,54 @@
         "name": "Dallas Mansion",
         "description": "Prime Time's Dallas estate, home base for his media brand.",
         "estimatedValue": 3
+      },
+      {
+        "id": "deion-sanders-2",
+        "type": "real_estate",
+        "name": "Colorado Estate",
+        "description": "Ranch-style estate near Boulder, Colorado following his Colorado Buffaloes head coach role",
+        "estimatedValue": 4.5,
+        "valueFormatted": "$4.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1001
+      },
+      {
+        "id": "deion-sanders-3",
+        "type": "business",
+        "name": "Primetime Collection",
+        "description": "Fashion brand and lifestyle business empire capitalising on his Prime Time personality",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3339
+      },
+      {
+        "id": "deion-sanders-4",
+        "type": "business",
+        "name": "Colorado Football NIL Program",
+        "description": "Built one of the most valuable NIL recruiting programs in college football history",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 998
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -11495,6 +12167,54 @@
         "name": "Tuscaloosa Mansion",
         "description": "His Tuscaloosa, Alabama mansion.",
         "estimatedValue": 4
+      },
+      {
+        "id": "deontay-wilder-2",
+        "type": "real_estate",
+        "name": "Alabama Estate",
+        "description": "Estate in Tuscaloosa, Alabama — the Bronze Bomber stays loyal to his hometown roots",
+        "estimatedValue": 2,
+        "valueFormatted": "$2.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 3845
+      },
+      {
+        "id": "deontay-wilder-3",
+        "type": "business",
+        "name": "Bronze Bomber Brand",
+        "description": "Boxing promotions and brand endorsements capitalising on his record 43 KOs",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1261
+      },
+      {
+        "id": "deontay-wilder-4",
+        "type": "car",
+        "name": "Luxury Car Fleet",
+        "description": "Mercedes G-Wagon fleet and custom vehicles reflecting Alabama heavyweight lifestyle",
+        "estimatedValue": 1,
+        "valueFormatted": "$1.0B",
+        "valuationSource": "Motortrend 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400",
+          "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+        "likes": 4323
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -11856,6 +12576,54 @@
         "name": "Atlanta Mansion",
         "description": "His Atlanta mansion where he raised his family.",
         "estimatedValue": 4
+      },
+      {
+        "id": "dikembe-mutombo-2",
+        "type": "real_estate",
+        "name": "Atlanta Estate",
+        "description": "Grand estate in Atlanta reflecting his status as Congo's greatest basketball ambassador",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 814
+      },
+      {
+        "id": "dikembe-mutombo-3",
+        "type": "business",
+        "name": "Biamba Marie Mutombo Hospital",
+        "description": "Built a world-class hospital in Kinshasa, DRC — one of NBA's greatest humanitarian acts",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3307
+      },
+      {
+        "id": "dikembe-mutombo-4",
+        "type": "business",
+        "name": "Global Health & Business",
+        "description": "Dikembe Mutombo Foundation and business investments across Central Africa",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4566
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -11949,6 +12717,38 @@
         "name": "Los Angeles Home",
         "description": "His eclectic Los Angeles home.",
         "estimatedValue": 5
+      },
+      {
+        "id": "diplo-3",
+        "type": "business",
+        "name": "Mad Decent Records",
+        "description": "Record label home to MIA, Sleigh Bells and Major Lazer; streaming revenue from billions of plays",
+        "estimatedValue": 20,
+        "valueFormatted": "$20.0B",
+        "valuationSource": "Billboard 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2352
+      },
+      {
+        "id": "diplo-4",
+        "type": "business",
+        "name": "Major Lazer Touring",
+        "description": "Major Lazer residencies and festival revenues generating $10M+ per touring cycle",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Pollstar 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1935
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -12357,6 +13157,54 @@
         "name": "Los Angeles Estate",
         "description": "Cheadle's Los Angeles family estate.",
         "estimatedValue": 5
+      },
+      {
+        "id": "don-cheadle-2",
+        "type": "real_estate",
+        "name": "Los Angeles Home",
+        "description": "Family home in Los Angeles maintained across his War Machine and Hotel Rwanda career",
+        "estimatedValue": 2.5,
+        "valueFormatted": "$2.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2155
+      },
+      {
+        "id": "don-cheadle-3",
+        "type": "business",
+        "name": "Don Cheadle Productions",
+        "description": "Film and TV production company with projects including Billions and streaming content",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3269
+      },
+      {
+        "id": "don-cheadle-4",
+        "type": "business",
+        "name": "MCU War Machine Royalties",
+        "description": "Ongoing Iron Man and Avengers franchise residuals — 10+ films over 15 years",
+        "estimatedValue": 12,
+        "valueFormatted": "$12.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4293
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -13561,6 +14409,54 @@
         ],
         "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
         "likes": 3903
+      },
+      {
+        "id": "eden-hazard-2",
+        "type": "real_estate",
+        "name": "Madrid Villa",
+        "description": "Luxury villa in La Finca, Madrid from his Real Madrid years",
+        "estimatedValue": 3.5,
+        "valueFormatted": "$3.5B",
+        "valuationSource": "Idealista 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1641
+      },
+      {
+        "id": "eden-hazard-3",
+        "type": "business",
+        "name": "Hazard Brother Management",
+        "description": "Football agency co-founded with brothers managing Belgian talent pipeline",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1104
+      },
+      {
+        "id": "eden-hazard-4",
+        "type": "car",
+        "name": "Supercar Fleet",
+        "description": "Lamborghini Aventador, Ferrari and Rolls-Royce — legendary car enthusiasm during Chelsea days",
+        "estimatedValue": 1.5,
+        "valueFormatted": "$1.5B",
+        "valuationSource": "Motortrend 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400",
+          "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+        "likes": 1540
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -14526,6 +15422,38 @@
         "name": "Georgia Estate",
         "description": "Holyfield's former 235-acre Fayetteville, Georgia mansion, which he lost to foreclosure.",
         "estimatedValue": 1
+      },
+      {
+        "id": "evander-holyfield-3",
+        "type": "business",
+        "name": "Real Deal Boxing",
+        "description": "Promotional company and real deal brand licensing across sports and entertainment",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3703
+      },
+      {
+        "id": "evander-holyfield-4",
+        "type": "business",
+        "name": "Holy Cannabis Company",
+        "description": "Cannabis business venture in the growing US legal marijuana industry",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2053
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15103,6 +16031,54 @@
         "name": "Studio City Estate",
         "description": "Whitaker's private Studio City compound, his family home for over 20 years.",
         "estimatedValue": 4
+      },
+      {
+        "id": "forest-whitaker-2",
+        "type": "real_estate",
+        "name": "Los Angeles Home",
+        "description": "Elegant home in the LA area maintained over his decades-long Academy Award-winning career",
+        "estimatedValue": 3.5,
+        "valueFormatted": "$3.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1838
+      },
+      {
+        "id": "forest-whitaker-3",
+        "type": "business",
+        "name": "Significant Productions",
+        "description": "Production company behind Zola, Repentance and multiple streaming projects",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3812
+      },
+      {
+        "id": "forest-whitaker-4",
+        "type": "business",
+        "name": "UNESCO Peace Ambassador",
+        "description": "Global humanitarian work and speaking fee income as UNESCO Special Envoy for Peace",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4452
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15134,6 +16110,54 @@
         "name": "West Hollywood Compound",
         "description": "Frank's reclusive Trousdale Estates compound in the Hollywood Hills.",
         "estimatedValue": 5
+      },
+      {
+        "id": "frank-ocean-2",
+        "type": "real_estate",
+        "name": "Los Angeles Home",
+        "description": "Reclusive lifestyle — minimalist LA home reflecting his private artistic existence",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1209
+      },
+      {
+        "id": "frank-ocean-3",
+        "type": "business",
+        "name": "Blonded Radio & Homer Jewelry",
+        "description": "Pink Friday vinyl pop-up revenues, Homer jewellery brand launch and Blonde streaming income",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4638
+      },
+      {
+        "id": "frank-ocean-4",
+        "type": "business",
+        "name": "Def Jam Publishing Rights",
+        "description": "Publishing ownership of Blonde, Channel ORANGE and unreleased music vault",
+        "estimatedValue": 25,
+        "valueFormatted": "$25.0B",
+        "valuationSource": "Billboard 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1613
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -15559,6 +16583,54 @@
         "name": "Santa Monica Home",
         "description": "GGG's Santa Monica home.",
         "estimatedValue": 3
+      },
+      {
+        "id": "gennady-golovkin-2",
+        "type": "real_estate",
+        "name": "Las Vegas Compound",
+        "description": "Private compound in Las Vegas — standard for elite boxing champions",
+        "estimatedValue": 2.5,
+        "valueFormatted": "$2.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4758
+      },
+      {
+        "id": "gennady-golovkin-3",
+        "type": "business",
+        "name": "GGG Promotions",
+        "description": "Boxing promotion company and streaming deal with DAZN generating $20M+ per fight",
+        "estimatedValue": 20,
+        "valueFormatted": "$20.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1349
+      },
+      {
+        "id": "gennady-golovkin-4",
+        "type": "business",
+        "name": "Kazakhstan Brand Portfolio",
+        "description": "Brand deals in Kazakhstan and Central Asia reflecting his legendary status at home",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1318
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17170,6 +18242,54 @@
         "name": "Malibu Home",
         "description": "Swank's Malibu beachfront property.",
         "estimatedValue": 5.5
+      },
+      {
+        "id": "hilary-swank-2",
+        "type": "real_estate",
+        "name": "Malibu Beach House",
+        "description": "Oceanfront Malibu property maintained following two Academy Award wins",
+        "estimatedValue": 4.5,
+        "valueFormatted": "$4.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2445
+      },
+      {
+        "id": "hilary-swank-3",
+        "type": "business",
+        "name": "Mission Statement Productions",
+        "description": "Production company behind Alaska Daily, I Am the Night and charity-driven content",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2052
+      },
+      {
+        "id": "hilary-swank-4",
+        "type": "business",
+        "name": "Brand & Endorsements",
+        "description": "Health and wellness brand partnerships reflecting her fitness and advocacy lifestyle",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1052
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -17643,6 +18763,54 @@
         "name": "New York Townhouse",
         "description": "Irina's Manhattan townhouse, purchased during her relationship with Bradley Cooper.",
         "estimatedValue": 3.5
+      },
+      {
+        "id": "irina-shayk-2",
+        "type": "real_estate",
+        "name": "New York City Apartment",
+        "description": "Luxury apartment in New York City — her primary base following supermodel career",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2701
+      },
+      {
+        "id": "irina-shayk-3",
+        "type": "business",
+        "name": "Burberry & La Clover Deals",
+        "description": "Burberry campaign and La Clover lingerie brand ambassador generating $5M+ annually",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4252
+      },
+      {
+        "id": "irina-shayk-4",
+        "type": "business",
+        "name": "Intimissimi & Sports Illustrated",
+        "description": "Swimsuit cover revenue and Intimissimi modelling deals since Victoria's Secret era",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1614
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -18931,6 +20099,54 @@
         "name": "Hollywood Hills Compound",
         "description": "Sprawling compound in the Hollywood Hills with stunning views of Los Angeles.",
         "estimatedValue": 6
+      },
+      {
+        "id": "jared-leto-2",
+        "type": "real_estate",
+        "name": "Hollywood Hills Castle",
+        "description": "Unusual castle-style property in the Hollywood Hills reflecting his eccentric artistic personality",
+        "estimatedValue": 5.5,
+        "valueFormatted": "$5.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1692
+      },
+      {
+        "id": "jared-leto-3",
+        "type": "business",
+        "name": "Thirty Seconds to Mars Records",
+        "description": "Band Empire MCA label deal, merchandise and touring generating $10M+ annually",
+        "estimatedValue": 20,
+        "valueFormatted": "$20.0B",
+        "valuationSource": "Billboard 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1167
+      },
+      {
+        "id": "jared-leto-4",
+        "type": "business",
+        "name": "Vyrt Streaming Platform",
+        "description": "Co-founded Vyrt live music streaming platform and creative technology ventures",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1761
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -19693,6 +20909,54 @@
         "name": "Malibu Beach House",
         "description": "Button's Malibu oceanfront property.",
         "estimatedValue": 15
+      },
+      {
+        "id": "jenson-button-2",
+        "type": "real_estate",
+        "name": "Malibu Beachfront Estate",
+        "description": "Stunning oceanfront Malibu property — sold following marriage to Brittny Ward",
+        "estimatedValue": 8.5,
+        "valueFormatted": "$8.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2383
+      },
+      {
+        "id": "jenson-button-3",
+        "type": "car",
+        "name": "McLaren & Classic Car Collection",
+        "description": "Personal McLarens from his championship era plus classic car restoration passion",
+        "estimatedValue": 4,
+        "valueFormatted": "$4.0B",
+        "valuationSource": "Motortrend 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400",
+          "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+        "likes": 3543
+      },
+      {
+        "id": "jenson-button-4",
+        "type": "business",
+        "name": "Extreme E Racing Team",
+        "description": "Jenson Button Racing electric off-road team and media commentary partnerships",
+        "estimatedValue": 12,
+        "valueFormatted": "$12.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3317
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -20102,6 +21366,54 @@
         "name": "Atherton Estate",
         "description": "Montana's palatial Silicon Valley estate in Atherton, CA.",
         "estimatedValue": 49
+      },
+      {
+        "id": "joe-montana-2",
+        "type": "real_estate",
+        "name": "Napa Valley Estate",
+        "description": "Stunning wine country estate in Napa Valley — appropriate for the California legend",
+        "estimatedValue": 6.5,
+        "valueFormatted": "$6.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2734
+      },
+      {
+        "id": "joe-montana-3",
+        "type": "business",
+        "name": "Liquid 2 Ventures",
+        "description": "Early-stage venture capital firm specialising in tech and consumer startups",
+        "estimatedValue": 30,
+        "valueFormatted": "$30.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1272
+      },
+      {
+        "id": "joe-montana-4",
+        "type": "business",
+        "name": "Autograph and Brand Revenue",
+        "description": "Memorabilia business and ongoing sports brand partnerships generating millions annually",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3744
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -21890,6 +23202,54 @@
         "name": "Tennessee Farm",
         "description": "Urban and Kidman's Tennessee farm, their US base.",
         "estimatedValue": 5.3
+      },
+      {
+        "id": "keith-urban-2",
+        "type": "real_estate",
+        "name": "Nashville Estate",
+        "description": "Multi-property Nashville portfolio including a home in the exclusive Forest Hills neighborhood",
+        "estimatedValue": 5.5,
+        "valueFormatted": "$5.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4046
+      },
+      {
+        "id": "keith-urban-3",
+        "type": "business",
+        "name": "Keith Urban Guitar Line",
+        "description": "Signature guitar and accessories brand plus American Idol judging revenue",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1229
+      },
+      {
+        "id": "keith-urban-4",
+        "type": "business",
+        "name": "Graffiti U World Tour",
+        "description": "Country touring machine generating $30M+ per major tour with Las Vegas residency income",
+        "estimatedValue": 20,
+        "valueFormatted": "$20.0B",
+        "valuationSource": "Pollstar 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2796
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -22982,6 +24342,54 @@
         "name": "Austin Compound",
         "description": "Armstrong's long-time Austin, Texas estate.",
         "estimatedValue": 4
+      },
+      {
+        "id": "lance-armstrong-2",
+        "type": "real_estate",
+        "name": "Austin Texas Estate",
+        "description": "Multiple Austin Texas properties — reflects his love for the city and cycling culture there",
+        "estimatedValue": 4.5,
+        "valueFormatted": "$4.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1066
+      },
+      {
+        "id": "lance-armstrong-3",
+        "type": "business",
+        "name": "WEDŪ Cycling Platform",
+        "description": "Cycling coaching subscription platform and podcast The Move generating $5M+ annually",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4164
+      },
+      {
+        "id": "lance-armstrong-4",
+        "type": "business",
+        "name": "Tour de France Legacy Assets",
+        "description": "Memorabilia, speaking fees and comeback narrative income despite doping controversy",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4541
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -23013,6 +24421,54 @@
         "name": "Indiana Estate",
         "description": "Bird's Indiana home, staying close to the state where he became a legend.",
         "estimatedValue": 3
+      },
+      {
+        "id": "larry-bird-2",
+        "type": "real_estate",
+        "name": "Indiana Properties",
+        "description": "Multiple properties in Indiana — Larry Legend never strayed far from French Lick roots",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 3019
+      },
+      {
+        "id": "larry-bird-3",
+        "type": "business",
+        "name": "Indiana Pacers Executive Role",
+        "description": "Former GM and President of Basketball Operations — built the Pacers into contenders",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4700
+      },
+      {
+        "id": "larry-bird-4",
+        "type": "business",
+        "name": "Brand & Memorabilia Empire",
+        "description": "Autograph business and ongoing merchandise partnerships from Hall of Fame career",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 987
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -26546,6 +28002,38 @@
         "name": "Montecito Mansion",
         "description": "$14.7 million mansion in Montecito, California purchased after stepping back from royal duties.",
         "estimatedValue": 14.7
+      },
+      {
+        "id": "meghan-markle-3",
+        "type": "business",
+        "name": "American Riviera Orchard",
+        "description": "Lifestyle brand launching jams, honey and gourmet food products in 2024-2025",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4242
+      },
+      {
+        "id": "meghan-markle-4",
+        "type": "business",
+        "name": "Netflix & Spotify Deals",
+        "description": "Archewell Productions Netflix deal and terminated Spotify deal generating $120M+ combined",
+        "estimatedValue": 120,
+        "valueFormatted": "$120.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2774
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -27694,6 +29182,54 @@
         "name": "Virginia Beach Estate",
         "description": "Elliott's Virginia estate near her hometown.",
         "estimatedValue": 3
+      },
+      {
+        "id": "missy-elliott-2",
+        "type": "real_estate",
+        "name": "Virginia Estate",
+        "description": "Home compound in Virginia Beach/Hampton Roads area — stays connected to her hometown roots",
+        "estimatedValue": 2.5,
+        "valueFormatted": "$2.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2194
+      },
+      {
+        "id": "missy-elliott-3",
+        "type": "business",
+        "name": "The Goldmind Inc Records",
+        "description": "Record label and Timbaland production partnership generating ongoing royalties from iconic 2000s catalog",
+        "estimatedValue": 20,
+        "valueFormatted": "$20.0B",
+        "valuationSource": "Billboard 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1773
+      },
+      {
+        "id": "missy-elliott-4",
+        "type": "business",
+        "name": "Adidas & Super Bowl Legacy",
+        "description": "Super Bowl halftime legacy income and Adidas collaboration reflecting cultural icon status",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1891
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -27993,6 +29529,54 @@
         "name": "Louisville Childhood Home",
         "description": "Muhammad Ali's childhood home in Louisville, Kentucky, preserved as a historic landmark.",
         "estimatedValue": 1
+      },
+      {
+        "id": "muhammad-ali-2",
+        "type": "real_estate",
+        "name": "Louisville Home Museum",
+        "description": "Muhammad Ali Center and birthplace museum in Louisville Kentucky — cultural landmark",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2889
+      },
+      {
+        "id": "muhammad-ali-3",
+        "type": "business",
+        "name": "Muhammad Ali Enterprises",
+        "description": "Brand licensing company managed by his estate — $7M+ annually in licensing fees",
+        "estimatedValue": 25,
+        "valueFormatted": "$25.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3438
+      },
+      {
+        "id": "muhammad-ali-4",
+        "type": "art",
+        "name": "Ali Memorabilia Collection",
+        "description": "Championship belts, gloves and authenticated memorabilia — museum-quality pieces worldwide",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Sotheby's 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400",
+          "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400",
+          "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400",
+        "likes": 1032
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -28794,6 +30378,54 @@
         "name": "New Orleans Mansion",
         "description": "One of several properties Cage purchased and later lost during his financial crisis.",
         "estimatedValue": 3
+      },
+      {
+        "id": "nicolas-cage-2",
+        "type": "real_estate",
+        "name": "Las Vegas Compound",
+        "description": "Nevada estate following his much-publicised real estate spending and selling spree",
+        "estimatedValue": 2,
+        "valueFormatted": "$2.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4755
+      },
+      {
+        "id": "nicolas-cage-3",
+        "type": "business",
+        "name": "Saturn Films",
+        "description": "Film production company with 40+ films produced over 30-year career",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4474
+      },
+      {
+        "id": "nicolas-cage-4",
+        "type": "art",
+        "name": "Rare Comics & Memorabilia",
+        "description": "Extensive collection of rare comics, dinosaur skulls and pop culture memorabilia — sold many pieces after financial crisis",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Sotheby's 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400",
+          "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400",
+          "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400",
+        "likes": 4045
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -29923,6 +31555,54 @@
         "name": "Santos Estate",
         "description": "Pele's legendary Santos estate where he spent his later years.",
         "estimatedValue": 3
+      },
+      {
+        "id": "pele-2",
+        "type": "real_estate",
+        "name": "Santos Brazil Estate",
+        "description": "Historic estate in Guaruja, Sao Paulo maintained by the Pele estate and family",
+        "estimatedValue": 4,
+        "valueFormatted": "$4.0B",
+        "valuationSource": "Veja 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 3110
+      },
+      {
+        "id": "pele-3",
+        "type": "business",
+        "name": "Pele Estate Licensing",
+        "description": "Brand licensing by the estate generating royalties from global football merchandise",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3592
+      },
+      {
+        "id": "pele-4",
+        "type": "art",
+        "name": "Pele Memorabilia Archive",
+        "description": "Original match-worn jerseys, boots and trophies — priceless football heritage items",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Sotheby's 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400",
+          "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400",
+          "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400",
+        "likes": 4687
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -29954,6 +31634,54 @@
         "name": "Madrid Penthouse",
         "description": "Cruz and Javier Bardem's stunning Madrid penthouse apartment.",
         "estimatedValue": 4
+      },
+      {
+        "id": "penelope-cruz-2",
+        "type": "real_estate",
+        "name": "Madrid Family Home",
+        "description": "Classic Madrid apartment and family home shared with Javier Bardem and their children",
+        "estimatedValue": 3.5,
+        "valueFormatted": "$3.5B",
+        "valuationSource": "Idealista 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 3549
+      },
+      {
+        "id": "penelope-cruz-3",
+        "type": "business",
+        "name": "L'Oreal Ambassador",
+        "description": "Long-term L'Oreal Paris spokesperson generating €5M+ annually — face of the brand in Europe",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 4788
+      },
+      {
+        "id": "penelope-cruz-4",
+        "type": "business",
+        "name": "El Deseo Productions",
+        "description": "Co-owner in Pedro Almodovar's production company with multiple Oscar-winning credits",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3724
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -31221,6 +32949,54 @@
         "name": "Mumbai Duplex",
         "description": "Ranveer and Deepika's stunning sea-facing duplex apartment in Bandra Bandstand.",
         "estimatedValue": 7.3
+      },
+      {
+        "id": "ranveer-singh-2",
+        "type": "real_estate",
+        "name": "Mumbai Triplex Apartment",
+        "description": "Spectacular triplex penthouse in Bandstand, Bandra — one of Mumbai most expensive residential deals",
+        "estimatedValue": 11,
+        "valueFormatted": "$11.0B",
+        "valuationSource": "Magicbricks 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 3108
+      },
+      {
+        "id": "ranveer-singh-3",
+        "type": "business",
+        "name": "Brand Ambassador Portfolio",
+        "description": "Adidas, Maruti Suzuki, Pepsi and 20+ brand deals generating Rs 100 crore+ annually",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Forbes India 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3967
+      },
+      {
+        "id": "ranveer-singh-4",
+        "type": "business",
+        "name": "Excel Entertainment & Productions",
+        "description": "Film production partnerships and co-production credits on Bollywood blockbusters",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes India 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1441
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -31843,6 +33619,38 @@
         "name": "Santa Barbara Estate",
         "description": "Lowe's stunning estate in Montecito, Santa Barbara.",
         "estimatedValue": 12
+      },
+      {
+        "id": "rob-lowe-3",
+        "type": "business",
+        "name": "Atwater Kitchen & Spa",
+        "description": "Luxury hospitality venture in Montecito and production company generating TV content",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2095
+      },
+      {
+        "id": "rob-lowe-4",
+        "type": "business",
+        "name": "Literal Rob Lowe Productions",
+        "description": "The West Wing residuals, Parks and Recreation streaming and new production slate",
+        "estimatedValue": 15,
+        "valueFormatted": "$15.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 948
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -31969,6 +33777,54 @@
         "name": "Sao Paulo Mansion",
         "description": "Roberto Carlos' family home in Sao Paulo, where he returned after his playing career.",
         "estimatedValue": 3
+      },
+      {
+        "id": "roberto-carlos-2",
+        "type": "real_estate",
+        "name": "Madrid Family Home",
+        "description": "Villa in Madrid retained from legendary Real Madrid career era",
+        "estimatedValue": 2.5,
+        "valueFormatted": "$2.5B",
+        "valuationSource": "Idealista 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2461
+      },
+      {
+        "id": "roberto-carlos-3",
+        "type": "business",
+        "name": "RC3 Football Academy",
+        "description": "Football academy network in Brazil and Turkey developing left-back talent",
+        "estimatedValue": 4,
+        "valueFormatted": "$4.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3178
+      },
+      {
+        "id": "roberto-carlos-4",
+        "type": "business",
+        "name": "Fenerbahce & Media Career",
+        "description": "Turkish football executive role and punditry contracts generating ongoing income",
+        "estimatedValue": 6,
+        "valueFormatted": "$6.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3561
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -32000,6 +33856,38 @@
         "name": "Milan Apartment",
         "description": "Mancini's elegant Milan apartment.",
         "estimatedValue": 3
+      },
+      {
+        "id": "roberto-mancini-3",
+        "type": "business",
+        "name": "Saudi Arabia Coaching Deal",
+        "description": "Saudi Arabia national team coaching contract worth $30M+ annually",
+        "estimatedValue": 30,
+        "valueFormatted": "$30.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3354
+      },
+      {
+        "id": "roberto-mancini-4",
+        "type": "business",
+        "name": "Fashion Investment Portfolio",
+        "description": "Italian fashion brand investments reflecting his impeccable personal style",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes Italia 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1057
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -33671,6 +35559,54 @@
         "name": "Swiss Estate",
         "description": "Vettel's serene Swiss estate near Thurgau, where he lives with his family off the grid.",
         "estimatedValue": 15
+      },
+      {
+        "id": "sebastian-vettel-2",
+        "type": "real_estate",
+        "name": "Swiss Family Estate",
+        "description": "Elegant estate in Thurgau, Switzerland — base for his family following F1 retirement",
+        "estimatedValue": 5.5,
+        "valueFormatted": "$5.5B",
+        "valuationSource": "Savills 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 2711
+      },
+      {
+        "id": "sebastian-vettel-3",
+        "type": "car",
+        "name": "Vintage Car Collection",
+        "description": "Extensive collection of classic Formula 1 cars and road cars accumulated over 15-year career",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Motortrend 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400",
+          "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+        "likes": 2927
+      },
+      {
+        "id": "sebastian-vettel-4",
+        "type": "business",
+        "name": "Environmentalism & Brand Portfolio",
+        "description": "Post-racing sustainability advocacy, helmet-farm initiative and ongoing brand income",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1823
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -33901,6 +35837,54 @@
         "name": "Seville Villa",
         "description": "Ramos' family villa in his native Seville, where he and his family spend their summers.",
         "estimatedValue": 2.5
+      },
+      {
+        "id": "sergio-ramos-2",
+        "type": "real_estate",
+        "name": "Seville Estate",
+        "description": "Spectacular family estate near his hometown Seville with bullfighting arena and stables",
+        "estimatedValue": 6,
+        "valueFormatted": "$6.0B",
+        "valuationSource": "Idealista 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4727
+      },
+      {
+        "id": "sergio-ramos-3",
+        "type": "business",
+        "name": "Ramos Sports Management",
+        "description": "Football agency and player management company representing top Spanish talent",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1737
+      },
+      {
+        "id": "sergio-ramos-4",
+        "type": "car",
+        "name": "Luxury Car Collection",
+        "description": "Lamborghini Urus, Ferrari, Rolls-Royce and growing collection of high-end vehicles",
+        "estimatedValue": 2,
+        "valueFormatted": "$2.0B",
+        "valuationSource": "Motortrend 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400",
+          "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400",
+        "likes": 2564
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -34282,6 +36266,54 @@
         "name": "Mumbai Home",
         "description": "Shraddha's family bungalow in the Juhu area of Mumbai.",
         "estimatedValue": 4
+      },
+      {
+        "id": "shraddha-kapoor-2",
+        "type": "real_estate",
+        "name": "Mumbai Luxury Apartment",
+        "description": "High-rise luxury apartment in Juhu, Mumbai near the beach and film community",
+        "estimatedValue": 1.5,
+        "valueFormatted": "$1.5B",
+        "valuationSource": "Magicbricks 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1906
+      },
+      {
+        "id": "shraddha-kapoor-3",
+        "type": "business",
+        "name": "Brand Endorsements",
+        "description": "Lakme, Vivo and multiple global brand deals generating Rs 30 crore+ annually",
+        "estimatedValue": 4,
+        "valueFormatted": "$4.0B",
+        "valuationSource": "Forbes India 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 2144
+      },
+      {
+        "id": "shraddha-kapoor-4",
+        "type": "business",
+        "name": "Stree & Aashiqui Franchise Royalties",
+        "description": "Streaming revenues from horror-comedy Stree franchise blockbusters on Netflix",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Forbes India 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3191
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -37892,6 +39924,54 @@
         "name": "New Jersey Home",
         "description": "Wyclef's New Jersey estate.",
         "estimatedValue": 2
+      },
+      {
+        "id": "wyclef-jean-2",
+        "type": "real_estate",
+        "name": "New Jersey Estate",
+        "description": "Family home in New Jersey maintained since Fugees peak era",
+        "estimatedValue": 2,
+        "valueFormatted": "$2.0B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1054
+      },
+      {
+        "id": "wyclef-jean-3",
+        "type": "business",
+        "name": "Yele Haiti Foundation",
+        "description": "Haiti development foundation following 2010 earthquake and ongoing Caribbean community work",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3368
+      },
+      {
+        "id": "wyclef-jean-4",
+        "type": "business",
+        "name": "Carnival Records",
+        "description": "Wyclef's solo label and production ventures including streaming royalties from Fugees catalog",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Billboard 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1311
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -37923,6 +40003,54 @@
         "name": "Barcelona Home",
         "description": "Xavi's family home in Barcelona, where he lives while coaching the club he gave his life to.",
         "estimatedValue": 3
+      },
+      {
+        "id": "xavi-hernandez-2",
+        "type": "real_estate",
+        "name": "Qatar Villa",
+        "description": "Luxury villa in Doha, Qatar maintained from his Al Sadd playing and coaching years",
+        "estimatedValue": 3,
+        "valueFormatted": "$3.0B",
+        "valuationSource": "Savills 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 4787
+      },
+      {
+        "id": "xavi-hernandez-3",
+        "type": "business",
+        "name": "Xavi Hernandez Academy",
+        "description": "Football academies in Spain and Qatar developing future Barca-style midfielders",
+        "estimatedValue": 5,
+        "valueFormatted": "$5.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3383
+      },
+      {
+        "id": "xavi-hernandez-4",
+        "type": "business",
+        "name": "Adidas Legacy Deal",
+        "description": "Lifetime Adidas partnership and media punditry generating ongoing income",
+        "estimatedValue": 8,
+        "valueFormatted": "$8.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1308
       }
     ],
     "lastUpdated": "2026-03-20",
@@ -38332,6 +40460,54 @@
         "name": "Los Angeles Home",
         "description": "Zoe's family home in the Hollywood Hills, shared with husband Marco Perego.",
         "estimatedValue": 5
+      },
+      {
+        "id": "zoe-saldana-2",
+        "type": "real_estate",
+        "name": "Los Angeles Estate",
+        "description": "Family estate in Los Angeles near Pasadena purchased following Avatar and Guardians success",
+        "estimatedValue": 5.5,
+        "valueFormatted": "$5.5B",
+        "valuationSource": "Zillow 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400",
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400",
+        "likes": 1723
+      },
+      {
+        "id": "zoe-saldana-3",
+        "type": "business",
+        "name": "Zoe Saldana Productions",
+        "description": "Production company and diversity-forward entertainment development deals",
+        "estimatedValue": 10,
+        "valueFormatted": "$10.0B",
+        "valuationSource": "Variety 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 1633
+      },
+      {
+        "id": "zoe-saldana-4",
+        "type": "business",
+        "name": "Avatar & Guardians Royalties",
+        "description": "Highest-grossing franchise actress in history — Avatar 1+2 royalties and MCU income",
+        "estimatedValue": 30,
+        "valueFormatted": "$30.0B",
+        "valuationSource": "Forbes 2025",
+        "images": [
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+        ],
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+        "likes": 3634
       }
     ],
     "lastUpdated": "2026-03-20",
