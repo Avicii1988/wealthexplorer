@@ -12,7 +12,6 @@ import {
   formatValue,
   formatNetWorth,
   getAssetImage,
-  getAvatar,
   DECEASED_IDS,
 } from '../data/celebrities'
 import { useCelebrities } from '../hooks/useCelebrityData'
@@ -129,22 +128,19 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                   const showNewBadge = isWithin24h(celeb.isNew) || (celeb.assets ?? []).some(a => a.isNew)
                   return (
                     <Link key={celeb.id} to={`/celebrities/${celeb.id}`} className="group">
-                      <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 overflow-hidden aspect-[3/4]">
-                        {/* Photo fills the entire card */}
-                        <CelebrityAvatar
-                          celeb={celeb}
-                          size={200}
-                          className="absolute inset-0 group-hover:scale-105 transition-transform duration-700 ease-out"
-                        />
-
-                        {/* Gradient scrim so text is legible over the photo */}
-                        <div className="absolute inset-x-0 bottom-0 h-2/5 pointer-events-none"
-                          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)' }}
-                        />
+                      <div className="relative bg-[#111] rounded-2xl border border-gray-800 group-hover:border-[#c9a84c]/40 group-hover:shadow-[0_0_22px_rgba(201,168,76,0.13)] transition-all duration-300 overflow-hidden">
+                        {/* Magazine portrait image — fixed 3:4 ratio */}
+                        <div className="aspect-[3/4] overflow-hidden">
+                          <CelebrityAvatar
+                            celeb={celeb}
+                            size={200}
+                            className="group-hover:scale-105 transition-transform duration-700 ease-out"
+                          />
+                        </div>
 
                         {/* Gold shimmer overlay on hover */}
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                          style={{ background: 'linear-gradient(180deg, rgba(201,168,76,0.06) 0%, transparent 50%)' }}
+                          style={{ background: 'linear-gradient(180deg, rgba(201,168,76,0.08) 0%, transparent 40%, rgba(201,168,76,0.04) 100%)' }}
                         />
 
                         {showNewBadge && (
@@ -154,12 +150,12 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
                           </div>
                         )}
 
-                        {/* Name + net worth — overlaid at bottom */}
-                        <div className="absolute inset-x-0 bottom-0 px-2 pb-2 pt-1 text-center z-10">
-                          <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2 drop-shadow-sm">
-                            {celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-500 ml-0.5 text-[10px]"> (†)</span>}
+                        {/* Name + net worth */}
+                        <div className="px-2.5 pt-2 pb-3 text-center">
+                          <p className="text-[11px] font-semibold text-white group-hover:text-[#c9a84c] transition-colors leading-tight line-clamp-2">
+                            {celeb.name}{DECEASED_IDS.has(celeb.id) && <span className="text-gray-600 ml-0.5 text-[10px]"> (†)</span>}
                           </p>
-                          <p className="text-[10px] mt-0.5 drop-shadow-sm" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
+                          <p className="text-[10px] mt-0.5" style={{ color: '#c9a84c' }}>{formatNetWorth(celeb.netWorth)}</p>
                         </div>
                       </div>
                     </Link>
@@ -182,51 +178,6 @@ function ProfileDirectory({ filteredCelebs }: { filteredCelebs: Celebrity[] }) {
         })}
       </div>
     </section>
-  )
-}
-
-// ── LOGO ─────────────────────────────────────────────────────────────────────
-// Diamond: hollow pentagon outline (middle-top reference design).
-// Outer: (10,0)–(34,0)–(44,17)–22,45)–(0,17)
-// Inner cutout (≈7 px inset): (15,7)–(29,7)–(37,20)–(22,38)–(7,20)
-// evenodd fill rule punches the inner shape out of the outer → thick border.
-function WealthLogo() {
-  return (
-    <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-4 select-none">
-      <svg width="60" height="64" viewBox="0 0 60 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-        <defs>
-          <linearGradient id="wlg" x1="0" y1="0" x2="60" y2="64" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"   stopColor="#fdf0a0"/>
-            <stop offset="45%" stopColor="#d4a843"/>
-            <stop offset="100%" stopColor="#7a4e08"/>
-          </linearGradient>
-        </defs>
-        {/* Hollow diamond — evenodd cuts inner pentagon out of outer */}
-        <path
-          fillRule="evenodd"
-          d="M11,0 L49,0 L60,22 L30,62 L0,22 Z M21,11 L39,11 L47,26 L30,50 L13,26 Z"
-          fill="url(#wlg)"
-        />
-      </svg>
-      <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-        <span style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          background: 'linear-gradient(135deg, #fdf0a0 0%, #d4a843 50%, #7a4e08 100%)',
-          WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          fontSize: '18px', fontWeight: 700, letterSpacing: '0.22em',
-          textTransform: 'uppercase' as const,
-        }}>Wealth</span>
-        <span style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          background: 'linear-gradient(135deg, #fdf0a0 0%, #d4a843 50%, #7a4e08 100%)',
-          WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          fontSize: '13px', fontWeight: 400, letterSpacing: '0.38em',
-          textTransform: 'uppercase' as const, marginTop: '4px',
-        }}>Explorer</span>
-      </div>
-    </Link>
   )
 }
 
@@ -279,7 +230,7 @@ function LanguageSelector() {
   )
 }
 
-// ── CIRCLE CARD (trending profile grids) ─────────────────────────────────────
+// ── CIRCLE CARD (trending / category profile grids) ──────────────────────────
 function CircleCard({ celeb }: { celeb: Celebrity }) {
   return (
     <Link
@@ -365,22 +316,19 @@ export default function HomePage() {
       .slice(0, 6)
   }, [search])
 
-  // Trending circles: 9 celebs with real photos per category
+  // Trending: when category is "All" show 18, otherwise show 9 for that category.
+  // Falls back to highest net-worth if no celebrities are flagged trending.
   const trendingCelebs = useMemo(() => {
-    const hasPhoto = (c: Celebrity) => {
-      const url = getAvatar(c)
-      return !!url && !url.includes('ui-avatars.com')
+    if (activeCategory === 'All') {
+      const flagged = celebrities.filter(c => c.trending)
+      if (flagged.length > 0) return flagged.slice(0, 18)
+      return [...celebrities].sort((a, b) => b.netWorth - a.netWorth).slice(0, 18)
     }
-    const pool = activeCategory === 'All'
-      ? celebrities
-      : celebrities.filter(c => c.category === activeCategory)
-    const trending = pool.filter(c => c.trending && hasPhoto(c))
-    if (trending.length >= 9) return trending.slice(0, 9)
-    const trendingIds = new Set(trending.map(c => c.id))
-    const filler = pool
-      .filter(c => !trendingIds.has(c.id) && hasPhoto(c))
-      .sort((a, b) => b.netWorth - a.netWorth)
-    return [...trending, ...filler].slice(0, 9)
+    // category selected: 9 trending for that category, fallback to non-trending
+    const fromCategory = celebrities.filter(c => c.category === activeCategory)
+    const trending = fromCategory.filter(c => c.trending)
+    const rest = fromCategory.filter(c => !c.trending)
+    return [...trending, ...rest].slice(0, 9)
   }, [celebrities, activeCategory])
 
   // Asset feed: top 20 most expensive assets
@@ -410,6 +358,8 @@ export default function HomePage() {
     [assetTypeCounts]
   )
 
+  const showTrending = !search && activeCategory === 'All'
+  const showCategoryProfiles = !search && activeCategory !== 'All'
   const showSearchDropdown = searchFocused && search.trim().length > 0
 
   if (loading) {
@@ -426,7 +376,6 @@ export default function HomePage() {
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="border-b bg-[#0a0a0a]/95 backdrop-blur-sm sticky top-0 z-40" style={{ borderBottomColor: 'rgba(201,168,76,0.18)' }}>
         <div className="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between">
-          <WealthLogo />
           <div className="flex items-center gap-2">
             <NotificationBell />
             <ThemeToggle />
@@ -541,16 +490,18 @@ export default function HomePage() {
         ))}
       </div>
 
-
-      {/* ── TRENDING PROFILES ───────────────────────────────────── */}
-      {!search.trim() && (
-        <section className="px-5 pb-12 max-w-5xl mx-auto">
+      {/* ── PROFILES — trending (all) or top 8 (category) ───── */}
+      {(showTrending || showCategoryProfiles) && (
+        <section className="px-5 pb-16 max-w-5xl mx-auto">
           <p className="text-center text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase mb-8">
-            {t('trendingProfiles')}
+            {showTrending ? t('trendingProfiles') : `${activeCategory}`}
           </p>
+          {/* Circle card grid — centered on all screens */}
           <div className="flex gap-5 pb-2 justify-center flex-wrap">
-            {trendingCelebs.map((celeb) => (
-              <CircleCard key={celeb.id} celeb={celeb} />
+            {trendingCelebs.map((celeb, i) => (
+              <div key={celeb.id} className={i >= 9 ? 'hidden sm:block' : ''}>
+                <CircleCard celeb={celeb} />
+              </div>
             ))}
           </div>
         </section>
@@ -575,7 +526,7 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-5 pb-16">
         <div className="flex items-center justify-center gap-3 mb-6">
           <p className="text-xs font-semibold tracking-[0.25em] text-gray-500 uppercase text-center">
-            {t('featuredAssets')}
+            {showTrending ? t('featuredAssets') : `${t('assets')} · ${filteredCelebs.length} profiles`}
           </p>
         </div>
 
@@ -662,11 +613,6 @@ export default function HomePage() {
       {/* ── FOOTER ──────────────────────────────────────────────── */}
       <footer className="py-14 px-5" style={{ borderTop: '1px solid rgba(201,168,76,0.18)' }}>
         <div className="max-w-2xl mx-auto text-center">
-
-          {/* Logo */}
-          <div className="flex justify-center mb-6">
-            <WealthLogo />
-          </div>
 
           {/* Tagline */}
           <p className="text-[11px] text-white/60 mb-6 tracking-wide">
